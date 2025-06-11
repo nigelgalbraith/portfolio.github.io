@@ -2,102 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Projects - Nigel Galbraith</title>
+  <title>Projects – Nigel Galbraith</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/retro.css" />
 </head>
 <body>
-
   <div class="grid-bg"></div>
-
   <div class="container">
-    <h1>Nigel Galbraith</h1>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="main-content-with-sidebars">
-
-      <aside class="sidebar-left">
-        <div class="sidebar-section">
-          <h3>Qualifications</h3>
-          <ul>
-            <li><img src="images/degree.png" alt="Degree" class="li-icon" /> BICT, AUT</li>
-            <li><img src="images/cert.png" alt="Certificate" class="li-icon" /> CCNA Certified</li>
-            <li><img src="images/cloud.png" alt="Cloud" class="li-icon" /> Azure Fundamentals</li>
-          </ul>
-        </div>
-        <div class="sidebar-section">
-          <h3>Intellectual Skills</h3>
-          <ul>
-            <li><img src="images/problem-solving.png" alt="Problem Solving" class="li-icon" /> Problem Solving</li>
-            <li><img src="images/logic.png" alt="Logic" class="li-icon" /> Logical Thinking</li>
-            <li><img src="images/teamwork.png" alt="Teamwork" class="li-icon" /> Team Collaboration</li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="center-content">
-        <section class="projects">
-          <div class="project">
-            <img src="images/kvm-lab-thumb.jpg" alt="KVM Virtual Lab thumbnail" />
-            <div class="project-text">
-              <h2>KVM Virtualization Lab</h2>
-              <p>Capstone project replacing VMware Workstation Pro with an open-source Ubuntu KVM solution to improve resource flexibility and reduce licensing costs.</p>
-              <p><a href="projects/kvm-lab.html">View Project →</a></p>
-            </div>
-          </div>
-
-          <div class="project">
-            <img src="images/sharepoint-gps-thumb.jpg" alt="SharePoint and GPS App thumbnail" />
-            <div class="project-text">
-              <h2>SharePoint + GPS Workflow App</h2>
-              <p>Designed a SharePoint database and GPS-based tracking system to improve real-time traffic management planning and resource allocation at Downer.</p>
-              <p><a href="projects/sharepoint-gps.html">View Project →</a></p>
-            </div>
-          </div>
-
-          <div class="project">
-            <img src="images/diy-projects-thumb.jpg" alt="DIY Projects thumbnail" />
-            <div class="project-text">
-              <h2>DIY Tech Builds</h2>
-              <p>Custom arcade cabinet (Pac-Man & Space Invaders), automated garden irrigation using sensors, and a Plex-based media server for home use.</p>
-              <p><a href="projects/diy-builds.html">View Project →</a></p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <aside class="sidebar-right">
-        <div class="sidebar-section">
-          <h3>Practical Skills</h3>
-          <ul>
-            <li><img src="images/woodwork.png" alt="Woodwork" class="li-icon" /> Joinery & Carpentry</li>
-            <li><img src="images/tools.png" alt="Tools" class="li-icon" /> Power Tools & Safety</li>
-            <li><img src="images/repair.png" alt="DIY" class="li-icon" /> Electronics & DIY Fixes</li>
-          </ul>
-        </div>
-        <div class="sidebar-section">
-          <h3>IT Hands-On</h3>
-          <ul>
-            <li><img src="images/network.png" alt="Networking" class="li-icon" /> Network Setup</li>
-            <li><img src="images/linux.png" alt="Linux" class="li-icon" /> Linux & CLI Tools</li>
-            <li><img src="images/virtual.png" alt="Virtualization" class="li-icon" /> Virtualization & KVM</li>
-          </ul>
-        </div>
-      </aside>
-
-    </div>
+    <main class="brief-outline">
+      <section>
+        <h2>Student Lab Automation</h2>
+        <p>Developed a Linux/KVM virtualization platform using Cockpit and AD authentication — empowering students to self-deploy and manage VMs.</p>
+      </section>
+      <section>
+        <h2>Asset GPS Workflow App</h2>
+        <p>Built a SharePoint + Power Automate solution to track GPS-tagged assets for mobile teams — improving real-time workflow visibility.</p>
+      </section>
+      <section>
+        <h2>Plex Media Server</h2>
+        <p>Set up a Plex server on Ubuntu with hardware acceleration for optimized LAN and remote streaming. Self-hosted, robust, and efficient.</p>
+      </section>
+    </main>
 
     <footer>
-      &copy; 2025 Nigel Galbraith | <a href="https://github.com/nigelgalbraith" target="_blank" rel="noopener">GitHub</a>
+      <p>&copy; 2025 Nigel Galbraith</p>
+      <p>
+        <a href="mailto:nigelgalbraith@proton.me">nigelgalbraith@proton.me</a> |
+        <a href="https://github.com/Oldschool299792458" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/nigelgalbraith" target="_blank">LinkedIn</a>
+      </p>
     </footer>
   </div>
-
 </body>
 </html>
