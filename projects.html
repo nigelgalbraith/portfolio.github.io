@@ -2,46 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Projects – Nigel Galbraith</title>
+  <title>Projects - Nigel Galbraith</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/retro.css" />
 </head>
 <body>
-  <div class="grid-bg"></div>
-  <div class="container">
-    <header>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="resume.html">Resume</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="brief-outline">
-      <section>
-        <h2>Student Lab Automation</h2>
-        <p>Developed a Linux/KVM virtualization platform using Cockpit and AD authentication — empowering students to self-deploy and manage VMs.</p>
-      </section>
-      <section>
-        <h2>Asset GPS Workflow App</h2>
-        <p>Built a SharePoint + Power Automate solution to track GPS-tagged assets for mobile teams — improving real-time workflow visibility.</p>
-      </section>
-      <section>
-        <h2>Plex Media Server</h2>
-        <p>Set up a Plex server on Ubuntu with hardware acceleration for optimized LAN and remote streaming. Self-hosted, robust, and efficient.</p>
-      </section>
-    </main>
+  <div class="grid-bg"></div>
+
+  <div class="container">
+    <h1>Nigel Galbraith</h1>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content-with-sidebars">
+
+      <aside class="sidebar-left">
+        <div class="sidebar-section">
+          <h3>Qualifications</h3>
+          <div class="icon-grid">
+            <div class="icon-item">
+              <img src="images/degree.png" alt="Degree" class="li-icon" />
+              <span>BICT</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/cert.png" alt="Certificate" class="li-icon" />
+              <span>CCNA Certified</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/cloud.png" alt="Cloud" class="li-icon" />
+              <span>Azure Fundamentals</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/extra.png" alt="Extra" class="li-icon" />
+              <span>Extra Skill</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Soft Skills</h3>
+          <div class="icon-grid">
+            <div class="icon-item">
+              <img src="images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+              <span>Problem Solving</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/extra.png" alt="Extra" class="li-icon" />
+              <span>Extra Skill</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/teamwork.png" alt="Teamwork" class="li-icon" />
+              <span>Team Collaboration</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/extra.png" alt="Extra" class="li-icon" />
+              <span>Extra Skill</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="center-content">
+        <section class="projects">
+          <!-- Page 1 -->
+          <div class="project-page active">
+            <div class="project">
+              <img src="images/kvm-lab-thumb.jpg" alt="KVM Virtual Lab thumbnail" />
+              <div class="project-text">
+                <h2>KVM Virtualization Lab</h2>
+                <p>Capstone project replacing VMware Workstation Pro with an open-source Ubuntu KVM solution to improve resource flexibility and reduce licensing costs.</p>
+                <p><a href="projects/kvm-lab.html">View Project →</a></p>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="images/sharepoint-gps-thumb.jpg" alt="SharePoint and GPS App thumbnail" />
+              <div class="project-text">
+                <h2>SharePoint + GPS Workflow App</h2>
+                <p>Designed a SharePoint database and GPS-based tracking system to improve real-time traffic management planning and resource allocation at Downer.</p>
+                <p><a href="projects/sharepoint-gps.html">View Project →</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page 2 -->
+          <div class="project-page">
+            <div class="project">
+              <img src="images/diy-projects-thumb.jpg" alt="DIY Projects thumbnail" />
+              <div class="project-text">
+                <h2>DIY Tech Builds</h2>
+                <p>Custom arcade cabinet (Pac-Man & Space Invaders), automated garden irrigation using sensors, and a Plex-based media server for home use.</p>
+                <p><a href="projects/diy-builds.html">View Project →</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="pagination-dots">
+            <span class="dot active" onclick="showPage(0)"></span>
+            <span class="dot" onclick="showPage(1)"></span>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar-right">
+        <div class="sidebar-section">
+          <h3>Practical Skills</h3>
+          <div class="icon-grid">
+            <div class="icon-item">
+              <img src="images/woodwork.png" alt="Woodwork" class="li-icon" />
+              <span>Joinery & Carpentry</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/tools.png" alt="Tools" class="li-icon" />
+              <span>Power Tools & Safety</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/repair.png" alt="DIY" class="li-icon" />
+              <span>Electronics & DIY Fixes</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/extra.png" alt="Extra" class="li-icon" />
+              <span>Extra Skill</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Technical Skills</h3>
+          <div class="icon-grid">
+            <div class="icon-item">
+              <img src="images/network.png" alt="Networking" class="li-icon" />
+              <span>Network Setup</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/linux.png" alt="Linux" class="li-icon" />
+              <span>Linux & CLI Tools</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/virtual.png" alt="Virtualization" class="li-icon" />
+              <span>Virtualization & KVM</span>
+            </div>
+            <div class="icon-item">
+              <img src="images/extra.png" alt="Extra" class="li-icon" />
+              <span>Extra Skill</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
 
     <footer>
-      <p>&copy; 2025 Nigel Galbraith</p>
-      <p>
-        <a href="mailto:nigelgalbraith@proton.me">nigelgalbraith@proton.me</a> |
-        <a href="https://github.com/Oldschool299792458" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/nigelgalbraith" target="_blank">LinkedIn</a>
-      </p>
+      &copy; 2025 Nigel Galbraith | <a href="https://github.com/nigelgalbraith" target="_blank" rel="noopener">GitHub</a>
     </footer>
   </div>
+
+  <script>
+    function showPage(index) {
+      const pages = document.querySelectorAll('.project-page');
+      const dots = document.querySelectorAll('.dot');
+
+      pages.forEach((page, i) => {
+        page.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
 </body>
 </html>

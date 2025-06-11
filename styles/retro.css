@@ -1,149 +1,319 @@
+/* === Base Styles === */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background: radial-gradient(circle at center, #1a0033 0%, #000 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* === Grid Background === */
+.grid-bg {
+    background-image: 
+      repeating-linear-gradient(to right, #222 0px, #222 1px, transparent 1px, transparent 50px),
+      repeating-linear-gradient(to bottom, #222 0px, #222 1px, transparent 1px, transparent 50px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+/* === Navbar (Banner) === */
+.navbar {
+    background-color: rgba(0, 102, 255, 0.1);
+    border-bottom: 2px solid #0044ff;
+    box-shadow: 0 2px 5px rgba(0, 255, 255, 0.3);
+    width: 100%;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin-bottom: 2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-  .navbar a {
+    justify-content: center; 
+    gap: 6rem;  
+}
+
+.navbar a {
     color: #00ffff;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .main-split {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 3rem;
-  }
-  
-  .about-me {
-    flex: 1 1 60%;
-  }
-  
-  .about-me a {
-    color: #ff00cc;
-    text-decoration: underline;
-  }
-  
-  .profile-image {
-    flex: 1 1 30%;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #66ffff;
+    text-shadow: 0 0 8px #00ffff;
+    outline: none;
+}
+
+/* === Layout Container === */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1500px;
+    margin: auto;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+/* === Header === */
+
+h1 {
     text-align: center;
-  }
-  
-  .profile-image img {
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #00ffff;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #00ffff;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding-top: 1rem;
-    border-top: 1px solid #00ffff;
-    font-size: 0.9rem;
-  }
-  
-  footer a {
-    color: #00ffff;
-    margin: 0 0.5rem;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color: #ff007f;
-  }
-  
-  /* ===== New styles for resume three-column layout ===== */
-  
-  .three-column-wrapper {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .three-column-wrapper > section {
-    flex: 1 1 30%;
-    min-width: 280px;
-    box-sizing: border-box;
-    background: rgba(0, 255, 255, 0.05);
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #00ffff;
-    color: #fff; /* ensure white text inside */
-    font-family: Arial, sans-serif; /* ensure Arial font inside */
-  }
-  
-  .experience-column {
-    max-height: 600px;
-    overflow-y: auto;
-    padding-right: 1rem;
-  }
-  
-  /* Headings style in resume sections */
-  .resume-section h3 {
-    border-bottom: 1px solid #00ffff;
-    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    color: #66ffff;
+    margin-top: 0;
     margin-bottom: 1rem;
-    color: #00ffff;
-    font-family: Arial, sans-serif;
-  }
-  
-  .skills-list {
-    list-style: disc inside;
+}
+
+/* === About Section, Contact, Brief Outline === */
+.about, .contact, .brief-outline  {
+    max-width: 900px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    font-size: 1rem;
     color: #fff;
-    margin: 0;
-    padding-left: 1rem;
-    font-family: Arial, sans-serif;
-  }
-  
-  .skills-list li {
-    margin-bottom: 0.3rem;
-  }
-  
-  /* Link styles */
-  a {
+}
+
+/* === Project Grid === */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    /* Fixed width so sidebar + center + sidebar sum fits container */
+    flex: 0 0 900px;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* === Individual Project Card === */
+.project {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #00ffff;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.project img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 1.5rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* === Project Text === */
+.project-text h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #66ffff;
+}
+
+.project-text p {
+    margin: 0.25rem 0;
+    color: #ddd;
+}
+
+/* === Links === */
+a {
     color: #00ffff;
     text-decoration: none;
-  }
-  
-  a:hover {
+    font-weight: bold;
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
-  /* Responsive for smaller screens */
-  @media (max-width: 900px) {
-    .three-column-wrapper {
-      flex-direction: column;
+}
+
+/* === Footer === */
+footer {
+text-align: center;
+    margin-top: 2rem; 
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* === Sidebars and Icons === */
+.main-content-with-sidebars {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start;
+}
+
+.sidebar-left,
+.sidebar-right {
+    flex: 0 0 300px; /* fixed width, no grow or shrink */
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #00ffff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+/* Sidebar sections */
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    color: #66ffff;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Icon Above Each List Item */
+.li-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 0.5rem auto;
+    background-color: white;      
+    border-radius: 8px;          
+    filter: drop-shadow(0 0 4px #00ffff);
+    padding: 8px;                
+    box-sizing: content-box;     
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+/* === Pagination for Projects === */
+.resume-content {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #888;
+}
+
+.resume-content h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.resume-content .date {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+
+.project-page {
+    display: none;
+}
+
+.project-page.active {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.pagination-dots {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
     }
-    .three-column-wrapper > section {
-      flex-basis: 100%;
-      max-height: none;
+
+    .project img {
+        margin: 0 0 1rem 0;
     }
-    .experience-column {
-      overflow-y: visible;
-      padding-right: 0;
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
     }
-  }
-  
+
+    .main-content-with-sidebars {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-left,
+    .sidebar-right,
+    .projects {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 900px;
+        margin-bottom: 1rem;
+    }
+
+    .brief-outline {
+        margin: 2rem 0;
+    }
+}
