@@ -4,133 +4,50 @@
   <meta charset="UTF-8" />
   <title>About Me - Nigel Galbraith</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/retro.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-
   <div class="grid-bg"></div>
-
   <div class="container">
     <h1>Nigel Galbraith</h1>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active"></a>About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="main-content-with-sidebars">
-      <aside class="sidebar-left">
-        <div class="sidebar-section">
-          <h3>Qualifications</h3>
-          <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/degree.png" alt="Degree" class="li-icon" />
-              <span>BICT</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/cert.png" alt="Certificate" class="li-icon" />
-              <span>CCNA Certified</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/cloud.png" alt="Cloud" class="li-icon" />
-              <span>Azure Fundamentals</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/extra.png" alt="Extra" class="li-icon" />
-              <span>Extra Skill</span>
-            </div>
-          </div>
-        </div>
+    <!-- Main Brief Outline -->
+    <section class="about">
+      <p>
+        I'm Nigel Galbraith, an IT professional with a strong foundation in network infrastructure, virtualization, and automation. After years of hands-on experience across diverse industries from traffic planning to joinery, I transitioned into tech to build systems that are not just functional, but sustainable and user-focused.
+      </p>
+      <p>
+        During my studies at Ara Institute of Canterbury, I completed a capstone project developing a KVM-based virtualization environment to replace proprietary software — a step toward open-source learning and cost-effective lab setups. I thrive on technical challenges and enjoy turning complex problems into elegant, automated solutions.
+      </p>
+      <p>
+        Outside of work, I build personal projects like a custom arcade machine, a media server, and an automated irrigation system for my vegetable garden. These DIY builds reflect how I approach technology: creatively, practically, and with a sense of fun.
+      </p>
+    </section>
 
-        <div class="sidebar-section">
-          <h3>Soft Skills</h3>
-          <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/problem-solving.png" alt="Problem Solving" class="li-icon" />
-              <span>Problem Solving</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/extra.png" alt="Extra" class="li-icon" />
-              <span>Extra Skill</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/teamwork.png" alt="Teamwork" class="li-icon" />
-              <span>Team Collaboration</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/extra.png" alt="Extra" class="li-icon" />
-              <span>Extra Skill</span>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <section class="about">
-        <p>
-          I'm Nigel Galbraith, an IT professional with a strong foundation in network infrastructure, virtualization, and automation. After years of hands-on experience across diverse industries from traffic planning to joinery, I transitioned into tech to build systems that are not just functional, but sustainable and user-focused.
-        </p>
-        <p>
-          During my studies at Ara Institute of Canterbury, I completed a capstone project developing a KVM-based virtualization environment to replace proprietary software — a step toward open-source learning and cost-effective lab setups. I thrive on technical challenges and enjoy turning complex problems into elegant, automated solutions.
-        </p>
-        <p>
-          Outside of work, I build personal projects like a custom arcade machine, a media server, and an automated irrigation system for my vegetable garden. These DIY builds reflect how I approach technology: creatively, practically, and with a sense of fun.
-        </p>
-      </section>
-
-      <aside class="sidebar-right">
-        <div class="sidebar-section">
-          <h3>Practical Skills</h3>
-          <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/woodwork.png" alt="Woodwork" class="li-icon" />
-              <span>Joinery & Carpentry</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/tools.png" alt="Tools" class="li-icon" />
-              <span>Power Tools & Safety</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/repair.png" alt="DIY" class="li-icon" />
-              <span>Electronics & DIY Fixes</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/extra.png" alt="Extra" class="li-icon" />
-              <span>Extra Skill</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-section">
-          <h3>Technical Skills</h3>
-          <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/network.png" alt="Networking" class="li-icon" />
-              <span>Network Setup</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/linux.png" alt="Linux" class="li-icon" />
-              <span>Linux & CLI Tools</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/virtual.png" alt="Virtualization" class="li-icon" />
-              <span>Virtualization & KVM</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/extra.png" alt="Extra" class="li-icon" />
-              <span>Extra Skill</span>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
-
+    <!-- Footer -->
     <footer>
-      &copy; 2025 Nigel Galbraith | <a href="https://github.com/nigelgalbraith" target="_blank">GitHub</a>
-    </footer>    
+      &copy; 2025 Nigel Galbraith | 
+      <a href="mailto:nigel.galbraith@proton.me" target="_blank">
+        <img src="images/email.png" alt="Email" class="footer-icon" />
+      </a>
+      <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
+        <img src="images/github.png" alt="GitHub" class="footer-icon" />
+      </a>
+      <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
+        <img src="images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+      </a>
+    </footer>  
   </div>
   
 </body>
