@@ -69,47 +69,31 @@ h1 {
     padding: 2rem;
 }
 
-.main-content-with-sidebars {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: flex-start;
+.intro-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.sidebar-left,
-.sidebar-right {
-    flex: 0 0 300px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #00ffff;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    box-sizing: border-box;
+.intro-text {
+  flex: 2;
+  min-width: 280px;
 }
 
-.sidebar-section {
-    margin-bottom: 2rem;
+.intro-image {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
 }
 
-.sidebar-section h3 {
-    color: #66ffff;
-    border-bottom: 1px solid #00ffff;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-    text-align: center;
+.intro-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.sidebar-section ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.sidebar-section li {
-    margin-bottom: 1rem;
-    text-align: center;
-}
 
 /* =======================
    Navigation
@@ -172,6 +156,85 @@ h1 {
 .brief-outline {
     margin: 2rem 0;
 }
+
+/* =======================
+   Experience Timeline
+======================= */
+.timeline {
+  position: relative;
+  margin: 2rem 0 3rem 0;
+  padding-left: 15rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0.5rem;
+  width: 18px;
+  height: 18px;
+  background-color: #00ffff; 
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.7); 
+  box-sizing: content-box;
+  box-shadow: 0 0 8px #00ffff;
+}
+
+.timeline-item .time {
+  position: absolute;
+  left: -18rem;
+  width: 15rem;
+  text-align: right;
+  font-weight: 600;
+  color: #cccccc;
+  font-style: italic;
+  font-size: 0.9rem;
+  top: 0;
+  user-select: none;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.timeline-item .content {
+  margin-left: 0;
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+  color: #ffffff; /* consistent with your headings */
+}
+
+.timeline-item ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: #dddddd;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+/* Responsive: stack time above on small screens */
+@media screen and (max-width: 600px) {
+  .timeline {
+    padding-left: 1rem;
+    border-left: none;
+  }
+  .timeline-item .time {
+    position: static;
+    width: auto;
+    text-align: left;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+  }
+  .timeline-item {
+    padding-left: 0;
+  }
+}
+
 
 /* =======================
    Projects & Cards
