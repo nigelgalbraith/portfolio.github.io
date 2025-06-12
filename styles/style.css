@@ -3,7 +3,7 @@
 ======================= */
 body {
     margin: 0;
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-family: 'Comic Sans MS', 'Comic Sans', Arial, Helvetica, sans-serif;
     background: radial-gradient(circle at center, #1a0033 0%, #000 100%);
     color: #ffffff;
     overflow-x: hidden;
@@ -64,7 +64,7 @@ h1 {
 .container {
     position: relative;
     z-index: 1;
-    max-width: 1500px;
+    max-width: 80%;
     margin: auto;
     padding: 2rem;
 }
@@ -78,7 +78,6 @@ h1 {
 
 .intro-text {
   flex: 2;
-  min-width: 280px;
 }
 
 .intro-image {
@@ -93,7 +92,6 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
 
 /* =======================
    Navigation
@@ -140,6 +138,7 @@ h1 {
     color: #ffffff;
 }
 
+
 /* =======================
    Sections
 ======================= */
@@ -169,14 +168,13 @@ h1 {
 .timeline-item {
   position: relative;
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 2rem;
+  padding-left: 2rem; 
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -11px;
+  left: 0;
   top: 0.5rem;
   width: 18px;
   height: 18px;
@@ -185,6 +183,18 @@ h1 {
   border: 3px solid rgba(0, 0, 0, 0.7); 
   box-sizing: content-box;
   box-shadow: 0 0 8px #00ffff;
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 0.8rem; 
+  top: 3rem;
+  width: 2px;
+  height: calc(100% - 1.5rem);
+  background: rgba(0, 255, 255, 0.3);
+  z-index: 0;
 }
 
 .timeline-item .time {
@@ -198,7 +208,7 @@ h1 {
   font-size: 0.9rem;
   top: 0;
   user-select: none;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Comic Sans MS', 'Comic Sans', Arial, Helvetica, sans-serif;
 }
 
 .timeline-item .content {
@@ -207,34 +217,60 @@ h1 {
 
 .timeline-item h3 {
   margin-top: 0;
-  color: #ffffff; /* consistent with your headings */
+  color: #ffffff;
 }
 
 .timeline-item ul {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
   color: #dddddd;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Comic Sans MS', 'Comic Sans', Arial, Helvetica, sans-serif;
 }
 
-/* Responsive: stack time above on small screens */
-@media screen and (max-width: 600px) {
-  .timeline {
-    padding-left: 1rem;
-    border-left: none;
-  }
-  .timeline-item .time {
-    position: static;
-    width: auto;
-    text-align: left;
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-  }
-  .timeline-item {
-    padding-left: 0;
-  }
+.content {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  max-width: 100%;
 }
 
+.sub-content {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  max-width: 100%;
+}
+
+.sub-role {
+  position: relative;
+  padding-left: 2rem; 
+  margin-bottom: 1.2rem;
+  border-left: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.sub-role::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;         
+  top: 1.2rem;     
+  width: 14px;
+  height: 14px;
+  background-color: #00ffff;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 6px #00ffff;
+  box-sizing: content-box;
+  z-index: 1;
+}
+
+.sub-role-date {
+  width: 20rem;
+  text-align: right;
+  font-weight: 600;
+  color: #cccccc;
+  font-style: italic;
+  font-size: 0.9rem;
+  user-select: none;
+  font-family: 'Comic Sans MS', 'Comic Sans', Arial, Helvetica, sans-serif;
+}
 
 /* =======================
    Projects & Cards
@@ -246,7 +282,6 @@ h1 {
     margin-top: 3rem;
     flex: 0 0 900px;
     background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem;
     border-radius: 8px;
     box-sizing: border-box;
 }
@@ -317,7 +352,6 @@ h1 {
     box-sizing: content-box;     
 }
 
-
 /* =======================
    Resume Section
 ======================= */
@@ -327,7 +361,6 @@ h1 {
     padding: 1rem;
     border-radius: 12px;
     margin-bottom: 0rem;
-    
 }
 
 .centered-skill-title {
@@ -335,7 +368,6 @@ h1 {
   padding-top: 1rem;
   padding-bottom: 0rem;
   margin: 1rem;
-
 }
 
 /* =======================
@@ -358,37 +390,4 @@ footer {
 
 .footer-icon:hover {
   transform: scale(1.2);
-}
-
-/* =======================
-   Responsive Design
-======================= */
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project img {
-        margin: 0 0 1rem 0;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .main-content-with-sidebars {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar-left,
-    .sidebar-right,
-    .projects {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 900px;
-        margin-bottom: 1rem;
-    }
 }
