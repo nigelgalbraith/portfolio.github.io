@@ -9,6 +9,9 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+html {
+  overflow-y: scroll;
+}
 
 a {
     color: #00ffff;
@@ -69,7 +72,7 @@ h1 {
     padding: 2rem;
 }
 
-.intro-flex {
+.intro-flex, .contact-flex {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -82,14 +85,14 @@ h1 {
 
 .intro-image {
   flex: 1;
-  min-width: 200px;
+  min-width: 1rem;
   text-align: center;
 }
 
 .intro-image img {
-  max-width: 50%;
+  max-height: 25rem;
   height: auto;
-  border-radius: 12px;
+  border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
@@ -154,6 +157,10 @@ h1 {
 
 .brief-outline {
     margin: 2rem 0;
+}
+
+.contact-info {
+  min-width: 61.8rem;
 }
 
 /* =======================
@@ -243,14 +250,13 @@ h1 {
   position: relative;
   padding-left: 2rem; 
   margin-bottom: 1.2rem;
-  border-left: 2px solid rgba(0, 255, 255, 0.3);
 }
 
 .sub-role::before {
   content: "";
   position: absolute;
   left: -0.6rem;         
-  top: 1.2rem;     
+  top: 0.5rem;     
   width: 14px;
   height: 14px;
   background-color: #00ffff;
@@ -259,6 +265,17 @@ h1 {
   box-shadow: 0 0 6px #00ffff;
   box-sizing: content-box;
   z-index: 1;
+}
+
+.sub-role::after {
+  content: "";
+  position: absolute;
+  left: -0.1rem;
+  top: 2.2rem;
+  width: 2px;
+  height: calc(100% - 1.4rem);
+  background: rgba(0, 255, 255, 0.3);
+  z-index: 0;
 }
 
 .sub-role-date {
@@ -319,6 +336,18 @@ h1 {
     margin: 0.25rem 0;
     color: #ddd;
 }
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
+  text-decoration: none;
+}
+
 
 /* =======================
    Icon Grids
