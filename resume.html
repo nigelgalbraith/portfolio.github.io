@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nigel Galbraith - Resume</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <div class="grid-bg"></div>
@@ -12,13 +14,16 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Resume Outline -->
@@ -100,7 +105,7 @@
 
            <!-- Downer, Christchurch - Grouped Roles -->
           <div class="timeline-item">
-            <div class="time">Jan 2009 – Jun 2016<br>7 yrs</div>
+            <div class="time">Jan 2009 – Jun 2016</div>
             <div class="time-content">
               <h3>Traffic Management – Downer, Christchurch</h3>
               <h4>Outline</h4>
@@ -124,7 +129,7 @@
                     <li>Developed a web-based SharePoint database to manage Traffic Management Plan production.</li>
                   </ul>
                 </div>
-                <div class="sub-role-date">Jan 2015 – Jun 2016 (1 yr 6 mos)</div>
+                <div class="sub-role-date">Jan 2015 - Jun 2016</div>
               </div>
 
               <div class="sub-timeline-item">
@@ -135,7 +140,7 @@
                     <li>Built strong client relationships to ensure future work opportunities.</li>
                   </ul>
                 </div>
-                <div class="sub-role-date">May 2013 – Jan 2015 (1 yr 9 mos)</div>
+                <div class="sub-role-date">May 2013 - Jan 2015</div>
               </div>
 
               <div class="sub-timeline-item">
@@ -145,7 +150,7 @@
                     <li>Managed sign hire between different departments within Downer.</li>
                   </ul>
                 </div>
-                <div class="sub-role-date">Jan 2013 – May 2013 (5 mos)</div>
+                <div class="sub-role-date">Jan 2013 - May 2013</div>
               </div>
 
               <div class="sub-timeline-item">
@@ -155,7 +160,7 @@
                     <li>Established and disestablished traffic management sites prior to road works.</li>
                   </ul>
                 </div>
-                <div class="sub-role-date">Jan 2012 – Jan 2013 (1 yr 1 mo)</div>
+                <div class="sub-role-date">Jan 2012 - Jan 2013</div>
               </div>
             </div>
           </div>
@@ -163,7 +168,7 @@
 
           <!-- Customer Service & Computer Technical Support – Laptop Universe, Christchurch -->
           <div class="timeline-item">
-            <div class="time">Jan 2009 – Jan 2012</div>
+            <div class="time">Jan 2009 - Jan 2012</div>
             <div class="time-content">
               <h2>Customer Service & Computer Technical Support</h2>
               <h3>Laptop Universe, Christchurch</h3>
@@ -191,7 +196,7 @@
 
             <!-- Ara -->
             <div class="timeline-item">
-              <div class="time">2021 – 2024</div>
+              <div class="time">2021 - 2024</div>
               <div class="time-content">
                 <h2>Ara Institute of Canterbury</h2>
                 <ul>
@@ -209,7 +214,7 @@
 
             <!-- CPI -->
             <div class="timeline-item">
-              <div class="time">2007 – 2008</div>
+              <div class="time">2007 - 2008</div>
               <div class="time-content">
                 <h2>The Computer Power Institute</h2>
                 <ul>
@@ -220,18 +225,18 @@
 
             <!-- CPIT -->
             <div class="timeline-item">
-              <div class="time">2004 – 2005</div>
+              <div class="time">2004 - 2005</div>
               <div class="time-content">
                 <h2>Christchurch Polytechnic Institute of Technology</h2>
                 <ul>
-                  <li>Cert. Joinery – Lv1 & Stair making, 2005</li>
+                  <li>Cert. Joinery - Lv1 & Stair making, 2005</li>
                 </ul>
               </div>
             </div>
 
             <!-- UC -->
             <div class="timeline-item">
-              <div class="time">2000 – 2003</div>
+              <div class="time">2000 - 2003</div>
               <div class="time-content">
                 <h2>University of Canterbury</h2>
                 <ul>
