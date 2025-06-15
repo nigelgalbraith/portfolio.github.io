@@ -21,10 +21,78 @@
 
     <!-- Main Brief Outline -->
     <main class="main-content">
-      <div class="main-content-flex">
-        <div class="main-content-text">
-          <p>Under Construction</p>
-      <div>
+      <div class="main-content-flex-centre">
+        <h2>Custom Arcade Cabinet</h2>
+          <!-- Topo diagram and zoon in-->
+          <div class="image-zoom-wrapper">
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <img src="images/Arcade-Cabinet1.png" alt="Arcade Cabinet 1" class="carousel-image active" onclick="openFullScreen()" />
+                <img src="images/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" class="carousel-image" onclick="openFullScreen()" />                
+              </div>
+              <div class="dots">
+                <span class="dot active" onclick="showSlide(0)"></span>
+                <span class="dot" onclick="showSlide(1)"></span>
+              </div>
+            </div>           
+            <div id="imgModal" class="modal" onclick="closeFullScreen()">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="fullImg">
+            </div>     
+          </div>
+          
+          <!-- Main Content --> 
+          <div class="main-content-text">          
+            <section>
+              <p>
+                For this project, I built a custom MAME arcade cabinet using waste MDF and salvaged timber from my joinery work, giving new life to materials that would otherwise have been discarded. The core of the system is an old Dell OptiPlex Slimline from around 2005, equipped with a Core 2 Duo processor, repurposed to run classic games smoothly.
+              </p>
+              <p>
+                I integrated an i-PAC circuit board to manage the joystick and button controls for an authentic arcade experience. The visuals are displayed on a secondhand 32-inch TV, with a front LED fan and an external power button installed on the cabinet for easy access.
+              </p>              
+              <p>
+                Running Windows with HyperSpin, the cabinet supports over 4000 games, including titles from MAME, Neo Geo, PlayStation 1 & 2, Sega Master System, Sega Mega Drive, Mega CD, NES, and SNES all packed into one nostalgic gaming experience. To enhance immersion, I used local policy settings to hide the Windows system interface, providing a clean, arcade-style environment.
+              </p>
+            </section>
+            
+          <section>
+
+            <!-- Tools and Technologies -->
+            <h2 class="centered-title">Tools and Technologies</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                <div class="icon-item">
+                  <img src="images/programing.png" alt="Tools" class="li-icon" />
+                  <span>Shell Scripting</span>
+                </div>
+                <div class="icon-item">
+                  <img src="images/python.png" alt="Python" class="li-icon" />
+                  <span>Python</span>
+                </div>
+                <div class="icon-item">
+                  <img src="images/woodwork.png" alt="Woodwork" class="li-icon" />
+                  <span>Joinery & Carpentry</span>
+                </div>
+                <div class="icon-item">
+                  <img src="images/tools.png" alt="Tools" class="li-icon" />
+                  <span>Power Tools & Safety</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Learnings -->
+            <h2 class="centered-title">Key Learnings</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                <div class="icon-item">
+                  <img src="images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+                  <span>Debugging</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->

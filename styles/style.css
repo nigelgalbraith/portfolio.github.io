@@ -404,18 +404,6 @@ h1 {
   text-align: center;
 }
 
-.zoom-btn {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  border-color: #66ffff;
-  border-radius: 5px;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -426,7 +414,7 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #000;
 }
 
 .modal-content {
@@ -448,6 +436,55 @@ h1 {
 
 .close:hover {
   color: #bbb;
+}
+
+.centre-img {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.carousel-container {
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #717171;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #bbb;
 }
 
 /* =======================
@@ -507,9 +544,19 @@ footer {
 /* =======================
    Responsive
 ======================= */
+/* Laptop veiwpont */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .main-content-image img,
+  .main-content-image-padding img{
+    max-height: 20rem;
+  }
+}
+
+/* Cell phone veiwpont */
 @media (max-width: 768px) {
 
-/* Fonts */
+  /* Fonts */
   h1 {
     font-size: 1.3rem; 
   }
@@ -647,22 +694,14 @@ footer {
     display: none;
     position: absolute;
     top: 100%; 
-    left: 0;
     background-color: #000; 
-    width: 100%;
-    margin-left: 2rem;
+    width: 70%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 999; 
+    z-index: 999;
   }
 
   .nav-links.active {
     display: block;
-  }
-
-  .nav-links {
-    width: max-content;
-    min-width: 10rem; 
-    padding-left: 1.4rem;
   }
 
   .nav-links ul {
@@ -671,7 +710,8 @@ footer {
     flex-direction: column;
     align-items: center; 
     gap: 0;
-    max-width: 70%;
+    max-width: 100%;  
+    padding: 0;
   }
 
   .nav-links ul li {
@@ -679,8 +719,10 @@ footer {
   }
 
   .nav-links ul li a {
-    display: block;
     width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
     text-align: center;
     text-decoration: none;
     color: #00ffff;
