@@ -9,7 +9,11 @@ function openFullScreen() {
   if (singleImg) {
     modalImg.src = singleImg.src;
   } else if (carouselImgs.length > 0) {
-    modalImg.src = carouselImgs[currentSlide].src;
+    // Find the visible image — the one with class 'active'
+    const visibleImg = Array.from(carouselImgs).find(img => img.classList.contains('active'));
+    if (visibleImg) {
+      modalImg.src = visibleImg.src;
+    }
   }
 
   modal.style.display = "block";
@@ -66,15 +70,16 @@ function zoomCurrentImage() {
 document.addEventListener("DOMContentLoaded", () => {
   showSlide(0);
 
-  // Swipe support
   let startX = 0;
   let endX = 0;
-  const threshold = 50; // minimum swipe distance in px
+  const threshold = 50; // minimum swipe distance in px to trigger slide change
+  const minSwipeDistance = 10; // minimum meaningful move
 
   const carouselContainer = document.querySelector('.carousel-container');
   if (carouselContainer) {
     carouselContainer.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
+      endX = startX; // initialize endX to startX
     });
 
     carouselContainer.addEventListener('touchmove', (e) => {
@@ -82,23 +87,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     carouselContainer.addEventListener('touchend', () => {
-      if (startX - endX > threshold) {
-        // swiped left
-        nextSlide();
-      } else if (endX - startX > threshold) {
-        // swiped right
-        prevSlide();
+      const diff = startX - endX;
+      if (Math.abs(diff) > threshold && Math.abs(diff) > minSwipeDistance) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
       }
       startX = 0;
       endX = 0;
     });
   }
 
-  // Dot click event support (syncs dot click with currentSlide)
+  // Dot click support
   const dots = document.querySelectorAll(".dot");
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
-      showSlide(index); // keeps currentSlide in sync
+      showSlide(index);
     });
+  });
+
+  // Image click handler to open zoom modal and stop event bubbling
+  document.querySelectorAll('.carousel-image').forEach(img => {
+    img.addEventListener('click', (event) => {
+      event.stopPropagation();
+      openFullScreen();
+    });
+  });
+
+  // Close modal when clicking outside image or close button
+  const modal = document.getElementById("imgModal");
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal || event.target.classList.contains('close')) {
+      closeFullScreen();
+    }
   });
 });

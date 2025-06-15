@@ -27,22 +27,22 @@
           <div class="image-zoom-wrapper">
             <div class="carousel-container">
               <div class="carousel-slide">
-                <img src="images/Arcade-Cabinet1.png" alt="Arcade Cabinet 1" class="carousel-image active" onclick="openFullScreen()" />
-                <img src="images/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" class="carousel-image" onclick="openFullScreen()" />                
+                <img src="images/Arcade-Cabinet1.png" alt="Arcade Cabinet 1" class="carousel-image active" />
+                <img src="images/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" class="carousel-image" />
               </div>
               <div class="dots">
                 <div class="carousel-controls">
                   <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
-                    <span class="dot active" onclick="showSlide(0)"></span>
-                    <span class="dot" onclick="showSlide(1)"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
                   <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
                 </div>
               </div>
-            </div>           
-            <div id="imgModal" class="modal" onclick="closeFullScreen()">
+            </div>
+            <div id="imgModal" class="modal">
               <span class="close">&times;</span>
-              <img class="modal-content" id="fullImg">
-            </div>     
+              <img class="modal-content" id="fullImg" />
+            </div>
           </div>
           
           <!-- Main Content --> 
