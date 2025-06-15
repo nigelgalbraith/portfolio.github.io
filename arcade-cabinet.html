@@ -31,8 +31,12 @@
                 <img src="images/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" class="carousel-image" onclick="openFullScreen()" />                
               </div>
               <div class="dots">
-                <span class="dot active" onclick="showSlide(0)"></span>
-                <span class="dot" onclick="showSlide(1)"></span>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+                    <span class="dot active" onclick="showSlide(0)"></span>
+                    <span class="dot" onclick="showSlide(1)"></span>
+                  <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+                </div>
               </div>
             </div>           
             <div id="imgModal" class="modal" onclick="closeFullScreen()">
@@ -56,7 +60,6 @@
             </section>
             
           <section>
-
             <!-- Tools and Technologies -->
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">

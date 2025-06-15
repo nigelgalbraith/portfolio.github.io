@@ -442,6 +442,12 @@ h1 {
   background-color: #ffffff;
   padding: 0.5rem;
   cursor: pointer;
+
+}
+
+.centre-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffff;
 }
 
 .carousel-container {
@@ -462,6 +468,11 @@ h1 {
   width: 100%;
   height: auto;
   cursor: pointer;
+}
+
+.carousel-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffff;
 }
 
 .carousel-image.active {
@@ -485,6 +496,26 @@ h1 {
 
 .dot.active {
   background-color: #bbb;
+}
+
+.carousel-arrow {
+  background: none;       
+  border: none;            
+  cursor: pointer;        
+  font-size: 2rem;        
+  color: #333;             
+  transition: color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  color: #007BFF;         
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  gap: 1rem; 
 }
 
 /* =======================

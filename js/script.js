@@ -49,11 +49,46 @@ function showSlide(index) {
   currentSlide = index;
 }
 
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
 function zoomCurrentImage() {
   openFullScreen();
 }
 
-// Initialize on DOM load
+// Initialize on DOM load and add swipe support
 document.addEventListener("DOMContentLoaded", () => {
   showSlide(0);
+
+  let startX = 0;
+  let endX = 0;
+  const threshold = 50; // minimum swipe distance in px
+
+  const carouselContainer = document.querySelector('.carousel-container');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    carouselContainer.addEventListener('touchmove', (e) => {
+      endX = e.touches[0].clientX;
+    });
+
+    carouselContainer.addEventListener('touchend', () => {
+      if (startX - endX > threshold) {
+        // swiped left
+        nextSlide();
+      } else if (endX - startX > threshold) {
+        // swiped right
+        prevSlide();
+      }
+      startX = 0;
+      endX = 0;
+    });
+  }
 });

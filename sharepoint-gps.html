@@ -19,12 +19,84 @@
       </ul>
     </nav>
 
-    <!-- Main Brief Outline -->
+        <!-- Main Brief Outline -->
     <main class="main-content">
-      <div class="main-content-flex">
-        <div class="main-content-text">
-          <p>Under Construction</p>
-      <div>
+      <div class="main-content-flex-centre">
+        <h2>SharePoint Database and GPS-Based Tracking System</h2>
+          <!-- Topo diagram and zoon in-->
+          <div class="image-zoom-wrapper">
+            <img src="images/sharepointGPS.png" alt="Sharepoint & GPS Information Flow Diagram" class="centre-img" id="zoomImage" onclick="openFullScreen()" />
+          </div>
+          <div id="imgModal" class="modal" onclick="closeFullScreen()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImg">
+          </div>
+        </div>
+
+        <!-- Main Content --> 
+        <div class="main-content-text">          
+          <section>
+            <p>
+              As part of my work with Downer, I implemented a SharePoint-based digital solution to enhance the efficiency and communication within the traffic management team. The goal was to modernize the way site traffic management supervisors accessed and managed their documents, plans, and job data in the field.
+            </p>
+            <p>
+              I developed a SharePoint site that allowed supervisors to:
+              <ul>
+                <li>Access and manage Traffic Management Plans (TMPs) directly from their tablets while on-site.</li>
+                <li>Upload daily site checks via their smartphones, streamlining reporting and compliance.</li>
+                <li>Scan temporary traffic management signs with mobile devices, automatically capturing and logging GPS coordinates where signs were placed.</li>
+              </ul>
+            </p>
+            <p>
+              This SharePoint platform became a centralized hub, supporting:
+              <ul>
+                <li>Forward works planning by linking staff, plant, and resources to current and future projects.</li>
+                <li>Improved visibility and communication, enabling access to the weekly planner from any internet-connected device.</li>
+                <li>Crew pre-planning, allowing team leads to assign and prepare crews in advance based on job requirements.</li>
+              </ul>
+            </p>
+            <p>
+              The solution significantly reduced manual paperwork, improved auditability, and helped teams in the field stay connected to the office in real time. This contributed to smoother project delivery and better-informed decision-making across multiple job sites.
+            </p>
+          </section>
+
+          <section>
+            <!-- Tools and Technologies -->
+            <h2 class="centered-title">Tools and Technologies</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                  <div class="icon-item">
+                  <img src="images/SharePoint.png" alt="SharePoint" class="li-icon" />
+                  <span>SharePoint</span>
+                </div>
+                  <div class="icon-item">
+                  <img src="images/Office365.png" alt="Office 365" class="li-icon" />
+                  <span>Office 365</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Learnings -->
+            <h2 class="centered-title">Key Learnings</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                <div class="icon-item">
+                  <img src="images/teamwork.png" alt="Teamwork" class="li-icon" />
+                  <span>Collaboration & Testing</span>
+                </div>
+                <div class="icon-item">
+                  <img src="images/gps_tracking.png" alt="GPS Tracking" class="li-icon" />
+                  <span>GPS Integration</span>
+                </div>
+                <div class="icon-item">
+                  <img src="images/user_experience.png" alt="User Experience" class="li-icon" />
+                  <span>User Experience Design</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
