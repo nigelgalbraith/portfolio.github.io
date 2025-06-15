@@ -631,6 +631,10 @@ footer {
     width: 100%;
   }
 
+  .carousel-arrow {
+   display: none;
+  }
+
   .timeline-item .time {
     display: none !important;
   }

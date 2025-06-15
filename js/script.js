@@ -47,6 +47,7 @@ function showSlide(index) {
   });
 
   currentSlide = index;
+  console.log("Current slide index:", currentSlide); // Debugging log
 }
 
 function prevSlide() {
@@ -61,10 +62,11 @@ function zoomCurrentImage() {
   openFullScreen();
 }
 
-// Initialize on DOM load and add swipe support
+// === Initialize on DOM load and add swipe + dot click support ===
 document.addEventListener("DOMContentLoaded", () => {
   showSlide(0);
 
+  // Swipe support
   let startX = 0;
   let endX = 0;
   const threshold = 50; // minimum swipe distance in px
@@ -91,4 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
       endX = 0;
     });
   }
+
+  // Dot click event support (syncs dot click with currentSlide)
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index); // keeps currentSlide in sync
+    });
+  });
 });
