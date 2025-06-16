@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Multiple Choice Quiz</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
+  <h1 id="quizHeading">Multiple Choice Quiz</h1>
+
+  <div id="quizContainer">
+    <!-- Quiz content will be injected here by JavaScript -->
+  </div>
+
+  <button id="submitQuiz">Submit Quiz</button>
+
+  <script src="src/Controller.js"></script>
+  <script src="src/CyberOpsData-JSON.js"></script>
+  <script src="src/Question.js"></script>
+  <script src="src/Quiz.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Page loaded, initializing quiz...');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const moduleKey = parseInt(urlParams.get('module'), 10) || 1; // Default to 1
+      console.log(`Module Key: ${moduleKey}`);
+
+      // Retrieve and decode moduleNames from URL parameters
+      const moduleNamesParam = urlParams.get('names');
+      console.log('Module names parameter:', moduleNamesParam);
+      
+      const moduleNames = JSON.parse(decodeURIComponent(moduleNamesParam)) || {};
+      console.log('Decoded module names:', moduleNames);
+
+      // Retrieve the number of questions parameter
+      const numQuestions = parseInt(urlParams.get('numQuestions'), 10) || 0;
+      console.log(`Number of Questions: ${numQuestions}`);
+
+      // Initialize the quiz data
+      const { quiz } = Controller.setup(jsonData);
+      console.log('Quiz initialized:', quiz);
+
+      const moduleQuestions = quiz.getQuestionsByModule(moduleKey);
+      console.log(`Retrieved questions for module ${moduleKey}:`, moduleQuestions);
+
+      // Randomly select a subset of questions if numQuestions is specified
+      const selectedQuestions = numQuestions > 0
+        ? moduleQuestions.sort(() => 0.5 - Math.random()).slice(0, numQuestions)
+        : moduleQuestions;
+      
+      console.log(`Selected questions (${selectedQuestions.length}):`, selectedQuestions);
+
+      const moduleName = moduleNames[moduleKey] || 'Module Not Found';
+      document.getElementById('quizHeading').textContent = `Multiple Choice Quiz: ${moduleName}`;
+      console.log(`Quiz heading set to: ${moduleName}`);
+
+      const quizContainer = document.getElementById('quizContainer');
+      if (selectedQuestions.length > 0) {
+        selectedQuestions.forEach(question => {
+          const questionElement = question.createQuestionElement();
+          quizContainer.appendChild(questionElement);
+          console.log('Appended question element:', questionElement);
+        });
+      } else {
+        quizContainer.innerHTML = '<p>No questions available for this module.</p>';
+        console.log('No questions available for this module.');
+      }
+
+      document.getElementById('submitQuiz').onclick = () => {
+        console.log('Submit button clicked.');
+
+        // Collect results from each question
+        const results = selectedQuestions.map(question => {
+          // Check answers and collect results
+          question.checkAnswer(); // Ensures the answers are checked and displayed
+          const result = {
+            question: question.question,
+            userAnswer: question.userAnswer,
+            correctAnswer: question.correctAnswer,
+            explanation: question.explanation,
+            isCorrect: question.userAnswer.length > 0 && question.correctAnswer.every(ans => question.userAnswer.includes(ans)) && question.userAnswer.length === question.correctAnswer.length
+          };
+          console.log('Question result:', result);
+          return result;
+        });
+
+        // Save results to localStorage and redirect
+        localStorage.setItem('quizResults', JSON.stringify(results));
+        console.log('Results saved to localStorage:', results);
+        window.location.href = 'results.html';
+      };
+    });
+  </script>
+</body>
+</html>
