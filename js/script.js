@@ -1,15 +1,13 @@
 // === Zoom for Single or Carousel Image ===
-function openFullScreen() {
+function openFullScreen(imgElement) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("fullImg");
 
-  const singleImg = document.getElementById("zoomImage");
-  const carouselImgs = document.querySelectorAll(".carousel-image");
-
-  if (singleImg) {
-    modalImg.src = singleImg.src;
-  } else if (carouselImgs.length > 0) {
-    // Find the visible image — the one with class 'active'
+  if (imgElement) {
+    modalImg.src = imgElement.src;
+  } else {
+    // fallback for carousel images
+    const carouselImgs = document.querySelectorAll(".carousel-image");
     const visibleImg = Array.from(carouselImgs).find(img => img.classList.contains('active'));
     if (visibleImg) {
       modalImg.src = visibleImg.src;

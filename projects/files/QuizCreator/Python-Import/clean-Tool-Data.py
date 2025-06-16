@@ -9,9 +9,9 @@ import json
 from collections import defaultdict
 
 # Define constants
-INPUT_JSON_FILE = "json_files/CyberOpsData.json"
-OUTPUT_JSON_FILE = "json_files/CyberOpsData-clean.json"
-OUTPUT_JS_FILE = "json_files/CyberOpsData-JSON.js"
+INPUT_JSON_FILE = "json_files/QuizData.json"
+OUTPUT_JSON_FILE = "json_files/QuizData-clean.json"
+OUTPUT_JS_FILE = "json_files/QuizData-JSON.js"
 KEYS_TO_SPLIT = ["Multiple Answers", "Correct Answer"]
 JSON_PREFIX = "jsonData"
 SEPARATOR = "\n"

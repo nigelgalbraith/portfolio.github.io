@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nigel Galbraith - KVM-Lab</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <script src="../js/script.js" defer></script>
 </head>
 <body>
   <div class="grid-bg"></div>
@@ -15,7 +15,7 @@
     <!-- Navigation Bar Top -->
     <nav class="navbar">
       <ul>
-        <li><a href="projects.html">Back To Projects</a></li>
+        <li><a href="../projects.html">Back To Projects</a></li>
       </ul>
     </nav>
 
@@ -25,7 +25,7 @@
         <h2>KVM Student Labs Project</h2>
           <!-- Topo diagram and zoon in-->
           <div class="image-zoom-wrapper">
-            <img src="images/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img" id="zoomImage" onclick="openFullScreen()" />
+            <img src="images/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img zoomable" onclick="openFullScreen(this)" />
           </div>
           <div id="imgModal" class="modal" onclick="closeFullScreen()">
             <span class="close">&times;</span>
@@ -52,27 +52,27 @@
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="images/ubuntu.png" alt="Linux" class="li-icon" />
+                  <img src="../images/ubuntu.png" alt="Linux" class="li-icon" />
                   <span>Ubuntu KVM</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/cockpit.png" alt="Networking" class="li-icon" />
+                  <img src="../images/cockpit.png" alt="Networking" class="li-icon" />
                   <span>Libvirt</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/virtual.png" alt="Virtualization" class="li-icon" />
+                  <img src="../images/virtual.png" alt="Virtualization" class="li-icon" />
                   <span>QEMU</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/programing.png" alt="Tools" class="li-icon" />
+                  <img src="../images/programing.png" alt="Tools" class="li-icon" />
                   <span>Shell Scripting</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/acl.png" alt="Fixes" class="li-icon" />
+                  <img src="../images/acl.png" alt="Fixes" class="li-icon" />
                   <span>Permissions</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/ad.png" alt="Cloud" class="li-icon" />
+                  <img src="../images/ad.png" alt="Cloud" class="li-icon" />
                   <span>Active Directory</span>
                 </div>
               </div>
@@ -83,19 +83,19 @@
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+                  <img src="../images/problem-solving.png" alt="Problem Solving" class="li-icon" />
                   <span>Debugging</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/teamwork.png" alt="Teamwork" class="li-icon" />
+                  <img src="../images/teamwork.png" alt="Teamwork" class="li-icon" />
                   <span>Collaboration & Testing</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/automation.png" alt="Linux" class="li-icon" />
+                  <img src="../images/automation.png" alt="Linux" class="li-icon" />
                   <span>System Automation</span>
                 </div>
                 <div class="icon-item">
-                  <img src="images/degree.png" alt="Degree" class="li-icon" />
+                  <img src="../images/degree.png" alt="Degree" class="li-icon" />
                   <span>Security Best Practices</span>
                 </div>
               </div>
@@ -109,13 +109,13 @@
     <footer>
       &copy; 2025 Nigel Galbraith |
       <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="images/email.png" alt="Email" class="footer-icon" />
+        <img src="../images/email.png" alt="Email" class="footer-icon" />
       </a>
       <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="images/github.png" alt="GitHub" class="footer-icon" />
+        <img src="../images/github.png" alt="GitHub" class="footer-icon" />
       </a>
       <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+        <img src="../images/linkedin.png" alt="LinkedIn" class="footer-icon" />
       </a>
     </footer>
   </div>

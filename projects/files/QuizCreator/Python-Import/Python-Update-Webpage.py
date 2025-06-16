@@ -12,7 +12,7 @@ import os
 # Define Constants
 IMPORT_PYTHON = "import-Tool-Data.py"
 CLEAN_PYTHON = "clean-Tool-Data.py"
-SOURCE_FILE = "json_files/CyberOpsData-JSON.js"
+SOURCE_FILE = "json_files/QuizData-JSON.js"
 DEST_DIR = "../src"
 
 def run_script(script_name):

@@ -1,6 +1,6 @@
 class Controller {
   static setup(jsonData) {
-    const theSearchTool = new Quiz('CyberOps Multi-Test');
+    const theSearchTool = new Quiz('Multi-Choice-Test');
     const moduleNames = {}; // Create a map for module IDs to module names
 
     // Log the start of the setup process

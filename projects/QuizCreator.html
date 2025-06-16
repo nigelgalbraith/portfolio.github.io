@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigel Galbraith - Quiz Creator</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="container">
+    <h1>Nigel Galbraith Portfolio</h1>
+
+    <!-- Navigation Bar Top -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="../projects.html">Back To Projects</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Brief Outline -->
+    <main class="main-content">
+      <div class="main-content-flex-centre">
+        <h2>Quiz Creator</h2>
+        <div class="main-content-image">
+          <img src="images/Quiz.png" alt="Quiz Icon" />
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-text">
+          <section>
+            <p>
+              This project is a self-contained quiz generator that allows questions, answers, and detailed explanations to be added through a structured Excel spreadsheet, then converted into a dynamic, interactive web-based quiz.
+            </p>
+            <p>
+              I created this tool to provide a simple, offline solution for quiz creation no need to sign up for third-party platforms or rely on internet connectivity. The ability to generate and run quizzes locally makes it ideal for personal study, classrooms, or environments with limited access.
+            </p>
+            <p>
+              Throughout my study, repetition and practice played a crucial role in helping me retain and apply new information. This project enabled me to create targeted quizzes tailored to my learning needs and pace. It gave me the flexibility to reinforce key concepts through custom questions and revisit topics as often as needed.
+            </p>
+            <p>
+              While the current version is built around CyberOps content, the design is adaptable users can easily modify or replace the spreadsheet to suit any subject area. Whether it's IT, science, languages, or general knowledge, the tool can be repurposed to match.
+            </p>
+            <p>
+              Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.
+            </p>
+            <p>
+              For the best experience, this quiz tool should be opened using Google Chrome or Chromium. Other browsers may cache JSON data differently, which can lead to some pages not being displayed. Using Chrome ensures the quiz always loads the latest data correctly.
+            </p>
+
+            <!-- Boxed Sections -->
+            <div class="boxed-content">
+              <h2 class="centered-title">Update Custom Q&A</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/QuizCreatorScreenShot-Excel.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
+              <p>
+                Add questions and answers to the spreadsheet. Each question includes multiple answers and an explanation of the correct answer.  
+              </p>
+            </div>
+            <br>
+
+            <div class="boxed-content">
+              <h2 class="centered-title">Update the Webpage</h2>
+              <p>
+                Run the Python program located in the Python-Import folder called <strong>Python-Update-Webpage.py</strong>. 
+              </p>
+              <p>This script:</p>
+              <ul>
+                <li>Installs the required pandas package if not already available,</li>
+                <li>Parses the Excel spreadsheet using <code>import-Tool-Data.py</code>,</li>
+                <li>Cleans and formats the resulting JSON using <code>clean-Tool-Data.py</code>.</li>
+              </ul>
+            </div>
+            <br>
+
+            <div class="boxed-content">
+              <h2 class="centered-title">Select a Quiz</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/QuizCreatorScreenShot-QuizIndex.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
+            </div>
+            <br>
+
+            <div class="boxed-content">
+              <h2 class="centered-title">Check Each Answer</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/QuizCreatorScreenShot-QuizPostAns.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
+              <p>
+                After answering each question and pressing the "Submit" button, the interface shows whether the answer is correct along with an explanation.
+              </p>
+            </div>
+            <br>
+
+            <div class="boxed-content">
+              <h2 class="centered-title">Quiz Summary</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/QuizCreatorScreenShot-QuizRedsults.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
+              <p>
+                Once all questions are answered, clicking "Submit Quiz" shows a summary of your results.
+              </p>
+            </div>
+            <br>
+
+            <div class="boxed-content">
+              <h2 class="centered-title">Custom Quizzes</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/QuizCreatorScreenShot-QuizExcelSheetDefine.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
+              <p>
+                Although the quiz currently uses CyberOps module questions, you can create new Excel spreadsheets for other topics. Update the Excel file path in <code>import-Tool-Data.py</code> to use the new dataset.
+              </p>
+            </div>
+            <br>
+
+            <p>
+              <a href="files/QuizCreator/Index.html" target="_blank">Launch the Quiz Webpage</a><br>
+              <a href="files/QuizCreator.zip" download>Download Project as ZIP</a>
+            </p>
+          </section>
+
+          <!-- Tools and Technologies -->
+          <section>
+            <h2 class="centered-title">Tools and Technologies</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                <div class="icon-item">
+                  <img src="../images/programing.png" alt="Tools" class="li-icon" />
+                  <span>Shell Scripting</span>
+                </div>
+                <div class="icon-item">
+                  <img src="../images/python.png" alt="Python" class="li-icon" />
+                  <span>Python</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Learnings -->
+            <h2 class="centered-title">Key Learnings</h2>
+            <div class="boxed-content">
+              <div class="icon-grid">
+                <div class="icon-item">
+                  <img src="../images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+                  <span>Debugging</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Nigel Galbraith |
+      <a href="mailto:nigel.galbraith@proton.me" target="_blank">
+        <img src="../images/email.png" alt="Email" class="footer-icon" />
+      </a>
+      <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
+        <img src="../images/github.png" alt="GitHub" class="footer-icon" />
+      </a>
+      <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
+        <img src="../images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+      </a>
+    </footer>
+  </div>
+
+  <!--  Single Global Modal for Fullscreen Zoom -->
+  <div id="imgModal" class="modal" onclick="closeFullScreen()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImg">
+  </div>
+</body>
+</html>
