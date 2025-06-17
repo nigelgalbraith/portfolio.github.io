@@ -48,7 +48,6 @@ h1 {
     margin-bottom: 1rem;
 }
 
-
 /* =======================
    Layout & Containers
 ======================= */
@@ -308,6 +307,19 @@ h1 {
   text-decoration: none;
 }
 
+.grouped-list-item-button-link .icon-item {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grouped-list-item-button-link:hover .icon-item {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.icon-item span {
+  font-weight: normal;
+}
 
 /* =======================
    Navigation
@@ -632,7 +644,22 @@ footer {
     text-align: center;
   }
 
-  .main-content-image, .main-content-text, .image-zoom-wrapper img, .grouped-list-item-button img{
+  .main-content-image, .main-content-text, .grouped-list-item-button img{
+    width: 100%;
+  }
+  
+  .carousel-image {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+
+  .image-zoom-wrapper > img {
+    max-width: 70%;
+    padding: 0.2rem;
+  }
+
+  .carousel-slide img {
     width: 100%;
   }
 
