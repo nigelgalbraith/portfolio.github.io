@@ -27,24 +27,20 @@
           <div class="image-zoom-wrapper">
             <img src="images/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img zoomable" onclick="openFullScreen(this)" />
           </div>
-          <div id="imgModal" class="modal" onclick="closeFullScreen()">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="fullImg">
-          </div>
           
           <!-- Main Content --> 
           <div class="main-content-text">          
-          <section>
-            <p>
-              The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
-            </p>
-            <p>
-              Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
-            </p>
-            <p>
-              Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
-            </p>
-          </section>
+            <section>
+              <p>
+                The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
+              </p>
+              <p>
+                Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
+              </p>
+              <p>
+                Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
+              </p>
+            </section>
           <section>
 
             <!-- Tools and Technologies -->
@@ -118,6 +114,10 @@
         <img src="../images/linkedin.png" alt="LinkedIn" class="footer-icon" />
       </a>
     </footer>
+  </div>
+  <div id="imgModal" class="modal" onclick="closeFullScreen()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImg">
   </div>
 </body>
 </html>

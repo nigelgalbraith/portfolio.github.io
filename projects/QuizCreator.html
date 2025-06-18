@@ -24,8 +24,11 @@
       <div class="main-content-flex-centre">
         <h2>Quiz Creator</h2>
         <div class="main-content-image">
-          <img src="images/Quiz.png" alt="Quiz Icon" />
-        </div>
+          <div class="image-zoom-wrapper">
+            <img src="images/Quiz-web.png" alt="Quiz Icon" class="centre-img zoomable" onclick="openFullScreen(this)"/>
+          </div>
+       </div>
+       <br>
 
         <!-- Main Content -->
         <div class="main-content-text">
@@ -45,9 +48,6 @@
             <p>
               Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.
             </p>
-            <p>
-              For the best experience, this quiz tool should be opened using Google Chrome or Chromium. Other browsers may cache JSON data differently, which can lead to some pages not being displayed. Using Chrome ensures the quiz always loads the latest data correctly.
-            </p>
 
             <!-- Boxed Sections -->
             <div class="boxed-content">
@@ -63,8 +63,11 @@
 
             <div class="boxed-content">
               <h2 class="centered-title">Update the Webpage</h2>
+              <div class="image-zoom-wrapper">
+                <img src="images/quiz-updateFlow.png" alt="Quiz Python Program Flow Chart" class="centre-img zoomable" onclick="openFullScreen(this)" />
+              </div>
               <p>
-                Run the Python program located in the Python-Import folder called <strong>Python-Update-Webpage.py</strong>. 
+                Run the Python program located in the Python-Import folder called <code>Python-Update-Webpage.py</code>. 
               </p>
               <p>This script:</p>
               <ul>
@@ -78,18 +81,25 @@
             <div class="boxed-content">
               <h2 class="centered-title">Select a Quiz</h2>
               <div class="image-zoom-wrapper">
-                <img src="images/QuizCreatorScreenShot-QuizIndex.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+                <img src="images/QuizCreatorScreenShot-QuizIndex.png" alt="Quiz Main Page" class="centre-img zoomable" onclick="openFullScreen(this)" />
               </div>
+              <p>
+                To run the quiz open the index.html for the best experience, this quiz tool should be opened using Google Chrome or Chromium. Other browsers may cache JSON data differently, which can lead to some pages not being displayed. Using Chrome ensures the quiz always loads the latest data correctly.
+              </p>
             </div>
             <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Check Each Answer</h2>
               <div class="image-zoom-wrapper">
-                <img src="images/QuizCreatorScreenShot-QuizPostAns.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+                <img src="images/QuizCreatorScreenShot-QuizPostAns.png" alt="Quiz Question Check" class="centre-img zoomable" onclick="openFullScreen(this)" />
               </div>
               <p>
-                After answering each question and pressing the "Submit" button, the interface shows whether the answer is correct along with an explanation.
+                After answering each question and pressing the "Submit" button, the quiz shows
+                <ul>
+                  <li>If your answer was correct or incorrect</li>
+                  <li>A short explanation to help you learn</li>
+                </ul>
               </p>
             </div>
             <br>
@@ -97,7 +107,7 @@
             <div class="boxed-content">
               <h2 class="centered-title">Quiz Summary</h2>
               <div class="image-zoom-wrapper">
-                <img src="images/QuizCreatorScreenShot-QuizRedsults.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+                <img src="images/QuizCreatorScreenShot-QuizRedsults.png" alt="Quiz Results" class="centre-img zoomable" onclick="openFullScreen(this)" />
               </div>
               <p>
                 Once all questions are answered, clicking "Submit Quiz" shows a summary of your results.
@@ -108,18 +118,33 @@
             <div class="boxed-content">
               <h2 class="centered-title">Custom Quizzes</h2>
               <div class="image-zoom-wrapper">
-                <img src="images/QuizCreatorScreenShot-QuizExcelSheetDefine.png" alt="Quiz" class="centre-img zoomable" onclick="openFullScreen(this)" />
+                <img src="images/QuizCreatorScreenShot-QuizExcelSheetDefine.png" alt="Quiz ExcelSheet Definition" class="centre-img zoomable" onclick="openFullScreen(this)" />
               </div>
               <p>
                 Although the quiz currently uses CyberOps module questions, you can create new Excel spreadsheets for other topics. Update the Excel file path in <code>import-Tool-Data.py</code> to use the new dataset.
               </p>
             </div>
             <br>
-
-            <p>
-              <a href="files/QuizCreator/Index.html" target="_blank">Launch the Quiz Webpage</a><br>
-              <a href="files/QuizCreator.zip" download>Download Project as ZIP</a>
-            </p>
+            
+            <!-- Quiz Links -->
+              <div class="boxed-content">
+                <h2 class="centered-title">Quiz Links</h2>
+                  <div class="icon-grid">
+                    <a href="files/QuizCreator/Index.html" class="grouped-list-item-button-link" target="_blank">
+                      <div class="icon-item">
+                        <img src="images/Webpage.PNG" alt="Tools" class="li-icon" />
+                        <span>View Quiz Webpage</span>
+                      </div>
+                    </a>
+                
+                    <a href="files/QuizCreator.zip" class="grouped-list-item-button-link" download>
+                      <div class="icon-item">
+                        <img src="images/zip.png" alt="Tools" class="li-icon" />
+                        <span>Download Quiz</span>
+                      </div>
+                    </a>
+                </div>
+              </div>
           </section>
 
           <!-- Tools and Technologies -->
@@ -150,8 +175,7 @@
             </div>
           </section>
         </div>
-      </div>
-    </main>
+      </main>
 
     <!-- Footer -->
     <footer>
