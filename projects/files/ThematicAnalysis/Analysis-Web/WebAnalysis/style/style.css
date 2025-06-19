@@ -1,163 +1,90 @@
-/* Reset some default styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+/* Header styling */
+header {
+  background-color: #eee;
+  padding: 1em 2em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-  
-/* Main Text */
-h1 {
-  font-size: large;
-  font-weight: bolder;
-  font-size: larger;
-  text-decoration-color: black;
+
+/* Page title */
+header h1 {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 2.2em;
+  color: #222;
   text-align: center;
 }
 
-nav {
-  background-color: lightgreen;
-  padding: 10px;
+/* Navbar styling */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
 }
 
-h2, h3 {
-  margin-bottom: 10px;
-  color: #4CAF50;
+.navbar li a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
-p {
-  margin-bottom: 20px;
+.navbar li a:hover {
+  color: #005f99;
+  text-decoration: underline;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
-}
-  
-/* Table style */
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
+  table-layout: fixed;
+  margin-bottom: 2em;
 }
 
 th, td {
-  padding: 12px;
+  border: 1px solid #999;
+  padding: 8px 12px;
   text-align: left;
-  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+/* ID and Reference: quite small */
+th:nth-child(1),
+td:nth-child(1),
+th:nth-child(2),
+td:nth-child(2) {
+  width: 4%;  
 }
 
-#searchToolTitle {
-  font-size: large;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+/* Description: smaller */
+th:nth-child(3),
+td:nth-child(3) {
+  width: 10%;
 }
 
-#searchToolInfo {
-  margin: 20px 200px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+/* Facts and Notes: medium */
+th:nth-child(4),
+td:nth-child(4),
+th:nth-child(5),
+td:nth-child(5) {
+  width: 10%;
 }
 
-.collapsible {
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
+/* Factors, Groups, SubGroups: bigger */
+th:nth-child(6),
+td:nth-child(6),
+th:nth-child(7),
+td:nth-child(7),
+th:nth-child(8),
+td:nth-child(8) {
+  width: 18%;
 }
 
-.collapsible_concept{
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-}
-
-.content {
-  display: none;
-  overflow: hidden;
-}
-.challengeHeading {
-font-weight: bold;
-background-color: green;
-color: black;
-padding: 20px;
-margin: 10px;
-text-align: center;
-}
-
-.broadConceptHeading {
-  font-weight: bold;
-  background-color: lightseagreen;
-  color: black;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-}
-
-.conceptHeading {
-  font-weight: bold;
-  background-color: rebeccapurple;
-  color: black;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-}
-
-.subConceptHeading {
-  font-weight: bold;
-  background-color: rgb(235, 15, 15);
-  color: black;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-}
-
-.caseHeading, .exampleHeading {
-  font-weight: bold;
-  background-color: rgb(235, 140, 15);
-  color: black;
-  padding: 10px;
-  text-align: center;
-  width: 50%;
-  align-items: center;
-}
-
-/* list box */
-#list-box {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#challengeSelect {
-  width: 30%;
-  height: 40px;
-  font-size: 16px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  min-width: calc(30% + 12px);
-  box-sizing: border-box;
-}
 
 

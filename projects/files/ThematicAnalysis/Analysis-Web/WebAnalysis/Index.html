@@ -2,75 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-    <title>Search Tool</title>
+  <title>Web Analysis</title>
   <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
+
+  <header>
+    <h1>Thematic Results</h1>
+    <nav>
+      <ul class="navbar">
+        <!-- Add your nav links here -->
+        <li><a href="#">Thematic Results</a></li>
+        <li><a href="#">Factors</a></li>
+        <li><a href="#">Groups</a></li>
+      </ul>
+    </nav>
+  </header>
+
 <body>
-  <nav>
-  <h1 id="pageHeading">Challenge Technology Can Improve</h1>
-  <!-- Dropdown list -->
-    <div id="list-box">
-      <label for="challengeSelect">Select a Challenge:</label>
-      <select id="challengeSelect" onchange="updateTable()"></select>
-    </div>
-  </nav>
-    <!-- Selection Results Table -->
-    <div id="searchToolInfo"></div>
 
-
-  <script src="src/Case.js"></script>
-  <script src="src/Concept.js"></script>
-  <script src="src/Challenge.js"></script>
-  <script src="src/BroadConcept.js"></script>
-  <script src="src/SearchTool.js"></script>
+  <script src="src/Extract.js"></script>
+  <script src="src/Factor.js"></script>
+  <script src="src/Group.js"></script>
+  <script src="src/SubGroup.js"></script>
   <script src="src/Controller.js"></script>
-  <script src="src/toolJSON.js"></script> 
+  <script src="src/thematic_analysisJSON.js"></script>
 
-  <script>
-  // Function to toggle the menus
-  function toggleRow(id) {
-    const element = document.getElementById(elementId);
-    if (element.style.display === "none" || element.style.display === "") {
-        element.style.display = "table-row";
-    } else {
-        element.style.display = "none";
-    }
+  <div id="extracts-container"></div>
+
+<script>
+function main() {
+  const webAnalysis = Controller.setup(jsonDataThematic);
+  const container = document.getElementById('extracts-container');
+
+  // Create table with header row
+  let html = `
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Reference</th>
+          <th>Description</th>
+          <th>Facts</th>
+          <th>Notes</th>
+          <th>Concerns</th>
+          <th>Possible Solutions</th>
+          <th>Organizational Values</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  // Add one row per extract
+  webAnalysis.forEach(extract => {
+    html += extract.toTableRow();
+  });
+
+  html += `
+      </tbody>
+    </table>
+  `;
+
+  container.innerHTML = html;
 }
 
-  // Global variable to store the search tool instance
-  var theSearchTool;
+  window.onload = main;
+</script>
 
-  // Function to update the table based on the selected challenge
-  function updateTable() {
-    theSearchTool.updateTable();
-  }
-
-  // Main function to initialize the search tool and populate the dropdown
-  function main() {
-    theSearchTool = Controller.setup(jsonData);
-    console.log(theSearchTool);
-    theSearchTool.challenges.forEach(challenge => {
-      console.log(challenge.toString()); // Log challenge
-      challenge.broadConcepts.forEach(broadConcept => {
-        console.log(broadConcept.toString()); // Log broad concept
-        broadConcept.concepts.forEach(concept => {
-          console.log(concept.toString()); // Log concept
-          concept.cases.forEach(caseInstance => {
-            console.log(caseInstance.toString()); // Log case
-          });
-        });
-      });
-    });
-
-    // Populate the dropdown and update the table
-    theSearchTool.populateChallengeDropdown();
-
-    // Set the selectedIndex to -1 to start with no selected option displayed
-    document.getElementById("challengeSelect").selectedIndex = -1;
-
-  }
-
-    window.onload = main;
-  </script>
 </body>
 </html>
