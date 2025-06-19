@@ -39,12 +39,12 @@ Sub UpdateGroup()
             ' Loop through each row in the table
             For Each tblRow In tbl.ListRows
                 ' Check if the line matches the value in the first column of the table
-                If Trim(line) = Trim(tblRow.Range.Cells(1, 2).Value) Then
+                If Trim(line) = Trim(tblRow.Range.Cells(1, 1).Value) Then
                     ' Append the second column value to the matched solutions
                     If matchedSolutions <> "" Then
                         matchedSolutions = matchedSolutions & Chr(10) & tblRow.Range.Cells(1, 4).Value
                     Else
-                        matchedSolutions = tblRow.Range.Cells(1, 4).Value
+                        matchedSolutions = tblRow.Range.Cells(1, 3).Value
                     End If
                 End If
             Next tblRow

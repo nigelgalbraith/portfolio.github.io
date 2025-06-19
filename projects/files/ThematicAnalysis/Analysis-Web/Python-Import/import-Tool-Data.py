@@ -7,7 +7,7 @@ import sys
 import os
 
 # Constants
-EXCEL_FILE = "Thematic-Analysis-NSW.xlsm"
+EXCEL_FILE = "Thematic-Analysis-Complete.xlsm"
 ORIENT = "records"
 OUTPUT_FOLDER = "json_files"
 

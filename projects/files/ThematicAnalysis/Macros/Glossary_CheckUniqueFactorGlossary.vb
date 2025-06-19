@@ -55,7 +55,7 @@ Sub Glossary_CheckUniqueFactorGlossary()
         ' Check if the issue is already in Table1, Column 1
         Dim found As Boolean
         found = False
-        For Each existingfactor In ws2.ListObjects("Table2").ListColumns(2).DataBodyRange
+        For Each existingfactor In ws2.ListObjects("Table2").ListColumns(1).DataBodyRange
             If existingfactor.Value = factor Then
                 found = True
                 Exit For

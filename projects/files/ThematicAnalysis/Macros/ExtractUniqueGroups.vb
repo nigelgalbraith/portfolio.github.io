@@ -17,7 +17,7 @@ Sub ExtractUniqueGroups()
     Set outputTable = ws.ListObjects("Table4")  ' Destination table
 
     ' Source column to extract from (3rd column)
-    Set columnData = tbl.ListColumns(3).DataBodyRange
+    Set columnData = tbl.ListColumns(2).DataBodyRange
 
     ' Clear all existing rows in destination table except header
     On Error Resume Next
