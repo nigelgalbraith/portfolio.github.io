@@ -14,7 +14,7 @@ Sub UpdateConceptLayers()
     Set srcRange = ThisWorkbook.Names("Solutions").RefersToRange
     Set destRange = ThisWorkbook.Names("Solution_Layers").RefersToRange
     ' Set the table reference
-    Set tbl = ThisWorkbook.Sheets("Tech Concepts").ListObjects("Table4")
+    Set tbl = ThisWorkbook.Sheets("Tech Concepts").ListObjects("Table5")
 
     ' Create a dictionary to store the matched values without duplicates
     Set dict = CreateObject("Scripting.Dictionary")

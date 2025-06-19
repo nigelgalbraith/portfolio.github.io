@@ -1,18 +1,15 @@
 Private Sub Worksheet_Change(ByVal Target As Range)
-    'Code by Sumit Bansal from https://trumpexcel.com
-    ' To allow multiple selections in a Drop Down List in Excel (without repetition)
-    Dim OldValue As String
-    Dim NewValue As String
-    Dim WhatRange As Range
+    Dim Oldvalue As String
+    Dim Newvalue As String
+    Dim FactorsRange As Range
+    Set FactorsRange = Me.Range("Factors")
     
-    ' Define the range named Issues'
-    Set WhatRange = Me.Range("Issues")
-    
+    'Function to allow adding Factors within the Factors table column from a list box
     Application.EnableEvents = True
     On Error GoTo Exitsub
     
-    ' Check if the changed cell is within the Waht Input range
-    If Not Intersect(Target, WhatRange) Is Nothing Then
+    ' Check if the changed cell is within the "Factors" range
+    If Not Intersect(Target, FactorsRange) Is Nothing Then
         If Target.SpecialCells(xlCellTypeAllValidation) Is Nothing Then
             GoTo Exitsub
         Else
@@ -20,17 +17,16 @@ Private Sub Worksheet_Change(ByVal Target As Range)
                 GoTo Exitsub
             Else
                 Application.EnableEvents = False
-                NewValue = Target.Value
+                Newvalue = Target.Value
                 Application.Undo
-                OldValue = Target.Value
-                If OldValue = "" Then
-                    Target.Value = NewValue
+                Oldvalue = Target.Value
+                If Oldvalue = "" Then
+                    Target.Value = Newvalue
                 Else
-                    If InStr(1, OldValue, NewValue) = 0 Then
-                        ' Use vbCrLf for a new line instead of ", "
-                        Target.Value = OldValue & vbLf & NewValue
+                    If InStr(1, Oldvalue, Newvalue) = 0 Then
+                        Target.Value = Oldvalue & vbCrLf & Newvalue
                     Else
-                        Target.Value = OldValue
+                        Target.Value = Oldvalue
                     End If
                 End If
             End If
@@ -42,3 +38,4 @@ Private Sub Worksheet_Change(ByVal Target As Range)
 Exitsub:
     Application.EnableEvents = True
 End Sub
+

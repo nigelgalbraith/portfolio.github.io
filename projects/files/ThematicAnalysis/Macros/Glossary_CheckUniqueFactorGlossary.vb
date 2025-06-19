@@ -42,7 +42,7 @@ Sub Glossary_CheckUniqueFactorGlossary()
             ' Loop through each factor and add to dictionary if unique
             For i = LBound(factorArray) To UBound(factorArray)
                 factor = Trim(factorArray(i)) ' Trim whitespace
-                If factor <> "" And Not factorsDict.Exists(factor) Then
+                If factor <> "" And Not factorsDict.exists(factor) Then
                     factorsDict.Add factor, Nothing
                 End If
             Next i

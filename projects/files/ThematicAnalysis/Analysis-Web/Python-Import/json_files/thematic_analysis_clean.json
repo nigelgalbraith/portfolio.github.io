@@ -5,15 +5,22 @@
         "Extract": "To meet and prepare for these challenges NSW Health must change the\nway it delivers services. NSW Health is implementing a major combined\nclinical and corporate and ICT reform program to address these issues.\nImplementation of IT solutions to support staff and embed business\nprocesses is critical to ensuring change to delivery of services is\nsustainable. To be successful this requires a change in the way that ICT\nsolutions are procured, designed and implemented.\nHistoric investment decisions and decision-making have resulted in Area\nHealth Services developing disparate clinical and corporate applications,\nsupporting mixed infrastructure and integration approaches. This has\nresulted in:\n• Very high integration cost and difficulty gaining a comprehensive\nclinical or management information;\n• Duplication of effort and little reuse of technology assets;\n• Existence of information gaps and overlaps;\n• Different clinical specialty systems making it difficult to effectively\nmanage the patient journey and give clinicians a single view of their\npatients;\n• Twenty-nine systems support basic HR functions;\n• Systems that are more than 20 years old and have limited support.",
         "Facts": "NSW Health is changing how it does things to meet challenges. They're putting in a big program to fix clinical, corporate, and tech stuff. Getting the right IT tools is key to making sure these changes last. Before, they had a mess of different systems which made things harder and more expensive. Plus, some of their systems are ancient and hard to support",
         "Concern": [
-            "Duplication",
-            "Employee management",
-            "Achieving business priorities",
-            "Achieving outcomes"
+            "Accuracy of Reporting",
+            "Duplication"
         ],
-        "Possible Solutions": "Streamlined processes\nHR systems\nGoal fulfillment\nResults tracking",
-        "Organizational Values": "Resource Management and Utilization\nProgram and Project Management\nBusiness Alignment\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Precise reports",
+            "Streamlined processes"
+        ],
+        "Organizational Values": [
+            "Data Security, Quality and Privacy",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 2,
@@ -23,10 +30,16 @@
         "Concern": [
             "Disparate systems"
         ],
-        "Possible Solutions": "Unified platform",
-        "Organizational Values": "Operational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Unified platform"
+        ],
+        "Organizational Values": [
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary"
+        "Glossary Check": [
+            "In Glossary"
+        ]
     },
     {
         "ID": 3,
@@ -36,10 +49,16 @@
         "Concern": [
             "Outdated infrastructure"
         ],
-        "Possible Solutions": "Modernization",
-        "Organizational Values": "Infrastructure and Hardware Management",
+        "Possible Solutions": [
+            "Modernization"
+        ],
+        "Organizational Values": [
+            "Infrastructure and Hardware Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary"
+        "Glossary Check": [
+            "In Glossary"
+        ]
     },
     {
         "ID": 4,
@@ -51,10 +70,22 @@
             "Outdated systems",
             "Compatibility"
         ],
-        "Possible Solutions": "Centralized management\nUpgrades\nStandard protocols",
-        "Organizational Values": "Compliance and Governance\nSystem and Technology Improvement\nStandardization and Streamlining Processes",
+        "Possible Solutions": [
+            "Centralized management",
+            "Upgrades",
+            "Standard protocols"
+        ],
+        "Organizational Values": [
+            "Compliance and Governance",
+            "System and Technology Improvement",
+            "Standardization and Streamlining Processes"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 5,
@@ -68,10 +99,28 @@
             "Sustainability",
             "Compliance"
         ],
-        "Possible Solutions": "Strategic fit\nPerformance review\nSystem unification\nGreen practices\nRegulatory adherence",
-        "Organizational Values": "Business Alignment\nConsumer Experience and Support\nSystem Deployment and Integration\nPolicy and Organizational Reform\nCompliance and Governance",
+        "Possible Solutions": [
+            "Strategic fit",
+            "Performance review",
+            "System unification",
+            "Green practices",
+            "Regulatory adherence"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 6,
@@ -83,10 +132,22 @@
             "Consistency",
             "Predictability"
         ],
-        "Possible Solutions": "User portals\nStandard procedures\nForecasting models",
-        "Organizational Values": "Data and Information Management\nStandardization and Streamlining Processes\nStrategic Planning and Development",
+        "Possible Solutions": [
+            "User portals",
+            "Standard procedures",
+            "Forecasting models"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Standardization and Streamlining Processes",
+            "Strategic Planning and Development"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 7,
@@ -98,10 +159,22 @@
             "Interoperability",
             "Information flow"
         ],
-        "Possible Solutions": "Teamwork tools\nAPI integration\nData pipelines",
-        "Organizational Values": "Collaboration and Communication\nSystem Deployment and Integration\nInfrastructure and Hardware Management",
+        "Possible Solutions": [
+            "Teamwork tools",
+            "API integration",
+            "Data pipelines"
+        ],
+        "Organizational Values": [
+            "Collaboration and Communication",
+            "System Deployment and Integration",
+            "Infrastructure and Hardware Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 8,
@@ -115,10 +188,28 @@
             "Minimizing impact",
             "Streamlined training processes"
         ],
-        "Possible Solutions": "Lean management\nProject management\nGreen practices\nMitigation strategies\nE-learning",
-        "Organizational Values": "Program and Project Management\nSystem Deployment and Integration\nPolicy and Organizational Reform\nOperational Effectiveness and Efficiency\nEmployee Training and Development",
+        "Possible Solutions": [
+            "Lean management",
+            "Project management",
+            "Green practices",
+            "Mitigation strategies",
+            "E-learning"
+        ],
+        "Organizational Values": [
+            "Program and Project Management",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Operational Effectiveness and Efficiency",
+            "Employee Training and Development"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 9,
@@ -130,10 +221,22 @@
             "Alignment with initiatives",
             "Cost savings"
         ],
-        "Possible Solutions": "User training\nGoal alignment\nExpense reduction",
-        "Organizational Values": "Consumer Experience and Support\nBusiness Alignment\nFinancial Management and Budgeting",
+        "Possible Solutions": [
+            "User training",
+            "Goal alignment",
+            "Expense reduction"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Business Alignment",
+            "Financial Management and Budgeting"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 10,
@@ -146,10 +249,25 @@
             "Investment plans",
             "Business strategy"
         ],
-        "Possible Solutions": "IT strategy\nPolicy framework\nCapital allocation\nMarket analysis",
-        "Organizational Values": "Business Alignment\nConsumer Experience and Support\nFinancial Management and Budgeting\nCompliance and Governance",
+        "Possible Solutions": [
+            "IT strategy",
+            "Policy framework",
+            "Capital allocation",
+            "Market analysis"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Financial Management and Budgeting",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 11,
@@ -161,10 +279,22 @@
             "Risk Identification",
             "Dependency"
         ],
-        "Possible Solutions": "IT strategy\nRisk assessment\nContingency planning",
-        "Organizational Values": "Business Alignment\nRisk Identification and Management\nSystem Deployment and Integration",
+        "Possible Solutions": [
+            "IT strategy",
+            "Risk assessment",
+            "Contingency planning"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Risk Identification and Management",
+            "System Deployment and Integration"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 12,
@@ -174,10 +304,16 @@
         "Concern": [
             "Evaluation criteria"
         ],
-        "Possible Solutions": "Performance metrics",
-        "Organizational Values": "Consumer Experience and Support",
+        "Possible Solutions": [
+            "Performance metrics"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary"
+        "Glossary Check": [
+            "In Glossary"
+        ]
     },
     {
         "ID": 13,
@@ -189,10 +325,22 @@
             "Replacement",
             "Procurement"
         ],
-        "Possible Solutions": "Diversity programs\nSystem swaps\nVendor management",
-        "Organizational Values": "Data and Information Management\nResource Management and Utilization\nPolicy and Organizational Reform",
+        "Possible Solutions": [
+            "Diversity programs",
+            "System swaps",
+            "Vendor management"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Policy and Organizational Reform"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 14,
@@ -205,10 +353,25 @@
             "Support for Consumers",
             "Management information"
         ],
-        "Possible Solutions": "Schedule adherence\nRollout plan\nCustomer service\nBI systems",
-        "Organizational Values": "Future Planning and System Demand\nSystem Deployment and Integration\nConsumer Experience and Support\nData and Information Management",
+        "Possible Solutions": [
+            "Schedule adherence",
+            "Rollout plan",
+            "Customer service",
+            "BI systems"
+        ],
+        "Organizational Values": [
+            "Future Planning and System Demand",
+            "System Deployment and Integration",
+            "Consumer Experience and Support",
+            "Data and Information Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 15,
@@ -220,10 +383,22 @@
             "Consumer support",
             "Employee management"
         ],
-        "Possible Solutions": "Teamwork tools\nHelpdesk\nHR systems",
-        "Organizational Values": "Collaboration and Communication\nCollaboration and Communication\nProgram and Project Management",
+        "Possible Solutions": [
+            "Teamwork tools",
+            "Helpdesk",
+            "HR systems"
+        ],
+        "Organizational Values": [
+            "Collaboration and Communication",
+            "Collaboration and Communication",
+            "Program and Project Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 16,
@@ -235,10 +410,22 @@
             "Information accessibility",
             "Time efficiency"
         ],
-        "Possible Solutions": "UX design\nOpen data\nTime tracking",
-        "Organizational Values": "Consumer Experience and Support\nData and Information Management\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "UX design",
+            "Open data",
+            "Time tracking"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Data and Information Management",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 17,
@@ -250,10 +437,22 @@
             "Capacity optimization",
             "Planning"
         ],
-        "Possible Solutions": "Asset allocation\nUtilization metrics\nRoadmap creation",
-        "Organizational Values": "Resource Management and Utilization\nCompliance and Governance\nStrategic Planning and Development",
+        "Possible Solutions": [
+            "Asset allocation",
+            "Utilization metrics",
+            "Roadmap creation"
+        ],
+        "Organizational Values": [
+            "Resource Management and Utilization",
+            "Compliance and Governance",
+            "Strategic Planning and Development"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 18,
@@ -265,10 +464,22 @@
             "Resource availability",
             "Financial management"
         ],
-        "Possible Solutions": "BI dashboards\nInventory tracking\nAccounting software",
-        "Organizational Values": "Compliance and Governance\nResource Management and Utilization\nFuture Planning and System Demand",
+        "Possible Solutions": [
+            "BI dashboards",
+            "Inventory tracking",
+            "Accounting software"
+        ],
+        "Organizational Values": [
+            "Compliance and Governance",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 19,
@@ -280,10 +491,22 @@
             "Funding availability",
             "Core function delivery & Urgent issue resolution"
         ],
-        "Possible Solutions": "Strategic planning\nBudgeting\nCrisis management",
-        "Organizational Values": "Risk Identification and Management\nCompliance and Governance\nCollaboration and Communication",
+        "Possible Solutions": [
+            "Strategic planning",
+            "Budgeting",
+            "Crisis management"
+        ],
+        "Organizational Values": [
+            "Risk Identification and Management",
+            "Compliance and Governance",
+            "Collaboration and Communication"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 20,
@@ -296,10 +519,25 @@
             "Resource management",
             "Information accessibility"
         ],
-        "Possible Solutions": "Process optimization\nAI tools\nAsset allocation\nOpen data",
-        "Organizational Values": "Operational Effectiveness and Efficiency\nResource Management and Utilization\nResource Management and Utilization\nData and Information Management",
+        "Possible Solutions": [
+            "Process optimization",
+            "AI tools",
+            "Asset allocation",
+            "Open data"
+        ],
+        "Organizational Values": [
+            "Operational Effectiveness and Efficiency",
+            "Resource Management and Utilization",
+            "Resource Management and Utilization",
+            "Data and Information Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 21,
@@ -311,10 +549,22 @@
             "Information accessibility",
             "Resource management"
         ],
-        "Possible Solutions": "Middleware\nOpen data\nAsset allocation",
-        "Organizational Values": "System Deployment and Integration\nData and Information Management\nResource Management and Utilization",
+        "Possible Solutions": [
+            "Middleware",
+            "Open data",
+            "Asset allocation"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 22,
@@ -328,10 +578,28 @@
             "Standardized information",
             "Collaboration"
         ],
-        "Possible Solutions": "System merger\nOpen data\nAsset allocation\nData governance\nTeamwork tools",
-        "Organizational Values": "System Deployment and Integration\nData and Information Management\nResource Management and Utilization\nData and Information Management\nCollaboration and Communication",
+        "Possible Solutions": [
+            "System merger",
+            "Open data",
+            "Asset allocation",
+            "Data governance",
+            "Teamwork tools"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Collaboration and Communication"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 23,
@@ -344,10 +612,25 @@
             "Resource utilization",
             "Management of future demand"
         ],
-        "Possible Solutions": "Rollout plan\nUniform interfaces\nEfficient usage\nForecasting",
-        "Organizational Values": "System Deployment and Integration\nData and Information Management\nResource Management and Utilization\nFuture Planning and System Demand",
+        "Possible Solutions": [
+            "Rollout plan",
+            "Uniform interfaces",
+            "Efficient usage",
+            "Forecasting"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 24,
@@ -359,10 +642,22 @@
             "Service delivery",
             "System projections"
         ],
-        "Possible Solutions": "Scalability\nOperational efficiency\nFutureproofing",
-        "Organizational Values": "Data and Information Management\nConsumer Experience and Support\nFuture Planning and System Demand",
+        "Possible Solutions": [
+            "Scalability",
+            "Operational efficiency",
+            "Futureproofing"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Consumer Experience and Support",
+            "Future Planning and System Demand"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 25,
@@ -374,10 +669,22 @@
             "Critical areas",
             "User capacity"
         ],
-        "Possible Solutions": "Recruitment\nFocus areas\nData expansion",
-        "Organizational Values": "System Maintenance and Support\nData and Information Management\nSystem and Technology Improvement",
+        "Possible Solutions": [
+            "Recruitment",
+            "Focus areas",
+            "Data expansion"
+        ],
+        "Organizational Values": [
+            "System Maintenance and Support",
+            "Data and Information Management",
+            "System and Technology Improvement"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 26,
@@ -389,10 +696,22 @@
             "Rising system usage",
             "Future system demand"
         ],
-        "Possible Solutions": "Load balancing\nCapacity planning\nKnowledge base",
-        "Organizational Values": "Data and Information Management\nData and Information Management\nInfrastructure and Hardware Management",
+        "Possible Solutions": [
+            "Load balancing",
+            "Capacity planning",
+            "Knowledge base"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Data and Information Management",
+            "Infrastructure and Hardware Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 27,
@@ -403,10 +722,19 @@
             "Knowledge management",
             "IT system advancement"
         ],
-        "Possible Solutions": "Technological innovation\nCost-benefit analysis",
-        "Organizational Values": "Data and Information Management\nSystem and Technology Improvement",
+        "Possible Solutions": [
+            "Technological innovation",
+            "Cost-benefit analysis"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "System and Technology Improvement"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 28,
@@ -417,10 +745,19 @@
             "Expensive technologies",
             "Costly materials"
         ],
-        "Possible Solutions": "Cost control\nEducation",
-        "Organizational Values": "Future Planning and System Demand\nFinancial Management and Budgeting",
+        "Possible Solutions": [
+            "Cost control",
+            "Education"
+        ],
+        "Organizational Values": [
+            "Future Planning and System Demand",
+            "Financial Management and Budgeting"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 29,
@@ -432,10 +769,22 @@
             "High expectations",
             "Complex needs problems"
         ],
-        "Possible Solutions": "Customer satisfaction\nProblem-solving\nCompliance audits",
-        "Organizational Values": "System Deployment and Integration\nBusiness Alignment\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Customer satisfaction",
+            "Problem-solving",
+            "Compliance audits"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Business Alignment",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 30,
@@ -447,10 +796,22 @@
             "High user rates",
             "Safe working capacity"
         ],
-        "Possible Solutions": "Load testing\nOccupational safety\nSOPs",
-        "Organizational Values": "Operational Effectiveness and Efficiency\nBusiness Alignment\nSystem and Technology Improvement",
+        "Possible Solutions": [
+            "Load testing",
+            "Occupational safety",
+            "SOPs"
+        ],
+        "Organizational Values": [
+            "Operational Effectiveness and Efficiency",
+            "Business Alignment",
+            "System and Technology Improvement"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 31,
@@ -463,10 +824,25 @@
             "Skills and competence",
             "Work scheduling"
         ],
-        "Possible Solutions": "Collaboration tools\nTraining programs\nRoster management\nSystem investment",
-        "Organizational Values": "Standardization and Streamlining Processes\nStrategic Planning and Development\nEmployee Training and Development\nProgram and Project Management",
+        "Possible Solutions": [
+            "Collaboration tools",
+            "Training programs",
+            "Roster management",
+            "System investment"
+        ],
+        "Organizational Values": [
+            "Standardization and Streamlining Processes",
+            "Strategic Planning and Development",
+            "Employee Training and Development",
+            "Program and Project Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 32,
@@ -477,10 +853,19 @@
             "Lack of core ICT systems",
             "System reform"
         ],
-        "Possible Solutions": "Overhaul\nBudget reallocation",
-        "Organizational Values": "System and Technology Improvement\nPolicy and Organizational Reform",
+        "Possible Solutions": [
+            "Overhaul",
+            "Budget reallocation"
+        ],
+        "Organizational Values": [
+            "System and Technology Improvement",
+            "Policy and Organizational Reform"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 33,
@@ -492,10 +877,22 @@
             "Skilled project management",
             "Capacity for large-scale change"
         ],
-        "Possible Solutions": "PMP certification\nChange management\nPrioritization",
-        "Organizational Values": "Consumer Experience and Support\nProgram and Project Management\nResource Management and Utilization",
+        "Possible Solutions": [
+            "PMP certification",
+            "Change management",
+            "Prioritization"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Program and Project Management",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 34,
@@ -507,10 +904,22 @@
             "Priority determination",
             "Project scheduling complexity"
         ],
-        "Possible Solutions": "Value assessment\nGantt charts\nProblem clustering",
-        "Organizational Values": "Consumer Experience and Support\nRisk Identification and Management\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Value assessment",
+            "Gantt charts",
+            "Problem clustering"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 35,
@@ -522,10 +931,22 @@
             "Significant risk environment",
             "Need for service delivery change"
         ],
-        "Possible Solutions": "Risk mitigation\nTransformation\nTalent acquisition",
-        "Organizational Values": "Consumer Experience and Support\nRisk Identification and Management\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Risk mitigation",
+            "Transformation",
+            "Talent acquisition"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 36,
@@ -538,10 +959,25 @@
             "Government priorities",
             "ICT strategies"
         ],
-        "Possible Solutions": "Policy alignment\nTalent acquisition\nPolicy alignment\nIT roadmaps",
-        "Organizational Values": "System Deployment and Integration\nOperational Effectiveness and Efficiency\nSystem Deployment and Integration\nImplementation Challenges and Delays",
+        "Possible Solutions": [
+            "Policy alignment",
+            "Talent acquisition",
+            "Policy alignment",
+            "IT roadmaps"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Operational Effectiveness and Efficiency",
+            "System Deployment and Integration",
+            "Implementation Challenges and Delays"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 37,
@@ -554,10 +990,25 @@
             "Alignment with reform programs",
             "Consideration of whole-of-government strategies"
         ],
-        "Possible Solutions": "Goal alignment\nStrategic backing\nChange alignment\nHolistic approach",
-        "Organizational Values": "Business Alignment\nPolicy and Organizational Reform\nBusiness Alignment\nStandardization and Streamlining Processes",
+        "Possible Solutions": [
+            "Goal alignment",
+            "Strategic backing",
+            "Change alignment",
+            "Holistic approach"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Policy and Organizational Reform",
+            "Business Alignment",
+            "Standardization and Streamlining Processes"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 38,
@@ -573,10 +1024,34 @@
             "Sustainable Workforce",
             "New risk potential"
         ],
-        "Possible Solutions": "Proactive measures\nUX design\nLong-term planning\nStakeholder engagement\nExpense management\nHR planning\nRisk forecasting",
-        "Organizational Values": "Financial Management and Budgeting\nConsumer Experience and Support\nCompliance and Governance\nCollaboration and Communication\nCollaboration and Communication\nSystem Maintenance and Support\nRisk Identification and Management",
+        "Possible Solutions": [
+            "Proactive measures",
+            "UX design",
+            "Long-term planning",
+            "Stakeholder engagement",
+            "Expense management",
+            "HR planning",
+            "Risk forecasting"
+        ],
+        "Organizational Values": [
+            "Financial Management and Budgeting",
+            "Consumer Experience and Support",
+            "Compliance and Governance",
+            "Collaboration and Communication",
+            "Collaboration and Communication",
+            "System Maintenance and Support",
+            "Risk Identification and Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 39,
@@ -588,10 +1063,22 @@
             "Preventing consumer issues",
             "Interventions for high-risk consumers"
         ],
-        "Possible Solutions": "Preventive measures\nCustomer care\nTargeted support",
-        "Organizational Values": "Risk Identification and Management\nOperational Effectiveness and Efficiency\nConsumer Experience and Support",
+        "Possible Solutions": [
+            "Preventive measures",
+            "Customer care",
+            "Targeted support"
+        ],
+        "Organizational Values": [
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 40,
@@ -608,10 +1095,37 @@
             "Consumer experience improvement",
             "Appropriate consumer delivery"
         ],
-        "Possible Solutions": "Service uptime\nPerformance metrics\nIntegrated care\nInnovative healthcare\nContinuous improvement\nData mapping\nUX enhancement\nTailored services",
-        "Organizational Values": "Business Alignment\nConsumer Experience and Support\nCollaboration and Communication\nConsumer Experience and Support\nPolicy and Organizational Reform\nInfrastructure and Hardware Management\nConsumer Experience and Support\nResource Management and Utilization",
+        "Possible Solutions": [
+            "Service uptime",
+            "Performance metrics",
+            "Integrated care",
+            "Innovative healthcare",
+            "Continuous improvement",
+            "Data mapping",
+            "UX enhancement",
+            "Tailored services"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Collaboration and Communication",
+            "Consumer Experience and Support",
+            "Policy and Organizational Reform",
+            "Infrastructure and Hardware Management",
+            "Consumer Experience and Support",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 41,
@@ -625,10 +1139,28 @@
             "Quality and safety improvement",
             "Appropriate resource utilization"
         ],
-        "Possible Solutions": "Process simplification\nTeamwork enhancement\nIntegrated systems\nQuality assurance\nOptimal allocation",
-        "Organizational Values": "Compliance and Governance\nCollaboration and Communication\nFinancial Management and Budgeting\nOperational Effectiveness and Efficiency\nConsumer Experience and Support",
+        "Possible Solutions": [
+            "Process simplification",
+            "Teamwork enhancement",
+            "Integrated systems",
+            "Quality assurance",
+            "Optimal allocation"
+        ],
+        "Organizational Values": [
+            "Compliance and Governance",
+            "Collaboration and Communication",
+            "Financial Management and Budgeting",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 42,
@@ -639,10 +1171,19 @@
             "Constraints and opportunities",
             "Alignment with national initiatives"
         ],
-        "Possible Solutions": "SWOT analysis\nPolicy coherence",
-        "Organizational Values": "Financial Management and Budgeting\nBusiness Alignment",
+        "Possible Solutions": [
+            "SWOT analysis",
+            "Policy coherence"
+        ],
+        "Organizational Values": [
+            "Financial Management and Budgeting",
+            "Business Alignment"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 43,
@@ -653,10 +1194,19 @@
             "New directions for IT",
             "Primary goals of Executive Council"
         ],
-        "Possible Solutions": "Tech trends\nLeadership vision",
-        "Organizational Values": "System and Technology Improvement\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "Tech trends",
+            "Leadership vision"
+        ],
+        "Organizational Values": [
+            "System and Technology Improvement",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 44,
@@ -670,10 +1220,28 @@
             "Improvements to Indigenous consumers",
             "Preventative services"
         ],
-        "Possible Solutions": "Policy alignment\nChange strategy\nOrganizational change\nInclusive services\nEarly intervention",
-        "Organizational Values": "System Deployment and Integration\nPolicy and Organizational Reform\nBusiness Alignment\nData and Information Management\nStrategic Planning and Development",
+        "Possible Solutions": [
+            "Policy alignment",
+            "Change strategy",
+            "Organizational change",
+            "Inclusive services",
+            "Early intervention"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Business Alignment",
+            "Data and Information Management",
+            "Strategic Planning and Development"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 45,
@@ -686,10 +1254,25 @@
             "National information network",
             "Regulatory frameworks"
         ],
-        "Possible Solutions": "Cross-border teamwork\nUniform methods\nCentralized data\nLegal compliance",
-        "Organizational Values": "Collaboration and Communication\nStandardization and Streamlining Processes\nData and Information Management\nCompliance and Governance",
+        "Possible Solutions": [
+            "Cross-border teamwork",
+            "Uniform methods",
+            "Centralized data",
+            "Legal compliance"
+        ],
+        "Organizational Values": [
+            "Collaboration and Communication",
+            "Standardization and Streamlining Processes",
+            "Data and Information Management",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 46,
@@ -707,10 +1290,40 @@
             "Secure messaging",
             "Supply chain management"
         ],
-        "Possible Solutions": "Protocol adherence\nIT blueprint\nAPI integration\nData governance\nIdentity codes\nPersonal data\nSecurity protocols\nEncrypted communication\nLogistics control",
-        "Organizational Values": "Implementation Challenges and Delays\nImplementation Challenges and Delays\nSystem Deployment and Integration\nData and Information Management\nData Security, Quality and Privacy\nConsumer Experience and Support\nImplementation Challenges and Delays\nData Security, Quality and Privacy\nResource Management and Utilization",
+        "Possible Solutions": [
+            "Protocol adherence",
+            "IT blueprint",
+            "API integration",
+            "Data governance",
+            "Identity codes",
+            "Personal data",
+            "Security protocols",
+            "Encrypted communication",
+            "Logistics control"
+        ],
+        "Organizational Values": [
+            "Implementation Challenges and Delays",
+            "Implementation Challenges and Delays",
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support",
+            "Implementation Challenges and Delays",
+            "Data Security, Quality and Privacy",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 47,
@@ -722,10 +1335,22 @@
             "ICT reform program",
             "Implementation of IT solutions"
         ],
-        "Possible Solutions": "Business transformation\nIT overhaul\nTech deployment",
-        "Organizational Values": "Financial Management and Budgeting\nData Security, Quality and Privacy\nConsumer Experience and Support",
+        "Possible Solutions": [
+            "Business transformation",
+            "IT overhaul",
+            "Tech deployment"
+        ],
+        "Organizational Values": [
+            "Financial Management and Budgeting",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 48,
@@ -738,10 +1363,25 @@
             "Budget negotiation",
             "Program delivery"
         ],
-        "Possible Solutions": "IT planning\nCapital focus\nFinancial planning\nExecution",
-        "Organizational Values": "Collaboration and Communication\nFinancial Management and Budgeting\nBusiness Alignment\nCompliance and Governance",
+        "Possible Solutions": [
+            "IT planning",
+            "Capital focus",
+            "Financial planning",
+            "Execution"
+        ],
+        "Organizational Values": [
+            "Collaboration and Communication",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 49,
@@ -756,10 +1396,31 @@
             "Hardware management",
             "Software management"
         ],
-        "Possible Solutions": "Service scope\nSystem rollout\nUpkeep\nCustomer service\nDevice control\nApplication administration",
-        "Organizational Values": "Policy and Organizational Reform\nData and Information Management\nSystem Maintenance and Support\nConsumer Experience and Support\nBusiness Alignment\nData and Information Management",
+        "Possible Solutions": [
+            "Service scope",
+            "System rollout",
+            "Upkeep",
+            "Customer service",
+            "Device control",
+            "Application administration"
+        ],
+        "Organizational Values": [
+            "Policy and Organizational Reform",
+            "Data and Information Management",
+            "System Maintenance and Support",
+            "Consumer Experience and Support",
+            "Business Alignment",
+            "Data and Information Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 50,
@@ -773,10 +1434,28 @@
             "Staff training",
             "Benefits realization"
         ],
-        "Possible Solutions": "Service tasks\nRegional rollout\nTransition planning\nEmployee development\nOutcome tracking",
-        "Organizational Values": "Policy and Organizational Reform\nSystem Deployment and Integration\nCollaboration and Communication\nEmployee Training and Development\nResource Management and Utilization",
+        "Possible Solutions": [
+            "Service tasks",
+            "Regional rollout",
+            "Transition planning",
+            "Employee development",
+            "Outcome tracking"
+        ],
+        "Organizational Values": [
+            "Policy and Organizational Reform",
+            "System Deployment and Integration",
+            "Collaboration and Communication",
+            "Employee Training and Development",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 51,
@@ -790,10 +1469,28 @@
             "Common processes across ICT",
             "Collaborative framework"
         ],
-        "Possible Solutions": "Strategic focus\nROI analysis\nValue creation\nStandardization\nTeam structure",
-        "Organizational Values": "Risk Identification and Management\nFinancial Management and Budgeting\nBusiness Alignment\nCollaboration and Communication\nCollaboration and Communication",
+        "Possible Solutions": [
+            "Strategic focus",
+            "ROI analysis",
+            "Value creation",
+            "Standardization",
+            "Team structure"
+        ],
+        "Organizational Values": [
+            "Risk Identification and Management",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Collaboration and Communication",
+            "Collaboration and Communication"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 52,
@@ -806,10 +1503,25 @@
             "Monitoring",
             "Achieving business priorities"
         ],
-        "Possible Solutions": "Performance metrics\nTask ranking\nSupervision\nGoal fulfillment",
-        "Organizational Values": "Consumer Experience and Support\nProgram and Project Management\nSystem Maintenance and Support\nBusiness Alignment",
+        "Possible Solutions": [
+            "Performance metrics",
+            "Task ranking",
+            "Supervision",
+            "Goal fulfillment"
+        ],
+        "Organizational Values": [
+            "Consumer Experience and Support",
+            "Program and Project Management",
+            "System Maintenance and Support",
+            "Business Alignment"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 53,
@@ -820,10 +1532,19 @@
             "Standardizing processes across ICT",
             "Guidelines application"
         ],
-        "Possible Solutions": "Uniform methods\nBest practices",
-        "Organizational Values": "Standardization and Streamlining Processes\nBusiness Alignment",
+        "Possible Solutions": [
+            "Uniform methods",
+            "Best practices"
+        ],
+        "Organizational Values": [
+            "Standardization and Streamlining Processes",
+            "Business Alignment"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 54,
@@ -835,10 +1556,22 @@
             "Integration of governance models",
             "Consistency in application development"
         ],
-        "Possible Solutions": "Joint execution\nUnified policies\nStandard coding",
-        "Organizational Values": "Standardization and Streamlining Processes\nCompliance and Governance\nStandardization and Streamlining Processes",
+        "Possible Solutions": [
+            "Joint execution",
+            "Unified policies",
+            "Standard coding"
+        ],
+        "Organizational Values": [
+            "Standardization and Streamlining Processes",
+            "Compliance and Governance",
+            "Standardization and Streamlining Processes"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 55,
@@ -851,10 +1584,25 @@
             "Resource management",
             "Achieving outcomes"
         ],
-        "Possible Solutions": "App taxonomy\nApp lifecycle\nAsset allocation\nResults tracking",
-        "Organizational Values": "Collaboration and Communication\nSystem Maintenance and Support\nResource Management and Utilization\nOperational Effectiveness and Efficiency",
+        "Possible Solutions": [
+            "App taxonomy",
+            "App lifecycle",
+            "Asset allocation",
+            "Results tracking"
+        ],
+        "Organizational Values": [
+            "Collaboration and Communication",
+            "System Maintenance and Support",
+            "Resource Management and Utilization",
+            "Operational Effectiveness and Efficiency"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 56,
@@ -866,10 +1614,22 @@
             "Risk Identification",
             "Disconnect of strategy and implementation"
         ],
-        "Possible Solutions": "Strategic alignment\nRisk assessment\nExecution gap",
-        "Organizational Values": "Business Alignment\nRisk Identification and Management\nCompliance and Governance",
+        "Possible Solutions": [
+            "Strategic alignment",
+            "Risk assessment",
+            "Execution gap"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Risk Identification and Management",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 57,
@@ -881,10 +1641,22 @@
             "Integration with existing methodology",
             "Informed decision-making"
         ],
-        "Possible Solutions": "Workflow\nSeamless adoption\nData-driven choices",
-        "Organizational Values": "System Deployment and Integration\nSystem Deployment and Integration\nSystem Deployment and Integration",
+        "Possible Solutions": [
+            "Workflow",
+            "Seamless adoption",
+            "Data-driven choices"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "System Deployment and Integration",
+            "System Deployment and Integration"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 58,
@@ -897,10 +1669,25 @@
             "Skills / Training",
             "Scope creep"
         ],
-        "Possible Solutions": "CMS\nLimited resources\nCompetence building\nProject control",
-        "Organizational Values": "Data and Information Management\nResource Management and Utilization\nEmployee Training and Development\nProgram and Project Management",
+        "Possible Solutions": [
+            "CMS",
+            "Limited resources",
+            "Competence building",
+            "Project control"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Employee Training and Development",
+            "Program and Project Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 59,
@@ -912,10 +1699,22 @@
             "Change control process",
             "Core functionality vs area-specific needs"
         ],
-        "Possible Solutions": "Inclusive access\nProcess governance\nCustomization",
-        "Organizational Values": "Standardization and Streamlining Processes\nCompliance and Governance\nCompliance and Governance",
+        "Possible Solutions": [
+            "Inclusive access",
+            "Process governance",
+            "Customization"
+        ],
+        "Organizational Values": [
+            "Standardization and Streamlining Processes",
+            "Compliance and Governance",
+            "Compliance and Governance"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 60,
@@ -927,10 +1726,22 @@
             "Implementation delays",
             "Allocation of resources"
         ],
-        "Possible Solutions": "Strategic fit\nTime management\nResource planning",
-        "Organizational Values": "Business Alignment\nConsumer Experience and Support\nConsumer Experience and Support",
+        "Possible Solutions": [
+            "Strategic fit",
+            "Time management",
+            "Resource planning"
+        ],
+        "Organizational Values": [
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Consumer Experience and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 61,
@@ -942,10 +1753,22 @@
             "Integration of systems",
             "Compatibility between systems"
         ],
-        "Possible Solutions": "Program oversight\nSystem merger\nSystem harmony",
-        "Organizational Values": "Program and Project Management\nSystem Deployment and Integration\nFinancial Management and Budgeting",
+        "Possible Solutions": [
+            "Program oversight",
+            "System merger",
+            "System harmony"
+        ],
+        "Organizational Values": [
+            "Program and Project Management",
+            "System Deployment and Integration",
+            "Financial Management and Budgeting"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 62,
@@ -958,10 +1781,25 @@
             "Data security",
             "Data privacy"
         ],
-        "Possible Solutions": "Single platform\nSmooth transitions\nProtection\nConfidentiality",
-        "Organizational Values": "System Deployment and Integration\nResource Management and Utilization\nData and Information Management\nData Security, Quality and Privacy",
+        "Possible Solutions": [
+            "Single platform",
+            "Smooth transitions",
+            "Protection",
+            "Confidentiality"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 63,
@@ -977,10 +1815,34 @@
             "Data accessibility",
             "Data privacy"
         ],
-        "Possible Solutions": "Punctuality\nData integrity\nPrecise reports\nData fusion\nSingle interface\nEasy access\nConfidentiality",
-        "Organizational Values": "Operational Effectiveness and Efficiency\nData Security, Quality and Privacy\nData Security, Quality and Privacy\nSystem Deployment and Integration\nSystem Deployment and Integration\nData and Information Management\nData Security, Quality and Privacy",
+        "Possible Solutions": [
+            "Punctuality",
+            "Data integrity",
+            "Precise reports",
+            "Data fusion",
+            "Single interface",
+            "Easy access",
+            "Confidentiality"
+        ],
+        "Organizational Values": [
+            "Operational Effectiveness and Efficiency",
+            "Data Security, Quality and Privacy",
+            "Data Security, Quality and Privacy",
+            "System Deployment and Integration",
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 64,
@@ -992,10 +1854,22 @@
             "Alignment",
             "Monitoring"
         ],
-        "Possible Solutions": "Task ranking\nStrategic fit\nSupervision",
-        "Organizational Values": "Program and Project Management\nBusiness Alignment\nSystem Maintenance and Support",
+        "Possible Solutions": [
+            "Task ranking",
+            "Strategic fit",
+            "Supervision"
+        ],
+        "Organizational Values": [
+            "Program and Project Management",
+            "Business Alignment",
+            "System Maintenance and Support"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 65,
@@ -1007,10 +1881,22 @@
             "Standardized information",
             "Resource optimization"
         ],
-        "Possible Solutions": "Optimal systems\nData governance\nBest use",
-        "Organizational Values": "Data and Information Management\nData and Information Management\nResource Management and Utilization",
+        "Possible Solutions": [
+            "Optimal systems",
+            "Data governance",
+            "Best use"
+        ],
+        "Organizational Values": [
+            "Data and Information Management",
+            "Data and Information Management",
+            "Resource Management and Utilization"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 66,
@@ -1022,10 +1908,22 @@
             "Standard adherence",
             "Data quality"
         ],
-        "Possible Solutions": "Protocol compliance\nHigh standards\nHigh standards",
-        "Organizational Values": "System Deployment and Integration\nData and Information Management\nData and Information Management",
+        "Possible Solutions": [
+            "Protocol compliance",
+            "High standards",
+            "High standards"
+        ],
+        "Organizational Values": [
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data and Information Management"
+        ],
         "Notes/Additional": null,
-        "Glossary Check": "In Glossary\nIn Glossary\nIn Glossary"
+        "Glossary Check": [
+            "In Glossary",
+            "In Glossary",
+            "In Glossary"
+        ]
     },
     {
         "ID": 67,

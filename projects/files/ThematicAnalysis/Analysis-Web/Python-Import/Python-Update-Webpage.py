@@ -12,7 +12,8 @@ import os
 # Define Constants
 IMPORT_PYTHON = "import-Tool-Data.py"
 CLEAN_PYTHON = "clean-Tool-Data.py"
-SOURCE_FILE = "json_files/toolJSON.js"
+SOURCE_FILES = ["json_files/toolJSON.js",
+                "json_files/thematic_analysisJSON.js"]
 DEST_DIR = "../src"
 
 def run_script(script_name):
@@ -56,6 +57,7 @@ if __name__ == "__main__":
     run_script(IMPORT_PYTHON)
     run_script(CLEAN_PYTHON)
 
-    copy_file(SOURCE_FILE, DEST_DIR)
+    for source_file in SOURCE_FILES:
+        copy_file(source_file, DEST_DIR)
 
     print(os.getcwd())

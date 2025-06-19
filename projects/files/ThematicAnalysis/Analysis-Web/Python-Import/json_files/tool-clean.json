@@ -4,32 +4,18 @@
         "Use Case": "NSW Health is changing how it does things to meet challenges. They're putting in a big program to fix clinical, corporate, and tech stuff. Getting the right IT tools is key to making sure these changes last. Before, they had a mess of different systems which made things harder and more expensive. Plus, some of their systems are ancient and hard to support",
         "Concepts": [
             {
+                "Organizational Value": "Data Security, Quality and Privacy",
+                "Tech Concepts": "Reporting software",
+                "Possible Solution": "Precise reports",
+                "Tech Layers": "Generate and present data in various formats to support decision-making and analysis.",
+                "Concern": "Accuracy of Reporting"
+            },
+            {
                 "Organizational Value": "Resource Management and Utilization",
                 "Tech Concepts": "Workflow automation tools",
                 "Possible Solution": "Streamlined processes",
                 "Tech Layers": "Automate repetitive tasks and streamline workflows to improve efficiency.",
                 "Concern": "Duplication"
-            },
-            {
-                "Organizational Value": "Program and Project Management",
-                "Tech Concepts": "HR management systems",
-                "Possible Solution": "HR systems",
-                "Tech Layers": "Manage various HR functions such as payroll, benefits, and performance evaluation.",
-                "Concern": "Employee management"
-            },
-            {
-                "Organizational Value": "Business Alignment",
-                "Tech Concepts": "Performance management systems",
-                "Possible Solution": "Goal fulfillment",
-                "Tech Layers": "Monitor and evaluate employee performance against goals and objectives to support development and performance improvement.",
-                "Concern": "Achieving business priorities"
-            },
-            {
-                "Organizational Value": "Operational Effectiveness and Efficiency",
-                "Tech Concepts": "Tracking tools",
-                "Possible Solution": "Results tracking",
-                "Tech Layers": "Track and monitor various metrics or parameters for analysis and optimization.",
-                "Concern": "Achieving outcomes"
             }
         ]
     },
