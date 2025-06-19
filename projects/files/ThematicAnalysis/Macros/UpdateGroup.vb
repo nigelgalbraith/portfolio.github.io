@@ -1,4 +1,4 @@
-Sub UpdatePossibleSolutions()
+Sub UpdateGroup()
     Dim srcRange As Range
     Dim destRange As Range
     Dim tbl As ListObject
@@ -11,10 +11,10 @@ Sub UpdatePossibleSolutions()
     Dim i As Long
 
     ' Set the ranges using named ranges
-    Set srcRange = ThisWorkbook.Names("Concerns").RefersToRange
-    Set destRange = ThisWorkbook.Names("Possible_Solutions").RefersToRange
+    Set srcRange = ThisWorkbook.Names("Factors").RefersToRange
+    Set destRange = ThisWorkbook.Names("Groups").RefersToRange
     ' Set the table reference
-    Set tbl = ThisWorkbook.Sheets("Glossary").ListObjects("Table1")
+    Set tbl = ThisWorkbook.Sheets("Glossary").ListObjects("Table2")
 
     ' Create a dictionary to store the matched values without duplicates
     Set dict = CreateObject("Scripting.Dictionary")

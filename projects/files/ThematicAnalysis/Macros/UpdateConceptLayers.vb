@@ -1,4 +1,4 @@
-Sub UpdateTechLayers()
+Sub UpdateConceptLayers()
     Dim srcRange As Range
     Dim destRange As Range
     Dim tbl As ListObject
@@ -11,10 +11,10 @@ Sub UpdateTechLayers()
     Dim i As Long
 
     ' Set the ranges using named ranges
-    Set srcRange = ThisWorkbook.Names("Tech_Solutions").RefersToRange
-    Set destRange = ThisWorkbook.Names("Tech_Layers").RefersToRange
+    Set srcRange = ThisWorkbook.Names("Solutions").RefersToRange
+    Set destRange = ThisWorkbook.Names("Solution_Layers").RefersToRange
     ' Set the table reference
-    Set tbl = ThisWorkbook.Sheets("Tech Concepts").ListObjects("Table10")
+    Set tbl = ThisWorkbook.Sheets("Tech Concepts").ListObjects("Table4")
 
     ' Create a dictionary to store the matched values without duplicates
     Set dict = CreateObject("Scripting.Dictionary")

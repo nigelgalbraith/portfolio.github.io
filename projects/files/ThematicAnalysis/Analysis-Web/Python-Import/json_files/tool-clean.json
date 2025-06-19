@@ -4,25 +4,32 @@
         "Use Case": "NSW Health is changing how it does things to meet challenges. They're putting in a big program to fix clinical, corporate, and tech stuff. Getting the right IT tools is key to making sure these changes last. Before, they had a mess of different systems which made things harder and more expensive. Plus, some of their systems are ancient and hard to support",
         "Concepts": [
             {
-                "Organizational Value": "Collaboration and Communication",
+                "Organizational Value": "Resource Management and Utilization",
                 "Tech Concepts": "Workflow automation tools",
                 "Possible Solution": "Streamlined processes",
                 "Tech Layers": "Automate repetitive tasks and streamline workflows to improve efficiency.",
                 "Concern": "Duplication"
             },
             {
-                "Organizational Value": "Operational Effectiveness and Efficiency",
-                "Tech Concepts": "Unified platform tools",
-                "Possible Solution": "Unified platform",
-                "Tech Layers": "Create a unified platform or environment for integrating and managing various systems and applications.",
-                "Concern": "Disparate systems"
+                "Organizational Value": "Program and Project Management",
+                "Tech Concepts": "HR management systems",
+                "Possible Solution": "HR systems",
+                "Tech Layers": "Manage various HR functions such as payroll, benefits, and performance evaluation.",
+                "Concern": "Employee management"
             },
             {
-                "Organizational Value": "Infrastructure and Hardware Management",
-                "Tech Concepts": "Modernization tools",
-                "Possible Solution": "Modernization",
-                "Tech Layers": "Modernize legacy systems or applications to improve performance and usability.",
-                "Concern": "Outdated infrastructure"
+                "Organizational Value": "Business Alignment",
+                "Tech Concepts": "Performance management systems",
+                "Possible Solution": "Goal fulfillment",
+                "Tech Layers": "Monitor and evaluate employee performance against goals and objectives to support development and performance improvement.",
+                "Concern": "Achieving business priorities"
+            },
+            {
+                "Organizational Value": "Operational Effectiveness and Efficiency",
+                "Tech Concepts": "Tracking tools",
+                "Possible Solution": "Results tracking",
+                "Tech Layers": "Track and monitor various metrics or parameters for analysis and optimization.",
+                "Concern": "Achieving outcomes"
             }
         ]
     },
@@ -31,25 +38,11 @@
         "Use Case": "Because of all this, it's hard to share patient info and coordinate care properly. Managers struggle to get accurate info on how well the systems are doing. And keeping them running costs a lot of money.",
         "Concepts": [
             {
-                "Organizational Value": "Compliance and Governance",
-                "Tech Concepts": "Secure transfer tools",
-                "Possible Solution": "Secure exchange",
-                "Tech Layers": "Securely transfer data between systems or parties to protect sensitive information.",
-                "Concern": "Data sharing"
-            },
-            {
-                "Organizational Value": "System Maintenance and Support",
-                "Tech Concepts": "Analytics software",
-                "Possible Solution": "Analytics tools",
-                "Tech Layers": "Utilize analytics software to analyze data and generate insights to inform decision-making and strategies.",
-                "Concern": "Performance monitoring"
-            },
-            {
-                "Organizational Value": "Financial Management and Budgeting",
-                "Tech Concepts": "Budget control software",
-                "Possible Solution": "Budget control",
-                "Tech Layers": "Monitor and control budgets to ensure spending stays within predefined limits.",
-                "Concern": "Maintenance costs"
+                "Organizational Value": "Operational Effectiveness and Efficiency",
+                "Tech Concepts": "Unified platform tools",
+                "Possible Solution": "Unified platform",
+                "Tech Layers": "Create a unified platform or environment for integrating and managing various systems and applications.",
+                "Concern": "Disparate systems"
             }
         ]
     },
@@ -58,32 +51,11 @@
         "Use Case": "This setup could harm the long-term success of the Clinical Services Redesign and Corporate Shared Services. So, they're reshaping the ICT program to fit these reforms better. They're aiming to connect scattered information and tech and quickly support both clinical and corporate changes.",
         "Concepts": [
             {
-                "Organizational Value": "Business Alignment",
-                "Tech Concepts": "Enterprise architecture tools",
-                "Possible Solution": "Strategic fit",
-                "Tech Layers": "Assist in designing and managing the structure and operation of an organization's IT infrastructure and applications.",
-                "Concern": "Alignment"
-            },
-            {
-                "Organizational Value": "Policy and Organizational Reform",
-                "Tech Concepts": "Sustainability management software",
-                "Possible Solution": "Green practices",
-                "Tech Layers": "Help organizations track, manage, and report on their environmental and social impacts to promote sustainability.",
-                "Concern": "Sustainability"
-            },
-            {
-                "Organizational Value": "Operational Effectiveness and Efficiency",
-                "Tech Concepts": "KPI tracking tools",
-                "Possible Solution": "KPI tracking",
-                "Tech Layers": "Track and analyze Key Performance Indicators (KPIs) to assess organizational performance.",
-                "Concern": "Program effectiveness"
-            },
-            {
-                "Organizational Value": "System and Technology Improvement",
-                "Tech Concepts": "Helpdesk software",
-                "Possible Solution": "Helpdesk services",
-                "Tech Layers": "Expand and scale data storage, processing, or analysis capabilities to accommodate organizational needs.",
-                "Concern": "System Support"
+                "Organizational Value": "Infrastructure and Hardware Management",
+                "Tech Concepts": "Modernization tools",
+                "Possible Solution": "Modernization",
+                "Tech Layers": "Modernize legacy systems or applications to improve performance and usability.",
+                "Concern": "Outdated infrastructure"
             }
         ]
     },
@@ -431,7 +403,7 @@
                 "Concern": "Consumer support"
             },
             {
-                "Organizational Value": "Financial Management and Budgeting",
+                "Organizational Value": "Program and Project Management",
                 "Tech Concepts": "HR management systems",
                 "Possible Solution": "HR systems",
                 "Tech Layers": "Manage various HR functions such as payroll, benefits, and performance evaluation.",
@@ -998,7 +970,7 @@
         "Use Case": "NSW Health is responding to big challenges like more people needing healthcare and not enough staff. They're looking at what the government wants, like improving mental health and using better technology. That helps them decide what to do next and where to spend money.",
         "Concepts": [
             {
-                "Organizational Value": "Consumer Experience and Support",
+                "Organizational Value": "System Deployment and Integration",
                 "Tech Concepts": "Policy management software",
                 "Possible Solution": "Policy alignment",
                 "Tech Layers": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",
@@ -1012,7 +984,7 @@
                 "Concern": "Workforce shortages"
             },
             {
-                "Organizational Value": "Consumer Experience and Support",
+                "Organizational Value": "System Deployment and Integration",
                 "Tech Concepts": "Policy management software",
                 "Possible Solution": "Policy alignment",
                 "Tech Layers": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",
@@ -1291,7 +1263,7 @@
         "Use Case": "COAG is a group working on important national stuff like mental health, healthcare workers, flu plans, and electronic health records. They're making big plans for healthcare, like making hospitals better and helping people stay healthy. This ICT plan is part of making those plans work by improving healthcare in hospitals and communities",
         "Concepts": [
             {
-                "Organizational Value": "Consumer Experience and Support",
+                "Organizational Value": "System Deployment and Integration",
                 "Tech Concepts": "Policy management software",
                 "Possible Solution": "Policy alignment",
                 "Tech Layers": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",

@@ -1,4 +1,4 @@
-Sub UpdateOrganizationalValues()
+Sub UpdateSubGroup()
     Dim srcRange As Range
     Dim destRange As Range
     Dim tbl As ListObject
@@ -9,10 +9,10 @@ Sub UpdateOrganizationalValues()
     Dim tblRow As ListRow
 
     ' Set the ranges using named ranges
-    Set srcRange = ThisWorkbook.Names("Possible_Solutions").RefersToRange
-    Set destRange = ThisWorkbook.Names("Organizational_Values").RefersToRange
+    Set srcRange = ThisWorkbook.Names("Groups").RefersToRange
+    Set destRange = ThisWorkbook.Names("Sub_Group").RefersToRange
     ' Set the table reference
-    Set tbl = ThisWorkbook.Sheets("Glossary").ListObjects("Table1")
+    Set tbl = ThisWorkbook.Sheets("Glossary").ListObjects("Table2")
 
     ' Clear the destination range before writing new values
     destRange.ClearContents

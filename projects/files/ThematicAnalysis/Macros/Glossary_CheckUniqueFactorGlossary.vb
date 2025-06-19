@@ -1,26 +1,26 @@
-Sub Glossary_CheckUniqueIssueGlossary()
+Sub Glossary_CheckUniqueFactorGlossary()
     Dim ws1 As Worksheet
     Dim ws2 As Worksheet
     Dim sourceRange As Range
     Dim destTable As ListObject
     Dim destColumn As ListColumn
-    Dim issue As Variant
-    Dim issuesDict As Object
+    Dim factor As Variant
+    Dim factorsDict As Object
     Dim i As Long
     Dim outputRow As Long
-    Dim existingissue As Variant
+    Dim existingfactor As Variant
 
     ' Set the source worksheet
-    Set ws1 = ThisWorkbook.Worksheets("Thermatic Analyisis")
+    Set ws1 = ThisWorkbook.Worksheets("Thematic Analysis")
     
     ' Set the destination worksheet
     Set ws2 = ThisWorkbook.Worksheets("Glossary")
     
-    ' Set the source range using the named range "Issues"
-    Set sourceRange = ws1.Range("Issues")
+    ' Set the source range using the named range "Factors"
+    Set sourceRange = ws1.Range("Factors")
     
-    ' Set the destination table (Table12)
-    Set destTable = ws2.ListObjects("Table12")
+    ' Set the destination table (Table2)
+    Set destTable = ws2.ListObjects("Table3")
     
     ' Delete all existing rows in the destination table
     If destTable.ListRows.Count > 0 Then
@@ -30,20 +30,20 @@ Sub Glossary_CheckUniqueIssueGlossary()
     End If
 
     ' Create a dictionary to hold unique issues
-    Set issuesDict = CreateObject("Scripting.Dictionary")
+    Set factorsDict = CreateObject("Scripting.Dictionary")
     
     ' Loop through each cell in the source range
     For Each cell In sourceRange
         If Len(cell.Value) > 0 Then
             ' Split the issues by new line
-            Dim issueArray As Variant
-            issueArray = Split(cell.Value, vbLf) ' Split by new line
+            Dim factorArray As Variant
+            factorArray = Split(cell.Value, vbLf) ' Split by new line
             
-            ' Loop through each issue and add to dictionary if unique
-            For i = LBound(issueArray) To UBound(issueArray)
-                issue = Trim(issueArray(i)) ' Trim whitespace
-                If issue <> "" And Not issuesDict.Exists(issue) Then
-                    issuesDict.Add issue, Nothing
+            ' Loop through each factor and add to dictionary if unique
+            For i = LBound(factorArray) To UBound(factorArray)
+                factor = Trim(factorArray(i)) ' Trim whitespace
+                If factor <> "" And Not factorsDict.Exists(factor) Then
+                    factorsDict.Add factor, Nothing
                 End If
             Next i
         End If
@@ -51,24 +51,25 @@ Sub Glossary_CheckUniqueIssueGlossary()
     
     ' Output unique issues to the destination table
     outputRow = 1 ' Start at row 1 of the destination table
-    For Each issue In issuesDict.Keys
+    For Each factor In factorsDict.Keys
         ' Check if the issue is already in Table1, Column 1
         Dim found As Boolean
         found = False
-        For Each existingissue In ws2.ListObjects("Table1").ListColumns(1).DataBodyRange
-            If existingissue.Value = issue Then
+        For Each existingfactor In ws2.ListObjects("Table2").ListColumns(2).DataBodyRange
+            If existingfactor.Value = factor Then
                 found = True
                 Exit For
             End If
-        Next existingissue
+        Next existingfactor
         
-        ' Only add issue to the table if it is not found in Table1, Column 1
+        ' Only add factor to the table if it is not found in Table1, Column 1
         If Not found Then
             destTable.ListRows.Add ' Add a new row to the table
-            destTable.DataBodyRange(outputRow, 1).Value = issue ' Set the unique issue value
+            destTable.DataBodyRange(outputRow, 1).Value = factor ' Set the unique Factor value
             outputRow = outputRow + 1
         End If
-    Next issue
+    Next factor
 End Sub
+
 
 
