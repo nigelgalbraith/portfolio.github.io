@@ -12,9 +12,11 @@ import os
 # Define Constants
 IMPORT_PYTHON = "import-Tool-Data.py"
 CLEAN_PYTHON = "clean-Tool-Data.py"
-SOURCE_FILES = ["json_files/toolJSON.js",
-                "json_files/thematic_analysisJSON.js"]
-DEST_DIR = "../src"
+FILE_TO_DEST = {
+                "json_files/toolJSON.js": "../SearchTool/src",
+                "json_files/thematic_analysisJSON.js": "../WebAnalysis/src"
+                }
+
 
 def run_script(script_name):
     """Run a Python script using 'python' or fallback to 'python3'."""
@@ -57,7 +59,8 @@ if __name__ == "__main__":
     run_script(IMPORT_PYTHON)
     run_script(CLEAN_PYTHON)
 
-    for source_file in SOURCE_FILES:
-        copy_file(source_file, DEST_DIR)
+    for source_file, dest_dir in FILE_TO_DEST.items():
+        copy_file(source_file, dest_dir)
+
 
     print(os.getcwd())
