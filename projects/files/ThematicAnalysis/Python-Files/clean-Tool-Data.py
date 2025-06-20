@@ -9,7 +9,7 @@ TOOL_KEYS_TO_SPLIT = ["Factors", "Catergories", "Sub Groups", "Groups", "Sub Cat
 TOOL_JSON_PREFIX = "jsonData"
 TOOL_GROUP_BY_KEYS = ["ID", "Extracts"]
 TOOL_SUB_KEY_FIELDS = ["Sub Groups", "Catergories", "Groups", "Sub Catergories", "Factors"]
-TOOL_SUB_GROUP_KEY = "Concepts"
+TOOL_SUB_GROUP_KEY = "Wrapper"
 
 THEMATIC_INPUT_JSON = "json_files/thematic_analysis.json"
 THEMATIC_OUTPUT_JSON = "json_files/thematic_analysis_clean.json"
@@ -18,7 +18,6 @@ THEMATIC_KEYS_TO_SPLIT = ["Factors", "Groups", "Sub Groups", "Glossary Check"]
 THEMATIC_JSON_PREFIX = "jsonDataThematic"
 THEMATIC_GROUP_BY_KEYS = ["ID","References","Extracts","Facts"]
 THEMATIC_SUB_KEY_FIELDS = ["Sub Groups", "Groups", "Factors"]
-THEMATIC_SUB_GROUP_KEY = "Factors"
 
 SEPARATOR = "\n"
 TEXT_REMOVE = ["\u00a0"]

@@ -6,7 +6,7 @@ class Controller {
     jsonData.forEach(entry => {
       // Extract data from the entry
       const useCase = entry["Extracts"];
-      const concepts = entry["Concepts"];
+      const concepts = entry["Wrapper"];
 
       // Ensure concepts is defined
       if (concepts && Array.isArray(concepts)) {

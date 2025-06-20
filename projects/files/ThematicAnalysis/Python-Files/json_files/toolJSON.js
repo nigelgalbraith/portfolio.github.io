@@ -2,7 +2,7 @@ const jsonData = [
     {
         "ID": 1,
         "Extracts": "NSW Health is changing how it does things to meet challenges. They're putting in a big program to fix clinical, corporate, and tech stuff. Getting the right IT tools is key to making sure these changes last. Before, they had a mess of different systems which made things harder and more expensive. Plus, some of their systems are ancient and hard to support",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Reporting Systems",
@@ -22,7 +22,7 @@ const jsonData = [
     {
         "ID": 2,
         "Extracts": "Because of all this, it's hard to share patient info and coordinate care properly. Managers struggle to get accurate info on how well the systems are doing. And keeping them running costs a lot of money.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Legacy Systems",
@@ -35,7 +35,7 @@ const jsonData = [
     {
         "ID": 3,
         "Extracts": "This setup could harm the long-term success of the Clinical Services Redesign and Corporate Shared Services. So, they're reshaping the ICT program to fit these reforms better. They're aiming to connect scattered information and tech and quickly support both clinical and corporate changes.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Infrastructure and Hardware Management",
                 "Catergories": "Legacy Replacement",
@@ -48,7 +48,7 @@ const jsonData = [
     {
         "ID": 4,
         "Extracts": "Back in 2000, the Integrated Clinical Information Program (ICIP) started based on advice from the NSW Health Council. Its goal is to fix the problems with a clear plan. The idea is to give essential clinical features to all of NSW. They've already made big strides in setting up patient administration, clinical, and corporate systems",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Compliance and Governance",
                 "Catergories": "System Silos",
@@ -75,7 +75,7 @@ const jsonData = [
     {
         "ID": 5,
         "Extracts": "Clinical Systems Strategy\nCorporate Systems Strategy\nBusiness Information Strategy\nSustainable Infrastructure Strategy\nWhole of Government ICT Strategic Directions",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "Strategic Planning",
@@ -116,7 +116,7 @@ const jsonData = [
     {
         "ID": 6,
         "Extracts": "They're making care safer and better by giving clinicians the info they need and setting up systems for consistent, predictable processes across the state.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Management",
@@ -143,7 +143,7 @@ const jsonData = [
     {
         "ID": 7,
         "Extracts": "They're improving teamwork among health agencies in NSW, as well as with private companies and nationally, so everyone can work together better. This means info flows more smoothly, helping patients and making things more efficient.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Stakeholder Engagement",
@@ -170,7 +170,7 @@ const jsonData = [
     {
         "ID": 8,
         "Extracts": "They're expecting to save a lot of money by setting up new structures and ways of doing things. By rolling out key programs quickly, they'll spend less on managing projects, and they can piggyback on existing changes to save even more. This also means less disruption for clinicians and patients and less money spent on training.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Program and Project Management",
                 "Catergories": "Lean Architecture",
@@ -211,7 +211,7 @@ const jsonData = [
     {
         "ID": 9,
         "Extracts": "The ICT Strategy is built on three main ideas:\nBetter support for clinicians and patient care.\nAligning with big NSW Health plans.\nSaving a lot of money.\n\nThese ideas guide five key objectives:\nUsing ICT to drive big changes in clinical care.\nCutting down on duplicated admin systems and costs.\nProviding top-notch info to everyone in the organization.\nSetting up a flexible ICT system that supports both clinical and corporate reforms.\nManaging ICT in a smart, coordinated way to get the most out of the investment.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "End-User Support",
@@ -238,7 +238,7 @@ const jsonData = [
     {
         "ID": 10,
         "Extracts": "ICT Asset Management Strategy\nNSW Health's Enterprise Architecture, which covers:\nClinical Systems Architecture\nCorporate Systems Architecture and Strategy\nBusiness Information Strategy\nInfrastructure Strategy\nIntegration Architecture Strategy\nICT Governance Framework\nICT Portfolio Management and Program of Work\nICT Investment Plan for 2006-2017.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "IT-Business Alignment",
@@ -272,7 +272,7 @@ const jsonData = [
     {
         "ID": 11,
         "Extracts": "From the RSP:\nThey've picked out results and services that rely on ICT assets.\nThey've identified risks related to ICT assets that could affect service delivery.\nThey've pinpointed services and measures that hinge on ICT assets working properly.\n\nFrom the NSW Health Corporate Plan:\nThey've considered the overall vision for the community.\nThey've outlined how NSW Health will contribute to this vision.\nThey've focused on strategies to achieve goals, along with potential risks.\nThey've set up ways to measure performance and ensure targets are met.\nThey've looked at the costs involved in reaching the vision and meeting targets.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "IT-Business Alignment",
@@ -299,7 +299,7 @@ const jsonData = [
     {
         "ID": 12,
         "Extracts": "    Contribution to major service reform agendas and alignment with planned NSW Health priorities and plans.\n    Support for the patient journey across different care settings and improvement of healthcare quality and safety for a large number of people.\n    Ability to enhance efficiency and effectiveness in healthcare delivery and workforce utilization.\n    Adherence to state ICT strategic planning requirements.\n    Potential to generate a positive return on investment.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Project Metrics",
@@ -312,7 +312,7 @@ const jsonData = [
     {
         "ID": 13,
         "Extracts": "They should only add new projects to their investment plan. When it's time to replace old systems, they can handle it through contracts with vendors.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "Equity",
@@ -339,7 +339,7 @@ const jsonData = [
     {
         "ID": 14,
         "Extracts": "By 2011, they plan to have core clinical and corporate systems set up across NSW. This will help patients move through the healthcare system smoothly and ensure efficient management. Implementing the ICT Strategy will bring benefits to patients, clinicians, departments, hospitals, areas, and the whole state.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Future Planning and System Demand",
                 "Catergories": "Scheduling",
@@ -373,7 +373,7 @@ const jsonData = [
     {
         "ID": 15,
         "Extracts": "For patients and clinicians, the goal is to have a complete picture of the patient's health history. This way, all healthcare providers can work together effectively, knowing each other's roles and contributions. Corporate systems also support this by giving a clear view of employees, making sure care is delivered smoothly",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Stakeholder Engagement",
@@ -400,7 +400,7 @@ const jsonData = [
     {
         "ID": 16,
         "Extracts": "The strategy benefits patients by ensuring clinicians have all the information they need for optimal care, easily accessible whenever and wherever it's needed. This saves clinicians time by reducing the need to search for information or repeat tests unnecessarily, giving them more time for direct patient care.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Personalization",
@@ -427,7 +427,7 @@ const jsonData = [
     {
         "ID": 17,
         "Extracts": "Nursing Unit Manager (NUM) can plan patient care better when they know all the demands and resources. This includes patients from the emergency room, post-surgery, and transfers, as well as available beds and staff skills.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Allocation Tools",
@@ -454,7 +454,7 @@ const jsonData = [
     {
         "ID": 18,
         "Extracts": "At hospital, area, and department executive levels, having a complete portfolio lets them look at health outcomes, service demand, resources, performance, and finances all together.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Compliance and Governance",
                 "Catergories": "Analytics Framework",
@@ -481,7 +481,7 @@ const jsonData = [
     {
         "ID": 19,
         "Extracts": "The ICT Strategy focuses on key areas and will address them as resources allow. Other initiatives will only be added if they don't affect these core functions or if there's an urgent need.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Resource Prioritization",
@@ -508,7 +508,7 @@ const jsonData = [
     {
         "ID": 20,
         "Extracts": "By 2011, clinical departments will have improved systems for workflow, decision-making support, and accessing necessary information. This helps clinicians make better decisions for patients, leading to safer care",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Business Process Management",
@@ -542,7 +542,7 @@ const jsonData = [
     {
         "ID": 21,
         "Extracts": "Integrated hospital systems mean information is collected once and available to all, reducing handover issues and improving resource management for smoother patient care.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Core Platform Integration",
@@ -569,7 +569,7 @@ const jsonData = [
     {
         "ID": 22,
         "Extracts": "The ICT Strategy aims to improve patient care by giving Nursing Unit Managers better information to plan and care for patients, helping hospital executives manage resources and performance, making it easier for departments to access important info and make decisions, integrating key systems across hospitals for smoother patient care, and standardizing information across regions to manage resources and patient transfers more effectively",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Unified Platforms",
@@ -610,7 +610,7 @@ const jsonData = [
     {
         "ID": 23,
         "Extracts": "Rolling out core systems across NSW will have big benefits. Everyone gains, but it's best when the whole state uses them. Standardized info will help NSW Health meet goals by improving patient care, ensuring timely access to services, and better coordination in the health system. Accurate data will help use resources better and manage future needs.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Implementation Planning",
@@ -644,7 +644,7 @@ const jsonData = [
     {
         "ID": 24,
         "Extracts": "A steady increase in demand for services is expected due to an aging population. In NSW, the number of people over 65 is growing quickly. Each year from 2012 to 2028, the percentage of older Australians is projected to rise by over 0.35 points annually, which is about four times the long-term average increase.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "Scalability",
@@ -671,7 +671,7 @@ const jsonData = [
     {
         "ID": 25,
         "Extracts": "Staff shortages in critical areas such as nursing and medicine Hospitals running at maximum capacity",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Maintenance and Support",
                 "Catergories": "Workforce Planning",
@@ -698,7 +698,7 @@ const jsonData = [
     {
         "ID": 26,
         "Extracts": "The rate of chronic diseases like heart disease, lung disease, diabetes, and cancer is rising. Obesity is becoming more common among young people, and our increasingly globalized society raises the risk of pandemics.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Collection",
@@ -725,7 +725,7 @@ const jsonData = [
     {
         "ID": 27,
         "Extracts": "An increasing body of medical knowledge that staff cannot manage and\nuse without advanced IT systems",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "KM Systems",
@@ -745,7 +745,7 @@ const jsonData = [
     {
         "ID": 28,
         "Extracts": "Health services are increasingly challenged by more expensive medical technologies and pharmaceuticals",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Future Planning and System Demand",
                 "Catergories": "Cost Analysis",
@@ -765,7 +765,7 @@ const jsonData = [
     {
         "ID": 29,
         "Extracts": "Consumers are becoming more informed, have higher expectations and more complex problems",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Health Literacy Tools",
@@ -792,7 +792,7 @@ const jsonData = [
     {
         "ID": 30,
         "Extracts": "Quality and safety standards are being challenged as demand increases and staff numbers decrease. For instance, from 2000 to 2005, NSW hospitals had an average occupancy of 93%. Some metropolitan hospitals had surgical and medical wards with 95-98% occupancy, while 85% is considered a much safer level.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Compliance Framework",
@@ -819,7 +819,7 @@ const jsonData = [
     {
         "ID": 31,
         "Extracts": "The key factors that cause these adverse events are:\n_x0001_ Communication\n_x0001_ Policies and procedures\n_x0001_ Knowledge, skills and competence issues\n_x0001_ Work scheduling",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Communication Tools",
@@ -853,7 +853,7 @@ const jsonData = [
     {
         "ID": 32,
         "Extracts": "Clinical ICT is becoming an increasingly important enabler of health\nsystem reform, yet the core systems to underpin reform are not\ncurrently in place.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System and Technology Improvement",
                 "Catergories": "System Deficit",
@@ -873,7 +873,7 @@ const jsonData = [
     {
         "ID": 33,
         "Extracts": "Constraints in capital and recurrent funding, skilled project\nmanagement and implementation resources and capacity of the health\nsystems to accommodate large scale change all restrict the potential\nspeed of implementation of core systems.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Budget Constraints",
@@ -900,7 +900,7 @@ const jsonData = [
     {
         "ID": 34,
         "Extracts": "There are many competing demands for ICT funds. Deciding which projects to prioritize and schedule is complex and needs ongoing review to ensure funds are allocated where they will be most beneficial.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Budget Management",
@@ -927,7 +927,7 @@ const jsonData = [
     {
         "ID": 35,
         "Extracts": "NSW Health needs to change how it delivers services to meet these challenges. They've started a big reform program and need the right IT solutions to support staff and make these changes last",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Integrated Service Design",
@@ -954,7 +954,7 @@ const jsonData = [
     {
         "ID": 36,
         "Extracts": "NSW Health is responding to big challenges like more people needing healthcare and not enough staff. They're looking at what the government wants, like improving mental health and using better technology. That helps them decide what to do next and where to spend money.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Service Planning",
@@ -988,7 +988,7 @@ const jsonData = [
     {
         "ID": 37,
         "Extracts": "The Results and Services Plan guides everything in NSW Health. There are other plans helping out too. The ICT Strategic Plan is one of them, making sure it works well with the main plan. They also look at what the whole government and the country are doing.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "Results-Based Planning",
@@ -1022,7 +1022,7 @@ const jsonData = [
     {
         "ID": 38,
         "Extracts": "The RSP is NSW Health's main plan to tackle challenges. They have four main goals:\nKeep people healthy\nProvide needed healthcare\nDeliver top-quality services\nManage health services well\n\nTo achieve these, they focus on seven key directions:\nGet everyone involved in prevention\nImprove people's healthcare experiences\nStrengthen community care\nWork with others for better health\nMake wise choices about healthcare costs\nBuild a strong healthcare workforce\nStay prepared for new challenges and chances",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Early Intervention Tools",
@@ -1077,7 +1077,7 @@ const jsonData = [
     {
         "ID": 39,
         "Extracts": "NSW Health wants to prevent sickness and promote good health habits. They're focusing on getting more people vaccinated and helping those at risk for diseases like diabetes. ICT can help by sending alerts about things like missed vaccinations or overdue check-ups",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Risk Mitigation",
@@ -1104,7 +1104,7 @@ const jsonData = [
     {
         "ID": 40,
         "Extracts": "NSW Health wants to make sure everyone gets the care they need, when they need it. They're using tech to support new ways of caring for people and making sure changes stick. Better info during your care journey means a better experience and getting the right care.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "Service Availability",
@@ -1166,7 +1166,7 @@ const jsonData = [
     {
         "ID": 41,
         "Extracts": "NSW Health aims to improve healthcare by working better together. They're using tech to help everyone collaborate and use resources wisely. That means better tools for healthcare workers and making sure everyone gets great care.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Compliance and Governance",
                 "Catergories": "Process Optimization",
@@ -1207,7 +1207,7 @@ const jsonData = [
     {
         "ID": 42,
         "Extracts": "The NSW Government's IT setup influences NSW Health's ICT plan. They aim to make sure NSW initiatives match up with and sometimes even help shape national and statewide plans",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Risk and Opportunity Analysis",
@@ -1227,7 +1227,7 @@ const jsonData = [
     {
         "ID": 43,
         "Extracts": "The NSW Government is changing how they use computers and stuff. They want to save money on the boring tech stuff while keeping important services running smoothly. They're spending more on technology for important services and finding ways to save money with computers. This means using one fund for all tech needs, having a plan for the whole state, using fewer computer programs, sharing tech, and buying things together.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System and Technology Improvement",
                 "Catergories": "Innovation Strategy",
@@ -1247,7 +1247,7 @@ const jsonData = [
     {
         "ID": 44,
         "Extracts": "COAG is a group working on important national stuff like mental health, healthcare workers, flu plans, and electronic health records. They're making big plans for healthcare, like making hospitals better and helping people stay healthy. This ICT plan is part of making those plans work by improving healthcare in hospitals and communities",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Policy Objectives",
@@ -1288,7 +1288,7 @@ const jsonData = [
     {
         "ID": 45,
         "Extracts": "The eHealth initiative involves all states, territories, and the Australian Government. It began in 2000 to set up e-health across Australia. The Australian Government has invested $128 million in e-health projects across the country, plus an extra $10 million in 2005 for managed health network grants. The aim is to make sure everyone works together, with consistent approaches to eHealth, creating a national health information network. The program also helps make the right rules for eHealth initiatives.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Interagency Cooperation",
@@ -1322,7 +1322,7 @@ const jsonData = [
     {
         "ID": 46,
         "Extracts": "focuses on developing national health information management and communication technology standards. Its work includes creating frameworks for interoperability, standardizing clinical communications, establishing unique healthcare identifiers, and preparing standards for individual electronic health records, identity management, secure messaging, and supply chain management.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Implementation Challenges and Delays",
                 "Catergories": "Compliance and Standards",
@@ -1391,7 +1391,7 @@ const jsonData = [
     {
         "ID": 47,
         "Extracts": "To tackle challenges and prepare for the future, NSW Health is changing how it delivers services. Implementing IT solutions to support staff and integrate business processes is key for sustainable service delivery changes.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Organizational Change",
@@ -1418,7 +1418,7 @@ const jsonData = [
     {
         "ID": 48,
         "Extracts": "NEHTA makes sure health info works the same way everywhere in Australia. They're working on stuff like making sure doctors' notes and patient info look the same everywhere. They're also setting up a single ID for healthcare and getting ready for a national health record system. Plus, they're making sure the stuff doctors send each other is safe, and helping with buying healthcare stuff",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Collaboration and Communication",
                 "Catergories": "ICT Strategic Planning",
@@ -1452,7 +1452,7 @@ const jsonData = [
     {
         "ID": 49,
         "Extracts": "Health Support Services sets up and maintains key computer systems for healthcare. They give specific IT help to Area Health Services as defined by the law. This includes managing computers, software, and helping with setting up systems.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Operational Support",
@@ -1500,7 +1500,7 @@ const jsonData = [
     {
         "ID": 50,
         "Extracts": "Area Health Services are responsible for the management of local\nimplementations, change management and training of staff and benefits\nrealisation.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Service Charter",
@@ -1541,7 +1541,7 @@ const jsonData = [
     {
         "ID": 51,
         "Extracts": "They pick the most important projects and invest wisely for the health system. We work together on ICT stuff and have clear rules. This helps us decide what to build and how to run things",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Portfolio Management",
@@ -1582,7 +1582,7 @@ const jsonData = [
     {
         "ID": 52,
         "Extracts": "NSW Health uses a coordinated approach to manage ICT projects. This helps us evaluate, prioritize, select, and monitor programs and projects. We adjust as needed to meet our business goals.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Project Metrics",
@@ -1616,7 +1616,7 @@ const jsonData = [
     {
         "ID": 53,
         "Extracts": "They have set ways of doing things that support our ICT plan. These cover every step of a project's life.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "ITIL / SOPs",
@@ -1636,7 +1636,7 @@ const jsonData = [
     {
         "ID": 54,
         "Extracts": "To make the strategy work, NSW Health collaborates with the Department of Health, Area Health Services, Health Technology, and third-party providers, using shared decision-making processes and building core applications at the state level",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Joint Program Delivery",
@@ -1663,7 +1663,7 @@ const jsonData = [
     {
         "ID": 55,
         "Extracts": "Applications and projects are categorized as core, common, or divergent, influencing their prioritization, funding, and management, with core ones managed by the Department, common ones collaboratively, and divergent ones allowing for innovative solutions to local needs.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Application Architecture",
@@ -1697,7 +1697,7 @@ const jsonData = [
     {
         "ID": 56,
         "Extracts": "The Project Governance framework makes sure projects do what they're supposed to and deliver the benefits they promised. It helps NSW Health focus on the right projects and ensures they're done correctly. This way, strategy and delivery stay connected, reducing risks for the whole portfolio",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "Business Case",
@@ -1724,7 +1724,7 @@ const jsonData = [
     {
         "ID": 57,
         "Extracts": "In the Content Development phase, they design and build a prototype, then review it with clinicians. We use a method called Fast Track, which makes the process quicker. The prototype helps clinicians understand the application better and decide if it works for them",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Software Development Lifecycle",
@@ -1751,7 +1751,7 @@ const jsonData = [
     {
         "ID": 58,
         "Extracts": "In the Implementation phase, they're putting in the content decided by the state. Doing it all at once might seem like a lot, but it's the most efficient and cost-effective way. Using the Fast Track Method makes things quicker and cheaper, sticking to a standard design with state content. This means less hassle and less time spent learning for Area Health Services staff. Their team knows how to build the database, and doing things fast helps them stick to the plan without adding extra stuff.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "ECM (Enterprise Content Management)",
@@ -1785,7 +1785,7 @@ const jsonData = [
     {
         "ID": 59,
         "Extracts": "The SBB uses a maturity model to improve its features over time, with all Area Health Services contributing to each version, changes requiring approval from the majority of the Application Advisory Group, and new versions released annually, featuring required core functions, modifiable features, and local content.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Accessibility",
@@ -1812,7 +1812,7 @@ const jsonData = [
     {
         "ID": 60,
         "Extracts": "The Clinical Systems Strategy aims to implement essential clinical systems supporting Clinical Services Redesign, Quality and Safety initiatives, and clinical programs. It focuses on improving communication, reducing delays, and supporting patient care, ensuring resources are allocated flexibly to meet patient needs",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Business Alignment",
                 "Catergories": "Strategic Planning",
@@ -1839,7 +1839,7 @@ const jsonData = [
     {
         "ID": 61,
         "Extracts": "Three programs support the Clinical Systems Strategy: the Electronic Medical Record program for managing patients in hospitals, the Primary, Community, and Outpatient Care program for community care, and the Clinical Support program for essential support systems like Patient Administration and diagnostics.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Program and Project Management",
                 "Catergories": "Program Oversight",
@@ -1866,7 +1866,7 @@ const jsonData = [
     {
         "ID": 62,
         "Extracts": "The Corporate Systems Strategy sets up essential systems to support the Corporate Shared Services reform program, cutting duplication and costs in administrative tasks to redirect funds to frontline care, with the Corporate Systems program as its backbone.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Centralization",
@@ -1900,7 +1900,7 @@ const jsonData = [
     {
         "ID": 63,
         "Extracts": "The Business Information Strategy aims to provide timely, high-quality information throughout the organization, fostering a performance-driven culture. It helps turn data into insights, supports decision-making, aligns with strategic goals, ensures accountability, and follows the overall program and change management approach.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Responsiveness",
@@ -1955,7 +1955,7 @@ const jsonData = [
     {
         "ID": 64,
         "Extracts": "Three programs support the Business Information Strategy: one delivers useful information to front-line staff, another integrates strategic frameworks and develops performance measures, and the third ensures systems can provide consistent data and sets up technical infrastructure",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Program and Project Management",
                 "Catergories": "Decision Framework",
@@ -1982,7 +1982,7 @@ const jsonData = [
     {
         "ID": 65,
         "Extracts": "The Sustainable Infrastructure program aims to streamline technical infrastructure, establish and uphold standards and architecture for statewide ICT initiatives, and ensure maximum benefit from ICT investments.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "Data and Information Management",
                 "Catergories": "Infrastructure Optimization",
@@ -2009,7 +2009,7 @@ const jsonData = [
     {
         "ID": 66,
         "Extracts": "The Sustainable Infrastructure program includes three parts: setting up infrastructure, establishing technical standards, and ensuring uniform data standards across systems in NSW.",
-        "Concepts": [
+        "Wrapper": [
             {
                 "Sub Groups": "System Deployment and Integration",
                 "Catergories": "System Integration",
