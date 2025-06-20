@@ -7,7 +7,7 @@ import sys
 import os
 
 # Constants
-EXCEL_FILE = "Thematic-Analysis-Complete.xlsm"
+EXCEL_FILE = "../Thematic-Analysis-Complete.xlsm"
 ORIENT = "records"
 OUTPUT_FOLDER = "json_files"
 
@@ -15,11 +15,11 @@ OUTPUT_FOLDER = "json_files"
 SHEETS_TO_EXPORT = {
     "Tool Data": {
         "filename": "tool.json",
-        "start_row": 3
+        "start_row": 4
     },
     "Thematic Analysis": {
         "filename": "thematic_analysis.json",
-        "start_row": 6
+        "start_row": 7
     },
 }
 

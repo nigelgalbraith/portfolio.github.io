@@ -6,22 +6,22 @@ class Controller {
       const extract = new Extract(entry);
 
       // Use actual JSON property names here
-      if (entry.Concern && Array.isArray(entry.Concern)) {
-        entry.Concern.forEach(name => {
+      if (entry.Factors && Array.isArray(entry.Factors)) {
+        entry.Factors.forEach(name => {
           const factor = new Factor(name);
           extract.addFactor(factor);
         });
       }
 
-      if (entry["Possible Solutions"] && Array.isArray(entry["Possible Solutions"])) {
-        entry["Possible Solutions"].forEach(name => {
+      if (entry["Groups"] && Array.isArray(entry["Groups"])) {
+        entry["Groups"].forEach(name => {
           const group = new Group(name);
           extract.addGroup(group);
         });
       }
 
-      if (entry["Organizational Values"] && Array.isArray(entry["Organizational Values"])) {
-        entry["Organizational Values"].forEach(name => {
+      if (entry["Sub Groups"] && Array.isArray(entry["Sub Groups"])) {
+        entry["Sub Groups"].forEach(name => {
           const subGroup = new SubGroup(name);
           extract.addSubGroup(subGroup);
         });

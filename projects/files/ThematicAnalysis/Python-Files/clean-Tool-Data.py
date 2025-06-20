@@ -5,20 +5,20 @@ from collections import defaultdict
 TOOL_INPUT_JSON = "json_files/tool.json"
 TOOL_OUTPUT_JSON = "json_files/tool-clean.json"
 TOOL_OUTPUT_JS = "json_files/toolJSON.js"
-TOOL_KEYS_TO_SPLIT = ["Concern", "Tech Concepts", "Organizational Value", "Possible Solution", "Tech Layers"]
+TOOL_KEYS_TO_SPLIT = ["Factors", "Catergories", "Sub Groups", "Groups", "Sub Catergories"]
 TOOL_JSON_PREFIX = "jsonData"
-TOOL_GROUP_BY_KEYS = ["ID", "Use Case"]
-TOOL_SUB_KEY_FIELDS = ["Organizational Value", "Tech Concepts", "Possible Solution", "Tech Layers", "Concern"]
+TOOL_GROUP_BY_KEYS = ["ID", "Extracts"]
+TOOL_SUB_KEY_FIELDS = ["Sub Groups", "Catergories", "Groups", "Sub Catergories", "Factors"]
 TOOL_SUB_GROUP_KEY = "Concepts"
 
 THEMATIC_INPUT_JSON = "json_files/thematic_analysis.json"
 THEMATIC_OUTPUT_JSON = "json_files/thematic_analysis_clean.json"
 THEMATIC_OUTPUT_JS = "json_files/thematic_analysisJSON.js"
-THEMATIC_KEYS_TO_SPLIT = ["Concern", "Possible Solutions", "Organizational Values", "Glossary Check"]
+THEMATIC_KEYS_TO_SPLIT = ["Factors", "Groups", "Sub Groups", "Glossary Check"]
 THEMATIC_JSON_PREFIX = "jsonDataThematic"
-THEMATIC_GROUP_BY_KEYS = ["ID","Reference","Extract","Facts"]
-THEMATIC_SUB_KEY_FIELDS = ["Organizational Value", "Possible Solution", "Concern"]
-THEMATIC_SUB_GROUP_KEY = "Concern"
+THEMATIC_GROUP_BY_KEYS = ["ID","References","Extracts","Facts"]
+THEMATIC_SUB_KEY_FIELDS = ["Sub Groups", "Groups", "Factors"]
+THEMATIC_SUB_GROUP_KEY = "Factors"
 
 SEPARATOR = "\n"
 TEXT_REMOVE = ["\u00a0"]

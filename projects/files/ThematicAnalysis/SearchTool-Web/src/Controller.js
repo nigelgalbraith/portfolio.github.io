@@ -5,7 +5,7 @@ class Controller {
     // Iterate over each entry in the JSON data
     jsonData.forEach(entry => {
       // Extract data from the entry
-      const useCase = entry["Use Case"];
+      const useCase = entry["Extracts"];
       const concepts = entry["Concepts"];
 
       // Ensure concepts is defined
@@ -13,10 +13,10 @@ class Controller {
         // Iterate over each concept
         concepts.forEach(conceptData => {
           // Extract concept data
-          const broadTechConcept = conceptData["Organizational Value"];
-          const techConcept = conceptData["Tech Concepts"];
-          const techLayers = conceptData["Tech Layers"];
-          const challengeName = conceptData["Concern"];
+          const broadTechConcept = conceptData["Sub Groups"];
+          const techConcept = conceptData["Catergories"];
+          const techLayers = conceptData["Sub Catergories"];
+          const challengeName = conceptData["Factors"];
 
           // Find or create the challenge
           let challenge = theSearchTool.findChallenge(challengeName);

@@ -13,8 +13,8 @@ import os
 IMPORT_PYTHON = "import-Tool-Data.py"
 CLEAN_PYTHON = "clean-Tool-Data.py"
 FILE_TO_DEST = {
-                "json_files/toolJSON.js": "../SearchTool/src",
-                "json_files/thematic_analysisJSON.js": "../WebAnalysis/src"
+                "json_files/toolJSON.js": "../SearchTool-Web/src",
+                "json_files/thematic_analysisJSON.js": "../ThematicAnalysis-Web/src"
                 }
 
 
