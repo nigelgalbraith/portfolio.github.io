@@ -1,3 +1,6 @@
+let factorName = "Challenge";
+let groupName = "Possible Solutions";
+
 class Challenge {
   constructor(challenge) {
     this.challenge = challenge;
@@ -45,7 +48,7 @@ class Challenge {
     table += `
       <tr>
         <th colspan="2" class="challengeHeading">
-          <div class="headingLabel">Challenge</div>
+          <div class="headingLabel">${factorName}</div>
           <div>${this.challenge}</div>
         </th>
       </tr>`;
@@ -55,7 +58,7 @@ class Challenge {
       table += `
         <tr class="collapsible" onclick="toggleRow('broad_${broadConcept.broadConcept}_concepts')">
           <th colspan="2" class="broadConceptHeading">
-            <div class="headingLabel">Possible Solutions</div>
+            <div class="headingLabel">${groupName}</div>
             <div>${broadConcept.broadConcept}</div>
           </th>
         </tr>

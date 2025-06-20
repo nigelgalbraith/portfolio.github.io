@@ -1,3 +1,8 @@
+let extractname = "Cases";
+let subCatergoryname = "Tech Layers";
+let catergoryName = "Tech Concept";
+let subGroupName = "Organizational Values";
+
 class Concept {
   constructor(concept, subGroup, techLayer) {
     this.concept = concept;
@@ -30,7 +35,7 @@ class Concept {
     let tableRow = `
     <tr class="collapsible" onclick="toggleRow('${conceptId}_details')">
       <th colspan="2" class="conceptHeading">
-        <div class="headingLabel">Organizational Values</div>
+        <div class="headingLabel">${subGroupName}</div>
         <div>${this.concept}</div>
       </th>
     </tr>
@@ -41,7 +46,7 @@ class Concept {
           <!-- Sub Group Collapsible -->
           <tr class="collapsible" onclick="toggleRow('${subGroupId}')">
             <th colspan="2" class="subGroupHeading">
-              <div class="headingLabel">Tech Concept</div>
+              <div class="headingLabel">${catergoryName}</div>
               <div>${this.subGroup}</div>
             </th>
           </tr>
@@ -52,7 +57,7 @@ class Concept {
                 <!-- Tech Layer Collapsible -->
                 <tr class="collapsible" onclick="toggleRow('${techLayerId}')">
                   <th colspan="2" class="subConceptHeading">
-                    <div class="headingLabel">Tech Layers</div>
+                    <div class="headingLabel">${subCatergoryname}</div>
                     <div>${this.techLayer}</div>
                   </th>
                 </tr>
@@ -63,8 +68,7 @@ class Concept {
                       <!-- Cases Section -->
                       <tr class="collapsible" onclick="toggleRow('${casesId}')">
                         <th colspan="2" class="caseHeading">
-                          <div class="headingLabel">Extracts</div>
-                          <div>Cases</div>
+                          <div>${extractname}</div>
                         </th>
                       </tr>
                       <tr id="${casesId}" style="display:none;">
