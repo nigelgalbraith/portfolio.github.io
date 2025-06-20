@@ -36,34 +36,47 @@ class Challenge {
 
   // Create a BroadConcept table for a challenge
   toTable() {
-      // Sort the broad concepts array using the separate sort function
-      const sortedBroadConcepts = this.sortBroadConcepts(this.broadConcepts);
+    // Sort the broad concepts array using the separate sort function
+    const sortedBroadConcepts = this.sortBroadConcepts(this.broadConcepts);
 
-      let table = `<table border="1">`;
-      // Add a row for the challenge name
-      table += `<tr><th colspan="2" class="challengeHeading">${this.challenge}</th></tr>`;
-      // Add rows for broad concepts
-      sortedBroadConcepts.forEach((broadConcept) => {
-          table += `
-              <tr class="collapsible" onclick="toggleRow('broad_${broadConcept.broadConcept}_concepts')">
-                  <th colspan="2" class="broadConceptHeading">${broadConcept.broadConcept}</th>
-              </tr>
-              <tr id="broad_${broadConcept.broadConcept}_concepts" style="display:none;">
-                  <td colspan="2">
-                      <table border="1">`;
-          // Add rows for concepts
-          broadConcept.concepts.forEach((concept) => {
-              table += concept.toTableRow();
-          });
-          table += `
-                      </table>
-                  </td>
-              </tr>`;
+    let table = `<table border="1">`;
+    
+    // Challenge heading with label
+    table += `
+      <tr>
+        <th colspan="2" class="challengeHeading">
+          <div class="headingLabel">Challenge</div>
+          <div>${this.challenge}</div>
+        </th>
+      </tr>`;
+
+    // Add rows for broad concepts
+    sortedBroadConcepts.forEach((broadConcept) => {
+      table += `
+        <tr class="collapsible" onclick="toggleRow('broad_${broadConcept.broadConcept}_concepts')">
+          <th colspan="2" class="broadConceptHeading">
+            <div class="headingLabel">Possible Solutions</div>
+            <div>${broadConcept.broadConcept}</div>
+          </th>
+        </tr>
+        <tr id="broad_${broadConcept.broadConcept}_concepts" style="display:none;">
+          <td colspan="2">
+            <table border="1">`;
+
+      // Add rows for concepts
+      broadConcept.concepts.forEach((concept) => {
+        table += concept.toTableRow();
       });
-      table += `</table>`;
-      return table;
-  }
 
+      table += `
+            </table>
+          </td>
+        </tr>`;
+    });
+
+    table += `</table>`;
+    return table;
+}
 
   // To string method for Challenges
   toString() {

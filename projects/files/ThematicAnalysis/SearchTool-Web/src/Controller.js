@@ -2,49 +2,45 @@ class Controller {
   static setup(jsonData) {
     const theSearchTool = new SearchTool('Research Search Tool');
 
-    // Iterate over each entry in the JSON data
     jsonData.forEach(entry => {
-      // Extract data from the entry
       const useCase = entry["Extracts"];
-      const concepts = entry["Wrapper"];
+      const wrappers = entry["Wrapper"];
 
-      // Ensure concepts is defined
-      if (concepts && Array.isArray(concepts)) {
-        // Iterate over each concept
-        concepts.forEach(conceptData => {
-          // Extract concept data
-          const broadTechConcept = conceptData["Groups"];
-          const techConcept = conceptData["Catergories"];
-          const techLayers = conceptData["Sub Catergories"];
-          const challengeName = conceptData["Factors"];
+      if (wrappers && Array.isArray(wrappers)) {
+        wrappers.forEach(wrapperData => {
+          const challengeName = wrapperData["Factors"];
+          const broadTechConcept = wrapperData["Groups"];
+          const subGroup = wrapperData["Sub Groups"];
+          const conceptName = wrapperData["Catergories"];
+          const techLayer = wrapperData["Sub Catergories"];
 
-          // Find or create the challenge
+          // 1. Find or create the Challenge
           let challenge = theSearchTool.findChallenge(challengeName);
           if (!challenge) {
             challenge = new Challenge(challengeName);
             theSearchTool.addChallenge(challenge);
           }
 
-          // Find or create the broad tech concept
+          // 2. Find or create the BroadConcept
           let broadConcept = challenge.findBroadConcept(broadTechConcept);
           if (!broadConcept) {
             broadConcept = new BroadConcept(broadTechConcept);
             challenge.addBroadConcept(broadConcept);
           }
 
-          // Find or create the concept
-          let concept = broadConcept.findConcept(techConcept);
+          // 3. Find or create the Concept
+          let concept = broadConcept.findConcept(conceptName);
           if (!concept) {
-            concept = new Concept(techConcept, techLayers);
+            concept = new Concept(conceptName, subGroup, techLayer);
             broadConcept.addConcept(concept);
           }
 
-          // Create and add the case instance
+          // 4. Add the Case
           const caseInstance = new Case(useCase);
           concept.addCase(caseInstance);
         });
       } else {
-        console.error("Concepts array is undefined or not an array:", entry);
+        console.error("Wrapper array is undefined or not an array:", entry);
       }
     });
 
