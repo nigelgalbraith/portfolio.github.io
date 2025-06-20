@@ -13,7 +13,7 @@ class Controller {
         // Iterate over each concept
         concepts.forEach(conceptData => {
           // Extract concept data
-          const broadTechConcept = conceptData["Sub Groups"];
+          const broadTechConcept = conceptData["Groups"];
           const techConcept = conceptData["Catergories"];
           const techLayers = conceptData["Sub Catergories"];
           const challengeName = conceptData["Factors"];
