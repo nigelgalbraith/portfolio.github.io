@@ -1,74 +1,74 @@
 let factorName = "Challenge";
 let groupName = "Possible Solutions";
 
-class Challenge {
-  constructor(challenge) {
-    this.challenge = challenge;
-    this.broadConcepts = [];
+class Factor {
+  constructor(factor) {
+    this.factor = factor;
+    this.groups = [];
   }
 
 
-  // Find BroadConcept method
-  findBroadConcept(broadConceptName) {
-    return this.broadConcepts.find(entry => entry.broadConcept === broadConceptName);
+  // Find Group method
+  findGroup(broadConceptName) {
+    return this.groups.find(entry => entry.group === broadConceptName);
   }
 
-  // Add BroadConcept if it doesn't exsist
-  addBroadConcept(broadConcept) {
-    if (!this.findBroadConcept(broadConcept.broadConcept)) {
-      this.broadConcepts.push(broadConcept);
+  // Add Group if it doesn't exsist
+  addGroup(group) {
+    if (!this.findGroup(group.group)) {
+      this.groups.push(group);
     }
   }
 
 
-  // Function to sort broad concepts array alphabetically
-  sortBroadConcepts(broadConcepts) {
-    return broadConcepts.sort((a, b) => {
-        return a.broadConcept.localeCompare(b.broadConcept); // String comparison
+  // Function to sort broad wrappers array alphabetically
+  sortGroups(groups) {
+    return groups.sort((a, b) => {
+        return a.group.localeCompare(b.group); // String comparison
     });
   }
 
 
-  // Function to sort concepts array in ascending order
-  sortConcepts(concepts) {
-    return concepts.sort((a, b) => {
+  // Function to sort wrappers array in ascending order
+  sortWrapper(wrappers) {
+    return wrappers.sort((a, b) => {
       return a.conceptValue - b.conceptValue; // Assuming 'conceptValue' is the property to sort by
    });
   }
     
 
-  // Create a BroadConcept table for a challenge
+  // Create a Group table for a factor
   toTable() {
-    // Sort the broad concepts array using the separate sort function
-    const sortedBroadConcepts = this.sortBroadConcepts(this.broadConcepts);
+    // Sort the broad wrappers array using the separate sort function
+    const sortedGroups = this.sortGroups(this.groups);
 
     let table = `<table border="1">`;
     
-    // Challenge heading with label
+    // Factor heading with label
     table += `
       <tr>
         <th colspan="2" class="challengeHeading">
           <div class="headingLabel">${factorName}</div>
-          <div>${this.challenge}</div>
+          <div>${this.factor}</div>
         </th>
       </tr>`;
 
-    // Add rows for broad concepts
-    sortedBroadConcepts.forEach((broadConcept) => {
+    // Add rows for broad wrappers
+    sortedGroups.forEach((group) => {
       table += `
-        <tr class="collapsible" onclick="toggleRow('broad_${broadConcept.broadConcept}_concepts')">
+        <tr class="collapsible" onclick="toggleRow('broad_${group.group}_concepts')">
           <th colspan="2" class="broadConceptHeading">
             <div class="headingLabel">${groupName}</div>
-            <div>${broadConcept.broadConcept}</div>
+            <div>${group.group}</div>
           </th>
         </tr>
-        <tr id="broad_${broadConcept.broadConcept}_concepts" style="display:none;">
+        <tr id="broad_${group.group}_concepts" style="display:none;">
           <td colspan="2">
             <table border="1">`;
 
-      // Add rows for concepts
-      broadConcept.concepts.forEach((concept) => {
-        table += concept.toTableRow();
+      // Add rows for wrappers
+      group.wrappers.forEach((catergory) => {
+        table += catergory.toTableRow();
       });
 
       table += `
@@ -83,6 +83,6 @@ class Challenge {
 
   // To string method for Challenges
   toString() {
-    return `Challenge: ${this.challenge}, Broad Concepts: ${this.broadConcepts.map(bc => bc.toString()).join(', ')}`;
+    return `Factor: ${this.factor}, Group: ${this.groups.map(bc => bc.toString()).join(', ')}`;
   }
 }

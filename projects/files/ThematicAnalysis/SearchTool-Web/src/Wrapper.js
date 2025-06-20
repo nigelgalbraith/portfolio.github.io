@@ -1,45 +1,45 @@
 let extractname = "Cases";
 let subCatergoryname = "Tech Layers";
-let catergoryName = "Tech Concept";
+let catergoryName = "Tech Catergory";
 let subGroupName = "Organizational Values";
 
-class Concept {
-  constructor(concept, subGroup, techLayer) {
-    this.concept = concept;
-    this.subGroup = subGroup;
-    this.techLayer = techLayer;
-    this.cases = [];
+class Catergory {
+  constructor(catergory, subGroupName, subCatergoryName) {
+    this.catergory = catergory;
+    this.subGroupName = subGroupName;
+    this.subCatergoryName = subCatergoryName;
+    this.extracts = [];
   }
 
 
   // Find a case
-  findCase(caseDescription) {
-    return this.cases.find(entry => entry.description === caseDescription);
+  findExtract(caseDescription) {
+    return this.extracts.find(entry => entry.description === caseDescription);
   }
 
 
   // Add a case if it doesn't exsist
-  addCase(caseInstance) {
-    if (!this.findCase(caseInstance.description)) {
-      this.cases.push(caseInstance);
+  addExtract(extractInstance) {
+    if (!this.findExtract(extractInstance.description)) {
+      this.extracts.push(extractInstance);
     }
   }
 
 
   toTableRow() {
-    const conceptId = `concept_${this.concept.replace(/\s+/g, '_')}`;
-    const subGroupId = `${conceptId}_subgroup`;
-    const techLayerId = `${conceptId}_techlayer`;
-    const casesId = `${conceptId}_cases`;
+    const wrapperId = `wrapper_${this.catergory.replace(/\s+/g, '_')}`;
+    const subGroupId = `${wrapperId}_subgroup`;
+    const subCatergoryId = `${wrapperId}_subCatergory`;
+    const extractId = `${wrapperId}_extracts`;
 
     let tableRow = `
-    <tr class="collapsible" onclick="toggleRow('${conceptId}_details')">
+    <tr class="collapsible" onclick="toggleRow('${wrapperId}_details')">
       <th colspan="2" class="conceptHeading">
         <div class="headingLabel">${subGroupName}</div>
-        <div>${this.concept}</div>
+        <div>${this.catergory}</div>
       </th>
     </tr>
-    <tr id="${conceptId}_details" style="display:none;">
+    <tr id="${wrapperId}_details" style="display:none;">
       <td colspan="2" style="padding-left: 20px;"> <!-- Indent Sub Group -->
         <table border="1" width="95%">
 
@@ -47,7 +47,7 @@ class Concept {
           <tr class="collapsible" onclick="toggleRow('${subGroupId}')">
             <th colspan="2" class="subGroupHeading">
               <div class="headingLabel">${catergoryName}</div>
-              <div>${this.subGroup}</div>
+              <div>${this.subGroupName}</div>
             </th>
           </tr>
           <tr id="${subGroupId}" style="display:none;">
@@ -55,30 +55,30 @@ class Concept {
               <table border="1" width="90%">
 
                 <!-- Tech Layer Collapsible -->
-                <tr class="collapsible" onclick="toggleRow('${techLayerId}')">
+                <tr class="collapsible" onclick="toggleRow('${subCatergoryId}')">
                   <th colspan="2" class="subConceptHeading">
                     <div class="headingLabel">${subCatergoryname}</div>
-                    <div>${this.techLayer}</div>
+                    <div>${this.subCatergoryName}</div>
                   </th>
                 </tr>
-                <tr id="${techLayerId}" style="display:none;">
+                <tr id="${subCatergoryId}" style="display:none;">
                   <td colspan="2" style="padding-left: 20px;"> <!-- Indent Cases -->
                     <table border="1" width="85%">
 
                       <!-- Cases Section -->
-                      <tr class="collapsible" onclick="toggleRow('${casesId}')">
+                      <tr class="collapsible" onclick="toggleRow('${extractId}')">
                         <th colspan="2" class="caseHeading">
                           <div>${extractname}</div>
                         </th>
                       </tr>
-                      <tr id="${casesId}" style="display:none;">
+                      <tr id="${extractId}" style="display:none;">
                         <td colspan="2">
                           <table border="1" width="100%">`;
 
-    this.cases.forEach((caseItem, index) => {
+    this.extracts.forEach((extractItem, index) => {
       tableRow += `
                             <tr>
-                              <td>${index + 1}. ${caseItem.description}</td>
+                              <td>${index + 1}. ${extractItem.description}</td>
                             </tr>`;
     });
 
@@ -104,8 +104,8 @@ class Concept {
 
 
 
-  // To string for Concept
+  // To string for Catergory
   toString() {
-    return `Concept: ${this.concept}, Tech Layer: ${this.techLayer}, Cases: ${this.cases.map(c => c.toString()).join(', ')}`;
+    return `Catergory: ${this.catergory}, Sub Catergory: ${this.subCatergoryName}, Extracts: ${this.extracts.map(c => c.toString()).join(', ')}`;
   }
 }

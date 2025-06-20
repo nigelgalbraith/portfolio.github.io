@@ -1,44 +1,44 @@
-class BroadConcept {
-  constructor(broadConcept) {
-    this.broadConcept = broadConcept;
-    this.concepts = [];
+class Group {
+  constructor(group) {
+    this.group = group;
+    this.wrappers = [];
   }
 
 
-  // Find the Concept
-  findConcept(conceptName) {
-    return this.concepts.find(entry => entry.concept === conceptName);
+  // Find the Catergory
+  findCatergory(catergoryName) {
+    return this.wrappers.find(entry => entry.catergory === catergoryName);
   }
 
 
-  // Add a concept if it doesn't already exsist
-  addConcept(concept) {
-    if (!this.findConcept(concept.concept)) {
-      this.concepts.push(concept);
+  // Add a catergory if it doesn't already exsist
+  addCatergory(catergory) {
+    if (!this.findCatergory(catergory.catergory)) {
+      this.wrappers.push(catergory);
     }
   }
 
 
-  // Function to sort concepts array in ascending order
-  sortConcepts(concepts) {
-    return concepts.sort((a, b) => {
-        if (typeof a.concept === 'number' && typeof b.concept === 'number') {
-            return a.concept - b.concept; // Numeric comparison
+  // Function to sort wrappers array in ascending order
+  sortWrapper(wrappers) {
+    return wrappers.sort((a, b) => {
+        if (typeof a.catergory === 'number' && typeof b.catergory === 'number') {
+            return a.catergory - b.catergory; // Numeric comparison
         }
-        return a.concept.localeCompare(b.concept); // String comparison
+        return a.catergory.localeCompare(b.catergory); // String comparison
     });
   }
 
 
-  // Create a table to display the BroadConcepts & relating concepts
+  // Create a table to display the Groups & relating wrappers
   toTable() {
-    // Create BroadConcept headings
+    // Create Group headings
     let table = `<table border="1">`;
-    table += `<tr id="broadConcept-${this.broadConcept}" onclick="toggleConcepts('broadConcept-${this.broadConcept}')"><td>${this.broadConcept}</td></tr>`;
-    table += `<tr id="concept-${this.broadConcept}" class="hidden"><td><ul>`;
-    // Iterate over sorted concepts
-    this.concepts.forEach(concept => {
-        table += `<li>${concept.concept}</li>`;
+    table += `<tr id="group-${this.group}" onclick="toggleConcepts('group-${this.group}')"><td>${this.group}</td></tr>`;
+    table += `<tr id="catergory-${this.group}" class="hidden"><td><ul>`;
+    // Iterate over sorted wrappers
+    this.wrappers.forEach(catergory => {
+        table += `<li>${catergory.catergory}</li>`;
     });
     table += `</ul></td></tr></table>`;
     return table;
@@ -47,8 +47,8 @@ class BroadConcept {
 
 
 
-  // To string for Broad Concepts
+  // To string for Groups
   toString() {
-    return `Broad Concept: ${this.broadConcept}, Concepts: ${this.concepts.map(c => c.toString()).join(', ')}`;
+    return `Group: ${this.group}, Wrappers: ${this.wrappers.map(c => c.toString()).join(', ')}`;
   }
 }

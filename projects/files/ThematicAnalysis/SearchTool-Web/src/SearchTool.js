@@ -1,50 +1,50 @@
 class SearchTool {
   constructor(name) {
     this.name = name;
-    this.challenges = [];
+    this.factors = [];
   }
 
 
-  // Find challenge method
-  findChallenge(challengeName) {
-    return this.challenges.find(entry => entry.challenge === challengeName);
+  // Find factor method
+  findFactor(factorName) {
+    return this.factors.find(entry => entry.factor === factorName);
   }
 
 
-  // Add a challenge if it doesn't exsist
-  addChallenge(newChallenge) {
-    if (!this.findChallenge(newChallenge.challenge)) {
-      this.challenges.push(newChallenge);
+  // Add a factor if it doesn't exsist
+  addFactor(newFactor) {
+    if (!this.findFactor(newFactor.factor)) {
+      this.factors.push(newFactor);
     }
   }
 
 
-  // Function to sort challenges array in ascending order
-  sortChallenges(challenges) {
-    return challenges.sort((a, b) => {
-        if (typeof a.challenge === 'number' && typeof b.challenge === 'number') {
-            return a.challenge - b.challenge; // Numeric comparison
+  // Function to sort factors array in ascending order
+  sortFactors(factors) {
+    return factors.sort((a, b) => {
+        if (typeof a.factor === 'number' && typeof b.factor === 'number') {
+            return a.factor - b.factor; // Numeric comparison
         }
-        return a.challenge.localeCompare(b.challenge); // String comparison
+        return a.factor.localeCompare(b.factor); // String comparison
     });
   }
 
 
-  // Populate the challenge dropdown list
-  populateChallengeDropdown() {
-    // Create a challenge element and initialize
-    const challengeSelect = document.getElementById('challengeSelect');
-    challengeSelect.innerHTML = '';
+  // Populate the factor dropdown list
+  populateFactorDropdown() {
+    // Create a factor element and initialize
+    const FactorSelect = document.getElementById('FactorSelect');
+    FactorSelect.innerHTML = '';
 
-    // Sort the challenges array using the separate sort function
-    const sortedChallenges = this.sortChallenges(this.challenges);
+    // Sort the factors array using the separate sort function
+    const sortedFactors = this.sortFactors(this.factors);
 
-    // Add each challenge to the dropdown list
-    sortedChallenges.forEach(challenge => {
+    // Add each factor to the dropdown list
+    sortedFactors.forEach(factor => {
         const option = document.createElement('option');
-        option.value = challenge.challenge;
-        option.text = challenge.challenge;
-        challengeSelect.appendChild(option);
+        option.value = factor.factor;
+        option.text = factor.factor;
+        FactorSelect.appendChild(option);
     });
   }
 
@@ -52,15 +52,15 @@ class SearchTool {
   // Update the current table based on the list selection
   updateTable() {
     // Create a table heading with selected challenege and initiaize broadconcept element
-    const challengeSelect = document.getElementById('challengeSelect');
-    const selectedChallengeName = challengeSelect.value;
-    const selectedChallenge = this.findChallenge(selectedChallengeName);
+    const FactorSelect = document.getElementById('FactorSelect');
+    const selectedFactorName = FactorSelect.value;
+    const selectedFactor = this.findFactor(selectedFactorName);
     const searchToolInfo = document.getElementById('searchToolInfo');
     searchToolInfo.innerHTML = '';
     
     // Create an internal table element
-    if (selectedChallenge) {
-      const tableHTML = selectedChallenge.toTable();
+    if (selectedFactor) {
+      const tableHTML = selectedFactor.toTable();
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = tableHTML;
       
@@ -79,6 +79,6 @@ class SearchTool {
   
   // To string for SearchTool
   toString() {
-    return `Search Tool: ${this.name}, Challenges: ${this.challenges.map(c => c.toString()).join(', ')}`;
+    return `Search Tool: ${this.name}, Factors: ${this.factors.map(c => c.toString()).join(', ')}`;
   }
 }
