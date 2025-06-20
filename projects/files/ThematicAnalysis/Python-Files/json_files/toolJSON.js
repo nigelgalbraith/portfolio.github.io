@@ -5,16 +5,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data Security, Quality and Privacy",
-                "Catergories": "Reporting software",
+                "Catergories": "Reporting Systems",
                 "Groups": "Precise reports",
-                "Sub Catergories": "Generate and present data in various formats to support decision-making and analysis.",
+                "Sub Catergories": "Application",
                 "Factors": "Accuracy of Reporting"
             },
             {
                 "Sub Groups": "Streamlined processes",
-                "Catergories": "Workflow automation tools",
+                "Catergories": "Redundancy Management",
                 "Groups": "Streamlined processes",
-                "Sub Catergories": "Automate repetitive tasks and streamline workflows to improve efficiency.",
+                "Sub Catergories": "Application",
                 "Factors": "Duplication"
             }
         ]
@@ -25,9 +25,9 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
-                "Catergories": "Unified platform tools",
+                "Catergories": "Legacy Systems",
                 "Groups": "Unified platform",
-                "Sub Catergories": "Create a unified platform or environment for integrating and managing various systems and applications.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Disparate systems"
             }
         ]
@@ -38,9 +38,9 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Infrastructure and Hardware Management",
-                "Catergories": "Modernization tools",
+                "Catergories": "Legacy Replacement",
                 "Groups": "Modernization",
-                "Sub Catergories": "Modernize legacy systems or applications to improve performance and usability.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Outdated infrastructure"
             }
         ]
@@ -51,23 +51,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Compliance and Governance",
-                "Catergories": "Centralized management systems",
+                "Catergories": "System Silos",
                 "Groups": "Centralized management",
-                "Sub Catergories": "Centralize management and control of systems and resources for better governance.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Fragmentation"
             },
             {
                 "Sub Groups": "Upgrades",
-                "Catergories": "Upgrade tools",
+                "Catergories": "System Modernization",
                 "Groups": "Upgrades",
-                "Sub Catergories": "Establish and document standard operating procedures (SOPs) to ensure consistency and efficiency across the organization.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Outdated systems"
             },
             {
                 "Sub Groups": "Standard protocols",
-                "Catergories": "Protocol tools",
+                "Catergories": "System Interoperability",
                 "Groups": "Standard protocols",
-                "Sub Catergories": "Implement and enforce protocols and procedures to ensure compliance and consistency.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Compatibility"
             }
         ]
@@ -78,37 +78,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "Enterprise architecture tools",
+                "Catergories": "Strategic Planning",
                 "Groups": "Strategic fit",
-                "Sub Catergories": "Assist in designing and managing the structure and operation of an organization's IT infrastructure and applications.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment"
             },
             {
                 "Sub Groups": "Performance review",
-                "Catergories": "Performance review tools",
+                "Catergories": "KPIs and Metrics",
                 "Groups": "Performance review",
-                "Sub Catergories": "Conduct performance evaluations to assess employee performance and development.",
+                "Sub Catergories": "Business",
                 "Factors": "Effectiveness"
             },
             {
                 "Sub Groups": "System unification",
-                "Catergories": "Unification tools",
+                "Catergories": "Systems Integration",
                 "Groups": "System unification",
-                "Sub Catergories": "Integrate and unify disparate systems or applications to streamline operations and improve data consistency.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Integration"
             },
             {
                 "Sub Groups": "Green practices",
-                "Catergories": "Sustainability management software",
+                "Catergories": "Sustainability Planning",
                 "Groups": "Green practices",
-                "Sub Catergories": "Help organizations track, manage, and report on their environmental and social impacts to promote sustainability.",
+                "Sub Catergories": "Business",
                 "Factors": "Sustainability"
             },
             {
                 "Sub Groups": "Regulatory adherence",
-                "Catergories": "Compliance software",
+                "Catergories": "Policy & Regulation",
                 "Groups": "Regulatory adherence",
-                "Sub Catergories": "Ensure adherence to legal and regulatory requirements to mitigate risks.",
+                "Sub Catergories": "Business",
                 "Factors": "Compliance"
             }
         ]
@@ -119,23 +119,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "User portal software",
+                "Catergories": "Data Management",
                 "Groups": "User portals",
-                "Sub Catergories": "Provide a portal for users to access information, services, and resources.",
+                "Sub Catergories": "Application",
                 "Factors": "Access to information"
             },
             {
                 "Sub Groups": "Standard procedures",
-                "Catergories": "Procedure tools",
+                "Catergories": "Standards Adherence",
                 "Groups": "Standard procedures",
-                "Sub Catergories": "Define and document standardized procedures and processes to ensure consistency and efficiency.",
+                "Sub Catergories": "Application",
                 "Factors": "Consistency"
             },
             {
                 "Sub Groups": "Forecasting models",
-                "Catergories": "Forecasting tools",
+                "Catergories": "Demand Modeling",
                 "Groups": "Forecasting models",
-                "Sub Catergories": "Implement measures or interventions to address identified issues or challenges proactively.",
+                "Sub Catergories": "Business",
                 "Factors": "Predictability"
             }
         ]
@@ -146,23 +146,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Collaboration and Communication",
-                "Catergories": "Collaboration software",
+                "Catergories": "Stakeholder Engagement",
                 "Groups": "Teamwork tools",
-                "Sub Catergories": "Facilitates communication and cooperation among team members through features such as messaging, file sharing, and project management.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaboration"
             },
             {
                 "Sub Groups": "API integration",
-                "Catergories": "API management platforms",
+                "Catergories": "Standards-based Integration",
                 "Groups": "API integration",
-                "Sub Catergories": "Manage the creation, deployment, and maintenance of Application Programming Interfaces (APIs) to enable integration and interoperability.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Interoperability"
             },
             {
                 "Sub Groups": "Data pipelines",
-                "Catergories": "Data pipeline tools",
+                "Catergories": "Workflow Management",
                 "Groups": "Data pipelines",
-                "Sub Catergories": "Facilitate the movement and transformation of data between systems and applications.",
+                "Sub Catergories": "Application",
                 "Factors": "Information flow"
             }
         ]
@@ -173,37 +173,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Program and Project Management",
-                "Catergories": "Lean management software",
+                "Catergories": "Lean Architecture",
                 "Groups": "Lean management",
-                "Sub Catergories": "Implement lean management principles to streamline processes and eliminate waste.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Efficient structures"
             },
             {
                 "Sub Groups": "Project management",
-                "Catergories": "Project management tools",
+                "Catergories": "Deployment Planning",
                 "Groups": "Project management",
-                "Sub Catergories": "Assist in planning, executing, and monitoring projects to achieve desired outcomes effectively.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "System deployment & Integration"
             },
             {
                 "Sub Groups": "Green practices",
-                "Catergories": "Sustainability management software",
+                "Catergories": "Sustainability Planning",
                 "Groups": "Green practices",
-                "Sub Catergories": "Help organizations track, manage, and report on their environmental and social impacts to promote sustainability.",
+                "Sub Catergories": "Business",
                 "Factors": "Sustainability"
             },
             {
                 "Sub Groups": "Mitigation strategies",
-                "Catergories": "Mitigation tools",
+                "Catergories": "Risk Mitigation",
                 "Groups": "Mitigation strategies",
-                "Sub Catergories": "Provide tools and strategies to mitigate risks and threats to the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Minimizing impact"
             },
             {
                 "Sub Groups": "E-learning",
-                "Catergories": "E-learning platforms",
+                "Catergories": "Training Programs",
                 "Groups": "E-learning",
-                "Sub Catergories": "Offer online courses and resources for education and learning purposes.",
+                "Sub Catergories": "Application",
                 "Factors": "Streamlined training processes"
             }
         ]
@@ -214,23 +214,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Training platforms",
+                "Catergories": "End-User Support",
                 "Groups": "User training",
-                "Sub Catergories": "Provide training and learning opportunities for employee development and growth.",
+                "Sub Catergories": "Application",
                 "Factors": "Support for users"
             },
             {
                 "Sub Groups": "Goal alignment",
-                "Catergories": "OKR software",
+                "Catergories": "Program Governance",
                 "Groups": "Goal alignment",
-                "Sub Catergories": "Facilitates the setting, tracking, and alignment of Objectives and Key Results (OKRs) to improve organizational focus and performance.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment with initiatives"
             },
             {
                 "Sub Groups": "Expense reduction",
-                "Catergories": "Expense management",
+                "Catergories": "Cost Efficiency",
                 "Groups": "Expense reduction",
-                "Sub Catergories": "Manage and track expenses incurred by the organization for better financial management.",
+                "Sub Catergories": "Business",
                 "Factors": "Cost savings"
             }
         ]
@@ -241,30 +241,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "IT strategy planning tools",
+                "Catergories": "IT-Business Alignment",
                 "Groups": "IT strategy",
-                "Sub Catergories": "Assist in developing and aligning IT strategies with business goals, including technology roadmaps, resource planning, and risk management.",
+                "Sub Catergories": "Business",
                 "Factors": "ICT Alignment"
             },
             {
                 "Sub Groups": "Policy framework",
-                "Catergories": "Policy management frameworks",
+                "Catergories": "Program Oversight",
                 "Groups": "Policy framework",
-                "Sub Catergories": "Manage and track organizational policies and procedures for compliance and consistency.",
+                "Sub Catergories": "Business",
                 "Factors": "Governance"
             },
             {
                 "Sub Groups": "Capital allocation",
-                "Catergories": "Capital allocation tools",
+                "Catergories": "Capital Planning",
                 "Groups": "Capital allocation",
-                "Sub Catergories": "Allocate financial resources effectively to support organizational goals and initiatives.",
+                "Sub Catergories": "Business",
                 "Factors": "Investment plans"
             },
             {
                 "Sub Groups": "Market analysis",
-                "Catergories": "Market research software",
+                "Catergories": "Strategic Planning",
                 "Groups": "Market analysis",
-                "Sub Catergories": "Gather and analyze data to understand market trends and consumer behavior.",
+                "Sub Catergories": "Business",
                 "Factors": "Business strategy"
             }
         ]
@@ -275,23 +275,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "IT strategy planning tools",
+                "Catergories": "IT-Business Alignment",
                 "Groups": "IT strategy",
-                "Sub Catergories": "Assist in developing and aligning IT strategies with business goals, including technology roadmaps, resource planning, and risk management.",
+                "Sub Catergories": "Business",
                 "Factors": "ICT Alignment"
             },
             {
                 "Sub Groups": "Risk assessment",
-                "Catergories": "Risk management software",
+                "Catergories": "Risk Management Tools",
                 "Groups": "Risk assessment",
-                "Sub Catergories": "Identify, assess, and mitigate potential risks to the organization's objectives and operations.",
+                "Sub Catergories": "Business",
                 "Factors": "Risk Identification"
             },
             {
                 "Sub Groups": "Contingency planning",
-                "Catergories": "Contingency planning tools",
+                "Catergories": "System Dependencies",
                 "Groups": "Contingency planning",
-                "Sub Catergories": "Manage and streamline workflows and processes to improve efficiency and productivity across the organization.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Dependency"
             }
         ]
@@ -302,9 +302,9 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Business intelligence tools",
+                "Catergories": "Project Metrics",
                 "Groups": "Performance metrics",
-                "Sub Catergories": "Enable organizations to gather, analyze, and visualize data to make informed business decisions.",
+                "Sub Catergories": "Business",
                 "Factors": "Evaluation criteria"
             }
         ]
@@ -315,23 +315,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Diversity software",
+                "Catergories": "Equity",
                 "Groups": "Diversity programs",
-                "Sub Catergories": "Promote diversity and inclusion within the organization through various initiatives.",
+                "Sub Catergories": "Business",
                 "Factors": "Inclusion"
             },
             {
                 "Sub Groups": "System swaps",
-                "Catergories": "System migration tools",
+                "Catergories": "System Upgrade",
                 "Groups": "System swaps",
-                "Sub Catergories": "Assist in migrating systems, applications, or data from one environment to another.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Replacement"
             },
             {
                 "Sub Groups": "Vendor management",
-                "Catergories": "Vendor management software",
+                "Catergories": "Vendor Management",
                 "Groups": "Vendor management",
-                "Sub Catergories": "Manage relationships and interactions with vendors and suppliers.",
+                "Sub Catergories": "Business",
                 "Factors": "Procurement"
             }
         ]
@@ -342,30 +342,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Future Planning and System Demand",
-                "Catergories": "Scheduling tools",
+                "Catergories": "Scheduling",
                 "Groups": "Schedule adherence",
-                "Sub Catergories": "Create and manage schedules for tasks, projects, or events.",
+                "Sub Catergories": "Business",
                 "Factors": "Implementation timeline"
             },
             {
                 "Sub Groups": "Rollout plan",
-                "Catergories": "Project planning software",
+                "Catergories": "Implementation Planning",
                 "Groups": "Rollout plan",
-                "Sub Catergories": "Facilitate the creation and management of project plans, including timelines, tasks, and dependencies.",
+                "Sub Catergories": "Application",
                 "Factors": "Systems implementation"
             },
             {
                 "Sub Groups": "Customer service",
-                "Catergories": "CRM software",
+                "Catergories": "Service Desk",
                 "Groups": "Customer service",
-                "Sub Catergories": "Manages customer interactions and relationships, including sales, marketing, and customer service activities.",
+                "Sub Catergories": "Application",
                 "Factors": "Support for Consumers"
             },
             {
                 "Sub Groups": "BI systems",
-                "Catergories": "Business Intelligence (BI) systems",
+                "Catergories": "MIS Systems",
                 "Groups": "BI systems",
-                "Sub Catergories": "Analyze data and generate insights to support decision-making and planning.",
+                "Sub Catergories": "Application",
                 "Factors": "Management information"
             }
         ]
@@ -376,23 +376,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Collaboration and Communication",
-                "Catergories": "Collaboration software",
+                "Catergories": "Stakeholder Engagement",
                 "Groups": "Teamwork tools",
-                "Sub Catergories": "Facilitates communication and cooperation among team members through features such as messaging, file sharing, and project management.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaboration"
             },
             {
                 "Sub Groups": "Helpdesk",
-                "Catergories": "Helpdesk software",
+                "Catergories": "Helpdesk / User Services",
                 "Groups": "Helpdesk",
-                "Sub Catergories": "Provides a centralized platform for managing customer support requests and inquiries, improving response times and customer satisfaction.",
+                "Sub Catergories": "Application",
                 "Factors": "Consumer support"
             },
             {
                 "Sub Groups": "HR systems",
-                "Catergories": "HR management systems",
+                "Catergories": "HR Systems",
                 "Groups": "HR systems",
-                "Sub Catergories": "Manage various HR functions such as payroll, benefits, and performance evaluation.",
+                "Sub Catergories": "Application",
                 "Factors": "Employee management"
             }
         ]
@@ -403,23 +403,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "UX/UI design tools",
+                "Catergories": "Personalization",
                 "Groups": "UX design",
-                "Sub Catergories": "Enable the creation and optimization of user interfaces and experiences for digital products and services.",
+                "Sub Catergories": "Application",
                 "Factors": "User optimization"
             },
             {
                 "Sub Groups": "Open data",
-                "Catergories": "Open data platforms",
+                "Catergories": "Open Access",
                 "Groups": "Open data",
-                "Sub Catergories": "Provide access to and enable the sharing of data in an open and standardized format, promoting transparency and collaboration.",
+                "Sub Catergories": "Application",
                 "Factors": "Information accessibility"
             },
             {
                 "Sub Groups": "Time tracking",
-                "Catergories": "Time tracking tools",
+                "Catergories": "Automation",
                 "Groups": "Time tracking",
-                "Sub Catergories": "Track and record time spent on tasks or activities for analysis and reporting.",
+                "Sub Catergories": "Application",
                 "Factors": "Time efficiency"
             }
         ]
@@ -430,23 +430,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Resource Management and Utilization",
-                "Catergories": "Investment management software",
+                "Catergories": "Resource Allocation Tools",
                 "Groups": "Asset allocation",
-                "Sub Catergories": "Facilitates the management and analysis of investment portfolios, including trading, risk assessment, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource management"
             },
             {
                 "Sub Groups": "Utilization metrics",
-                "Catergories": "Utilization analytics",
+                "Catergories": "Performance Tuning",
                 "Groups": "Utilization metrics",
-                "Sub Catergories": "Analyze resource utilization to optimize efficiency and reduce waste.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Capacity optimization"
             },
             {
                 "Sub Groups": "Roadmap creation",
-                "Catergories": "Roadmap tools",
+                "Catergories": "Strategic Planning",
                 "Groups": "Roadmap creation",
-                "Sub Catergories": "Create and manage roadmaps for projects, initiatives, or technology implementations.",
+                "Sub Catergories": "Business",
                 "Factors": "Planning"
             }
         ]
@@ -457,23 +457,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Compliance and Governance",
-                "Catergories": "BI dashboards",
+                "Catergories": "Analytics Framework",
                 "Groups": "BI dashboards",
-                "Sub Catergories": "Visualize and analyze data to gain insights and inform decision-making.",
+                "Sub Catergories": "Data",
                 "Factors": "Integrated analysis & System outcome indicators"
             },
             {
                 "Sub Groups": "Inventory tracking",
-                "Catergories": "Inventory management",
+                "Catergories": "Workforce / Budget",
                 "Groups": "Inventory tracking",
-                "Sub Catergories": "Track and manage inventory levels and movements to optimize stock levels.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource availability"
             },
             {
                 "Sub Groups": "Accounting software",
-                "Catergories": "Accounting software",
+                "Catergories": "Budgeting Systems",
                 "Groups": "Accounting software",
-                "Sub Catergories": "Manage financial transactions and reporting for organizational accounting purposes.",
+                "Sub Catergories": "Business",
                 "Factors": "Financial management"
             }
         ]
@@ -484,23 +484,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Risk Identification and Management",
-                "Catergories": "Planning software",
+                "Catergories": "Resource Prioritization",
                 "Groups": "Strategic planning",
-                "Sub Catergories": "Facilitate the planning and scheduling of tasks, projects, or activities to achieve organizational goals.",
+                "Sub Catergories": "Business",
                 "Factors": "Priority areas & Resource allocation"
             },
             {
                 "Sub Groups": "Budgeting",
-                "Catergories": "Budgeting software",
+                "Catergories": "Funding Sources",
                 "Groups": "Budgeting",
-                "Sub Catergories": "Plan and manage budgets to allocate resources effectively and control costs.",
+                "Sub Catergories": "Business",
                 "Factors": "Funding availability"
             },
             {
                 "Sub Groups": "Crisis management",
-                "Catergories": "Crisis management software",
+                "Catergories": "Core Services",
                 "Groups": "Crisis management",
-                "Sub Catergories": "Coordinate response efforts and communication during emergencies or crises.",
+                "Sub Catergories": "Application",
                 "Factors": "Core function delivery & Urgent issue resolution"
             }
         ]
@@ -511,30 +511,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
-                "Catergories": "Optimization tools",
+                "Catergories": "Business Process Management",
                 "Groups": "Process optimization",
-                "Sub Catergories": "Optimize systems, processes, or resources for improved performance and efficiency.",
+                "Sub Catergories": "Application",
                 "Factors": "Workflow improvement"
             },
             {
                 "Sub Groups": "AI tools",
-                "Catergories": "AI tools",
+                "Catergories": "Decision Support Systems",
                 "Groups": "AI tools",
-                "Sub Catergories": "Leverage artificial intelligence technologies to automate tasks and processes for greater efficiency.",
+                "Sub Catergories": "Application",
                 "Factors": "Decision support"
             },
             {
                 "Sub Groups": "Asset allocation",
-                "Catergories": "Investment management software",
+                "Catergories": "Resource Allocation Tools",
                 "Groups": "Asset allocation",
-                "Sub Catergories": "Facilitates the management and analysis of investment portfolios, including trading, risk assessment, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource management"
             },
             {
                 "Sub Groups": "Open data",
-                "Catergories": "Open data platforms",
+                "Catergories": "Open Access",
                 "Groups": "Open data",
-                "Sub Catergories": "Provide access to and enable the sharing of data in an open and standardized format, promoting transparency and collaboration.",
+                "Sub Catergories": "Application",
                 "Factors": "Information accessibility"
             }
         ]
@@ -545,23 +545,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Middleware",
+                "Catergories": "Core Platform Integration",
                 "Groups": "Middleware",
-                "Sub Catergories": "Provide middleware solutions to facilitate communication and data exchange between different systems or applications.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Integration of core systems"
             },
             {
                 "Sub Groups": "Open data",
-                "Catergories": "Open data platforms",
+                "Catergories": "Open Access",
                 "Groups": "Open data",
-                "Sub Catergories": "Provide access to and enable the sharing of data in an open and standardized format, promoting transparency and collaboration.",
+                "Sub Catergories": "Application",
                 "Factors": "Information accessibility"
             },
             {
                 "Sub Groups": "Asset allocation",
-                "Catergories": "Investment management software",
+                "Catergories": "Resource Allocation Tools",
                 "Groups": "Asset allocation",
-                "Sub Catergories": "Facilitates the management and analysis of investment portfolios, including trading, risk assessment, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource management"
             }
         ]
@@ -572,37 +572,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Data integration tools",
+                "Catergories": "Unified Platforms",
                 "Groups": "System merger",
-                "Sub Catergories": "Aggregate and combine data from multiple sources to provide a unified view and support analytics and reporting.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Integration of systems"
             },
             {
                 "Sub Groups": "Open data",
-                "Catergories": "Open data platforms",
+                "Catergories": "Open Access",
                 "Groups": "Open data",
-                "Sub Catergories": "Provide access to and enable the sharing of data in an open and standardized format, promoting transparency and collaboration.",
+                "Sub Catergories": "Application",
                 "Factors": "Information accessibility"
             },
             {
                 "Sub Groups": "Asset allocation",
-                "Catergories": "Investment management software",
+                "Catergories": "Resource Allocation Tools",
                 "Groups": "Asset allocation",
-                "Sub Catergories": "Facilitates the management and analysis of investment portfolios, including trading, risk assessment, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource management"
             },
             {
                 "Sub Groups": "Data governance",
-                "Catergories": "Data governance platforms",
+                "Catergories": "Data Standards",
                 "Groups": "Data governance",
-                "Sub Catergories": "Ensure the quality, integrity, and security of data throughout its lifecycle, including data management, compliance, and privacy.",
+                "Sub Catergories": "Data",
                 "Factors": "Standardized information"
             },
             {
                 "Sub Groups": "Teamwork tools",
-                "Catergories": "Collaboration software",
+                "Catergories": "Stakeholder Engagement",
                 "Groups": "Teamwork tools",
-                "Sub Catergories": "Facilitates communication and cooperation among team members through features such as messaging, file sharing, and project management.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaboration"
             }
         ]
@@ -613,30 +613,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Project planning software",
+                "Catergories": "Implementation Planning",
                 "Groups": "Rollout plan",
-                "Sub Catergories": "Facilitate the creation and management of project plans, including timelines, tasks, and dependencies.",
+                "Sub Catergories": "Application",
                 "Factors": "Systems implementation"
             },
             {
                 "Sub Groups": "Uniform interfaces",
-                "Catergories": "Unified interfaces",
+                "Catergories": "Universal Access",
                 "Groups": "Uniform interfaces",
-                "Sub Catergories": "Provide a consistent and unified interface for users to interact with systems or applications.",
+                "Sub Catergories": "Application",
                 "Factors": "Standardized information access"
             },
             {
                 "Sub Groups": "Efficient usage",
-                "Catergories": "Logistics software",
+                "Catergories": "Utilization Metrics",
                 "Groups": "Efficient usage",
-                "Sub Catergories": "Manage and optimize the flow of goods, services, or information through supply chains.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource utilization"
             },
             {
                 "Sub Groups": "Forecasting",
-                "Catergories": "Predictive analytics software",
+                "Catergories": "Demand Forecasting",
                 "Groups": "Forecasting",
-                "Sub Catergories": "Utilize data mining and statistical algorithms to forecast future trends and behaviors, enabling proactive decision-making.",
+                "Sub Catergories": "Business",
                 "Factors": "Management of future demand"
             }
         ]
@@ -647,23 +647,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Scalability solutions",
+                "Catergories": "Scalability",
                 "Groups": "Scalability",
-                "Sub Catergories": "Scale systems or infrastructure to accommodate changing demands or growth.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Increased services demand"
             },
             {
                 "Sub Groups": "Operational efficiency",
-                "Catergories": "Efficiency tools",
+                "Catergories": "Service Design",
                 "Groups": "Operational efficiency",
-                "Sub Catergories": "Improve operational efficiency and effectiveness through automation and optimization.",
+                "Sub Catergories": "Application",
                 "Factors": "Service delivery"
             },
             {
                 "Sub Groups": "Futureproofing",
-                "Catergories": "Futureproofing tools",
+                "Catergories": "Future Planning",
                 "Groups": "Futureproofing",
-                "Sub Catergories": "Implement measures to future-proof systems or processes against emerging challenges or risks.",
+                "Sub Catergories": "Business",
                 "Factors": "System projections"
             }
         ]
@@ -674,23 +674,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Maintenance and Support",
-                "Catergories": "Recruitment tools",
+                "Catergories": "Workforce Planning",
                 "Groups": "Recruitment",
-                "Sub Catergories": "Facilitate the recruitment process by sourcing, screening, and selecting candidates for job positions.",
+                "Sub Catergories": "Business",
                 "Factors": "Staff shortages"
             },
             {
                 "Sub Groups": "Focus areas",
-                "Catergories": "Focus management tools",
+                "Catergories": "Priority Services",
                 "Groups": "Focus areas",
-                "Sub Catergories": "Manage and prioritize organizational goals and initiatives for better focus and alignment.",
+                "Sub Catergories": "Business",
                 "Factors": "Critical areas"
             },
             {
                 "Sub Groups": "Data expansion",
-                "Catergories": "Data expansion tools",
+                "Catergories": "User Scalability",
                 "Groups": "Data expansion",
-                "Sub Catergories": "Develop plans and strategies to address potential risks or disruptions proactively.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "User capacity"
             }
         ]
@@ -701,23 +701,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Load balancing tools",
+                "Catergories": "Data Collection",
                 "Groups": "Load balancing",
-                "Sub Catergories": "Balance workloads and distribute resources evenly across systems or networks.",
+                "Sub Catergories": "Data",
                 "Factors": "Increase database"
             },
             {
                 "Sub Groups": "Capacity planning",
-                "Catergories": "Capacity planning software",
+                "Catergories": "Scalability",
                 "Groups": "Capacity planning",
-                "Sub Catergories": "Forecast and plan for future resource needs based on current usage and trends.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Rising system usage"
             },
             {
                 "Sub Groups": "Knowledge base",
-                "Catergories": "Knowledge base software",
+                "Catergories": "Capacity Planning",
                 "Groups": "Knowledge base",
-                "Sub Catergories": "Create and maintain a repository of knowledge and information for organizational use.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Future system demand"
             }
         ]
@@ -728,16 +728,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Innovation platforms",
+                "Catergories": "KM Systems",
                 "Groups": "Technological innovation",
-                "Sub Catergories": "Foster innovation and creativity within the organization through collaborative platforms.",
+                "Sub Catergories": "Application",
                 "Factors": "Knowledge management"
             },
             {
                 "Sub Groups": "Cost-benefit analysis",
-                "Catergories": "Cost-benefit analysis tools",
+                "Catergories": "Digital Modernization",
                 "Groups": "Cost-benefit analysis",
-                "Sub Catergories": "Analyze historical data and trends to identify patterns or insights for strategic planning.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "IT system advancement"
             }
         ]
@@ -748,16 +748,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Future Planning and System Demand",
-                "Catergories": "Cost control software",
+                "Catergories": "Cost Analysis",
                 "Groups": "Cost control",
-                "Sub Catergories": "Control costs and expenditures to optimize financial performance.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Expensive technologies"
             },
             {
                 "Sub Groups": "Education",
-                "Catergories": "Education software",
+                "Catergories": "Procurement Strategy",
                 "Groups": "Education",
-                "Sub Catergories": "Provide software for educational institutions or training organizations.",
+                "Sub Catergories": "Business",
                 "Factors": "Costly materials"
             }
         ]
@@ -768,23 +768,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Satisfaction tools",
+                "Catergories": "Health Literacy Tools",
                 "Groups": "Customer satisfaction",
-                "Sub Catergories": "Facilitate the measurement and assessment of customer or user satisfaction levels.",
+                "Sub Catergories": "Application",
                 "Factors": "Informed consumers"
             },
             {
                 "Sub Groups": "Problem-solving",
-                "Catergories": "Root cause analysis tools",
+                "Catergories": "Stakeholder Engagement",
                 "Groups": "Problem-solving",
-                "Sub Catergories": "Identify and address the underlying causes of problems or incidents to prevent recurrence and improve performance.",
+                "Sub Catergories": "Business",
                 "Factors": "High expectations"
             },
             {
                 "Sub Groups": "Compliance audits",
-                "Catergories": "Audit software",
+                "Catergories": "Case Management Systems",
                 "Groups": "Compliance audits",
-                "Sub Catergories": "Conduct audits and assessments to ensure compliance and adherence to standards.",
+                "Sub Catergories": "Application",
                 "Factors": "Complex needs problems"
             }
         ]
@@ -795,23 +795,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
-                "Catergories": "Load testing tools",
+                "Catergories": "Compliance Framework",
                 "Groups": "Load testing",
-                "Sub Catergories": "Test the performance and scalability of systems or applications under load.",
+                "Sub Catergories": "Business",
                 "Factors": "Quality & Safety standards"
             },
             {
                 "Sub Groups": "Occupational safety",
-                "Catergories": "EHS software",
+                "Catergories": "System Scalability",
                 "Groups": "Occupational safety",
-                "Sub Catergories": "Manage environmental, health, and safety compliance and risks to protect employees and the environment.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "High user rates"
             },
             {
                 "Sub Groups": "SOPs",
-                "Catergories": "SOP tools",
+                "Catergories": "Occupational Safety",
                 "Groups": "SOPs",
-                "Sub Catergories": "Provide support and assistance to users for technical issues or inquiries related to systems or applications.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Safe working capacity"
             }
         ]
@@ -822,30 +822,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
-                "Catergories": "Collaboration tools",
+                "Catergories": "Communication Tools",
                 "Groups": "Collaboration tools",
-                "Sub Catergories": "Facilitate communication and collaboration among team members and stakeholders.",
+                "Sub Catergories": "Application",
                 "Factors": "Communication"
             },
             {
                 "Sub Groups": "Training programs",
-                "Catergories": "Training tools",
+                "Catergories": "Governance",
                 "Groups": "Training programs",
-                "Sub Catergories": "Provide tools and resources for training and skill development to support employee growth and development.",
+                "Sub Catergories": "Business",
                 "Factors": "Policies & Procedures"
             },
             {
                 "Sub Groups": "Roster management",
-                "Catergories": "Roster management software",
+                "Catergories": "Workforce Development",
                 "Groups": "Roster management",
-                "Sub Catergories": "Manage employee schedules, shifts, and assignments for efficient workforce management.",
+                "Sub Catergories": "Business",
                 "Factors": "Skills and competence"
             },
             {
                 "Sub Groups": "System investment",
-                "Catergories": "Investment tools",
+                "Catergories": "Scheduling Tools",
                 "Groups": "System investment",
-                "Sub Catergories": "Analyze and evaluate investment opportunities to support informed decision-making.",
+                "Sub Catergories": "Application",
                 "Factors": "Work scheduling"
             }
         ]
@@ -856,16 +856,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System and Technology Improvement",
-                "Catergories": "Project management tools",
+                "Catergories": "System Deficit",
                 "Groups": "Overhaul",
-                "Sub Catergories": "Assist in planning, scheduling, and managing projects, including task assignments, progress tracking, and resource allocation.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Lack of core ICT systems"
             },
             {
                 "Sub Groups": "Budget reallocation",
-                "Catergories": "Reallocation tools",
+                "Catergories": "Modernization Strategy",
                 "Groups": "Budget reallocation",
-                "Sub Catergories": "Facilitate the efficient allocation and reallocation of resources to optimize organizational effectiveness.",
+                "Sub Catergories": "Business",
                 "Factors": "System reform"
             }
         ]
@@ -876,23 +876,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "PMP certification tools",
+                "Catergories": "Budget Constraints",
                 "Groups": "PMP certification",
-                "Sub Catergories": "Prepare for and obtain Project Management Professional (PMP) certification.",
+                "Sub Catergories": "Business",
                 "Factors": "Constraints in funding"
             },
             {
                 "Sub Groups": "Change management",
-                "Catergories": "Change management software",
+                "Catergories": "Project Capability",
                 "Groups": "Change management",
-                "Sub Catergories": "Facilitate the planning, execution, and tracking of organizational changes to minimize resistance and maximize adoption.",
+                "Sub Catergories": "Business",
                 "Factors": "Skilled project management"
             },
             {
                 "Sub Groups": "Prioritization",
-                "Catergories": "Prioritization tools",
+                "Catergories": "Change Readiness",
                 "Groups": "Prioritization",
-                "Sub Catergories": "Help prioritize tasks, projects, or goals based on their importance and impact.",
+                "Sub Catergories": "Business",
                 "Factors": "Capacity for large-scale change"
             }
         ]
@@ -903,23 +903,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Value assessment software",
+                "Catergories": "Budget Management",
                 "Groups": "Value assessment",
-                "Sub Catergories": "Assess and evaluate the value generated by projects or initiatives.",
+                "Sub Catergories": "Business",
                 "Factors": "Competing demands for ICT funds"
             },
             {
                 "Sub Groups": "Gantt charts",
-                "Catergories": "Gantt chart tools",
+                "Catergories": "Prioritization Matrix",
                 "Groups": "Gantt charts",
-                "Sub Catergories": "Create and visualize project schedules and timelines to track progress and milestones.",
+                "Sub Catergories": "Business",
                 "Factors": "Priority determination"
             },
             {
                 "Sub Groups": "Problem clustering",
-                "Catergories": "Clustering software",
+                "Catergories": "Project Management",
                 "Groups": "Problem clustering",
-                "Sub Catergories": "Organize and group data or entities based on similarity or relatedness.",
+                "Sub Catergories": "Business",
                 "Factors": "Project scheduling complexity"
             }
         ]
@@ -930,23 +930,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Risk management software",
+                "Catergories": "Integrated Service Design",
                 "Groups": "Risk mitigation",
-                "Sub Catergories": "Identify, assess, and mitigate risks to protect organizational assets and interests.",
+                "Sub Catergories": "Application",
                 "Factors": "Convergence of issues"
             },
             {
                 "Sub Groups": "Transformation",
-                "Catergories": "Change management software",
+                "Catergories": "Risk Register",
                 "Groups": "Transformation",
-                "Sub Catergories": "Facilitate the planning, implementation, and tracking of organizational changes to minimize disruptions and maximize benefits.",
+                "Sub Catergories": "Business",
                 "Factors": "Significant risk environment"
             },
             {
                 "Sub Groups": "Talent acquisition",
-                "Catergories": "Applicant Tracking Systems",
+                "Catergories": "Service Innovation",
                 "Groups": "Talent acquisition",
-                "Sub Catergories": "Streamline the recruitment process by managing job postings, applications, and candidate communication.",
+                "Sub Catergories": "Business",
                 "Factors": "Need for service delivery change"
             }
         ]
@@ -957,30 +957,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Policy management software",
+                "Catergories": "Service Planning",
                 "Groups": "Policy alignment",
-                "Sub Catergories": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",
+                "Sub Catergories": "Business",
                 "Factors": "Demand for services"
             },
             {
                 "Sub Groups": "Talent acquisition",
-                "Catergories": "Applicant Tracking Systems",
+                "Catergories": "Business Process Management",
                 "Groups": "Talent acquisition",
-                "Sub Catergories": "Streamline the recruitment process by managing job postings, applications, and candidate communication.",
+                "Sub Catergories": "Application",
                 "Factors": "Workforce shortages"
             },
             {
                 "Sub Groups": "Policy alignment",
-                "Catergories": "Policy management software",
+                "Catergories": "Policy Objectives",
                 "Groups": "Policy alignment",
-                "Sub Catergories": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",
+                "Sub Catergories": "Business",
                 "Factors": "Government priorities"
             },
             {
                 "Sub Groups": "IT roadmaps",
-                "Catergories": "IT roadmap software",
+                "Catergories": "Implementation Roadmap",
                 "Groups": "IT roadmaps",
-                "Sub Catergories": "Create and manage roadmaps for IT projects, initiatives, or technologies.",
+                "Sub Catergories": "Business",
                 "Factors": "ICT strategies"
             }
         ]
@@ -991,30 +991,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "OKR software",
+                "Catergories": "Results-Based Planning",
                 "Groups": "Goal alignment",
-                "Sub Catergories": "Facilitates the setting, tracking, and alignment of Objectives and Key Results (OKRs) to improve organizational focus and performance.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment with Results and Services Plan"
             },
             {
                 "Sub Groups": "Strategic backing",
-                "Catergories": "Strategic planning tools",
+                "Catergories": "Strategic Support",
                 "Groups": "Strategic backing",
-                "Sub Catergories": "Assist in developing and implementing strategic plans to achieve long-term goals and objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Support for strategic programs"
             },
             {
                 "Sub Groups": "Change alignment",
-                "Catergories": "Transformation planning tools",
+                "Catergories": "Change Management",
                 "Groups": "Change alignment",
-                "Sub Catergories": "Support the planning and execution of organizational transformations, including change management, communication, and training.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment with reform programs"
             },
             {
                 "Sub Groups": "Holistic approach",
-                "Catergories": "Holistic tools",
+                "Catergories": "Policy Alignment",
                 "Groups": "Holistic approach",
-                "Sub Catergories": "Take a comprehensive or integrated approach to address complex issues or challenges within the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Consideration of whole-of-government strategies"
             }
         ]
@@ -1025,51 +1025,51 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
-                "Catergories": "Preventive measures",
+                "Catergories": "Early Intervention Tools",
                 "Groups": "Proactive measures",
-                "Sub Catergories": "Implement measures to prevent potential issues or problems from occurring.",
+                "Sub Catergories": "Application",
                 "Factors": "Preventative solutions"
             },
             {
                 "Sub Groups": "UX design",
-                "Catergories": "UX/UI design tools",
+                "Catergories": "UX Design",
                 "Groups": "UX design",
-                "Sub Catergories": "Enable the creation and optimization of user interfaces and experiences for digital products and services.",
+                "Sub Catergories": "Application",
                 "Factors": "User experience"
             },
             {
                 "Sub Groups": "Long-term planning",
-                "Catergories": "Strategic planning tools",
+                "Catergories": "Forecasting",
                 "Groups": "Long-term planning",
-                "Sub Catergories": "Develop and execute strategies to achieve organizational goals and objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Future benefits"
             },
             {
                 "Sub Groups": "Stakeholder engagement",
-                "Catergories": "Engagement tools",
+                "Catergories": "Stakeholder Engagement",
                 "Groups": "Stakeholder engagement",
-                "Sub Catergories": "Enhance engagement and interaction with stakeholders through various channels.",
+                "Sub Catergories": "Business",
                 "Factors": "Strengthening relationships"
             },
             {
                 "Sub Groups": "Expense management",
-                "Catergories": "Expense tracking software",
+                "Catergories": "Service Costing",
                 "Groups": "Expense management",
-                "Sub Catergories": "Track and manage expenses incurred by the organization for better financial management.",
+                "Sub Catergories": "Business",
                 "Factors": "Costs of services"
             },
             {
                 "Sub Groups": "HR planning",
-                "Catergories": "HR planning tools",
+                "Catergories": "HR Strategy",
                 "Groups": "HR planning",
-                "Sub Catergories": "Plan and forecast the human resource needs of the organization to support business objectives and growth initiatives.",
+                "Sub Catergories": "Business",
                 "Factors": "Sustainable Workforce"
             },
             {
                 "Sub Groups": "Risk forecasting",
-                "Catergories": "Forecasting tools",
+                "Catergories": "Risk Assessment",
                 "Groups": "Risk forecasting",
-                "Sub Catergories": "Analyze historical data and trends to forecast future events or outcomes.",
+                "Sub Catergories": "Business",
                 "Factors": "New risk potential"
             }
         ]
@@ -1080,23 +1080,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Risk Identification and Management",
-                "Catergories": "Preventive tools",
+                "Catergories": "Risk Mitigation",
                 "Groups": "Preventive measures",
-                "Sub Catergories": "Implement measures to prevent problems or issues from occurring or escalating.",
+                "Sub Catergories": "Application",
                 "Factors": "Reducing risk factors"
             },
             {
                 "Sub Groups": "Customer care",
-                "Catergories": "Customer service software",
+                "Catergories": "Risk Management",
                 "Groups": "Customer care",
-                "Sub Catergories": "Manage and track interactions with customers to provide efficient and effective service.",
+                "Sub Catergories": "Application",
                 "Factors": "Preventing consumer issues"
             },
             {
                 "Sub Groups": "Targeted support",
-                "Catergories": "Support software",
+                "Catergories": "Predictive Analytics",
                 "Groups": "Targeted support",
-                "Sub Catergories": "Provide tools and resources to support users and address their needs effectively.",
+                "Sub Catergories": "Application",
                 "Factors": "Interventions for high-risk consumers"
             }
         ]
@@ -1107,58 +1107,58 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "Uptime monitoring software",
+                "Catergories": "Service Availability",
                 "Groups": "Service uptime",
-                "Sub Catergories": "Monitor and track system uptime and availability to ensure continuous service delivery and minimize downtime.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Availability of services"
             },
             {
                 "Sub Groups": "Performance metrics",
-                "Catergories": "Business intelligence tools",
+                "Catergories": "Service Evaluation",
                 "Groups": "Performance metrics",
-                "Sub Catergories": "Enable organizations to gather, analyze, and visualize data to make informed business decisions.",
+                "Sub Catergories": "Business",
                 "Factors": "Effectiveness of services"
             },
             {
                 "Sub Groups": "Integrated care",
-                "Catergories": "Healthcare management systems",
+                "Catergories": "Care Coordination Systems",
                 "Groups": "Integrated care",
-                "Sub Catergories": "Manage patient records, appointments, and medical billing to streamline healthcare operations.",
+                "Sub Catergories": "Application",
                 "Factors": "Coordination of care"
             },
             {
                 "Sub Groups": "Innovative healthcare",
-                "Catergories": "Healthcare software",
+                "Catergories": "Model of Care",
                 "Groups": "Innovative healthcare",
-                "Sub Catergories": "Manage patient records, appointments, and medical billing to streamline healthcare operations.",
+                "Sub Catergories": "Business",
                 "Factors": "Supporting new care models"
             },
             {
                 "Sub Groups": "Continuous improvement",
-                "Catergories": "Improvement tools",
+                "Catergories": "Long-Term Planning",
                 "Groups": "Continuous improvement",
-                "Sub Catergories": "Aid in identifying areas for improvement and implementing strategies to enhance performance.",
+                "Sub Catergories": "Business",
                 "Factors": "Sustainability of reform"
             },
             {
                 "Sub Groups": "Data mapping",
-                "Catergories": "Data mapping software",
+                "Catergories": "Journey Mapping",
                 "Groups": "Data mapping",
-                "Sub Catergories": "Provide tools to map and visualize the flow of data between systems or processes.",
+                "Sub Catergories": "Application",
                 "Factors": "Information flow along consumer journey"
             },
             {
                 "Sub Groups": "UX enhancement",
-                "Catergories": "UX design tools",
+                "Catergories": "UX Design",
                 "Groups": "UX enhancement",
-                "Sub Catergories": "Design user interfaces to improve the usability and accessibility of software applications.",
+                "Sub Catergories": "Application",
                 "Factors": "Consumer experience improvement"
             },
             {
                 "Sub Groups": "Tailored services",
-                "Catergories": "Tailored service software",
+                "Catergories": "Service Design",
                 "Groups": "Tailored services",
-                "Sub Catergories": "Deliver personalized and customized services to meet the specific needs of customers or clients.",
+                "Sub Catergories": "Application",
                 "Factors": "Appropriate consumer delivery"
             }
         ]
@@ -1169,37 +1169,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Compliance and Governance",
-                "Catergories": "Process automation",
+                "Catergories": "Process Optimization",
                 "Groups": "Process simplification",
-                "Sub Catergories": "Automate manual tasks and workflows to improve productivity and reduce errors.",
+                "Sub Catergories": "Application",
                 "Factors": "Complexity and duplication in service delivery"
             },
             {
                 "Sub Groups": "Teamwork enhancement",
-                "Catergories": "Collaboration software",
+                "Catergories": "Collaboration Tools",
                 "Groups": "Teamwork enhancement",
-                "Sub Catergories": "Facilitate communication and collaboration among team members for better productivity.",
+                "Sub Catergories": "Application",
                 "Factors": "Need for improved collaboration"
             },
             {
                 "Sub Groups": "Integrated systems",
-                "Catergories": "Integrated systems",
+                "Catergories": "Workflow Systems",
                 "Groups": "Integrated systems",
-                "Sub Catergories": "Integrate multiple systems or applications to work together seamlessly.",
+                "Sub Catergories": "Application",
                 "Factors": "Enhancement of coordination"
             },
             {
                 "Sub Groups": "Quality assurance",
-                "Catergories": "Quality assurance tools",
+                "Catergories": "Continuous Improvement",
                 "Groups": "Quality assurance",
-                "Sub Catergories": "Ensure the quality and reliability of products, services, or processes through testing and validation.",
+                "Sub Catergories": "Business",
                 "Factors": "Quality and safety improvement"
             },
             {
                 "Sub Groups": "Optimal allocation",
-                "Catergories": "Allocation tools",
+                "Catergories": "Resource Optimization",
                 "Groups": "Optimal allocation",
-                "Sub Catergories": "Determine and allocate resources based on organizational priorities and needs.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Appropriate resource utilization"
             }
         ]
@@ -1210,16 +1210,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
-                "Catergories": "SWOT analysis tools",
+                "Catergories": "Risk and Opportunity Analysis",
                 "Groups": "SWOT analysis",
-                "Sub Catergories": "Conduct SWOT (Strengths, Weaknesses, Opportunities, Threats) analysis to assess organizational strategies and objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Constraints and opportunities"
             },
             {
                 "Sub Groups": "Policy coherence",
-                "Catergories": "Compliance tools",
+                "Catergories": "Policy Compliance",
                 "Groups": "Policy coherence",
-                "Sub Catergories": "Ensure adherence to legal, regulatory, and industry standards through monitoring, reporting, and auditing capabilities.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment with national initiatives"
             }
         ]
@@ -1230,16 +1230,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System and Technology Improvement",
-                "Catergories": "Trend analysis tools",
+                "Catergories": "Innovation Strategy",
                 "Groups": "Tech trends",
-                "Sub Catergories": "Implement upgrades or enhancements to systems, applications, or processes to improve performance and functionality.",
+                "Sub Catergories": "Business",
                 "Factors": "New directions for IT"
             },
             {
                 "Sub Groups": "Leadership vision",
-                "Catergories": "Leadership tools",
+                "Catergories": "Strategic Goals",
                 "Groups": "Leadership vision",
-                "Sub Catergories": "Provide tools and resources to support leadership development and effectiveness.",
+                "Sub Catergories": "Business",
                 "Factors": "Primary goals of Executive Council"
             }
         ]
@@ -1250,37 +1250,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Policy management software",
+                "Catergories": "Policy Objectives",
                 "Groups": "Policy alignment",
-                "Sub Catergories": "Streamlines the creation, distribution, and enforcement of organizational policies and procedures to ensure compliance and consistency.",
+                "Sub Catergories": "Business",
                 "Factors": "Government priorities"
             },
             {
                 "Sub Groups": "Change strategy",
-                "Catergories": "Change management tools",
+                "Catergories": "Change Strategy",
                 "Groups": "Change strategy",
-                "Sub Catergories": "Plan, implement, and track changes to organizational processes or systems.",
+                "Sub Catergories": "Business",
                 "Factors": "Reform agenda"
             },
             {
                 "Sub Groups": "Organizational change",
-                "Catergories": "Organizational development tools",
+                "Catergories": "Change Initiatives",
                 "Groups": "Organizational change",
-                "Sub Catergories": "Support initiatives to enhance organizational effectiveness, including leadership development, culture change, and performance management.",
+                "Sub Catergories": "Business",
                 "Factors": "Business reform"
             },
             {
                 "Sub Groups": "Inclusive services",
-                "Catergories": "Inclusive service platforms",
+                "Catergories": "Inclusive Design",
                 "Groups": "Inclusive services",
-                "Sub Catergories": "Provide inclusive services and accommodations to meet diverse needs and requirements.",
+                "Sub Catergories": "Application",
                 "Factors": "Improvements to Indigenous consumers"
             },
             {
                 "Sub Groups": "Early intervention",
-                "Catergories": "Intervention tools",
+                "Catergories": "Preventive Care Systems",
                 "Groups": "Early intervention",
-                "Sub Catergories": "Analyze the costs and benefits of potential actions or investments to inform decision-making effectively.",
+                "Sub Catergories": "Application",
                 "Factors": "Preventative services"
             }
         ]
@@ -1291,30 +1291,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Collaboration and Communication",
-                "Catergories": "International collaboration tools",
+                "Catergories": "Interagency Cooperation",
                 "Groups": "Cross-border teamwork",
-                "Sub Catergories": "Facilitate collaboration and communication across global teams with features such as multilingual support and time zone management.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaboration across jurisdictions"
             },
             {
                 "Sub Groups": "Uniform methods",
-                "Catergories": "SOP software",
+                "Catergories": "System Architecture",
                 "Groups": "Uniform methods",
-                "Sub Catergories": "Centralize and standardize Standard Operating Procedures (SOPs) to ensure consistency and compliance across the organization.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Consistency in systems approaches"
             },
             {
                 "Sub Groups": "Centralized data",
-                "Catergories": "Data centralization tools",
+                "Catergories": "National Infrastructure",
                 "Groups": "Centralized data",
-                "Sub Catergories": "Centralize and manage data to ensure consistency, accuracy, and accessibility.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "National information network"
             },
             {
                 "Sub Groups": "Legal compliance",
-                "Catergories": "Legal compliance tools",
+                "Catergories": "Policy Environment",
                 "Groups": "Legal compliance",
-                "Sub Catergories": "Ensure compliance with legal and regulatory requirements to mitigate risks.",
+                "Sub Catergories": "Business",
                 "Factors": "Regulatory frameworks"
             }
         ]
@@ -1325,65 +1325,65 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Implementation Challenges and Delays",
-                "Catergories": "Protocol management",
+                "Catergories": "Compliance and Standards",
                 "Groups": "Protocol adherence",
-                "Sub Catergories": "Manage and enforce protocols and procedures for organizational compliance and governance.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "ICT standards"
             },
             {
                 "Sub Groups": "IT blueprint",
-                "Catergories": "IT blueprint tools",
+                "Catergories": "Long-term Planning",
                 "Groups": "IT blueprint",
-                "Sub Catergories": "Develop and document IT strategies and plans for future initiatives and investments.",
+                "Sub Catergories": "Business",
                 "Factors": "ICT strategic plan"
             },
             {
                 "Sub Groups": "API integration",
-                "Catergories": "API management platforms",
+                "Catergories": "Standards-based Integration",
                 "Groups": "API integration",
-                "Sub Catergories": "Manage the creation, deployment, and maintenance of Application Programming Interfaces (APIs) to enable integration and interoperability.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Interoperability"
             },
             {
                 "Sub Groups": "Data governance",
-                "Catergories": "Data governance platforms",
+                "Catergories": "Data Standards",
                 "Groups": "Data governance",
-                "Sub Catergories": "Ensure the quality, integrity, and security of data throughout its lifecycle, including data management, compliance, and privacy.",
+                "Sub Catergories": "Data",
                 "Factors": "Standardized information"
             },
             {
                 "Sub Groups": "Identity codes",
-                "Catergories": "Identity management",
+                "Catergories": "Identity Management",
                 "Groups": "Identity codes",
-                "Sub Catergories": "Manage user identities and access rights to ensure security and compliance.",
+                "Sub Catergories": "Data",
                 "Factors": "Unique Identifiers"
             },
             {
                 "Sub Groups": "Personal data",
-                "Catergories": "Data privacy tools",
+                "Catergories": "Digital Health Records",
                 "Groups": "Personal data",
-                "Sub Catergories": "Ensure compliance with data protection and privacy regulations to safeguard sensitive information.",
+                "Sub Catergories": "Application",
                 "Factors": "Individual Electronic Record"
             },
             {
                 "Sub Groups": "Security protocols",
-                "Catergories": "Security tools",
+                "Catergories": "IAM",
                 "Groups": "Security protocols",
-                "Sub Catergories": "Provide tools and technologies to secure and protect organizational assets and information.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Identity management standards"
             },
             {
                 "Sub Groups": "Encrypted communication",
-                "Catergories": "Encryption tools",
+                "Catergories": "Encrypted Communication",
                 "Groups": "Encrypted communication",
-                "Sub Catergories": "Encrypt data to protect it from unauthorized access or interception.",
+                "Sub Catergories": "Application",
                 "Factors": "Secure messaging"
             },
             {
                 "Sub Groups": "Logistics control",
-                "Catergories": "Risk forecasting tools",
+                "Catergories": "Logistics Systems",
                 "Groups": "Logistics control",
-                "Sub Catergories": "Forecast and assess potential risks to inform decision-making and risk management strategies.",
+                "Sub Catergories": "Application",
                 "Factors": "Supply chain management"
             }
         ]
@@ -1394,23 +1394,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Financial Management and Budgeting",
-                "Catergories": "Transformation software",
+                "Catergories": "Organizational Change",
                 "Groups": "Business transformation",
-                "Sub Catergories": "Support organizational change and transformation initiatives through technology solutions.",
+                "Sub Catergories": "Business",
                 "Factors": "Corporate reform program"
             },
             {
                 "Sub Groups": "IT overhaul",
-                "Catergories": "IT overhaul tools",
+                "Catergories": "Transformation Planning",
                 "Groups": "IT overhaul",
-                "Sub Catergories": "Overhaul and modernize IT infrastructure, systems, and processes to improve performance and efficiency.",
+                "Sub Catergories": "Business",
                 "Factors": "ICT reform program"
             },
             {
                 "Sub Groups": "Tech deployment",
-                "Catergories": "Technology deployment tools",
+                "Catergories": "Rollout Process",
                 "Groups": "Tech deployment",
-                "Sub Catergories": "Deploy and implement technology solutions to support business objectives.",
+                "Sub Catergories": "Application",
                 "Factors": "Implementation of IT solutions"
             }
         ]
@@ -1421,30 +1421,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Collaboration and Communication",
-                "Catergories": "IT planning software",
+                "Catergories": "ICT Strategic Planning",
                 "Groups": "IT planning",
-                "Sub Catergories": "Plan and strategize IT initiatives and investments to support business objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Development of ICT strategy"
             },
             {
                 "Sub Groups": "Capital focus",
-                "Catergories": "Focus tools",
+                "Catergories": "Priority Setting",
                 "Groups": "Capital focus",
-                "Sub Catergories": "Provide tools to help individuals or teams focus on key tasks or objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Investment priorities"
             },
             {
                 "Sub Groups": "Financial planning",
-                "Catergories": "Financial planning software",
+                "Catergories": "Financial Planning",
                 "Groups": "Financial planning",
-                "Sub Catergories": "Assist in budgeting, forecasting, and financial analysis to support strategic decision-making and resource allocation.",
+                "Sub Catergories": "Business",
                 "Factors": "Budget negotiation"
             },
             {
                 "Sub Groups": "Execution",
-                "Catergories": "Workflow automation tools",
+                "Catergories": "Execution Management",
                 "Groups": "Execution",
-                "Sub Catergories": "Automate repetitive tasks and streamline business processes to improve efficiency and reduce errors.",
+                "Sub Catergories": "Business",
                 "Factors": "Program delivery"
             }
         ]
@@ -1455,44 +1455,44 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Policy and Organizational Reform",
-                "Catergories": "Service scope tools",
+                "Catergories": "Operational Support",
                 "Groups": "Service scope",
-                "Sub Catergories": "Define and manage the scope of services offered by the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Responsibilities of Support Services"
             },
             {
                 "Sub Groups": "System rollout",
-                "Catergories": "Rollout management tools",
+                "Catergories": "Deployment",
                 "Groups": "System rollout",
-                "Sub Catergories": "Manage and oversee the rollout of projects or initiatives to ensure success.",
+                "Sub Catergories": "Application",
                 "Factors": "Implementation of system"
             },
             {
                 "Sub Groups": "Upkeep",
-                "Catergories": "Maintenance tools",
+                "Catergories": "System Operations",
                 "Groups": "Upkeep",
-                "Sub Catergories": "Support the ongoing maintenance and upkeep of systems or applications to ensure reliability and performance.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Maintenance of systems"
             },
             {
                 "Sub Groups": "Customer service",
-                "Catergories": "CRM software",
+                "Catergories": "Service Desk",
                 "Groups": "Customer service",
-                "Sub Catergories": "Manages customer interactions and relationships, including sales, marketing, and customer service activities.",
+                "Sub Catergories": "Application",
                 "Factors": "Support for Consumers"
             },
             {
                 "Sub Groups": "Device control",
-                "Catergories": "Mobile Device Management",
+                "Catergories": "Asset Management",
                 "Groups": "Device control",
-                "Sub Catergories": "Manage and secure mobile devices and applications to protect data and ensure compliance with organizational policies.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Hardware management"
             },
             {
                 "Sub Groups": "Application administration",
-                "Catergories": "Application management tools",
+                "Catergories": "Version Control",
                 "Groups": "Application administration",
-                "Sub Catergories": "Manage and administer applications throughout their lifecycle, from development to retirement.",
+                "Sub Catergories": "Application",
                 "Factors": "Software management"
             }
         ]
@@ -1503,37 +1503,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Policy and Organizational Reform",
-                "Catergories": "Service management tools",
+                "Catergories": "Service Charter",
                 "Groups": "Service tasks",
-                "Sub Catergories": "Manage and coordinate the delivery of services to customers or clients.",
+                "Sub Catergories": "Business",
                 "Factors": "Responsibilities of Services"
             },
             {
                 "Sub Groups": "Regional rollout",
-                "Catergories": "Rollout tools",
+                "Catergories": "Site-Specific Rollouts",
                 "Groups": "Regional rollout",
-                "Sub Catergories": "Manage and oversee the rollout of projects, initiatives, or changes to ensure successful implementation.",
+                "Sub Catergories": "Business",
                 "Factors": "Local implementations"
             },
             {
                 "Sub Groups": "Transition planning",
-                "Catergories": "Transition management software",
+                "Catergories": "Transition Planning",
                 "Groups": "Transition planning",
-                "Sub Catergories": "Support the planning and execution of transitions, such as mergers, acquisitions, or system migrations, to minimize disruption and risk.",
+                "Sub Catergories": "Business",
                 "Factors": "Change management"
             },
             {
                 "Sub Groups": "Employee development",
-                "Catergories": "Development tools",
+                "Catergories": "Professional Development",
                 "Groups": "Employee development",
-                "Sub Catergories": "Provide tools and environments for software development and coding.",
+                "Sub Catergories": "Business",
                 "Factors": "Staff training"
             },
             {
                 "Sub Groups": "Outcome tracking",
-                "Catergories": "Outcome tracking tools",
+                "Catergories": "Benefits Management",
                 "Groups": "Outcome tracking",
-                "Sub Catergories": "Track and measure the outcomes and results of projects, initiatives, or interventions.",
+                "Sub Catergories": "Business",
                 "Factors": "Benefits realization"
             }
         ]
@@ -1544,37 +1544,37 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Risk Identification and Management",
-                "Catergories": "Focus tools",
+                "Catergories": "Portfolio Management",
                 "Groups": "Strategic focus",
-                "Sub Catergories": "Provide tools and strategies to help individuals or teams maintain focus on key tasks or objectives.",
+                "Sub Catergories": "Business",
                 "Factors": "Prioritization of programs and projects"
             },
             {
                 "Sub Groups": "ROI analysis",
-                "Catergories": "ROI analysis tools",
+                "Catergories": "ROI Analysis",
                 "Groups": "ROI analysis",
-                "Sub Catergories": "Analyze the return on investment (ROI) of projects, initiatives, or investments.",
+                "Sub Catergories": "Business",
                 "Factors": "Sound investment decisions"
             },
             {
                 "Sub Groups": "Value creation",
-                "Catergories": "Value management software",
+                "Catergories": "Organizational Value",
                 "Groups": "Value creation",
-                "Sub Catergories": "Assess and optimize the value generated by projects, programs, and investments to maximize returns and outcomes.",
+                "Sub Catergories": "Business",
                 "Factors": "Benefit to the organization"
             },
             {
                 "Sub Groups": "Standardization",
-                "Catergories": "Standardization tools",
+                "Catergories": "Process Standardization",
                 "Groups": "Standardization",
-                "Sub Catergories": "Standardize and enforce best practices and processes across the organization.",
+                "Sub Catergories": "Application",
                 "Factors": "Common processes across ICT"
             },
             {
                 "Sub Groups": "Team structure",
-                "Catergories": "Organizational chart software",
+                "Catergories": "Governance Structure",
                 "Groups": "Team structure",
-                "Sub Catergories": "Create and visualize organizational structures to understand reporting relationships and support workforce planning.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaborative framework"
             }
         ]
@@ -1585,30 +1585,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Business intelligence tools",
+                "Catergories": "Project Metrics",
                 "Groups": "Performance metrics",
-                "Sub Catergories": "Enable organizations to gather, analyze, and visualize data to make informed business decisions.",
+                "Sub Catergories": "Business",
                 "Factors": "Evaluation criteria"
             },
             {
                 "Sub Groups": "Task ranking",
-                "Catergories": "Task prioritization tools",
+                "Catergories": "Decision Framework",
                 "Groups": "Task ranking",
-                "Sub Catergories": "Help individuals and teams organize and prioritize their tasks to improve productivity and efficiency.",
+                "Sub Catergories": "Business",
                 "Factors": "Prioritization"
             },
             {
                 "Sub Groups": "Supervision",
-                "Catergories": "Monitoring software",
+                "Catergories": "System Monitoring",
                 "Groups": "Supervision",
-                "Sub Catergories": "Continuously track and analyze system performance, availability, and health to ensure optimal operation.",
+                "Sub Catergories": "Application",
                 "Factors": "Monitoring"
             },
             {
                 "Sub Groups": "Goal fulfillment",
-                "Catergories": "Performance management systems",
+                "Catergories": "Strategic Alignment",
                 "Groups": "Goal fulfillment",
-                "Sub Catergories": "Monitor and evaluate employee performance against goals and objectives to support development and performance improvement.",
+                "Sub Catergories": "Business",
                 "Factors": "Achieving business priorities"
             }
         ]
@@ -1619,16 +1619,16 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
-                "Catergories": "SOP software",
+                "Catergories": "ITIL / SOPs",
                 "Groups": "Uniform methods",
-                "Sub Catergories": "Centralize and standardize Standard Operating Procedures (SOPs) to ensure consistency and compliance across the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Standardizing processes across ICT"
             },
             {
                 "Sub Groups": "Best practices",
-                "Catergories": "Knowledge management systems",
+                "Catergories": "Best Practices",
                 "Groups": "Best practices",
-                "Sub Catergories": "Capture, store, and share organizational knowledge to support learning, collaboration, and decision-making.",
+                "Sub Catergories": "Business",
                 "Factors": "Guidelines application"
             }
         ]
@@ -1639,23 +1639,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
-                "Catergories": "Execution tools",
+                "Catergories": "Joint Program Delivery",
                 "Groups": "Joint execution",
-                "Sub Catergories": "Provide tools and support for the effective execution and implementation of plans and strategies.",
+                "Sub Catergories": "Business",
                 "Factors": "Collaborative implementation"
             },
             {
                 "Sub Groups": "Unified policies",
-                "Catergories": "Policy management software",
+                "Catergories": "Governance Integration",
                 "Groups": "Unified policies",
-                "Sub Catergories": "Manage and track organizational policies and ensure compliance with regulations.",
+                "Sub Catergories": "Business",
                 "Factors": "Integration of governance models"
             },
             {
                 "Sub Groups": "Standard coding",
-                "Catergories": "Coding standards tools",
+                "Catergories": "Dev Standards",
                 "Groups": "Standard coding",
-                "Sub Catergories": "Establish and enforce coding standards and best practices for software development teams.",
+                "Sub Catergories": "Application",
                 "Factors": "Consistency in application development"
             }
         ]
@@ -1666,30 +1666,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Collaboration and Communication",
-                "Catergories": "Application categorization tools",
+                "Catergories": "Application Architecture",
                 "Groups": "App taxonomy",
-                "Sub Catergories": "Classify and categorize software applications based on their function, usage, and business impact for better management and governance.",
+                "Sub Catergories": "Application",
                 "Factors": "Classification of applications"
             },
             {
                 "Sub Groups": "App lifecycle",
-                "Catergories": "Lifecycle tools",
+                "Catergories": "App Lifecycle",
                 "Groups": "App lifecycle",
-                "Sub Catergories": "Manage the various stages of the lifecycle of systems, applications, or products.",
+                "Sub Catergories": "Application",
                 "Factors": "Management of applications"
             },
             {
                 "Sub Groups": "Asset allocation",
-                "Catergories": "Investment management software",
+                "Catergories": "Resource Allocation Tools",
                 "Groups": "Asset allocation",
-                "Sub Catergories": "Facilitates the management and analysis of investment portfolios, including trading, risk assessment, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource management"
             },
             {
                 "Sub Groups": "Results tracking",
-                "Catergories": "Tracking tools",
+                "Catergories": "Outcome Measurement",
                 "Groups": "Results tracking",
-                "Sub Catergories": "Track and monitor various metrics or parameters for analysis and optimization.",
+                "Sub Catergories": "Business",
                 "Factors": "Achieving outcomes"
             }
         ]
@@ -1700,23 +1700,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "Strategic planning tools",
+                "Catergories": "Business Case",
                 "Groups": "Strategic alignment",
-                "Sub Catergories": "Support the development and execution of strategic plans, including goal setting, action planning, and performance tracking.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment with business benefits"
             },
             {
                 "Sub Groups": "Risk assessment",
-                "Catergories": "Risk management software",
+                "Catergories": "Risk Management Tools",
                 "Groups": "Risk assessment",
-                "Sub Catergories": "Identify, assess, and mitigate potential risks to the organization's objectives and operations.",
+                "Sub Catergories": "Business",
                 "Factors": "Risk Identification"
             },
             {
                 "Sub Groups": "Execution gap",
-                "Catergories": "Gap analysis software",
+                "Catergories": "Execution Gap",
                 "Groups": "Execution gap",
-                "Sub Catergories": "Analyze current and desired states to identify gaps and opportunities for improvement.",
+                "Sub Catergories": "Business",
                 "Factors": "Disconnect of strategy and implementation"
             }
         ]
@@ -1727,23 +1727,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Workflow software",
+                "Catergories": "Software Development Lifecycle",
                 "Groups": "Workflow",
-                "Sub Catergories": "Collect feedback and assess satisfaction levels to identify areas for improvement and enhance customer experience",
+                "Sub Catergories": "Application",
                 "Factors": "Development process"
             },
             {
                 "Sub Groups": "Seamless adoption",
-                "Catergories": "Adoption tools",
+                "Catergories": "Methodological Compatibility",
                 "Groups": "Seamless adoption",
-                "Sub Catergories": "Facilitate the adoption and implementation of new technologies or processes within the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Integration with existing methodology"
             },
             {
                 "Sub Groups": "Data-driven choices",
-                "Catergories": "Data-driven tools",
+                "Catergories": "Analytics & Reporting",
                 "Groups": "Data-driven choices",
-                "Sub Catergories": "Utilize data-driven approaches to inform decision-making and strategies.",
+                "Sub Catergories": "Application",
                 "Factors": "Informed decision-making"
             }
         ]
@@ -1754,30 +1754,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Content Management System (CMS)",
+                "Catergories": "ECM (Enterprise Content Management)",
                 "Groups": "CMS",
-                "Sub Catergories": "Manage and organize digital content for efficient storage, retrieval, and distribution.",
+                "Sub Catergories": "Application",
                 "Factors": "Large content management"
             },
             {
                 "Sub Groups": "Limited resources",
-                "Catergories": "Resource management",
+                "Catergories": "Resource Bottlenecks",
                 "Groups": "Limited resources",
-                "Sub Catergories": "Optimize the allocation and utilization of resources to maximize efficiency and productivity.",
+                "Sub Catergories": "Business",
                 "Factors": "Resource constraints"
             },
             {
                 "Sub Groups": "Competence building",
-                "Catergories": "Skill development platforms",
+                "Catergories": "LMS",
                 "Groups": "Competence building",
-                "Sub Catergories": "Provide platforms for employees to acquire and develop new skills and competencies.",
+                "Sub Catergories": "Application",
                 "Factors": "Skills / Training"
             },
             {
                 "Sub Groups": "Project control",
-                "Catergories": "Project control tools",
+                "Catergories": "Project Governance",
                 "Groups": "Project control",
-                "Sub Catergories": "Manage and control project activities to ensure successful project delivery.",
+                "Sub Catergories": "Business",
                 "Factors": "Scope creep"
             }
         ]
@@ -1788,23 +1788,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Standardization and Streamlining Processes",
-                "Catergories": "Access tools",
+                "Catergories": "Accessibility",
                 "Groups": "Inclusive access",
-                "Sub Catergories": "Manage and control access to systems, applications, or information to ensure security and compliance.",
+                "Sub Catergories": "Application",
                 "Factors": "Equal system participation"
             },
             {
                 "Sub Groups": "Process governance",
-                "Catergories": "Process management tools",
+                "Catergories": "Governance",
                 "Groups": "Process governance",
-                "Sub Catergories": "Map, analyze, and optimize business processes to improve efficiency and effectiveness.",
+                "Sub Catergories": "Business",
                 "Factors": "Change control process"
             },
             {
                 "Sub Groups": "Customization",
-                "Catergories": "Customization platforms",
+                "Catergories": "Application Design",
                 "Groups": "Customization",
-                "Sub Catergories": "Customize software applications to meet specific business requirements.",
+                "Sub Catergories": "Application",
                 "Factors": "Core functionality vs area-specific needs"
             }
         ]
@@ -1815,23 +1815,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Business Alignment",
-                "Catergories": "Enterprise architecture tools",
+                "Catergories": "Strategic Planning",
                 "Groups": "Strategic fit",
-                "Sub Catergories": "Assist in designing and managing the structure and operation of an organization's IT infrastructure and applications.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment"
             },
             {
                 "Sub Groups": "Time management",
-                "Catergories": "Time tracking software",
+                "Catergories": "Timeline Risk",
                 "Groups": "Time management",
-                "Sub Catergories": "Track and monitor time spent on tasks and projects for better resource management.",
+                "Sub Catergories": "Business",
                 "Factors": "Implementation delays"
             },
             {
                 "Sub Groups": "Resource planning",
-                "Catergories": "Resource planning software",
+                "Catergories": "Resource Management",
                 "Groups": "Resource planning",
-                "Sub Catergories": "Plan and allocate resources to meet organizational goals and objectives effectively.",
+                "Sub Catergories": "Business",
                 "Factors": "Allocation of resources"
             }
         ]
@@ -1842,23 +1842,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Program and Project Management",
-                "Catergories": "Oversight tools",
+                "Catergories": "Program Oversight",
                 "Groups": "Program oversight",
-                "Sub Catergories": "Provide oversight and monitoring capabilities to ensure projects and processes are on track.",
+                "Sub Catergories": "Business",
                 "Factors": "Management of programs"
             },
             {
                 "Sub Groups": "System merger",
-                "Catergories": "Data integration tools",
+                "Catergories": "Unified Platforms",
                 "Groups": "System merger",
-                "Sub Catergories": "Aggregate and combine data from multiple sources to provide a unified view and support analytics and reporting.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Integration of systems"
             },
             {
                 "Sub Groups": "System harmony",
-                "Catergories": "Integration tools",
+                "Catergories": "Integration Architecture",
                 "Groups": "System harmony",
-                "Sub Catergories": "Facilitate the integration of disparate systems and applications for seamless data exchange.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Compatibility between systems"
             }
         ]
@@ -1869,30 +1869,30 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Platform tools",
+                "Catergories": "Centralization",
                 "Groups": "Single platform",
-                "Sub Catergories": "Provide tools and resources to support the development and management of platforms or ecosystems.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Integration of unified systems"
             },
             {
                 "Sub Groups": "Smooth transitions",
-                "Catergories": "Transition management",
+                "Catergories": "Business Continuity",
                 "Groups": "Smooth transitions",
-                "Sub Catergories": "Facilitate the transition from one state or condition to another within the organization.",
+                "Sub Catergories": "Business",
                 "Factors": "Disruption to processes"
             },
             {
                 "Sub Groups": "Protection",
-                "Catergories": "Protection software",
+                "Catergories": "Cybersecurity",
                 "Groups": "Protection",
-                "Sub Catergories": "Protect organizational assets and information from threats and vulnerabilities.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Data security"
             },
             {
                 "Sub Groups": "Confidentiality",
-                "Catergories": "Data encryption tools",
+                "Catergories": "Privacy and Security",
                 "Groups": "Confidentiality",
-                "Sub Catergories": "Protect sensitive data from unauthorized access or theft by encoding it into unreadable format.",
+                "Sub Catergories": "Data",
                 "Factors": "Data privacy"
             }
         ]
@@ -1903,51 +1903,51 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Operational Effectiveness and Efficiency",
-                "Catergories": "Punctuality tools",
+                "Catergories": "Responsiveness",
                 "Groups": "Punctuality",
-                "Sub Catergories": "Monitor and ensure adherence to schedules and deadlines for tasks or projects.",
+                "Sub Catergories": "Business",
                 "Factors": "Timeliness"
             },
             {
                 "Sub Groups": "Data integrity",
-                "Catergories": "Data integrity tools",
+                "Catergories": "Data Quality",
                 "Groups": "Data integrity",
-                "Sub Catergories": "Ensure the accuracy and reliability of data across systems and processes.",
+                "Sub Catergories": "Data",
                 "Factors": "Accuracy of data"
             },
             {
                 "Sub Groups": "Precise reports",
-                "Catergories": "Reporting software",
+                "Catergories": "Reporting Systems",
                 "Groups": "Precise reports",
-                "Sub Catergories": "Generate and present data in various formats to support decision-making and analysis.",
+                "Sub Catergories": "Application",
                 "Factors": "Accuracy of Reporting"
             },
             {
                 "Sub Groups": "Data fusion",
-                "Catergories": "Data fusion tools",
+                "Catergories": "Data Interoperability",
                 "Groups": "Data fusion",
-                "Sub Catergories": "Combine data from multiple sources or formats to create a comprehensive view or dataset.",
+                "Sub Catergories": "Data",
                 "Factors": "Integration of data"
             },
             {
                 "Sub Groups": "Single interface",
-                "Catergories": "Interface tools",
+                "Catergories": "Platform Architecture",
                 "Groups": "Single interface",
-                "Sub Catergories": "Create and manage interfaces for users to interact with systems or applications seamlessly.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Unified platform"
             },
             {
                 "Sub Groups": "Easy access",
-                "Catergories": "Access control software",
+                "Catergories": "Open Data / Interoperability",
                 "Groups": "Easy access",
-                "Sub Catergories": "Control access to resources and information to protect against unauthorized access.",
+                "Sub Catergories": "Data",
                 "Factors": "Data accessibility"
             },
             {
                 "Sub Groups": "Confidentiality",
-                "Catergories": "Data encryption tools",
+                "Catergories": "Privacy and Security",
                 "Groups": "Confidentiality",
-                "Sub Catergories": "Protect sensitive data from unauthorized access or theft by encoding it into unreadable format.",
+                "Sub Catergories": "Data",
                 "Factors": "Data privacy"
             }
         ]
@@ -1958,23 +1958,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Program and Project Management",
-                "Catergories": "Task prioritization tools",
+                "Catergories": "Decision Framework",
                 "Groups": "Task ranking",
-                "Sub Catergories": "Help individuals and teams organize and prioritize their tasks to improve productivity and efficiency.",
+                "Sub Catergories": "Business",
                 "Factors": "Prioritization"
             },
             {
                 "Sub Groups": "Strategic fit",
-                "Catergories": "Enterprise architecture tools",
+                "Catergories": "Strategic Planning",
                 "Groups": "Strategic fit",
-                "Sub Catergories": "Assist in designing and managing the structure and operation of an organization's IT infrastructure and applications.",
+                "Sub Catergories": "Business",
                 "Factors": "Alignment"
             },
             {
                 "Sub Groups": "Supervision",
-                "Catergories": "Monitoring software",
+                "Catergories": "System Monitoring",
                 "Groups": "Supervision",
-                "Sub Catergories": "Continuously track and analyze system performance, availability, and health to ensure optimal operation.",
+                "Sub Catergories": "Application",
                 "Factors": "Monitoring"
             }
         ]
@@ -1985,23 +1985,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "Data and Information Management",
-                "Catergories": "Optimization tools",
+                "Catergories": "Infrastructure Optimization",
                 "Groups": "Optimal systems",
-                "Sub Catergories": "Optimize processes, systems, or resources for better performance and efficiency.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Infrastructure efficiency"
             },
             {
                 "Sub Groups": "Data governance",
-                "Catergories": "Data governance platforms",
+                "Catergories": "Data Standards",
                 "Groups": "Data governance",
-                "Sub Catergories": "Ensure the quality, integrity, and security of data throughout its lifecycle, including data management, compliance, and privacy.",
+                "Sub Catergories": "Data",
                 "Factors": "Standardized information"
             },
             {
                 "Sub Groups": "Best use",
-                "Catergories": "Efficiency software",
+                "Catergories": "Efficiency Tools",
                 "Groups": "Best use",
-                "Sub Catergories": "Improve operational efficiency and effectiveness through automation and optimization.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Resource optimization"
             }
         ]
@@ -2012,23 +2012,23 @@ const jsonData = [
         "Concepts": [
             {
                 "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Compliance tools",
+                "Catergories": "System Integration",
                 "Groups": "Protocol compliance",
-                "Sub Catergories": "Ensure adherence to legal, regulatory, and industry standards through monitoring and enforcement.",
+                "Sub Catergories": "Infrastructure",
                 "Factors": "Infrastructure coherence"
             },
             {
                 "Sub Groups": "High standards",
-                "Catergories": "Quality management tools",
+                "Catergories": "Compliance Management",
                 "Groups": "High standards",
-                "Sub Catergories": "Monitor and ensure the quality of products, services, or processes to meet standards.",
+                "Sub Catergories": "Business",
                 "Factors": "Standard adherence"
             },
             {
                 "Sub Groups": "High standards",
-                "Catergories": "Quality management tools",
+                "Catergories": "Data Governance",
                 "Groups": "High standards",
-                "Sub Catergories": "Monitor and ensure the quality of products, services, or processes to meet standards.",
+                "Sub Catergories": "Data",
                 "Factors": "Data quality"
             }
         ]

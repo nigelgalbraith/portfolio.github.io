@@ -11,8 +11,8 @@ Sub UpdateConceptLayers()
     Dim i As Long
 
     ' Set the ranges using named ranges
-    Set srcRange = ThisWorkbook.Names("Solutions").RefersToRange
-    Set destRange = ThisWorkbook.Names("Solution_Layers").RefersToRange
+    Set srcRange = ThisWorkbook.Names("Search_Factors").RefersToRange
+    Set destRange = ThisWorkbook.Names("Sub_Catergories").RefersToRange
     ' Set the table reference
     Set tbl = ThisWorkbook.Sheets("Tech Concepts").ListObjects("Table5")
 

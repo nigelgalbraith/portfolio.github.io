@@ -1,8 +1,8 @@
 class Extract {
   constructor(entry) {
     this.id = entry.ID;
-    this.reference = entry.Reference;
-    this.description = entry.Extract;
+    this.reference = entry.References;
+    this.description = entry.Extracts;
     this.facts = entry.Facts;
     this.notes = entry["Notes/Additional"] || null;
 
