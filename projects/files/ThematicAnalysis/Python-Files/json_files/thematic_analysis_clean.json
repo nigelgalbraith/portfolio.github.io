@@ -9,12 +9,12 @@
             "Duplication"
         ],
         "Groups": [
-            "Precise reports",
-            "Streamlined processes"
+            "Data Security, Quality and Privacy",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "Data Security, Quality and Privacy",
-            "Streamlined processes"
+            "Data integrity",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -31,10 +31,10 @@
             "Disparate systems"
         ],
         "Groups": [
-            "Unified platform"
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "Operational Effectiveness and Efficiency"
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -50,10 +50,10 @@
             "Outdated infrastructure"
         ],
         "Groups": [
-            "Modernization"
+            "Infrastructure and Hardware Management"
         ],
         "Sub Groups": [
-            "Infrastructure and Hardware Management"
+            "Sustainable Systems"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -71,14 +71,14 @@
             "Compatibility"
         ],
         "Groups": [
-            "Centralized management",
-            "Upgrades",
-            "Standard protocols"
+            "Compliance and Governance",
+            "System and Technology Improvement",
+            "Standardization and Streamlining Processes"
         ],
         "Sub Groups": [
-            "Compliance and Governance",
-            "Upgrades",
-            "Standard protocols"
+            "Regulatory adherence",
+            "System and Technology Improvement",
+            "Standardization and Streamlining Processes"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -100,18 +100,18 @@
             "Compliance"
         ],
         "Groups": [
-            "Strategic fit",
-            "Performance review",
-            "System unification",
-            "Green practices",
-            "Regulatory adherence"
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Performance review",
-            "System unification",
-            "Green practices",
-            "Regulatory adherence"
+            "Strategic Cohesion",
+            "Consumer Experience and Support",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -133,14 +133,14 @@
             "Predictability"
         ],
         "Groups": [
-            "User portals",
-            "Standard procedures",
-            "Forecasting models"
+            "Data and Information Management",
+            "Standardization and Streamlining Processes",
+            "Strategic Planning and Development"
         ],
         "Sub Groups": [
-            "Data and Information Management",
-            "Standard procedures",
-            "Forecasting models"
+            "Data governance",
+            "Standardization and Streamlining Processes",
+            "Strategic Planning and Development"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -160,14 +160,14 @@
             "Information flow"
         ],
         "Groups": [
-            "Teamwork tools",
-            "API integration",
-            "Data pipelines"
+            "Collaboration and Communication",
+            "System Deployment and Integration",
+            "Infrastructure and Hardware Management"
         ],
         "Sub Groups": [
-            "Collaboration and Communication",
-            "API integration",
-            "Data pipelines"
+            "Teamwork enhancement",
+            "System Deployment and Integration",
+            "Infrastructure and Hardware Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -189,18 +189,18 @@
             "Streamlined training processes"
         ],
         "Groups": [
-            "Lean management",
-            "Project management",
-            "Green practices",
-            "Mitigation strategies",
-            "E-learning"
+            "Program and Project Management",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Operational Effectiveness and Efficiency",
+            "Employee Training and Development"
         ],
         "Sub Groups": [
-            "Program and Project Management",
-            "Project management",
-            "Green practices",
-            "Mitigation strategies",
-            "E-learning"
+            "Strategic Project Leadership",
+            "System Deployment and Integration",
+            "Policy and Organizational Reform",
+            "Operational Effectiveness and Efficiency",
+            "Employee Training and Development"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -222,14 +222,14 @@
             "Cost savings"
         ],
         "Groups": [
-            "User training",
-            "Goal alignment",
-            "Expense reduction"
+            "Consumer Experience and Support",
+            "Business Alignment",
+            "Financial Management and Budgeting"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Goal alignment",
-            "Expense reduction"
+            "Customer service",
+            "Business Alignment",
+            "Financial Management and Budgeting"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -250,16 +250,16 @@
             "Business strategy"
         ],
         "Groups": [
-            "IT strategy",
-            "Policy framework",
-            "Capital allocation",
-            "Market analysis"
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Financial Management and Budgeting",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Policy framework",
-            "Capital allocation",
-            "Market analysis"
+            "Strategic Cohesion",
+            "Consumer Experience and Support",
+            "Financial Management and Budgeting",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -280,14 +280,14 @@
             "Dependency"
         ],
         "Groups": [
-            "IT strategy",
-            "Risk assessment",
-            "Contingency planning"
+            "Business Alignment",
+            "Risk Identification and Management",
+            "System Deployment and Integration"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Risk assessment",
-            "Contingency planning"
+            "Strategic Cohesion",
+            "Risk Identification and Management",
+            "System Deployment and Integration"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -305,10 +305,10 @@
             "Evaluation criteria"
         ],
         "Groups": [
-            "Performance metrics"
+            "Financial Management and Budgeting"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support"
+            "Budget control"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -326,14 +326,14 @@
             "Procurement"
         ],
         "Groups": [
-            "Diversity programs",
-            "System swaps",
-            "Vendor management"
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Policy and Organizational Reform"
         ],
         "Sub Groups": [
-            "Data and Information Management",
-            "System swaps",
-            "Vendor management"
+            "Data governance",
+            "Resource Management and Utilization",
+            "Policy and Organizational Reform"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -354,16 +354,16 @@
             "Management information"
         ],
         "Groups": [
-            "Schedule adherence",
-            "Rollout plan",
-            "Customer service",
-            "BI systems"
+            "Future Planning and System Demand",
+            "System Deployment and Integration",
+            "Consumer Experience and Support",
+            "Data and Information Management"
         ],
         "Sub Groups": [
-            "Future Planning and System Demand",
-            "Rollout plan",
-            "Customer service",
-            "BI systems"
+            "Futureproofing",
+            "System Deployment and Integration",
+            "Consumer Experience and Support",
+            "Data and Information Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -384,14 +384,14 @@
             "Employee management"
         ],
         "Groups": [
-            "Teamwork tools",
-            "Helpdesk",
-            "HR systems"
+            "Collaboration and Communication",
+            "Collaboration and Communication",
+            "Program and Project Management"
         ],
         "Sub Groups": [
+            "Teamwork enhancement",
             "Collaboration and Communication",
-            "Helpdesk",
-            "HR systems"
+            "Program and Project Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -411,14 +411,14 @@
             "Time efficiency"
         ],
         "Groups": [
-            "UX design",
-            "Open data",
-            "Time tracking"
+            "Operational Effectiveness and Efficiency",
+            "Data and Information Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Open data",
-            "Time tracking"
+            "Process optimization",
+            "Data and Information Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -438,14 +438,14 @@
             "Planning"
         ],
         "Groups": [
-            "Asset allocation",
-            "Utilization metrics",
-            "Roadmap creation"
+            "Resource Management and Utilization",
+            "Compliance and Governance",
+            "Strategic Planning and Development"
         ],
         "Sub Groups": [
-            "Resource Management and Utilization",
-            "Utilization metrics",
-            "Roadmap creation"
+            "Sustainable Efficiency",
+            "Compliance and Governance",
+            "Strategic Planning and Development"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -465,14 +465,14 @@
             "Financial management"
         ],
         "Groups": [
-            "BI dashboards",
-            "Inventory tracking",
-            "Accounting software"
+            "Compliance and Governance",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
         ],
         "Sub Groups": [
-            "Compliance and Governance",
-            "Inventory tracking",
-            "Accounting software"
+            "Regulatory adherence",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -492,14 +492,14 @@
             "Core function delivery & Urgent issue resolution"
         ],
         "Groups": [
-            "Strategic planning",
-            "Budgeting",
-            "Crisis management"
+            "Risk Identification and Management",
+            "Compliance and Governance",
+            "Collaboration and Communication"
         ],
         "Sub Groups": [
-            "Risk Identification and Management",
-            "Budgeting",
-            "Crisis management"
+            "Accountable Risk Management",
+            "Compliance and Governance",
+            "Collaboration and Communication"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -520,16 +520,16 @@
             "Information accessibility"
         ],
         "Groups": [
-            "Process optimization",
-            "AI tools",
-            "Asset allocation",
-            "Open data"
+            "Operational Effectiveness and Efficiency",
+            "Resource Management and Utilization",
+            "Resource Management and Utilization",
+            "Data and Information Management"
         ],
         "Sub Groups": [
-            "Operational Effectiveness and Efficiency",
-            "AI tools",
-            "Asset allocation",
-            "Open data"
+            "Process optimization",
+            "Resource Management and Utilization",
+            "Resource Management and Utilization",
+            "Data and Information Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -550,14 +550,14 @@
             "Resource management"
         ],
         "Groups": [
-            "Middleware",
-            "Open data",
-            "Asset allocation"
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Open data",
-            "Asset allocation"
+            "Reliable Implementation",
+            "Data and Information Management",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -579,18 +579,18 @@
             "Collaboration"
         ],
         "Groups": [
-            "System merger",
-            "Open data",
-            "Asset allocation",
-            "Data governance",
-            "Teamwork tools"
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Collaboration and Communication"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Open data",
-            "Asset allocation",
-            "Data governance",
-            "Teamwork tools"
+            "Reliable Implementation",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Collaboration and Communication"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -613,16 +613,16 @@
             "Management of future demand"
         ],
         "Groups": [
-            "Rollout plan",
-            "Uniform interfaces",
-            "Efficient usage",
-            "Forecasting"
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Uniform interfaces",
-            "Efficient usage",
-            "Forecasting"
+            "Reliable Implementation",
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Future Planning and System Demand"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -643,14 +643,14 @@
             "System projections"
         ],
         "Groups": [
-            "Scalability",
-            "Operational efficiency",
-            "Futureproofing"
+            "Data and Information Management",
+            "Consumer Experience and Support",
+            "Future Planning and System Demand"
         ],
         "Sub Groups": [
-            "Data and Information Management",
-            "Operational efficiency",
-            "Futureproofing"
+            "Data governance",
+            "Consumer Experience and Support",
+            "Future Planning and System Demand"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -670,14 +670,14 @@
             "User capacity"
         ],
         "Groups": [
-            "Recruitment",
-            "Focus areas",
-            "Data expansion"
+            "System Maintenance and Support",
+            "Data and Information Management",
+            "System and Technology Improvement"
         ],
         "Sub Groups": [
-            "System Maintenance and Support",
-            "Focus areas",
-            "Data expansion"
+            "Responsive Support",
+            "Data and Information Management",
+            "System and Technology Improvement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -697,14 +697,14 @@
             "Future system demand"
         ],
         "Groups": [
-            "Load balancing",
-            "Capacity planning",
-            "Knowledge base"
+            "Data and Information Management",
+            "Data and Information Management",
+            "Infrastructure and Hardware Management"
         ],
         "Sub Groups": [
+            "Data governance",
             "Data and Information Management",
-            "Capacity planning",
-            "Knowledge base"
+            "Infrastructure and Hardware Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -723,12 +723,12 @@
             "IT system advancement"
         ],
         "Groups": [
-            "Technological innovation",
-            "Cost-benefit analysis"
+            "Data and Information Management",
+            "System and Technology Improvement"
         ],
         "Sub Groups": [
-            "Data and Information Management",
-            "Cost-benefit analysis"
+            "Data governance",
+            "System and Technology Improvement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -746,12 +746,12 @@
             "Costly materials"
         ],
         "Groups": [
-            "Cost control",
-            "Education"
+            "Future Planning and System Demand",
+            "Financial Management and Budgeting"
         ],
         "Sub Groups": [
-            "Future Planning and System Demand",
-            "Education"
+            "Futureproofing",
+            "Financial Management and Budgeting"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -770,14 +770,14 @@
             "Complex needs problems"
         ],
         "Groups": [
-            "Customer satisfaction",
-            "Problem-solving",
-            "Compliance audits"
+            "System Deployment and Integration",
+            "Business Alignment",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Problem-solving",
-            "Compliance audits"
+            "Reliable Implementation",
+            "Business Alignment",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -797,14 +797,14 @@
             "Safe working capacity"
         ],
         "Groups": [
-            "Load testing",
-            "Occupational safety",
-            "SOPs"
+            "Operational Effectiveness and Efficiency",
+            "Business Alignment",
+            "System and Technology Improvement"
         ],
         "Sub Groups": [
-            "Operational Effectiveness and Efficiency",
-            "Occupational safety",
-            "SOPs"
+            "Process optimization",
+            "Business Alignment",
+            "System and Technology Improvement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -825,16 +825,16 @@
             "Work scheduling"
         ],
         "Groups": [
-            "Collaboration tools",
-            "Training programs",
-            "Roster management",
-            "System investment"
+            "Standardization and Streamlining Processes",
+            "Strategic Planning and Development",
+            "Employee Training and Development",
+            "Program and Project Management"
         ],
         "Sub Groups": [
-            "Standardization and Streamlining Processes",
-            "Training programs",
-            "Roster management",
-            "System investment"
+            "Consistent Excellence",
+            "Strategic Planning and Development",
+            "Employee Training and Development",
+            "Program and Project Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -854,12 +854,12 @@
             "System reform"
         ],
         "Groups": [
-            "Overhaul",
-            "Budget reallocation"
+            "System and Technology Improvement",
+            "Policy and Organizational Reform"
         ],
         "Sub Groups": [
-            "System and Technology Improvement",
-            "Budget reallocation"
+            "Innovative Evolution",
+            "Policy and Organizational Reform"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -878,14 +878,14 @@
             "Capacity for large-scale change"
         ],
         "Groups": [
-            "PMP certification",
-            "Change management",
-            "Prioritization"
+            "Consumer Experience and Support",
+            "Program and Project Management",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Change management",
-            "Prioritization"
+            "Customer service",
+            "Program and Project Management",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -905,14 +905,14 @@
             "Project scheduling complexity"
         ],
         "Groups": [
-            "Value assessment",
-            "Gantt charts",
-            "Problem clustering"
+            "Consumer Experience and Support",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Gantt charts",
-            "Problem clustering"
+            "Customer service",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -932,14 +932,14 @@
             "Need for service delivery change"
         ],
         "Groups": [
-            "Risk mitigation",
-            "Transformation",
-            "Talent acquisition"
+            "Consumer Experience and Support",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Transformation",
-            "Talent acquisition"
+            "Customer service",
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -960,16 +960,16 @@
             "ICT strategies"
         ],
         "Groups": [
-            "Policy alignment",
-            "Talent acquisition",
-            "Policy alignment",
-            "IT roadmaps"
+            "System Deployment and Integration",
+            "System Maintenance and Support",
+            "Consumer Experience and Support",
+            "Implementation Challenges and Delays"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Talent acquisition",
-            "Policy alignment",
-            "IT roadmaps"
+            "Reliable Implementation",
+            "System Maintenance and Support",
+            "Consumer Experience and Support",
+            "Implementation Challenges and Delays"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -991,16 +991,16 @@
             "Consideration of whole-of-government strategies"
         ],
         "Groups": [
-            "Goal alignment",
-            "Strategic backing",
-            "Change alignment",
-            "Holistic approach"
+            "Resource Management and Utilization",
+            "Policy and Organizational Reform",
+            "Business Alignment",
+            "Standardization and Streamlining Processes"
         ],
         "Sub Groups": [
+            "Sustainable Efficiency",
+            "Policy and Organizational Reform",
             "Business Alignment",
-            "Strategic backing",
-            "Change alignment",
-            "Holistic approach"
+            "Standardization and Streamlining Processes"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1025,22 +1025,22 @@
             "New risk potential"
         ],
         "Groups": [
-            "Proactive measures",
-            "UX design",
-            "Long-term planning",
-            "Stakeholder engagement",
-            "Expense management",
-            "HR planning",
-            "Risk forecasting"
+            "Financial Management and Budgeting",
+            "Consumer Experience and Support",
+            "Compliance and Governance",
+            "Collaboration and Communication",
+            "Collaboration and Communication",
+            "System Maintenance and Support",
+            "Risk Identification and Management"
         ],
         "Sub Groups": [
-            "Financial Management and Budgeting",
-            "UX design",
-            "Long-term planning",
-            "Stakeholder engagement",
-            "Expense management",
-            "HR planning",
-            "Risk forecasting"
+            "Budget control",
+            "Consumer Experience and Support",
+            "Compliance and Governance",
+            "Collaboration and Communication",
+            "Collaboration and Communication",
+            "System Maintenance and Support",
+            "Risk Identification and Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1064,14 +1064,14 @@
             "Interventions for high-risk consumers"
         ],
         "Groups": [
-            "Preventive measures",
-            "Customer care",
-            "Targeted support"
+            "Risk Identification and Management",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
         ],
         "Sub Groups": [
-            "Risk Identification and Management",
-            "Customer care",
-            "Targeted support"
+            "Accountable Risk Management",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1096,24 +1096,24 @@
             "Appropriate consumer delivery"
         ],
         "Groups": [
-            "Service uptime",
-            "Performance metrics",
-            "Integrated care",
-            "Innovative healthcare",
-            "Continuous improvement",
-            "Data mapping",
-            "UX enhancement",
-            "Tailored services"
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Collaboration and Communication",
+            "Consumer Experience and Support",
+            "Policy and Organizational Reform",
+            "Infrastructure and Hardware Management",
+            "Consumer Experience and Support",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Performance metrics",
-            "Integrated care",
-            "Innovative healthcare",
-            "Continuous improvement",
-            "Data mapping",
-            "UX enhancement",
-            "Tailored services"
+            "Strategic Cohesion",
+            "Consumer Experience and Support",
+            "Collaboration and Communication",
+            "Consumer Experience and Support",
+            "Policy and Organizational Reform",
+            "Infrastructure and Hardware Management",
+            "Consumer Experience and Support",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1140,18 +1140,18 @@
             "Appropriate resource utilization"
         ],
         "Groups": [
-            "Process simplification",
-            "Teamwork enhancement",
-            "Integrated systems",
-            "Quality assurance",
-            "Optimal allocation"
+            "Compliance and Governance",
+            "Collaboration and Communication",
+            "Financial Management and Budgeting",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
         ],
         "Sub Groups": [
-            "Compliance and Governance",
-            "Teamwork enhancement",
-            "Integrated systems",
-            "Quality assurance",
-            "Optimal allocation"
+            "Regulatory adherence",
+            "Collaboration and Communication",
+            "Financial Management and Budgeting",
+            "Operational Effectiveness and Efficiency",
+            "Consumer Experience and Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1172,12 +1172,12 @@
             "Alignment with national initiatives"
         ],
         "Groups": [
-            "SWOT analysis",
-            "Policy coherence"
+            "Financial Management and Budgeting",
+            "Business Alignment"
         ],
         "Sub Groups": [
-            "Financial Management and Budgeting",
-            "Policy coherence"
+            "Budget control",
+            "Business Alignment"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1195,12 +1195,12 @@
             "Primary goals of Executive Council"
         ],
         "Groups": [
-            "Tech trends",
-            "Leadership vision"
+            "System and Technology Improvement",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "System and Technology Improvement",
-            "Leadership vision"
+            "Innovative Evolution",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1221,18 +1221,18 @@
             "Preventative services"
         ],
         "Groups": [
-            "Policy alignment",
-            "Change strategy",
-            "Organizational change",
-            "Inclusive services",
-            "Early intervention"
+            "Consumer Experience and Support",
+            "Policy and Organizational Reform",
+            "Business Alignment",
+            "Data and Information Management",
+            "Strategic Planning and Development"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Change strategy",
-            "Organizational change",
-            "Inclusive services",
-            "Early intervention"
+            "Customer service",
+            "Policy and Organizational Reform",
+            "Business Alignment",
+            "Data and Information Management",
+            "Strategic Planning and Development"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1255,16 +1255,16 @@
             "Regulatory frameworks"
         ],
         "Groups": [
-            "Cross-border teamwork",
-            "Uniform methods",
-            "Centralized data",
-            "Legal compliance"
+            "Collaboration and Communication",
+            "Standardization and Streamlining Processes",
+            "Data and Information Management",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Collaboration and Communication",
-            "Uniform methods",
-            "Centralized data",
-            "Legal compliance"
+            "Teamwork enhancement",
+            "Standardization and Streamlining Processes",
+            "Data and Information Management",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1291,26 +1291,26 @@
             "Supply chain management"
         ],
         "Groups": [
-            "Protocol adherence",
-            "IT blueprint",
-            "API integration",
-            "Data governance",
-            "Identity codes",
-            "Personal data",
-            "Security protocols",
-            "Encrypted communication",
-            "Logistics control"
+            "Implementation Challenges and Delays",
+            "Implementation Challenges and Delays",
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support",
+            "Implementation Challenges and Delays",
+            "Data Security, Quality and Privacy",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
+            "Resilient Execution",
             "Implementation Challenges and Delays",
-            "IT blueprint",
-            "API integration",
-            "Data governance",
-            "Identity codes",
-            "Personal data",
-            "Security protocols",
-            "Encrypted communication",
-            "Logistics control"
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support",
+            "Implementation Challenges and Delays",
+            "Data Security, Quality and Privacy",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1336,14 +1336,14 @@
             "Implementation of IT solutions"
         ],
         "Groups": [
-            "Business transformation",
-            "IT overhaul",
-            "Tech deployment"
+            "Financial Management and Budgeting",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support"
         ],
         "Sub Groups": [
-            "Financial Management and Budgeting",
-            "IT overhaul",
-            "Tech deployment"
+            "Budget control",
+            "Data Security, Quality and Privacy",
+            "Consumer Experience and Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1364,16 +1364,16 @@
             "Program delivery"
         ],
         "Groups": [
-            "IT planning",
-            "Capital focus",
-            "Financial planning",
-            "Execution"
+            "Collaboration and Communication",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Collaboration and Communication",
-            "Capital focus",
-            "Financial planning",
-            "Execution"
+            "Teamwork enhancement",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1397,20 +1397,20 @@
             "Software management"
         ],
         "Groups": [
-            "Service scope",
-            "System rollout",
-            "Upkeep",
-            "Customer service",
-            "Device control",
-            "Application administration"
+            "Policy and Organizational Reform",
+            "Data and Information Management",
+            "System Maintenance and Support",
+            "Consumer Experience and Support",
+            "Business Alignment",
+            "Data and Information Management"
         ],
         "Sub Groups": [
-            "Policy and Organizational Reform",
-            "System rollout",
-            "Upkeep",
-            "Customer service",
-            "Device control",
-            "Application administration"
+            "Governance with Integrity",
+            "Data and Information Management",
+            "System Maintenance and Support",
+            "Consumer Experience and Support",
+            "Business Alignment",
+            "Data and Information Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1435,18 +1435,18 @@
             "Benefits realization"
         ],
         "Groups": [
-            "Service tasks",
-            "Regional rollout",
-            "Transition planning",
-            "Employee development",
-            "Outcome tracking"
+            "Policy and Organizational Reform",
+            "System Deployment and Integration",
+            "Collaboration and Communication",
+            "Employee Training and Development",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "Policy and Organizational Reform",
-            "Regional rollout",
-            "Transition planning",
-            "Employee development",
-            "Outcome tracking"
+            "Governance with Integrity",
+            "System Deployment and Integration",
+            "Collaboration and Communication",
+            "Employee Training and Development",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1470,18 +1470,18 @@
             "Collaborative framework"
         ],
         "Groups": [
-            "Strategic focus",
-            "ROI analysis",
-            "Value creation",
-            "Standardization",
-            "Team structure"
+            "Risk Identification and Management",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Collaboration and Communication",
+            "Collaboration and Communication"
         ],
         "Sub Groups": [
-            "Risk Identification and Management",
-            "ROI analysis",
-            "Value creation",
-            "Standardization",
-            "Team structure"
+            "Accountable Risk Management",
+            "Financial Management and Budgeting",
+            "Business Alignment",
+            "Collaboration and Communication",
+            "Collaboration and Communication"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1504,16 +1504,16 @@
             "Achieving business priorities"
         ],
         "Groups": [
-            "Performance metrics",
-            "Task ranking",
-            "Supervision",
-            "Goal fulfillment"
+            "Financial Management and Budgeting",
+            "Program and Project Management",
+            "System Maintenance and Support",
+            "Business Alignment"
         ],
         "Sub Groups": [
-            "Consumer Experience and Support",
-            "Task ranking",
-            "Supervision",
-            "Goal fulfillment"
+            "Budget control",
+            "Program and Project Management",
+            "System Maintenance and Support",
+            "Business Alignment"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1533,12 +1533,12 @@
             "Guidelines application"
         ],
         "Groups": [
-            "Uniform methods",
-            "Best practices"
+            "Standardization and Streamlining Processes",
+            "Business Alignment"
         ],
         "Sub Groups": [
-            "Standardization and Streamlining Processes",
-            "Best practices"
+            "Consistent Excellence",
+            "Business Alignment"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1557,14 +1557,14 @@
             "Consistency in application development"
         ],
         "Groups": [
-            "Joint execution",
-            "Unified policies",
-            "Standard coding"
+            "Standardization and Streamlining Processes",
+            "Compliance and Governance",
+            "Standardization and Streamlining Processes"
         ],
         "Sub Groups": [
-            "Standardization and Streamlining Processes",
-            "Unified policies",
-            "Standard coding"
+            "Consistent Excellence",
+            "Compliance and Governance",
+            "Standardization and Streamlining Processes"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1585,16 +1585,16 @@
             "Achieving outcomes"
         ],
         "Groups": [
-            "App taxonomy",
-            "App lifecycle",
-            "Asset allocation",
-            "Results tracking"
+            "Collaboration and Communication",
+            "System Maintenance and Support",
+            "Resource Management and Utilization",
+            "Operational Effectiveness and Efficiency"
         ],
         "Sub Groups": [
-            "Collaboration and Communication",
-            "App lifecycle",
-            "Asset allocation",
-            "Results tracking"
+            "Teamwork enhancement",
+            "System Maintenance and Support",
+            "Resource Management and Utilization",
+            "Operational Effectiveness and Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1615,14 +1615,14 @@
             "Disconnect of strategy and implementation"
         ],
         "Groups": [
-            "Strategic alignment",
-            "Risk assessment",
-            "Execution gap"
+            "Business Alignment",
+            "Risk Identification and Management",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Risk assessment",
-            "Execution gap"
+            "Strategic Cohesion",
+            "Risk Identification and Management",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1642,14 +1642,14 @@
             "Informed decision-making"
         ],
         "Groups": [
-            "Workflow",
-            "Seamless adoption",
-            "Data-driven choices"
+            "System Deployment and Integration",
+            "System Deployment and Integration",
+            "System Deployment and Integration"
         ],
         "Sub Groups": [
+            "Reliable Implementation",
             "System Deployment and Integration",
-            "Seamless adoption",
-            "Data-driven choices"
+            "System Deployment and Integration"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1670,16 +1670,16 @@
             "Scope creep"
         ],
         "Groups": [
-            "CMS",
-            "Limited resources",
-            "Competence building",
-            "Project control"
+            "Data and Information Management",
+            "Resource Management and Utilization",
+            "Employee Training and Development",
+            "Program and Project Management"
         ],
         "Sub Groups": [
-            "Data and Information Management",
-            "Limited resources",
-            "Competence building",
-            "Project control"
+            "Data governance",
+            "Resource Management and Utilization",
+            "Employee Training and Development",
+            "Program and Project Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1700,14 +1700,14 @@
             "Core functionality vs area-specific needs"
         ],
         "Groups": [
-            "Inclusive access",
-            "Process governance",
-            "Customization"
+            "Standardization and Streamlining Processes",
+            "Compliance and Governance",
+            "Compliance and Governance"
         ],
         "Sub Groups": [
-            "Standardization and Streamlining Processes",
-            "Process governance",
-            "Customization"
+            "Consistent Excellence",
+            "Compliance and Governance",
+            "Compliance and Governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1727,14 +1727,14 @@
             "Allocation of resources"
         ],
         "Groups": [
-            "Strategic fit",
-            "Time management",
-            "Resource planning"
+            "Business Alignment",
+            "Consumer Experience and Support",
+            "Consumer Experience and Support"
         ],
         "Sub Groups": [
-            "Business Alignment",
-            "Time management",
-            "Resource planning"
+            "Strategic Cohesion",
+            "Consumer Experience and Support",
+            "Consumer Experience and Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1754,14 +1754,14 @@
             "Compatibility between systems"
         ],
         "Groups": [
-            "Program oversight",
-            "System merger",
-            "System harmony"
+            "Program and Project Management",
+            "System Deployment and Integration",
+            "Financial Management and Budgeting"
         ],
         "Sub Groups": [
-            "Program and Project Management",
-            "System merger",
-            "System harmony"
+            "Strategic Project Leadership",
+            "System Deployment and Integration",
+            "Financial Management and Budgeting"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1782,16 +1782,16 @@
             "Data privacy"
         ],
         "Groups": [
-            "Single platform",
-            "Smooth transitions",
-            "Protection",
-            "Confidentiality"
+            "System Deployment and Integration",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "Smooth transitions",
-            "Protection",
-            "Confidentiality"
+            "Reliable Implementation",
+            "Resource Management and Utilization",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1816,22 +1816,22 @@
             "Data privacy"
         ],
         "Groups": [
-            "Punctuality",
-            "Data integrity",
-            "Precise reports",
-            "Data fusion",
-            "Single interface",
-            "Easy access",
-            "Confidentiality"
+            "Operational Effectiveness and Efficiency",
+            "Data Security, Quality and Privacy",
+            "Data Security, Quality and Privacy",
+            "System Deployment and Integration",
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
         ],
         "Sub Groups": [
-            "Operational Effectiveness and Efficiency",
-            "Data integrity",
-            "Precise reports",
-            "Data fusion",
-            "Single interface",
-            "Easy access",
-            "Confidentiality"
+            "Process optimization",
+            "Data Security, Quality and Privacy",
+            "Data Security, Quality and Privacy",
+            "System Deployment and Integration",
+            "System Deployment and Integration",
+            "Data and Information Management",
+            "Data Security, Quality and Privacy"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1855,14 +1855,14 @@
             "Monitoring"
         ],
         "Groups": [
-            "Task ranking",
-            "Strategic fit",
-            "Supervision"
+            "Program and Project Management",
+            "Business Alignment",
+            "System Maintenance and Support"
         ],
         "Sub Groups": [
-            "Program and Project Management",
-            "Strategic fit",
-            "Supervision"
+            "Strategic Project Leadership",
+            "Business Alignment",
+            "System Maintenance and Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1882,14 +1882,14 @@
             "Resource optimization"
         ],
         "Groups": [
-            "Optimal systems",
-            "Data governance",
-            "Best use"
+            "Data and Information Management",
+            "Data and Information Management",
+            "Resource Management and Utilization"
         ],
         "Sub Groups": [
-            "Data and Information Management",
             "Data governance",
-            "Best use"
+            "Data and Information Management",
+            "Resource Management and Utilization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1909,14 +1909,14 @@
             "Data quality"
         ],
         "Groups": [
-            "Protocol compliance",
-            "High standards",
-            "High standards"
+            "System Deployment and Integration",
+            "Operational Effectiveness and Efficiency",
+            "Data and Information Management"
         ],
         "Sub Groups": [
-            "System Deployment and Integration",
-            "High standards",
-            "High standards"
+            "Reliable Implementation",
+            "Operational Effectiveness and Efficiency",
+            "Data and Information Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [

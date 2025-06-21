@@ -44,7 +44,7 @@ Sub UpdateGroup()
                     If matchedSolutions <> "" Then
                         matchedSolutions = matchedSolutions & Chr(10) & tblRow.Range.Cells(1, 4).Value
                     Else
-                        matchedSolutions = tblRow.Range.Cells(1, 3).Value
+                        matchedSolutions = tblRow.Range.Cells(1, 2).Value
                     End If
                 End If
             Next tblRow

@@ -8,15 +8,22 @@
 <body>
   <nav>
   <h1 id="pageHeading">Challenge Technology Can Improve</h1>
+
   <!-- Dropdown list -->
     <div id="list-box">
       <label for="FactorSelect">Select a Challenge:</label>
       <select id="FactorSelect" onchange="updateTable()"></select>
     </div>
   </nav>
+
     <!-- Selection Results Table -->
     <div id="searchToolInfo"></div>
 
+    <!-- Expand & Collapse All buttons -->
+    <div style="margin-top: 20px; text-align: center;">
+      <button onclick="expandAll()">Expand All</button>
+      <button onclick="collapseAll()">Collapse All</button>
+    </div>
 
   <script src="src/Extract.js"></script>
   <script src="src/Wrapper.js"></script>
@@ -35,6 +42,21 @@
     } else {
         element.style.display = "none";
     }
+}
+
+  // Expand & Collapse Buttons
+  function collapseAll() {
+    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subgroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
+    collapsibleSections.forEach(section => {
+      section.style.display = "none";
+    });
+}
+
+  function expandAll() {
+    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subgroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
+    collapsibleSections.forEach(section => {
+      section.style.display = "table-row";
+    });
 }
 
   // Global variable to store the search tool instance

@@ -30,12 +30,12 @@ Sub UpdateSubGroup()
             ' Loop through each row in the table
             For Each tblRow In tbl.ListRows
                 ' Check if the line matches the value in the second column of the table
-                If Trim(line) = Trim(tblRow.Range.Cells(1, 3).Value) Then
+                If Trim(line) = Trim(tblRow.Range.Cells(1, 2).Value) Then
                     ' Append the third column value to the result string
                     If result <> "" Then
-                        result = result & Chr(10) & tblRow.Range.Cells(1, 3).Value
+                        result = result & Chr(10) & tblRow.Range.Cells(1, 2).Value
                     Else
-                        result = tblRow.Range.Cells(1, 2).Value
+                        result = tblRow.Range.Cells(1, 3).Value
                     End If
                     ' Exit the loop after the first match
                     Exit For

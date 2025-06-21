@@ -25,14 +25,13 @@ class Catergory {
     }
   }
 
-
   toTableRow() {
-    const wrapperId = `wrapper_${this.catergory.replace(/\s+/g, '_')}`;
-    const subGroupId = `${wrapperId}_subgroup`;
-    const subCatergoryId = `${wrapperId}_subCatergory`;
-    const extractId = `${wrapperId}_extracts`;
+  const wrapperId = `wrapper_${this.catergory.replace(/\s+/g, '_')}`;
+  const subGroupId = `${wrapperId}_subgroup`;
+  const subCatergoryId = `${wrapperId}_subCatergory`;
+  const extractBlockId = `${wrapperId}_extractBlock`;
 
-    let tableRow = `
+  let tableRow = `
     <tr class="collapsible" onclick="toggleRow('${wrapperId}_details')">
       <th colspan="2" class="conceptHeading">
         <div class="headingLabel">${subGroupName}</div>
@@ -40,7 +39,7 @@ class Catergory {
       </th>
     </tr>
     <tr id="${wrapperId}_details" style="display:none;">
-      <td colspan="2" style="padding-left: 20px;"> <!-- Indent Sub Group -->
+      <td colspan="2" style="padding-left: 20px;">
         <table border="1" width="95%">
 
           <!-- Sub Group Collapsible -->
@@ -51,42 +50,43 @@ class Catergory {
             </th>
           </tr>
           <tr id="${subGroupId}" style="display:none;">
-            <td colspan="2" style="padding-left: 20px;"> <!-- Indent Tech Layer -->
+            <td colspan="2" style="padding-left: 20px;">
               <table border="1" width="90%">
 
                 <!-- Tech Layer Collapsible -->
                 <tr class="collapsible" onclick="toggleRow('${subCatergoryId}')">
                   <th colspan="2" class="subConceptHeading">
-                    <div class="headingLabel">${subCatergoryname}</div>
-                    <div>${this.subCatergoryName}</div>
+                    <div>${subCatergoryname}</div>
                   </th>
                 </tr>
                 <tr id="${subCatergoryId}" style="display:none;">
-                  <td colspan="2" style="padding-left: 20px;"> <!-- Indent Cases -->
-                    <table border="1" width="85%">
-
-                      <!-- Cases Section -->
-                      <tr class="collapsible" onclick="toggleRow('${extractId}')">
-                        <th colspan="2" class="caseHeading">
-                          <div>${extractname}</div>
-                        </th>
+                  <td colspan="2" style="padding-left: 20px;">
+                    <table border="1" width="100%">
+                      <tr>
+                        <td>${this.subCatergoryName}</td>
                       </tr>
-                      <tr id="${extractId}" style="display:none;">
-                        <td colspan="2">
-                          <table border="1" width="100%">`;
+                    </table>
+                  </td>
+                </tr>
 
-    this.extracts.forEach((extractItem, index) => {
-      tableRow += `
-                            <tr>
-                              <td>${index + 1}. ${extractItem.description}</td>
-                            </tr>`;
-    });
+                <!-- Cases Collapsible -->
+                <tr class="collapsible" onclick="toggleRow('${extractBlockId}')">
+                  <th colspan="2" class="caseHeading">
+                    <div>${extractname}</div>
+                  </th>
+                </tr>
+                <tr id="${extractBlockId}" style="display:none;">
+                  <td colspan="2">
+                    <table border="1" width="100%">`;
 
+  this.extracts.forEach((extractItem, index) => {
     tableRow += `
-                          </table>
-                        </td>
-                      </tr>
+                      <tr>
+                        <td>${index + 1}. ${extractItem.description}</td>
+                      </tr>`;
+  });
 
+  tableRow += `
                     </table>
                   </td>
                 </tr>
@@ -99,10 +99,8 @@ class Catergory {
       </td>
     </tr>`;
 
-    return tableRow;
+  return tableRow;
 }
-
-
 
   // To string for Catergory
   toString() {

@@ -4,17 +4,17 @@
         "Extracts": "NSW Health is changing how it does things to meet challenges. They're putting in a big program to fix clinical, corporate, and tech stuff. Getting the right IT tools is key to making sure these changes last. Before, they had a mess of different systems which made things harder and more expensive. Plus, some of their systems are ancient and hard to support",
         "Wrapper": [
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Reporting Systems",
-                "Groups": "Precise reports",
-                "Sub Catergories": "Application",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Business intelligence platforms, dashboard software, data visualization tools.",
                 "Factors": "Accuracy of Reporting"
             },
             {
-                "Sub Groups": "Streamlined processes",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Redundancy Management",
-                "Groups": "Streamlined processes",
-                "Sub Catergories": "Application",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Data deduplication tools, system monitoring, backup and recovery systems.",
                 "Factors": "Duplication"
             }
         ]
@@ -24,10 +24,10 @@
         "Extracts": "Because of all this, it's hard to share patient info and coordinate care properly. Managers struggle to get accurate info on how well the systems are doing. And keeping them running costs a lot of money.",
         "Wrapper": [
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Legacy Systems",
-                "Groups": "Unified platform",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Mainframe environments, older database systems, on-premises servers.",
                 "Factors": "Disparate systems"
             }
         ]
@@ -37,10 +37,10 @@
         "Extracts": "This setup could harm the long-term success of the Clinical Services Redesign and Corporate Shared Services. So, they're reshaping the ICT program to fit these reforms better. They're aiming to connect scattered information and tech and quickly support both clinical and corporate changes.",
         "Wrapper": [
             {
-                "Sub Groups": "Infrastructure and Hardware Management",
+                "Sub Groups": "Sustainable Systems",
                 "Catergories": "Legacy Replacement",
-                "Groups": "Modernization",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Infrastructure and Hardware Management",
+                "Sub Catergories": "Migration tools, modernization frameworks, virtualization software.",
                 "Factors": "Outdated infrastructure"
             }
         ]
@@ -50,24 +50,24 @@
         "Extracts": "Back in 2000, the Integrated Clinical Information Program (ICIP) started based on advice from the NSW Health Council. Its goal is to fix the problems with a clear plan. The idea is to give essential clinical features to all of NSW. They've already made big strides in setting up patient administration, clinical, and corporate systems",
         "Wrapper": [
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "System Silos",
-                "Groups": "Centralized management",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Data integration platforms, cross-department communication tools, centralized repositories.",
                 "Factors": "Fragmentation"
             },
             {
-                "Sub Groups": "Upgrades",
+                "Sub Groups": "System and Technology Improvement",
                 "Catergories": "System Modernization",
-                "Groups": "Upgrades",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Legacy system migration tools, cloud adoption platforms, containerization.",
                 "Factors": "Outdated systems"
             },
             {
-                "Sub Groups": "Standard protocols",
+                "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "System Interoperability",
-                "Groups": "Standard protocols",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Standard protocols (SOAP, REST), API management, messaging queues.",
                 "Factors": "Compatibility"
             }
         ]
@@ -77,38 +77,38 @@
         "Extracts": "Clinical Systems Strategy\nCorporate Systems Strategy\nBusiness Information Strategy\nSustainable Infrastructure Strategy\nWhole of Government ICT Strategic Directions",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Strategic Planning",
-                "Groups": "Strategic fit",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "Performance review",
-                "Catergories": "KPIs and Metrics",
-                "Groups": "Performance review",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Consumer Experience and Support",
+                "Catergories": "KPIs / Metrics",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Performance dashboards, data visualization tools, business intelligence platforms.",
                 "Factors": "Effectiveness"
             },
             {
-                "Sub Groups": "System unification",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Systems Integration",
-                "Groups": "System unification",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "ESB, API gateways, event-driven architectures.",
                 "Factors": "Integration"
             },
             {
-                "Sub Groups": "Green practices",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Sustainability Planning",
-                "Groups": "Green practices",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Environmental monitoring software, sustainability reporting tools, analytics platforms.",
                 "Factors": "Sustainability"
             },
             {
-                "Sub Groups": "Regulatory adherence",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Policy & Regulation",
-                "Groups": "Regulatory adherence",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Compliance management systems, policy repositories, audit tools.",
                 "Factors": "Compliance"
             }
         ]
@@ -118,24 +118,24 @@
         "Extracts": "They're making care safer and better by giving clinicians the info they need and setting up systems for consistent, predictable processes across the state.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Management",
-                "Groups": "User portals",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Database management systems, data lakes, cloud storage solutions.",
                 "Factors": "Access to information"
             },
             {
-                "Sub Groups": "Standard procedures",
+                "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Standards Adherence",
-                "Groups": "Standard procedures",
-                "Sub Catergories": "Application",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Code quality tools, compliance software, audit management systems.",
                 "Factors": "Consistency"
             },
             {
-                "Sub Groups": "Forecasting models",
+                "Sub Groups": "Strategic Planning and Development",
                 "Catergories": "Demand Modeling",
-                "Groups": "Forecasting models",
-                "Sub Catergories": "Business",
+                "Groups": "Strategic Planning and Development",
+                "Sub Catergories": "Simulation software, scenario planning tools, demand management platforms.",
                 "Factors": "Predictability"
             }
         ]
@@ -145,24 +145,24 @@
         "Extracts": "They're improving teamwork among health agencies in NSW, as well as with private companies and nationally, so everyone can work together better. This means info flows more smoothly, helping patients and making things more efficient.",
         "Wrapper": [
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Stakeholder Engagement",
-                "Groups": "Teamwork tools",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "Collaboration"
             },
             {
-                "Sub Groups": "API integration",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Standards-based Integration",
-                "Groups": "API integration",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "API management, middleware platforms, protocol converters.",
                 "Factors": "Interoperability"
             },
             {
-                "Sub Groups": "Data pipelines",
+                "Sub Groups": "Infrastructure and Hardware Management",
                 "Catergories": "Workflow Management",
-                "Groups": "Data pipelines",
-                "Sub Catergories": "Application",
+                "Groups": "Infrastructure and Hardware Management",
+                "Sub Catergories": "Workflow engines, BPM software, task automation platforms.",
                 "Factors": "Information flow"
             }
         ]
@@ -172,38 +172,38 @@
         "Extracts": "They're expecting to save a lot of money by setting up new structures and ways of doing things. By rolling out key programs quickly, they'll spend less on managing projects, and they can piggyback on existing changes to save even more. This also means less disruption for clinicians and patients and less money spent on training.",
         "Wrapper": [
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Lean Architecture",
-                "Groups": "Lean management",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Modular infrastructure, containerization, cloud-native services.",
                 "Factors": "Efficient structures"
             },
             {
-                "Sub Groups": "Project management",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Deployment Planning",
-                "Groups": "Project management",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Project management software, release management tools, configuration management.",
                 "Factors": "System deployment & Integration"
             },
             {
-                "Sub Groups": "Green practices",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Sustainability Planning",
-                "Groups": "Green practices",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Environmental monitoring software, sustainability reporting tools, analytics platforms.",
                 "Factors": "Sustainability"
             },
             {
-                "Sub Groups": "Mitigation strategies",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Risk Mitigation",
-                "Groups": "Mitigation strategies",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Contingency planning software, issue tracking systems, response coordination tools.",
                 "Factors": "Minimizing impact"
             },
             {
-                "Sub Groups": "E-learning",
+                "Sub Groups": "Employee Training and Development",
                 "Catergories": "Training Programs",
-                "Groups": "E-learning",
-                "Sub Catergories": "Application",
+                "Groups": "Employee Training and Development",
+                "Sub Catergories": "LMS, e-learning platforms, training content management.",
                 "Factors": "Streamlined training processes"
             }
         ]
@@ -213,24 +213,24 @@
         "Extracts": "The ICT Strategy is built on three main ideas:\nBetter support for clinicians and patient care.\nAligning with big NSW Health plans.\nSaving a lot of money.\n\nThese ideas guide five key objectives:\nUsing ICT to drive big changes in clinical care.\nCutting down on duplicated admin systems and costs.\nProviding top-notch info to everyone in the organization.\nSetting up a flexible ICT system that supports both clinical and corporate reforms.\nManaging ICT in a smart, coordinated way to get the most out of the investment.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "End-User Support",
-                "Groups": "User training",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Helpdesk software, remote desktop tools, ticketing systems.",
                 "Factors": "Support for users"
             },
             {
-                "Sub Groups": "Goal alignment",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Program Governance",
-                "Groups": "Goal alignment",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Governance platforms, risk management tools, compliance dashboards.",
                 "Factors": "Alignment with initiatives"
             },
             {
-                "Sub Groups": "Expense reduction",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Cost Efficiency",
-                "Groups": "Expense reduction",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Resource management platforms, cost tracking systems, optimization algorithms.",
                 "Factors": "Cost savings"
             }
         ]
@@ -240,31 +240,31 @@
         "Extracts": "ICT Asset Management Strategy\nNSW Health's Enterprise Architecture, which covers:\nClinical Systems Architecture\nCorporate Systems Architecture and Strategy\nBusiness Information Strategy\nInfrastructure Strategy\nIntegration Architecture Strategy\nICT Governance Framework\nICT Portfolio Management and Program of Work\nICT Investment Plan for 2006-2017.",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "IT-Business Alignment",
-                "Groups": "IT strategy",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Balanced scorecards, strategy mapping tools, collaboration platforms.",
                 "Factors": "ICT Alignment"
             },
             {
-                "Sub Groups": "Policy framework",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Program Oversight",
-                "Groups": "Policy framework",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Project tracking software, status reporting tools, issue management platforms.",
                 "Factors": "Governance"
             },
             {
-                "Sub Groups": "Capital allocation",
-                "Catergories": "Capital Planning",
-                "Groups": "Capital allocation",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Financial Management and Budgeting",
+                "Catergories": "Capacity Planning",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Infrastructure monitoring tools, capacity modeling software, cloud resource management.",
                 "Factors": "Investment plans"
             },
             {
-                "Sub Groups": "Market analysis",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Strategic Planning",
-                "Groups": "Market analysis",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Business strategy"
             }
         ]
@@ -274,24 +274,24 @@
         "Extracts": "From the RSP:\nThey've picked out results and services that rely on ICT assets.\nThey've identified risks related to ICT assets that could affect service delivery.\nThey've pinpointed services and measures that hinge on ICT assets working properly.\n\nFrom the NSW Health Corporate Plan:\nThey've considered the overall vision for the community.\nThey've outlined how NSW Health will contribute to this vision.\nThey've focused on strategies to achieve goals, along with potential risks.\nThey've set up ways to measure performance and ensure targets are met.\nThey've looked at the costs involved in reaching the vision and meeting targets.",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "IT-Business Alignment",
-                "Groups": "IT strategy",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Balanced scorecards, strategy mapping tools, collaboration platforms.",
                 "Factors": "ICT Alignment"
             },
             {
-                "Sub Groups": "Risk assessment",
+                "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Risk Management Tools",
-                "Groups": "Risk assessment",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Risk registers, compliance monitoring software, reporting dashboards.",
                 "Factors": "Risk Identification"
             },
             {
-                "Sub Groups": "Contingency planning",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "System Dependencies",
-                "Groups": "Contingency planning",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Configuration management databases, dependency mapping tools, orchestration platforms.",
                 "Factors": "Dependency"
             }
         ]
@@ -301,10 +301,10 @@
         "Extracts": "    Contribution to major service reform agendas and alignment with planned NSW Health priorities and plans.\n    Support for the patient journey across different care settings and improvement of healthcare quality and safety for a large number of people.\n    Ability to enhance efficiency and effectiveness in healthcare delivery and workforce utilization.\n    Adherence to state ICT strategic planning requirements.\n    Potential to generate a positive return on investment.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Budget control",
                 "Catergories": "Project Metrics",
-                "Groups": "Performance metrics",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "KPI dashboards, analytics tools, reporting software.",
                 "Factors": "Evaluation criteria"
             }
         ]
@@ -314,24 +314,24 @@
         "Extracts": "They should only add new projects to their investment plan. When it's time to replace old systems, they can handle it through contracts with vendors.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Equity",
-                "Groups": "Diversity programs",
-                "Sub Catergories": "Business",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Inclusive design frameworks, accessibility technology, multilingual platforms.",
                 "Factors": "Inclusion"
             },
             {
-                "Sub Groups": "System swaps",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "System Upgrade",
-                "Groups": "System swaps",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Patch management tools, deployment automation, testing frameworks.",
                 "Factors": "Replacement"
             },
             {
-                "Sub Groups": "Vendor management",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Vendor Management",
-                "Groups": "Vendor management",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Procurement software, contract management systems, supplier portals.",
                 "Factors": "Procurement"
             }
         ]
@@ -341,31 +341,31 @@
         "Extracts": "By 2011, they plan to have core clinical and corporate systems set up across NSW. This will help patients move through the healthcare system smoothly and ensure efficient management. Implementing the ICT Strategy will bring benefits to patients, clinicians, departments, hospitals, areas, and the whole state.",
         "Wrapper": [
             {
-                "Sub Groups": "Future Planning and System Demand",
+                "Sub Groups": "Futureproofing",
                 "Catergories": "Scheduling",
-                "Groups": "Schedule adherence",
-                "Sub Catergories": "Business",
+                "Groups": "Future Planning and System Demand",
+                "Sub Catergories": "Project management software, calendar integration, workflow automation tools.",
                 "Factors": "Implementation timeline"
             },
             {
-                "Sub Groups": "Rollout plan",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Implementation Planning",
-                "Groups": "Rollout plan",
-                "Sub Catergories": "Application",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Project management software, resource planning tools, risk assessment platforms.",
                 "Factors": "Systems implementation"
             },
             {
-                "Sub Groups": "Customer service",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Service Desk",
-                "Groups": "Customer service",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Ticketing systems, knowledge bases, remote support software.",
                 "Factors": "Support for Consumers"
             },
             {
-                "Sub Groups": "BI systems",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "MIS Systems",
-                "Groups": "BI systems",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Management dashboards, reporting tools, database systems.",
                 "Factors": "Management information"
             }
         ]
@@ -375,24 +375,24 @@
         "Extracts": "For patients and clinicians, the goal is to have a complete picture of the patient's health history. This way, all healthcare providers can work together effectively, knowing each other's roles and contributions. Corporate systems also support this by giving a clear view of employees, making sure care is delivered smoothly",
         "Wrapper": [
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Stakeholder Engagement",
-                "Groups": "Teamwork tools",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "Collaboration"
             },
             {
-                "Sub Groups": "Helpdesk",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Helpdesk / User Services",
-                "Groups": "Helpdesk",
-                "Sub Catergories": "Application",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Ticketing systems, knowledge bases, live chat and call center software.",
                 "Factors": "Consumer support"
             },
             {
-                "Sub Groups": "HR systems",
+                "Sub Groups": "Program and Project Management",
                 "Catergories": "HR Systems",
-                "Groups": "HR systems",
-                "Sub Catergories": "Application",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Payroll systems, employee databases, performance management platforms.",
                 "Factors": "Employee management"
             }
         ]
@@ -402,24 +402,24 @@
         "Extracts": "The strategy benefits patients by ensuring clinicians have all the information they need for optimal care, easily accessible whenever and wherever it's needed. This saves clinicians time by reducing the need to search for information or repeat tests unnecessarily, giving them more time for direct patient care.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Personalization",
-                "Groups": "UX design",
-                "Sub Catergories": "Application",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "User profiling systems, recommendation engines, adaptive UI frameworks.",
                 "Factors": "User optimization"
             },
             {
-                "Sub Groups": "Open data",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Open Access",
-                "Groups": "Open data",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Time tracking",
-                "Catergories": "Automation",
-                "Groups": "Time tracking",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Catergories": "Process Automation",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "RPA tools (UiPath, Automation Anywhere), workflow engines, and scripting frameworks.",
                 "Factors": "Time efficiency"
             }
         ]
@@ -429,24 +429,24 @@
         "Extracts": "Nursing Unit Manager (NUM) can plan patient care better when they know all the demands and resources. This includes patients from the emergency room, post-surgery, and transfers, as well as available beds and staff skills.",
         "Wrapper": [
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Allocation Tools",
-                "Groups": "Asset allocation",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Utilization metrics",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Performance Tuning",
-                "Groups": "Utilization metrics",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Monitoring tools, system optimization software, load balancers.",
                 "Factors": "Capacity optimization"
             },
             {
-                "Sub Groups": "Roadmap creation",
+                "Sub Groups": "Strategic Planning and Development",
                 "Catergories": "Strategic Planning",
-                "Groups": "Roadmap creation",
-                "Sub Catergories": "Business",
+                "Groups": "Strategic Planning and Development",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Planning"
             }
         ]
@@ -456,24 +456,24 @@
         "Extracts": "At hospital, area, and department executive levels, having a complete portfolio lets them look at health outcomes, service demand, resources, performance, and finances all together.",
         "Wrapper": [
             {
-                "Sub Groups": "Compliance and Governance",
-                "Catergories": "Analytics Framework",
-                "Groups": "BI dashboards",
-                "Sub Catergories": "Data",
+                "Sub Groups": "Regulatory adherence",
+                "Catergories": "Analytics Framework Integration",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Data integration platforms, API gateways, centralized data lakes, and analytics engines.",
                 "Factors": "Integrated analysis & System outcome indicators"
             },
             {
-                "Sub Groups": "Inventory tracking",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Workforce / Budget",
-                "Groups": "Inventory tracking",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Resource planning tools, budgeting software, workforce analytics.",
                 "Factors": "Resource availability"
             },
             {
-                "Sub Groups": "Accounting software",
+                "Sub Groups": "Future Planning and System Demand",
                 "Catergories": "Budgeting Systems",
-                "Groups": "Accounting software",
-                "Sub Catergories": "Business",
+                "Groups": "Future Planning and System Demand",
+                "Sub Catergories": "Accounting software, financial databases, and forecasting tools.",
                 "Factors": "Financial management"
             }
         ]
@@ -483,24 +483,24 @@
         "Extracts": "The ICT Strategy focuses on key areas and will address them as resources allow. Other initiatives will only be added if they don't affect these core functions or if there's an urgent need.",
         "Wrapper": [
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Resource Prioritization",
-                "Groups": "Strategic planning",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Decision support tools, portfolio management software, resource planning platforms.",
                 "Factors": "Priority areas & Resource allocation"
             },
             {
-                "Sub Groups": "Budgeting",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Funding Sources",
-                "Groups": "Budgeting",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Financial management systems, grant tracking tools, funding databases.",
                 "Factors": "Funding availability"
             },
             {
-                "Sub Groups": "Crisis management",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Core Services",
-                "Groups": "Crisis management",
-                "Sub Catergories": "Application",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Application servers, service orchestration platforms, API gateways.",
                 "Factors": "Core function delivery & Urgent issue resolution"
             }
         ]
@@ -510,31 +510,31 @@
         "Extracts": "By 2011, clinical departments will have improved systems for workflow, decision-making support, and accessing necessary information. This helps clinicians make better decisions for patients, leading to safer care",
         "Wrapper": [
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Business Process Management",
-                "Groups": "Process optimization",
-                "Sub Catergories": "Application",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "BPM suites (Appian, Pega), workflow automation tools, and process modeling software.",
                 "Factors": "Workflow improvement"
             },
             {
-                "Sub Groups": "AI tools",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Decision Support Systems",
-                "Groups": "AI tools",
-                "Sub Catergories": "Application",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "BI platforms, predictive analytics engines, data visualization tools.",
                 "Factors": "Decision support"
             },
             {
-                "Sub Groups": "Asset allocation",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Allocation Tools",
-                "Groups": "Asset allocation",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Open data",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Open Access",
-                "Groups": "Open data",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             }
         ]
@@ -544,24 +544,24 @@
         "Extracts": "Integrated hospital systems mean information is collected once and available to all, reducing handover issues and improving resource management for smoother patient care.",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Core Platform Integration",
-                "Groups": "Middleware",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Middleware, API management tools, ESB (Enterprise Service Bus), microservices architecture.",
                 "Factors": "Integration of core systems"
             },
             {
-                "Sub Groups": "Open data",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Open Access",
-                "Groups": "Open data",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Asset allocation",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Allocation Tools",
-                "Groups": "Asset allocation",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             }
         ]
@@ -571,38 +571,38 @@
         "Extracts": "The ICT Strategy aims to improve patient care by giving Nursing Unit Managers better information to plan and care for patients, helping hospital executives manage resources and performance, making it easier for departments to access important info and make decisions, integrating key systems across hospitals for smoother patient care, and standardizing information across regions to manage resources and patient transfers more effectively",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Unified Platforms",
-                "Groups": "System merger",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Cloud platforms, integrated application suites, API management.",
                 "Factors": "Integration of systems"
             },
             {
-                "Sub Groups": "Open data",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Open Access",
-                "Groups": "Open data",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Asset allocation",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Allocation Tools",
-                "Groups": "Asset allocation",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Data governance",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Standards",
-                "Groups": "Data governance",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Teamwork tools",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Stakeholder Engagement",
-                "Groups": "Teamwork tools",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "Collaboration"
             }
         ]
@@ -612,31 +612,31 @@
         "Extracts": "Rolling out core systems across NSW will have big benefits. Everyone gains, but it's best when the whole state uses them. Standardized info will help NSW Health meet goals by improving patient care, ensuring timely access to services, and better coordination in the health system. Accurate data will help use resources better and manage future needs.",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Implementation Planning",
-                "Groups": "Rollout plan",
-                "Sub Catergories": "Application",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Project management software, resource planning tools, risk assessment platforms.",
                 "Factors": "Systems implementation"
             },
             {
-                "Sub Groups": "Uniform interfaces",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Universal Access",
-                "Groups": "Uniform interfaces",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Responsive web design, cross-platform frameworks, accessibility tools.",
                 "Factors": "Standardized information access"
             },
             {
-                "Sub Groups": "Efficient usage",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Utilization Metrics",
-                "Groups": "Efficient usage",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Monitoring dashboards, analytics platforms, performance tracking tools.",
                 "Factors": "Resource utilization"
             },
             {
-                "Sub Groups": "Forecasting",
+                "Sub Groups": "Future Planning and System Demand",
                 "Catergories": "Demand Forecasting",
-                "Groups": "Forecasting",
-                "Sub Catergories": "Business",
+                "Groups": "Future Planning and System Demand",
+                "Sub Catergories": "Statistical modeling software, machine learning platforms, time series analysis tools.",
                 "Factors": "Management of future demand"
             }
         ]
@@ -646,24 +646,24 @@
         "Extracts": "A steady increase in demand for services is expected due to an aging population. In NSW, the number of people over 65 is growing quickly. Each year from 2012 to 2028, the percentage of older Australians is projected to rise by over 0.35 points annually, which is about four times the long-term average increase.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Scalability",
-                "Groups": "Scalability",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Cloud infrastructure, load balancers, elastic resource provisioning.",
                 "Factors": "Increased services demand"
             },
             {
-                "Sub Groups": "Operational efficiency",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Service Design",
-                "Groups": "Operational efficiency",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "UX/UI design tools, service blueprinting software, customer journey mapping.",
                 "Factors": "Service delivery"
             },
             {
-                "Sub Groups": "Futureproofing",
+                "Sub Groups": "Future Planning and System Demand",
                 "Catergories": "Future Planning",
-                "Groups": "Futureproofing",
-                "Sub Catergories": "Business",
+                "Groups": "Future Planning and System Demand",
+                "Sub Catergories": "Strategic planning software, scenario analysis tools, business intelligence.",
                 "Factors": "System projections"
             }
         ]
@@ -673,24 +673,24 @@
         "Extracts": "Staff shortages in critical areas such as nursing and medicine Hospitals running at maximum capacity",
         "Wrapper": [
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "Workforce Planning",
-                "Groups": "Recruitment",
-                "Sub Catergories": "Business",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "Forecasting tools, capacity planning software, recruitment systems",
                 "Factors": "Staff shortages"
             },
             {
-                "Sub Groups": "Focus areas",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Priority Services",
-                "Groups": "Focus areas",
-                "Sub Catergories": "Business",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Service catalogues, resource planning tools, demand management software.",
                 "Factors": "Critical areas"
             },
             {
-                "Sub Groups": "Data expansion",
+                "Sub Groups": "System and Technology Improvement",
                 "Catergories": "User Scalability",
-                "Groups": "Data expansion",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Load testing tools, cloud elasticity, session management.",
                 "Factors": "User capacity"
             }
         ]
@@ -700,24 +700,24 @@
         "Extracts": "The rate of chronic diseases like heart disease, lung disease, diabetes, and cancer is rising. Obesity is becoming more common among young people, and our increasingly globalized society raises the risk of pandemics.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Collection",
-                "Groups": "Load balancing",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "ETL tools, data capture applications, IoT sensors, data pipelines.",
                 "Factors": "Increase database"
             },
             {
-                "Sub Groups": "Capacity planning",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Scalability",
-                "Groups": "Capacity planning",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Cloud infrastructure, load balancers, elastic resource provisioning.",
                 "Factors": "Rising system usage"
             },
             {
-                "Sub Groups": "Knowledge base",
-                "Catergories": "Capacity Planning",
-                "Groups": "Knowledge base",
-                "Sub Catergories": "Infrastructure",
+                "Sub Groups": "Infrastructure and Hardware Management",
+                "Catergories": "Business Process Management",
+                "Groups": "Infrastructure and Hardware Management",
+                "Sub Catergories": "BPM platforms (e.g., Appian, Pega), workflow engines, process automation tools.",
                 "Factors": "Future system demand"
             }
         ]
@@ -727,17 +727,17 @@
         "Extracts": "An increasing body of medical knowledge that staff cannot manage and\nuse without advanced IT systems",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "KM Systems",
-                "Groups": "Technological innovation",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Knowledge bases, document management, collaboration software.",
                 "Factors": "Knowledge management"
             },
             {
-                "Sub Groups": "Cost-benefit analysis",
+                "Sub Groups": "System and Technology Improvement",
                 "Catergories": "Digital Modernization",
-                "Groups": "Cost-benefit analysis",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Cloud migration tools, microservices, container orchestration, legacy system refactoring.",
                 "Factors": "IT system advancement"
             }
         ]
@@ -747,17 +747,17 @@
         "Extracts": "Health services are increasingly challenged by more expensive medical technologies and pharmaceuticals",
         "Wrapper": [
             {
-                "Sub Groups": "Future Planning and System Demand",
+                "Sub Groups": "Futureproofing",
                 "Catergories": "Cost Analysis",
-                "Groups": "Cost control",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Future Planning and System Demand",
+                "Sub Catergories": "Financial analytics software, cost modeling tools, procurement databases.",
                 "Factors": "Expensive technologies"
             },
             {
-                "Sub Groups": "Education",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Procurement Strategy",
-                "Groups": "Education",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Vendor management systems, procurement software, contract management tools.",
                 "Factors": "Costly materials"
             }
         ]
@@ -767,24 +767,24 @@
         "Extracts": "Consumers are becoming more informed, have higher expectations and more complex problems",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Health Literacy Tools",
-                "Groups": "Customer satisfaction",
-                "Sub Catergories": "Application",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Patient education portals, multimedia content delivery systems, accessibility software.",
                 "Factors": "Informed consumers"
             },
             {
-                "Sub Groups": "Problem-solving",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Stakeholder Engagement",
-                "Groups": "Problem-solving",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "High expectations"
             },
             {
-                "Sub Groups": "Compliance audits",
-                "Catergories": "Case Management Systems",
-                "Groups": "Compliance audits",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Catergories": "Care Coordination Systems",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Patient management systems, health information exchanges, secure messaging platforms.",
                 "Factors": "Complex needs problems"
             }
         ]
@@ -794,24 +794,24 @@
         "Extracts": "Quality and safety standards are being challenged as demand increases and staff numbers decrease. For instance, from 2000 to 2005, NSW hospitals had an average occupancy of 93%. Some metropolitan hospitals had surgical and medical wards with 95-98% occupancy, while 85% is considered a much safer level.",
         "Wrapper": [
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Compliance Framework",
-                "Groups": "Load testing",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Governance platforms, risk management tools, regulatory reporting systems.",
                 "Factors": "Quality & Safety standards"
             },
             {
-                "Sub Groups": "Occupational safety",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "System Scalability",
-                "Groups": "Occupational safety",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Cloud auto-scaling, load balancing, distributed databases.",
                 "Factors": "High user rates"
             },
             {
-                "Sub Groups": "SOPs",
+                "Sub Groups": "System and Technology Improvement",
                 "Catergories": "Occupational Safety",
-                "Groups": "SOPs",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Safety monitoring systems, compliance software, incident reporting tools.",
                 "Factors": "Safe working capacity"
             }
         ]
@@ -821,31 +821,31 @@
         "Extracts": "The key factors that cause these adverse events are:\n_x0001_ Communication\n_x0001_ Policies and procedures\n_x0001_ Knowledge, skills and competence issues\n_x0001_ Work scheduling",
         "Wrapper": [
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "Communication Tools",
-                "Groups": "Collaboration tools",
-                "Sub Catergories": "Application",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Unified communications systems, VoIP, video conferencing platforms.",
                 "Factors": "Communication"
             },
             {
-                "Sub Groups": "Training programs",
+                "Sub Groups": "Strategic Planning and Development",
                 "Catergories": "Governance",
-                "Groups": "Training programs",
-                "Sub Catergories": "Business",
+                "Groups": "Strategic Planning and Development",
+                "Sub Catergories": "Policy management systems, compliance tracking, audit management tools.",
                 "Factors": "Policies & Procedures"
             },
             {
-                "Sub Groups": "Roster management",
+                "Sub Groups": "Employee Training and Development",
                 "Catergories": "Workforce Development",
-                "Groups": "Roster management",
-                "Sub Catergories": "Business",
+                "Groups": "Employee Training and Development",
+                "Sub Catergories": "LMS, career planning software, skills tracking platforms.",
                 "Factors": "Skills and competence"
             },
             {
-                "Sub Groups": "System investment",
+                "Sub Groups": "Program and Project Management",
                 "Catergories": "Scheduling Tools",
-                "Groups": "System investment",
-                "Sub Catergories": "Application",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Workforce scheduling software, task management systems, resource planners.",
                 "Factors": "Work scheduling"
             }
         ]
@@ -855,17 +855,17 @@
         "Extracts": "Clinical ICT is becoming an increasingly important enabler of health\nsystem reform, yet the core systems to underpin reform are not\ncurrently in place.",
         "Wrapper": [
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "System Deficit",
-                "Groups": "Overhaul",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Gap analysis tools, system health monitoring, modernization frameworks.",
                 "Factors": "Lack of core ICT systems"
             },
             {
-                "Sub Groups": "Budget reallocation",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Modernization Strategy",
-                "Groups": "Budget reallocation",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Cloud adoption frameworks, microservices, DevOps toolchains.",
                 "Factors": "System reform"
             }
         ]
@@ -875,24 +875,24 @@
         "Extracts": "Constraints in capital and recurrent funding, skilled project\nmanagement and implementation resources and capacity of the health\nsystems to accommodate large scale change all restrict the potential\nspeed of implementation of core systems.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Budget Constraints",
-                "Groups": "PMP certification",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Customer service",
+                "Catergories": "Budget Constraint Handling",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Financial planning software, cost tracking systems, and resource allocation platforms.",
                 "Factors": "Constraints in funding"
             },
             {
-                "Sub Groups": "Change management",
+                "Sub Groups": "Program and Project Management",
                 "Catergories": "Project Capability",
-                "Groups": "Change management",
-                "Sub Catergories": "Business",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Project management software, resource planning tools, collaboration platforms.",
                 "Factors": "Skilled project management"
             },
             {
-                "Sub Groups": "Prioritization",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Change Readiness",
-                "Groups": "Prioritization",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Readiness assessment tools, survey platforms, stakeholder engagement systems.",
                 "Factors": "Capacity for large-scale change"
             }
         ]
@@ -902,24 +902,24 @@
         "Extracts": "There are many competing demands for ICT funds. Deciding which projects to prioritize and schedule is complex and needs ongoing review to ensure funds are allocated where they will be most beneficial.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
-                "Catergories": "Budget Management",
-                "Groups": "Value assessment",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Customer service",
+                "Catergories": "Budget Allocation Strategies",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "ERP systems, budgeting modules, and portfolio management software.",
                 "Factors": "Competing demands for ICT funds"
             },
             {
-                "Sub Groups": "Gantt charts",
+                "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Prioritization Matrix",
-                "Groups": "Gantt charts",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Decision support software, scoring tools, resource management platforms.",
                 "Factors": "Priority determination"
             },
             {
-                "Sub Groups": "Problem clustering",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Project Management",
-                "Groups": "Problem clustering",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Scheduling tools, collaboration platforms, resource allocation software.",
                 "Factors": "Project scheduling complexity"
             }
         ]
@@ -929,24 +929,24 @@
         "Extracts": "NSW Health needs to change how it delivers services to meet these challenges. They've started a big reform program and need the right IT solutions to support staff and make these changes last",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Integrated Service Design",
-                "Groups": "Risk mitigation",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Service design software, cross-system integration platforms, user journey mapping tools.",
                 "Factors": "Convergence of issues"
             },
             {
-                "Sub Groups": "Transformation",
+                "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Risk Register",
-                "Groups": "Transformation",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Risk repository systems, mitigation tracking platforms, compliance dashboards.",
                 "Factors": "Significant risk environment"
             },
             {
-                "Sub Groups": "Talent acquisition",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Service Innovation",
-                "Groups": "Talent acquisition",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Idea management platforms, R&D tracking software, prototyping tools.",
                 "Factors": "Need for service delivery change"
             }
         ]
@@ -956,31 +956,31 @@
         "Extracts": "NSW Health is responding to big challenges like more people needing healthcare and not enough staff. They're looking at what the government wants, like improving mental health and using better technology. That helps them decide what to do next and where to spend money.",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Service Planning",
-                "Groups": "Policy alignment",
-                "Sub Catergories": "Business",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Capacity planning software, demand forecasting tools, strategic planning platforms.",
                 "Factors": "Demand for services"
             },
             {
-                "Sub Groups": "Talent acquisition",
+                "Sub Groups": "System Maintenance and Support",
                 "Catergories": "Business Process Management",
-                "Groups": "Talent acquisition",
+                "Groups": "System Maintenance and Support",
                 "Sub Catergories": "Application",
                 "Factors": "Workforce shortages"
             },
             {
-                "Sub Groups": "Policy alignment",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Policy Objectives",
-                "Groups": "Policy alignment",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Strategic planning tools, balanced scorecards, performance management software.",
                 "Factors": "Government priorities"
             },
             {
-                "Sub Groups": "IT roadmaps",
+                "Sub Groups": "Implementation Challenges and Delays",
                 "Catergories": "Implementation Roadmap",
-                "Groups": "IT roadmaps",
-                "Sub Catergories": "Business",
+                "Groups": "Implementation Challenges and Delays",
+                "Sub Catergories": "Timeline tools, milestone tracking software, dependency mapping tools.",
                 "Factors": "ICT strategies"
             }
         ]
@@ -990,31 +990,31 @@
         "Extracts": "The Results and Services Plan guides everything in NSW Health. There are other plans helping out too. The ICT Strategic Plan is one of them, making sure it works well with the main plan. They also look at what the whole government and the country are doing.",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Results-Based Planning",
-                "Groups": "Goal alignment",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Performance management software, strategic planning tools, reporting dashboards.",
                 "Factors": "Alignment with Results and Services Plan"
             },
             {
-                "Sub Groups": "Strategic backing",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Strategic Support",
-                "Groups": "Strategic backing",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Collaboration platforms, project management tools, communication systems.",
                 "Factors": "Support for strategic programs"
             },
             {
-                "Sub Groups": "Change alignment",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Change Management",
-                "Groups": "Change alignment",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Collaboration tools, training portals, feedback and adoption tracking systems.",
                 "Factors": "Alignment with reform programs"
             },
             {
-                "Sub Groups": "Holistic approach",
+                "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Policy Alignment",
-                "Groups": "Holistic approach",
-                "Sub Catergories": "Business",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Strategy mapping software, governance frameworks, collaboration platforms.",
                 "Factors": "Consideration of whole-of-government strategies"
             }
         ]
@@ -1024,52 +1024,52 @@
         "Extracts": "The RSP is NSW Health's main plan to tackle challenges. They have four main goals:\nKeep people healthy\nProvide needed healthcare\nDeliver top-quality services\nManage health services well\n\nTo achieve these, they focus on seven key directions:\nGet everyone involved in prevention\nImprove people's healthcare experiences\nStrengthen community care\nWork with others for better health\nMake wise choices about healthcare costs\nBuild a strong healthcare workforce\nStay prepared for new challenges and chances",
         "Wrapper": [
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Early Intervention Tools",
-                "Groups": "Proactive measures",
-                "Sub Catergories": "Application",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Predictive analytics, alerting systems, patient monitoring platforms.",
                 "Factors": "Preventative solutions"
             },
             {
-                "Sub Groups": "UX design",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "UX Design",
-                "Groups": "UX design",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Prototyping tools, user testing platforms, accessibility compliance software.",
                 "Factors": "User experience"
             },
             {
-                "Sub Groups": "Long-term planning",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Forecasting",
-                "Groups": "Long-term planning",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Predictive analytics, trend analysis tools, scenario modeling platforms.",
                 "Factors": "Future benefits"
             },
             {
-                "Sub Groups": "Stakeholder engagement",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Stakeholder Engagement",
-                "Groups": "Stakeholder engagement",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "Strengthening relationships"
             },
             {
-                "Sub Groups": "Expense management",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Service Costing",
-                "Groups": "Expense management",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Cost tracking software, financial planning tools, billing systems.",
                 "Factors": "Costs of services"
             },
             {
-                "Sub Groups": "HR planning",
+                "Sub Groups": "System Maintenance and Support",
                 "Catergories": "HR Strategy",
-                "Groups": "HR planning",
-                "Sub Catergories": "Business",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "Workforce planning tools, talent management software, analytics dashboards.",
                 "Factors": "Sustainable Workforce"
             },
             {
-                "Sub Groups": "Risk forecasting",
+                "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Risk Assessment",
-                "Groups": "Risk forecasting",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Risk scoring tools, audit management software, compliance tracking systems.",
                 "Factors": "New risk potential"
             }
         ]
@@ -1079,24 +1079,24 @@
         "Extracts": "NSW Health wants to prevent sickness and promote good health habits. They're focusing on getting more people vaccinated and helping those at risk for diseases like diabetes. ICT can help by sending alerts about things like missed vaccinations or overdue check-ups",
         "Wrapper": [
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Risk Mitigation",
-                "Groups": "Preventive measures",
-                "Sub Catergories": "Application",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Contingency planning software, issue tracking systems, response coordination tools.",
                 "Factors": "Reducing risk factors"
             },
             {
-                "Sub Groups": "Customer care",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Risk Management",
-                "Groups": "Customer care",
-                "Sub Catergories": "Application",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Incident tracking software, mitigation planning tools, policy enforcement platforms.",
                 "Factors": "Preventing consumer issues"
             },
             {
-                "Sub Groups": "Targeted support",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Predictive Analytics",
-                "Groups": "Targeted support",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Machine learning platforms, data mining tools, statistical software.",
                 "Factors": "Interventions for high-risk consumers"
             }
         ]
@@ -1106,59 +1106,59 @@
         "Extracts": "NSW Health wants to make sure everyone gets the care they need, when they need it. They're using tech to support new ways of caring for people and making sure changes stick. Better info during your care journey means a better experience and getting the right care.",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Service Availability",
-                "Groups": "Service uptime",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Monitoring systems, failover infrastructure, SLA tracking software.",
                 "Factors": "Availability of services"
             },
             {
-                "Sub Groups": "Performance metrics",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Service Evaluation",
-                "Groups": "Performance metrics",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Survey tools, analytics platforms, performance dashboards.",
                 "Factors": "Effectiveness of services"
             },
             {
-                "Sub Groups": "Integrated care",
-                "Catergories": "Care Coordination Systems",
-                "Groups": "Integrated care",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Collaboration and Communication",
+                "Catergories": "Capital Planning",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Financial planning software, ERP systems, investment portfolio management tools.",
                 "Factors": "Coordination of care"
             },
             {
-                "Sub Groups": "Innovative healthcare",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Model of Care",
-                "Groups": "Innovative healthcare",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Clinical management software, patient engagement platforms, analytics tools.",
                 "Factors": "Supporting new care models"
             },
             {
-                "Sub Groups": "Continuous improvement",
-                "Catergories": "Long-Term Planning",
-                "Groups": "Continuous improvement",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Policy and Organizational Reform",
+                "Catergories": "Long-term Planning",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Strategic planning software, forecasting models, scenario analysis tools.",
                 "Factors": "Sustainability of reform"
             },
             {
-                "Sub Groups": "Data mapping",
+                "Sub Groups": "Infrastructure and Hardware Management",
                 "Catergories": "Journey Mapping",
-                "Groups": "Data mapping",
-                "Sub Catergories": "Application",
+                "Groups": "Infrastructure and Hardware Management",
+                "Sub Catergories": "Customer experience software, analytics platforms, visualization tools.",
                 "Factors": "Information flow along consumer journey"
             },
             {
-                "Sub Groups": "UX enhancement",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "UX Design",
-                "Groups": "UX enhancement",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Prototyping tools, user testing platforms, accessibility compliance software.",
                 "Factors": "Consumer experience improvement"
             },
             {
-                "Sub Groups": "Tailored services",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Service Design",
-                "Groups": "Tailored services",
-                "Sub Catergories": "Application",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "UX/UI design tools, service blueprinting software, customer journey mapping.",
                 "Factors": "Appropriate consumer delivery"
             }
         ]
@@ -1168,38 +1168,38 @@
         "Extracts": "NSW Health aims to improve healthcare by working better together. They're using tech to help everyone collaborate and use resources wisely. That means better tools for healthcare workers and making sure everyone gets great care.",
         "Wrapper": [
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Process Optimization",
-                "Groups": "Process simplification",
-                "Sub Catergories": "Application",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Workflow engines, automation platforms, process mining tools.",
                 "Factors": "Complexity and duplication in service delivery"
             },
             {
-                "Sub Groups": "Teamwork enhancement",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Collaboration Tools",
-                "Groups": "Teamwork enhancement",
-                "Sub Catergories": "Application",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Team communication apps (e.g., Teams, Slack), document sharing platforms, virtual meeting tech.",
                 "Factors": "Need for improved collaboration"
             },
             {
-                "Sub Groups": "Integrated systems",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Workflow Systems",
-                "Groups": "Integrated systems",
-                "Sub Catergories": "Application",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Business process automation tools, collaboration platforms, monitoring software.",
                 "Factors": "Enhancement of coordination"
             },
             {
-                "Sub Groups": "Quality assurance",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Continuous Improvement",
-                "Groups": "Quality assurance",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Performance monitoring tools, quality management software, analytics platforms.",
                 "Factors": "Quality and safety improvement"
             },
             {
-                "Sub Groups": "Optimal allocation",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Resource Optimization",
-                "Groups": "Optimal allocation",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Automation tools, analytics platforms, load balancing systems.",
                 "Factors": "Appropriate resource utilization"
             }
         ]
@@ -1209,17 +1209,17 @@
         "Extracts": "The NSW Government's IT setup influences NSW Health's ICT plan. They aim to make sure NSW initiatives match up with and sometimes even help shape national and statewide plans",
         "Wrapper": [
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Risk and Opportunity Analysis",
-                "Groups": "SWOT analysis",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Risk management platforms, SWOT analysis tools, scenario planning software.",
                 "Factors": "Constraints and opportunities"
             },
             {
-                "Sub Groups": "Policy coherence",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Policy Compliance",
-                "Groups": "Policy coherence",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Automated compliance monitoring, reporting systems, risk assessment tools.",
                 "Factors": "Alignment with national initiatives"
             }
         ]
@@ -1229,17 +1229,17 @@
         "Extracts": "The NSW Government is changing how they use computers and stuff. They want to save money on the boring tech stuff while keeping important services running smoothly. They're spending more on technology for important services and finding ways to save money with computers. This means using one fund for all tech needs, having a plan for the whole state, using fewer computer programs, sharing tech, and buying things together.",
         "Wrapper": [
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "Innovation Strategy",
-                "Groups": "Tech trends",
-                "Sub Catergories": "Business",
+                "Groups": "System and Technology Improvement",
+                "Sub Catergories": "Idea management platforms, R&D tracking software, technology scouting tools.",
                 "Factors": "New directions for IT"
             },
             {
-                "Sub Groups": "Leadership vision",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Strategic Goals",
-                "Groups": "Leadership vision",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Goal-setting software, KPI tracking tools, executive dashboards.",
                 "Factors": "Primary goals of Executive Council"
             }
         ]
@@ -1249,38 +1249,38 @@
         "Extracts": "COAG is a group working on important national stuff like mental health, healthcare workers, flu plans, and electronic health records. They're making big plans for healthcare, like making hospitals better and helping people stay healthy. This ICT plan is part of making those plans work by improving healthcare in hospitals and communities",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Customer service",
                 "Catergories": "Policy Objectives",
-                "Groups": "Policy alignment",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Strategic planning tools, balanced scorecards, performance management software.",
                 "Factors": "Government priorities"
             },
             {
-                "Sub Groups": "Change strategy",
+                "Sub Groups": "Policy and Organizational Reform",
                 "Catergories": "Change Strategy",
-                "Groups": "Change strategy",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Strategic planning software, roadmapping tools, business intelligence dashboards.",
                 "Factors": "Reform agenda"
             },
             {
-                "Sub Groups": "Organizational change",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Change Initiatives",
-                "Groups": "Organizational change",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Change management software, communication platforms, project tracking tools.",
                 "Factors": "Business reform"
             },
             {
-                "Sub Groups": "Inclusive services",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Inclusive Design",
-                "Groups": "Inclusive services",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "User research platforms, accessibility testing tools, UI/UX design software.",
                 "Factors": "Improvements to Indigenous consumers"
             },
             {
-                "Sub Groups": "Early intervention",
+                "Sub Groups": "Strategic Planning and Development",
                 "Catergories": "Preventive Care Systems",
-                "Groups": "Early intervention",
-                "Sub Catergories": "Application",
+                "Groups": "Strategic Planning and Development",
+                "Sub Catergories": "Health monitoring devices, alerting platforms, patient engagement software.",
                 "Factors": "Preventative services"
             }
         ]
@@ -1290,31 +1290,31 @@
         "Extracts": "The eHealth initiative involves all states, territories, and the Australian Government. It began in 2000 to set up e-health across Australia. The Australian Government has invested $128 million in e-health projects across the country, plus an extra $10 million in 2005 for managed health network grants. The aim is to make sure everyone works together, with consistent approaches to eHealth, creating a national health information network. The program also helps make the right rules for eHealth initiatives.",
         "Wrapper": [
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Interagency Cooperation",
-                "Groups": "Cross-border teamwork",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Secure collaboration platforms, data sharing agreements, federation technologies.",
                 "Factors": "Collaboration across jurisdictions"
             },
             {
-                "Sub Groups": "Uniform methods",
+                "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "System Architecture",
-                "Groups": "Uniform methods",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Cloud platforms, microservices, network topology management.",
                 "Factors": "Consistency in systems approaches"
             },
             {
-                "Sub Groups": "Centralized data",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "National Infrastructure",
-                "Groups": "Centralized data",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Wide area networks, government cloud services, shared service platforms.",
                 "Factors": "National information network"
             },
             {
-                "Sub Groups": "Legal compliance",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Policy Environment",
-                "Groups": "Legal compliance",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Regulatory databases, legislative tracking tools, risk management platforms.",
                 "Factors": "Regulatory frameworks"
             }
         ]
@@ -1324,66 +1324,66 @@
         "Extracts": "focuses on developing national health information management and communication technology standards. Its work includes creating frameworks for interoperability, standardizing clinical communications, establishing unique healthcare identifiers, and preparing standards for individual electronic health records, identity management, secure messaging, and supply chain management.",
         "Wrapper": [
             {
-                "Sub Groups": "Implementation Challenges and Delays",
+                "Sub Groups": "Resilient Execution",
                 "Catergories": "Compliance and Standards",
-                "Groups": "Protocol adherence",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Implementation Challenges and Delays",
+                "Sub Catergories": "Policy management systems, audit tools, compliance tracking software.",
                 "Factors": "ICT standards"
             },
             {
-                "Sub Groups": "IT blueprint",
+                "Sub Groups": "Implementation Challenges and Delays",
                 "Catergories": "Long-term Planning",
-                "Groups": "IT blueprint",
-                "Sub Catergories": "Business",
+                "Groups": "Implementation Challenges and Delays",
+                "Sub Catergories": "Strategic planning software, forecasting models, scenario analysis tools.",
                 "Factors": "ICT strategic plan"
             },
             {
-                "Sub Groups": "API integration",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Standards-based Integration",
-                "Groups": "API integration",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "API management, middleware platforms, protocol converters.",
                 "Factors": "Interoperability"
             },
             {
-                "Sub Groups": "Data governance",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Standards",
-                "Groups": "Data governance",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Identity codes",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Identity Management",
-                "Groups": "Identity codes",
-                "Sub Catergories": "Data",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Unique identifier systems, authentication protocols, identity federation services.",
                 "Factors": "Unique Identifiers"
             },
             {
-                "Sub Groups": "Personal data",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Digital Health Records",
-                "Groups": "Personal data",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "EHR/EMR platforms, secure cloud hosting, compliance with health data regulations (HIPAA, etc.).",
                 "Factors": "Individual Electronic Record"
             },
             {
-                "Sub Groups": "Security protocols",
+                "Sub Groups": "Implementation Challenges and Delays",
                 "Catergories": "IAM",
-                "Groups": "Security protocols",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Implementation Challenges and Delays",
+                "Sub Catergories": "Identity providers, Single Sign-On (SSO), multi-factor authentication, directory services.",
                 "Factors": "Identity management standards"
             },
             {
-                "Sub Groups": "Encrypted communication",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Encrypted Communication",
-                "Groups": "Encrypted communication",
-                "Sub Catergories": "Application",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "End-to-end encryption protocols, secure messaging platforms, PKI infrastructure.",
                 "Factors": "Secure messaging"
             },
             {
-                "Sub Groups": "Logistics control",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Logistics Systems",
-                "Groups": "Logistics control",
-                "Sub Catergories": "Application",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Supply chain management software, inventory tracking, transportation management.",
                 "Factors": "Supply chain management"
             }
         ]
@@ -1393,24 +1393,24 @@
         "Extracts": "To tackle challenges and prepare for the future, NSW Health is changing how it delivers services. Implementing IT solutions to support staff and integrate business processes is key for sustainable service delivery changes.",
         "Wrapper": [
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Organizational Change",
-                "Groups": "Business transformation",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Change management platforms, communication tools, training software.",
                 "Factors": "Corporate reform program"
             },
             {
-                "Sub Groups": "IT overhaul",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Transformation Planning",
-                "Groups": "IT overhaul",
-                "Sub Catergories": "Business",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Change management platforms, roadmap software, communication tools.",
                 "Factors": "ICT reform program"
             },
             {
-                "Sub Groups": "Tech deployment",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Rollout Process",
-                "Groups": "Tech deployment",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Deployment automation tools, change management software, communication platforms.",
                 "Factors": "Implementation of IT solutions"
             }
         ]
@@ -1420,31 +1420,31 @@
         "Extracts": "NEHTA makes sure health info works the same way everywhere in Australia. They're working on stuff like making sure doctors' notes and patient info look the same everywhere. They're also setting up a single ID for healthcare and getting ready for a national health record system. Plus, they're making sure the stuff doctors send each other is safe, and helping with buying healthcare stuff",
         "Wrapper": [
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "ICT Strategic Planning",
-                "Groups": "IT planning",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, stakeholder collaboration platforms.",
                 "Factors": "Development of ICT strategy"
             },
             {
-                "Sub Groups": "Capital focus",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Priority Setting",
-                "Groups": "Capital focus",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Strategic planning tools, stakeholder engagement software, analytics platforms.",
                 "Factors": "Investment priorities"
             },
             {
-                "Sub Groups": "Financial planning",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Financial Planning",
-                "Groups": "Financial planning",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Budgeting software, forecasting models, financial dashboards.",
                 "Factors": "Budget negotiation"
             },
             {
-                "Sub Groups": "Execution",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Execution Management",
-                "Groups": "Execution",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Project tracking software, status dashboards, resource allocation tools.",
                 "Factors": "Program delivery"
             }
         ]
@@ -1454,45 +1454,45 @@
         "Extracts": "Health Support Services sets up and maintains key computer systems for healthcare. They give specific IT help to Area Health Services as defined by the law. This includes managing computers, software, and helping with setting up systems.",
         "Wrapper": [
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Operational Support",
-                "Groups": "Service scope",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Service management tools, helpdesk platforms, infrastructure monitoring.",
                 "Factors": "Responsibilities of Support Services"
             },
             {
-                "Sub Groups": "System rollout",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Deployment",
-                "Groups": "System rollout",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "CI/CD pipelines, containerization (Docker), infrastructure as code (Terraform).",
                 "Factors": "Implementation of system"
             },
             {
-                "Sub Groups": "Upkeep",
+                "Sub Groups": "System Maintenance and Support",
                 "Catergories": "System Operations",
-                "Groups": "Upkeep",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "IT service management platforms, automation tools, incident response systems.",
                 "Factors": "Maintenance of systems"
             },
             {
-                "Sub Groups": "Customer service",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Service Desk",
-                "Groups": "Customer service",
-                "Sub Catergories": "Application",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Ticketing systems, knowledge bases, remote support software.",
                 "Factors": "Support for Consumers"
             },
             {
-                "Sub Groups": "Device control",
-                "Catergories": "Asset Management",
-                "Groups": "Device control",
-                "Sub Catergories": "Infrastructure",
+                "Sub Groups": "Business Alignment",
+                "Catergories": "IT Asset Management",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Inventory management systems, hardware monitoring tools, and configuration management databases.",
                 "Factors": "Hardware management"
             },
             {
-                "Sub Groups": "Application administration",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Version Control",
-                "Groups": "Application administration",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Git, SVN, repository hosting platforms like GitHub, GitLab.",
                 "Factors": "Software management"
             }
         ]
@@ -1502,38 +1502,38 @@
         "Extracts": "Area Health Services are responsible for the management of local\nimplementations, change management and training of staff and benefits\nrealisation.",
         "Wrapper": [
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Service Charter",
-                "Groups": "Service tasks",
-                "Sub Catergories": "Business",
+                "Groups": "Policy and Organizational Reform",
+                "Sub Catergories": "Policy management platforms, communication portals, service level documentation.",
                 "Factors": "Responsibilities of Services"
             },
             {
-                "Sub Groups": "Regional rollout",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Site-Specific Rollouts",
-                "Groups": "Regional rollout",
-                "Sub Catergories": "Business",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Project management tools, localized deployment platforms, communication systems.",
                 "Factors": "Local implementations"
             },
             {
-                "Sub Groups": "Transition planning",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Transition Planning",
-                "Groups": "Transition planning",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Project scheduling, resource allocation software, stakeholder engagement platforms.",
                 "Factors": "Change management"
             },
             {
-                "Sub Groups": "Employee development",
+                "Sub Groups": "Employee Training and Development",
                 "Catergories": "Professional Development",
-                "Groups": "Employee development",
-                "Sub Catergories": "Business",
+                "Groups": "Employee Training and Development",
+                "Sub Catergories": "Learning management systems, training tracking software, e-learning platforms.",
                 "Factors": "Staff training"
             },
             {
-                "Sub Groups": "Outcome tracking",
-                "Catergories": "Benefits Management",
-                "Groups": "Outcome tracking",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Resource Management and Utilization",
+                "Catergories": "Benefits Management Framework",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Performance tracking software, KPI dashboards, and financial modeling tools.",
                 "Factors": "Benefits realization"
             }
         ]
@@ -1543,38 +1543,38 @@
         "Extracts": "They pick the most important projects and invest wisely for the health system. We work together on ICT stuff and have clear rules. This helps us decide what to build and how to run things",
         "Wrapper": [
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Portfolio Management",
-                "Groups": "Strategic focus",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Project portfolio management (PPM) tools, resource allocation software.",
                 "Factors": "Prioritization of programs and projects"
             },
             {
-                "Sub Groups": "ROI analysis",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "ROI Analysis",
-                "Groups": "ROI analysis",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "Financial modeling tools, business case software, investment tracking systems.",
                 "Factors": "Sound investment decisions"
             },
             {
-                "Sub Groups": "Value creation",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Organizational Value",
-                "Groups": "Value creation",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Performance measurement systems, value tracking tools, business intelligence.",
                 "Factors": "Benefit to the organization"
             },
             {
-                "Sub Groups": "Standardization",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Process Standardization",
-                "Groups": "Standardization",
-                "Sub Catergories": "Application",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "SOP management software, compliance tools, training platforms.",
                 "Factors": "Common processes across ICT"
             },
             {
-                "Sub Groups": "Team structure",
+                "Sub Groups": "Collaboration and Communication",
                 "Catergories": "Governance Structure",
-                "Groups": "Team structure",
-                "Sub Catergories": "Business",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Organizational chart software, collaboration platforms, communication channels.",
                 "Factors": "Collaborative framework"
             }
         ]
@@ -1584,31 +1584,31 @@
         "Extracts": "NSW Health uses a coordinated approach to manage ICT projects. This helps us evaluate, prioritize, select, and monitor programs and projects. We adjust as needed to meet our business goals.",
         "Wrapper": [
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Budget control",
                 "Catergories": "Project Metrics",
-                "Groups": "Performance metrics",
-                "Sub Catergories": "Business",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "KPI dashboards, analytics tools, reporting software.",
                 "Factors": "Evaluation criteria"
             },
             {
-                "Sub Groups": "Task ranking",
+                "Sub Groups": "Program and Project Management",
                 "Catergories": "Decision Framework",
-                "Groups": "Task ranking",
-                "Sub Catergories": "Business",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Decision modeling tools, rule engines, workflow automation.",
                 "Factors": "Prioritization"
             },
             {
-                "Sub Groups": "Supervision",
+                "Sub Groups": "System Maintenance and Support",
                 "Catergories": "System Monitoring",
-                "Groups": "Supervision",
-                "Sub Catergories": "Application",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "Monitoring dashboards, alerting systems, log management tools.",
                 "Factors": "Monitoring"
             },
             {
-                "Sub Groups": "Goal fulfillment",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Strategic Alignment",
-                "Groups": "Goal fulfillment",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Balanced scorecards, strategy mapping tools, performance management platforms.",
                 "Factors": "Achieving business priorities"
             }
         ]
@@ -1618,17 +1618,17 @@
         "Extracts": "They have set ways of doing things that support our ICT plan. These cover every step of a project's life.",
         "Wrapper": [
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "ITIL / SOPs",
-                "Groups": "Uniform methods",
-                "Sub Catergories": "Business",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Process documentation tools, service management platforms, compliance tracking.",
                 "Factors": "Standardizing processes across ICT"
             },
             {
-                "Sub Groups": "Best practices",
-                "Catergories": "Best Practices",
-                "Groups": "Best practices",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Business Alignment",
+                "Catergories": "Best Practice Implementation",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Compliance management systems, policy enforcement software, and audit trail logging.",
                 "Factors": "Guidelines application"
             }
         ]
@@ -1638,24 +1638,24 @@
         "Extracts": "To make the strategy work, NSW Health collaborates with the Department of Health, Area Health Services, Health Technology, and third-party providers, using shared decision-making processes and building core applications at the state level",
         "Wrapper": [
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "Joint Program Delivery",
-                "Groups": "Joint execution",
-                "Sub Catergories": "Business",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Collaborative project management tools, communication platforms, shared resource pools.",
                 "Factors": "Collaborative implementation"
             },
             {
-                "Sub Groups": "Unified policies",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Governance Integration",
-                "Groups": "Unified policies",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Integrated risk management platforms, cross-department workflow tools.",
                 "Factors": "Integration of governance models"
             },
             {
-                "Sub Groups": "Standard coding",
+                "Sub Groups": "Standardization and Streamlining Processes",
                 "Catergories": "Dev Standards",
-                "Groups": "Standard coding",
-                "Sub Catergories": "Application",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Coding standards enforcement tools, static analysis, version control systems.",
                 "Factors": "Consistency in application development"
             }
         ]
@@ -1665,31 +1665,31 @@
         "Extracts": "Applications and projects are categorized as core, common, or divergent, influencing their prioritization, funding, and management, with core ones managed by the Department, common ones collaboratively, and divergent ones allowing for innovative solutions to local needs.",
         "Wrapper": [
             {
-                "Sub Groups": "Collaboration and Communication",
-                "Catergories": "Application Architecture",
-                "Groups": "App taxonomy",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Teamwork enhancement",
+                "Catergories": "Application Categorization",
+                "Groups": "Collaboration and Communication",
+                "Sub Catergories": "Metadata repositories, CMDB systems, and application portfolio management tools.",
                 "Factors": "Classification of applications"
             },
             {
-                "Sub Groups": "App lifecycle",
-                "Catergories": "App Lifecycle",
-                "Groups": "App lifecycle",
-                "Sub Catergories": "Application",
+                "Sub Groups": "System Maintenance and Support",
+                "Catergories": "Application Lifecycle Management",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "DevOps pipelines, container orchestration (Kubernetes), version control, and monitoring tools.",
                 "Factors": "Management of applications"
             },
             {
-                "Sub Groups": "Asset allocation",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Allocation Tools",
-                "Groups": "Asset allocation",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Results tracking",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Outcome Measurement",
-                "Groups": "Results tracking",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "KPI tracking tools, performance dashboards, data visualization software.",
                 "Factors": "Achieving outcomes"
             }
         ]
@@ -1699,24 +1699,24 @@
         "Extracts": "The Project Governance framework makes sure projects do what they're supposed to and deliver the benefits they promised. It helps NSW Health focus on the right projects and ensures they're done correctly. This way, strategy and delivery stay connected, reducing risks for the whole portfolio",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
-                "Catergories": "Business Case",
-                "Groups": "Strategic alignment",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Strategic Cohesion",
+                "Catergories": "Business Case Development",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Project management tools, ROI calculators, and collaboration platforms.",
                 "Factors": "Alignment with business benefits"
             },
             {
-                "Sub Groups": "Risk assessment",
+                "Sub Groups": "Risk Identification and Management",
                 "Catergories": "Risk Management Tools",
-                "Groups": "Risk assessment",
-                "Sub Catergories": "Business",
+                "Groups": "Risk Identification and Management",
+                "Sub Catergories": "Risk registers, compliance monitoring software, reporting dashboards.",
                 "Factors": "Risk Identification"
             },
             {
-                "Sub Groups": "Execution gap",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Execution Gap",
-                "Groups": "Execution gap",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Performance monitoring, gap analysis tools, workflow optimization software.",
                 "Factors": "Disconnect of strategy and implementation"
             }
         ]
@@ -1726,24 +1726,24 @@
         "Extracts": "In the Content Development phase, they design and build a prototype, then review it with clinicians. We use a method called Fast Track, which makes the process quicker. The prototype helps clinicians understand the application better and decide if it works for them",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Software Development Lifecycle",
-                "Groups": "Workflow",
-                "Sub Catergories": "Application",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Version control systems, CI/CD pipelines, code review tools.",
                 "Factors": "Development process"
             },
             {
-                "Sub Groups": "Seamless adoption",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Methodological Compatibility",
-                "Groups": "Seamless adoption",
-                "Sub Catergories": "Business",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Standards compliance tools, integration frameworks, API adapters.",
                 "Factors": "Integration with existing methodology"
             },
             {
-                "Sub Groups": "Data-driven choices",
-                "Catergories": "Analytics & Reporting",
-                "Groups": "Data-driven choices",
-                "Sub Catergories": "Application",
+                "Sub Groups": "System Deployment and Integration",
+                "Catergories": "Data Analytics and Reporting",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Data warehouses, BI tools (like Power BI, Tableau), ETL processes, and real-time dashboards.",
                 "Factors": "Informed decision-making"
             }
         ]
@@ -1753,31 +1753,31 @@
         "Extracts": "In the Implementation phase, they're putting in the content decided by the state. Doing it all at once might seem like a lot, but it's the most efficient and cost-effective way. Using the Fast Track Method makes things quicker and cheaper, sticking to a standard design with state content. This means less hassle and less time spent learning for Area Health Services staff. Their team knows how to build the database, and doing things fast helps them stick to the plan without adding extra stuff.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "ECM (Enterprise Content Management)",
-                "Groups": "CMS",
-                "Sub Catergories": "Application",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Document management systems, metadata tagging, workflow automation.",
                 "Factors": "Large content management"
             },
             {
-                "Sub Groups": "Limited resources",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Resource Bottlenecks",
-                "Groups": "Limited resources",
-                "Sub Catergories": "Business",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Performance monitoring, workflow analysis software, optimization tools.",
                 "Factors": "Resource constraints"
             },
             {
-                "Sub Groups": "Competence building",
+                "Sub Groups": "Employee Training and Development",
                 "Catergories": "LMS",
-                "Groups": "Competence building",
-                "Sub Catergories": "Application",
+                "Groups": "Employee Training and Development",
+                "Sub Catergories": "E-learning platforms, content management systems, training analytics software.",
                 "Factors": "Skills / Training"
             },
             {
-                "Sub Groups": "Project control",
+                "Sub Groups": "Program and Project Management",
                 "Catergories": "Project Governance",
-                "Groups": "Project control",
-                "Sub Catergories": "Business",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Risk and compliance software, stakeholder management tools, reporting dashboards.",
                 "Factors": "Scope creep"
             }
         ]
@@ -1787,24 +1787,24 @@
         "Extracts": "The SBB uses a maturity model to improve its features over time, with all Area Health Services contributing to each version, changes requiring approval from the majority of the Application Advisory Group, and new versions released annually, featuring required core functions, modifiable features, and local content.",
         "Wrapper": [
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
-                "Catergories": "Accessibility",
-                "Groups": "Inclusive access",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Consistent Excellence",
+                "Catergories": "User Accessibility Solutions",
+                "Groups": "Standardization and Streamlining Processes",
+                "Sub Catergories": "Accessibility APIs, adaptive UI frameworks, assistive technologies, and responsive design across platforms.",
                 "Factors": "Equal system participation"
             },
             {
-                "Sub Groups": "Process governance",
+                "Sub Groups": "Compliance and Governance",
                 "Catergories": "Governance",
-                "Groups": "Process governance",
-                "Sub Catergories": "Business",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Policy management systems, compliance tracking, audit management tools.",
                 "Factors": "Change control process"
             },
             {
-                "Sub Groups": "Customization",
-                "Catergories": "Application Design",
-                "Groups": "Customization",
-                "Sub Catergories": "Application",
+                "Sub Groups": "Compliance and Governance",
+                "Catergories": "Application Design Strategy",
+                "Groups": "Compliance and Governance",
+                "Sub Catergories": "Modular architecture, microservices, API management, and user-centered design platforms.",
                 "Factors": "Core functionality vs area-specific needs"
             }
         ]
@@ -1814,24 +1814,24 @@
         "Extracts": "The Clinical Systems Strategy aims to implement essential clinical systems supporting Clinical Services Redesign, Quality and Safety initiatives, and clinical programs. It focuses on improving communication, reducing delays, and supporting patient care, ensuring resources are allocated flexibly to meet patient needs",
         "Wrapper": [
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Strategic Planning",
-                "Groups": "Strategic fit",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "Time management",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Timeline Risk",
-                "Groups": "Time management",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Project risk management software, scheduling tools, issue tracking.",
                 "Factors": "Implementation delays"
             },
             {
-                "Sub Groups": "Resource planning",
+                "Sub Groups": "Consumer Experience and Support",
                 "Catergories": "Resource Management",
-                "Groups": "Resource planning",
-                "Sub Catergories": "Business",
+                "Groups": "Consumer Experience and Support",
+                "Sub Catergories": "Workforce management software, budgeting tools, project tracking systems.",
                 "Factors": "Allocation of resources"
             }
         ]
@@ -1841,24 +1841,24 @@
         "Extracts": "Three programs support the Clinical Systems Strategy: the Electronic Medical Record program for managing patients in hospitals, the Primary, Community, and Outpatient Care program for community care, and the Clinical Support program for essential support systems like Patient Administration and diagnostics.",
         "Wrapper": [
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Program Oversight",
-                "Groups": "Program oversight",
-                "Sub Catergories": "Business",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Project tracking software, status reporting tools, issue management platforms.",
                 "Factors": "Management of programs"
             },
             {
-                "Sub Groups": "System merger",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Unified Platforms",
-                "Groups": "System merger",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Cloud platforms, integrated application suites, API management.",
                 "Factors": "Integration of systems"
             },
             {
-                "Sub Groups": "System harmony",
+                "Sub Groups": "Financial Management and Budgeting",
                 "Catergories": "Integration Architecture",
-                "Groups": "System harmony",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Financial Management and Budgeting",
+                "Sub Catergories": "API gateways, ESB, microservices architecture, message brokers.",
                 "Factors": "Compatibility between systems"
             }
         ]
@@ -1868,31 +1868,31 @@
         "Extracts": "The Corporate Systems Strategy sets up essential systems to support the Corporate Shared Services reform program, cutting duplication and costs in administrative tasks to redirect funds to frontline care, with the Corporate Systems program as its backbone.",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
-                "Catergories": "Centralization",
-                "Groups": "Single platform",
-                "Sub Catergories": "Infrastructure",
+                "Sub Groups": "Reliable Implementation",
+                "Catergories": "Case Management Systems",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "CRM systems, document management, integrated health IT platforms.",
                 "Factors": "Integration of unified systems"
             },
             {
-                "Sub Groups": "Smooth transitions",
-                "Catergories": "Business Continuity",
-                "Groups": "Smooth transitions",
-                "Sub Catergories": "Business",
+                "Sub Groups": "Resource Management and Utilization",
+                "Catergories": "Business Continuity Planning",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Backup and recovery systems, failover clusters, and disaster recovery platforms.",
                 "Factors": "Disruption to processes"
             },
             {
-                "Sub Groups": "Protection",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Cybersecurity",
-                "Groups": "Protection",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Firewalls, intrusion detection systems, endpoint protection, identity and access management.",
                 "Factors": "Data security"
             },
             {
-                "Sub Groups": "Confidentiality",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Privacy and Security",
-                "Groups": "Confidentiality",
-                "Sub Catergories": "Data",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Encryption tools, access control systems, data loss prevention software.",
                 "Factors": "Data privacy"
             }
         ]
@@ -1902,52 +1902,52 @@
         "Extracts": "The Business Information Strategy aims to provide timely, high-quality information throughout the organization, fostering a performance-driven culture. It helps turn data into insights, supports decision-making, aligns with strategic goals, ensures accountability, and follows the overall program and change management approach.",
         "Wrapper": [
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Responsiveness",
-                "Groups": "Punctuality",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Incident management systems, alerting platforms, customer support software.",
                 "Factors": "Timeliness"
             },
             {
-                "Sub Groups": "Data integrity",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Data Quality",
-                "Groups": "Data integrity",
-                "Sub Catergories": "Data",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Data cleansing tools, validation software, profiling and monitoring tools.",
                 "Factors": "Accuracy of data"
             },
             {
-                "Sub Groups": "Precise reports",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Reporting Systems",
-                "Groups": "Precise reports",
-                "Sub Catergories": "Application",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Business intelligence platforms, dashboard software, data visualization tools.",
                 "Factors": "Accuracy of Reporting"
             },
             {
-                "Sub Groups": "Data fusion",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Data Interoperability",
-                "Groups": "Data fusion",
-                "Sub Catergories": "Data",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Data integration platforms, API connectors, standard data exchange protocols (e.g., HL7, FHIR).",
                 "Factors": "Integration of data"
             },
             {
-                "Sub Groups": "Single interface",
+                "Sub Groups": "System Deployment and Integration",
                 "Catergories": "Platform Architecture",
-                "Groups": "Single interface",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Cloud platforms, microservices architecture, container orchestration.",
                 "Factors": "Unified platform"
             },
             {
-                "Sub Groups": "Easy access",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Open Data / Interoperability",
-                "Groups": "Easy access",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Open data standards, APIs, data portals.",
                 "Factors": "Data accessibility"
             },
             {
-                "Sub Groups": "Confidentiality",
+                "Sub Groups": "Data Security, Quality and Privacy",
                 "Catergories": "Privacy and Security",
-                "Groups": "Confidentiality",
-                "Sub Catergories": "Data",
+                "Groups": "Data Security, Quality and Privacy",
+                "Sub Catergories": "Encryption tools, access control systems, data loss prevention software.",
                 "Factors": "Data privacy"
             }
         ]
@@ -1957,24 +1957,24 @@
         "Extracts": "Three programs support the Business Information Strategy: one delivers useful information to front-line staff, another integrates strategic frameworks and develops performance measures, and the third ensures systems can provide consistent data and sets up technical infrastructure",
         "Wrapper": [
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Decision Framework",
-                "Groups": "Task ranking",
-                "Sub Catergories": "Business",
+                "Groups": "Program and Project Management",
+                "Sub Catergories": "Decision modeling tools, rule engines, workflow automation.",
                 "Factors": "Prioritization"
             },
             {
-                "Sub Groups": "Strategic fit",
+                "Sub Groups": "Business Alignment",
                 "Catergories": "Strategic Planning",
-                "Groups": "Strategic fit",
-                "Sub Catergories": "Business",
+                "Groups": "Business Alignment",
+                "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "Supervision",
+                "Sub Groups": "System Maintenance and Support",
                 "Catergories": "System Monitoring",
-                "Groups": "Supervision",
-                "Sub Catergories": "Application",
+                "Groups": "System Maintenance and Support",
+                "Sub Catergories": "Monitoring dashboards, alerting systems, log management tools.",
                 "Factors": "Monitoring"
             }
         ]
@@ -1984,24 +1984,24 @@
         "Extracts": "The Sustainable Infrastructure program aims to streamline technical infrastructure, establish and uphold standards and architecture for statewide ICT initiatives, and ensure maximum benefit from ICT investments.",
         "Wrapper": [
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Infrastructure Optimization",
-                "Groups": "Optimal systems",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Network monitoring, virtualization platforms, cloud cost management tools.",
                 "Factors": "Infrastructure efficiency"
             },
             {
-                "Sub Groups": "Data governance",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Standards",
-                "Groups": "Data governance",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Best use",
+                "Sub Groups": "Resource Management and Utilization",
                 "Catergories": "Efficiency Tools",
-                "Groups": "Best use",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "Resource Management and Utilization",
+                "Sub Catergories": "Monitoring software, load balancers, resource scheduling platforms.",
                 "Factors": "Resource optimization"
             }
         ]
@@ -2011,24 +2011,24 @@
         "Extracts": "The Sustainable Infrastructure program includes three parts: setting up infrastructure, establishing technical standards, and ensuring uniform data standards across systems in NSW.",
         "Wrapper": [
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "System Integration",
-                "Groups": "Protocol compliance",
-                "Sub Catergories": "Infrastructure",
+                "Groups": "System Deployment and Integration",
+                "Sub Catergories": "Middleware, API gateways, data transformation services.",
                 "Factors": "Infrastructure coherence"
             },
             {
-                "Sub Groups": "High standards",
+                "Sub Groups": "Operational Effectiveness and Efficiency",
                 "Catergories": "Compliance Management",
-                "Groups": "High standards",
-                "Sub Catergories": "Business",
+                "Groups": "Operational Effectiveness and Efficiency",
+                "Sub Catergories": "Workflow enforcement tools, automated compliance monitoring, reporting dashboards.",
                 "Factors": "Standard adherence"
             },
             {
-                "Sub Groups": "High standards",
+                "Sub Groups": "Data and Information Management",
                 "Catergories": "Data Governance",
-                "Groups": "High standards",
-                "Sub Catergories": "Data",
+                "Groups": "Data and Information Management",
+                "Sub Catergories": "Data cataloging, metadata management, master data management systems.",
                 "Factors": "Data quality"
             }
         ]

@@ -10,8 +10,8 @@ import shutil
 import os
 
 # Define Constants
-IMPORT_PYTHON = "import-Tool-Data.py"
-CLEAN_PYTHON = "clean-Tool-Data.py"
+IMPORT_PYTHON = "import-Excel-Data.py"
+CLEAN_PYTHON = "clean-JSON-Data.py"
 FILE_TO_DEST = {
                 "json_files/toolJSON.js": "../SearchTool-Web/src",
                 "json_files/thematic_analysisJSON.js": "../ThematicAnalysis-Web/src"

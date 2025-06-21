@@ -1,23 +1,27 @@
 Sub ExtractUniqueGroups()
     Dim ws As Worksheet
     Dim tbl As ListObject
-    Dim columnData As Range
-    Dim uniqueList As Object
-    Dim cell As Range
-    Dim arr As Variant
-    Dim i As Long, j As Long
-    Dim temp As String
-    Dim val As String
     Dim outputTable As ListObject
+    Dim columnData As Range
+    Dim relatedData As Range
+    Dim uniqueList As Object
+    Dim i As Long
+    Dim tempKey As String, tempVal As String
+    Dim arrKeys As Variant, arrVals As Variant
     Dim newRow As ListRow
+    Dim swapped As Boolean
+    Dim j As Long
+    Dim tempKeyStr As String
+    Dim tempItem As Variant
 
-    ' Set the worksheet and tables
+    ' Set worksheet and tables
     Set ws = ThisWorkbook.Sheets("Glossary")   ' Change as needed
     Set tbl = ws.ListObjects("Table2")          ' Source table
     Set outputTable = ws.ListObjects("Table4")  ' Destination table
 
-    ' Source column to extract from (3rd column)
-    Set columnData = tbl.ListColumns(2).DataBodyRange
+    ' Source columns to extract from
+    Set columnData = tbl.ListColumns(2).DataBodyRange    ' Unique key column
+    Set relatedData = tbl.ListColumns(3).DataBodyRange   ' Related value column (adjust if needed)
 
     ' Clear all existing rows in destination table except header
     On Error Resume Next
@@ -26,38 +30,58 @@ Sub ExtractUniqueGroups()
     Loop
     On Error GoTo 0
 
-    ' Create dictionary for unique values
+    ' Create dictionary for unique keys, storing related value as dictionary item
     Set uniqueList = CreateObject("Scripting.Dictionary")
 
     ' Collect unique values with trimming and case normalization
-    For Each cell In columnData
-        val = Trim(cell.Value)
-        If val <> "" Then
-            val = LCase(val) ' Normalize for uniqueness
-            If Not uniqueList.exists(val) Then
-                uniqueList.Add val, cell.Value ' Store original casing for output
+    For i = 1 To columnData.Rows.Count
+        tempKey = Trim(columnData.Cells(i, 1).Value)
+        tempVal = relatedData.Cells(i, 1).Value
+        If tempKey <> "" Then
+            tempKey = LCase(tempKey) ' Normalize for uniqueness
+            If Not uniqueList.Exists(tempKey) Then
+                ' Store original casing key and related value as item in dictionary
+                uniqueList.Add tempKey, Array(columnData.Cells(i, 1).Value, tempVal)
             End If
         End If
-    Next cell
+    Next i
 
-    ' Get unique values into an array
-    arr = uniqueList.Items
+    ' Extract keys and items for sorting
+    arrKeys = uniqueList.Keys
+    arrVals = uniqueList.Items
 
-    ' Sort array alphabetically (case-insensitive) inline
-    For i = LBound(arr) To UBound(arr) - 1
-        For j = i + 1 To UBound(arr)
-            If StrComp(arr(i), arr(j), vbTextCompare) > 0 Then
-                temp = arr(i)
-                arr(i) = arr(j)
-                arr(j) = temp
+    ' Sort keys alphabetically (case-insensitive), and sort arrVals accordingly
+    Do
+        swapped = False
+        For i = 0 To UBound(arrKeys) - 1
+            If StrComp(arrKeys(i), arrKeys(i + 1), vbTextCompare) > 0 Then
+                ' Swap keys
+                tempKeyStr = arrKeys(i)
+                arrKeys(i) = arrKeys(i + 1)
+                arrKeys(i + 1) = tempKeyStr
+                ' Swap corresponding items
+                tempItem = arrVals(i)
+                arrVals(i) = arrVals(i + 1)
+                arrVals(i + 1) = tempItem
+                swapped = True
             End If
-        Next j
+        Next i
+    Loop While swapped
+
+    ' Output sorted unique keys and related values into destination table
+    For i = 0 To UBound(arrKeys)
+        Set newRow = outputTable.ListRows.Add
+        newRow.Range.Cells(1, 1).Value = arrVals(i)(0) ' Original case key
+        newRow.Range.Cells(1, 2).Value = arrVals(i)(1) ' Related value
     Next i
 
-    ' Output sorted unique values into destination table
-    For i = 0 To UBound(arr)
-        Set newRow = outputTable.ListRows.Add
-        newRow.Range.Cells(1, 1).Value = arr(i)
-    Next i
+    ' --- Add totals row ---
+    outputTable.ShowTotals = True
+    outputTable.TotalsRowRange.Cells(1, 1).Value = "Total Rows:"
+    outputTable.TotalsRowRange.Cells(1, 2).Value = outputTable.ListRows.Count
+
+    ' Color totals row grey
+    outputTable.TotalsRowRange.Interior.Color = RGB(128, 128, 128)
+
 End Sub
 
