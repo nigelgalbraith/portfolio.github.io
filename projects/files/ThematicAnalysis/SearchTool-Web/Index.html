@@ -20,7 +20,7 @@
     <div id="searchToolInfo"></div>
 
     <!-- Expand & Collapse All buttons -->
-    <div style="margin-top: 20px; text-align: center;">
+    <div class="buttons">
       <button onclick="expandAll()">Expand All</button>
       <button onclick="collapseAll()">Collapse All</button>
     </div>
@@ -46,14 +46,14 @@
 
   // Expand & Collapse Buttons
   function collapseAll() {
-    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subgroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
+    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subGroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
     collapsibleSections.forEach(section => {
       section.style.display = "none";
     });
 }
 
   function expandAll() {
-    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subgroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
+    const collapsibleSections = document.querySelectorAll('[id$="_details"], [id$="_subroup"], [id$="_subCatergory"], [id$="_extractBlock"]');
     collapsibleSections.forEach(section => {
       section.style.display = "table-row";
     });
