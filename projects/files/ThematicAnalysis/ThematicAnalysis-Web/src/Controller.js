@@ -5,32 +5,27 @@ class Controller {
     jsonData.forEach(entry => {
       const extract = new Extract(entry);
 
-      // Use actual JSON property names here
-      if (entry.Factors && Array.isArray(entry.Factors)) {
-        entry.Factors.forEach(name => {
-          const factor = new Factor(name);
-          extract.addFactor(factor);
-        });
-      }
+      // Handle Factors
+      const factors = entry.Factors || entry.factors || entry.Wrapper?.map(w => w.Factors) || [];
+      factors.flat().filter(Boolean).forEach(name => {
+        extract.addFactor(new Factor(name));
+      });
 
-      if (entry["Groups"] && Array.isArray(entry["Groups"])) {
-        entry["Groups"].forEach(name => {
-          const group = new Group(name);
-          extract.addGroup(group);
-        });
-      }
+      // Handle Groups
+      const groups = entry.Groups || entry.groups || entry.Wrapper?.map(w => w.Groups) || [];
+      groups.flat().filter(Boolean).forEach(name => {
+        extract.addGroup(new Group(name));
+      });
 
-      if (entry["Sub Groups"] && Array.isArray(entry["Sub Groups"])) {
-        entry["Sub Groups"].forEach(name => {
-          const subGroup = new SubGroup(name);
-          extract.addSubGroup(subGroup);
-        });
-      }
+      // Handle SubGroups
+      const subGroups = entry["Sub Groups"] || entry.subGroups || entry.Wrapper?.map(w => w["Sub Groups"]) || [];
+      subGroups.flat().filter(Boolean).forEach(name => {
+        extract.addSubGroup(new SubGroup(name));
+      });
 
       extract.sortFactors();
       extract.sortGroups();
       extract.sortSubGroups();
-
       extracts.push(extract);
     });
 

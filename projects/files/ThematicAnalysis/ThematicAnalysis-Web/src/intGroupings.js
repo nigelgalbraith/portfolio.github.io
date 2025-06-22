@@ -1,16 +1,20 @@
 function mainGroupings() {
   const extracts = Controller.setup(jsonDataThematic);
-
-  // Map factor name => { group: string, subGroup: string }
   const factorMap = new Map();
 
   extracts.forEach(extract => {
-    extract.factors.forEach((factor, index) => {
-      const factorName = factor.name;
-      if (!factorMap.has(factorName)) {
-        const groupName = extract.groups[index] ? extract.groups[index].name : "";
-        const subGroupName = extract.subGroups[index] ? extract.subGroups[index].name : "";
-        factorMap.set(factorName, { group: groupName, subGroup: subGroupName });
+    // Create a map of all possible combinations
+    extract.factors.forEach(factor => {
+      if (!factorMap.has(factor.name)) {
+        // Find first matching group (if any)
+        const group = extract.groups.length > 0 ? extract.groups[0].name : "";
+        // Find first matching subgroup (if any)
+        const subGroup = extract.subGroups.length > 0 ? extract.subGroups[0].name : "";
+        
+        factorMap.set(factor.name, { 
+          group, 
+          subGroup 
+        });
       }
     });
   });
