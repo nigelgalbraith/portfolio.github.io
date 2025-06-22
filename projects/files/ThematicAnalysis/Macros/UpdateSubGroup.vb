@@ -47,4 +47,3 @@ Sub UpdateSubGroup()
         destRange.Cells(cell.Row - srcRange.Row + 1, cell.Column - srcRange.Column + 1).Value = result
     Next cell
 End Sub
-
