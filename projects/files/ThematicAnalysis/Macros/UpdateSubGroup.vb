@@ -33,7 +33,7 @@ Sub UpdateSubGroup()
                 If Trim(line) = Trim(tblRow.Range.Cells(1, 2).Value) Then
                     ' Append the third column value to the result string
                     If result <> "" Then
-                        result = result & Chr(10) & tblRow.Range.Cells(1, 2).Value
+                        result = result & Chr(10) & tblRow.Range.Cells(1, 3).Value
                     Else
                         result = tblRow.Range.Cells(1, 3).Value
                     End If
