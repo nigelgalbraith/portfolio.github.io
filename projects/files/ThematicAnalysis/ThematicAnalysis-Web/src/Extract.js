@@ -11,7 +11,7 @@ class Extract {
     this.subGroups = [];
   }
 
-  // Factor
+  // Factor methods
   findFactor(name) {
     return this.factors.find(f => f.name === name);
   }
@@ -26,7 +26,7 @@ class Extract {
     this.factors.sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  // Group
+  // Group methods
   findGroup(name) {
     return this.groups.find(g => g.name === name);
   }
@@ -41,7 +41,7 @@ class Extract {
     this.groups.sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  // SubGroup
+  // SubGroup methods
   findSubGroup(name) {
     return this.subGroups.find(sg => sg.name === name);
   }
@@ -56,6 +56,31 @@ class Extract {
     this.subGroups.sort((a, b) => a.name.localeCompare(b.name));
   }
 
+  // Collection methods
+  static getAllFactors(extracts) {
+    const allFactors = [];
+    extracts.forEach(extract => {
+      allFactors.push(...extract.factors);
+    });
+    return allFactors;
+  }
+
+  static getAllGroups(extracts) {
+    const allGroups = [];
+    extracts.forEach(extract => {
+      allGroups.push(...extract.groups);
+    });
+    return allGroups;
+  }
+
+  static getAllSubGroups(extracts) {
+    const allSubGroups = [];
+    extracts.forEach(extract => {
+      allSubGroups.push(...extract.subGroups);
+    });
+    return allSubGroups;
+  }
+
   toString() {
     this.sortFactors();
     this.sortGroups();
@@ -68,7 +93,7 @@ class Extract {
     return `
             ID: ${this.id}
             Ref: ${this.reference}
-            Description: ${this.description?.substring(0, 80)}...
+            Extract: ${this.extract?.substring(0, 80)}...
             Facts: ${this.facts || "None"}
             Notes: ${this.notes || "None"}
             Factors: ${factorNames}
@@ -102,4 +127,3 @@ class Extract {
     `;
   }
 }
-

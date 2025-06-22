@@ -7,9 +7,7 @@ function mainGroupings() {
   extracts.forEach(extract => {
     extract.factors.forEach((factor, index) => {
       const factorName = factor.name;
-      // Only add if factor not already stored
       if (!factorMap.has(factorName)) {
-        // Get matching group and subgroup by index if exists
         const groupName = extract.groups[index] ? extract.groups[index].name : "";
         const subGroupName = extract.subGroups[index] ? extract.subGroups[index].name : "";
         factorMap.set(factorName, { group: groupName, subGroup: subGroupName });
@@ -17,16 +15,15 @@ function mainGroupings() {
     });
   });
 
-  // Sort factors alphabetically
   const factors = Array.from(factorMap.keys()).sort();
 
   let html = `
     <table class="styled-table">
       <thead>
         <tr>
-          <th class=grouping-table">Factor</th>
-          <th class=grouping-table">Group</th>
-          <th class=grouping-table">Sub Group</th>
+          <th class="grouping-table">Factor</th>
+          <th class="grouping-table">Group</th>
+          <th class="grouping-table">Sub Group</th>
         </tr>
       </thead>
       <tbody>
