@@ -2,7 +2,7 @@ class Extract {
   constructor(entry) {
     this.id = entry.ID;
     this.reference = entry.References;
-    this.description = entry.Extracts;
+    this.extract = entry.Extracts;
     this.facts = entry.Facts;
     this.notes = entry["Notes/Additional"] || null;
 
@@ -77,26 +77,29 @@ class Extract {
             `;
   }
 
-toTableRow() {
-  this.sortFactors();
-  this.sortGroups();
-  this.sortSubGroups();
+  toTableRow() {
+    const modalId = `modal-extract-${this.id}`;
+    const modalContentId = `modal-content-${this.id}`;
 
-  const factorNames = this.factors.map(f => f.name).join("<br>") || "None";
-  const groupNames = this.groups.map(g => g.name).join("<br>") || "None";
-  const subGroupNames = this.subGroups.map(sg => sg.name).join("<br>") || "None";
+    return `
+      <tr>
+        <td>${this.id}</td>
+        <td>${this.reference}</td>
+        <td>
+          <a href="#" class="extract-link" onclick="event.preventDefault(); showExtractModal('${modalId}', '${modalContentId}')">Extract</a>
+          <div id="${modalId}" class="extract-modal hidden">
+            <div class="extract-modal-content" id="${modalContentId}">
+              <span class="close-modal" onclick="hideExtractModal('${modalId}')">&times;</span>
+              <p>${this.extract}</p>
+            </div>
+          </div>
+        </td>
+        <td>${this.facts || "None"}</td>
+        <td>${this.factors.map(f => f.name).join("<br><br>") || "None"}</td>
+        <td>${this.groups.map(g => g.name).join("<br><br>") || "None"}</td>
+        <td>${this.subGroups.map(sg => sg.name).join("<br><br>") || "None"}</td>
+      </tr>
+    `;
+  }
+}
 
-  return `
-    <tr>
-      <td>${this.id}</td>
-      <td>${this.reference}</td>
-      <td>${this.description}</td>
-      <td>${this.facts}</td>
-      <td>${this.notes || "None"}</td>
-      <td>${factorNames}</td>
-      <td>${groupNames}</td>
-      <td>${subGroupNames}</td>
-    </tr>
-  `;
-}
-}
