@@ -10,6 +10,19 @@ function main() {
   });
   
   container.innerHTML = SubGroup.createAnalysisTable(subGroupsWithCounts);
+  
+  // Pie chart for subgroups
+  const chartData = Object.entries(subGroupCounts).map(([name, count]) => ({
+    label: name,
+    value: count
+  }));
+  
+  container.innerHTML += `
+    <div class="chart-container">
+      <canvas id="subGroupChart"></canvas>
+    </div>
+  `;
+  ChartVisualizer.createPieChart("subGroupChart", chartData, "Sub Group Distribution");
 }
 
 window.onload = main;

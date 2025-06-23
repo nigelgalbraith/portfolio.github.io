@@ -179,6 +179,17 @@ table {
   background-color: #c8e6c9;
 }
 
+/* Risk Table */
+.risk-group-table td:nth-child(2),
+.risk-group-table td:nth-child(3){
+  text-align: center;
+}
+
+.risk-group-table th {
+  background-color: #007acc;
+  color: white;
+}
+
 /* Extract modal */
 .extract-link {
   color: #007acc;
@@ -222,4 +233,60 @@ table {
 
 .hidden {
   display: none;
+}
+
+/* Chart styling */
+.chart-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.chart-container canvas {
+  width: 600px !important;
+  height: 600px !important;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Risk Model */
+/* Model Builder Styles */
+.model-section {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#generateModel {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#modelResults {
+  margin-top: 20px;
+}
+
+.summary {
+  margin-top: 10px;
+  font-style: italic;
 }

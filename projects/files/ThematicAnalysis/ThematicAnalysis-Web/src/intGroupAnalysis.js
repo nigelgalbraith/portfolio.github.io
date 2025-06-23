@@ -2,17 +2,27 @@ function main() {
   const extracts = Controller.setup(jsonDataThematic);
   const container = document.getElementById("analysis-container");
   
-  // Get raw group counts (already counts occurrences)
   const groupCounts = Extract.getGroupCounts(extracts);
-  
-  // Convert to array of Group objects with proper counts
   const groupsWithCounts = Object.entries(groupCounts).map(([name, count]) => {
     const group = new Group(name);
-    group.count = count; // Add count property to each group
+    group.count = count;
     return group;
   });
   
   container.innerHTML = Group.createAnalysisTable(groupsWithCounts);
+  
+  // Pie chart for groups
+  const chartData = Object.entries(groupCounts).map(([name, count]) => ({
+    label: name,
+    value: count
+  }));
+  
+  container.innerHTML += `
+    <div class="chart-container">
+      <canvas id="groupChart"></canvas>
+    </div>
+  `;
+  ChartVisualizer.createPieChart("groupChart", chartData, "Group Distribution");
 }
 
 window.onload = main;
