@@ -14,7 +14,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data integrity",
-            "Resource Management and Utilization"
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -77,8 +77,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Regulatory adherence",
-            "System and Technology Improvement",
-            "Standardization and Streamlining Processes"
+            "Innovative Evolution",
+            "Consistent Excellence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -108,10 +108,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Consumer Experience and Support",
-            "System Deployment and Integration",
-            "Policy and Organizational Reform",
-            "Compliance and Governance"
+            "Customer service",
+            "Reliable Implementation",
+            "Governance with Integrity",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -139,8 +139,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Standardization and Streamlining Processes",
-            "Strategic Planning and Development"
+            "Consistent Excellence",
+            "Forward-Thinking Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -166,8 +166,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Teamwork enhancement",
-            "System Deployment and Integration",
-            "Infrastructure and Hardware Management"
+            "Reliable Implementation",
+            "Sustainable Systems"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -197,10 +197,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Project Leadership",
-            "System Deployment and Integration",
-            "Policy and Organizational Reform",
-            "Operational Effectiveness and Efficiency",
-            "Employee Training and Development"
+            "Reliable Implementation",
+            "Governance with Integrity",
+            "Process optimization",
+            "Employee development"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -228,8 +228,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Customer service",
-            "Business Alignment",
-            "Financial Management and Budgeting"
+            "Strategic Cohesion",
+            "Budget control"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -257,9 +257,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Consumer Experience and Support",
-            "Financial Management and Budgeting",
-            "Compliance and Governance"
+            "Customer service",
+            "Budget control",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -286,8 +286,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Risk Identification and Management",
-            "System Deployment and Integration"
+            "Accountable Risk Management",
+            "Reliable Implementation"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -332,8 +332,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Resource Management and Utilization",
-            "Policy and Organizational Reform"
+            "Sustainable Efficiency",
+            "Governance with Integrity"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -361,9 +361,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Futureproofing",
-            "System Deployment and Integration",
-            "Consumer Experience and Support",
-            "Data and Information Management"
+            "Reliable Implementation",
+            "Customer service",
+            "Data governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -390,8 +390,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Teamwork enhancement",
-            "Collaboration and Communication",
-            "Program and Project Management"
+            "Teamwork enhancement",
+            "Strategic Project Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -417,8 +417,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Process optimization",
-            "Data and Information Management",
-            "Operational Effectiveness and Efficiency"
+            "Data governance",
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -444,8 +444,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Sustainable Efficiency",
-            "Compliance and Governance",
-            "Strategic Planning and Development"
+            "Regulatory adherence",
+            "Forward-Thinking Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -471,8 +471,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Regulatory adherence",
-            "Resource Management and Utilization",
-            "Future Planning and System Demand"
+            "Sustainable Efficiency",
+            "Futureproofing"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -498,8 +498,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Accountable Risk Management",
-            "Compliance and Governance",
-            "Collaboration and Communication"
+            "Regulatory adherence",
+            "Teamwork enhancement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -527,9 +527,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Process optimization",
-            "Resource Management and Utilization",
-            "Resource Management and Utilization",
-            "Data and Information Management"
+            "Sustainable Efficiency",
+            "Sustainable Efficiency",
+            "Data governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -556,8 +556,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Data and Information Management",
-            "Resource Management and Utilization"
+            "Data governance",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -587,10 +587,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Data and Information Management",
-            "Resource Management and Utilization",
-            "Data and Information Management",
-            "Collaboration and Communication"
+            "Data governance",
+            "Sustainable Efficiency",
+            "Data governance",
+            "Teamwork enhancement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -620,9 +620,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Data and Information Management",
-            "Resource Management and Utilization",
-            "Future Planning and System Demand"
+            "Data governance",
+            "Sustainable Efficiency",
+            "Futureproofing"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -649,8 +649,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Consumer Experience and Support",
-            "Future Planning and System Demand"
+            "Customer service",
+            "Futureproofing"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -676,8 +676,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Responsive Support",
-            "Data and Information Management",
-            "System and Technology Improvement"
+            "Data governance",
+            "Innovative Evolution"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -703,8 +703,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Data and Information Management",
-            "Infrastructure and Hardware Management"
+            "Data governance",
+            "Sustainable Systems"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -728,7 +728,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "System and Technology Improvement"
+            "Innovative Evolution"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -751,7 +751,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Futureproofing",
-            "Financial Management and Budgeting"
+            "Budget control"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -776,8 +776,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Business Alignment",
-            "Operational Effectiveness and Efficiency"
+            "Strategic Cohesion",
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -803,8 +803,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Process optimization",
-            "Business Alignment",
-            "System and Technology Improvement"
+            "Strategic Cohesion",
+            "Innovative Evolution"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -832,9 +832,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Consistent Excellence",
-            "Strategic Planning and Development",
-            "Employee Training and Development",
-            "Program and Project Management"
+            "Forward-Thinking Leadership",
+            "Employee development",
+            "Strategic Project Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -859,7 +859,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Innovative Evolution",
-            "Policy and Organizational Reform"
+            "Governance with Integrity"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -884,8 +884,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Customer service",
-            "Program and Project Management",
-            "Resource Management and Utilization"
+            "Strategic Project Leadership",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -911,8 +911,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Customer service",
-            "Risk Identification and Management",
-            "Operational Effectiveness and Efficiency"
+            "Accountable Risk Management",
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -938,8 +938,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Customer service",
-            "Risk Identification and Management",
-            "Operational Effectiveness and Efficiency"
+            "Accountable Risk Management",
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -967,9 +967,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "System Maintenance and Support",
-            "Consumer Experience and Support",
-            "Implementation Challenges and Delays"
+            "Responsive Support",
+            "Customer service",
+            "Resilient Execution"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -998,9 +998,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Sustainable Efficiency",
-            "Policy and Organizational Reform",
-            "Business Alignment",
-            "Standardization and Streamlining Processes"
+            "Governance with Integrity",
+            "Strategic Cohesion",
+            "Consistent Excellence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1035,12 +1035,12 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Budget control",
-            "Consumer Experience and Support",
-            "Compliance and Governance",
-            "Collaboration and Communication",
-            "Collaboration and Communication",
-            "System Maintenance and Support",
-            "Risk Identification and Management"
+            "Customer service",
+            "Regulatory adherence",
+            "Teamwork enhancement",
+            "Teamwork enhancement",
+            "Responsive Support",
+            "Accountable Risk Management"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1070,8 +1070,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Accountable Risk Management",
-            "Operational Effectiveness and Efficiency",
-            "Consumer Experience and Support"
+            "Process optimization",
+            "Customer service"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1107,13 +1107,13 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Consumer Experience and Support",
-            "Collaboration and Communication",
-            "Consumer Experience and Support",
-            "Policy and Organizational Reform",
-            "Infrastructure and Hardware Management",
-            "Consumer Experience and Support",
-            "Resource Management and Utilization"
+            "Customer service",
+            "Teamwork enhancement",
+            "Customer service",
+            "Governance with Integrity",
+            "Sustainable Systems",
+            "Customer service",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1148,10 +1148,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Regulatory adherence",
-            "Collaboration and Communication",
-            "Financial Management and Budgeting",
-            "Operational Effectiveness and Efficiency",
-            "Consumer Experience and Support"
+            "Teamwork enhancement",
+            "Budget control",
+            "Process optimization",
+            "Customer service"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1177,7 +1177,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Budget control",
-            "Business Alignment"
+            "Strategic Cohesion"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1200,7 +1200,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Innovative Evolution",
-            "Operational Effectiveness and Efficiency"
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1229,10 +1229,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Customer service",
-            "Policy and Organizational Reform",
-            "Business Alignment",
-            "Data and Information Management",
-            "Strategic Planning and Development"
+            "Governance with Integrity",
+            "Strategic Cohesion",
+            "Data governance",
+            "Forward-Thinking Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1262,9 +1262,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Teamwork enhancement",
-            "Standardization and Streamlining Processes",
-            "Data and Information Management",
-            "Compliance and Governance"
+            "Consistent Excellence",
+            "Data governance",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1303,14 +1303,14 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Resilient Execution",
-            "Implementation Challenges and Delays",
-            "System Deployment and Integration",
-            "Data and Information Management",
-            "Data Security, Quality and Privacy",
-            "Consumer Experience and Support",
-            "Implementation Challenges and Delays",
-            "Data Security, Quality and Privacy",
-            "Resource Management and Utilization"
+            "Resilient Execution",
+            "Reliable Implementation",
+            "Data governance",
+            "Data integrity",
+            "Customer service",
+            "Resilient Execution",
+            "Data integrity",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1342,8 +1342,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Budget control",
-            "Data Security, Quality and Privacy",
-            "Consumer Experience and Support"
+            "Data integrity",
+            "Customer service"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1371,9 +1371,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Teamwork enhancement",
-            "Financial Management and Budgeting",
-            "Business Alignment",
-            "Compliance and Governance"
+            "Budget control",
+            "Strategic Cohesion",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1406,11 +1406,11 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Governance with Integrity",
-            "Data and Information Management",
-            "System Maintenance and Support",
-            "Consumer Experience and Support",
-            "Business Alignment",
-            "Data and Information Management"
+            "Data governance",
+            "Responsive Support",
+            "Customer service",
+            "Strategic Cohesion",
+            "Data governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1443,10 +1443,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Governance with Integrity",
-            "System Deployment and Integration",
-            "Collaboration and Communication",
-            "Employee Training and Development",
-            "Resource Management and Utilization"
+            "Reliable Implementation",
+            "Teamwork enhancement",
+            "Employee development",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1478,10 +1478,10 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Accountable Risk Management",
-            "Financial Management and Budgeting",
-            "Business Alignment",
-            "Collaboration and Communication",
-            "Collaboration and Communication"
+            "Budget control",
+            "Strategic Cohesion",
+            "Teamwork enhancement",
+            "Teamwork enhancement"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1511,9 +1511,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Budget control",
-            "Program and Project Management",
-            "System Maintenance and Support",
-            "Business Alignment"
+            "Strategic Project Leadership",
+            "Responsive Support",
+            "Strategic Cohesion"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1538,7 +1538,7 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Consistent Excellence",
-            "Business Alignment"
+            "Strategic Cohesion"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1563,8 +1563,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Consistent Excellence",
-            "Compliance and Governance",
-            "Standardization and Streamlining Processes"
+            "Regulatory adherence",
+            "Consistent Excellence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1592,9 +1592,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Teamwork enhancement",
-            "System Maintenance and Support",
-            "Resource Management and Utilization",
-            "Operational Effectiveness and Efficiency"
+            "Responsive Support",
+            "Sustainable Efficiency",
+            "Process optimization"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1621,8 +1621,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Risk Identification and Management",
-            "Compliance and Governance"
+            "Accountable Risk Management",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1648,8 +1648,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "System Deployment and Integration",
-            "System Deployment and Integration"
+            "Reliable Implementation",
+            "Reliable Implementation"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1677,9 +1677,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Resource Management and Utilization",
-            "Employee Training and Development",
-            "Program and Project Management"
+            "Sustainable Efficiency",
+            "Employee development",
+            "Strategic Project Leadership"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1706,8 +1706,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Consistent Excellence",
-            "Compliance and Governance",
-            "Compliance and Governance"
+            "Regulatory adherence",
+            "Regulatory adherence"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1733,8 +1733,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Cohesion",
-            "Consumer Experience and Support",
-            "Consumer Experience and Support"
+            "Customer service",
+            "Customer service"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1760,8 +1760,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Project Leadership",
-            "System Deployment and Integration",
-            "Financial Management and Budgeting"
+            "Reliable Implementation",
+            "Budget control"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1789,9 +1789,9 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Resource Management and Utilization",
-            "Data and Information Management",
-            "Data Security, Quality and Privacy"
+            "Sustainable Efficiency",
+            "Data governance",
+            "Data integrity"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1826,12 +1826,12 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Process optimization",
-            "Data Security, Quality and Privacy",
-            "Data Security, Quality and Privacy",
-            "System Deployment and Integration",
-            "System Deployment and Integration",
-            "Data and Information Management",
-            "Data Security, Quality and Privacy"
+            "Data integrity",
+            "Data integrity",
+            "Reliable Implementation",
+            "Reliable Implementation",
+            "Data governance",
+            "Data integrity"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1861,8 +1861,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Strategic Project Leadership",
-            "Business Alignment",
-            "System Maintenance and Support"
+            "Strategic Cohesion",
+            "Responsive Support"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1888,8 +1888,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Data governance",
-            "Data and Information Management",
-            "Resource Management and Utilization"
+            "Data governance",
+            "Sustainable Efficiency"
         ],
         "Notes/Additional": null,
         "Glossary Check": [
@@ -1915,8 +1915,8 @@ const jsonDataThematic = [
         ],
         "Sub Groups": [
             "Reliable Implementation",
-            "Operational Effectiveness and Efficiency",
-            "Data and Information Management"
+            "Process optimization",
+            "Data governance"
         ],
         "Notes/Additional": null,
         "Glossary Check": [

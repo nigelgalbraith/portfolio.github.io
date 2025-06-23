@@ -11,7 +11,7 @@
                 "Factors": "Accuracy of Reporting"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Redundancy Management",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Data deduplication tools, system monitoring, backup and recovery systems.",
@@ -57,14 +57,14 @@
                 "Factors": "Fragmentation"
             },
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "System Modernization",
                 "Groups": "System and Technology Improvement",
                 "Sub Catergories": "Legacy system migration tools, cloud adoption platforms, containerization.",
                 "Factors": "Outdated systems"
             },
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "System Interoperability",
                 "Groups": "Standardization and Streamlining Processes",
                 "Sub Catergories": "Standard protocols (SOAP, REST), API management, messaging queues.",
@@ -84,28 +84,28 @@
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "KPIs / Metrics",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Performance dashboards, data visualization tools, business intelligence platforms.",
                 "Factors": "Effectiveness"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Systems Integration",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "ESB, API gateways, event-driven architectures.",
                 "Factors": "Integration"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Sustainability Planning",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Environmental monitoring software, sustainability reporting tools, analytics platforms.",
                 "Factors": "Sustainability"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Policy & Regulation",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Compliance management systems, policy repositories, audit tools.",
@@ -125,14 +125,14 @@
                 "Factors": "Access to information"
             },
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "Standards Adherence",
                 "Groups": "Standardization and Streamlining Processes",
                 "Sub Catergories": "Code quality tools, compliance software, audit management systems.",
                 "Factors": "Consistency"
             },
             {
-                "Sub Groups": "Strategic Planning and Development",
+                "Sub Groups": "Forward-Thinking Leadership",
                 "Catergories": "Demand Modeling",
                 "Groups": "Strategic Planning and Development",
                 "Sub Catergories": "Simulation software, scenario planning tools, demand management platforms.",
@@ -152,14 +152,14 @@
                 "Factors": "Collaboration"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Standards-based Integration",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "API management, middleware platforms, protocol converters.",
                 "Factors": "Interoperability"
             },
             {
-                "Sub Groups": "Infrastructure and Hardware Management",
+                "Sub Groups": "Sustainable Systems",
                 "Catergories": "Workflow Management",
                 "Groups": "Infrastructure and Hardware Management",
                 "Sub Catergories": "Workflow engines, BPM software, task automation platforms.",
@@ -179,28 +179,28 @@
                 "Factors": "Efficient structures"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Deployment Planning",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Project management software, release management tools, configuration management.",
                 "Factors": "System deployment & Integration"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Sustainability Planning",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Environmental monitoring software, sustainability reporting tools, analytics platforms.",
                 "Factors": "Sustainability"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Risk Mitigation",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Contingency planning software, issue tracking systems, response coordination tools.",
                 "Factors": "Minimizing impact"
             },
             {
-                "Sub Groups": "Employee Training and Development",
+                "Sub Groups": "Employee development",
                 "Catergories": "Training Programs",
                 "Groups": "Employee Training and Development",
                 "Sub Catergories": "LMS, e-learning platforms, training content management.",
@@ -220,14 +220,14 @@
                 "Factors": "Support for users"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Program Governance",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Governance platforms, risk management tools, compliance dashboards.",
                 "Factors": "Alignment with initiatives"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Cost Efficiency",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Resource management platforms, cost tracking systems, optimization algorithms.",
@@ -247,21 +247,21 @@
                 "Factors": "ICT Alignment"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Program Oversight",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Project tracking software, status reporting tools, issue management platforms.",
                 "Factors": "Governance"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Capacity Planning",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Infrastructure monitoring tools, capacity modeling software, cloud resource management.",
                 "Factors": "Investment plans"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Strategic Planning",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
@@ -281,14 +281,14 @@
                 "Factors": "ICT Alignment"
             },
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Risk Management Tools",
                 "Groups": "Risk Identification and Management",
                 "Sub Catergories": "Risk registers, compliance monitoring software, reporting dashboards.",
                 "Factors": "Risk Identification"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "System Dependencies",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Configuration management databases, dependency mapping tools, orchestration platforms.",
@@ -321,14 +321,14 @@
                 "Factors": "Inclusion"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "System Upgrade",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Patch management tools, deployment automation, testing frameworks.",
                 "Factors": "Replacement"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Vendor Management",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Procurement software, contract management systems, supplier portals.",
@@ -348,21 +348,21 @@
                 "Factors": "Implementation timeline"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Implementation Planning",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Project management software, resource planning tools, risk assessment platforms.",
                 "Factors": "Systems implementation"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Service Desk",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Ticketing systems, knowledge bases, remote support software.",
                 "Factors": "Support for Consumers"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "MIS Systems",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Management dashboards, reporting tools, database systems.",
@@ -382,14 +382,14 @@
                 "Factors": "Collaboration"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Helpdesk / User Services",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Ticketing systems, knowledge bases, live chat and call center software.",
                 "Factors": "Consumer support"
             },
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "HR Systems",
                 "Groups": "Program and Project Management",
                 "Sub Catergories": "Payroll systems, employee databases, performance management platforms.",
@@ -409,14 +409,14 @@
                 "Factors": "User optimization"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Open Access",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Process Automation",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "RPA tools (UiPath, Automation Anywhere), workflow engines, and scripting frameworks.",
@@ -436,14 +436,14 @@
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Performance Tuning",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Monitoring tools, system optimization software, load balancers.",
                 "Factors": "Capacity optimization"
             },
             {
-                "Sub Groups": "Strategic Planning and Development",
+                "Sub Groups": "Forward-Thinking Leadership",
                 "Catergories": "Strategic Planning",
                 "Groups": "Strategic Planning and Development",
                 "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
@@ -463,14 +463,14 @@
                 "Factors": "Integrated analysis & System outcome indicators"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Workforce / Budget",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Resource planning tools, budgeting software, workforce analytics.",
                 "Factors": "Resource availability"
             },
             {
-                "Sub Groups": "Future Planning and System Demand",
+                "Sub Groups": "Futureproofing",
                 "Catergories": "Budgeting Systems",
                 "Groups": "Future Planning and System Demand",
                 "Sub Catergories": "Accounting software, financial databases, and forecasting tools.",
@@ -490,14 +490,14 @@
                 "Factors": "Priority areas & Resource allocation"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Funding Sources",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Financial management systems, grant tracking tools, funding databases.",
                 "Factors": "Funding availability"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Core Services",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Application servers, service orchestration platforms, API gateways.",
@@ -517,21 +517,21 @@
                 "Factors": "Workflow improvement"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Decision Support Systems",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "BI platforms, predictive analytics engines, data visualization tools.",
                 "Factors": "Decision support"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Allocation Tools",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Open Access",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Public portals, content management systems, API gateways.",
@@ -551,14 +551,14 @@
                 "Factors": "Integration of core systems"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Open Access",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Allocation Tools",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
@@ -578,28 +578,28 @@
                 "Factors": "Integration of systems"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Open Access",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Public portals, content management systems, API gateways.",
                 "Factors": "Information accessibility"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Allocation Tools",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Standards",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Stakeholder Engagement",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
@@ -619,21 +619,21 @@
                 "Factors": "Systems implementation"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Universal Access",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Responsive web design, cross-platform frameworks, accessibility tools.",
                 "Factors": "Standardized information access"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Utilization Metrics",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Monitoring dashboards, analytics platforms, performance tracking tools.",
                 "Factors": "Resource utilization"
             },
             {
-                "Sub Groups": "Future Planning and System Demand",
+                "Sub Groups": "Futureproofing",
                 "Catergories": "Demand Forecasting",
                 "Groups": "Future Planning and System Demand",
                 "Sub Catergories": "Statistical modeling software, machine learning platforms, time series analysis tools.",
@@ -653,14 +653,14 @@
                 "Factors": "Increased services demand"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Service Design",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "UX/UI design tools, service blueprinting software, customer journey mapping.",
                 "Factors": "Service delivery"
             },
             {
-                "Sub Groups": "Future Planning and System Demand",
+                "Sub Groups": "Futureproofing",
                 "Catergories": "Future Planning",
                 "Groups": "Future Planning and System Demand",
                 "Sub Catergories": "Strategic planning software, scenario analysis tools, business intelligence.",
@@ -680,14 +680,14 @@
                 "Factors": "Staff shortages"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Priority Services",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Service catalogues, resource planning tools, demand management software.",
                 "Factors": "Critical areas"
             },
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "User Scalability",
                 "Groups": "System and Technology Improvement",
                 "Sub Catergories": "Load testing tools, cloud elasticity, session management.",
@@ -707,14 +707,14 @@
                 "Factors": "Increase database"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Scalability",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Cloud infrastructure, load balancers, elastic resource provisioning.",
                 "Factors": "Rising system usage"
             },
             {
-                "Sub Groups": "Infrastructure and Hardware Management",
+                "Sub Groups": "Sustainable Systems",
                 "Catergories": "Business Process Management",
                 "Groups": "Infrastructure and Hardware Management",
                 "Sub Catergories": "BPM platforms (e.g., Appian, Pega), workflow engines, process automation tools.",
@@ -734,7 +734,7 @@
                 "Factors": "Knowledge management"
             },
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "Digital Modernization",
                 "Groups": "System and Technology Improvement",
                 "Sub Catergories": "Cloud migration tools, microservices, container orchestration, legacy system refactoring.",
@@ -754,7 +754,7 @@
                 "Factors": "Expensive technologies"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Procurement Strategy",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Vendor management systems, procurement software, contract management tools.",
@@ -774,14 +774,14 @@
                 "Factors": "Informed consumers"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Stakeholder Engagement",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "High expectations"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Care Coordination Systems",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Patient management systems, health information exchanges, secure messaging platforms.",
@@ -801,14 +801,14 @@
                 "Factors": "Quality & Safety standards"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "System Scalability",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Cloud auto-scaling, load balancing, distributed databases.",
                 "Factors": "High user rates"
             },
             {
-                "Sub Groups": "System and Technology Improvement",
+                "Sub Groups": "Innovative Evolution",
                 "Catergories": "Occupational Safety",
                 "Groups": "System and Technology Improvement",
                 "Sub Catergories": "Safety monitoring systems, compliance software, incident reporting tools.",
@@ -828,21 +828,21 @@
                 "Factors": "Communication"
             },
             {
-                "Sub Groups": "Strategic Planning and Development",
+                "Sub Groups": "Forward-Thinking Leadership",
                 "Catergories": "Governance",
                 "Groups": "Strategic Planning and Development",
                 "Sub Catergories": "Policy management systems, compliance tracking, audit management tools.",
                 "Factors": "Policies & Procedures"
             },
             {
-                "Sub Groups": "Employee Training and Development",
+                "Sub Groups": "Employee development",
                 "Catergories": "Workforce Development",
                 "Groups": "Employee Training and Development",
                 "Sub Catergories": "LMS, career planning software, skills tracking platforms.",
                 "Factors": "Skills and competence"
             },
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Scheduling Tools",
                 "Groups": "Program and Project Management",
                 "Sub Catergories": "Workforce scheduling software, task management systems, resource planners.",
@@ -862,7 +862,7 @@
                 "Factors": "Lack of core ICT systems"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Modernization Strategy",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Cloud adoption frameworks, microservices, DevOps toolchains.",
@@ -882,14 +882,14 @@
                 "Factors": "Constraints in funding"
             },
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Project Capability",
                 "Groups": "Program and Project Management",
                 "Sub Catergories": "Project management software, resource planning tools, collaboration platforms.",
                 "Factors": "Skilled project management"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Change Readiness",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Readiness assessment tools, survey platforms, stakeholder engagement systems.",
@@ -909,14 +909,14 @@
                 "Factors": "Competing demands for ICT funds"
             },
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Prioritization Matrix",
                 "Groups": "Risk Identification and Management",
                 "Sub Catergories": "Decision support software, scoring tools, resource management platforms.",
                 "Factors": "Priority determination"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Project Management",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Scheduling tools, collaboration platforms, resource allocation software.",
@@ -936,14 +936,14 @@
                 "Factors": "Convergence of issues"
             },
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Risk Register",
                 "Groups": "Risk Identification and Management",
                 "Sub Catergories": "Risk repository systems, mitigation tracking platforms, compliance dashboards.",
                 "Factors": "Significant risk environment"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Service Innovation",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Idea management platforms, R&D tracking software, prototyping tools.",
@@ -963,21 +963,21 @@
                 "Factors": "Demand for services"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "Business Process Management",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "Application",
                 "Factors": "Workforce shortages"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Policy Objectives",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Strategic planning tools, balanced scorecards, performance management software.",
                 "Factors": "Government priorities"
             },
             {
-                "Sub Groups": "Implementation Challenges and Delays",
+                "Sub Groups": "Resilient Execution",
                 "Catergories": "Implementation Roadmap",
                 "Groups": "Implementation Challenges and Delays",
                 "Sub Catergories": "Timeline tools, milestone tracking software, dependency mapping tools.",
@@ -997,21 +997,21 @@
                 "Factors": "Alignment with Results and Services Plan"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Strategic Support",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Collaboration platforms, project management tools, communication systems.",
                 "Factors": "Support for strategic programs"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Change Management",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Collaboration tools, training portals, feedback and adoption tracking systems.",
                 "Factors": "Alignment with reform programs"
             },
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "Policy Alignment",
                 "Groups": "Standardization and Streamlining Processes",
                 "Sub Catergories": "Strategy mapping software, governance frameworks, collaboration platforms.",
@@ -1031,42 +1031,42 @@
                 "Factors": "Preventative solutions"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "UX Design",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Prototyping tools, user testing platforms, accessibility compliance software.",
                 "Factors": "User experience"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Forecasting",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Predictive analytics, trend analysis tools, scenario modeling platforms.",
                 "Factors": "Future benefits"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Stakeholder Engagement",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Collaboration platforms, survey software, communication tools.",
                 "Factors": "Strengthening relationships"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Service Costing",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Cost tracking software, financial planning tools, billing systems.",
                 "Factors": "Costs of services"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "HR Strategy",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "Workforce planning tools, talent management software, analytics dashboards.",
                 "Factors": "Sustainable Workforce"
             },
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Risk Assessment",
                 "Groups": "Risk Identification and Management",
                 "Sub Catergories": "Risk scoring tools, audit management software, compliance tracking systems.",
@@ -1086,14 +1086,14 @@
                 "Factors": "Reducing risk factors"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Risk Management",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Incident tracking software, mitigation planning tools, policy enforcement platforms.",
                 "Factors": "Preventing consumer issues"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Predictive Analytics",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Machine learning platforms, data mining tools, statistical software.",
@@ -1113,49 +1113,49 @@
                 "Factors": "Availability of services"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Service Evaluation",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Survey tools, analytics platforms, performance dashboards.",
                 "Factors": "Effectiveness of services"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Capital Planning",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Financial planning software, ERP systems, investment portfolio management tools.",
                 "Factors": "Coordination of care"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Model of Care",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Clinical management software, patient engagement platforms, analytics tools.",
                 "Factors": "Supporting new care models"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Long-term Planning",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Strategic planning software, forecasting models, scenario analysis tools.",
                 "Factors": "Sustainability of reform"
             },
             {
-                "Sub Groups": "Infrastructure and Hardware Management",
+                "Sub Groups": "Sustainable Systems",
                 "Catergories": "Journey Mapping",
                 "Groups": "Infrastructure and Hardware Management",
                 "Sub Catergories": "Customer experience software, analytics platforms, visualization tools.",
                 "Factors": "Information flow along consumer journey"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "UX Design",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Prototyping tools, user testing platforms, accessibility compliance software.",
                 "Factors": "Consumer experience improvement"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Service Design",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "UX/UI design tools, service blueprinting software, customer journey mapping.",
@@ -1175,28 +1175,28 @@
                 "Factors": "Complexity and duplication in service delivery"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Collaboration Tools",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Team communication apps (e.g., Teams, Slack), document sharing platforms, virtual meeting tech.",
                 "Factors": "Need for improved collaboration"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Workflow Systems",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Business process automation tools, collaboration platforms, monitoring software.",
                 "Factors": "Enhancement of coordination"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Continuous Improvement",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Performance monitoring tools, quality management software, analytics platforms.",
                 "Factors": "Quality and safety improvement"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Resource Optimization",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Automation tools, analytics platforms, load balancing systems.",
@@ -1216,7 +1216,7 @@
                 "Factors": "Constraints and opportunities"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Policy Compliance",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Automated compliance monitoring, reporting systems, risk assessment tools.",
@@ -1236,7 +1236,7 @@
                 "Factors": "New directions for IT"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Strategic Goals",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Goal-setting software, KPI tracking tools, executive dashboards.",
@@ -1256,28 +1256,28 @@
                 "Factors": "Government priorities"
             },
             {
-                "Sub Groups": "Policy and Organizational Reform",
+                "Sub Groups": "Governance with Integrity",
                 "Catergories": "Change Strategy",
                 "Groups": "Policy and Organizational Reform",
                 "Sub Catergories": "Strategic planning software, roadmapping tools, business intelligence dashboards.",
                 "Factors": "Reform agenda"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Change Initiatives",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Change management software, communication platforms, project tracking tools.",
                 "Factors": "Business reform"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Inclusive Design",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "User research platforms, accessibility testing tools, UI/UX design software.",
                 "Factors": "Improvements to Indigenous consumers"
             },
             {
-                "Sub Groups": "Strategic Planning and Development",
+                "Sub Groups": "Forward-Thinking Leadership",
                 "Catergories": "Preventive Care Systems",
                 "Groups": "Strategic Planning and Development",
                 "Sub Catergories": "Health monitoring devices, alerting platforms, patient engagement software.",
@@ -1297,21 +1297,21 @@
                 "Factors": "Collaboration across jurisdictions"
             },
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "System Architecture",
                 "Groups": "Standardization and Streamlining Processes",
                 "Sub Catergories": "Cloud platforms, microservices, network topology management.",
                 "Factors": "Consistency in systems approaches"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "National Infrastructure",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Wide area networks, government cloud services, shared service platforms.",
                 "Factors": "National information network"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Policy Environment",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Regulatory databases, legislative tracking tools, risk management platforms.",
@@ -1331,56 +1331,56 @@
                 "Factors": "ICT standards"
             },
             {
-                "Sub Groups": "Implementation Challenges and Delays",
+                "Sub Groups": "Resilient Execution",
                 "Catergories": "Long-term Planning",
                 "Groups": "Implementation Challenges and Delays",
                 "Sub Catergories": "Strategic planning software, forecasting models, scenario analysis tools.",
                 "Factors": "ICT strategic plan"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Standards-based Integration",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "API management, middleware platforms, protocol converters.",
                 "Factors": "Interoperability"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Standards",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Identity Management",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Unique identifier systems, authentication protocols, identity federation services.",
                 "Factors": "Unique Identifiers"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Digital Health Records",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "EHR/EMR platforms, secure cloud hosting, compliance with health data regulations (HIPAA, etc.).",
                 "Factors": "Individual Electronic Record"
             },
             {
-                "Sub Groups": "Implementation Challenges and Delays",
+                "Sub Groups": "Resilient Execution",
                 "Catergories": "IAM",
                 "Groups": "Implementation Challenges and Delays",
                 "Sub Catergories": "Identity providers, Single Sign-On (SSO), multi-factor authentication, directory services.",
                 "Factors": "Identity management standards"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Encrypted Communication",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "End-to-end encryption protocols, secure messaging platforms, PKI infrastructure.",
                 "Factors": "Secure messaging"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Logistics Systems",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Supply chain management software, inventory tracking, transportation management.",
@@ -1400,14 +1400,14 @@
                 "Factors": "Corporate reform program"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Transformation Planning",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Change management platforms, roadmap software, communication tools.",
                 "Factors": "ICT reform program"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Rollout Process",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Deployment automation tools, change management software, communication platforms.",
@@ -1427,21 +1427,21 @@
                 "Factors": "Development of ICT strategy"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Priority Setting",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Strategic planning tools, stakeholder engagement software, analytics platforms.",
                 "Factors": "Investment priorities"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Financial Planning",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Budgeting software, forecasting models, financial dashboards.",
                 "Factors": "Budget negotiation"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Execution Management",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Project tracking software, status dashboards, resource allocation tools.",
@@ -1461,35 +1461,35 @@
                 "Factors": "Responsibilities of Support Services"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Deployment",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "CI/CD pipelines, containerization (Docker), infrastructure as code (Terraform).",
                 "Factors": "Implementation of system"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "System Operations",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "IT service management platforms, automation tools, incident response systems.",
                 "Factors": "Maintenance of systems"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Service Desk",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Ticketing systems, knowledge bases, remote support software.",
                 "Factors": "Support for Consumers"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "IT Asset Management",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Inventory management systems, hardware monitoring tools, and configuration management databases.",
                 "Factors": "Hardware management"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Version Control",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Git, SVN, repository hosting platforms like GitHub, GitLab.",
@@ -1509,28 +1509,28 @@
                 "Factors": "Responsibilities of Services"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Site-Specific Rollouts",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Project management tools, localized deployment platforms, communication systems.",
                 "Factors": "Local implementations"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Transition Planning",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Project scheduling, resource allocation software, stakeholder engagement platforms.",
                 "Factors": "Change management"
             },
             {
-                "Sub Groups": "Employee Training and Development",
+                "Sub Groups": "Employee development",
                 "Catergories": "Professional Development",
                 "Groups": "Employee Training and Development",
                 "Sub Catergories": "Learning management systems, training tracking software, e-learning platforms.",
                 "Factors": "Staff training"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Benefits Management Framework",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Performance tracking software, KPI dashboards, and financial modeling tools.",
@@ -1550,28 +1550,28 @@
                 "Factors": "Prioritization of programs and projects"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "ROI Analysis",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "Financial modeling tools, business case software, investment tracking systems.",
                 "Factors": "Sound investment decisions"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Organizational Value",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Performance measurement systems, value tracking tools, business intelligence.",
                 "Factors": "Benefit to the organization"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Process Standardization",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "SOP management software, compliance tools, training platforms.",
                 "Factors": "Common processes across ICT"
             },
             {
-                "Sub Groups": "Collaboration and Communication",
+                "Sub Groups": "Teamwork enhancement",
                 "Catergories": "Governance Structure",
                 "Groups": "Collaboration and Communication",
                 "Sub Catergories": "Organizational chart software, collaboration platforms, communication channels.",
@@ -1591,21 +1591,21 @@
                 "Factors": "Evaluation criteria"
             },
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Decision Framework",
                 "Groups": "Program and Project Management",
                 "Sub Catergories": "Decision modeling tools, rule engines, workflow automation.",
                 "Factors": "Prioritization"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "System Monitoring",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "Monitoring dashboards, alerting systems, log management tools.",
                 "Factors": "Monitoring"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Strategic Alignment",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Balanced scorecards, strategy mapping tools, performance management platforms.",
@@ -1625,7 +1625,7 @@
                 "Factors": "Standardizing processes across ICT"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Best Practice Implementation",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Compliance management systems, policy enforcement software, and audit trail logging.",
@@ -1645,14 +1645,14 @@
                 "Factors": "Collaborative implementation"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Governance Integration",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Integrated risk management platforms, cross-department workflow tools.",
                 "Factors": "Integration of governance models"
             },
             {
-                "Sub Groups": "Standardization and Streamlining Processes",
+                "Sub Groups": "Consistent Excellence",
                 "Catergories": "Dev Standards",
                 "Groups": "Standardization and Streamlining Processes",
                 "Sub Catergories": "Coding standards enforcement tools, static analysis, version control systems.",
@@ -1672,21 +1672,21 @@
                 "Factors": "Classification of applications"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "Application Lifecycle Management",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "DevOps pipelines, container orchestration (Kubernetes), version control, and monitoring tools.",
                 "Factors": "Management of applications"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Allocation Tools",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Capacity planning software, scheduling tools, resource management platforms.",
                 "Factors": "Resource management"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Outcome Measurement",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "KPI tracking tools, performance dashboards, data visualization software.",
@@ -1706,14 +1706,14 @@
                 "Factors": "Alignment with business benefits"
             },
             {
-                "Sub Groups": "Risk Identification and Management",
+                "Sub Groups": "Accountable Risk Management",
                 "Catergories": "Risk Management Tools",
                 "Groups": "Risk Identification and Management",
                 "Sub Catergories": "Risk registers, compliance monitoring software, reporting dashboards.",
                 "Factors": "Risk Identification"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Execution Gap",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Performance monitoring, gap analysis tools, workflow optimization software.",
@@ -1733,14 +1733,14 @@
                 "Factors": "Development process"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Methodological Compatibility",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Standards compliance tools, integration frameworks, API adapters.",
                 "Factors": "Integration with existing methodology"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Data Analytics and Reporting",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Data warehouses, BI tools (like Power BI, Tableau), ETL processes, and real-time dashboards.",
@@ -1760,21 +1760,21 @@
                 "Factors": "Large content management"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Resource Bottlenecks",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Performance monitoring, workflow analysis software, optimization tools.",
                 "Factors": "Resource constraints"
             },
             {
-                "Sub Groups": "Employee Training and Development",
+                "Sub Groups": "Employee development",
                 "Catergories": "LMS",
                 "Groups": "Employee Training and Development",
                 "Sub Catergories": "E-learning platforms, content management systems, training analytics software.",
                 "Factors": "Skills / Training"
             },
             {
-                "Sub Groups": "Program and Project Management",
+                "Sub Groups": "Strategic Project Leadership",
                 "Catergories": "Project Governance",
                 "Groups": "Program and Project Management",
                 "Sub Catergories": "Risk and compliance software, stakeholder management tools, reporting dashboards.",
@@ -1794,14 +1794,14 @@
                 "Factors": "Equal system participation"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Governance",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Policy management systems, compliance tracking, audit management tools.",
                 "Factors": "Change control process"
             },
             {
-                "Sub Groups": "Compliance and Governance",
+                "Sub Groups": "Regulatory adherence",
                 "Catergories": "Application Design Strategy",
                 "Groups": "Compliance and Governance",
                 "Sub Catergories": "Modular architecture, microservices, API management, and user-centered design platforms.",
@@ -1821,14 +1821,14 @@
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Timeline Risk",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Project risk management software, scheduling tools, issue tracking.",
                 "Factors": "Implementation delays"
             },
             {
-                "Sub Groups": "Consumer Experience and Support",
+                "Sub Groups": "Customer service",
                 "Catergories": "Resource Management",
                 "Groups": "Consumer Experience and Support",
                 "Sub Catergories": "Workforce management software, budgeting tools, project tracking systems.",
@@ -1848,14 +1848,14 @@
                 "Factors": "Management of programs"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Unified Platforms",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Cloud platforms, integrated application suites, API management.",
                 "Factors": "Integration of systems"
             },
             {
-                "Sub Groups": "Financial Management and Budgeting",
+                "Sub Groups": "Budget control",
                 "Catergories": "Integration Architecture",
                 "Groups": "Financial Management and Budgeting",
                 "Sub Catergories": "API gateways, ESB, microservices architecture, message brokers.",
@@ -1875,21 +1875,21 @@
                 "Factors": "Integration of unified systems"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Business Continuity Planning",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Backup and recovery systems, failover clusters, and disaster recovery platforms.",
                 "Factors": "Disruption to processes"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Cybersecurity",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Firewalls, intrusion detection systems, endpoint protection, identity and access management.",
                 "Factors": "Data security"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Privacy and Security",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Encryption tools, access control systems, data loss prevention software.",
@@ -1909,42 +1909,42 @@
                 "Factors": "Timeliness"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Data Quality",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Data cleansing tools, validation software, profiling and monitoring tools.",
                 "Factors": "Accuracy of data"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Reporting Systems",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Business intelligence platforms, dashboard software, data visualization tools.",
                 "Factors": "Accuracy of Reporting"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Data Interoperability",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Data integration platforms, API connectors, standard data exchange protocols (e.g., HL7, FHIR).",
                 "Factors": "Integration of data"
             },
             {
-                "Sub Groups": "System Deployment and Integration",
+                "Sub Groups": "Reliable Implementation",
                 "Catergories": "Platform Architecture",
                 "Groups": "System Deployment and Integration",
                 "Sub Catergories": "Cloud platforms, microservices architecture, container orchestration.",
                 "Factors": "Unified platform"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Open Data / Interoperability",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Open data standards, APIs, data portals.",
                 "Factors": "Data accessibility"
             },
             {
-                "Sub Groups": "Data Security, Quality and Privacy",
+                "Sub Groups": "Data integrity",
                 "Catergories": "Privacy and Security",
                 "Groups": "Data Security, Quality and Privacy",
                 "Sub Catergories": "Encryption tools, access control systems, data loss prevention software.",
@@ -1964,14 +1964,14 @@
                 "Factors": "Prioritization"
             },
             {
-                "Sub Groups": "Business Alignment",
+                "Sub Groups": "Strategic Cohesion",
                 "Catergories": "Strategic Planning",
                 "Groups": "Business Alignment",
                 "Sub Catergories": "Roadmapping tools, portfolio management software, scenario analysis tools.",
                 "Factors": "Alignment"
             },
             {
-                "Sub Groups": "System Maintenance and Support",
+                "Sub Groups": "Responsive Support",
                 "Catergories": "System Monitoring",
                 "Groups": "System Maintenance and Support",
                 "Sub Catergories": "Monitoring dashboards, alerting systems, log management tools.",
@@ -1991,14 +1991,14 @@
                 "Factors": "Infrastructure efficiency"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Standards",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Industry-standard schemas, ontologies, data dictionaries, protocol compliance.",
                 "Factors": "Standardized information"
             },
             {
-                "Sub Groups": "Resource Management and Utilization",
+                "Sub Groups": "Sustainable Efficiency",
                 "Catergories": "Efficiency Tools",
                 "Groups": "Resource Management and Utilization",
                 "Sub Catergories": "Monitoring software, load balancers, resource scheduling platforms.",
@@ -2018,14 +2018,14 @@
                 "Factors": "Infrastructure coherence"
             },
             {
-                "Sub Groups": "Operational Effectiveness and Efficiency",
+                "Sub Groups": "Process optimization",
                 "Catergories": "Compliance Management",
                 "Groups": "Operational Effectiveness and Efficiency",
                 "Sub Catergories": "Workflow enforcement tools, automated compliance monitoring, reporting dashboards.",
                 "Factors": "Standard adherence"
             },
             {
-                "Sub Groups": "Data and Information Management",
+                "Sub Groups": "Data governance",
                 "Catergories": "Data Governance",
                 "Groups": "Data and Information Management",
                 "Sub Catergories": "Data cataloging, metadata management, master data management systems.",

@@ -1,49 +1,43 @@
+// SubGroup.js
 class SubGroup {
   constructor(name) {
     this.name = name;
   }
 
-  static createAnalysisTable(subGroups) {
-    const counts = {};
-    let total = 0;
+static createAnalysisTable(subGroups) {
+  const total = subGroups.reduce((sum, subGroup) => sum + subGroup.count, 0);
+  
+  // Sort by count descending
+  const sorted = [...subGroups].sort((a, b) => b.count - a.count);
 
-    subGroups.forEach(sg => {
-      const name = sg.name;
-      if (!counts[name]) counts[name] = 0;
-      counts[name]++;
-      total++;
-    });
-
-    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-
-    let html = `
-      <table>
-        <thead>
-          <tr>
-            <th>Sub Group</th>
-            <th>Count</th>
-            <th>Percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
-
-    sorted.forEach(([name, count]) => {
-      const percent = ((count / total) * 100).toFixed(1);
-      html += `
+  let html = `
+    <table class="analysis-table">
+      <thead>
         <tr>
-          <td>${name}</td>
-          <td>${count}</td>
-          <td>${percent}%</td>
+          <th>Sub Group</th>
+          <th>Count</th>
+          <th>Percentage</th>
         </tr>
-      `;
-    });
+      </thead>
+      <tbody>
+  `;
 
-    html += '</tbody></table>';
-    return html;
-  }
+  sorted.forEach(subGroup => {
+    const percent = ((subGroup.count / total) * 100).toFixed(1);
+    html += `
+      <tr>
+        <td>${subGroup.name}</td>
+        <td>${subGroup.count}</td>
+        <td>${percent}%</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table>';
+  return html;
+}
 
   toString() {
-    return `SubGroup: ${this.name}`;
+    return this.name;
   }
 }

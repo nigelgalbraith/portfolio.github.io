@@ -1,49 +1,61 @@
+// Group.js
 class Group {
   constructor(name) {
     this.name = name;
+    this.subGroups = [];
   }
 
-  static createAnalysisTable(groups) {
-    const counts = {};
-    let total = 0;
+  findSubGroup(name) {
+    return this.subGroups.find(sg => sg.name === name);
+  }
 
-    groups.forEach(g => {
-      const name = g.name;
-      if (!counts[name]) counts[name] = 0;
-      counts[name]++;
-      total++;
-    });
+  addSubGroup(subGroup) {
+    if (!this.findSubGroup(subGroup.name)) {
+      this.subGroups.push(subGroup);
+    }
+    return this;
+  }
 
-    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+static createAnalysisTable(groups) {
+  const counts = {};
+  let total = 0;
 
-    let html = `
-      <table>
-        <thead>
-          <tr>
-            <th>Group</th>
-            <th>Count</th>
-            <th>Percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
+  // Use the count property we added to each group
+  groups.forEach(group => {
+    counts[group.name] = group.count;
+    total += group.count;
+  });
 
-    sorted.forEach(([name, count]) => {
-      const percent = ((count / total) * 100).toFixed(1);
-      html += `
+  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+
+  let html = `
+    <table class="group-analysis">
+      <thead>
         <tr>
-          <td>${name}</td>
-          <td>${count}</td>
-          <td>${percent}%</td>
+          <th>Group</th>
+          <th>Count</th>
+          <th>Percentage</th>
         </tr>
-      `;
-    });
+      </thead>
+      <tbody>
+  `;
 
-    html += '</tbody></table>';
-    return html;
-  }
+  sorted.forEach(([name, count]) => {
+    const percent = ((count / total) * 100).toFixed(1);
+    html += `
+      <tr>
+        <td>${name}</td>
+        <td>${count}</td>
+        <td>${percent}%</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table>';
+  return html;
+}
 
   toString() {
-    return `Group: ${this.name}`;
+    return this.name;
   }
 }

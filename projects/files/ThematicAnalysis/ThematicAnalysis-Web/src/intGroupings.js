@@ -1,45 +1,44 @@
-function mainGroupings() {
-  const extracts = Controller.setup(jsonDataThematic);
+function createGroupingsTable(extracts) {
+  // Create a map of factors to their groups and subgroups
   const factorMap = new Map();
 
   extracts.forEach(extract => {
-    // Create a map of all possible combinations
-    extract.factors.forEach(factor => {
+    extract.factors.forEach((factor, index) => {
       if (!factorMap.has(factor.name)) {
-        // Find first matching group (if any)
-        const group = extract.groups.length > 0 ? extract.groups[0].name : "";
-        // Find first matching subgroup (if any)
-        const subGroup = extract.subGroups.length > 0 ? extract.subGroups[0].name : "";
+        // Get matching group and subgroup by index
+        const group = extract.groups[index] || "";
+        const subGroup = extract.subGroups[index] || "";
         
-        factorMap.set(factor.name, { 
-          group, 
-          subGroup 
+        factorMap.set(factor.name, {
+          group: group,
+          subGroup: subGroup
         });
       }
     });
   });
 
-  const factors = Array.from(factorMap.keys()).sort();
+  // Sort factors alphabetically
+  const sortedFactors = Array.from(factorMap.keys()).sort();
 
   let html = `
-    <table class="styled-table">
+    <table class="groupings-table">
       <thead>
         <tr>
-          <th class="grouping-table">Factor</th>
-          <th class="grouping-table">Group</th>
-          <th class="grouping-table">Sub Group</th>
+          <th>Factor</th>
+          <th>Group</th>
+          <th>Sub Group</th>
         </tr>
       </thead>
       <tbody>
   `;
 
-  factors.forEach(factorName => {
+  sortedFactors.forEach(factorName => {
     const { group, subGroup } = factorMap.get(factorName);
     html += `
       <tr>
         <td>${factorName}</td>
-        <td>${group || ""}</td>
-        <td>${subGroup || ""}</td>
+        <td>${group}</td>
+        <td>${subGroup}</td>
       </tr>
     `;
   });
@@ -48,8 +47,32 @@ function mainGroupings() {
       </tbody>
     </table>
   `;
-
-  document.getElementById('groupings-container').innerHTML = html;
+  return html;
 }
 
-window.onload = mainGroupings;
+function main() {
+  try {
+    const extracts = Controller.setup(jsonDataThematic);
+    const container = document.getElementById("groupings-container");
+    
+    if (!container) {
+      throw new Error("Groupings container element not found");
+    }
+    
+    container.innerHTML = createGroupingsTable(extracts);
+    
+  } catch (error) {
+    console.error("Error loading groupings:", error);
+    const container = document.getElementById("groupings-container");
+    if (container) {
+      container.innerHTML = `<div class="error">Error loading groupings: ${error.message}</div>`;
+    }
+  }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(main, 1);
+} else {
+  window.addEventListener("DOMContentLoaded", main);
+}

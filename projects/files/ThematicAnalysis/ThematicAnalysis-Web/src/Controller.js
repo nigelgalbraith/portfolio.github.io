@@ -1,34 +1,28 @@
 class Controller {
   static setup(jsonData) {
-    const extracts = [];
-
-    jsonData.forEach(entry => {
+    return jsonData.map(entry => {
       const extract = new Extract(entry);
-
-      // Handle Factors
-      const factors = entry.Factors || entry.factors || entry.Wrapper?.map(w => w.Factors) || [];
-      factors.flat().filter(Boolean).forEach(name => {
-        extract.addFactor(new Factor(name));
+      
+      // Process factors
+      const factors = entry.Factors || [];
+      factors.forEach(factorName => {
+        const factor = extract.addFactor(factorName);
+        
+        // Process groups for this factor
+        const groups = entry.Groups || [];
+        groups.forEach(groupName => {
+          const group = new Group(groupName);
+          factor.addGroup(group);
+          
+          // Process subgroups for this group
+          const subGroups = entry["Sub Groups"] || [];
+          subGroups.forEach(subGroupName => {
+            group.addSubGroup(new SubGroup(subGroupName));
+          });
+        });
       });
-
-      // Handle Groups
-      const groups = entry.Groups || entry.groups || entry.Wrapper?.map(w => w.Groups) || [];
-      groups.flat().filter(Boolean).forEach(name => {
-        extract.addGroup(new Group(name));
-      });
-
-      // Handle SubGroups
-      const subGroups = entry["Sub Groups"] || entry.subGroups || entry.Wrapper?.map(w => w["Sub Groups"]) || [];
-      subGroups.flat().filter(Boolean).forEach(name => {
-        extract.addSubGroup(new SubGroup(name));
-      });
-
-      extract.sortFactors();
-      extract.sortGroups();
-      extract.sortSubGroups();
-      extracts.push(extract);
+      
+      return extract;
     });
-
-    return extracts;
   }
 }

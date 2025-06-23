@@ -1,6 +1,18 @@
 class Factor {
   constructor(name) {
     this.name = name;
+    this.groups = []; 
+  }
+
+  findGroup(name) {
+    return this.groups.find(g => g.name === name);
+  }
+
+  addGroup(group) {
+    if (!this.findGroup(group.name)) {
+      this.groups.push(group);
+    }
+    return this; 
   }
 
   static createAnalysisTable(factors) {

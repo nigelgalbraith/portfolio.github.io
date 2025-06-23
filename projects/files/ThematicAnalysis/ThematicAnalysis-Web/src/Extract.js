@@ -5,10 +5,7 @@ class Extract {
     this.extract = entry.Extracts;
     this.facts = entry.Facts;
     this.notes = entry["Notes/Additional"] || null;
-
-    this.factors = [];
-    this.groups = [];
-    this.subGroups = [];
+    this.factors = []; // Only factors at extract level
   }
 
   // Factor methods
@@ -16,44 +13,17 @@ class Extract {
     return this.factors.find(f => f.name === name);
   }
 
-  addFactor(factorItem) {
-    if (!this.findFactor(factorItem.name)) {
-      this.factors.push(factorItem);
+  addFactor(name) {
+    let factor = this.findFactor(name);
+    if (!factor) {
+      factor = new Factor(name);
+      this.factors.push(factor);
     }
+    return factor; // Return the factor for chaining
   }
 
   sortFactors() {
     this.factors.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  // Group methods
-  findGroup(name) {
-    return this.groups.find(g => g.name === name);
-  }
-
-  addGroup(groupItem) {
-    if (!this.findGroup(groupItem.name)) {
-      this.groups.push(groupItem);
-    }
-  }
-
-  sortGroups() {
-    this.groups.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  // SubGroup methods
-  findSubGroup(name) {
-    return this.subGroups.find(sg => sg.name === name);
-  }
-
-  addSubGroup(subGroupItem) {
-    if (!this.findSubGroup(subGroupItem.name)) {
-      this.subGroups.push(subGroupItem);
-    }
-  }
-
-  sortSubGroups() {
-    this.subGroups.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // Collection methods
@@ -65,30 +35,69 @@ class Extract {
     return allFactors;
   }
 
-  static getAllGroups(extracts) {
-    const allGroups = [];
+  static getGroupCounts(extracts) {
+    const groupCounts = {};
+    
     extracts.forEach(extract => {
-      allGroups.push(...extract.groups);
+      const seenGroups = new Set(); // Track groups per extract
+      
+      extract.factors.forEach(factor => {
+        factor.groups.forEach(group => {
+          if (!seenGroups.has(group.name)) {
+            seenGroups.add(group.name);
+            groupCounts[group.name] = (groupCounts[group.name] || 0) + 1;
+          }
+        });
+      });
     });
-    return allGroups;
+    
+    return groupCounts;
   }
 
-  static getAllSubGroups(extracts) {
-    const allSubGroups = [];
+  static getSubGroupCounts(extracts) {
+    const subGroupCounts = {};
+    
     extracts.forEach(extract => {
-      allSubGroups.push(...extract.subGroups);
+      const seenSubGroups = new Set(); // Track subgroups per extract
+      
+      extract.factors.forEach(factor => {
+        factor.groups.forEach(group => {
+          group.subGroups.forEach(subGroup => {
+            if (!seenSubGroups.has(subGroup.name)) {
+              seenSubGroups.add(subGroup.name);
+              subGroupCounts[subGroup.name] = (subGroupCounts[subGroup.name] || 0) + 1;
+            }
+          });
+        });
+      });
     });
-    return allSubGroups;
+    
+    return subGroupCounts;
+  }
+
+
+  get groups() {
+    return [...new Set(this.factors.flatMap(f => f.groups))];
+  }
+
+  get subGroups() {
+    return [...new Set(this.factors.flatMap(f => 
+      f.groups.flatMap(g => g.subGroups)
+    ))];
   }
 
   toString() {
     this.sortFactors();
-    this.sortGroups();
-    this.sortSubGroups();
-
+    
     const factorNames = this.factors.map(f => f.name).join(", ") || "None";
-    const groupNames = this.groups.map(g => g.name).join(", ") || "None";
-    const subGroupNames = this.subGroups.map(sg => sg.name).join(", ") || "None";
+    const groupNames = [...new Set(
+      this.factors.flatMap(f => f.groups.map(g => g.name))
+    )].join(", ") || "None";
+    const subGroupNames = [...new Set(
+      this.factors.flatMap(f => 
+        f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
+      )
+    )].join(", ") || "None";
 
     return `
             ID: ${this.id}
@@ -106,6 +115,16 @@ class Extract {
     const modalId = `modal-extract-${this.id}`;
     const modalContentId = `modal-content-${this.id}`;
 
+    const factorsDisplay = this.factors.map(f => f.name).join("<br><br>") || "None";
+    const groupsDisplay = [...new Set(
+      this.factors.flatMap(f => f.groups.map(g => g.name))
+    )].join("<br><br>") || "None";
+    const subGroupsDisplay = [...new Set(
+      this.factors.flatMap(f => 
+        f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
+      )
+    )].join("<br><br>") || "None";
+
     return `
       <tr>
         <td>${this.id}</td>
@@ -120,9 +139,9 @@ class Extract {
           </div>
         </td>
         <td>${this.facts || "None"}</td>
-        <td>${this.factors.map(f => f.name).join("<br><br>") || "None"}</td>
-        <td>${this.groups.map(g => g.name).join("<br><br>") || "None"}</td>
-        <td>${this.subGroups.map(sg => sg.name).join("<br><br>") || "None"}</td>
+        <td>${factorsDisplay}</td>
+        <td>${groupsDisplay}</td>
+        <td>${subGroupsDisplay}</td>
       </tr>
     `;
   }
