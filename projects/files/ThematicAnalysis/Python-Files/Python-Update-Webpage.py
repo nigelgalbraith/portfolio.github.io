@@ -14,7 +14,8 @@ IMPORT_PYTHON = "import-Excel-Data.py"
 CLEAN_PYTHON = "clean-JSON-Data.py"
 FILE_TO_DEST = {
                 "json_files/toolJSON.js": "../SearchTool-Web/src",
-                "json_files/thematic_analysisJSON.js": "../ThematicAnalysis-Web/src"
+                "json_files/thematic_analysisJSON.js": "../ThematicAnalysis-Web/src",
+                "json_files/risk_matrixJSON.js": "../ThematicAnalysis-Web/src"
                 }
 
 

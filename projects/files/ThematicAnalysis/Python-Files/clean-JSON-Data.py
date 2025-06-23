@@ -1,7 +1,7 @@
 import json
 from collections import defaultdict
 
-#Constants
+# Constants
 TOOL_INPUT_JSON = "json_files/tool.json"
 TOOL_OUTPUT_JSON = "json_files/tool-clean.json"
 TOOL_OUTPUT_JS = "json_files/toolJSON.js"
@@ -18,6 +18,12 @@ THEMATIC_KEYS_TO_SPLIT = ["Factors", "Groups", "Sub Groups", "Glossary Check"]
 THEMATIC_JSON_PREFIX = "jsonDataThematic"
 THEMATIC_GROUP_BY_KEYS = ["ID","References","Extracts","Facts"]
 THEMATIC_SUB_KEY_FIELDS = ["Sub Groups", "Groups", "Factors"]
+
+RISK_INPUT_JSON = "json_files/risk_matrix.json"
+RISK_OUTPUT_JSON = "json_files/risk_matrix_clean.json"
+RISK_OUTPUT_JS = "json_files/risk_matrixJSON.js"
+RISK_KEYS_TO_SPLIT = []
+RISK_JSON_PREFIX = "jsonDataRisk"
 
 SEPARATOR = "\n"
 TEXT_REMOVE = ["\u00a0"]
@@ -52,7 +58,7 @@ def transform_fields_to_lists(data, keys_to_split, separator):
                 item[key] = [p.strip() for p in parts if p.strip()]
     return data
 
-def group_and_zip_concepts(data, group_by_keys, sub_group_key, sub_key_fields):
+def grouped_and_wrap_data(data, group_by_keys, sub_group_key, sub_key_fields):
     grouped = defaultdict(dict)
     for item in data:
         group_key = tuple(item.get(k, '') for k in group_by_keys)
@@ -65,7 +71,6 @@ def group_and_zip_concepts(data, group_by_keys, sub_group_key, sub_key_fields):
             if isinstance(val, list):
                 lists.append(val)
             else:
-                # If the field exists but is not a list, treat as empty list
                 lists.append([])
 
         lengths = [len(lst) for lst in lists if len(lst) > 0]
@@ -74,21 +79,19 @@ def group_and_zip_concepts(data, group_by_keys, sub_group_key, sub_key_fields):
         else:
             n = min(lengths)
 
-        concepts = []
+        wrapped_groups = []
         for i in range(n):
             concept_obj = {}
             for j, key in enumerate(sub_key_fields):
-                # Defensive: if list shorter than n, skip or use empty string
                 concept_obj[key] = lists[j][i] if i < len(lists[j]) else ""
-            concepts.append(concept_obj)
+            wrapped_groups.append(concept_obj)
 
         if sub_group_key in grouped[group_key]:
-            grouped[group_key][sub_group_key].extend(concepts)
+            grouped[group_key][sub_group_key].extend(wrapped_groups)
         else:
-            grouped[group_key][sub_group_key] = concepts
+            grouped[group_key][sub_group_key] = wrapped_groups
 
     return list(grouped.values())
-
 
 def split_fields(entry, keys_to_split, separator, remove_chars):
     for key in keys_to_split:
@@ -100,12 +103,15 @@ def split_fields(entry, keys_to_split, separator, remove_chars):
 def clean_simple_list(data, keys_to_split, separator, remove_chars):
     return [split_fields(item, keys_to_split, separator, remove_chars) for item in data]
 
+def transform_data(data):
+    """Convert risk matrix array to object with integer keys"""
+    return {i+1: item for i, item in enumerate(data)}
 
 if __name__ == "__main__":
     try:
         tool_data = read_json(TOOL_INPUT_JSON)
         tool_data = transform_fields_to_lists(tool_data, TOOL_KEYS_TO_SPLIT, SEPARATOR)
-        grouped_tool_data = group_and_zip_concepts(tool_data, TOOL_GROUP_BY_KEYS, TOOL_SUB_GROUP_KEY, TOOL_SUB_KEY_FIELDS)
+        grouped_tool_data = grouped_and_wrap_data(tool_data, TOOL_GROUP_BY_KEYS, TOOL_SUB_GROUP_KEY, TOOL_SUB_KEY_FIELDS)
         write_json(grouped_tool_data, TOOL_OUTPUT_JSON)
         add_prefix_to_json(TOOL_OUTPUT_JSON, TOOL_OUTPUT_JS, TOOL_JSON_PREFIX)
     except Exception as e:
@@ -118,3 +124,12 @@ if __name__ == "__main__":
         add_prefix_to_json(THEMATIC_OUTPUT_JSON, THEMATIC_OUTPUT_JS, THEMATIC_JSON_PREFIX)
     except Exception as e:
         print(f"Error processing thematic_analysis.json: {e}")
+
+    try:
+        risk_data = read_json(RISK_INPUT_JSON)
+        risk_data = clean_simple_list(risk_data, RISK_KEYS_TO_SPLIT, SEPARATOR, TEXT_REMOVE)
+        transformed_data = transform_data(risk_data)
+        write_json(transformed_data, RISK_OUTPUT_JSON)
+        add_prefix_to_json(RISK_OUTPUT_JSON, RISK_OUTPUT_JS, RISK_JSON_PREFIX)
+    except Exception as e:
+        print(f"Error processing risk_matrix.json: {e}")

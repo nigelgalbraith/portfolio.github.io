@@ -21,6 +21,10 @@ SHEETS_TO_EXPORT = {
         "filename": "thematic_analysis.json",
         "start_row": 7
     },
+    "Risk Matrix": {
+        "filename": "risk_matrix.json",
+        "start_row": 3
+    },
 }
 
 def install_module(module_name):
