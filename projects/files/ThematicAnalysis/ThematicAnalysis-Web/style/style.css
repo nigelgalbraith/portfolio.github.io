@@ -200,6 +200,11 @@ table {
   text-align: center;
 }
 
+.risk-group-table td:nth-child(2),
+.risk-group-table th:nth-child(2){
+  width: 10%;
+}
+
 .risk-group-table th {
   background-color: #007acc;
   color: white;
@@ -265,42 +270,67 @@ table {
 }
 
 
-/* Risk Model */
 /* Model Builder Styles */
-.model-section {
-  padding: 20px;
+.riskCatergory-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .input-group label {
-  display: block;
-  margin-bottom: 5px;
   font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
 }
 
-.input-group input,
-.input-group select {
-  padding: 8px;
+.input-group input {
+  padding: 8px 12px;
   width: 200px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  text-align: center;
 }
 
-#generateModel {
-  padding: 10px 20px;
+#factorLimit {
+  padding: 8px 12px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#generateRiskCatergories {
+  padding: 10px 25px;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+#generateRiskCatergories:hover {
+  background-color: #3e8e41;
 }
 
 #modelResults {
-  margin-top: 20px;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .summary {

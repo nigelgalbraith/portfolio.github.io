@@ -1,4 +1,3 @@
-// Group.js
 class Group {
   constructor(name) {
     this.name = name;
@@ -16,44 +15,43 @@ class Group {
     return this;
   }
 
-static createAnalysisTable(groups) {
-  const counts = {};
-  let total = 0;
+  static createAnalysisTable(groups) {
+    const counts = {};
+    let total = 0;
 
-  // Use the count property we added to each group
-  groups.forEach(group => {
-    counts[group.name] = group.count;
-    total += group.count;
-  });
+    groups.forEach(group => {
+      counts[group.name] = group.count;
+      total += group.count;
+    });
 
-  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
 
-  let html = `
-    <table class="group-analysis">
-      <thead>
-        <tr>
-          <th>Group</th>
-          <th>Count</th>
-          <th>Percentage</th>
-        </tr>
-      </thead>
-      <tbody>
-  `;
-
-  sorted.forEach(([name, count]) => {
-    const percent = ((count / total) * 100).toFixed(1);
-    html += `
-      <tr>
-        <td>${name}</td>
-        <td>${count}</td>
-        <td>${percent}%</td>
-      </tr>
+    let html = `
+      <table class="group-analysis">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Count</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
     `;
-  });
 
-  html += '</tbody></table>';
-  return html;
-}
+    sorted.forEach(([name, count]) => {
+      const percent = ((count / total) * 100).toFixed(1);
+      html += `
+        <tr>
+          <td>${name}</td>
+          <td>${count}</td>
+          <td>${percent}%</td>
+        </tr>
+      `;
+    });
+
+    html += '</tbody></table>';
+    return html;
+  }
 
   toString() {
     return this.name;

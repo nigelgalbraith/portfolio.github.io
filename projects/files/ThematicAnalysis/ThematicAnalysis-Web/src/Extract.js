@@ -36,29 +36,26 @@ class Extract {
   }
 
   static getGroupCounts(extracts) {
-    const groupCounts = {};
-    
+    const counts = {};
     extracts.forEach(extract => {
-      const seenGroups = new Set(); // Track groups per extract
-      
+      const uniqueGroups = new Set();
       extract.factors.forEach(factor => {
         factor.groups.forEach(group => {
-          if (!seenGroups.has(group.name)) {
-            seenGroups.add(group.name);
-            groupCounts[group.name] = (groupCounts[group.name] || 0) + 1;
-          }
+          uniqueGroups.add(group.name);
         });
       });
+      uniqueGroups.forEach(groupName => {
+        counts[groupName] = (counts[groupName] || 0) + 1;
+      });
     });
-    
-    return groupCounts;
+    return counts;
   }
 
   static getSubGroupCounts(extracts) {
     const subGroupCounts = {};
     
     extracts.forEach(extract => {
-      const seenSubGroups = new Set(); // Track subgroups per extract
+      const seenSubGroups = new Set();
       
       extract.factors.forEach(factor => {
         factor.groups.forEach(group => {
@@ -75,6 +72,52 @@ class Extract {
     return subGroupCounts;
   }
 
+  static getTopFactorsByGroup(extracts, limit) {
+    const globalFactorCounts = {};
+    const groupFactorMap = {};
+    let totalFactorMentions = 0;
+
+    extracts.forEach(extract => {
+      extract.factors.forEach(() => {
+        totalFactorMentions++;
+      });
+
+      const seenFactors = new Set();
+      extract.factors.forEach(factor => {
+        if (!seenFactors.has(factor.name)) {
+          globalFactorCounts[factor.name] = (globalFactorCounts[factor.name] || 0) + 1;
+          seenFactors.add(factor.name);
+        }
+      });
+
+      const seenCombos = new Set();
+      extract.factors.forEach(factor => {
+        factor.groups.forEach(group => {
+          const comboKey = `${group.name}::${factor.name}`;
+          if (!seenCombos.has(comboKey)) {
+            if (!groupFactorMap[group.name]) {
+              groupFactorMap[group.name] = {};
+            }
+            groupFactorMap[group.name][factor.name] = (groupFactorMap[group.name][factor.name] || 0) + 1;
+            seenCombos.add(comboKey);
+          }
+        });
+      });
+    });
+
+    const topFactorsByGroup = {};
+    for (const group in groupFactorMap) {
+      topFactorsByGroup[group] = Object.entries(groupFactorMap[group])
+        .map(([factorName, count]) => ({
+          name: factorName,
+          percent: ((globalFactorCounts[factorName] / totalFactorMentions) * 100).toFixed(1)
+        }))
+        .sort((a, b) => b.percent - a.percent)
+        .slice(0, limit);
+    }
+
+    return topFactorsByGroup;
+  }
 
   get groups() {
     return [...new Set(this.factors.flatMap(f => f.groups))];
