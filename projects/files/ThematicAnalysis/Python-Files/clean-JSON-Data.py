@@ -104,7 +104,7 @@ def clean_simple_list(data, keys_to_split, separator, remove_chars):
     return [split_fields(item, keys_to_split, separator, remove_chars) for item in data]
 
 def transform_data(data):
-    """Convert risk matrix array to object with integer keys"""
+    """Convert array objects into array objects with numbered keys"""
     return {i+1: item for i, item in enumerate(data)}
 
 if __name__ == "__main__":
