@@ -188,4 +188,24 @@ class Extract {
       </tr>
     `;
   }
+
+  static calculateRiskScoreDOM() {
+    const factorRows = document.querySelectorAll('.factor-row');
+    let totalRiskScore = 0;
+
+    factorRows.forEach(row => {
+      const select = row.querySelector('.mitigation-select');
+      const percentCell = row.querySelector('.factor-percent');
+      const rawPercent = parseFloat(row.dataset.factorAdjustedPercent || '0');
+
+      if (select.value === 'N') {
+        percentCell.textContent = `${rawPercent.toFixed(1)}%`;
+        totalRiskScore += rawPercent;
+      } else {
+        percentCell.textContent = '0%';
+      }
+    });
+
+    document.getElementById('total-risk-score').textContent = `${totalRiskScore.toFixed(1)}%`;
+  }
 }

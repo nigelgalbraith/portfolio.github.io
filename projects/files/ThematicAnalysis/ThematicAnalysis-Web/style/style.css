@@ -1,4 +1,4 @@
-/* Font and global layout */
+/* ===== Global Styles ===== */
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* Header styling */
+/* ===== Header ===== */
 header {
   background-color: #eee;
   padding: 1em 2em;
@@ -22,7 +22,7 @@ header h1 {
   text-align: center;
 }
 
-/* Navbar styling */
+/* ===== Navbar ===== */
 .navbar {
   list-style: none;
   display: flex;
@@ -51,7 +51,7 @@ header h1 {
   font-weight: bold;
 }
 
-/* ===== Shared Table Base ===== */
+/* ===== Tables Base ===== */
 table {
   border-collapse: collapse;
   table-layout: fixed;
@@ -62,29 +62,28 @@ table {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Extracts Table Styles */
-.extracts-section table thead {
-  background-color: #007acc;
-  color: white;
-}
-
-.extracts-section table th,
-.extracts-section table td {
+th, td {
   border: 1px solid #ccc;
   padding: 8px 12px;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-.extracts-section tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+/* ===== Extracts Section Table ===== */
+.extracts-section table thead,
+.groupings-section table thead,
+.analysis-section table thead,
+.risk-group-table th,
+.risk-assessment-table th {
+  background-color: #007acc;
+  color: white;
 }
 
-.extracts-section tbody tr:hover {
-  background-color: #dbeeff;
+.risk-assessment-table thead tr th {
+  text-align: center;
 }
 
-/* Extracts column widths */
+
 .extracts-section th:nth-child(1),
 .extracts-section td:nth-child(1) {
   width: 2%;
@@ -119,26 +118,22 @@ table {
   text-align: center;
 }
 
-/* Groupings Table Styles */
-.groupings-section table thead {
-  background-color: #007acc;
-  color: white;
+/* Alternating row colors and hover for extracts */
+.extracts-section tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
+.extracts-section tbody tr:hover {
+  background-color: #dbeeff;
+}
+
+/* ===== Groupings Section Table ===== */
 .groupings-section table th {
   text-align: center;
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  word-wrap: break-word;
-  overflow-wrap: break-word
 }
 
 .groupings-section table td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
   text-align: left;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .groupings-section tbody tr:nth-child(even) {
@@ -149,26 +144,10 @@ table {
   background-color: #c8e6c9;
 }
 
-/* Analysis Tables */
-.analysis-section table thead {
-  background-color: #007acc;
-  color: white;
-}
-
-.analysis-section table th {
-  text-align: center;
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  word-wrap: break-word;
-  overflow-wrap: break-word
-}
-
+/* ===== Analysis Section Table ===== */
+.analysis-section table th,
 .analysis-section table td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
   text-align: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .analysis-section tbody tr:nth-child(even) {
@@ -179,39 +158,170 @@ table {
   background-color: #c8e6c9;
 }
 
-/* Risk Table */
-.risk-group-table,
-.risk-group-table th,
-.risk-group-table td {
-  border: 1px solid #ccc;
+/* ===== Risk Group Table ===== */
+.risk-group-table {
+  width: 90%;
+  margin: 0 auto 2em auto;
   border-collapse: collapse;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .risk-group-table th,
 .risk-group-table td {
   padding: 8px 12px;
+  border: 1px solid #ccc;
 }
 
 .risk-group-table tbody tr:hover {
-  background-color: #b6adad; 
-}
-
-.risk-group-table td:nth-child(2) {
-  text-align: center;
+  background-color: #b6adad;
 }
 
 .risk-group-table td:nth-child(2),
-.risk-group-table th:nth-child(2){
+.risk-group-table th:nth-child(2) {
+  width: 10%;
+  text-align: center;
+}
+
+/* ===== Risk Assessment Table ===== */
+.risk-assessment-table {
+  width: 100%;
+  margin-top: 2em;
+  border-collapse: collapse;
+}
+
+.risk-assessment-table th,
+.risk-assessment-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.risk-assessment-table th:nth-child(2),
+.risk-assessment-table td:nth-child(2),
+.risk-assessment-table th:nth-child(5),
+.risk-assessment-table td:nth-child(5) 
+{
+  width: 8%;
+  text-align: center;
+}
+
+.risk-assessment-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.risk-assessment-table tfoot {
+  font-weight: bold;
+  background-color: #e0e0e0;
+}
+
+/* ===== Risk Matrix and Summary Tables ===== */
+.risk-matrix-table,
+.risk-summary-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.risk-matrix-table th,
+.risk-matrix-table td,
+.risk-summary-table th,
+.risk-summary-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.risk-matrix-table th {
+  background-color: #0d54ec;
+  color: white;
+  text-align: center;
+}
+
+.tb-col-header {
+  background-color: #0d54ec;
+  color: white;
+  text-align: center;
+}
+
+.highlight-row {
+  background-color: hsl(347, 100%, 77%);
+}
+
+.risk-matrix-table th:nth-child(1),
+.risk-matrix-table td:nth-child(1),
+.risk-matrix-table th:nth-child(2),
+.risk-matrix-table td:nth-child(2),
+.risk-matrix-table th:nth-child(3),
+.risk-matrix-table td:nth-child(3) {
   width: 10%;
 }
 
-.risk-group-table th {
-  background-color: #007acc;
-  color: white;
+
+/* ===== Inputs and Buttons ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
 }
 
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
 
-/* Extract modal */
+.input-group input,
+#factorLimit {
+  padding: 8px 12px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+#generateRiskCatergories {
+  padding: 10px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#generateRiskCatergories:hover {
+  background-color: #3e8e41;
+}
+
+/* ===== Misc ===== */
+.summary {
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+.mitigation-select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* ===== Extract Modal ===== */
 .extract-link {
   color: #007acc;
   text-decoration: underline;
@@ -256,7 +366,7 @@ table {
   display: none;
 }
 
-/* Chart styling */
+/* ===== Chart Styling ===== */
 .chart-container {
   margin-top: 30px;
   width: 100%;
@@ -269,8 +379,7 @@ table {
   display: block;
 }
 
-
-/* Model Builder Styles */
+/* ===== Layout Helpers ===== */
 .riskCatergory-section {
   display: flex;
   flex-direction: column;
@@ -281,59 +390,6 @@ table {
   padding: 0 20px;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.input-group label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.centre-heading {
   text-align: center;
-  width: 100%;
-}
-
-.input-group input {
-  padding: 8px 12px;
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-}
-
-#factorLimit {
-  padding: 8px 12px;
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-align: center;
-}
-
-#generateRiskCatergories {
-  padding: 10px 25px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1rem;
-  transition: background-color 0.3s;
-}
-
-#generateRiskCatergories:hover {
-  background-color: #3e8e41;
-}
-
-#modelResults {
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.summary {
-  margin-top: 10px;
-  font-style: italic;
 }
