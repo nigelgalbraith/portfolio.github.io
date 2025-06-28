@@ -38,8 +38,23 @@
         <!-- Main Content -->
         <div class="main-content-text">
           <section>
-            <p>This project is a self-contained quiz generator...</p>
-            <!-- content truncated for brevity in explanation; full content should remain -->
+            <p>
+              This project is a self-contained quiz generator that allows questions, answers, and detailed explanations to be added through a structured Excel spreadsheet, then converted into a dynamic, interactive web-based quiz.
+            </p>
+            <p>
+              I created this tool to provide a simple, offline solution for quiz creation no need to sign up for third-party platforms or rely on internet connectivity. The ability to generate and run quizzes locally makes it ideal for personal study, classrooms, or environments with limited access.
+            </p>
+            <p>
+              Throughout my study, repetition and practice played a crucial role in helping me retain and apply new information. This project enabled me to create targeted quizzes tailored to my learning needs and pace. It gave me the flexibility to reinforce key concepts through custom questions and revisit topics as often as needed.
+            </p>
+            <p>
+              While the current version is built around CyberOps content, the design is adaptable users can easily modify or replace the spreadsheet to suit any subject area. Whether it's IT, science, languages, or general knowledge, the tool can be repurposed to match.
+            </p>
+            <p>
+              Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.
+            </p>
+
+            <!-- Boxed Sections -->
             <div class="boxed-content">
               <h2 class="centered-title">Update Custom Q&A</h2>
               <div class="image-zoom-wrapper">
@@ -50,8 +65,11 @@
                   <img src="images/optimized/mobile/standard/QuizCreatorScreenShot-Excel.png" alt="Quiz" class="centre-img" />
                 </picture>
               </div>
-              <p>Add questions and answers to the spreadsheet...</p>
+              <p>
+                Add questions and answers to the spreadsheet. Each question includes multiple answers and an explanation of the correct answer.  
+              </p>
             </div>
+            <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Update the Webpage</h2>
@@ -63,8 +81,17 @@
                   <img src="images/optimized/mobile/standard/quiz-updateFlow.png" alt="Quiz Python Program Flow Chart" class="centre-img" />
                 </picture>
               </div>
-              <p>Run the Python program...</p>
+              <p>
+                Run the Python program located in the Python-Import folder called <code>Python-Update-Webpage.py</code>. 
+              </p>
+              <p>This script:</p>
+              <ul>
+                <li>Installs the required pandas package if not already available,</li>
+                <li>Parses the Excel spreadsheet using <code>import-Tool-Data.py</code>,</li>
+                <li>Cleans and formats the resulting JSON using <code>clean-Tool-Data.py</code>.</li>
+              </ul>
             </div>
+            <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Select a Quiz</h2>
@@ -76,8 +103,11 @@
                   <img src="images/optimized/mobile/standard/QuizCreatorScreenShot-QuizIndex.png" alt="Quiz Main Page" class="centre-img" />
                 </picture>
               </div>
-              <p>To run the quiz open the index.html...</p>
+              <p>
+                To run the quiz open the index.html for the best experience, this quiz tool should be opened using Google Chrome or Chromium. Other browsers may cache JSON data differently, which can lead to some pages not being displayed. Using Chrome ensures the quiz always loads the latest data correctly.
+              </p>
             </div>
+            <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Check Each Answer</h2>
@@ -89,8 +119,15 @@
                   <img src="images/optimized/mobile/standard/QuizCreatorScreenShot-QuizPostAns.png" alt="Quiz Question Check" class="centre-img" />
                 </picture>
               </div>
-              <p>After answering each question...</p>
+              <p>
+                After answering each question and pressing the "Submit" button, the quiz shows
+                <ul>
+                  <li>If your answer was correct or incorrect</li>
+                  <li>A short explanation to help you learn</li>
+                </ul>
+              </p>
             </div>
+            <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Quiz Summary</h2>
@@ -102,8 +139,11 @@
                   <img src="images/optimized/mobile/standard/QuizCreatorScreenShot-QuizRedsults.png" alt="Quiz Results" class="centre-img" />
                 </picture>
               </div>
-              <p>Once all questions are answered...</p>
+              <p>
+                Once all questions are answered, clicking "Submit Quiz" shows a summary of your results.
+              </p>
             </div>
+            <br>
 
             <div class="boxed-content">
               <h2 class="centered-title">Custom Quizzes</h2>
@@ -115,27 +155,30 @@
                   <img src="images/optimized/mobile/standard/QuizCreatorScreenShot-QuizExcelSheetDefine.png" alt="Quiz ExcelSheet Definition" class="centre-img" />
                 </picture>
               </div>
-              <p>Although the quiz currently uses CyberOps module questions...</p>
+              <p>
+                Although the quiz currently uses CyberOps module questions, you can create new Excel spreadsheets for other topics. Update the Excel file path in <code>import-Tool-Data.py</code> to use the new dataset.
+              </p>
             </div>
+            <br>
 
             <!-- Quiz Links -->
-            <div class="boxed-content">
-              <h2 class="centered-title">Quiz Links</h2>
-              <div class="icon-grid">
-                <a href="files/QuizCreator/Index.html" class="grouped-list-item-button-link" target="_blank">
-                  <div class="icon-item">
-                    <img src="images/icons/optimized/Webpage.PNG" alt="Tools" class="li-icon" />
-                    <span>View Quiz Webpage</span>
-                  </div>
-                </a>
-                <a href="files/QuizCreator.zip" class="grouped-list-item-button-link" download>
-                  <div class="icon-item">
-                    <img src="images/icons/optimized/zip.png" alt="Tools" class="li-icon" />
-                    <span>Download Quiz</span>
-                  </div>
-                </a>
+              <div class="boxed-content">
+                <h2 class="centered-title">Quiz Links</h2>
+                  <div class="icon-grid">
+                    <a href="files/QuizCreator/Index.html" class="grouped-list-item-button-link" target="_blank">
+                      <div class="icon-item">
+                        <img src="images/icons/optimized/Webpage.PNG" alt="Tools" class="li-icon" />
+                        <span>View Quiz Webpage</span>
+                      </div>
+                    </a>
+                    <a href="files/QuizCreator.zip" class="grouped-list-item-button-link" download>
+                      <div class="icon-item">
+                        <img src="images/icons/optimized/zip.png" alt="Tools" class="li-icon" />
+                        <span>Download Quiz</span>
+                      </div>
+                    </a>
+                </div>
               </div>
-            </div>
           </section>
 
           <!-- Tools and Technologies -->
@@ -183,7 +226,7 @@
     </footer>
   </div>
 
-  <!-- Global Modal for Zoom -->
+  <!--  Single Global Modal for Fullscreen Zoom -->
   <div id="imgModal" class="modal" onclick="closeFullScreen()">
     <span class="close">&times;</span>
     <img class="modal-content" id="fullImg">
