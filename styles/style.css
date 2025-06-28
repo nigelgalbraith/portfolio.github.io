@@ -624,10 +624,17 @@ footer {
 .grouped-list-item-button{
  display: flex;
  flex-direction: column;
+ justify-content: center;
+ padding-right: 0;
 }
 
 .grouped-list-item-button-text h2{
  text-align: center;
+ padding-right: 1rem;
+}
+
+.grouped-list-item-button-text p{
+ padding-right: 1rem;
 }
 
 .main-content-image, .main-content-text, .grouped-list-item-button img{
@@ -641,8 +648,20 @@ footer {
  }
 
 .image-zoom-wrapper > img {
- max-width: 70%;
- padding: 0.2rem;
+  max-width: 100%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.main-content-image,
+.image-zoom-wrapper,
+picture.zoomable {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 0;
 }
 
 .carousel-slide img {
@@ -708,10 +727,13 @@ footer {
 }
 
 
-.grouped-list-item-button img {
- size: 5rem;
+.main-content-image,
+.image-zoom-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
 }
-
 
 .footer-icon {
  width: 1.25rem;
