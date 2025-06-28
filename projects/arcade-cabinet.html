@@ -23,61 +23,75 @@
     <main class="main-content">
       <div class="main-content-flex-centre">
         <h2>Custom Arcade Cabinet</h2>
-          <!-- Topo diagram and zoon in-->
-          <div class="image-zoom-wrapper">
-            <div class="carousel-container">
-              <div class="carousel-slide">
-                <img src="images/Arcade-Cabinet1.png" alt="Arcade Cabinet 1" class="carousel-image active" />
-                <img src="images/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" class="carousel-image" />
-              </div>
-              <div class="dots">
-                <div class="carousel-controls">
-                  <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
-                </div>
-              </div>
+
+        <!-- Image carousel with responsive images -->
+        <div class="image-zoom-wrapper">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <picture class="carousel-image active">
+                <source media="(min-width: 1280px)" srcset="images/optimized/desktop/standard/Arcade-Cabinet1.png" />
+                <source media="(min-width: 1024px)" srcset="images/optimized/laptop/standard/Arcade-Cabinet1.png" />
+                <source media="(min-width: 480px)" srcset="images/optimized/mobile/standard/Arcade-Cabinet1.png" />
+                <img src="images/optimized/mobile/standard/Arcade-Cabinet1.png" alt="Arcade Cabinet 1" />
+              </picture>
+
+              <picture class="carousel-image">
+                <source media="(min-width: 1280px)" srcset="images/optimized/desktop/standard/Arcade-Cabinet2.png" />
+                <source media="(min-width: 1024px)" srcset="images/optimized/laptop/standard/Arcade-Cabinet2.png" />
+                <source media="(min-width: 480px)" srcset="images/optimized/mobile/standard/Arcade-Cabinet2.png" />
+                <img src="images/optimized/mobile/standard/Arcade-Cabinet2.png" alt="Arcade Cabinet 2" />
+              </picture>
             </div>
-            <div id="imgModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="fullImg" />
+
+            <div class="dots">
+              <div class="carousel-controls">
+                <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+              </div>
             </div>
           </div>
-          
-          <!-- Main Content --> 
-          <div class="main-content-text">          
-            <section>
-              <p>
-                For this project, I built a custom MAME arcade cabinet using waste MDF and salvaged timber from my joinery work, giving new life to materials that would otherwise have been discarded. The core of the system is an old Dell OptiPlex Slimline from around 2005, equipped with a Core 2 Duo processor, repurposed to run classic games smoothly.
-              </p>
-              <p>
-                I integrated an i-PAC circuit board to manage the joystick and button controls for an authentic arcade experience. The visuals are displayed on a secondhand 32-inch TV, with a front LED fan and an external power button installed on the cabinet for easy access.
-              </p>              
-              <p>
-                Running Windows with HyperSpin, the cabinet supports over 4000 games, including titles from MAME, Neo Geo, PlayStation 1 & 2, Sega Master System, Sega Mega Drive, Mega CD, NES, and SNES all packed into one nostalgic gaming experience. To enhance immersion, I used local policy settings to hide the Windows system interface, providing a clean, arcade-style environment.
-              </p>
-            </section>
-            
+
+          <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImg" />
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-text">
+          <section>
+            <p>
+              For this project, I built a custom MAME arcade cabinet using waste MDF and salvaged timber from my joinery work, giving new life to materials that would otherwise have been discarded. The core of the system is an old Dell OptiPlex Slimline from around 2005, equipped with a Core 2 Duo processor, repurposed to run classic games smoothly.
+            </p>
+            <p>
+              I integrated an i-PAC circuit board to manage the joystick and button controls for an authentic arcade experience. The visuals are displayed on a secondhand 32-inch TV, with a front LED fan and an external power button installed on the cabinet for easy access.
+            </p>
+            <p>
+              Running Windows with HyperSpin, the cabinet supports over 4000 games, including titles from MAME, Neo Geo, PlayStation 1 & 2, Sega Master System, Sega Mega Drive, Mega CD, NES, and SNES all packed into one nostalgic gaming experience. To enhance immersion, I used local policy settings to hide the Windows system interface, providing a clean, arcade-style environment.
+            </p>
+          </section>
+
           <section>
             <!-- Tools and Technologies -->
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="../images/programing.png" alt="Tools" class="li-icon" />
+                  <img src="images/icons/optimized/programing.png" alt="Tools" class="li-icon" />
                   <span>Shell Scripting</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/python.png" alt="Python" class="li-icon" />
+                  <img src="images/icons/optimized/python.png" alt="Python" class="li-icon" />
                   <span>Python</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/woodwork.png" alt="Woodwork" class="li-icon" />
+                  <img src="images/icons/optimized/woodwork.png" alt="Woodwork" class="li-icon" />
                   <span>Joinery & Carpentry</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/tools.png" alt="Tools" class="li-icon" />
+                  <img src="images/icons/optimized/tools.png" alt="Tools" class="li-icon" />
                   <span>Power Tools & Safety</span>
                 </div>
               </div>
@@ -88,7 +102,7 @@
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="../images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+                  <img src="images/icons/optimized/problem-solving.png" alt="Problem Solving" class="li-icon" />
                   <span>Debugging</span>
                 </div>
               </div>
@@ -102,13 +116,13 @@
     <footer>
       &copy; 2025 Nigel Galbraith |
       <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="../images/email.png" alt="Email" class="footer-icon" />
+        <img src="images/icons/optimized/email.png" alt="Email" class="footer-icon" />
       </a>
       <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="../images/github.png" alt="GitHub" class="footer-icon" />
+        <img src="images/icons/optimized/github.png" alt="GitHub" class="footer-icon" />
       </a>
       <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="../images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+        <img src="images/icons/optimized/linkedin.png" alt="LinkedIn" class="footer-icon" />
       </a>
     </footer>
   </div>

@@ -15,15 +15,15 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <div class="nav-links" id="navLinks">
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Main Brief Outline -->
@@ -46,9 +46,13 @@
             Please explore my <a href="projects.html">projects</a>, read more <a href="about.html">about me</a>, or get in touch. I'm always keen to collaborate with teams that value innovation, sustainability, and practical creativity.
           </p>
         </div>
-            <div class="main-content-image">
-              <img src="images/diverse.png" alt="Work background image" />
-            </div>
+        <div class="main-content-image">
+          <picture>
+            <source media="(max-width: 600px)" srcset="images/optimized/mobile/standard/diverse.png">
+            <source media="(max-width: 1024px)" srcset="images/optimized/laptop/standard/diverse.png">
+            <img src="images/optimized/desktop/standard/diverse.png" alt="Work background image" />
+          </picture>
+        </div>
       </div>
     </main>
 
@@ -56,13 +60,13 @@
     <footer>
       &copy; 2025 Nigel Galbraith |
       <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="images/email.png" alt="Email" class="footer-icon" />
+        <img src="images/icons/optimized/email.png" alt="Email" class="footer-icon" />
       </a>
       <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="images/github.png" alt="GitHub" class="footer-icon" />
+        <img src="images/icons/optimized/github.png" alt="GitHub" class="footer-icon" />
       </a>
       <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+        <img src="images/icons/optimized/linkedin.png" alt="LinkedIn" class="footer-icon" />
       </a>
     </footer>
   </div>

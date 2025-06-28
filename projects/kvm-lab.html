@@ -23,52 +23,58 @@
     <main class="main-content">
       <div class="main-content-flex-centre">
         <h2>KVM Student Labs Project</h2>
-          <!-- Topo diagram and zoon in-->
-          <div class="image-zoom-wrapper">
-            <img src="images/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img zoomable" onclick="openFullScreen(this)" />
-          </div>
-          
-          <!-- Main Content --> 
-          <div class="main-content-text">          
-            <section>
-              <p>
-                The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
-              </p>
-              <p>
-                Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
-              </p>
-              <p>
-                Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
-              </p>
-            </section>
-          <section>
 
+        <!-- Responsive Image -->
+        <div class="image-zoom-wrapper">
+          <picture class="zoomable" onclick="openFullScreen(this.querySelector('img'))">
+            <source media="(min-width: 1280px)" srcset="images/optimized/desktop/standard/KVM-Top.drawio.png" />
+            <source media="(min-width: 1024px)" srcset="images/optimized/laptop/standard/KVM-Top.drawio.png" />
+            <source media="(min-width: 480px)" srcset="images/optimized/mobile/standard/KVM-Top.drawio.png" />
+            <img src="images/optimized/mobile/standard/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img" />
+          </picture>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-text">          
+          <section>
+            <p>
+              The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
+            </p>
+            <p>
+              Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
+            </p>
+            <p>
+              Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
+            </p>
+          </section>
+
+          <section>
             <!-- Tools and Technologies -->
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="../images/ubuntu.png" alt="Linux" class="li-icon" />
+                  <img src="images/icons/optimized/ubuntu.png" alt="Linux" class="li-icon" />
                   <span>Ubuntu KVM</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/cockpit.png" alt="Networking" class="li-icon" />
+                  <img src="images/icons/optimized/cockpit.png" alt="Networking" class="li-icon" />
                   <span>Libvirt</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/virtual.png" alt="Virtualization" class="li-icon" />
+                  <img src="images/icons/optimized/virtual.png" alt="Virtualization" class="li-icon" />
                   <span>QEMU</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/programing.png" alt="Tools" class="li-icon" />
+                  <img src="images/icons/optimized/programing.png" alt="Tools" class="li-icon" />
                   <span>Shell Scripting</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/acl.png" alt="Fixes" class="li-icon" />
+                  <img src="images/icons/optimized/acl.png" alt="Fixes" class="li-icon" />
                   <span>Permissions</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/ad.png" alt="Cloud" class="li-icon" />
+                  <img src="images/icons/optimized/ad.png" alt="Cloud" class="li-icon" />
                   <span>Active Directory</span>
                 </div>
               </div>
@@ -79,19 +85,19 @@
             <div class="boxed-content">
               <div class="icon-grid">
                 <div class="icon-item">
-                  <img src="../images/problem-solving.png" alt="Problem Solving" class="li-icon" />
+                  <img src="images/icons/optimized/problem-solving.png" alt="Problem Solving" class="li-icon" />
                   <span>Debugging</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/teamwork.png" alt="Teamwork" class="li-icon" />
+                  <img src="images/icons/optimized/teamwork.png" alt="Teamwork" class="li-icon" />
                   <span>Collaboration & Testing</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/automation.png" alt="Linux" class="li-icon" />
+                  <img src="images/icons/optimized/automation.png" alt="Linux" class="li-icon" />
                   <span>System Automation</span>
                 </div>
                 <div class="icon-item">
-                  <img src="../images/degree.png" alt="Degree" class="li-icon" />
+                  <img src="images/icons/optimized/degree.png" alt="Degree" class="li-icon" />
                   <span>Security Best Practices</span>
                 </div>
               </div>
@@ -105,16 +111,18 @@
     <footer>
       &copy; 2025 Nigel Galbraith |
       <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="../images/email.png" alt="Email" class="footer-icon" />
+        <img src="images/icons/optimized/email.png" alt="Email" class="footer-icon" />
       </a>
       <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="../images/github.png" alt="GitHub" class="footer-icon" />
+        <img src="images/icons/optimized/github.png" alt="GitHub" class="footer-icon" />
       </a>
       <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="../images/linkedin.png" alt="LinkedIn" class="footer-icon" />
+        <img src="images/icons/optimized/linkedin.png" alt="LinkedIn" class="footer-icon" />
       </a>
     </footer>
   </div>
+
+  <!-- Zoom Modal -->
   <div id="imgModal" class="modal" onclick="closeFullScreen()">
     <span class="close">&times;</span>
     <img class="modal-content" id="fullImg">

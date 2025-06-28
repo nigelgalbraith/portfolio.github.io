@@ -3,17 +3,25 @@ function openFullScreen(imgElement) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("fullImg");
 
-  if (imgElement) {
-    modalImg.src = imgElement.src;
+  let src = "";
+
+  if (imgElement && imgElement.src) {
+    src = imgElement.src;
   } else {
     // fallback for carousel images
-    const carouselImgs = document.querySelectorAll(".carousel-image");
-    const visibleImg = Array.from(carouselImgs).find(img => img.classList.contains('active'));
-    if (visibleImg) {
-      modalImg.src = visibleImg.src;
+    const carouselImgs = document.querySelectorAll(".carousel-image img");
+    const activePicture = Array.from(carouselImgs).find(p => p.closest('picture').classList.contains('active'));
+    if (activePicture) {
+      src = activePicture.src;
     }
   }
 
+  // Swap "standard" for "zoom" if applicable
+  if (src.includes("/standard/")) {
+    src = src.replace("/standard/", "/zoom/");
+  }
+
+  modalImg.src = src;
   modal.style.display = "block";
 }
 
@@ -31,16 +39,16 @@ function toggleMenu() {
 let currentSlide = 0;
 
 function showSlide(index) {
-  const slides = document.querySelectorAll(".carousel-image");
+  const pictures = document.querySelectorAll(".carousel-image");
   const dots = document.querySelectorAll(".dot");
 
-  if (slides.length === 0) return;
+  if (pictures.length === 0) return;
 
   // Wrap around if index is out of bounds
-  if (index < 0) index = slides.length - 1;
-  if (index >= slides.length) index = 0;
+  if (index < 0) index = pictures.length - 1;
+  if (index >= pictures.length) index = 0;
 
-  slides.forEach((slide, i) => {
+  pictures.forEach((slide, i) => {
     slide.classList.toggle("active", i === index);
   });
 
@@ -71,13 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let startX = 0;
   let endX = 0;
   const threshold = 50; // minimum swipe distance in px to trigger slide change
-  const minSwipeDistance = 10; // minimum meaningful move
+  const minSwipeDistance = 10;
 
   const carouselContainer = document.querySelector('.carousel-container');
   if (carouselContainer) {
     carouselContainer.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
-      endX = startX; // initialize endX to startX
+      endX = startX;
     });
 
     carouselContainer.addEventListener('touchmove', (e) => {
@@ -107,10 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Image click handler to open zoom modal and stop event bubbling
-  document.querySelectorAll('.carousel-image').forEach(img => {
+  document.querySelectorAll('.carousel-image img').forEach(img => {
     img.addEventListener('click', (event) => {
       event.stopPropagation();
-      openFullScreen();
+      openFullScreen(img);
     });
   });
 
