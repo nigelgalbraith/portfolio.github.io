@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!fileName) return;
 
-    const baseName = fileName.split('.')[0];       // sharepointGPS
-    const ext = fileName.split('.').pop();         // png
+    const baseName = fileName.split('.')[0];       
+    const ext = fileName.split('.').pop();         
 
     const picture = document.createElement("picture");
     picture.className = "zoomable";
