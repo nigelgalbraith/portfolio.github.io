@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-    <title>Search Tool</title>
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-</head>
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Search Tool
+  </title>
+  <link href="style/style.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
   <nav>
-  <h1 id="pageHeading">Challenge Technology Can Improve</h1>
-
-  <!-- Dropdown list -->
-    <div id="list-box">
-      <label for="FactorSelect">Select a Challenge:</label>
-      <select id="FactorSelect" onchange="updateTable()"></select>
-    </div>
+   <h1 id="pageHeading">
+    Challenge Technology Can Improve
+   </h1>
+   <!-- Dropdown list -->
+   <div id="list-box">
+    <label for="FactorSelect">
+     Select a Challenge:
+    </label>
+    <select id="FactorSelect" onchange="updateTable()">
+    </select>
+   </div>
   </nav>
-
-    <!-- Selection Results Table -->
-    <div id="searchToolInfo"></div>
-
-    <!-- Expand & Collapse All buttons -->
-    <div class="buttons">
-      <button onclick="expandAll()">Expand All</button>
-      <button onclick="collapseAll()">Collapse All</button>
-    </div>
-
-  <script src="src/Extract.js"></script>
-  <script src="src/Wrapper.js"></script>
-  <script src="src/Factor.js"></script>
-  <script src="src/Group.js"></script>
-  <script src="src/SearchTool.js"></script>
-  <script src="src/Controller.js"></script>
-  <script src="src/toolJSON.js"></script> 
-  <script src="src/initSearchTool.js"></script>
-</body>
+  <!-- Selection Results Table -->
+  <div id="searchToolInfo">
+  </div>
+  <!-- Expand & Collapse All buttons -->
+  <div class="buttons">
+   <button onclick="expandAll()">
+    Expand All
+   </button>
+   <button onclick="collapseAll()">
+    Collapse All
+   </button>
+  </div>
+  <script src="src/Extract.js">
+  </script>
+  <script src="src/Wrapper.js">
+  </script>
+  <script src="src/Factor.js">
+  </script>
+  <script src="src/Group.js">
+  </script>
+  <script src="src/SearchTool.js">
+  </script>
+  <script src="src/Controller.js">
+  </script>
+  <script src="src/toolJSON.js">
+  </script>
+  <script src="src/initSearchTool.js">
+  </script>
+ </body>
 </html>

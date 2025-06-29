@@ -1,74 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nigel Galbraith - Portfolio</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-  <div class="grid-bg"></div>
-  <div class="container">
-    <h1>Nigel Galbraith Portfolio</h1>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <div class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Main Brief Outline -->
-    <main class="main-content">
-      <div class="main-content-flex">
-        <div class="main-content-text">
-          <p>
-            I’m an IT professional based in Christchurch, New Zealand, with a strong foundation in infrastructure, networking, virtualization, and automation. I build smart, sustainable, user-focused solutions whether for enterprise teams or home-grown DIY projects.
-          </p>
-
-          <p>
-            My journey into tech began with hands-on trades work, followed by academic studies at Ara Institute of Canterbury where I focused on cost-effective open-source virtualization and efficient IT infrastructure. That balance between practical know-how and innovative thinking continues to shape my approach today.
-          </p>
-
-          <p>
-            Whether it's building a SharePoint system to optimize traffic operations, automating my vegetable garden's irrigation, or running virtual machines for research and testing, I’m driven by problem-solving and efficiency. I believe technology can make life easier and greener when thoughtfully applied.
-          </p>
-
-          <p>
-            Please explore my <a href="projects.html">projects</a>, read more <a href="about.html">about me</a>, or get in touch. I'm always keen to collaborate with teams that value innovation, sustainability, and practical creativity.
-          </p>
-        </div>
-        <div class="main-content-image">
-          <picture>
-            <source media="(max-width: 600px)" srcset="images/optimized/mobile/standard/diverse.png">
-            <source media="(max-width: 1024px)" srcset="images/optimized/laptop/standard/diverse.png">
-            <img src="images/optimized/desktop/standard/diverse.png" alt="Work background image" />
-          </picture>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      &copy; 2025 Nigel Galbraith |
-      <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="images/icons/optimized/email.png" alt="Email" class="footer-icon" />
-      </a>
-      <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="images/icons/optimized/github.png" alt="GitHub" class="footer-icon" />
-      </a>
-      <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="images/icons/optimized/linkedin.png" alt="LinkedIn" class="footer-icon" />
-      </a>
-    </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nigel Galbraith - Portfolio
+  </title>
+  <link href="styles/style.css" rel="stylesheet"/>
+  <script defer="" src="js/script.js">
+  </script>
+ </head>
+ <body>
+  <div class="grid-bg">
   </div>
-</body>
+  <div class="container">
+   <h1>
+    Nigel Galbraith Portfolio
+   </h1>
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <button class="hamburger" onclick="toggleMenu()">
+     ☰
+    </button>
+    <div class="nav-links" id="navLinks">
+     <ul>
+      <li>
+       <a class="active" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="about.html">
+        About Me
+       </a>
+      </li>
+      <li>
+       <a href="projects.html">
+        Projects
+       </a>
+      </li>
+      <li>
+       <a href="resume.html">
+        Resume
+       </a>
+      </li>
+      <li>
+       <a href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+   <!-- Main Brief Outline -->
+   <main class="main-content">
+    <div class="main-content-flex">
+     <div class="main-content-text">
+      <p>
+       I’m an IT professional based in Christchurch, New Zealand, with a strong foundation in infrastructure, networking, virtualization, and automation. I build smart, sustainable, user-focused solutions whether for enterprise teams or home-grown DIY projects.
+      </p>
+      <p>
+       My journey into tech began with hands-on trades work, followed by academic studies at Ara Institute of Canterbury where I focused on cost-effective open-source virtualization and efficient IT infrastructure. That balance between practical know-how and innovative thinking continues to shape my approach today.
+      </p>
+      <p>
+       Whether it's building a SharePoint system to optimize traffic operations, automating my vegetable garden's irrigation, or running virtual machines for research and testing, I’m driven by problem-solving and efficiency. I believe technology can make life easier and greener when thoughtfully applied.
+      </p>
+      <p>
+       Please explore my
+       <a href="projects.html">
+        projects
+       </a>
+       , read more
+       <a href="about.html">
+        about me
+       </a>
+       , or get in touch. I'm always keen to collaborate with teams that value innovation, sustainability, and practical creativity.
+      </p>
+     </div>
+     <div class="main-content-image">
+      <picture>
+       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/diverse.png"/>
+       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/diverse.png"/>
+       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/diverse.png"/>
+       <img alt="Work background image" src="images/main/optimized/mobile/standard/diverse.png"/>
+      </picture>
+     </div>
+    </div>
+   </main>
+   <!-- Footer -->
+   <footer>
+    © 2025 Nigel Galbraith |
+    <a href="mailto:nigel.galbraith@proton.me" target="_blank">
+     <img alt="Email" class="footer-icon" src="images/icons/optimized/email.png"/>
+    </a>
+    <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" rel="noopener" target="_blank">
+     <img alt="GitHub" class="footer-icon" src="images/icons/optimized/github.png"/>
+    </a>
+    <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
+     <img alt="LinkedIn" class="footer-icon" src="images/icons/optimized/linkedin.png"/>
+    </a>
+   </footer>
+  </div>
+ </body>
 </html>

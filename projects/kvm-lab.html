@@ -1,131 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nigel Galbraith - KVM-Lab</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <script src="../js/script.js" defer></script>
-</head>
-<body>
-  <div class="grid-bg"></div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nigel Galbraith - KVM-Lab
+  </title>
+  <link href="../styles/style.css" rel="stylesheet"/>
+  <script defer="" src="../js/script.js">
+  </script>
+ </head>
+ <body>
+  <div class="grid-bg">
+  </div>
   <div class="container">
-    <h1>Nigel Galbraith Portfolio</h1>
-
-    <!-- Navigation Bar Top -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="../projects.html">Back To Projects</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main Brief Outline -->
-    <main class="main-content">
-      <div class="main-content-flex-centre">
-        <h2>KVM Student Labs Project</h2>
-
-        <!-- Responsive Image -->
-        <div class="image-zoom-wrapper">
-          <picture class="zoomable" onclick="openFullScreen(this.querySelector('img'))">
-            <source media="(min-width: 1280px)" srcset="images/optimized/desktop/standard/KVM-Top.drawio.png" />
-            <source media="(min-width: 1024px)" srcset="images/optimized/laptop/standard/KVM-Top.drawio.png" />
-            <source media="(min-width: 480px)" srcset="images/optimized/mobile/standard/KVM-Top.drawio.png" />
-            <img src="images/optimized/mobile/standard/KVM-Top.drawio.png" alt="KVM Labs Topology Diagram" class="centre-img" />
-          </picture>
+   <h1>
+    Nigel Galbraith Portfolio
+   </h1>
+   <!-- Navigation Bar Top -->
+   <nav class="navbar">
+    <ul>
+     <li>
+      <a href="../projects.html">
+       Back To Projects
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <!-- Main Brief Outline -->
+   <main class="main-content">
+    <div class="main-content-flex-centre">
+     <h2>
+      KVM Student Labs Project
+     </h2>
+     <!-- Responsive Image -->
+     <div class="image-zoom-wrapper">
+      <picture class="zoomable" onclick="openFullScreen(this.querySelector('img'))">
+       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/KVM-Top.drawio.png"/>
+       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/KVM-Top.drawio.png"/>
+       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/KVM-Top.drawio.png"/>
+       <img alt="KVM Labs Topology Diagram" class="centre-img" src="images/main/optimized/mobile/standard/KVM-Top.drawio.png"/>
+      </picture>
+     </div>
+     <!-- Main Content -->
+     <div class="main-content-text">
+      <section>
+       <p>
+        The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
+       </p>
+       <p>
+        Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
+       </p>
+       <p>
+        Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
+       </p>
+      </section>
+      <section>
+       <!-- Tools and Technologies -->
+       <h2 class="centered-title">
+        Tools and Technologies
+       </h2>
+       <div class="boxed-content">
+        <div class="icon-grid">
+         <div class="icon-item">
+          <img alt="Linux" class="li-icon" src="images/icons/optimized/ubuntu.png"/>
+          <span>
+           Ubuntu KVM
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Networking" class="li-icon" src="images/icons/optimized/cockpit.png"/>
+          <span>
+           Libvirt
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Virtualization" class="li-icon" src="images/icons/optimized/virtual.png"/>
+          <span>
+           QEMU
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Tools" class="li-icon" src="images/icons/optimized/programing.png"/>
+          <span>
+           Shell Scripting
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Fixes" class="li-icon" src="images/icons/optimized/acl.png"/>
+          <span>
+           Permissions
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Cloud" class="li-icon" src="images/icons/optimized/ad.png"/>
+          <span>
+           Active Directory
+          </span>
+         </div>
         </div>
-
-        <!-- Main Content -->
-        <div class="main-content-text">          
-          <section>
-            <p>
-              The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
-            </p>
-            <p>
-              Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
-            </p>
-            <p>
-              Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
-            </p>
-          </section>
-
-          <section>
-            <!-- Tools and Technologies -->
-            <h2 class="centered-title">Tools and Technologies</h2>
-            <div class="boxed-content">
-              <div class="icon-grid">
-                <div class="icon-item">
-                  <img src="images/icons/optimized/ubuntu.png" alt="Linux" class="li-icon" />
-                  <span>Ubuntu KVM</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/cockpit.png" alt="Networking" class="li-icon" />
-                  <span>Libvirt</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/virtual.png" alt="Virtualization" class="li-icon" />
-                  <span>QEMU</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/programing.png" alt="Tools" class="li-icon" />
-                  <span>Shell Scripting</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/acl.png" alt="Fixes" class="li-icon" />
-                  <span>Permissions</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/ad.png" alt="Cloud" class="li-icon" />
-                  <span>Active Directory</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Key Learnings -->
-            <h2 class="centered-title">Key Learnings</h2>
-            <div class="boxed-content">
-              <div class="icon-grid">
-                <div class="icon-item">
-                  <img src="images/icons/optimized/problem-solving.png" alt="Problem Solving" class="li-icon" />
-                  <span>Debugging</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/teamwork.png" alt="Teamwork" class="li-icon" />
-                  <span>Collaboration & Testing</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/automation.png" alt="Linux" class="li-icon" />
-                  <span>System Automation</span>
-                </div>
-                <div class="icon-item">
-                  <img src="images/icons/optimized/degree.png" alt="Degree" class="li-icon" />
-                  <span>Security Best Practices</span>
-                </div>
-              </div>
-            </div>
-          </section>
+       </div>
+       <!-- Key Learnings -->
+       <h2 class="centered-title">
+        Key Learnings
+       </h2>
+       <div class="boxed-content">
+        <div class="icon-grid">
+         <div class="icon-item">
+          <img alt="Problem Solving" class="li-icon" src="images/icons/optimized/problem-solving.png"/>
+          <span>
+           Debugging
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Teamwork" class="li-icon" src="images/icons/optimized/teamwork.png"/>
+          <span>
+           Collaboration &amp; Testing
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Linux" class="li-icon" src="images/icons/optimized/automation.png"/>
+          <span>
+           System Automation
+          </span>
+         </div>
+         <div class="icon-item">
+          <img alt="Degree" class="li-icon" src="images/icons/optimized/degree.png"/>
+          <span>
+           Security Best Practices
+          </span>
+         </div>
         </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      &copy; 2025 Nigel Galbraith |
-      <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-        <img src="images/icons/optimized/email.png" alt="Email" class="footer-icon" />
-      </a>
-      <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" target="_blank" rel="noopener">
-        <img src="images/icons/optimized/github.png" alt="GitHub" class="footer-icon" />
-      </a>
-      <a href="https://linkedin.com/in/nigelgalbraith" target="_blank" rel="noopener">
-        <img src="images/icons/optimized/linkedin.png" alt="LinkedIn" class="footer-icon" />
-      </a>
-    </footer>
+       </div>
+      </section>
+     </div>
+    </div>
+   </main>
+   <!-- Footer -->
+   <footer>
+    © 2025 Nigel Galbraith |
+    <a href="mailto:nigel.galbraith@proton.me" target="_blank">
+     <img alt="Email" class="footer-icon" src="images/icons/optimized/email.png"/>
+    </a>
+    <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" rel="noopener" target="_blank">
+     <img alt="GitHub" class="footer-icon" src="images/icons/optimized/github.png"/>
+    </a>
+    <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
+     <img alt="LinkedIn" class="footer-icon" src="images/icons/optimized/linkedin.png"/>
+    </a>
+   </footer>
   </div>
-
   <!-- Zoom Modal -->
-  <div id="imgModal" class="modal" onclick="closeFullScreen()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImg">
+  <div class="modal" id="imgModal" onclick="closeFullScreen()">
+   <span class="close">
+    ×
+   </span>
+   <img class="modal-content" id="fullImg"/>
   </div>
-</body>
+ </body>
 </html>
