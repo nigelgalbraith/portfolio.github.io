@@ -1,3 +1,7 @@
+# ===========================
+# IMPORTS
+# ===========================
+
 import os
 import sys
 import subprocess
@@ -9,6 +13,7 @@ from datetime import datetime
 # CONSTANTS
 # ===========================
 
+# Configuration for responsive main images
 IMAGE_PROFILES = {
     "main": {
         "input_dir": "images/main/original",
@@ -21,8 +26,8 @@ IMAGE_PROFILES = {
         }
     },
     "projects": {
-        "input_dir": "projects/main/images/original",
-        "output_base": "projects/main/images/optimized",
+        "input_dir": "projects/images/main/original",
+        "output_base": "projects/images/main/optimized",
         "quality": 85,
         "sizes": {
             "desktop": {"standard": 1280, "zoom": 1920},
@@ -32,6 +37,7 @@ IMAGE_PROFILES = {
     }
 }
 
+# Thumbnail and icon configuration
 ASSET_SETS = {
     "thumbs": {
         "main": {
@@ -63,13 +69,16 @@ ASSET_SETS = {
     }
 }
 
+# Packages to ensure are installed
 REQUIRED_PACKAGES = [
     ("Pillow", "PIL"),
     ("beautifulsoup4", "bs4")
 ]
 
+# Platforms this script is optimized for
 EXPECTED_PLATFORMS = ["debian", "ubuntu"]
 
+# Backup settings for HTML files
 HTML_BACKUPS = {
     ".": {
         "dest": "backups/html/main",
@@ -81,10 +90,12 @@ HTML_BACKUPS = {
     }
 }
 
+# HTML file processing config: responsive images + thumb/icon rewrites
 HTML_IMAGE_CONFIG = {
     ".": {
         "responsive": {
-            "base_path": "images/main/original/",
+            "base_path": ["images/main/original/",
+                          "images/main/"],
             "optimized_base": "images/main/optimized",
             "breakpoints": [
                 {"media": "(min-width: 1280px)", "folder": "desktop"},
@@ -96,19 +107,22 @@ HTML_IMAGE_CONFIG = {
         "thumbs": {
             "tag": "img",
             "attribute": "src",
-            "match": "images/thumbs/original/",
+            "match": ["images/thumbs/original/",
+                      "images/thumbs"],
             "replace": "images/thumbs/optimized/"
         },
         "icons": {
             "tag": "img",
             "attribute": "src",
-            "match": "images/icons/original/",
+            "match": ["images/icons/original/",
+                      "images/icons/"],
             "replace": "images/icons/optimized/"
         }
     },
     "projects": {
         "responsive": {
-            "base_path": "images/main/original/",
+            "base_path": ["images/main/original/",
+                          "images/main/"],
             "optimized_base": "images/main/optimized",
             "breakpoints": [
                 {"media": "(min-width: 1280px)", "folder": "desktop"},
@@ -120,13 +134,15 @@ HTML_IMAGE_CONFIG = {
         "thumbs": {
             "tag": "img",
             "attribute": "src",
-            "match": "images/thumbs/original/",
+            "match": ["images/thumbs/original/",
+                      "images/thumbs/"],
             "replace": "images/thumbs/optimized/"
         },
         "icons": {
             "tag": "img",
             "attribute": "src",
-            "match": "images/icons/original/",
+            "match": ["images/icons/original/",
+                      "images/icons/"],
             "replace": "images/icons/optimized/"
         }
     }
@@ -134,11 +150,11 @@ HTML_IMAGE_CONFIG = {
 
 
 # ===========================
-# FUNCTIONS
+# UTILITY FUNCTIONS
 # ===========================
 
 def install_package(pip_name, import_name):
-    """Ensure a required package is installed."""
+    """ Check and install required packages """
     try:
         __import__(import_name)
     except ImportError:
@@ -147,7 +163,7 @@ def install_package(pip_name, import_name):
 
 
 def check_platform(expected_platforms):
-    """Log system platform and issue a warning if Linux distro isn't recognized."""
+    """ Print the current platform and check distro """
     os_type = platform.system().lower()
     if "windows" in os_type:
         print("Running on Windows")
@@ -161,7 +177,7 @@ def check_platform(expected_platforms):
 
 
 def ensure_directory(path):
-    """Create a directory if it doesn't already exist."""
+    """ Ensure a directory exists """
     if not os.path.exists(path):
         os.makedirs(path)
         print(f"[Created] Directory: {path}")
@@ -170,7 +186,7 @@ def ensure_directory(path):
 
 
 def check_source_directory(path):
-    """Check if a source directory exists."""
+    """ Confirm source directory is available """
     if not os.path.exists(path):
         print(f"[Skip] Source folder does not exist: {path}")
         return False
@@ -179,7 +195,7 @@ def check_source_directory(path):
 
 
 def process_all_images(input_dir, output_base, sizes):
-    """Build a list of image resize tasks for all device/variant combinations."""
+    """ Build tasks for responsive image resizing """
     tasks = []
     if not os.path.isdir(input_dir):
         print(f"Input folder not found: {input_dir}")
@@ -197,7 +213,7 @@ def process_all_images(input_dir, output_base, sizes):
 
 
 def process_assets(input_dir, output_dir, target_width, quality):
-    """Return tasks for asset resizing (thumbs/icons)."""
+    """ Build tasks for thumbs/icons resizing """
     tasks = []
     if not os.path.isdir(input_dir):
         print(f"Assets: Input folder not found: {input_dir}")
@@ -216,7 +232,7 @@ def process_assets(input_dir, output_dir, target_width, quality):
 
 
 def resize_image(input_path, output_path, target_width, quality):
-    """Resize and save a single image."""
+    """ Perform the actual image resizing """
     from PIL import Image
     try:
         with Image.open(input_path) as img:
@@ -235,7 +251,7 @@ def resize_image(input_path, output_path, target_width, quality):
 
 
 def backup_html_folder(folder_path, backup_dest):
-    """Back up all HTML files in the folder into a zip archive."""
+    """ Backup HTML files as zip archive """
     if not os.path.isdir(folder_path):
         print(f"[Skip] Folder does not exist: {folder_path}")
         return
@@ -258,7 +274,7 @@ def backup_html_folder(folder_path, backup_dest):
 
 
 def cleanup_old_backups(backup_dir, keep=3):
-    """Remove old backup zip files, keeping only the most recent 'keep' files."""
+    """ Delete older backups beyond retention limit """
     if not os.path.isdir(backup_dir):
         print(f"[Skip] Backup folder does not exist: {backup_dir}")
         return
@@ -277,7 +293,7 @@ def cleanup_old_backups(backup_dir, keep=3):
 
 
 def update_thumb_icon_paths(html_file, rules):
-    """Replace src paths for thumbs and icons in the HTML file."""
+    """Update icon/thumb image src paths if not already optimized."""
     from bs4 import BeautifulSoup
     updated = False
 
@@ -287,12 +303,26 @@ def update_thumb_icon_paths(html_file, rules):
     for key, rule in rules.items():
         if key == "responsive":
             continue
+
+        match_list = rule.get("match", [])
+        if isinstance(match_list, str):
+            match_list = [match_list]  # normalize to list
+
         for tag in soup.find_all(rule["tag"]):
             attr_value = tag.get(rule["attribute"], "")
-            if attr_value.startswith(rule["match"]):
-                tag[rule["attribute"]] = attr_value.replace(rule["match"], rule["replace"])
+
+            # Skip if already optimized
+            if attr_value.startswith(rule["replace"]):
+                continue
+
+            # Try all matches, only apply the first one
+            matched_prefixes = [m for m in match_list if attr_value.startswith(m)]
+            if matched_prefixes:
+                filename = os.path.basename(attr_value)
+                tag[rule["attribute"]] = os.path.join(rule["replace"], filename).replace('\\', '/')
                 updated = True
-                print(f"[Updated] {attr_value} → {tag[rule['attribute']]}")
+                print(f"[Updated] {attr_value} →")
+                print(tag.prettify())
 
     if updated:
         with open(html_file, 'w', encoding='utf-8') as f:
@@ -302,8 +332,9 @@ def update_thumb_icon_paths(html_file, rules):
         print(f"[No Changes] {html_file}")
 
 
+
 def update_responsive_picture(html_file, responsive_rule):
-    """Rewrite <picture> blocks in HTML with responsive <source> tags based on breakpoints."""
+    """ Rewrite <picture> blocks with <source> tags for responsive images """
     from bs4 import BeautifulSoup
     updated = False
 
@@ -313,35 +344,49 @@ def update_responsive_picture(html_file, responsive_rule):
     base_path = responsive_rule["base_path"]
     optimized_base = responsive_rule["optimized_base"]
     fallback_folder = responsive_rule["fallback_device"]
+    breakpoints = responsive_rule["breakpoints"]
 
     for picture in soup.find_all("picture"):
         img = picture.find("img")
         if not img:
             continue
-        src = img.get("src", "")
 
-        # Check if the img src still uses the original base path
+        src = img.get("src", "")
         if not src.startswith(base_path):
             print(f"[Skip] No responsive match for <img src=\"{src}\">")
             continue
 
         filename = os.path.basename(src)
 
-        # Clear existing <source> tags
+        expected_sources = {
+            bp["media"]: f"{optimized_base}/{bp['folder']}/standard/{filename}"
+            for bp in breakpoints
+        }
+        current_sources = {
+            s.get("media"): s.get("srcset")
+            for s in picture.find_all("source")
+        }
+
+        expected_img_src = f"{optimized_base}/{fallback_folder}/standard/{filename}"
+        current_img_src = img.get("src")
+
+        if expected_sources == current_sources and current_img_src == expected_img_src:
+            print(f"[No Changes] {src} already matches expected <picture>")
+            continue
+
         for tag in picture.find_all("source"):
             tag.decompose()
 
-        # Insert <source> tags for each breakpoint
-        for bp in responsive_rule["breakpoints"]:
+        for bp in breakpoints:
             source = soup.new_tag("source")
             source["media"] = bp["media"]
             source["srcset"] = f"{optimized_base}/{bp['folder']}/standard/{filename}"
             picture.insert(0, source)
 
-        # Update the fallback <img> tag
-        img["src"] = f"{optimized_base}/{fallback_folder}/standard/{filename}"
+        img["src"] = expected_img_src
         updated = True
-        print(f"[Responsive Rewrite] {src} → <picture> with breakpoints")
+        print(f"[Responsive Rewrite] {src} →")
+        print(picture.prettify())
 
     if updated:
         with open(html_file, 'w', encoding='utf-8') as f:
@@ -351,9 +396,33 @@ def update_responsive_picture(html_file, responsive_rule):
         print(f"[No Changes] {html_file}")
 
 
+def apply_html_rewriters(html_path, rules):
+    """ Apply all rewrites (responsive, thumbs, icons) to a single HTML file """
+    responsive_config = rules.get("responsive")
+    if responsive_config and isinstance(responsive_config.get("base_path"), list):
+        for base_path in responsive_config["base_path"]:
+            config = responsive_config.copy()
+            config["base_path"] = base_path
+            update_responsive_picture(html_path, config)
+    elif responsive_config:
+        update_responsive_picture(html_path, responsive_config)
+
+    for key in ["thumbs", "icons"]:
+        config = rules.get(key)
+        if not config:
+            continue
+        match_values = config.get("match")
+        if isinstance(match_values, list):
+            for match in match_values:
+                single_config = config.copy()
+                single_config["match"] = match
+                update_thumb_icon_paths(html_path, {key: single_config})
+        elif isinstance(match_values, str):
+            update_thumb_icon_paths(html_path, {key: config})
+
 
 def prettify_all_html(source_folder):
-    """Prettify all HTML files in a given folder using BeautifulSoup."""
+    """ Reformat all HTML in a directory for readability """
     from bs4 import BeautifulSoup
     print(f"\n[Prettify] Tidying HTML in: {source_folder}")
 
@@ -381,11 +450,13 @@ def prettify_all_html(source_folder):
 # ===========================
 
 def main():
+    # Ensure required packages are installed
     for pip_name, import_name in REQUIRED_PACKAGES:
         install_package(pip_name, import_name)
 
     check_platform(EXPECTED_PLATFORMS)
 
+    # Make sure all necessary output directories exist
     for profile in IMAGE_PROFILES.values():
         for device, versions in profile["sizes"].items():
             for version_type in versions:
@@ -396,11 +467,13 @@ def main():
             ensure_directory(config["input_dir"])
             ensure_directory(config["output_dir"])
 
+    # Resize responsive images
     for label, config in IMAGE_PROFILES.items():
         print(f"Processing profile: {label}")
         for task in process_all_images(config["input_dir"], config["output_base"], config["sizes"]):
             resize_image(*task, config["quality"])
 
+    # Resize thumbs and icons
     for asset_type, sets in ASSET_SETS.items():
         for label, config in sets.items():
             print(f"Processing {asset_type} for: {label}")
@@ -409,27 +482,19 @@ def main():
 
     print("Done. Responsive images and asset images generated.")
 
-    for source, config in HTML_BACKUPS.items():
-        if not check_source_directory(source):
-            continue
-        ensure_directory(config["dest"])
-        backup_html_folder(source, config["dest"])
-        cleanup_old_backups(config["dest"], config["keep"])
-
+    # Apply HTML transformations to every HTML file
     for source, rules in HTML_IMAGE_CONFIG.items():
         print(f"\n[Scan] Checking HTML in folder: {source}")
         if not check_source_directory(source):
             continue
 
-        responsive = rules.get("responsive")
         for file in os.listdir(source):
             if file.endswith(".html"):
                 html_path = os.path.join(source, file)
                 print(f"[Processing] {html_path}")
-                if responsive:
-                    update_responsive_picture(html_path, responsive)
-                update_thumb_icon_paths(html_path, rules)
+                apply_html_rewriters(html_path, rules)
 
+    # Final prettify pass
     for folder in HTML_IMAGE_CONFIG:
         prettify_all_html(folder)
 
