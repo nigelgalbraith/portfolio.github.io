@@ -82,13 +82,19 @@ EXPECTED_PLATFORMS = ["debian", "ubuntu"]
 HTML_BACKUPS = {
     ".": {
         "dest": "backups/html/main",
-        "keep": 3
+        "keep": 3,
+        "name": "main-html"
     },
     "projects": {
         "dest": "backups/html/projects",
-        "keep": 3
+        "keep": 3,
+        "name": "projects-html"
     }
 }
+
+
+HTML_EXTENSION = ".html"
+BACKUP_EXTENSION = ".zip"
 
 # HTML file processing config: responsive images + thumb/icon rewrites
 HTML_IMAGE_CONFIG = {
@@ -250,21 +256,21 @@ def resize_image(input_path, output_path, target_width, quality):
         print(f"Error processing {input_path}: {e}")
 
 
-def backup_html_folder(folder_path, backup_dest):
-    """ Backup HTML files as zip archive """
+def backup_folder(folder_path, backup_dest, file_extension, name=None):
+    """Backup files with a given extension (e.g. .html) as a zip archive."""
     if not os.path.isdir(folder_path):
         print(f"[Skip] Folder does not exist: {folder_path}")
         return
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    folder_name = os.path.basename(os.path.normpath(folder_path))
-    zip_filename = f"{folder_name}_html_backup_{timestamp}.zip"
+    base_name = name if name else os.path.basename(os.path.normpath(folder_path))
+    zip_filename = f"{base_name}_backup_{timestamp}.zip"
     zip_path = os.path.join(backup_dest, zip_filename)
 
     with ZipFile(zip_path, 'w') as zipf:
         for root, _, files in os.walk(folder_path):
             for file in files:
-                if file.endswith('.html'):
+                if file.endswith(file_extension):
                     full_path = os.path.join(root, file)
                     arcname = os.path.relpath(full_path, folder_path)
                     zipf.write(full_path, arcname)
@@ -273,18 +279,18 @@ def backup_html_folder(folder_path, backup_dest):
     print(f"[Backup Complete] {zip_path}")
 
 
-def cleanup_old_backups(backup_dir, keep=3):
-    """ Delete older backups beyond retention limit """
+def cleanup_old_backups(backup_dir, keep, extension):
+    """Delete older backups matching a specific extension."""
     if not os.path.isdir(backup_dir):
         print(f"[Skip] Backup folder does not exist: {backup_dir}")
         return
 
-    zip_files = sorted(
-        (os.path.join(backup_dir, f) for f in os.listdir(backup_dir) if f.endswith(".zip")),
+    backup_files = sorted(
+        (os.path.join(backup_dir, f) for f in os.listdir(backup_dir) if f.endswith(extension)),
         key=os.path.getmtime, reverse=True
     )
 
-    for old_file in zip_files[keep:]:
+    for old_file in backup_files[keep:]:
         try:
             os.remove(old_file)
             print(f"[Deleted] Old backup: {old_file}")
@@ -481,6 +487,17 @@ def main():
                 resize_image(*task)
 
     print("Done. Responsive images and asset images generated.")
+
+    # Backup and cleanup HTML files
+    for source, config in HTML_BACKUPS.items():
+        dest = config["dest"]
+        keep = config["keep"]
+        name = config.get("name", os.path.basename(source) or "root")
+
+        ensure_directory(dest)
+        backup_folder(source, dest, HTML_EXTENSION, name=name)
+        cleanup_old_backups(dest, keep, BACKUP_EXTENSION)
+
 
     # Apply HTML transformations to every HTML file
     for source, rules in HTML_IMAGE_CONFIG.items():
