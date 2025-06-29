@@ -2,76 +2,67 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - Arcade Cabinet
-  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nigel Galbraith - Arcade Cabinet</title>
   <link href="../styles/style.css" rel="stylesheet"/>
-  <script defer="" src="../js/script.js">
-  </script>
+  <script src="js/modalZoom.js" defer></script>
+  <script src="js/init.js" defer></script>
+  <script src="../js/footerIconLoader.js" defer></script>
+  <script src="js/projectSkillsLoader.js" defer></script>
+  <script src="js/carousel.js" defer></script>
  </head>
  <body>
-  <div class="grid-bg">
-  </div>
+  <div class="grid-bg"></div>
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
+   <h1>Nigel Galbraith Portfolio</h1>
+
    <!-- Navigation Bar -->
    <nav class="navbar">
     <ul>
-     <li>
-      <a href="../projects.html">
-       Back To Projects
-      </a>
-     </li>
+     <li><a href="../projects.html">Back To Projects</a></li>
     </ul>
    </nav>
+
    <!-- Main Brief Outline -->
    <main class="main-content">
     <div class="main-content-flex-centre">
-     <h2>
-      Custom Arcade Cabinet
-     </h2>
-     <!-- Image carousel with responsive images -->
-     <div class="image-zoom-wrapper">
-      <div class="carousel-container">
-       <div class="carousel-slide">
-        <picture class="carousel-image active">
-         <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/Arcade-Cabinet1.png"/>
-         <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/Arcade-Cabinet1.png"/>
-         <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/Arcade-Cabinet1.png"/>
-         <img alt="Arcade Cabinet 1" src="images/main/optimized/mobile/standard/Arcade-Cabinet1.png"/>
-        </picture>
-        <picture class="carousel-image">
-         <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/Arcade-Cabinet2.png"/>
-         <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/Arcade-Cabinet2.png"/>
-         <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/Arcade-Cabinet2.png"/>
-         <img alt="Arcade Cabinet 2" src="images/main/optimized/mobile/standard/Arcade-Cabinet2.png"/>
-        </picture>
-       </div>
+     <h2>Custom Arcade Cabinet</h2>
+
+     <!-- Carousel using responsive <picture> injection -->
+     <div class="boxed-content">
+          <div class="image-zoom-wrapper">
+               <div class="carousel-container">
+                    <div class="carousel-slide">
+                    <div class="responsive-carousel-image"
+                         data-img-name="Arcade-Cabinet1.png"
+                         data-alt="Arcade Cabinet 1"
+                         data-class="centre-img">
+                    </div>
+                    <div class="responsive-carousel-image"
+                         data-img-name="Arcade-Cabinet2.png"
+                         data-alt="Arcade Cabinet 2"
+                         data-class="centre-img">
+                    </div>
+               </div>
+          
        <div class="dots">
         <div class="carousel-controls">
-         <button class="carousel-arrow left-arrow" onclick="prevSlide()">
-          &lt;
-         </button>
-         <span class="dot active">
-         </span>
-         <span class="dot">
-         </span>
-         <button class="carousel-arrow right-arrow" onclick="nextSlide()">
-          &gt;
-         </button>
+         <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+         <span class="dot active"></span>
+         <span class="dot"></span>
+         <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
         </div>
        </div>
       </div>
-      <div class="modal" id="imgModal">
-       <span class="close">
-        ×
-       </span>
+      </div>
+
+      <!-- Modal Zoom -->
+      <div class="modal" id="imgModal" onclick="closeFullScreen()">
+       <span class="close">×</span>
        <img class="modal-content" id="fullImg"/>
       </div>
      </div>
+
      <!-- Main Content -->
      <div class="main-content-text">
       <section>
@@ -85,70 +76,26 @@
         Running Windows with HyperSpin, the cabinet supports over 4000 games, including titles from MAME, Neo Geo, PlayStation 1 &amp; 2, Sega Master System, Sega Mega Drive, Mega CD, NES, and SNES all packed into one nostalgic gaming experience. To enhance immersion, I used local policy settings to hide the Windows system interface, providing a clean, arcade-style environment.
        </p>
       </section>
+
+      <!-- Tools and Technologies -->
       <section>
-       <!-- Tools and Technologies -->
-       <h2 class="centered-title">
-        Tools and Technologies
-       </h2>
+       <h2 class="centered-title">Tools and Technologies</h2>
        <div class="boxed-content">
-        <div class="icon-grid">
-         <div class="icon-item">
-          <img alt="Tools" class="li-icon" src="images/icons/optimized/programing.png"/>
-          <span>
-           Shell Scripting
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Python" class="li-icon" src="images/icons/optimized/python.png"/>
-          <span>
-           Python
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Woodwork" class="li-icon" src="images/icons/optimized/woodwork.png"/>
-          <span>
-           Joinery &amp; Carpentry
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Tools" class="li-icon" src="images/icons/optimized/tools.png"/>
-          <span>
-           Power Tools &amp; Safety
-          </span>
-         </div>
-        </div>
+        <div class="icon-grid" data-project-skills="shell, python, woodwork, tools"></div>
        </div>
+
        <!-- Key Learnings -->
-       <h2 class="centered-title">
-        Key Learnings
-       </h2>
+       <h2 class="centered-title">Key Learnings</h2>
        <div class="boxed-content">
-        <div class="icon-grid">
-         <div class="icon-item">
-          <img alt="Problem Solving" class="li-icon" src="images/icons/optimized/problem-solving.png"/>
-          <span>
-           Debugging
-          </span>
-         </div>
-        </div>
+        <div class="icon-grid" data-project-skills="debugging"></div>
        </div>
       </section>
      </div>
     </div>
    </main>
+
    <!-- Footer -->
-   <footer>
-    © 2025 Nigel Galbraith |
-    <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-     <img alt="Email" class="footer-icon" src="images/icons/optimized/email.png"/>
-    </a>
-    <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" rel="noopener" target="_blank">
-     <img alt="GitHub" class="footer-icon" src="images/icons/optimized/github.png"/>
-    </a>
-    <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
-     <img alt="LinkedIn" class="footer-icon" src="images/icons/optimized/linkedin.png"/>
-    </a>
-   </footer>
+   <footer></footer>
   </div>
  </body>
 </html>

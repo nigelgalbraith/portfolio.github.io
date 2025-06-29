@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - Sharepoint-GPS
-  </title>
-  <link href="../styles/style.css" rel="stylesheet"/>
-  <script defer="" src="../js/script.js">
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigel Galbraith - Sharepoint-GPS</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <script src="js/modalZoom.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/init.js" defer></script>
+  <script src="../js/footerIconLoader.js" defer></script>
+  <script src="js/projectSkillsLoader.js" defer></script>
+  <script src="../js/responsiveImageLoader.js" defer></script>
  </head>
  <body>
-  <div class="grid-bg">
-  </div>
+  <div class="grid-bg"></div>
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
+   <h1>Nigel Galbraith Portfolio</h1>
+
    <!-- Navigation Bar -->
    <nav class="navbar">
     <ul>
-     <li>
-      <a href="../projects.html">
-       Back To Projects
-      </a>
-     </li>
+     <li><a href="../projects.html">Back To Projects</a></li>
     </ul>
    </nav>
+
    <!-- Main Brief Outline -->
    <main class="main-content">
     <div class="main-content-flex-centre">
-     <h2>
-      SharePoint Database and GPS-Based Tracking System
-     </h2>
+     <h2>SharePoint Database and GPS-Based Tracking System</h2>
+
      <!-- Responsive Image with Zoom -->
+    <div class="boxed-content">
      <div class="image-zoom-wrapper">
-      <picture class="zoomable" onclick="openFullScreen(this.querySelector('img'))">
-       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/sharepointGPS.png"/>
-       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/sharepointGPS.png"/>
-       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/sharepointGPS.png"/>
-       <img alt="SharePoint GPS Diagram" class="centre-img" src="images/main/optimized/mobile/standard/sharepointGPS.png"/>
-      </picture>
+      <div
+       class="responsive-image"
+       data-img-name="sharepointGPS.png"
+       data-alt="SharePoint GPS Diagram"
+       data-class="centre-img"
+      ></div>
      </div>
+     </div>
+     <!-- Modal for Zoom -->
      <div class="modal" id="imgModal" onclick="closeFullScreen()">
-      <span class="close">
-       ×
-      </span>
-      <img class="modal-content" id="fullImg"/>
+      <span class="close">×</span>
+      <img class="modal-content" id="fullImg" />
      </div>
     </div>
+
     <!-- Main Content -->
     <div class="main-content-text">
      <section>
@@ -58,98 +56,42 @@
       <p>
        I developed a SharePoint site that allowed supervisors to:
        <ul>
-        <li>
-         Access and manage Traffic Management Plans (TMPs) directly from their tablets while on-site.
-        </li>
-        <li>
-         Upload daily site checks via their smartphones, streamlining reporting and compliance.
-        </li>
-        <li>
-         Scan temporary traffic management signs with mobile devices, automatically capturing and logging GPS coordinates where signs were placed.
-        </li>
+        <li>Access and manage Traffic Management Plans (TMPs) directly from their tablets while on-site.</li>
+        <li>Upload daily site checks via their smartphones, streamlining reporting and compliance.</li>
+        <li>Scan temporary traffic management signs with mobile devices, automatically capturing and logging GPS coordinates where signs were placed.</li>
        </ul>
       </p>
       <p>
        This SharePoint platform became a centralized hub, supporting:
        <ul>
-        <li>
-         Forward works planning by linking staff, plant, and resources to current and future projects.
-        </li>
-        <li>
-         Improved visibility and communication, enabling access to the weekly planner from any internet-connected device.
-        </li>
-        <li>
-         Crew pre-planning, allowing team leads to assign and prepare crews in advance based on job requirements.
-        </li>
+        <li>Forward works planning by linking staff, plant, and resources to current and future projects.</li>
+        <li>Improved visibility and communication, enabling access to the weekly planner from any internet-connected device.</li>
+        <li>Crew pre-planning, allowing team leads to assign and prepare crews in advance based on job requirements.</li>
        </ul>
       </p>
       <p>
        The solution significantly reduced manual paperwork, improved auditability, and helped teams in the field stay connected to the office in real time. This contributed to smoother project delivery and better-informed decision-making across multiple job sites.
       </p>
      </section>
+
      <section>
       <!-- Tools and Technologies -->
-      <h2 class="centered-title">
-       Tools and Technologies
-      </h2>
+      <h2 class="centered-title">Tools and Technologies</h2>
       <div class="boxed-content">
-       <div class="icon-grid">
-        <div class="icon-item">
-         <img alt="SharePoint" class="li-icon" src="images/icons/optimized/SharePoint.png"/>
-         <span>
-          SharePoint
-         </span>
-        </div>
-        <div class="icon-item">
-         <img alt="Office 365" class="li-icon" src="images/icons/optimized/Office365.png"/>
-         <span>
-          Office 365
-         </span>
-        </div>
-       </div>
+       <div class="icon-grid" data-project-skills="sharepoint,office365"></div>
       </div>
+
       <!-- Key Learnings -->
-      <h2 class="centered-title">
-       Key Learnings
-      </h2>
+      <h2 class="centered-title">Key Learnings</h2>
       <div class="boxed-content">
-       <div class="icon-grid">
-        <div class="icon-item">
-         <img alt="Teamwork" class="li-icon" src="images/icons/optimized/teamwork.png"/>
-         <span>
-          Collaboration &amp; Testing
-         </span>
-        </div>
-        <div class="icon-item">
-         <img alt="GPS Tracking" class="li-icon" src="images/icons/optimized/gps_tracking.png"/>
-         <span>
-          GPS Integration
-         </span>
-        </div>
-        <div class="icon-item">
-         <img alt="User Experience" class="li-icon" src="images/icons/optimized/user_experience.png"/>
-         <span>
-          User Experience Design
-         </span>
-        </div>
-       </div>
+       <div class="icon-grid" data-project-skills="collaboration,gps,ux"></div>
       </div>
      </section>
     </div>
    </main>
+
    <!-- Footer -->
-   <footer>
-    © 2025 Nigel Galbraith |
-    <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-     <img alt="Email" class="footer-icon" src="images/icons/optimized/email.png"/>
-    </a>
-    <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" rel="noopener" target="_blank">
-     <img alt="GitHub" class="footer-icon" src="images/icons/optimized/github.png"/>
-    </a>
-    <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
-     <img alt="LinkedIn" class="footer-icon" src="images/icons/optimized/linkedin.png"/>
-    </a>
-   </footer>
+   <footer></footer>
   </div>
  </body>
 </html>

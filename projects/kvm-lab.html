@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - KVM-Lab
-  </title>
-  <link href="../styles/style.css" rel="stylesheet"/>
-  <script defer="" src="../js/script.js">
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigel Galbraith - KVM-Lab</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <script src="js/modalZoom.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/init.js" defer></script>
+  <script src="../js/footerIconLoader.js" defer></script>
+  <script src="js/projectSkillsLoader.js" defer></script>
+  <script src="../js/responsiveImageLoader.js" defer></script>
  </head>
  <body>
-  <div class="grid-bg">
-  </div>
+  <div class="grid-bg"></div>
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
+   <h1>Nigel Galbraith Portfolio</h1>
+
    <!-- Navigation Bar Top -->
    <nav class="navbar">
     <ul>
-     <li>
-      <a href="../projects.html">
-       Back To Projects
-      </a>
-     </li>
+     <li><a href="../projects.html">Back To Projects</a></li>
     </ul>
    </nav>
+
    <!-- Main Brief Outline -->
    <main class="main-content">
     <div class="main-content-flex-centre">
-     <h2>
-      KVM Student Labs Project
-     </h2>
-     <!-- Responsive Image -->
-     <div class="image-zoom-wrapper">
-      <picture class="zoomable" onclick="openFullScreen(this.querySelector('img'))">
-       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/KVM-Top.drawio.png"/>
-       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/KVM-Top.drawio.png"/>
-       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/KVM-Top.drawio.png"/>
-       <img alt="KVM Labs Topology Diagram" class="centre-img" src="images/main/optimized/mobile/standard/KVM-Top.drawio.png"/>
-      </picture>
+     <h2>KVM Student Labs Project</h2>
+
+     <!-- Responsive Image with JS loader -->
+    <div class="boxed-content">
+        <div class="image-zoom-wrapper">
+            <div
+            class="responsive-image"
+            data-img-name="KVM-Top.drawio.png"
+            data-alt="KVM Labs Topology Diagram"
+            data-class="centre-img"
+            ></div>
+        </div>
      </div>
+
      <!-- Main Content -->
      <div class="main-content-text">
       <section>
@@ -55,107 +54,32 @@
         Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
        </p>
       </section>
+
+      <!-- Tools and Technologies -->
       <section>
-       <!-- Tools and Technologies -->
-       <h2 class="centered-title">
-        Tools and Technologies
-       </h2>
+       <h2 class="centered-title">Tools and Technologies</h2>
        <div class="boxed-content">
-        <div class="icon-grid">
-         <div class="icon-item">
-          <img alt="Linux" class="li-icon" src="images/icons/optimized/ubuntu.png"/>
-          <span>
-           Ubuntu KVM
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Networking" class="li-icon" src="images/icons/optimized/cockpit.png"/>
-          <span>
-           Libvirt
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Virtualization" class="li-icon" src="images/icons/optimized/virtual.png"/>
-          <span>
-           QEMU
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Tools" class="li-icon" src="images/icons/optimized/programing.png"/>
-          <span>
-           Shell Scripting
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Fixes" class="li-icon" src="images/icons/optimized/acl.png"/>
-          <span>
-           Permissions
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Cloud" class="li-icon" src="images/icons/optimized/ad.png"/>
-          <span>
-           Active Directory
-          </span>
-         </div>
-        </div>
+        <div class="icon-grid" data-project-skills="ubuntu,libvirt,qemu,shell,permissions,ad"></div>
        </div>
+
        <!-- Key Learnings -->
-       <h2 class="centered-title">
-        Key Learnings
-       </h2>
+       <h2 class="centered-title">Key Learnings</h2>
        <div class="boxed-content">
-        <div class="icon-grid">
-         <div class="icon-item">
-          <img alt="Problem Solving" class="li-icon" src="images/icons/optimized/problem-solving.png"/>
-          <span>
-           Debugging
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Teamwork" class="li-icon" src="images/icons/optimized/teamwork.png"/>
-          <span>
-           Collaboration &amp; Testing
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Linux" class="li-icon" src="images/icons/optimized/automation.png"/>
-          <span>
-           System Automation
-          </span>
-         </div>
-         <div class="icon-item">
-          <img alt="Degree" class="li-icon" src="images/icons/optimized/degree.png"/>
-          <span>
-           Security Best Practices
-          </span>
-         </div>
-        </div>
+        <div class="icon-grid" data-project-skills="debugging,collaboration,automation,security"></div>
        </div>
       </section>
      </div>
     </div>
    </main>
+
    <!-- Footer -->
-   <footer>
-    © 2025 Nigel Galbraith |
-    <a href="mailto:nigel.galbraith@proton.me" target="_blank">
-     <img alt="Email" class="footer-icon" src="images/icons/optimized/email.png"/>
-    </a>
-    <a href="https://github.com/oldschool299792458/nigelgalbraith.github.io" rel="noopener" target="_blank">
-     <img alt="GitHub" class="footer-icon" src="images/icons/optimized/github.png"/>
-    </a>
-    <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
-     <img alt="LinkedIn" class="footer-icon" src="images/icons/optimized/linkedin.png"/>
-    </a>
-   </footer>
-  </div>
-  <!-- Zoom Modal -->
-  <div class="modal" id="imgModal" onclick="closeFullScreen()">
-   <span class="close">
-    ×
-   </span>
-   <img class="modal-content" id="fullImg"/>
+   <footer></footer>
+
+   <!-- Zoom Modal -->
+   <div class="modal" id="imgModal" onclick="closeFullScreen()">
+    <span class="close">×</span>
+    <img class="modal-content" id="fullImg" />
+   </div>
   </div>
  </body>
 </html>

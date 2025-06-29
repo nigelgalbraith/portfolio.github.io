@@ -446,16 +446,17 @@ h1 {
 
 .close {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 1rem;       
+  right: 1.5rem;   
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-text-stroke: 1px black;
 }
 
 .close:hover {
-  color: #bbb;
+  color: #afe5fa;
 }
 
 .centre-img {
@@ -522,7 +523,6 @@ h1 {
 .carousel-arrow:hover {
   color: #66ffff;
 }
-
 
 /* =======================
    Icons
