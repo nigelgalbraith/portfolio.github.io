@@ -122,6 +122,10 @@ h1 {
   padding: 0.5rem;
 }
 
+.step-separator {
+  margin-top: 2rem; 
+}
+
 .centered-title {
   text-align: center;
   padding-top: 1rem;
@@ -597,6 +601,10 @@ h1 {
 
 h2, .time-content h2 {
  font-size: 1.2rem; 
+}
+
+.main-content-flex-centre h2 {
+  text-align: center;
 }
 
 h3, h4, .time-content h3, .time-content h4 {

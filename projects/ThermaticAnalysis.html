@@ -10,9 +10,10 @@
   <script src="js/init.js" defer></script>
   <script src="../js/footerIconLoader.js" defer></script>
   <script src="js/projectSkillsLoader.js" defer></script>
-  <script src="../js/responsiveImageLoader.js" defer></script>
+  <script src="js/projectStepsData.js" defer></script>
+  <script src="js/responsiveImageLoader.js" defer></script>
 </head>
-<body>
+<body data-project="thematic">
   <div class="grid-bg"></div>
   <div class="container">
     <h1>Nigel Galbraith Portfolio</h1>
@@ -25,136 +26,63 @@
     <main class="main-content">
       <div class="main-content-flex-centre">
         <h2>Thematic Analysis Web Application</h2>
-            <div class="boxed-content">
-                <div class="main-content-image">
-                <div class="image-zoom-wrapper">
-                    <div class="responsive-image" data-img-name="Thematic-WebApp.png" data-alt="Thematic Analysis Web App Overview" data-class="centre-img"></div>
-                </div>
+
+        <div class="boxed-content">
+          <div class="main-content-image">
+            <div class="image-zoom-wrapper">
+              <div class="responsive-image" data-img-name="Thematic-WebApp.png" data-alt="Thematic Analysis Web App Overview" data-class="centre-img"></div>
             </div>
+          </div>
         </div>
-        </div>
-        <br>
+
+        <div class="step-separator"></div>
 
         <div class="main-content-text">
-          <section>
+          <section></section>
 
-            <!-- Step Boxes -->
-            <div class="boxed-content">
-              <h2 class="centered-title">1. Conduct Thematic Analysis in Excel</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step1-ThermaticExcel.png" data-alt="Excel Thematic Analysis" data-class="centre-img"></div>
-              </div>
-              <p>Begin by identifying themes, factors, and raw codes within Excel. Use structured sheets to categorize data extracted from source material.</p>
+          <!-- Project Files & Web Links -->
+          <div class="boxed-content">
+            <h2 class="centered-title">Project Files & Web Links</h2>
+            <div class="icon-grid">
+              <a class="grouped-list-item-button-link" href="files/ThematicAnalysis/ThematicAnalysis-Web/Index.html" target="_blank">
+                <div class="icon-item">
+                  <img alt="Webpage Icon" class="li-icon" src="images/icons/optimized/Webpage.PNG" />
+                  <span>Main Thematic Webpage</span>
+                </div>
+              </a>
+              <a class="grouped-list-item-button-link" href="files/ThematicAnalysis/SearchTool-Web/Index.html" target="_blank">
+                <div class="icon-item">
+                  <img alt="Web Search Icon" class="li-icon" src="images/icons/optimized/search.png" />
+                  <span>Search Tool Page</span>
+                </div>
+              </a>
+              <a class="grouped-list-item-button-link" download href="files/ThematicAnalysis.zip">
+                <div class="icon-item">
+                  <img alt="Download Icon" class="li-icon" src="images/icons/optimized/zip.png" />
+                  <span>Download Project</span>
+                </div>
+              </a>
             </div>
+          </div>
 
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">2. Update Factors and Related Groups/Sub-Groups</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step2-UpdateFactors.png" data-alt="Updating Factors" data-class="centre-img"></div>
-              </div>
-              <p>Revise or add new factors in the spreadsheet and associate them with the correct group and subgroup structures for deeper thematic insight.</p>
-            </div>
-
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">3. Modify Group/Sub-Group Definitions</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step3-Groups.png" data-alt="Group and Subgroup Updates" data-class="centre-img"></div>
-              </div>
-              <p>Edit or refine the naming and grouping structures to better reflect emerging themes during analysis.</p>
-            </div>
-
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">4. Optionally Add Categories and Subcategories</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step4-Categories.png" data-alt="Optional Categories" data-class="centre-img"></div>
-              </div>
-              <p>Add higher-level categories and subcategories if your analysis benefits from hierarchical organization beyond groups.</p>
-            </div>
-
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">5. Add Search Metadata for Categories/Subcategories</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step5-SearchData.png" data-alt="Search Tags" data-class="centre-img"></div>
-              </div>
-              <p>Enhance your data structure by assigning searchable tags to factors. These will assist in filtering and future retrieval within the web app.</p>
-            </div>
-
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">6. Export Data to Webpage</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step6-Export.png" data-alt="Exporting to Webpage" data-class="centre-img"></div>
-              </div>
-              <p>Use the provided Python scripts to extract, clean, and convert Excel data into JSON. Then populate the HTML structure dynamically with this content.</p>
-            </div>
-
-            <br />
-
-            <div class="boxed-content">
-              <h2 class="centered-title">7. Review Glossary and Web Analysis</h2>
-              <div class="image-zoom-wrapper">
-                <div class="responsive-image" data-img-name="Step7-Glossary.png" data-alt="Glossary and Analysis View" data-class="centre-img"></div>
-              </div>
-              <p>The final HTML output includes a glossary of terms and grouped factors, allowing for user-friendly browsing and review of the thematic structure.</p>
-            </div>
-
-            <br />
-
-            <!-- Project Files & Web Links -->
-            <div class="boxed-content">
-              <h2 class="centered-title">Project Files & Web Links</h2>
-              <div class="icon-grid">
-                <a class="grouped-list-item-button-link" href="files/ThematicAnalysis/ThematicAnalysis-Web/Index.html" target="_blank">
-                  <div class="icon-item">
-                    <img alt="Webpage Icon" class="li-icon" src="images/icons/optimized/Webpage.PNG" />
-                    <span>Main Thematic Webpage</span>
-                  </div>
-                </a>
-                <a class="grouped-list-item-button-link" href="files/ThematicAnalysis/SearchTool-Web/Index.html" target="_blank">
-                  <div class="icon-item">
-                    <img alt="Web Search Icon" class="li-icon" src="images/icons/optimized/search.png" />
-                    <span>Search Tool Page</span>
-                  </div>
-                </a>
-                <a class="grouped-list-item-button-link" download href="files/ThermaticAnalysis.zip">
-                  <div class="icon-item">
-                    <img alt="Download Icon" class="li-icon" src="images/icons/optimized/zip.png" />
-                    <span>Download Project</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </section>
-
-          <!-- Tools and Learnings -->
+          <!-- Tools and Technologies -->
           <section>
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
-              <div class="icon-grid" data-project-skills="python,excel,html,json"></div>
+              <div class="icon-grid" data-project-skills="shell,python"></div>
             </div>
 
             <h2 class="centered-title">Key Learnings</h2>
             <div class="boxed-content">
-              <div class="icon-grid" data-project-skills="data-cleaning,automation,design-thinking"></div>
+              <div class="icon-grid" data-project-skills="debugging"></div>
             </div>
           </section>
-        </div>
-      </div>
+        </div> 
+      </div> 
     </main>
 
-    <!-- Footer -->
     <footer></footer>
 
-    <!-- Global Zoom Modal -->
     <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />
