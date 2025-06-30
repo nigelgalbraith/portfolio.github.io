@@ -61,7 +61,7 @@ const ProjectSteps = {
       title: "Select a Quiz",
       img: "QuizCreatorScreenShot-QuizIndex.png",
       alt: "Quiz Main Page",
-      text: "To run the quiz open the index.html. For the best experience, use Google Chrome or Chromium to avoid JSON caching issues in other browsers."
+      text: "To run the quiz selection menu open the index.html."
     },
     {
       title: "Check Each Answer",

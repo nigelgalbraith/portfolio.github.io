@@ -42,11 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('No questions available for this module.');
   }
 
+  // Handle quiz submission
   document.getElementById('submitQuiz').onclick = () => {
     console.log('Submit button clicked.');
 
     const results = selectedQuestions.map(question => {
-      question.checkAnswer(); // Mark answer and give feedback
+      question.checkAnswer(); // Evaluate user answer
       const result = {
         question: question.question,
         userAnswer: question.userAnswer,
@@ -63,6 +64,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem('quizResults', JSON.stringify(results));
     console.log('Results saved to localStorage:', results);
-    window.location.href = 'results.html';
+
+    // Hide quiz UI
+    quizContainer.style.display = 'none';
+    document.getElementById('submitQuiz').style.display = 'none';
+
+    // Show results inline
+    if (typeof displayResultsFromLocalStorage === 'function') {
+      displayResultsFromLocalStorage();
+
+      // Scroll to top slightly delayed to ensure content is rendered
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    } else {
+      console.error('displayResultsFromLocalStorage() is not defined.');
+    }
+
+    // Show the back buttons
+    const backButton = document.getElementById('backToIndex');
+    const backButtonTop = document.getElementById('backToIndexTop');
+
+    [backButton, backButtonTop].forEach(button => {
+      if (button) {
+        button.style.display = 'inline-block';
+        button.onclick = () => {
+          window.location.href = 'Index.html';
+        };
+      }
+    });
   };
 });

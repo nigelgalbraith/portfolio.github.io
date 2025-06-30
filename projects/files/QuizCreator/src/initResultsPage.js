@@ -1,14 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
+function displayResultsFromLocalStorage() {
   const results = JSON.parse(localStorage.getItem('quizResults'));
   console.log('Results from localStorage:', results);
 
-  const summaryContainer = document.getElementById('summary');
-  const resultsContainer = document.getElementById('resultsContainer');
+  let resultsContainer = document.getElementById('resultsContainer');
+  let summaryContainer = document.getElementById('summary');
+
+  if (!resultsContainer) {
+    resultsContainer = document.createElement('div');
+    resultsContainer.id = 'resultsContainer';
+    document.body.appendChild(resultsContainer);
+  }
+
+  if (!summaryContainer) {
+    summaryContainer = document.createElement('div');
+    summaryContainer.id = 'summary';
+    document.body.insertBefore(summaryContainer, resultsContainer);
+  }
+
+  resultsContainer.innerHTML = '';
+  summaryContainer.innerHTML = '';
 
   let correctCount = 0;
   let incorrectCount = 0;
 
-  if (results) {
+  if (results && results.length > 0) {
     const incorrectHeading = document.createElement('h2');
     incorrectHeading.textContent = 'Incorrect Answers';
     resultsContainer.appendChild(incorrectHeading);
@@ -65,7 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (incorrectCount === 0) {
       resultsContainer.textContent = 'All answers are correct.';
     }
+
+    resultsContainer.style.display = 'block';
+    summaryContainer.style.display = 'block';
   } else {
     summaryContainer.textContent = 'No results available.';
   }
-});
+}
+
