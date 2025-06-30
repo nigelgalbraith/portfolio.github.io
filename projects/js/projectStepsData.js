@@ -1,48 +1,91 @@
 const ProjectSteps = {
   thematic: [
     {
-      title: "1. Conduct Thematic Analysis in Excel",
-      img: "ThermaticExcel.png",
-      alt: "Excel Thematic Analysis",
-      text: "Begin by identifying themes, factors, and raw codes within Excel. Use structured sheets to categorize data extracted from source material."
+      title: "1. Enter Extracts and Identify Factors",
+      img: "ThematicAnalysisIntial.png",
+      alt: "Entering Extracts and Factors",
+      text: "Begin your thematic analysis by entering extracts into Excel and filling out all relevant fields. Identify and add all factors present in the data."
     },
     {
-      title: "2. Update Factors and Related Groups/Sub-Groups",
-      img: "UpdateFactors.png",
-      alt: "Updating Factors",
-      text: "Revise or add new factors in the spreadsheet and associate them with the correct group and subgroup structures for deeper thematic insight."
+      title: "2. View Identified Factors",
+      img: "FactorInput.png",
+      alt: "Viewing Factors",
+      text: "Click the 'Check Factors' button to review all factors that have been identified within the dataset."
     },
     {
-      title: "3. Optionally Add Categories and Subcategories",
-      img: "Catergories.png",
-      alt: "Optional Categories",
-      text: "Add higher-level categories and subcategories if your analysis benefits from hierarchical organization beyond groups."
+      title: "3. Populate the Glossary Table",
+      img: "PopulateGlossary.png",
+      alt: "Glossary Table",
+      text: "Add each identified factor to the Glossary table and associate them with the correct Groups and Sub-Groups."
     },
     {
-      title: "4. Add Search Metadata for Categories/Subcategories",
-      img: "SearchData.png",
-      alt: "Search Tags",
-      text: "Enhance your data structure by assigning searchable tags to factors. These will assist in filtering and future retrieval within the web app."
+      title: "4. Update Group and Sub-Group Assignments",
+      img: "UpdateGroupSubGroup.png",
+      alt: "Group and Sub-Group Update",
+      text: "Return to the Thematic Analysis sheet and click the 'Update Group' and 'Update Sub Group' buttons. If adding factors manually, be sure to remove any existing content first to avoid duplication. Glossary cells turn red if factors are missing."
     },
     {
-      title: "5. Export Data to Webpage",
-      img: "Export.png",
-      alt: "Exporting to Webpage",
-      text: "Use the provided Python scripts to extract, clean, and convert Excel data into JSON. Then populate the HTML structure dynamically with this content."
+      title: "5. Update the Search Tool Data",
+      img: "UpdateSearchTool.png",
+      alt: "Search Tool Data",
+      text: "Update the Search Tool Data sheet to ensure it includes all relevant factors from your thematic analysis."
     },
     {
-      title: "6. Review Glossary",
-      img: "Glossary.png",
-      alt: "Glossary and Analysis View",
-      text: "The final HTML output includes a glossary of terms and relating catergoroies and sub catergories"
+      title: "6. Finalize Category and Sub-Category Tags",
+      img: "UpdateCatSubCat.png",
+      alt: "Finalizing Categories",
+      text: "Use the 'Update Category' and 'Update Sub-Category' buttons. Add extra rows if needed to ensure full coverage of factors."
     },
     {
-      title: "7. Review Web Analysis",
-      img: "WebAnalysis.png",
-      alt: "Web Analysis View",
-      text: "The final HTML output includes a glossary of terms and grouped factors, allowing for user-friendly browsing and review of the thematic structure."
+      title: "7. Save and Export Thematic Data",
+      img: "PythonWebUpdate.png",
+      alt: "Exporting Thematic Analysis",
+      text: "Save the workbook as Thematic-Analysis-Complete.xlsm. Then run the Python program located in the Python-Import folder called Python-Update-Webpage.py.to generate HTML files for both the Thematic Analysis and Search Tool webpages."
+    },
+    {
+      title: "8. Search Tool Webpage Output",
+      img: "WebSearchTool.png",
+      alt: "Search Tool Output",
+      text: "The HTML output includes a glossary of terms and searchable dropdown filters showing Categories, Sub-Categories, Groups, and Sub-Groups."
+    },
+    {
+      title: "9. Thematic Analysis Web Output",
+      img: "ThematicWebResults.png",
+      alt: "Thematic Analysis Output",
+      text: "The final webpage displays glossary terms and grouped thematic data, including risk assessment visuals and group/sub-group breakdowns."
+    },
+    {
+      title: "Groupings",
+      img: "GroupingsWeb.png",
+      alt: "Thematic Analysis Groupings Output",
+      text: "Thematic Analysis Groupings"
+    },
+    {
+      title: "Factor Analysis",
+      img: "FactorAnalysisWeb.png",
+      alt: "Thematic Analysis Factor Analysis Output",
+      text: "Thematic Analysis Factor Analysis"
+    },
+    {
+      title: "Group Analysis",
+      img: "GroupAnalysisWeb.png",
+      alt: "Thematic Analysis Group Analysis Output",
+      text: "Thematic Analysis Factor Analysis"
+    },
+    {
+      title: "Sub Group Analysis",
+      img: "SubGroupAnalysisWeb.png",
+      alt: "Thematic Analysis Sub Group Analysis Output",
+      text: "Thematic Analysis Sub Group Analysis"
+    },
+    {
+      title: "Risk Model Creator",
+      img: "RiskModelCreatorWeb.png",
+      alt: "Thematic Analysis Risk Model Creator Output",
+      text: "Thematic Analysis Model Creator Analysis"
     }
   ],
+
 
   quiz: [
     {
