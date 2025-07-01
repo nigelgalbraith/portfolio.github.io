@@ -58,31 +58,31 @@ const ProjectSteps = {
       title: "Groupings",
       img: "GroupingsWeb.png",
       alt: "Thematic Analysis Groupings Output",
-      text: "Thematic Analysis Groupings"
+      text: ""
     },
     {
       title: "Factor Analysis",
       img: "FactorAnalysisWeb.png",
       alt: "Thematic Analysis Factor Analysis Output",
-      text: "Thematic Analysis Factor Analysis"
+      text: ""
     },
     {
       title: "Group Analysis",
       img: "GroupAnalysisWeb.png",
       alt: "Thematic Analysis Group Analysis Output",
-      text: "Thematic Analysis Factor Analysis"
+      text: ""
     },
     {
       title: "Sub Group Analysis",
       img: "SubGroupAnalysisWeb.png",
       alt: "Thematic Analysis Sub Group Analysis Output",
-      text: "Thematic Analysis Sub Group Analysis"
+      text: ""
     },
     {
       title: "Risk Model Creator",
       img: "RiskModelCreatorWeb.png",
       alt: "Thematic Analysis Risk Model Creator Output",
-      text: "Thematic Analysis Model Creator Analysis"
+      text: ""
     }
   ],
 

@@ -60,12 +60,6 @@ ASSET_SETS = {
             "width": 100,
             "quality": 85
         },
-        "projects": {
-            "input_dir": "projects/images/icons/original",
-            "output_dir": "projects/images/icons/optimized",
-            "width": 100,
-            "quality": 85
-        }
     }
 }
 
