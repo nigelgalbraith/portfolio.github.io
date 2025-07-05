@@ -530,6 +530,14 @@ h1 {
   color: #66ffff;
 }
 
+#viewer {
+  width: 100%;
+  height: 500px;
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc;  
+  margin-top: 1rem;        
+}
+
 
 /* =======================
    Icons

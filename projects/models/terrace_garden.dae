@@ -4,8 +4,8 @@
         <contributor>
             <authoring_tool>SketchUp 25.0.571</authoring_tool>
         </contributor>
-        <created>2025-07-05T08:29:33Z</created>
-        <modified>2025-07-05T08:29:33Z</modified>
+        <created>2025-07-05T10:22:13Z</created>
+        <modified>2025-07-05T10:22:13Z</modified>
         <unit meter="0.0254" name="inch"/>
         <up_axis>Z_UP</up_axis>
     </asset>
@@ -1877,28 +1877,28 @@
     </library_effects>
     <library_images>
         <image id="ID16">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Plywood_01_1K.png</init_from>
+            <init_from>Terrace_Gardens/Plywood_01_1K.png</init_from>
         </image>
         <image id="ID80">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Forest_Floor_01_1K.png</init_from>
+            <init_from>Terrace_Gardens/Forest_Floor_01_1K.png</init_from>
         </image>
         <image id="ID102">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Forest_Floor_01_1K_0.png</init_from>
+            <init_from>Terrace_Gardens/Forest_Floor_01_1K_0.png</init_from>
         </image>
         <image id="ID168">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Wood_Veneer_15_1K.png</init_from>
+            <init_from>Terrace_Gardens/Wood_Veneer_15_1K.png</init_from>
         </image>
         <image id="ID191">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Wood_Veneer_15_1K_1.png</init_from>
+            <init_from>Terrace_Gardens/Wood_Veneer_15_1K_1.png</init_from>
         </image>
         <image id="ID228">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Concrete_06_1K.png</init_from>
+            <init_from>Terrace_Gardens/Concrete_06_1K.png</init_from>
         </image>
         <image id="ID246">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Concrete_04_1K.png</init_from>
+            <init_from>Terrace_Gardens/Concrete_04_1K.png</init_from>
         </image>
         <image id="ID281">
-            <init_from>Stair%20Garden%20Boxes%20-%20Sketchup%20-%20V2/Concrete_04_1K_2.png</init_from>
+            <init_from>Terrace_Gardens/Concrete_04_1K_2.png</init_from>
         </image>
     </library_images>
     <scene>
