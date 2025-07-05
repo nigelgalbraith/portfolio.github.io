@@ -45,7 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/${imgName}" />
       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/${imgName}" />
       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/${imgName}" />
-      <img src="images/main/optimized/mobile/standard/${imgName}" alt="${alt}" class="${extraClass}" />
+        <img 
+        src="images/main/optimized/mobile/standard/${imgName}" 
+        alt="${alt}" 
+        class="${extraClass}" 
+        data-full="images/main/optimized/desktop/zoom/${imgName}" 
+      />
     `;
 
     // Bind zoom functionality

@@ -19,7 +19,7 @@ IMAGE_PROFILES = {
     "main": {
         "input_dir": "images/main/original",
         "output_base": "images/main/optimized",
-        "quality": 85,
+        "quality": 90,
         "sizes": {
             "desktop": {"standard": 1280, "zoom": 1920},
             "laptop":  {"standard": 1024, "zoom": 1366},
@@ -29,7 +29,7 @@ IMAGE_PROFILES = {
     "projects": {
         "input_dir": "projects/images/main/original",
         "output_base": "projects/images/main/optimized",
-        "quality": 85,
+        "quality": 90,
         "sizes": {
             "desktop": {"standard": 1280, "zoom": 1920},
             "laptop":  {"standard": 1024, "zoom": 1366},
@@ -121,12 +121,9 @@ def resize_image(input_path, output_path, target_width, quality):
     try:
         with Image.open(input_path) as img:
             orig_width, orig_height = img.size
-            if orig_width <= target_width:
-                img_resized = img.copy()
-            else:
-                scale = target_width / orig_width
-                target_height = int(orig_height * scale)
-                img_resized = img.resize((target_width, target_height), Image.LANCZOS)
+            scale = target_width / orig_width
+            target_height = int(orig_height * scale)
+            img_resized = img.resize((target_width, target_height), Image.LANCZOS)
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             img_resized.save(output_path, optimize=True, quality=quality)
             print(f"Saved: {output_path}")

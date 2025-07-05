@@ -27,9 +27,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const img = document.createElement("img");
-    img.src = `images/main/optimized/mobile/standard/${fileName}`;
+    img.src = `images/main/optimized/desktop/standard/${fileName}`;
     img.alt = altText;
     img.className = imgClass;
+
+    const screenWidth = Math.max(
+      window.innerWidth || 0,
+      document.documentElement.clientWidth || 0
+    );
+
+    let zoomFolder = "desktop";
+    if (screenWidth < 768) {
+      zoomFolder = "mobile";
+    } else if (screenWidth < 1280) {
+      zoomFolder = "laptop";
+    }
+
+    img.setAttribute("data-full", `images/main/optimized/${zoomFolder}/zoom/${fileName}`);
+    img.addEventListener("click", () => openFullScreen(img));
+
+    const preloadZoom = document.createElement("link");
+    preloadZoom.rel = "preload";
+    preloadZoom.as = "image";
+    preloadZoom.href = `images/main/optimized/${zoomFolder}/zoom/${fileName}`;
+    document.head.appendChild(preloadZoom);
 
     picture.appendChild(img);
     container.replaceWith(picture);

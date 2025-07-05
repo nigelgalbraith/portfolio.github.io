@@ -38,7 +38,7 @@ const ProjectSteps = {
     },
     {
       title: "7. Save and Export Thematic Data",
-      img: "PythonWebUpdate.png",
+      img: "TAPythonWebUpdate.png",
       alt: "Exporting Thematic Analysis",
       text: "Save the workbook as Thematic-Analysis-Complete.xlsm. Then run the Python program located in the Python-Import folder called Python-Update-Webpage.py.to generate HTML files for both the Thematic Analysis and Search Tool webpages."
     },

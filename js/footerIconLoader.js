@@ -2,37 +2,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
   if (!footer) return;
 
-  // Clear existing content (optional if you want to overwrite)
+  // Determine path prefix based on current page location
+  const isInProjectsFolder = window.location.pathname.includes("/projects/");
+  const imagePathPrefix = isInProjectsFolder ? "../images" : "images";
+
+  // Clear existing content (optional)
   footer.innerHTML = "";
 
-  // Create and append copyright
+  // Add copyright
   const copyright = document.createElement("span");
   copyright.textContent = "© 2025 Nigel Galbraith";
   footer.appendChild(copyright);
 
-  // Spacer between text and icons
+  // Separator
   footer.append(" | ");
 
-  // Icon details
+  // Icons
   const iconList = [
     {
       href: "mailto:nigel.galbraith@proton.me",
       alt: "Email",
-      src: "images/icons/optimized/email.png",
+      src: `${imagePathPrefix}/icons/optimized/email.png`,
     },
     {
       href: "https://github.com/oldschool299792458/nigelgalbraith.github.io",
       alt: "GitHub",
-      src: "images/icons/optimized/github.png",
+      src: `${imagePathPrefix}/icons/optimized/github.png`,
     },
     {
       href: "https://linkedin.com/in/nigelgalbraith",
       alt: "LinkedIn",
-      src: "images/icons/optimized/linkedin.png",
+      src: `${imagePathPrefix}/icons/optimized/linkedin.png`,
     },
   ];
 
-  // Append each icon link
+  // Add icons
   iconList.forEach(({ href, alt, src }) => {
     const a = document.createElement("a");
     a.href = href;
