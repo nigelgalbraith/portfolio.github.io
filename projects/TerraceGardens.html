@@ -10,107 +10,123 @@
   <script src="../js/footerIconLoader.js" defer></script>
   <script src="../js/skillsLoader.js" defer></script>
   <script src="js/carousel.js" defer></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="js/webglFallback.js" defer></script>
 </head>
 
- <body>
+<body>
   <div class="grid-bg"></div>
   <div class="container">
-   <h1>Nigel Galbraith Portfolio</h1>
+    <h1>Nigel Galbraith Portfolio</h1>
 
-   <!-- Navigation Bar -->
-   <nav class="navbar">
-    <ul>
-     <li><a href="../projects.html">Back To Projects</a></li>
-    </ul>
-   </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="../projects.html">Back To Projects</a></li>
+      </ul>
+    </nav>
 
-   <!-- Main Brief Outline -->
-   <main class="main-content">
-    <div class="main-content-flex-centre">
-     <h2>Terrace Gardens</h2>
+    <!-- Main Brief Outline -->
+    <main class="main-content">
+      <div class="main-content-flex-centre">
+        <h2>Terrace Gardens</h2>
 
-     <!-- Carousel using responsive <picture> injection -->
-     <div class="boxed-content">
+        <!-- Carousel using responsive <picture> injection -->
+        <div class="boxed-content">
           <div class="image-zoom-wrapper">
-               <div class="carousel-container">
-                    <div class="carousel-slide">
-                    <div class="responsive-carousel-image"
-                         data-img-name="TerraceGardens1.png"
-                         data-alt="Terrace Gardens 1"
-                         data-class="centre-img">
-                    </div>
-                    <div class="responsive-carousel-image"
-                         data-img-name="TerraceGardens2.png"
-                         data-alt="Terrace Gardens 2"
-                         data-class="centre-img">
-                    </div>
-               </div>
-          
-       <div class="dots">
-        <div class="carousel-controls">
-         <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
-         <span class="dot active"></span>
-         <span class="dot"></span>
-         <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <div class="responsive-carousel-image"
+                     data-img-name="TerraceGardens1.png"
+                     data-alt="Terrace Gardens 1"
+                     data-class="centre-img">
+                </div>
+                <div class="responsive-carousel-image"
+                     data-img-name="TerraceGardens2.png"
+                     data-alt="Terrace Gardens 2"
+                     data-class="centre-img">
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
+
+        <!-- Modal Zoom -->
+        <div class="modal" id="imgModal" onclick="closeFullScreen()">
+          <span class="close">×</span>
+          <img class="modal-content" id="fullImg"/>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-text">
+          <section>
+            <p>
+              For this project, I designed a set of terrace gardens using SketchUp 3D software, combining visual planning with practical layout considerations. The model helped me test different arrangements for planter boxes and levels to ensure both usability and aesthetic balance.
+            </p>
+            <p>
+              The construction process involved careful use of materials suited for outdoor conditions, with attention to drainage, accessibility, and maintenance. The project emphasized sustainability, using reclaimed wood and durable components where possible to reduce environmental impact while maintaining aesthetic appeal.
+            </p>
+            <p>
+              This project demonstrates how digital tools like SketchUp can aid in conceptualizing and communicating green space designs before physical work begins. The resulting gardens not only offer a peaceful retreat but also promote urban biodiversity and efficient use of vertical space.
+            </p>
+          </section>
+
+          <!-- 3D Model Viewer Section with Fallback -->
+          <section>
+            <h2 class="centered-title">3D Model Viewer</h2>
+
+            <!-- Placeholder for model-viewer (injected by JS) -->
+            <div id="modelViewerContainer" class="boxed-content" style="display: none;"></div>
+
+            <!-- Fallback carousel if WebGL is unavailable -->
+            <div id="fallbackCarousel" class="boxed-content" style="display: none;">
+              <div class="image-zoom-wrapper">
+                <div class="carousel-container">
+                  <div class="carousel-slide">
+                    <div class="responsive-carousel-image"
+                         data-img-name="TerraceGardensSketchUp1.png"
+                         data-alt="Terrace Gardens SketchUp 1"
+                         data-class="centre-img"></div>
+                    <div class="responsive-carousel-image"
+                         data-img-name="TerraceGardensSketchUp2.png"
+                         data-alt="Terrace Gardens SketchUp 2"
+                         data-class="centre-img"></div>
+                  </div>
+                  <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tools and Technologies -->
+          <section>
+            <h2 class="centered-title">Tools and Technologies</h2>
+            <div class="boxed-content">
+              <div class="icon-grid" data-icons="woodwork, tools"></div>
+            </div>
+
+            <!-- Key Learnings -->
+            <h2 class="centered-title">Key Learnings</h2>
+            <div class="boxed-content">
+              <div class="icon-grid" data-icons="problem_solving"></div>
+            </div>
+          </section>
+        </div>
       </div>
-      </div>
+    </main>
 
-      <!-- Modal Zoom -->
-      <div class="modal" id="imgModal" onclick="closeFullScreen()">
-       <span class="close">×</span>
-       <img class="modal-content" id="fullImg"/>
-      </div>
-     </div>
-
-     <!-- Main Content -->
-     <div class="main-content-text">
-     <section>
-          <p>
-          For this project, I designed a set of terrace gardens using SketchUp 3D software, combining visual planning with practical layout considerations. The model helped me test different arrangements for planter boxes and levels to ensure both usability and aesthetic balance.
-          </p>
-          <p>
-          The construction process involved careful use of materials suited for outdoor conditions, with attention to drainage, accessibility, and maintenance. The project emphasized sustainability, using reclaimed wood and durable components where possible to reduce environmental impact while maintaining aesthetic appeal.
-          </p>
-          <p>
-          This project demonstrates how digital tools like SketchUp can aid in conceptualizing and communicating green space designs before physical work begins. The resulting gardens not only offer a peaceful retreat but also promote urban biodiversity and efficient use of vertical space.
-          </p>
-     </section>
-
-     <!-- Model Veiwer-->
-     <section>
-     <h2 class="centered-title">3D Model Viewer</h2>
-     <div class="boxed-content">
-          <model-viewer src="models/terrace_garden.glb"
-                         alt="Terrace Garden 3D Model"
-                         auto-rotate
-                         camera-controls
-                         style="width: 100%; height: 500px;">
-          </model-viewer>
-     </div>
-     </section>
-
-      <!-- Tools and Technologies -->
-      <section>
-       <h2 class="centered-title">Tools and Technologies</h2>
-       <div class="boxed-content">
-        <div class="icon-grid" data-icons="woodwork, tools"></div>
-       </div>
-
-       <!-- Key Learnings -->
-       <h2 class="centered-title">Key Learnings</h2>
-       <div class="boxed-content">
-        <div class="icon-grid" data-icons="problem_solving"></div>
-       </div>
-      </section>
-     </div>
-    </div>
-   </main>
-
-   <!-- Footer -->
-   <footer></footer>
+    <!-- Footer -->
+    <footer></footer>
   </div>
- </body>
+</body>
 </html>
