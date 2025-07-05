@@ -1,47 +1,18 @@
-function testModelViewer(callback) {
-  const iframe = document.createElement('iframe');
-  iframe.style.display = 'none';
+function webglAvailable() {
+  try {
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!gl) return false;
 
-  // Create a temporary sandbox HTML with model-viewer
-  const blob = new Blob([`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    </head>
-    <body>
-      <model-viewer src="models/terrace_garden.glb" camera-controls></model-viewer>
-    </body>
-    </html>
-  `], { type: 'text/html' });
-
-  iframe.src = URL.createObjectURL(blob);
-
-  // Set a timeout: if iframe fails to render in 1s, assume fail
-  const failTimeout = setTimeout(() => {
-    iframe.remove();
-    callback(false);
-  }, 1000);
-
-  iframe.onload = () => {
-    try {
-      // If iframe has a WebGL context and model-viewer loads, pass
-      const glCanvas = iframe.contentDocument.querySelector('canvas');
-      if (glCanvas && glCanvas.getContext('webgl')) {
-        clearTimeout(failTimeout);
-        iframe.remove();
-        callback(true);
-      } else {
-        throw new Error("No usable WebGL canvas found.");
-      }
-    } catch {
-      clearTimeout(failTimeout);
-      iframe.remove();
-      callback(false);
-    }
-  };
-
-  document.body.appendChild(iframe);
+    // Try to use the context
+    const tex = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    const isValid = gl.isTexture(tex);
+    gl.deleteTexture(tex);
+    return isValid;
+  } catch {
+    return false;
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -53,33 +24,38 @@ window.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  testModelViewer((canUseModelViewer) => {
-    if (canUseModelViewer) {
-      console.log("✅ model-viewer works in this environment.");
+  if (webglAvailable()) {
+    console.log("✅ WebGL is available. Loading <model-viewer>...");
 
-      // Dynamically load model-viewer script for real
-      const script = document.createElement('script');
-      script.type = 'module';
-      script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
-      script.onload = () => {
-        viewerContainer.innerHTML = `
-          <model-viewer src="models/terrace_garden.glb"
-                        alt="Terrace Garden 3D Model"
-                        auto-rotate
-                        camera-controls
-                        style="width: 100%; height: 500px;">
-          </model-viewer>
-        `;
-        viewerContainer.style.display = 'block';
-        fallbackCarousel.style.display = 'none';
-      };
-      document.head.appendChild(script);
-    } else {
-    console.warn("⚠️ model-viewer is broken in this environment. Showing fallback.");
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
+
+    script.onload = () => {
+      viewerContainer.innerHTML = `
+        <model-viewer src="models/terrace_garden.glb"
+                      alt="Terrace Garden 3D Model"
+                      auto-rotate
+                      camera-controls
+                      style="width: 100%; height: 500px;">
+        </model-viewer>
+      `;
+      viewerContainer.style.display = 'block';
+      fallbackCarousel.style.display = 'none';
+    };
+
+    script.onerror = () => {
+      console.warn("⚠️ model-viewer script failed to load. Showing fallback.");
+      viewerContainer.style.display = 'none';
+      fallbackCarousel.style.display = 'block';
+      if (typeof showSlide === 'function') showSlide(0);
+    };
+
+    document.head.appendChild(script);
+  } else {
+    console.warn("⚠️ WebGL not available. Showing fallback carousel.");
     viewerContainer.style.display = 'none';
     fallbackCarousel.style.display = 'block';
-    if (typeof showSlide === 'function') showSlide(0); 
-
-    }
-  });
+    if (typeof showSlide === 'function') showSlide(0);
+  }
 });
