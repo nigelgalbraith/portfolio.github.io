@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
       alt: "ThermaticAnalysis Thumbnail",
       title: "Thermatic Analysis Web Tool",
       description: "Conduct a thermatic analysis in excell and use python to export it to browser for analysis"
+    },
+    {
+      href: "projects/TerraceGardens.html",
+      img: "images/thumbs/optimized/TerraceGardens.png",
+      alt: "TerraceGardens Thumbnail",
+      title: "Terrace Gardens",
+      description: "Terrace gardens designed using SketchUp 3D software and constructed to bring modern green spaces to elevated environments."
     }
   ];
 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nigel Galbraith - Terrace Gardens</title>
+  <link href="../styles/style.css" rel="stylesheet"/>
+  <script src="js/modalZoom.js" defer></script>
+  <script src="js/init.js" defer></script>
+  <script src="../js/footerIconLoader.js" defer></script>
+  <script src="../js/skillsLoader.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/ColladaLoader.js"></script>
+  <script src="js/viewer.js" defer></script>
+  <script src="js/OrbitControls.js"></script>
+
+ </head>
+ <body>
+  <div class="grid-bg"></div>
+  <div class="container">
+   <h1>Nigel Galbraith Portfolio</h1>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <ul>
+     <li><a href="../projects.html">Back To Projects</a></li>
+    </ul>
+   </nav>
+
+   <!-- Main Brief Outline -->
+   <main class="main-content">
+    <div class="main-content-flex-centre">
+     <h2>Terrace Gardens</h2>
+
+     <!-- Carousel using responsive <picture> injection -->
+     <div class="boxed-content">
+          <div class="image-zoom-wrapper">
+               <div class="carousel-container">
+                    <div class="carousel-slide">
+                    <div class="responsive-carousel-image"
+                         data-img-name="TerraceGardens1.png"
+                         data-alt="Terrace Gardens 1"
+                         data-class="centre-img">
+                    </div>
+                    <div class="responsive-carousel-image"
+                         data-img-name="TerraceGardens2.png"
+                         data-alt="Terrace Gardens 2"
+                         data-class="centre-img">
+                    </div>
+                    <div class="responsive-carousel-image"
+                         data-img-name="TerraceGardens3.png"
+                         data-alt="Terrace Gardens 3"
+                         data-class="centre-img">
+                    </div>
+               </div>
+          
+       <div class="dots">
+        <div class="carousel-controls">
+         <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+         <span class="dot active"></span>
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+        </div>
+       </div>
+      </div>
+      </div>
+
+      <!-- Modal Zoom -->
+      <div class="modal" id="imgModal" onclick="closeFullScreen()">
+       <span class="close">×</span>
+       <img class="modal-content" id="fullImg"/>
+      </div>
+     </div>
+
+     <!-- Main Content -->
+     <div class="main-content-text">
+     <section>
+          <p>
+          For this project, I designed a set of terrace gardens using SketchUp 3D software, combining visual planning with practical layout considerations. The design focused on maximizing green space in elevated or urban settings, integrating planter boxes, walkways, and seating areas into a cohesive and functional environment.
+          </p>
+          <p>
+          The construction process involved careful use of materials suited for outdoor conditions, with attention to drainage, accessibility, and maintenance. The project emphasized sustainability, using reclaimed wood and durable components where possible to reduce environmental impact while maintaining aesthetic appeal.
+          </p>
+          <p>
+          This project demonstrates how digital tools like SketchUp can aid in conceptualizing and communicating green space designs before physical work begins. The resulting gardens not only offer a peaceful retreat but also promote urban biodiversity and efficient use of vertical space.
+          </p>
+     </section>
+
+     <!-- 3D Model Veiwer -->
+      <section>
+          <h2 class="centered-title">3D Model Viewer</h2>
+          <div class="boxed-content">
+          <div id="viewer" data-model="models/terrace_garden.dae"></div>
+          </div>
+     </section>
+
+      <!-- Tools and Technologies -->
+      <section>
+       <h2 class="centered-title">Tools and Technologies</h2>
+       <div class="boxed-content">
+        <div class="icon-grid" data-icons="woodwork, tools"></div>
+       </div>
+
+       <!-- Key Learnings -->
+       <h2 class="centered-title">Key Learnings</h2>
+       <div class="boxed-content">
+        <div class="icon-grid" data-icons="problem_solving"></div>
+       </div>
+      </section>
+     </div>
+    </div>
+   </main>
+
+   <!-- Footer -->
+   <footer></footer>
+  </div>
+ </body>
+</html>
