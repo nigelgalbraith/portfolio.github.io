@@ -283,6 +283,7 @@ h1 {
     padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 15rem;
 }
 
 .grouped-list-item-button:hover {
@@ -291,7 +292,7 @@ h1 {
 }
 
 .grouped-list-item-button img {
-    width: 200px;
+    width: 15rem;
     height: auto;
     border-radius: 6px;
     margin-right: 1.5rem;
@@ -645,6 +646,7 @@ footer {
  flex-direction: column;
  justify-content: center;
  padding-right: 0;
+ height: auto;
 }
 
 .grouped-list-item-button-text h2{
@@ -659,6 +661,7 @@ footer {
 .main-content-image, .main-content-text, .grouped-list-item-button img{
  width: 100%;
 }
+
 
 .carousel-image {
  width: 100%;
