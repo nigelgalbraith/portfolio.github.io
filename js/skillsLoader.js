@@ -29,7 +29,9 @@ const ICON_REGISTRY = {
   security:         { alt: "Security Best Practices", label: "Security Best Practices",  src: ICON_PATH_PREFIX + "images/icons/optimized/degree.png" },
   gps_tracking:     { alt: "GPS Tracking",            label: "GPS Integration",          src: ICON_PATH_PREFIX + "images/icons/optimized/gps_tracking.png" },
   gps:              { alt: "GPS Integration",         label: "GPS Integration",          src: ICON_PATH_PREFIX + "images/icons/optimized/gps_tracking.png" },
-  user_experience:  { alt: "User Experience",         label: "User Experience Design",   src: ICON_PATH_PREFIX + "images/icons/optimized/user_experience.png" }
+  user_experience:  { alt: "User Experience",         label: "User Experience Design",   src: ICON_PATH_PREFIX + "images/icons/optimized/user_experience.png" },
+  SketchUp:         { alt: "SketchUp",                label: "SketchUp",                 src: ICON_PATH_PREFIX + "images/icons/optimized/SketchUpIcon.png" },
+  ThreeD_Design:    { alt: "3D Design",               label: "3D Design",                src: ICON_PATH_PREFIX + "images/icons/optimized/3D_Design.png" }
 };
 
 
