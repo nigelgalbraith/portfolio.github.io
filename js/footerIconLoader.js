@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       src: `${imagePathPrefix}/icons/optimized/email.png`,
     },
     {
-      href: "https://github.com/oldschool299792458/nigelgalbraith.github.io",
+      href: "https://github.com/nigelgalbraith/nigelgalbraith.github.io",
       alt: "GitHub",
       src: `${imagePathPrefix}/icons/optimized/github.png`,
     },
