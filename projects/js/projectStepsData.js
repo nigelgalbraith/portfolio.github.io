@@ -135,13 +135,13 @@ thematic: [
   portfolio:[
   {
     title: "Planning the Architecture",
-    text: "Before writing code, I planned out how I wanted the entire site structured—what pages it would need, what elements would be reused, and how I could modularise layout and logic using plain HTML, CSS, and JavaScript. The result was a layout that prioritised flexibility and manual control, without relying on any frameworks.",
+    text: "Before writing code, I planned out how I wanted the entire site structured what pages it would need, what elements would be reused, and how I could modularise layout and logic using plain HTML, CSS, and JavaScript. The result was a layout that prioritised flexibility and manual control, without relying on any frameworks.",
     img: "StructureDiagram.png",
     alt: "Site folder structure diagram"
   },
   {
     title: "Creating the Template System",
-    text: "To reduce duplication and keep things maintainable, I used JavaScript modules to inject common components—footer, navigation bar, project steps, image loaders, and icon grids. This allowed me to make global changes across all project pages by editing a single file.",
+    text: "To reduce duplication and keep things maintainable, I used JavaScript modules to inject common components footer, navigation bar, project steps, image loaders, and icon grids. This allowed me to make global changes across all project pages by editing a single file.",
     img: "TemplateInjection.png",
     alt: "Example of dynamic HTML injection"
   },
@@ -165,7 +165,7 @@ thematic: [
   },
   {
     title: "Deployment and Hosting",
-    text: "Once everything was functional and polished, I hosted the site using GitHub Pages. I also created a `.zip` version so people could download and inspect the full source. All pages are static and can be run locally with no dependencies.",
+    text: "Once everything was functional and polished, I hosted the site using GitHub Pages. All pages are static and can be run locally with no dependencies.",
     img: "Deployment.png",
     alt: "Deployment on GitHub Pages"
   }
