@@ -7,9 +7,11 @@
   <link href="styles/style.css" rel="stylesheet" />
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
-  <script src="js/projectListLoader.js" defer></script> <!-- NEW LINE -->
+  <script src="js/projectListLoader.js" defer></script>
  </head>
+
  <body>
+  <!-- Grid background overlay -->
   <div class="grid-bg"></div>
   <div class="container">
    <h1>Nigel Galbraith Portfolio</h1>
@@ -28,12 +30,15 @@
     </div>
    </nav>
 
-   <!-- Projects Outline -->
+   <!-- Main project section -->
    <main class="grouped-list">
-    <!-- Project cards will be inserted here by JS -->
+    <!-- 
+      Project cards will be dynamically inserted here 
+      by js/projectListLoader.js using predefined data or templates
+    -->
    </main>
 
-   <!-- Footer -->
+   <!-- Footer loaded by footerIconLoader.js -->
    <footer></footer>
   </div>
  </body>

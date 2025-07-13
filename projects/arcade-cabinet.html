@@ -11,7 +11,16 @@
   <script src="../js/skillsLoader.js" defer></script>
   <script src="js/carousel.js" defer></script>
  </head>
+
  <body>
+  <!-- 
+    Dynamic Content Notes:
+    - Carousel images and picture tags are populated via js/carousel.js and data-img-name attributes
+    - Image zoom modal functionality from js/modalZoom.js
+    - Footer content (contact icons etc.) is dynamically loaded from ../js/footerIconLoader.js
+    - Tools and Key Learnings icons are injected using data-icons attributes via ../js/skillsLoader.js
+  -->
+
   <div class="grid-bg"></div>
   <div class="container">
    <h1>Nigel Galbraith Portfolio</h1>
@@ -23,120 +32,114 @@
     </ul>
    </nav>
 
-   <!-- Main Brief Outline -->
+   <!-- Main Page Heading -->
    <main class="main-content">
     <div class="main-content-flex-centre">
      <h2>Custom Arcade Cabinet</h2>
 
-     <!-- Carousel using responsive <picture> injection -->
+     <!-- Carousel using responsive <picture> injection (populated via js/carousel.js) -->
      <div class="boxed-content">
-          <div class="image-zoom-wrapper">
-               <div class="carousel-container">
-                    <div class="carousel-slide">
-                    <div class="responsive-carousel-image"
-                         data-img-name="Arcade-Cabinet1.png"
-                         data-alt="Arcade Cabinet 1"
-                         data-class="centre-img">
-                    </div>
-                    <div class="responsive-carousel-image"
-                         data-img-name="Arcade-Cabinet2.png"
-                         data-alt="Arcade Cabinet 2"
-                         data-class="centre-img">
-                    </div>
-               </div>
-          
-       <div class="dots">
-        <div class="carousel-controls">
-         <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
-         <span class="dot active"></span>
-         <span class="dot"></span>
-         <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+      <div class="image-zoom-wrapper">
+       <div class="carousel-container">
+        <div class="carousel-slide">
+         <div class="responsive-carousel-image"
+              data-img-name="Arcade-Cabinet1.png"
+              data-alt="Arcade Cabinet 1"
+              data-class="centre-img"></div>
+         <div class="responsive-carousel-image"
+              data-img-name="Arcade-Cabinet2.png"
+              data-alt="Arcade Cabinet 2"
+              data-class="centre-img"></div>
+        </div>
+        <div class="dots">
+         <div class="carousel-controls">
+          <button class="carousel-arrow left-arrow" onclick="prevSlide()">&lt;</button>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <button class="carousel-arrow right-arrow" onclick="nextSlide()">&gt;</button>
+         </div>
         </div>
        </div>
       </div>
-      </div>
 
-      <!-- Modal Zoom -->
+      <!-- Image Zoom Modal (activated by js/modalZoom.js) -->
       <div class="modal" id="imgModal" onclick="closeFullScreen()">
        <span class="close">×</span>
        <img class="modal-content" id="fullImg"/>
       </div>
      </div>
 
-     <!-- Main Content -->
+     <!-- Main Page Text -->
      <div class="main-content-text">
       <section>
-       <p>
-        For this project, I built a custom MAME arcade cabinet using waste MDF and salvaged timber from my joinery work, giving new life to materials that would otherwise have been discarded. The core of the system is an old Dell OptiPlex Slimline from around 2005, equipped with a Core 2 Duo processor, repurposed to run classic games smoothly.
-       </p>
-       <p>
-        I integrated an i-PAC circuit board to manage the joystick and button controls for an authentic arcade experience. The visuals are displayed on a secondhand 32-inch TV, with a front LED fan and an external power button installed on the cabinet for easy access.
-       </p>
-       <p>
-        Running Windows with HyperSpin, the cabinet supports over 4000 games, including titles from MAME, Neo Geo, PlayStation 1 &amp; 2, Sega Master System, Sega Mega Drive, Mega CD, NES, and SNES all packed into one nostalgic gaming experience. To enhance immersion, I used local policy settings to hide the Windows system interface, providing a clean, arcade-style environment.
-       </p>
+       <p>For this project, I built a custom MAME arcade cabinet using waste MDF and salvaged timber from my joinery work, giving new life to materials that would otherwise have been discarded...</p>
+       <p>I integrated an i-PAC circuit board... </p>
+       <p>Running Windows with HyperSpin, the cabinet supports over 4000 games... </p>
       </section>
 
-     <!-- Arcade Files & Web Links -->
-     <!-- Pacman Box -->
-     <section>
-          <h2 class="centered-title">Retro Games</h2>
-          <div class="boxed-content">
-          <div class="icon-grid">
-               <a class="grouped-list-item-button-link" href="files/Arcade/Pacman/index.html" target="_blank">
-                    <div class="icon-item">
-                         <img alt="Pacman Icon" class="li-icon" src="../images/icons/optimized/Pacman.png" />
-                         <span>Play Pacman</span>
-                    </div>
-               </a>
-               <a class="grouped-list-item-button-link" download href="files/Arcade/Pacman.zip">
-                    <div class="icon-item">
-                         <img alt="Download Icon" class="li-icon" src="../images/icons/optimized/zip.png" />
-                         <span>Download Pacman</span>
-                    </div>
-               </a>
-               <a class="grouped-list-item-button-link" href="https://github.com/daleharvey/pacman" target="_blank">
-                    <div class="icon-item">
-                         <img alt="GitHub Icon" class="li-icon" src="../images/icons/optimized/githubBlack.png" />
-                         <span>Pacman Source</span>
-                    </div>
-               </a>
+      <!-- Retro Games: Pacman and Galaga (manual icon grid) -->
+      <section>
+       <h2 class="centered-title">Retro Games</h2>
+       
+       <!-- Pacman Box -->
+       <div class="boxed-content">
+        <div class="icon-grid">
+         <a class="grouped-list-item-button-link" href="files/Arcade/Pacman/index.html" target="_blank">
+          <div class="icon-item">
+           <img alt="Pacman Icon" class="li-icon" src="../images/icons/optimized/Pacman.png" />
+           <span>Play Pacman</span>
           </div>
+         </a>
+         <a class="grouped-list-item-button-link" download href="files/Arcade/Pacman.zip">
+          <div class="icon-item">
+           <img alt="Download Icon" class="li-icon" src="../images/icons/optimized/zip.png" />
+           <span>Download Pacman</span>
           </div>
-          <div class="step-separator"></div>
+         </a>
+         <a class="grouped-list-item-button-link" href="https://github.com/daleharvey/pacman" target="_blank">
+          <div class="icon-item">
+           <img alt="GitHub Icon" class="li-icon" src="../images/icons/optimized/githubBlack.png" />
+           <span>Pacman Source</span>
+          </div>
+         </a>
+        </div>
+       </div>
 
-          <!-- Galaga Box -->
-          <div class="boxed-content">
-          <div class="icon-grid">
-               <a class="grouped-list-item-button-link" href="files/Arcade/Galaga/index.html" target="_blank">
-                    <div class="icon-item">
-                         <img alt="Galaga Icon" class="li-icon" src="../images/icons/optimized/Galaga.png" />
-                         <span>Play Galaga</span>
-                    </div>
-               </a>
-               <a class="grouped-list-item-button-link" download href="files/Arcade/Galaga.zip">
-                    <div class="icon-item">
-                         <img alt="Download Icon" class="li-icon" src="../images/icons/optimized/zip.png" />
-                         <span>Download Galaga</span>
-                    </div>
-               </a>
-               <a class="grouped-list-item-button-link" href="https://github.com/gregfrazier/gakaga" target="_blank">
-                    <div class="icon-item">
-                         <img alt="GitHub Icon" class="li-icon" src="../images/icons/optimized/githubBlack.png" />
-                         <span>Galaga Source</span>
-                    </div>
-               </a>
+       <div class="step-separator"></div>
+
+       <!-- Galaga Box -->
+       <div class="boxed-content">
+        <div class="icon-grid">
+         <a class="grouped-list-item-button-link" href="files/Arcade/Galaga/index.html" target="_blank">
+          <div class="icon-item">
+           <img alt="Galaga Icon" class="li-icon" src="../images/icons/optimized/Galaga.png" />
+           <span>Play Galaga</span>
           </div>
-          </div>   
-     </section>
-      <!-- Tools and Technologies -->
+         </a>
+         <a class="grouped-list-item-button-link" download href="files/Arcade/Galaga.zip">
+          <div class="icon-item">
+           <img alt="Download Icon" class="li-icon" src="../images/icons/optimized/zip.png" />
+           <span>Download Galaga</span>
+          </div>
+         </a>
+         <a class="grouped-list-item-button-link" href="https://github.com/gregfrazier/gakaga" target="_blank">
+          <div class="icon-item">
+           <img alt="GitHub Icon" class="li-icon" src="../images/icons/optimized/githubBlack.png" />
+           <span>Galaga Source</span>
+          </div>
+         </a>
+        </div>
+       </div>   
+      </section>
+
+      <!-- Tools and Technologies (icons injected via data-icons using skillsLoader.js) -->
       <section>
        <h2 class="centered-title">Tools and Technologies</h2>
        <div class="boxed-content">
         <div class="icon-grid" data-icons="shell, python, woodwork, tools, SketchUp"></div>
        </div>
 
-       <!-- Key Learnings -->
+       <!-- Key Learnings (icons injected via data-icons using skillsLoader.js) -->
        <h2 class="centered-title">Key Learnings</h2>
        <div class="boxed-content">
         <div class="icon-grid" data-icons="debugging, problem_solving, user_experience, ThreeD_Design, repair"></div>
@@ -146,7 +149,7 @@
     </div>
    </main>
 
-   <!-- Footer -->
+   <!-- Footer content dynamically loaded from ../js/footerIconLoader.js -->
    <footer></footer>
   </div>
  </body>

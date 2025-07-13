@@ -169,10 +169,10 @@ function loadProjectSteps(containerSelector, steps) {
 
 // Load based on data-project attribute
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".main-content-text section");
+  const container = document.querySelector(".main-content-step-text section");
   const project = document.body.dataset.project;
 
   if (container && ProjectSteps[project]) {
-    loadProjectSteps(".main-content-text section", ProjectSteps[project]);
+    loadProjectSteps(".main-content-step-text section", ProjectSteps[project]);
   }
 });

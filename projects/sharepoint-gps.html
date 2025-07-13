@@ -12,7 +12,16 @@
   <script src="../js/skillsLoader.js" defer></script>
   <script src="../js/responsiveImageLoader.js" defer></script>
  </head>
+
  <body>
+  <!-- 
+    Dynamic Content Notes:
+    - Responsive image inserted via data-img-name using ../js/responsiveImageLoader.js
+    - Image zoom modal enabled via js/modalZoom.js
+    - Tools and Key Learnings icons populated using data-icons via ../js/skillsLoader.js
+    - Footer content dynamically loaded via ../js/footerIconLoader.js
+  -->
+
   <div class="grid-bg"></div>
   <div class="container">
    <h1>Nigel Galbraith Portfolio</h1>
@@ -24,64 +33,62 @@
     </ul>
    </nav>
 
-   <!-- Main Brief Outline -->
+   <!-- Main Page heading -->
    <main class="main-content">
     <div class="main-content-flex-centre">
      <h2>SharePoint Database and GPS-Based Tracking System</h2>
 
-     <!-- Responsive Image with Zoom -->
-    <div class="boxed-content">
-     <div class="image-zoom-wrapper">
-      <div
-       class="responsive-image"
-       data-img-name="sharepointGPS.png"
-       data-alt="SharePoint GPS Diagram"
-       data-class="centre-img"
-      ></div>
+     <!-- Responsive Image with Zoom (loaded via responsiveImageLoader.js) -->
+     <div class="boxed-content">
+      <div class="image-zoom-wrapper">
+       <div
+        class="responsive-image"
+        data-img-name="sharepointGPS.png"
+        data-alt="SharePoint GPS Diagram"
+        data-class="centre-img">
+       </div>
+      </div>
      </div>
-     </div>
-     <!-- Modal for Zoom -->
+
+     <!-- Image Zoom Modal (activated by js/modalZoom.js) -->
      <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />
      </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Page Text -->
     <div class="main-content-text">
      <section>
-      <p>
-       As part of my work with Downer, I implemented a SharePoint-based digital solution to enhance the efficiency and communication within the traffic management team. The goal was to modernize the way site traffic management supervisors accessed and managed their documents, plans, and job data in the field.
-      </p>
-      <p>
-       I developed a SharePoint site that allowed supervisors to:
+      <p>As part of my work with Downer, I implemented a SharePoint-based digital solution to enhance the efficiency and communication within the traffic management team...</p>
+      
+      <p>I developed a SharePoint site that allowed supervisors to:
        <ul>
         <li>Access and manage Traffic Management Plans (TMPs) directly from their tablets while on-site.</li>
         <li>Upload daily site checks via their smartphones, streamlining reporting and compliance.</li>
         <li>Scan temporary traffic management signs with mobile devices, automatically capturing and logging GPS coordinates where signs were placed.</li>
        </ul>
       </p>
-      <p>
-       This SharePoint platform became a centralized hub, supporting:
+
+      <p>This SharePoint platform became a centralized hub, supporting:
        <ul>
         <li>Forward works planning by linking staff, plant, and resources to current and future projects.</li>
         <li>Improved visibility and communication, enabling access to the weekly planner from any internet-connected device.</li>
         <li>Crew pre-planning, allowing team leads to assign and prepare crews in advance based on job requirements.</li>
        </ul>
       </p>
-      <p>
-       The solution significantly reduced manual paperwork, improved auditability, and helped teams in the field stay connected to the office in real time. This contributed to smoother project delivery and better-informed decision-making across multiple job sites.
-      </p>
+
+      <p>The solution significantly reduced manual paperwork, improved auditability, and helped teams in the field stay connected to the office in real time...</p>
      </section>
 
+     <!-- Tools and Technologies (icons injected using data-icons via skillsLoader.js) -->
      <section>
-      <!-- Tools and Technologies -->
       <h2 class="centered-title">Tools and Technologies</h2>
       <div class="boxed-content">
        <div class="icon-grid" data-icons="sharepoint,office365"></div>
       </div>
 
-      <!-- Key Learnings -->
+      <!-- Key Learnings (icons injected using data-icons via skillsLoader.js) -->
       <h2 class="centered-title">Key Learnings</h2>
       <div class="boxed-content">
        <div class="icon-grid" data-icons="collaboration,gps,ux"></div>
@@ -90,7 +97,7 @@
     </div>
    </main>
 
-   <!-- Footer -->
+   <!-- Footer content dynamically loaded from ../js/footerIconLoader.js -->
    <footer></footer>
   </div>
  </body>

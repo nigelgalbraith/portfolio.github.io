@@ -3,80 +3,54 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - Portfolio
-  </title>
+  <title>Nigel Galbraith - Portfolio</title>
   <link href="styles/style.css" rel="stylesheet"/>
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
  </head>
+
  <body>
-  <div class="grid-bg">
-  </div>
+  <!-- 
+    Dynamic Content Notes:
+    - Footer content is dynamically loaded from js/footerIconLoader.js
+    - Hamburger menu toggle is handled by js/menuToggle.js
+  -->
+
+  <!-- Background grid pattern -->
+  <div class="grid-bg"></div>
+
+  <!-- Main content wrapper -->
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
-   <!-- Navigation Bar -->
+   <h1>Nigel Galbraith Portfolio</h1>
+
+   <!-- Navigation Bar with hamburger menu for mobile -->
    <nav class="navbar">
-    <button class="hamburger" onclick="toggleMenu()">
-     ☰
-    </button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="nav-links" id="navLinks">
      <ul>
-      <li>
-       <a class="active" href="index.html">
-        Home
-       </a>
-      </li>
-      <li>
-       <a href="about.html">
-        About Me
-       </a>
-      </li>
-      <li>
-       <a href="projects.html">
-        Projects
-       </a>
-      </li>
-      <li>
-       <a href="resume.html">
-        Resume
-       </a>
-      </li>
-      <li>
-       <a href="contact.html">
-        Contact
-       </a>
-      </li>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
      </ul>
     </div>
    </nav>
-   <!-- Main Brief Outline -->
+
+   <!-- Homepage Introduction Text -->
    <main class="main-content">
     <div class="main-content-flex">
      <div class="main-content-text">
-      <p>
-       I’m an IT professional based in Christchurch, New Zealand, with a strong foundation in infrastructure, networking, virtualization, and automation. I build smart, sustainable, user-focused solutions whether for enterprise teams or home-grown DIY projects.
-      </p>
-      <p>
-       My journey into tech began with hands-on trades work, followed by academic studies at Ara Institute of Canterbury where I focused on cost-effective open-source virtualization and efficient IT infrastructure. That balance between practical know-how and innovative thinking continues to shape my approach today.
-      </p>
-      <p>
-       Whether it's building a SharePoint system to optimize traffic operations, automating my vegetable garden's irrigation, or running virtual machines for research and testing, I’m driven by problem-solving and efficiency. I believe technology can make life easier and greener when thoughtfully applied.
-      </p>
-      <p>
-       Please explore my
-       <a href="projects.html">
-        projects
-       </a>
-       , read more
-       <a href="about.html">
-        about me
-       </a>
-       , or get in touch. I'm always keen to collaborate with teams that value innovation, sustainability, and practical creativity.
-      </p>
+      <p>I’m an IT professional based in Christchurch, New Zealand, with a strong foundation in infrastructure, networking, virtualization, and automation. I build smart, sustainable, user focused solutions whether for enterprise teams or home grown DIY projects.</p>
+
+      <p>My journey into tech began with hands-on trades work, followed by academic studies at Ara Institute of Canterbury where I focused on cost-effective open-source virtualization and efficient IT infrastructure. That balance between practical know how and innovative thinking continues to shape my approach today.</p>
+      
+      <p>Whether it's building a SharePoint system to optimize traffic operations, automating my vegetable garden's irrigation, or running virtual machines for research and testing, I’m driven by problem-solving and efficiency. I believe technology can make life easier and greener when thoughtfully applied.</p>
+      
+      <p>Please explore my <a href="projects.html">projects</a>, read more <a href="about.html">about me</a>, or get in touch. I'm always keen to collaborate with teams that value innovation, sustainability, and practical creativity.</p>
      </div>
+
+     <!-- Responsive Image Content (uses <picture> element for breakpoints) -->
      <div class="main-content-image">
       <picture>
        <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/diverse.png"/>
@@ -87,9 +61,9 @@
      </div>
     </div>
    </main>
-   <!-- Footer -->
-   <footer>
-   </footer>
+
+   <!-- Footer (dynamically populated via footerIconLoader.js) -->
+   <footer></footer>
   </div>
  </body>
 </html>

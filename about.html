@@ -1,84 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - About Me
-  </title>
-  <link href="styles/style.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigel Galbraith - About Me</title>
+  <link rel="stylesheet" href="styles/style.css" />
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
  </head>
+
  <body>
-  <div class="grid-bg">
-  </div>
+  <!-- 
+    Dynamic Content Notes:
+    - Hamburger menu toggles nav visibility (js/menuToggle.js)
+    - Footer icons and contact links are inserted dynamically by js/footerIconLoader.js
+  -->
+
+  <!-- Background grid layer -->
+  <div class="grid-bg"></div>
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
+   <h1>Nigel Galbraith Portfolio</h1>
+
    <!-- Navigation Bar -->
    <nav class="navbar">
-    <button class="hamburger" onclick="toggleMenu()">
-     ☰
-    </button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="nav-links" id="navLinks">
      <ul>
-      <li>
-       <a href="index.html">
-        Home
-       </a>
-      </li>
-      <li>
-       <a class="active" href="about.html">
-        About Me
-       </a>
-      </li>
-      <li>
-       <a href="projects.html">
-        Projects
-       </a>
-      </li>
-      <li>
-       <a href="resume.html">
-        Resume
-       </a>
-      </li>
-      <li>
-       <a href="contact.html">
-        Contact
-       </a>
-      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
      </ul>
     </div>
    </nav>
-   <!-- Main Brief Outline -->
+
+   <!-- Main Content Section -->
    <main class="main-content">
     <div class="main-content-flex">
+     
+     <!-- Left Text Column -->
      <div class="main-content-text">
-      <p>
-       I'm Nigel Galbraith, an IT professional with a strong foundation in network infrastructure, virtualization, and automation. After years of hands-on experience across diverse industries from traffic planning to joinery, I transitioned into tech to build systems that are not just functional, but sustainable and user-focused.
-      </p>
-      <p>
-       During my studies at Ara Institute of Canterbury, I completed a capstone project developing a KVM-based virtualization environment to replace proprietary software — a step toward open-source learning and cost-effective lab setups. I thrive on technical challenges and enjoy turning complex problems into elegant, automated solutions.
-      </p>
-      <p>
-       Outside of work, I build personal projects like a custom arcade machine, a media server, and an automated irrigation system for my vegetable garden. These DIY builds reflect how I approach technology: creatively, practically, and with a sense of fun.
-      </p>
+      <p>I'm Nigel Galbraith, an IT professional with a strong foundation in network infrastructure, virtualization, and automation. After years of hands-on experience across diverse industries from traffic planning to joinery, I transitioned into tech to build systems that are not just functional, but sustainable and user-focused.</p>
+      
+      <p>During my studies at Ara Institute of Canterbury, I completed a capstone project developing a KVM-based virtualization environment to replace proprietary software a step toward open-source learning and cost-effective lab setups. I thrive on technical challenges and enjoy turning complex problems into elegant, automated solutions.</p>
+      
+      <p>Outside of work, I build personal projects like a custom arcade machine, a media server, and an automated irrigation system for my vegetable garden. These DIY builds reflect how I approach technology: creatively, practically, and with a sense of fun.</p>
      </div>
+
+     <!-- Responsive Profile Image -->
      <div class="main-content-image-padding">
       <picture>
-       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/nigel-cartoon.png"/>
-       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/nigel-cartoon.png"/>
-       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/nigel-cartoon.png"/>
-       <img alt="Cartoon image of Nigel Galbraith" src="images/main/optimized/mobile/standard/nigel-cartoon.png"/>
+       <source media="(min-width: 480px)" srcset="images/main/optimized/mobile/standard/nigel-cartoon.png" />
+       <source media="(min-width: 1024px)" srcset="images/main/optimized/laptop/standard/nigel-cartoon.png" />
+       <source media="(min-width: 1280px)" srcset="images/main/optimized/desktop/standard/nigel-cartoon.png" />
+       <img 
+        alt="Cartoon image of Nigel Galbraith" 
+        src="images/main/optimized/mobile/standard/nigel-cartoon.png" />
       </picture>
      </div>
     </div>
    </main>
-   <!-- Footer -->
-   <footer>
-   </footer>
+
+   <!-- Footer dynamically loaded by footerIconLoader.js -->
+   <footer></footer>
   </div>
  </body>
 </html>

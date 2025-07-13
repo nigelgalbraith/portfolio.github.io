@@ -3,94 +3,61 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Nigel Galbraith - Contact
-  </title>
+  <title>Nigel Galbraith - Contact</title>
   <link href="styles/style.css" rel="stylesheet"/>
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
  </head>
+
  <body>
-  <div class="grid-bg">
-  </div>
+  <!-- 
+    Dynamic Content Notes:
+    - Hamburger menu toggle handled by js/menuToggle.js
+    - Footer icons and links dynamically loaded from js/footerIconLoader.js
+  -->
+
+  <!-- Background grid overlay -->
+  <div class="grid-bg"></div>
+
+  <!-- Page container -->
   <div class="container">
-   <h1>
-    Nigel Galbraith Portfolio
-   </h1>
+   <h1>Nigel Galbraith Portfolio</h1>
+
    <!-- Navigation Bar -->
    <nav class="navbar">
-    <button class="hamburger" onclick="toggleMenu()">
-     ☰
-    </button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="nav-links" id="navLinks">
      <ul>
-      <li>
-       <a href="index.html">
-        Home
-       </a>
-      </li>
-      <li>
-       <a href="about.html">
-        About Me
-       </a>
-      </li>
-      <li>
-       <a href="projects.html">
-        Projects
-       </a>
-      </li>
-      <li>
-       <a href="resume.html">
-        Resume
-       </a>
-      </li>
-      <li>
-       <a class="active" href="contact.html">
-        Contact
-       </a>
-      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
      </ul>
     </div>
    </nav>
-   <!-- Main Brief Outline -->
+
+   <!-- Main Content Section -->
    <main class="main-content">
     <div class="main-content-flex-centre">
      <div class="main-content-text">
-      <h2>
-       Contact Me
-      </h2>
-      <p>
-       If you'd like to get in touch, please reach out using one of the following methods:
-      </p>
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, please reach out using one of the following methods:</p>
+
+      <!-- Contact Methods -->
       <ul>
-       <li>
-        Email:
-        <a href="mailto:nigel.galbraith@proton.me">
-         nigelgalbraith@proton.me
-        </a>
-       </li>
-       <li>
-        GitHub:
-        <a href="https://github.com/nigelgalbraith/nigelgalbraith.github.io" rel="noopener" target="_blank">
-         github.com/nigelgalbraith
-        </a>
-       </li>
-       <li>
-        LinkedIn:
-        <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">
-         linkedin.com/in/nigelgalbraith
-        </a>
-       </li>
+       <li>Email: <a href="mailto:nigel.galbraith@proton.me">nigelgalbraith@proton.me</a></li>
+       <li>GitHub: <a href="https://github.com/nigelgalbraith/nigelgalbraith.github.io" rel="noopener" target="_blank">github.com/nigelgalbraith</a></li>
+       <li>LinkedIn: <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">linkedin.com/in/nigelgalbraith</a></li>
       </ul>
-      <p>
-       Feel free to connect or send a message — I’d love to hear from you!
-      </p>
+      
+      <p>Feel free to connect or send a message — I’d love to hear from you!</p>
      </div>
     </div>
    </main>
-   <!-- Footer -->
-   <footer>
-   </footer>
+   
+   <!-- Footer dynamically loaded by footerIconLoader.js -->
+   <footer></footer>
   </div>
  </body>
 </html>

@@ -9,12 +9,23 @@
   <script src="js/footerIconLoader.js" defer></script>
   <script src="js/skillsLoader.js" defer></script>
  </head>
+
  <body>
+  <!-- 
+    Dynamic Content Notes:
+    - Footer content (contact icons etc.) is dynamically loaded from js/footerIconLoader.js
+    - Skills icons are injected using the data-icons attribute via js/skillsLoader.js
+    - Hamburger menu toggle is handled by js/menuToggle.js
+  -->
+
+  <!-- Background grid layer -->
   <div class="grid-bg"></div>
+
+  <!-- Main container for content layout -->
   <div class="container">
    <h1>Nigel Galbraith Portfolio</h1>
 
-   <!-- Navigation Bar -->
+   <!-- Navigation Bar with Hamburger Button -->
    <nav class="navbar">
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="nav-links" id="navLinks">
@@ -28,20 +39,20 @@
     </div>
    </nav>
 
-   <!-- Resume Content -->
+   <!-- Professional Introduction -->
    <h2 class="centered-title">Professional Outline</h2>
    <div class="center-content">
     <section class="grouped-list">
      <div class="boxed-content">
-      <p>
-       I have been able to experience many industries at both the middle management and operational levels. This has allowed me to gain different perspectives and understand the importance of providing a solution that suits the needs at every level. These different perspectives have also highlighted the importance of not only communicating your solution in a professional manner but also being open to criticism to allow for constant improvements that may not have been considered.
-      </p>
+      <p>I have been able to experience many industries at both the middle management and operational levels. This has allowed me to gain different perspectives and understand the importance of providing a solution that suits the needs at every level. These different perspectives have also highlighted the importance of not only communicating your solution in a professional manner but also being open to criticism to allow for constant improvements that may not have been considered.</p>
      </div>
 
-     <!-- Experience -->
+     <!-- Experience Timeline -->
      <h2 class="centered-title">Experience</h2>
      <div class="boxed-content">
       <div class="timeline">
+
+       <!-- Tait Communications -->
        <div class="timeline-item">
         <div class="time">Jan 2025 – Feb 2025</div>
         <div class="time-content">
@@ -61,6 +72,7 @@
         </div>
        </div>
 
+       <!-- Ara Institute of Canterbury -->
        <div class="timeline-item">
         <div class="time">Jun 2021 – Nov 2024</div>
         <div class="time-content">
@@ -79,6 +91,7 @@
         </div>
        </div>
 
+       <!-- Trade Staff Joinery -->
        <div class="timeline-item">
         <div class="time">Jun 2016 – Feb 2019</div>
         <div class="time-content">
@@ -97,6 +110,7 @@
         </div>
        </div>
 
+       <!-- Downer Traffic Management -->
        <div class="timeline-item">
         <div class="time">Jan 2009 – Jun 2016</div>
         <div class="time-content">
@@ -115,6 +129,7 @@
           <li>Inspired to pursue further study in IT due to this exposure to technical problem-solving.</li>
          </ul>
 
+         <!-- Sub-Roles at Downer -->
          <div class="sub-timeline-item">
           <div class="sub-timeline-item-content">
            <h4>Traffic Management Planner Team Leader</h4>
@@ -158,6 +173,7 @@
         </div>
        </div>
 
+       <!-- Laptop Universe -->
        <div class="timeline-item">
         <div class="time">Jan 2009 - Jan 2012</div>
         <div class="time-content">
@@ -178,10 +194,11 @@
       </div>
      </div>
 
-     <!-- Qualifications -->
+     <!-- Qualifications Timeline -->
      <h2 class="centered-title">Qualifications</h2>
      <div class="boxed-content">
       <div class="timeline">
+
        <div class="timeline-item">
         <div class="time">2021 - 2024</div>
         <div class="time-content">
@@ -198,6 +215,7 @@
          </ul>
         </div>
        </div>
+
        <div class="timeline-item">
         <div class="time">2007 - 2008</div>
         <div class="time-content">
@@ -205,6 +223,7 @@
          <ul><li>Diploma in Electronic Business, 2008</li></ul>
         </div>
        </div>
+
        <div class="timeline-item">
         <div class="time">2004 - 2005</div>
         <div class="time-content">
@@ -212,6 +231,7 @@
          <ul><li>Cert. Joinery - Lv1 &amp; Stair making, 2005</li></ul>
         </div>
        </div>
+
        <div class="timeline-item">
         <div class="time">2000 - 2003</div>
         <div class="time-content">
@@ -222,8 +242,8 @@
       </div>
      </div>
 
-    <!-- Resume Links -->
-    <section>
+     <!-- Resume Links Section -->
+     <section>
       <h2 class="centered-title">Resume Links</h2>
       <div class="boxed-content">
         <div class="icon-grid">
@@ -241,19 +261,17 @@
           </a>
         </div>
       </div>
-    </section>
+     </section>
 
-     <!-- Skills -->
+     <!-- Skills Section (icons injected by skillsLoader.js) -->
      <h2 class="centered-title">Skills</h2>
      <div class="boxed-content">
-      <div
-        class="icon-grid"
-        data-icons="*"></div>
+      <div class="icon-grid" data-icons="*"></div>
      </div>
     </section>
    </div>
 
-   <!-- Footer -->
+   <!-- Footer (dynamically loaded via footerIconLoader.js) -->
    <footer></footer>
   </div>
  </body>

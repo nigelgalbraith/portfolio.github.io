@@ -13,10 +13,22 @@
   <script src="js/projectStepsData.js" defer></script>
   <script src="../js/responsiveImageLoader.js" defer></script>
 </head>
+
 <body data-project="quiz">
+  <!-- 
+    Dynamic Content Notes:
+    - Responsive image is loaded via data-img-name using responsiveImageLoader.js
+    - Project steps are injected into <section> via js/projectStepsData.js
+    - Tools and Key Learnings icons are populated using data-icons via skillsLoader.js
+    - Footer content is dynamically inserted via footerIconLoader.js
+    - Image zoom modal functionality is handled by modalZoom.js
+  -->
+
   <div class="grid-bg"></div>
   <div class="container">
     <h1>Nigel Galbraith Portfolio</h1>
+
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <ul>
         <li><a href="../projects.html">Back To Projects</a></li>
@@ -26,6 +38,8 @@
     <main class="main-content">
       <div class="main-content-flex-centre">
         <h2>Quiz Creator</h2>
+
+        <!-- Responsive Image with Zoom (loaded by responsiveImageLoader.js) -->
         <div class="boxed-content">
           <div class="main-content-image">
             <div class="image-zoom-wrapper">
@@ -33,55 +47,52 @@
             </div>
           </div>
         </div>
-        
+
         <div class="step-separator"></div>
 
-        <p>
-        This project is a self-contained quiz generator that allows questions, answers, and detailed explanations to be added through a structured Excel spreadsheet, then converted into a dynamic, interactive web-based quiz.
+        <!-- Main Description -->
+        <p>This project is a self-contained quiz generator that allows questions, answers, and detailed explanations to be added through a structured Excel spreadsheet, then converted into a dynamic, interactive web-based quiz.</p>
+        
+        <p>I created this tool to provide a simple, offline solution for quiz creation no need to sign up for third-party platforms or rely on internet connectivity. The ability to generate and run quizzes locally makes it ideal for personal study, classrooms, or environments with limited access.
         </p>
-        <p>
-        I created this tool to provide a simple, offline solution for quiz creation no need to sign up for third-party platforms or rely on internet connectivity. The ability to generate and run quizzes locally makes it ideal for personal study, classrooms, or environments with limited access.
-        </p>
-        <p>
-        Throughout my study, repetition and practice played a crucial role in helping me retain and apply new information. This project enabled me to create targeted quizzes tailored to my learning needs and pace. It gave me the flexibility to reinforce key concepts through custom questions and revisit topics as often as needed.
-        </p>
-        <p>
-        While the current version is built around CyberOps content, the design is adaptable users can easily modify or replace the spreadsheet to suit any subject area. Whether it's IT, science, languages, or general knowledge, the tool can be repurposed to match.
-        </p>
-        <p>
-        Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.
-        </p>
+        
+        <p>Throughout my study, repetition and practice played a crucial role in helping me retain and apply new information. This project enabled me to create targeted quizzes tailored to my learning needs and pace. It gave me the flexibility to reinforce key concepts through custom questions and revisit topics as often as needed.</p>
+        
+        <p>While the current version is built around CyberOps content, the design is adaptable users can easily modify or replace the spreadsheet to suit any subject area. Whether it's IT, science, languages, or general knowledge, the tool can be repurposed to match.</p>
+        
+        <p>Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.</p>
 
-        <div class="main-content-text">
-        <section>
-        </section>
-        <!-- Quiz Links -->
-        <div class="boxed-content">
+        <div class="main-content-step-text">
+          <!-- Project Steps injected by js/projectStepsData.js -->
+          <section></section>
+
+          <!-- Quiz Links -->
+          <div class="boxed-content">
             <h2 class="centered-title">Quiz Links</h2>
             <div class="icon-grid">
-            <a class="grouped-list-item-button-link" href="files/QuizCreator/Index.html" target="_blank">
-            <div class="icon-item">
-            <img alt="Tools" class="li-icon" src="../images/icons/optimized/Webpage.PNG" />
-            <span>View Quiz Webpage</span>
+              <a class="grouped-list-item-button-link" href="files/QuizCreator/Index.html" target="_blank">
+                <div class="icon-item">
+                  <img alt="Tools" class="li-icon" src="../images/icons/optimized/Webpage.PNG" />
+                  <span>View Quiz Webpage</span>
+                </div>
+              </a>
+              <a class="grouped-list-item-button-link" download href="files/QuizCreator.zip">
+                <div class="icon-item">
+                  <img alt="Tools" class="li-icon" src="../images/icons/optimized/zip.png" />
+                  <span>Download Quiz</span>
+                </div>
+              </a>
             </div>
-            </a>
-            <a class="grouped-list-item-button-link" download href="files/QuizCreator.zip">
-            <div class="icon-item">
-            <img alt="Tools" class="li-icon" src="../images/icons/optimized/zip.png" />
-            <span>Download Quiz</span>
-            </div>
-            </a>
-            </div>
-        </div>
+          </div>
 
- 
-        <!-- Tools and Technologies -->
+          <!-- Tools and Technologies (icons loaded via skillsLoader.js using data-icons) -->
           <section>
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
               <div class="icon-grid" data-icons="shell,python"></div>
             </div>
 
+            <!-- Key Learnings (icons loaded via skillsLoader.js using data-icons) -->
             <h2 class="centered-title">Key Learnings</h2>
             <div class="boxed-content">
               <div class="icon-grid" data-icons="debugging"></div>
@@ -91,8 +102,10 @@
       </div> 
     </main>
 
+    <!-- Footer content dynamically loaded from footerIconLoader.js -->
     <footer></footer>
 
+    <!-- Modal Zoom (handled by modalZoom.js) -->
     <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />

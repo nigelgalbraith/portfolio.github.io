@@ -74,7 +74,7 @@ h1 {
   align-items: center;       
 }
 
-.main-content-text {
+.main-content-text, .main-content-step-text {
   flex: 1 1;
 }
 
@@ -637,7 +637,7 @@ footer {
 }
 
 /* containers */
-.main-content-text{
+.main-content-text, .main-content-step-text{
  flex-direction: column;
 }
 
@@ -658,7 +658,7 @@ footer {
  padding-right: 1rem;
 }
 
-.main-content-image, .main-content-text, .grouped-list-item-button img{
+.main-content-image, .main-content-text, .main-content-step-text, .grouped-list-item-button img{
  width: 100%;
 }
 

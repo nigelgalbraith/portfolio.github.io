@@ -13,6 +13,14 @@
   <script src="../js/responsiveImageLoader.js" defer></script>
  </head>
  <body>
+  <!-- 
+    Dynamic Content Notes:
+    - Responsive image is inserted using data-img-name via ../js/responsiveImageLoader.js
+    - Footer content (contact icons, branding) is injected via ../js/footerIconLoader.js
+    - Tools and Key Learnings icons are populated using data-icons via ../js/skillsLoader.js
+    - Modal image zoom enabled via js/modalZoom.js
+  -->
+
   <div class="grid-bg"></div>
   <div class="container">
    <h1>Nigel Galbraith Portfolio</h1>
@@ -29,40 +37,36 @@
     <div class="main-content-flex-centre">
      <h2>KVM Student Labs Project</h2>
 
-     <!-- Responsive Image with JS loader -->
-    <div class="boxed-content">
-        <div class="image-zoom-wrapper">
-            <div
-            class="responsive-image"
-            data-img-name="KVM-Top.drawio.png"
-            data-alt="KVM Labs Topology Diagram"
-            data-class="centre-img"
-            ></div>
-        </div>
+     <!-- Responsive Image with JS loader (from responsiveImageLoader.js) -->
+     <div class="boxed-content">
+      <div class="image-zoom-wrapper">
+       <div
+        class="responsive-image"
+        data-img-name="KVM-Top.drawio.png"
+        data-alt="KVM Labs Topology Diagram"
+        data-class="centre-img">
+       </div>
+      </div>
      </div>
 
      <!-- Main Content -->
      <div class="main-content-text">
       <section>
-       <p>
-        The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.
-       </p>
-       <p>
-        Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.
-       </p>
-       <p>
-        Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.
-       </p>
+       <p>The KVM Student Labs project transitioned Techlabs from VMware Workstation Pro to an open-source KVM virtualization stack using Ubuntu, QEMU, and Libvirt. The goal was to reduce licensing costs, improve performance, and streamline the infrastructure with domain-integrated authentication.</p>
+       
+       <p>Hardware compatibility and integration with the Active Directory domain posed initial challenges. Constraints in virtualized test environments led to delays, prompting a shift in focus from deployment to feasibility testing. These limitations emphasized the importance of robust backup and documentation processes.</p>
+       
+       <p>Despite technical setbacks, the project established a working foundation for domain-authenticated Linux virtualization, complete with Cockpit-based VM management. This solution demonstrated the viability of KVM as a scalable alternative for student lab environments.</p>
       </section>
 
-      <!-- Tools and Technologies -->
+      <!-- Tools and Technologies (icons loaded via skillsLoader.js using data-icons) -->
       <section>
        <h2 class="centered-title">Tools and Technologies</h2>
        <div class="boxed-content">
         <div class="icon-grid" data-icons="ubuntu,libvirt,qemu,shell,permissions,ad"></div>
        </div>
 
-       <!-- Key Learnings -->
+       <!-- Key Learnings (icons loaded via skillsLoader.js using data-icons) -->
        <h2 class="centered-title">Key Learnings</h2>
        <div class="boxed-content">
         <div class="icon-grid" data-icons="debugging,collaboration,automation,security"></div>
@@ -72,10 +76,10 @@
     </div>
    </main>
 
-   <!-- Footer -->
+   <!-- Footer content dynamically loaded via footerIconLoader.js -->
    <footer></footer>
 
-   <!-- Zoom Modal -->
+   <!-- Zoom Modal for responsive image (enabled by modalZoom.js) -->
    <div class="modal" id="imgModal" onclick="closeFullScreen()">
     <span class="close">×</span>
     <img class="modal-content" id="fullImg" />
