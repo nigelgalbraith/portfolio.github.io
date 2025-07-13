@@ -1,53 +1,58 @@
 // js/projectListLoader.js
 
+// Wait until the DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Array of project objects, each defining the link, thumbnail, alt text, title, and description
   const projects = [
     {
       href: "projects/kvm-lab.html",
       img: "images/thumbs/optimized/kvm-lab-thumb.png",
       alt: "KVM Virtual Lab thumbnail",
       title: "Open-Source Ubuntu KVM Solution",
-      description: "My Ara capstone focused on replacing VMware Workstation Pro with an open-source Ubuntu KVM solution to improve resource flexibility and reduce licensing costs."
+      description: "A practical alternative to VMware built using Ubuntu, QEMU, and Libvirt. This project aimed to reduce licensing costs and improve control over virtual lab environments while integrating with existing domain infrastructure."
     },
     {
       href: "projects/sharepoint-gps.html",
       img: "images/thumbs/optimized/sharepoint-gps-thumb.png",
       alt: "SharePoint and GPS App thumbnail",
       title: "SharePoint Database and GPS-Based Tracking System",
-      description: "Designed a SharePoint database and GPS-based tracking system to improve real-time traffic management planning and resource allocation at Downer."
+      description: "Developed a SharePoint platform and mobile-friendly workflow to help field staff access job data, upload site checks, and automatically log GPS positions of signage. Improved planning and coordination across traffic management teams."
     },
     {
       href: "projects/arcade-cabinet.html",
       img: "images/thumbs/optimized/arcade.png",
       alt: "DIY Projects thumbnail",
       title: "Custom Arcade Cabinet",
-      description: "Built a fully functional arcade cabinet running a MAME emulator, complete with custom wiring, joystick/button setup, and retro-style cabinet design for an authentic gaming experience."
+      description: "Reused salvaged materials to build a full-sized MAME arcade cabinet with custom wiring and controls. Powered by an old Dell PC, it runs HyperSpin and emulates multiple retro consoles for a nostalgic, all-in-one gaming setup."
     },
     {
       href: "projects/QuizCreator.html",
       img: "images/thumbs/optimized/Quiz.png",
       alt: "Quiz Thumbnail",
       title: "Quiz Creator",
-      description: "Create and run quizzes from Excel-based questions with explanations."
+      description: "A tool that reads quiz questions and answers from an Excel file and converts them into an interactive browser-based quiz. It runs locally and includes explanations for each answer, making it ideal for self-study and offline use."
     },
     {
       href: "projects/ThermaticAnalysis.html",
       img: "images/thumbs/optimized/ThermaticAnalysis.png",
       alt: "ThermaticAnalysis Thumbnail",
       title: "Thermatic Analysis Web Tool",
-      description: "Conduct a thermatic analysis in excell and use python to export it to browser for analysis"
+      description: "Helps structure thematic analysis findings from Excel into a clean, interactive web interface. Uses Python to transform raw coding data into something easier to review, share, and discuss with others."
     },
     {
       href: "projects/TerraceGardens.html",
       img: "images/thumbs/optimized/TerraceGardens.png",
       alt: "TerraceGardens Thumbnail",
       title: "Terrace Gardens",
-      description: "Terrace gardens designed using SketchUp 3D software and constructed to bring modern green spaces to elevated environments."
+      description: "Used SketchUp to plan and visualize tiered garden designs for narrow or sloped spaces. Focused on low-maintenance, sustainable planting layouts that could fit within tight urban environments or backyard terraces."
     }
   ];
 
+  // Select the container element where project cards will be injected
   const projectListContainer = document.querySelector(".grouped-list");
 
+  // Loop through each project and generate its HTML, then append it to the container
   projects.forEach((project) => {
     const template = `
       <a class="grouped-list-item-button-link" href="${project.href}">
@@ -60,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </a>
     `;
+    // Insert the generated HTML into the DOM
     projectListContainer.insertAdjacentHTML("beforeend", template);
   });
 });

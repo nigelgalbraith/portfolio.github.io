@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Dynamically detect if current page is in a subdirectory
+  // Determine whether to prefix relative image paths based on current page location
   const ICON_PATH_PREFIX = window.location.pathname.includes("/projects/") ? "../" : "";
 
-  // ICON_REGISTRY using dynamic prefix
+  // Define icon metadata for display: alt text, label, and icon image source path
   const ICON_REGISTRY = {
     degree:           { alt: "Degree",                  label: "BICT",                     src: ICON_PATH_PREFIX + "images/icons/optimized/degree.png" },
     cert:             { alt: "Certificate",             label: "CCNA Certified",           src: ICON_PATH_PREFIX + "images/icons/optimized/cert.png" },
@@ -34,19 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
     ThreeD_Design:    { alt: "3D Design",               label: "3D Design",                src: ICON_PATH_PREFIX + "images/icons/optimized/3D_Design.png" }
   };
 
+  /**
+   * Given a container element with a data-icons attribute, generate and append
+   * matching icons (images and labels) based on keys in ICON_REGISTRY.
+   */
   function renderIconsFromData(container) {
     const rawData = container.dataset.icons;
     if (!rawData) return;
 
     let iconKeys;
 
+    // If wildcard used, include all icons
     if (rawData.trim() === "*") {
       iconKeys = Object.keys(ICON_REGISTRY);
     } else {
+      // Otherwise parse comma-separated list of icon keys
       iconKeys = rawData.split(",").map(key => key.trim());
     }
 
-    // Sort alphabetically by label
+    // Filter out unknown keys and sort icons alphabetically by label
     iconKeys = iconKeys
       .filter(key => ICON_REGISTRY[key])
       .sort((a, b) => {
@@ -55,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return labelA.localeCompare(labelB);
       });
 
+    // Build and append each icon to the container
     iconKeys.forEach(key => {
       const icon = ICON_REGISTRY[key];
       if (!icon) return;
@@ -76,6 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Call render on each matching container
+  // For all elements with the data-icons attribute, generate their icon grid
   document.querySelectorAll("[data-icons]").forEach(renderIconsFromData);
 });

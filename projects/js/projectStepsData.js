@@ -1,4 +1,5 @@
 const ProjectSteps = {
+// Step-by-step breakdown for the Thematic Analysis project
 thematic: [
     {
     title: "Thematic Analysis Structure and Relationships",
@@ -91,7 +92,7 @@ thematic: [
     text: "Enables the creation of custom risk models based on grouped factors. You can define scenarios, assign risk levels, and visualize how themes impact different outcomes. Ideal for translating qualitative insights into decision-support tools."
   }
 ],
-
+  // Step-by-step breakdown for the Quiz Creator project
   quiz: [
     {
       title: "Update Custom Q&A",
@@ -132,6 +133,8 @@ thematic: [
   ]
 };
 
+
+// Function to generate and insert step content into the page
 function loadProjectSteps(containerSelector, steps) {
   const container = document.querySelector(containerSelector);
   if (!container || !steps || steps.length === 0) return;
@@ -140,13 +143,16 @@ function loadProjectSteps(containerSelector, steps) {
     const box = document.createElement("div");
     box.className = "boxed-content";
 
+    // Step title
     const h2 = document.createElement("h2");
     h2.className = "centered-title";
     h2.textContent = title;
 
+    // Image wrapper for zoom functionality
     const wrapper = document.createElement("div");
     wrapper.className = "image-zoom-wrapper";
 
+    // Placeholder div that gets replaced by responsive image logic elsewhere
     const imgDiv = document.createElement("div");
     imgDiv.className = "responsive-image";
     imgDiv.dataset.imgName = img;
@@ -155,9 +161,11 @@ function loadProjectSteps(containerSelector, steps) {
 
     wrapper.appendChild(imgDiv);
 
+    // Descriptive text for the step
     const p = document.createElement("p");
     p.textContent = text;
 
+    // Assemble and append everything
     box.appendChild(h2);
     box.appendChild(wrapper);
     box.appendChild(p);
@@ -167,11 +175,12 @@ function loadProjectSteps(containerSelector, steps) {
   });
 }
 
-// Load based on data-project attribute
+// Automatically load steps on DOM ready, based on body data attribute
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".main-content-step-text section");
   const project = document.body.dataset.project;
 
+  // Load only if matching project data exists
   if (container && ProjectSteps[project]) {
     loadProjectSteps(".main-content-step-text section", ProjectSteps[project]);
   }

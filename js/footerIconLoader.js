@@ -2,22 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
   if (!footer) return;
 
-  // Determine path prefix based on current page location
+  // Determine correct path prefix for images based on page location
   const isInProjectsFolder = window.location.pathname.includes("/projects/");
   const imagePathPrefix = isInProjectsFolder ? "../images" : "images";
 
-  // Clear existing content (optional)
+  // Clear any existing footer content
   footer.innerHTML = "";
 
-  // Add copyright
+  // Add copyright notice
   const copyright = document.createElement("span");
   copyright.textContent = "© 2025 Nigel Galbraith";
   footer.appendChild(copyright);
 
-  // Separator
+  // Add separator between text and icons
   footer.append(" | ");
 
-  // Icons
+  // List of social/contact icons with links
   const iconList = [
     {
       href: "mailto:nigel.galbraith@proton.me",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  // Add icons
+  // Create and append each icon to the footer
   iconList.forEach(({ href, alt, src }) => {
     const a = document.createElement("a");
     a.href = href;
