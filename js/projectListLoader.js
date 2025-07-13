@@ -53,6 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
       alt: "GreenhousePlanterBox Thumbnail",
       title: "Greenhouse Planter Boxes",
       description: "Used SketchUp to plan and visualize custom planter box layouts for a greenhouse environment. Focused on efficient space usage, sustainable materials, and indoor growing conditions suited for year-round cultivation."
+    },
+    {
+      href: "projects/PortfolioWebsite.html",
+      img: "images/thumbs/optimized/PortfolioWebsite.png",
+      alt: "Portfolio Website Thumbnail",
+      title: "Portfolio Website",
+      description: "This website was built from scratch using modular HTML and dynamic JavaScript injection. Each project page is templated with reusable loaders for clean, maintainable structure—no frameworks, just raw code."
     }
   ];
 
