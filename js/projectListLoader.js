@@ -46,6 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       alt: "TerraceGardens Thumbnail",
       title: "Terrace Gardens",
       description: "Used SketchUp to plan and visualize tiered garden designs for narrow or sloped spaces. Focused on low-maintenance, sustainable planting layouts that could fit within tight urban environments or backyard terraces."
+    },
+    {
+      href: "projects/GreenhousePlanterBox.html",
+      img: "images/thumbs/optimized/GreenhousePlanterBox.png",
+      alt: "GreenhousePlanterBox Thumbnail",
+      title: "Greenhouse Planter Boxes",
+      description: "Used SketchUp to plan and visualize custom planter box layouts for a greenhouse environment. Focused on efficient space usage, sustainable materials, and indoor growing conditions suited for year-round cultivation."
     }
   ];
 
