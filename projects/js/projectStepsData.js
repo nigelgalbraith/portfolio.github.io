@@ -136,31 +136,37 @@ thematic: [
   {
     title: "Planning the Architecture",
     text: "Before writing code, I planned out how I wanted the entire site structured—what pages it would need, what elements would be reused, and how I could modularise layout and logic using plain HTML, CSS, and JavaScript. The result was a layout that prioritised flexibility and manual control, without relying on any frameworks.",
-    image: "StructureDiagram.png",
+    img: "StructureDiagram.png",
     alt: "Site folder structure diagram"
   },
   {
     title: "Creating the Template System",
     text: "To reduce duplication and keep things maintainable, I used JavaScript modules to inject common components—footer, navigation bar, project steps, image loaders, and icon grids. This allowed me to make global changes across all project pages by editing a single file.",
-    image: "TemplateInjection.png",
+    img: "TemplateInjection.png",
     alt: "Example of dynamic HTML injection"
   },
   {
     title: "Project Pages and Data Mapping",
     text: "Each project has a dedicated HTML page that loads content dynamically based on the `data-project` attribute in the `<body>` tag. The corresponding entry in `projectStepsData.js` controls which steps and images are shown, allowing all project pages to reuse the same structure and logic.",
-    image: "DynamicProjectSteps.png",
+    img: "DynamicProjectSteps.png",
     alt: "Dynamic step loader code"
   },
   {
     title: "Responsive Image Loader",
     text: "I wrote a small script that loads images responsively by switching between resolutions based on screen size. This keeps load times fast without sacrificing quality on larger displays. Images are zoomable using a modular lightbox script.",
-    image: "ResponsiveImages.png",
+    img: "ResponsiveImages.png",
     alt: "Zoomable and responsive image example"
+  },
+  {
+    title: "Image Optimization Script",
+    text: "To ensure fast load times and proper responsiveness, I built a Python tool using Pillow and BeautifulSoup. It scans image folders, creates device-specific sizes for desktop, laptop, and mobile, and optimizes thumbnails and icons. The tool is reusable and integrated into the project workflow for consistent performance across the site.",
+    img: "ImageOptimizer.png",
+    alt: "Diagram showing image optimization script generating responsive image sizes"
   },
   {
     title: "Deployment and Hosting",
     text: "Once everything was functional and polished, I hosted the site using GitHub Pages. I also created a `.zip` version so people could download and inspect the full source. All pages are static and can be run locally with no dependencies.",
-    image: "Deployment.png",
+    img: "Deployment.png",
     alt: "Deployment on GitHub Pages"
   }
   ]
