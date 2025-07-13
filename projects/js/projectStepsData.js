@@ -105,7 +105,7 @@ quiz: [
     title: "Step 2: Generate the Webpage Content",
     img: "quiz-updateFlow.png",
     alt: "Quiz Python Program Flow Chart",
-    text: "Once your spreadsheet is ready, run the Python script named 'Python-Update-Webpage.py' from the Python-Import folder. This script processes the Excel file and generates HTML and JSON files that drive the interactive quiz experience in the browser."
+    text: "Once your spreadsheet is ready, run the Python script named 'Python-Update-Webpage.py' from the Python-Import folder. This script processes the Excel file and generates HTML and JSON files that drive the interactive quiz in the browser."
   },
   {
     title: "Step 3: Launch the Quiz Selector",
