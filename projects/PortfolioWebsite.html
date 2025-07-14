@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nigel Galbraith - Portfolio Website</title>
   <link rel="stylesheet" href="../styles/style.css" />
   <script src="js/modalZoom.js" defer></script>             
@@ -12,6 +12,7 @@
   <script src="../js/skillsLoader.js" defer></script>       
   <script src="js/projectStepsData.js" defer></script>       
   <script src="../js/responsiveImageLoader.js" defer></script>
+  <script src="../js/mainTextLoader.js" defer></script>
 </head>
 
 <body data-project="portfolio">
@@ -22,6 +23,7 @@
     - Tools and Key Learnings icons are populated using data-icons via skillsLoader.js
     - Footer content is dynamically inserted via footerIconLoader.js
     - Image zoom modal functionality is handled by modalZoom.js
+    - Main text description is loaded via data-main-text="portfolioWebsite" and mainTextLoader.js
   -->
 
   <div class="grid-bg"></div>
@@ -39,25 +41,20 @@
       <div class="main-content-flex-centre">
         <h2>Portfolio Website</h2>
 
-        <!-- Responsive Image with Zoom (loaded by responsiveImageLoader.js) -->
-        <div class="boxed-content">
-            <div class="image-zoom-wrapper">
-              <div class="responsive-image"
-                   data-img-name="PortfolioWebsiteProjectPage.png"
-                   data-alt="Portfolio Website Screenshot"
-                   data-class="centre-img">
-              </div>
+        <!-- Responsive Image with Zoom -->
+        <div class="boxed-content-main-image">
+          <div class="image-zoom-wrapper">
+            <div class="responsive-image"
+                 data-img-name="PortfolioWebsiteProjectPage.png"
+                 data-alt="Portfolio Website Screenshot"
+                 data-class="centre-img">
             </div>
           </div>
-
+        </div>
         <div class="step-separator"></div>
 
-        <!-- Project Description -->
-        <p>This project documents how I built the very website you're viewing from folder layout to JavaScript behaviors. It serves as both a portfolio and a demonstration of modular, maintainable web design without frameworks.</p>
-
-        <p>The site uses static HTML for pages, with consistent styling and behavior controlled through reusable JavaScript modules. All content is dynamically injected into templates to keep maintenance simple and reduce code duplication. Every project has its own page, and reusable loaders handle everything from responsive images to dynamic footers.</p>
-
-        <p>The architecture separates structure (HTML), style (CSS), and behavior (JS) in a clear, modular format. Rather than relying on site builders or libraries, I coded it all manually to gain deeper control over layout, accessibility, and performance.</p>
+        <!-- Main text injected from mainTextLoader.js -->
+        <div class="main-content-text" data-main-text="portfolioWebsite"></div>
 
         <div class="main-content-step-text">
           <!-- Project Steps injected by js/projectStepsData.js -->
@@ -67,7 +64,6 @@
           <div class="boxed-content">
             <h2 class="centered-title">Website Tools</h2>
             <div class="icon-grid">
-              <!-- Link to download the project Tools as a ZIP -->
               <a class="grouped-list-item-button-link" download href="files/PortfolioWebsiteTools.zip">
                 <div class="icon-item">
                   <img alt="Zip" class="li-icon" src="../images/icons/optimized/zip.png" />
@@ -81,14 +77,12 @@
           <section>
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
-              <!-- Populated dynamically via skillsLoader.js -->
               <div class="icon-grid" data-icons="python"></div>
             </div>
 
             <!-- Key Learnings -->
             <h2 class="centered-title">Key Learnings</h2>
             <div class="boxed-content">
-              <!-- Populated dynamically via skillsLoader.js -->
               <div class="icon-grid" data-icons="debugging"></div>
             </div>
           </section>
@@ -99,7 +93,7 @@
     <!-- Footer content dynamically loaded from footerIconLoader.js -->
     <footer></footer>
 
-    <!-- Modal Zoom (handled by modalZoom.js) -->
+    <!-- Modal Zoom -->
     <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />

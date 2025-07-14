@@ -7,6 +7,7 @@
   <link href="styles/style.css" rel="stylesheet"/>
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
+  <script src="js/mainTextLoader.js" defer></script>
  </head>
 
  <body>
@@ -14,6 +15,7 @@
     Dynamic Content Notes:
     - Hamburger menu toggle handled by js/menuToggle.js
     - Footer icons and links dynamically loaded from js/footerIconLoader.js
+    - Main content paragraphs injected from MAIN_TEXT_DATA via js/mainTextLoader.js
   -->
 
   <!-- Background grid overlay -->
@@ -40,19 +42,8 @@
    <!-- Main Content Section -->
    <main class="main-content">
     <div class="main-content-flex-centre">
-     <div class="main-content-text">
-      <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, please reach out using one of the following methods:</p>
-
-      <!-- Contact Methods -->
-      <ul>
-       <li>Email: <a href="mailto:nigel.galbraith@proton.me">nigelgalbraith@proton.me</a></li>
-       <li>GitHub: <a href="https://github.com/nigelgalbraith/nigelgalbraith.github.io" rel="noopener" target="_blank">github.com/nigelgalbraith</a></li>
-       <li>LinkedIn: <a href="https://linkedin.com/in/nigelgalbraith" rel="noopener" target="_blank">linkedin.com/in/nigelgalbraith</a></li>
-      </ul>
-      
-      <p>Feel free to connect or send a message — I’d love to hear from you!</p>
-     </div>
+     <!-- Contact text dynamically injected via data-main-text -->
+     <div class="main-content-text" data-main-text="contact"></div>
     </div>
    </main>
    

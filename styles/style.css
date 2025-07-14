@@ -105,12 +105,29 @@ h1 {
     display: block;
 }
 
-.boxed-content {
+.boxed-content, .boxed-content-main-image  {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid #00ffff;
     padding: 1rem;
     border-radius: 12px;
     margin-bottom: 0rem;
+}
+
+.boxed-content {
+    width: 100%;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 500px;
+  display: block;
+  border: none;
+}
+
+.sketchfab-embed-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .boxed-content .image-zoom-wrapper img {
@@ -743,6 +760,12 @@ picture.zoomable {
 .main-content-flex{
  flex-direction: column;
 }
+
+
+.boxed-content {
+  width: 90%;
+}
+
 /* Images */
 .main-content-image-padding {
  padding: 0;

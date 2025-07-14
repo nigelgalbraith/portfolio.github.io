@@ -5,25 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nigel Galbraith - Quiz Creator</title>
   <link rel="stylesheet" href="../styles/style.css" />
-  <script src="js/modalZoom.js" defer></script>
-  <script src="js/carousel.js" defer></script>
-  <script src="js/init.js" defer></script>
-  <script src="../js/footerIconLoader.js" defer></script>
-  <script src="../js/skillsLoader.js" defer></script>
+  <script src="js/modalZoom.js" defer></script>             
+  <script src="js/carousel.js" defer></script>               
+  <script src="js/init.js" defer></script>                   
+  <script src="../js/footerIconLoader.js" defer></script>    
+  <script src="../js/skillsLoader.js" defer></script>       
   <script src="js/projectStepsData.js" defer></script>
   <script src="../js/responsiveImageLoader.js" defer></script>
+  <script src="../js/mainTextLoader.js" defer></script>
 </head>
 
 <body data-project="quiz">
-  <!-- 
-    Dynamic Content Notes:
-    - Responsive image is loaded via data-img-name using responsiveImageLoader.js
-    - Project steps are injected into <section> via js/projectStepsData.js
-    - Tools and Key Learnings icons are populated using data-icons via skillsLoader.js
-    - Footer content is dynamically inserted via footerIconLoader.js
-    - Image zoom modal functionality is handled by modalZoom.js
-  -->
-
   <div class="grid-bg"></div>
   <div class="container">
     <h1>Nigel Galbraith Portfolio</h1>
@@ -39,32 +31,24 @@
       <div class="main-content-flex-centre">
         <h2>Quiz Creator</h2>
 
-        <!-- Responsive Image with Zoom (loaded by responsiveImageLoader.js) -->
-        <div class="boxed-content">
-            <div class="image-zoom-wrapper">
-              <div class="responsive-image" 
-                    data-img-name="Quiz-web.png" 
-                    data-alt="Quiz Icon" 
-                    data-class="centre-img">
-              </div>
+        <!-- Responsive Image with Zoom -->
+        <div class="boxed-content-main-image">
+          <div class="image-zoom-wrapper">
+            <div class="responsive-image" 
+                 data-img-name="Quiz-web.png" 
+                 data-alt="Quiz Icon" 
+                 data-class="centre-img">
             </div>
           </div>
+        </div>
+
         <div class="step-separator"></div>
 
-        <!-- Main Description -->
-        <p>This project is a self-contained quiz generator that allows questions, answers, and detailed explanations to be added through a structured Excel spreadsheet, then converted into a dynamic, interactive web-based quiz.</p>
-        
-        <p>I created this tool to provide a simple, offline solution for quiz creation no need to sign up for third-party platforms or rely on internet connectivity. The ability to generate and run quizzes locally makes it ideal for personal study, classrooms, or environments with limited access.
-        </p>
-        
-        <p>Throughout my study, repetition and practice played a crucial role in helping me retain and apply new information. This project enabled me to create targeted quizzes tailored to my learning needs and pace. It gave me the flexibility to reinforce key concepts through custom questions and revisit topics as often as needed.</p>
-        
-        <p>While the current version is built around CyberOps content, the design is adaptable users can easily modify or replace the spreadsheet to suit any subject area. Whether it's IT, science, languages, or general knowledge, the tool can be repurposed to match.</p>
-        
-        <p>Beyond its practical use, this project served as a valuable way to apply and test the tools and skills I was learning throughout my coursework. It involved working with Python for data handling and conversion, Excel integration with pandas, web technologies like HTML, JavaScript, and JSON for the quiz interface, and user-focused design to ensure the experience was intuitive and engaging.</p>
+        <!-- Dynamic Main Description -->
+        <div class="main-content-text" data-main-text="quizCreator"></div>
 
+        <!-- Project Steps -->
         <div class="main-content-step-text">
-          <!-- Project Steps injected by js/projectStepsData.js -->
           <section></section>
 
           <!-- Quiz Links -->
@@ -86,27 +70,26 @@
             </div>
           </div>
 
-          <!-- Tools and Technologies (icons loaded via skillsLoader.js using data-icons) -->
+          <!-- Tools and Technologies -->
           <section>
             <h2 class="centered-title">Tools and Technologies</h2>
             <div class="boxed-content">
               <div class="icon-grid" data-icons="shell,python"></div>
             </div>
 
-            <!-- Key Learnings (icons loaded via skillsLoader.js using data-icons) -->
+            <!-- Key Learnings -->
             <h2 class="centered-title">Key Learnings</h2>
             <div class="boxed-content">
               <div class="icon-grid" data-icons="debugging"></div>
             </div>
           </section>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </main>
 
-    <!-- Footer content dynamically loaded from footerIconLoader.js -->
     <footer></footer>
 
-    <!-- Modal Zoom (handled by modalZoom.js) -->
+    <!-- Modal Zoom -->
     <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />

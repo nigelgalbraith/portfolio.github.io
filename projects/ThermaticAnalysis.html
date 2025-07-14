@@ -10,17 +10,19 @@
   <script src="../js/skillsLoader.js" defer></script>
   <script src="js/projectStepsData.js" defer></script>
   <script src="../js/responsiveImageLoader.js" defer></script>
+  <script src="../js/mainTextLoader.js" defer></script>
 </head>
 
-<!-- Main Heading and grid setup-->
+<!-- Main Heading and grid setup -->
 <body data-project="thematic">
   <!-- 
-  Dynamic Content Notes:
-  - Responsive image loader inserts <img> tag inside .responsive-image (js/responsiveImageLoader.js)
-  - Project steps are injected into <section> by js/projectStepsData.js
-  - Tool and key learning icons use the data-icons attribute, populated by ../js/skillsLoader.js
-  - Footer content (e.g. contact links, icons) is inserted via ../js/footerIconLoader.js
--->
+    Dynamic Content Notes:
+    - Responsive image loader inserts <img> tag inside .responsive-image (../js/responsiveImageLoader.js)
+    - Project steps are injected into <section> by js/projectStepsData.js
+    - Tool and key learning icons use the data-icons attribute, populated by ../js/skillsLoader.js
+    - Main text paragraphs loaded into .main-content-text from ../js/mainTextLoader.js based on data-project
+    - Footer content (e.g. contact links, icons) is inserted via ../js/footerIconLoader.js
+  -->
   <div class="grid-bg"></div>
   <div class="container">
     <h1>Nigel Galbraith Portfolio</h1>
@@ -37,8 +39,8 @@
       <div class="main-content-flex-centre">
         <h2>Thematic Analysis Web Application</h2>
 
-        <!-- Responsive Image with Zoom -->
-        <div class="boxed-content">
+        <!-- Responsive Image with Zoom (injected by responsiveImageLoader.js) -->
+        <div class="boxed-content-main-image">
           <div class="main-content-image">
             <div class="image-zoom-wrapper">
               <div class="responsive-image" data-img-name="Thematic-WebApp.png" data-alt="Thematic Analysis Web App Overview" data-class="centre-img"></div>
@@ -47,16 +49,8 @@
         </div>
         <div class="step-separator"></div>
 
-        <!-- Main Page Text -->
-        <p>This project was created to streamline the process of thematic analysis by combining structured Excel sheets with automated data handling and web export tools. It simplifies what can often be a time-consuming and repetitive task, providing a more efficient way to organise and interpret qualitative data.</p>
-        
-        <p>I designed this system to reduce manual overhead no more constant copying, pasting, or cross-referencing between sheets. By using built-in macros and structured workflows, it helps maintain consistency across the analysis and ensures that factors, groupings, and categories are properly recorded and referenced.</p>
-        
-        <p>During my own work with qualitative datasets, I found that managing themes and tracking related metadata could quickly become overwhelming. This project gave me a more practical and repeatable approach, making it easier to focus on insights rather than formatting or troubleshooting formulas.</p>
-        
-        <p>The final output can be exported to a web-based format, allowing thematic findings to be reviewed and navigated more clearly. Glossaries, group relationships, and even basic risk assessment visuals are automatically included, making the end result both informative and accessible.</p>
-        
-        <p>Like my other tools, this project was also an opportunity to apply what I’ve been learning in areas like Excel automation, Python scripting, and front-end web development. It’s flexible enough to adapt to different types of thematic work whether for research, education, or internal reporting.</p>
+        <!-- Main Page Text Content (injected by mainTextLoader.js) -->
+        <div class="main-content-text" data-main-text="thematic"></div>
 
         <!-- Project Steps (injected by js/projectStepsData.js) -->
         <div class="main-content-step-text">
@@ -93,19 +87,21 @@
             <div class="boxed-content">
               <div class="icon-grid" data-icons="shell,python"></div>
             </div>
+
             <!-- Key Learnings (icons injected based on data-icons attribute) -->
             <h2 class="centered-title">Key Learnings</h2>
             <div class="boxed-content">
               <div class="icon-grid" data-icons="debugging"></div>
             </div>
           </section>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </main>
 
     <!-- Footer content dynamically loaded from ../js/footerIconLoader.js -->
     <footer></footer>
 
+    <!-- Fullscreen Modal for Zoom -->
     <div class="modal" id="imgModal" onclick="closeFullScreen()">
       <span class="close">×</span>
       <img class="modal-content" id="fullImg" />
