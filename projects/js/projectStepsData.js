@@ -29,7 +29,7 @@ thematic: [
     title: "Step 4. Assign Group and Sub-Group Values",
     img: "UpdateGroupSubGroup.png",
     alt: "Group and Sub-Group Update",
-    text: "Return to the Thematic Analysis sheet and click the 'Update Group' and 'Update Sub Group' buttons. These will populate the appropriate values from your Glossary Table. If you also need to edit factor entries manually such as updating or deleting values be sure to switch the mode to 'Manual' first to prevent duplication or conflicts caused by the macro. Once editing is complete, switch back to 'List' mode to resume structured selection. The sheet highlights missing group assignments in red, providing quick visual feedback if anything is incomplete."
+    text: "Return to the Thematic Analysis sheet and click the 'Update Group' and 'Update Sub Group' buttons. These will populate the appropriate values from your Glossary Table. If you also need to edit factor entries manually such as updating or deleting values be sure to switch the mode to 'Manual' first to prevent duplication or conflicts caused by the macro. Once editing is complete, switch back to 'List' mode to resume structured selection. The sheet highlights missing factors from the glossary in red, providing quick visual feedback if anything is incomplete."
   },
   {
     title: "Step 5. Refresh the Search Tool Dataset",
