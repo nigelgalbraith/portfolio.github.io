@@ -19,7 +19,7 @@ SHEETS_TO_EXPORT = {
     },
     "Thematic Analysis": {
         "filename": "thematic_analysis.json",
-        "start_row": 7
+        "start_row": 8
     },
     "Risk Matrix": {
         "filename": "risk_matrix.json",

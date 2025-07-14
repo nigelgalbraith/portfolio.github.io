@@ -11,7 +11,7 @@ thematic: [
     title: "Step 1: Enter Extracts and Identify Factors",
     img: "ThematicAnalysisIntial.png",
     alt: "Entering Extracts and Factors",
-    text: "Begin by collecting qualitative data such as participant quotes, observations, or written feedback. Each distinct segment referred to as an 'extract' is entered into the Excel workbook. Alongside each extract, note any recurring themes, patterns, or ideas, which are captured as individual 'factors.' This process helps translate unstructured data into traceable, structured inputs. The goal isn’t to force meaning, but to surface genuine insights that emerge from the data"
+    text: "Begin by collecting qualitative data such as participant quotes, observations, or written feedback. Each distinct segment, referred to as an 'extract,' is entered into the Excel workbook. Alongside each extract, note any recurring themes, patterns, or ideas, which are captured as individual 'factors.' If you are entering a factor manually, first set the mode to 'Manual' to avoid duplication caused by the macro. Once factors are added to the glossary table, they become available for selection via the drop-down list at that point, switch the mode back to 'List' to enable structured selection and maintain consistency. If you need to edit or delete specific factors later, switch to 'Manual' mode before making changes to ensure smooth editing without macro interference."
   },
   {
     title: "Step 2: View Identified Factors",
@@ -29,7 +29,7 @@ thematic: [
     title: "Step 4. Assign Group and Sub-Group Values",
     img: "UpdateGroupSubGroup.png",
     alt: "Group and Sub-Group Update",
-    text: "Return to the Thematic Analysis sheet and click the 'Update Group' and 'Update Sub Group' buttons. These will fill in the appropriate values from your Glossary Table. If you’re editing entries manually, make sure to clear any old data first to avoid duplicates. The sheet highlights missing group assignments in red, giving you quick visual feedback if something's off."
+    text: "Return to the Thematic Analysis sheet and click the 'Update Group' and 'Update Sub Group' buttons. These will populate the appropriate values from your Glossary Table. If you also need to edit factor entries manually such as updating or deleting values be sure to switch the mode to 'Manual' first to prevent duplication or conflicts caused by the macro. Once editing is complete, switch back to 'List' mode to resume structured selection. The sheet highlights missing group assignments in red, providing quick visual feedback if anything is incomplete."
   },
   {
     title: "Step 5. Refresh the Search Tool Dataset",
