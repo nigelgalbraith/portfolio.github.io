@@ -4,7 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nigel Galbraith - About Me</title>
+
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- JSON-style embedded data (must load before mainTextLoader.js) -->
+  <script src="js/JSON/mainTextData.js"></script>
+
+  <!-- JavaScript Functionality -->
   <script src="js/menuToggle.js" defer></script>
   <script src="js/mainTextLoader.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
@@ -15,6 +22,7 @@
     Dynamic Content Notes:
     - Hamburger menu toggles nav visibility (js/menuToggle.js)
     - Footer icons and contact links are inserted dynamically by js/footerIconLoader.js
+    - Main text loaded from MAIN_TEXT_DATA by js/mainTextLoader.js
   -->
 
   <!-- Background grid layer -->
@@ -39,8 +47,7 @@
    <!-- Main Content Section Text (dynamically loaded via mainTextLoader.js) -->
    <main class="main-content">
     <div class="main-content-flex">
-      <div class="main-content-text" data-main-text="about"></div>
-    </div>
+     <div class="main-content-text" data-main-text="about"></div>
 
      <!-- Responsive Profile Image -->
      <div class="main-content-image-padding">

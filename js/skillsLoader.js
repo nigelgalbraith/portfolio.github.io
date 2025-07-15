@@ -1,70 +1,37 @@
+// js/skillsLoader.js
+
+// Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", () => {
-  // Determine whether to prefix relative image paths based on current page location
-  const ICON_PATH_PREFIX = window.location.pathname.includes("/projects/") ? "../" : "";
+  // Ensure ICON_REGISTRY is available (defined in iconRegistry.js)
+  if (typeof ICON_REGISTRY === "undefined") {
+    console.error("ICON_REGISTRY is not defined. Make sure iconRegistry.js is loaded first.");
+    return;
+  }
 
-  // Define icon metadata for display: alt text, label, and icon image source path
-  const ICON_REGISTRY = {
-    degree:           { alt: "Degree",                  label: "BICT",                     src: ICON_PATH_PREFIX + "images/icons/optimized/degree.png" },
-    cert:             { alt: "Certificate",             label: "CCNA Certified",           src: ICON_PATH_PREFIX + "images/icons/optimized/cert.png" },
-    cloud:            { alt: "Cloud",                   label: "Azure Fundamentals",       src: ICON_PATH_PREFIX + "images/icons/optimized/cloud.png" },
-    sharepoint:       { alt: "SharePoint",              label: "SharePoint",               src: ICON_PATH_PREFIX + "images/icons/optimized/SharePoint.png" },
-    office365:        { alt: "Office 365",              label: "Office 365",               src: ICON_PATH_PREFIX + "images/icons/optimized/Office365.png" },
-    ubuntu:           { alt: "ubuntu",                  label: "Ubuntu KVM",               src: ICON_PATH_PREFIX + "images/icons/optimized/ubuntu.png" },
-    linux:            { alt: "Linux",                   label: "Linux & CLI Tools",        src: ICON_PATH_PREFIX + "images/icons/optimized/linux.png" },
-    libvirt:          { alt: "libvirt",                 label: "Libvirt",                  src: ICON_PATH_PREFIX + "images/icons/optimized/libvrt.png" },
-    network:          { alt: "Networking",              label: "Network Setup",            src: ICON_PATH_PREFIX + "images/icons/optimized/network.png" },
-    qemu:             { alt: "qemu",                    label: "QEMU",                     src: ICON_PATH_PREFIX + "images/icons/optimized/qemu.png" },
-    virtual:          { alt: "Virtualization",          label: "Virtualization & KVM",     src: ICON_PATH_PREFIX + "images/icons/optimized/virtual.png" },
-    shell:            { alt: "Shell Scripting",         label: "Shell Scripting",          src: ICON_PATH_PREFIX + "images/icons/optimized/programing.png" },
-    python:           { alt: "Python",                  label: "Python",                   src: ICON_PATH_PREFIX + "images/icons/optimized/python.png" },
-    permissions:      { alt: "Permissions",             label: "Permissions",              src: ICON_PATH_PREFIX + "images/icons/optimized/permissions.png" },
-    repair:           { alt: "DIY",                     label: "Electronics & DIY Fixes",  src: ICON_PATH_PREFIX + "images/icons/optimized/repair.png" },
-    tools:            { alt: "Tools",                   label: "Power Tools & Safety",     src: ICON_PATH_PREFIX + "images/icons/optimized/tools.png" },
-    woodwork:         { alt: "Woodwork",                label: "Joinery & Carpentry",      src: ICON_PATH_PREFIX + "images/icons/optimized/woodwork.png" },
-    problem_solving:  { alt: "Problem Solving",         label: "Problem Solving",          src: ICON_PATH_PREFIX + "images/icons/optimized/problem-solving.png" },
-    debugging:        { alt: "Debugging",               label: "Debugging",                src: ICON_PATH_PREFIX + "images/icons/optimized/debugging.png" },
-    teamwork:         { alt: "Teamwork",                label: "Team Collaboration",       src: ICON_PATH_PREFIX + "images/icons/optimized/teamwork.png" },
-    collaboration:    { alt: "Collaboration & Testing", label: "Collaboration & Testing",  src: ICON_PATH_PREFIX + "images/icons/optimized/CollabTest.png" },
-    automation:       { alt: "System Automation",       label: "System Automation",        src: ICON_PATH_PREFIX + "images/icons/optimized/automation.png" },
-    security:         { alt: "Security Best Practices", label: "Security Best Practices",  src: ICON_PATH_PREFIX + "images/icons/optimized/degree.png" },
-    gps_tracking:     { alt: "GPS Tracking",            label: "GPS Tracking",             src: ICON_PATH_PREFIX + "images/icons/optimized/gps_tracking.png" },
-    gps:              { alt: "GPS Integration",         label: "GPS Integration",          src: ICON_PATH_PREFIX + "images/icons/optimized/gpsIntegration.png" },
-    user_experience:  { alt: "User Experience",         label: "User Experience Design",   src: ICON_PATH_PREFIX + "images/icons/optimized/user_experience.png" },
-    SketchUp:         { alt: "SketchUp",                label: "SketchUp",                 src: ICON_PATH_PREFIX + "images/icons/optimized/SketchupIcon.png" },
-    ThreeD_Design:    { alt: "3D Design",               label: "3D Design",                src: ICON_PATH_PREFIX + "images/icons/optimized/3D_Design.png" }
-  };
-
-  /**
-   * Given a container element with a data-icons attribute, generate and append
-   * matching icons (images and labels) based on keys in ICON_REGISTRY.
-   */
-  function renderIconsFromData(container) {
+  // Find all elements with the data-icons attribute
+  document.querySelectorAll("[data-icons]").forEach(container => {
     const rawData = container.dataset.icons;
     if (!rawData) return;
 
     let iconKeys;
 
-    // If wildcard used, include all icons
+    // Handle wildcard for all icons or split comma-separated keys
     if (rawData.trim() === "*") {
       iconKeys = Object.keys(ICON_REGISTRY);
     } else {
-      // Otherwise parse comma-separated list of icon keys
-      iconKeys = rawData.split(",").map(key => key.trim());
+      iconKeys = rawData.split(",").map(k => k.trim());
     }
 
-    // Filter out unknown keys and sort icons alphabetically by label
+    // Filter valid keys and sort alphabetically by label
     iconKeys = iconKeys
       .filter(key => ICON_REGISTRY[key])
-      .sort((a, b) => {
-        const labelA = ICON_REGISTRY[a].label.toLowerCase();
-        const labelB = ICON_REGISTRY[b].label.toLowerCase();
-        return labelA.localeCompare(labelB);
-      });
+      .sort((a, b) =>
+        ICON_REGISTRY[a].label.toLowerCase().localeCompare(ICON_REGISTRY[b].label.toLowerCase())
+      );
 
-    // Build and append each icon to the container
+    // For each valid icon key, build the icon block and add it to the container
     iconKeys.forEach(key => {
       const icon = ICON_REGISTRY[key];
-      if (!icon) return;
 
       const item = document.createElement("div");
       item.className = "icon-item";
@@ -81,8 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
       item.appendChild(span);
       container.appendChild(item);
     });
-  }
-
-  // For all elements with the data-icons attribute, generate their icon grid
-  document.querySelectorAll("[data-icons]").forEach(renderIconsFromData);
+  });
 });

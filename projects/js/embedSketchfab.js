@@ -1,50 +1,7 @@
-const SKETCHFAB_MODELS = {
-  terraceGardens: {
-    title: "Terrace Gardens",
-    embedUrl: "https://sketchfab.com/models/f8835a039ccd44e09f831213514e628c/embed",
-    directLink: "https://sketchfab.com/3d-models/terrace-gardens-f8835a039ccd44e09f831213514e628c",
-    username: "nigelgalbraith",
-    userProfile: "https://sketchfab.com/Oldschool299792458",
-    links: [
-      {
-        href: "https://sketchfab.com/3d-models/terrace-gardens-f8835a039ccd44e09f831213514e628c",
-        icon: "../images/icons/optimized/SketchFabIcon.png",
-        label: "View Model",
-        download: false
-      },
-      {
-        href: "files/Models/Stair_Garden_Boxes.zip",
-        icon: "../images/icons/optimized/zip.png",
-        label: "Download Model",
-        download: true
-      }
-    ]
-  },
-  greenhouseBoxes: {
-    title: "Greenhouse Planter Boxes - Capping",
-    embedUrl: "https://sketchfab.com/models/04bd290ad70d402a8e07a7ce4ddbeacb/embed",
-    directLink: "https://sketchfab.com/3d-models/greenhouse-planter-boxes-capping-04bd290ad70d402a8e07a7ce4ddbeacb",
-    username: "nigelgalbraith",
-    userProfile: "https://sketchfab.com/Oldschool299792458",
-    links: [
-      {
-        href: "https://sketchfab.com/3d-models/greenhouse-planter-boxes-capping-04bd290ad70d402a8e07a7ce4ddbeacb",
-        icon: "../images/icons/optimized/SketchFabIcon.png",
-        label: "View Model",
-        download: false
-      },
-      {
-        href: "files/Models/Planter_Boxes.zip",
-        icon: "../images/icons/optimized/zip.png",
-        label: "Download Model",
-        download: true
-      }
-    ]
-  }
-};
+// js/embedSketchfab.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Inject Sketchfab iframe embed where [data-sketchfab-embed] is used
+  // Embed Sketchfab models in iframes
   document.querySelectorAll("[data-sketchfab-embed]").forEach(container => {
     const key = container.dataset.sketchfabEmbed;
     const model = SKETCHFAB_MODELS[key];
@@ -76,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   });
 
-  // Inject model download/view links where [data-sketchfab-links] is used
+  // Inject download/view links
   document.querySelectorAll("[data-sketchfab-links]").forEach(container => {
     const key = container.dataset.sketchfabLinks;
     const model = SKETCHFAB_MODELS[key];

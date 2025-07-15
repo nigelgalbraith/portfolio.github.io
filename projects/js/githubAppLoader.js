@@ -1,34 +1,16 @@
-// githubAppLoader.js
-// Dynamically injects GitHub-hosted app links and metadata into HTML using a JSON-like object.
+// js/githubAppLoader.js
+// Dynamically injects GitHub-hosted app links and metadata into HTML using GITHUB_APPS from external file.
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Configuration object containing all GitHub app metadata
-  const APP_DATA = {
-    pacman: {
-      title: "Pacman",
-      icon: "Pacman.png",
-      playLink: "files/Arcade/Pacman/index.html",
-      download: "files/Arcade/Pacman.zip",
-      source: "https://github.com/attogram/pacman-lite"
-    },
-    galaga: {
-      title: "Galaga",
-      icon: "Galaga.png",
-      playLink: "files/Arcade/Galaga/index.html",
-      download: "files/Arcade/Galaga.zip",
-      source: "https://github.com/gregfrazier/gakaga"
-    }
-    // Add more apps here as needed
-  };
+  // Ensure GITHUB_APPS is loaded
+  if (typeof GITHUB_APPS !== "object") return;
 
-  // Find all elements on the page that request a GitHub app via data-github-app
   document.querySelectorAll("[data-github-app]").forEach(container => {
     const key = container.dataset.githubApp;
-    const app = APP_DATA[key];
+    const app = GITHUB_APPS[key];
 
-    if (!app) return; // Skip if key is not found in APP_DATA
+    if (!app) return;
 
-    // Inject structured HTML for the GitHub app (play, download, source)
     container.innerHTML = `
       <h2 class="centered-title">${app.title}</h2>
       <div class="icon-grid">
