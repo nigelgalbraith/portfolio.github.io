@@ -8,22 +8,24 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- JSON-style icon registry data -->
+  <!-- JSON-style icon registry and resume data -->
   <script src="js/JSON/iconRegistry.js"></script>
+  <script src="js/JSON/resumeData.js"></script>
 
   <!-- JavaScript functionality -->
   <script src="js/menuToggle.js" defer></script>
   <script src="js/footerIconLoader.js" defer></script>
   <script src="js/skillsLoader.js" defer></script>
+  <script src="js/resumeLoader.js" defer></script>
 </head>
 
-
- <body>
+<body>
   <!-- 
     Dynamic Content Notes:
     - Footer content (contact icons etc.) is dynamically loaded from js/footerIconLoader.js
     - Skills icons are injected using the data-icons attribute via js/skillsLoader.js
     - Hamburger menu toggle is handled by js/menuToggle.js
+    - Resume content is injected dynamically from js/resumeLoader.js using data from js/JSON/resumeData.js
   -->
 
   <!-- Background grid layer -->
@@ -31,256 +33,58 @@
 
   <!-- Main container for content layout -->
   <div class="container">
-   <h1>Nigel Galbraith Portfolio</h1>
+    <h1>Nigel Galbraith Portfolio</h1>
 
-   <!-- Navigation Bar with Hamburger Button -->
-   <nav class="navbar">
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a class="active" href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-     </ul>
+    <!-- Navigation Bar with Hamburger Button -->
+    <nav class="navbar">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+      <!-- Professional Introduction -->
+      <h2 class="centered-title">Professional Outline</h2>
+      <div class="center-content">
+        <section class="grouped-list">
+          <div id="professional-outline" class="boxed-content"></div>
+
+        <!-- Dynamic Experience Timeline -->
+        <h2 class="centered-title">Experience</h2>
+        <div class="boxed-content">
+          <div id="experience-timeline" class="timeline"></div>
+        </div>
+
+        <!-- Dynamic Qualifications Timeline -->
+        <h2 class="centered-title">Qualifications</h2>
+        <div class="boxed-content">
+          <div id="qualifications-timeline" class="timeline"></div>
+        </div>
+
+        <!-- Dynamic Resume Links Section -->
+        <section>
+          <h2 class="centered-title">Resume Links</h2>
+          <div class="boxed-content">
+            <div id="resume-links" class="icon-grid"></div>
+          </div>
+        </section>
+
+        <!-- Skills Section (icons injected by skillsLoader.js) -->
+        <h2 class="centered-title">Skills</h2>
+        <div class="boxed-content">
+          <div class="icon-grid" data-icons="*"></div>
+        </div>
+      </section>
     </div>
-   </nav>
 
-   <!-- Professional Introduction -->
-   <h2 class="centered-title">Professional Outline</h2>
-   <div class="center-content">
-    <section class="grouped-list">
-     <div class="boxed-content">
-      <p>I have been able to experience many industries at both the middle management and operational levels. This has allowed me to gain different perspectives and understand the importance of providing a solution that suits the needs at every level. These different perspectives have also highlighted the importance of not only communicating your solution in a professional manner but also being open to criticism to allow for constant improvements that may not have been considered.</p>
-     </div>
-
-     <!-- Experience Timeline -->
-     <h2 class="centered-title">Experience</h2>
-     <div class="boxed-content">
-      <div class="timeline">
-
-       <!-- Tait Communications -->
-       <div class="timeline-item">
-        <div class="time">Jan 2025 – Feb 2025</div>
-        <div class="time-content">
-         <h2>Support Analyst</h2>
-         <h3>Tait Communications, Christchurch</h3>
-         <h4>Outline</h4>
-         <ul>
-          <li>Contributed to frontline monitoring and incident management in a 24/7 managed services environment.</li>
-          <li>Quickly integrated into an access-restricted environment during a transitional period for the team.</li>
-         </ul>
-         <h4>Key achievements/projects</h4>
-         <ul>
-          <li>Developed a rapid understanding of Tait’s internal monitoring and ITSM systems to assist in live network support.</li>
-          <li>Shadowed senior analysts to participate in early-stage problem investigations and understand root cause analysis workflows.</li>
-          <li>Demonstrated integrity and reliability within a short time frame, earning trust and respect from team members.</li>
-         </ul>
-        </div>
-       </div>
-
-       <!-- Ara Institute of Canterbury -->
-       <div class="timeline-item">
-        <div class="time">Jun 2021 – Nov 2024</div>
-        <div class="time-content">
-         <h2>Student</h2>
-         <h3>Ara Institute of Canterbury, Christchurch</h3>
-         <h4>Outline</h4>
-         <ul>
-          <li>Completed a degree in Information and Communication Technologies, networking pathway.</li>
-         </ul>
-         <h4>Key achievement/projects</h4>
-         <ul>
-          <li>Capstone project providing an Ubuntu KVM solution to replace VMware Workstation Pro.</li>
-          <li>Goal was cost-effective licensing, improved resource flexibility, and maximize open-source learning support across Ara's virtual machine labs.</li>
-          <li>Project showed adaptability of Ubuntu and opened doors for alternative solutions in line with these goals.</li>
-         </ul>
-        </div>
-       </div>
-
-       <!-- Trade Staff Joinery -->
-       <div class="timeline-item">
-        <div class="time">Jun 2016 – Feb 2019</div>
-        <div class="time-content">
-         <h2>Joiner</h2>
-         <h3>Trade Staff, Christchurch</h3>
-         <h4>Outline</h4>
-         <ul>
-          <li>Construction of various kitchen furniture projects for individual and commercial clients.</li>
-          <li>Learned new technology solutions within joinery, such as CNC machines, to produce products more efficiently.</li>
-         </ul>
-         <h4>Key achievement/projects</h4>
-         <ul>
-          <li>Gained understanding of design and process using CNC machines.</li>
-          <li>Learned 3D design using AutoCAD and SketchUp for home DIY projects.</li>
-         </ul>
-        </div>
-       </div>
-
-       <!-- Downer Traffic Management -->
-       <div class="timeline-item">
-        <div class="time">Jan 2009 – Jun 2016</div>
-        <div class="time-content">
-         <h3>Traffic Management – Downer, Christchurch</h3>
-         <h4>Outline</h4>
-         <ul>
-          <li>Establishing and disestablishing traffic management sites prior to the commencement of road works and management of site safety</li>
-          <li>Managing sign hire between different departments within Downer</li>
-          <li>Preparing a Traffic Management Plans for a customer while working within time constraints to meet deadlines</li>
-          <li>Designing Traffic Management Plan production process to improve Traffic Management Plan efficiency</li>
-         </ul>
-         <h4>Key achievement/projects</h4>
-         <ul>
-          <li>Developed a web-based SharePoint database to manage Traffic Management Plan production.</li>
-          <li>Built a GPS phone app to track real-time site and equipment locations.</li>
-          <li>Inspired to pursue further study in IT due to this exposure to technical problem-solving.</li>
-         </ul>
-
-         <!-- Sub-Roles at Downer -->
-         <div class="sub-timeline-item">
-          <div class="sub-timeline-item-content">
-           <h4>Traffic Management Planner Team Leader</h4>
-           <ul>
-            <li>Improved Traffic Management Plan efficiency through process redesign.</li>
-            <li>Created internal SharePoint site for plan tracking and production.</li>
-           </ul>
-          </div>
-          <div class="sub-role-date">Jan 2015 - Jun 2016</div>
-         </div>
-
-         <div class="sub-timeline-item">
-          <div class="sub-timeline-item-content">
-           <h4>Traffic Management Planner</h4>
-           <ul>
-            <li>Created plans and liaised with clients under pressure and tight deadlines.</li>
-           </ul>
-          </div>
-          <div class="sub-role-date">May 2013 - Jan 2015</div>
-         </div>
-
-         <div class="sub-timeline-item">
-          <div class="sub-timeline-item-content">
-           <h4>Traffic Management Store Man</h4>
-           <ul>
-            <li>Maintained interdepartmental equipment flow.</li>
-           </ul>
-          </div>
-          <div class="sub-role-date">Jan 2013 - May 2013</div>
-         </div>
-
-         <div class="sub-timeline-item">
-          <div class="sub-timeline-item-content">
-           <h4>Traffic Controller</h4>
-           <ul>
-            <li>Set up and disassembled traffic sites for roadworks.</li>
-           </ul>
-          </div>
-          <div class="sub-role-date">Jan 2012 - Jan 2013</div>
-         </div>
-        </div>
-       </div>
-
-       <!-- Laptop Universe -->
-       <div class="timeline-item">
-        <div class="time">Jan 2009 - Jan 2012</div>
-        <div class="time-content">
-         <h2>Customer Service &amp; Computer Technical Support</h2>
-         <h3>Laptop Universe, Christchurch</h3>
-         <h4>Outline</h4>
-         <ul>
-          <li>Answered customer inquiries and provided IT support.</li>
-          <li>Recommended hardware/software upgrades.</li>
-          <li>Performed repair tasks: virus removal, part replacement, data transfers.</li>
-         </ul>
-         <h4>Key achievement/projects</h4>
-         <ul>
-          <li>Supported customers following the 2011 earthquake while the store was recovering.</li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-
-     <!-- Qualifications Timeline -->
-     <h2 class="centered-title">Qualifications</h2>
-     <div class="boxed-content">
-      <div class="timeline">
-
-       <div class="timeline-item">
-        <div class="time">2021 - 2024</div>
-        <div class="time-content">
-         <h2>Ara Institute of Canterbury</h2>
-         <ul>
-          <li>Bachelor of ICT, Network Infrastructure, 2024
-           <ul>
-            <li>Graduated with Distinction</li>
-            <li>Highly Commended Achievement Award</li>
-           </ul>
-          </li>
-          <li>Diploma in Systems Administration, 2023</li>
-          <li>Diploma in Information Technology, 2021</li>
-         </ul>
-        </div>
-       </div>
-
-       <div class="timeline-item">
-        <div class="time">2007 - 2008</div>
-        <div class="time-content">
-         <h2>The Computer Power Institute</h2>
-         <ul><li>Diploma in Electronic Business, 2008</li></ul>
-        </div>
-       </div>
-
-       <div class="timeline-item">
-        <div class="time">2004 - 2005</div>
-        <div class="time-content">
-         <h2>Christchurch Polytechnic Institute of Technology</h2>
-         <ul><li>Cert. Joinery - Lv1 &amp; Stair making, 2005</li></ul>
-        </div>
-       </div>
-
-       <div class="timeline-item">
-        <div class="time">2000 - 2003</div>
-        <div class="time-content">
-         <h2>University of Canterbury</h2>
-         <ul><li>Bachelor of Science, Statistics, 2003</li></ul>
-        </div>
-       </div>
-      </div>
-     </div>
-
-     <!-- Resume Links Section -->
-     <section>
-      <h2 class="centered-title">Resume Links</h2>
-      <div class="boxed-content">
-        <div class="icon-grid">
-          <a class="grouped-list-item-button-link" href="files/NigelGalbraith-CV.pdf" target="_blank">
-            <div class="icon-item">
-              <img alt="Resume PDF" class="li-icon" src="images/icons/optimized/CV.png" />
-              <span>Curriculum vitae</span>
-            </div>
-          </a>
-          <a class="grouped-list-item-button-link" href="files/NigelGalbraith-CoverLetter.pdf" target="_blank">
-            <div class="icon-item">
-              <img alt="Cover Letter PDF" class="li-icon" src="images/icons/optimized/CoverLetter.png" />
-              <span>Cover Letter</span>
-            </div>
-          </a>
-        </div>
-      </div>
-     </section>
-
-     <!-- Skills Section (icons injected by skillsLoader.js) -->
-     <h2 class="centered-title">Skills</h2>
-     <div class="boxed-content">
-      <div class="icon-grid" data-icons="*"></div>
-     </div>
-    </section>
-   </div>
-
-   <!-- Footer (dynamically loaded via footerIconLoader.js) -->
-   <footer></footer>
+    <!-- Footer (dynamically loaded via footerIconLoader.js) -->
+    <footer></footer>
   </div>
- </body>
+</body>
 </html>
