@@ -134,12 +134,18 @@ thematic: [
     text: "While the default quizzes use CyberOps examples, you can easily adapt the tool for other topics. Just create a new Excel file using the same structure, then update the path in the 'import-Tool-Data.py' script to point to your new file. The rest of the system will adapt automatically."
   }
   ],
-  portfolio:[
-  {
-    title: "Planning the Architecture",
-    text: "Before writing code, I planned out how I wanted the entire site structured what pages it would need, what elements would be reused, and how I could modularise layout and logic using plain HTML, CSS, and JavaScript. The result was a layout that prioritised flexibility and manual control, without relying on any frameworks.",
-    img: "StructureDiagram.png",
-    alt: "Site folder structure diagram"
-  }
+  portfolio: [
+    {
+    title: "HTML Architecture Plan",
+    text: "I began by mapping out the HTML structure of the site — deciding on core pages (like About, Resume, Projects), and how they would be linked together. This gave me a clear navigation flow and helped identify which project pages would sit underneath the main Projects page. Planning this first made it easier to keep internal linking and layout consistent.",
+    img: "SiteHTML-Structure.png",
+    alt: "Diagram showing how the main HTML pages and project subpages are connected"
+    },
+    {
+    title: "JavaScript Architecture Plan",
+    text: "I also mapped out how all JavaScript files would be organised. Each page loads only the scripts and data it needs — such as Resume pulling in resumeLoader and resumeData, while Projects uses separate loaders for GitHub apps, Sketchfab embeds, and project step data. This modular approach kept the codebase easy to manage and update.",
+    img: "SiteJS-Structure.png",
+    alt: "Diagram showing which JS files and data sources are loaded by each page"
+    }
   ]
 };

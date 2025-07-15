@@ -75,12 +75,14 @@ EXPECTED_PLATFORMS = ["debian", "ubuntu"]
 # ===========================
 
 def install_package(pip_name, import_name):
+    """Install a package if it's not already available."""
     try:
         __import__(import_name)
     except ImportError:
         subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
 
 def check_platform(expected_platforms):
+    """Warn if platform is not in expected_platforms."""
     if "linux" in platform.system().lower():
         distro_info = subprocess.getoutput("cat /etc/os-release")
         if not any(p in distro_info for p in expected_platforms):
@@ -89,9 +91,11 @@ def check_platform(expected_platforms):
         print("Warning: Non-Linux system")
 
 def ensure_directory(path):
+    """Create a directory if it doesn't exist."""
     os.makedirs(path, exist_ok=True)
 
 def process_all_images(input_dir, output_base, sizes):
+    """Build resize tasks for each image profile."""
     tasks = []
     if not os.path.isdir(input_dir):
         return tasks
@@ -106,6 +110,7 @@ def process_all_images(input_dir, output_base, sizes):
     return tasks
 
 def process_assets(input_dir, output_dir, target_width, quality):
+    """Build resize tasks for asset images (thumbs/icons)."""
     tasks = []
     if not os.path.isdir(input_dir):
         return tasks
@@ -118,6 +123,7 @@ def process_assets(input_dir, output_dir, target_width, quality):
     return tasks
 
 def resize_image(input_path, output_path, target_width, quality):
+    """Resize and save an image at target width and quality."""
     try:
         with Image.open(input_path) as img:
             orig_width, orig_height = img.size
@@ -135,6 +141,7 @@ def resize_image(input_path, output_path, target_width, quality):
 # ===========================
 
 def main():
+    """Run all setup, processing, and resizing tasks."""
     for pip_name, import_name in REQUIRED_PACKAGES:
         install_package(pip_name, import_name)
 

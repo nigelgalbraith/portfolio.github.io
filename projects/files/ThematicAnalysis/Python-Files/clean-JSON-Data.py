@@ -30,15 +30,18 @@ TEXT_REMOVE = ["\u00a0"]
 
 
 def read_json(path):
+    """Read and return JSON data from a file."""
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def write_json(data, path):
+    """Write JSON data to a file with indentation."""
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
     print(f"JSON written to: {path}")
 
 def add_prefix_to_json(input_path, output_path, prefix):
+    """Wrap JSON contents in a JS variable assignment and save."""
     with open(input_path, 'r', encoding='utf-8') as f:
         raw = f.read()
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -46,11 +49,13 @@ def add_prefix_to_json(input_path, output_path, prefix):
     print(f"Prefixed JS written to: {output_path}")
 
 def clean_text(text, to_remove):
+    """Remove unwanted characters from a string and trim it."""
     for r in to_remove:
         text = text.replace(r, "")
     return text.strip()
 
 def transform_fields_to_lists(data, keys_to_split, separator):
+    """Split specific string fields into lists for each item."""
     for item in data:
         for key in keys_to_split:
             if key in item and isinstance(item[key], str):
@@ -59,6 +64,7 @@ def transform_fields_to_lists(data, keys_to_split, separator):
     return data
 
 def grouped_and_wrap_data(data, group_by_keys, sub_group_key, sub_key_fields):
+    """Group entries and wrap matching sub-key field values together."""
     grouped = defaultdict(dict)
     for item in data:
         group_key = tuple(item.get(k, '') for k in group_by_keys)
@@ -94,6 +100,7 @@ def grouped_and_wrap_data(data, group_by_keys, sub_group_key, sub_key_fields):
     return list(grouped.values())
 
 def split_fields(entry, keys_to_split, separator, remove_chars):
+    """Clean and split delimited text fields into lists."""
     for key in keys_to_split:
         if key in entry and isinstance(entry[key], str):
             cleaned = clean_text(entry[key], remove_chars)
@@ -101,6 +108,7 @@ def split_fields(entry, keys_to_split, separator, remove_chars):
     return entry
 
 def clean_simple_list(data, keys_to_split, separator, remove_chars):
+    """Apply split_fields() to each item in a list."""
     return [split_fields(item, keys_to_split, separator, remove_chars) for item in data]
 
 def transform_data(data):
