@@ -113,7 +113,8 @@ def main():
             label = conn[2] if len(conn) > 2 else ""
             edge_args = {
                 "fontname": edge_style.get("fontname", "Arial"),
-                "fontcolor": edge_style.get("fontcolor", "black")
+                "fontcolor": edge_style.get("fontcolor", "black"),
+                "arrowsize": defaults.get("arrowsize", "1.0")
             }
 
             if label:
@@ -125,7 +126,7 @@ def main():
                 edge_args.update({
                     "label": label,
                     "fontsize": edge_style.get("fontsize", "40"),
-                    "penwidth": penwidth
+                    "penwidth": edge_style.get("penwidth_alt", "5")
                 })
             else:
                 edge_args.update({
@@ -137,6 +138,9 @@ def main():
 
 
         apply_class_styles(dot, classes, class_map, node_style)
+        dot.graph_attr.update({
+            "pad": defaults.get("pad", "0.5")
+        })
         dot.render(paths["png"], cleanup=True)
         print(f"PNG saved to: {paths['png']}")
 
