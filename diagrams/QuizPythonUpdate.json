@@ -68,21 +68,5 @@
     "ParseExcel": "action",
     "CleanJSON": "action",
     "UpdatePage": "action"
-    },
-    "defaults": {
-    "fontsize": "50",
-    "fontname": "Arial",
-    "style": "rounded,filled",
-    "fontcolor": "black",
-    "color": "black",
-    "penwidth": "2",
-    "fontweight": "bold",
-    "fillcolor": "#f9f9f9",
-    "width": "6",
-    "height": "5",
-    "rankdir": "LR",
-    "nodesep": "1.0",
-    "ranksep": "1.0",
-    "margin": "1.0,1.0"
     }
 }

@@ -65,49 +65,12 @@ DIAGRAMS = {
 }
 
 CONFIG_FILE = "diagrams/site-mermaid-config.json"
-
-# === EXECUTABLES ===
-
-NODE_COMMAND = "node"
 MMDC_COMMAND = "mmdc"
-
-REQUIRED_COMMANDS = [
-    ("node", "Install Node.js from https://nodejs.org/"),
-    ("mmdc", None)
-]
-
-# === DEPENDENCIES ===
-
-def ensure_dependency(command, install_instructions=None, install_callback=None):
-    if shutil.which(command):
-        return
-    print(f"Missing required dependency: '{command}'")
-    if install_callback:
-        print(f"Attempting to install '{command}'...")
-        try:
-            install_callback()
-            return
-        except subprocess.CalledProcessError:
-            print(f"Automatic installation of '{command}' failed.")
-    elif install_instructions:
-        print(f"To install '{command}', follow these instructions:\n{install_instructions}")
-    sys.exit(1)
-
-def install_mermaid_cli():
-    if not shutil.which("npm"):
-        print(
-            "Error: 'npm' not found.\n"
-            "1. Install Node.js from https://nodejs.org\n"
-            "2. Ensure 'Add to PATH' is checked during installation\n"
-            "3. Restart terminal/IDE"
-        )
-        sys.exit(1)
-    print("Running: npm install -g @mermaid-js/mermaid-cli")
-    subprocess.run(["npm", "install", "-g", "@mermaid-js/mermaid-cli"], check=True, shell=True)
 
 # === FILE HANDLING ===
 
 def load_json(filepath):
+    """Load a JSON file and return its contents."""
     try:
         with open(filepath, "r") as f:
             return json.load(f)
@@ -116,6 +79,7 @@ def load_json(filepath):
         sys.exit(1)
 
 def write_mermaid_file(lines, filepath):
+    """Write Mermaid syntax lines to a file."""
     try:
         with open(filepath, "w") as f:
             f.write("\n".join(lines))
@@ -126,26 +90,26 @@ def write_mermaid_file(lines, filepath):
 # === RENDERING ===
 
 def render_mermaid_files(mermaid_file, svg_output, png_output, mmdc_cmd, config_path=None):
+    """Render Mermaid file into SVG and PNG formats."""
+    base_cmd = [mmdc_cmd, "-i", mermaid_file]
+    if config_path:
+        base_cmd.extend(["-c", config_path])
     try:
-        base_cmd = [mmdc_cmd, "-i", mermaid_file]
-        if config_path:
-            base_cmd.extend(["-c", config_path])
-        subprocess.run(base_cmd + ["-o", svg_output], check=True, shell=True)
+        subprocess.run(base_cmd + ["-o", svg_output], check=True)
         print(f"Diagram saved as: {svg_output}")
-        subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True, shell=True)
+        subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True)
         print(f"High-quality PNG saved to: {png_output}")
-    except subprocess.CalledProcessError:
-        print("Failed to generate Mermaid diagram.")
-        sys.exit(1)
+    except Exception:
+        raise RuntimeError("Rendering failed")
 
 # === MAIN ===
 
 def main():
-    for cmd, instructions in REQUIRED_COMMANDS:
-        if cmd == "mmdc":
-            ensure_dependency(cmd, install_callback=install_mermaid_cli)
-        else:
-            ensure_dependency(cmd, install_instructions=instructions)
+    """Main routine to check dependencies and render all diagrams."""
+    if not sys.stdin.isatty():
+        print("[INFO] You're running this in IDLE or a non-terminal environment.")
+        print("If rendering fails, try running this script from a proper terminal.")
+        print()
 
     for diagram_name, config in DIAGRAMS.items():
         print(f"\nProcessing: {diagram_name}")
@@ -153,7 +117,6 @@ def main():
 
         mermaid_lines = ["graph TD\n"]
 
-        # Handle multiple layers: main, project, and optionally third
         for group in [("key_main", "main_label", "main_title"),
                       ("key_project", "project_label", "project_title"),
                       ("key_third", "third_label", "third_title")]:
@@ -167,7 +130,6 @@ def main():
                     mermaid_lines.append(f"    {name}[{file}]")
                 mermaid_lines.append("  end\n")
 
-        # Edges, styles, classes
         for source, target in site_data.get(config["key_links"], []):
             mermaid_lines.append(f"  {source} --> {target}")
         for node, style in site_data.get(config["key_styles"], {}).items():
@@ -178,7 +140,25 @@ def main():
             mermaid_lines.append(f"  class {node} {class_name}")
 
         write_mermaid_file(mermaid_lines, config["mmd"])
-        render_mermaid_files(config["mmd"], config["svg"], config["png"], MMDC_COMMAND, config_path=CONFIG_FILE)
+
+        try:
+            render_mermaid_files(config["mmd"], config["svg"], config["png"], MMDC_COMMAND, config_path=CONFIG_FILE)
+        except RuntimeError:
+            print("\n[ERROR] Failed to generate Mermaid diagram.")
+            print("Make sure the following are installed and in your system PATH:\n")
+            print("  - Node.js (https://nodejs.org/)")
+            print("  - Mermaid CLI (mmdc)")
+            print("\nTo install Mermaid CLI globally:")
+            print("  npm install -g @mermaid-js/mermaid-cli")
+
+            print("\nOn Debian/Ubuntu:")
+            print("  sudo apt update && sudo apt install nodejs npm")
+            print("  mkdir -p ~/.local/bin")
+            print("  npm install @mermaid-js/mermaid-cli --prefix ~/.local")
+            print("  echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc")
+            print("  source ~/.bashrc")
+            print("\nThen re-run this script from a terminal.")
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()

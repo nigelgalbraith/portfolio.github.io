@@ -1,20 +1,18 @@
-import json
-import subprocess
-import sys
-import shutil
-import os
-import textwrap
+import json, sys, shutil, textwrap
+from graphviz import Digraph
 
 # === FLOWCHART CONFIG ===
 
 FLOWCHARTS = {
     "TAPythonWebUpdate": {
         "json": "diagrams/TAPythonWebUpdate.json",
-        "png": "projects/images/main/original/TAPythonWebUpdate"
+        "png": "projects/images/main/original/TAPythonWebUpdate",
+        "config": "diagrams/Flow-Config.json"
     },
     "QuizPythonUpdate": {
         "json": "diagrams/QuizPythonUpdate.json",
-        "png": "projects/images/main/original/quiz-updateFlow"
+        "png": "projects/images/main/original/quiz-updateFlow",
+        "config": "diagrams/Flow-Config.json"
     }
 }
 
@@ -26,35 +24,29 @@ def ensure_graphviz_module():
         import graphviz
         return graphviz
     except ImportError:
-        print("Installing 'graphviz' module...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "graphviz"])
-        import graphviz
-        return graphviz
+        print("[ERROR] 'graphviz' Python module is missing. Install with: pip install graphviz")
+    if shutil.which("dot") is None:
+        print("[ERROR] Graphviz system package is missing. Install it using your package manager.")
+    sys.exit(1)
 
 def ensure_graphviz_binary():
-    """Ensure Graphviz binary (dot) is available in PATH."""
+    """Ensure Graphviz 'dot' binary is available."""
     if shutil.which("dot") is None:
-        print("Missing 'dot' binary from Graphviz.\nDownload from: https://graphviz.org/download/\nEnsure it's added to your system PATH.")
+        print("Missing 'dot' binary from Graphviz.")
         sys.exit(1)
 
 def load_json(path):
-    """Load JSON file from path."""
+    """Load and return a JSON file from path."""
     with open(path, "r") as f:
         return json.load(f)
 
-def shape_for(type_):
-    """Map shape keyword to Graphviz shape."""
-    if type_ == "terminator":
-        return "oval"
-    elif type_ == "decision":
-        return "diamond"
-    return "box"
+def shape_for(type_, shape_map):
+    """Get Graphviz shape from type using shape_map."""
+    return shape_map.get(type_, "box")
 
-def wrap_label(text, width=28):
-    """Insert line breaks and apply bold font using HTML-like labels."""
-    lines = textwrap.wrap(text, width)
-    html = "<b>" + "<br/>".join(lines) + "</b>"
-    return f"<{html}>"
+def wrap_label(text, width):
+    """Wrap long text into multiple lines."""
+    return "\n".join(textwrap.wrap(text, width))
 
 def apply_class_styles(dot, class_definitions, class_map, node_style):
     """Apply custom styles to nodes using class definitions."""
@@ -62,37 +54,49 @@ def apply_class_styles(dot, class_definitions, class_map, node_style):
         if class_name in class_definitions:
             style = class_definitions[class_name]
             style_dict = dict(pair.split(":") for pair in style.split(","))
-            merged_style = {**node_style, **style_dict}
-            dot.node(node_id, _attributes=merged_style)
+            dot.node(node_id, _attributes={**node_style, **style_dict})
 
 # === MAIN ===
 
 def main():
-    """Main entry point to generate flowchart(s)."""
+    """Generate flowcharts from JSON definitions and config."""
     ensure_graphviz_binary()
-    graphviz = ensure_graphviz_module()
-    from graphviz import Digraph
+    ensure_graphviz_module()
 
     for name, paths in FLOWCHARTS.items():
         print(f"\nGenerating flowchart: {name}")
         data = load_json(paths["json"])
+        config = load_json(paths["config"])
 
-        defaults = data.get("defaults", {})
+        defaults = config.get("defaults", {})
+        edge_style = config.get("edge_defaults", {})
+        shape_map = config.get("shape_map", {})
         rankdir = defaults.get("rankdir", "LR")
+        label_wrap_width = int(defaults.get("labelwrap", 28))
 
         node_style = {
-            "fontname": "Arial",
-            "fontsize": "50",
-            "penwidth": "2",
-            "style": "rounded,filled",
-            "fontcolor": "white",
-            "color": "black"
+            "fontname": defaults.get("fontname", "Arial"),
+            "fontsize": defaults.get("fontsize", "16"),
+            "penwidth": defaults.get("penwidth", "2"),
+            "style": defaults.get("style", "rounded,filled"),
+            "fontcolor": defaults.get("fontcolor", "black"),
+            "color": defaults.get("color", "black"),
+            "fillcolor": defaults.get("fillcolor", "#f9f9f9"),
+            "width": defaults.get("width", "6"),
+            "height": defaults.get("height", "5"),
+            "margin": defaults.get("nodemargin", "0.5")
         }
-        node_style.update({k: v for k, v in defaults.items() if k not in node_style and k != "rankdir"})
 
         dot = Digraph(name=name, format="png", engine="dot")
         dot.attr(rankdir=rankdir)
-        dot.attr('node', shape='box', style='rounded,filled', fontname='Arial', fontsize='16')
+        dot.attr(nodesep=defaults.get("nodesep", "1.0"))
+        dot.attr(ranksep=defaults.get("ranksep", "1.0"))
+        dot.attr(margin=defaults.get("margin", "0.5"))
+        dot.attr(arrowsize=defaults.get("arrowsize", "1.0"))
+        dot.attr(nodesep=defaults.get("nodesep", "1.0"),
+                 ranksep=defaults.get("ranksep", "1.0"),
+                 margin=defaults.get("margin", "1.0,1.0"))
+        dot.attr('node', shape='box', **node_style)
 
         nodes = data.get("nodes", {})
         connections = data.get("connections", [])
@@ -100,17 +104,37 @@ def main():
         class_map = data.get("class_map", {})
 
         for node_id, props in nodes.items():
-            label = wrap_label(props.get("label", node_id))
-            shape = shape_for(props.get("shape", "box"))
+            label = wrap_label(props.get("label", node_id), width=label_wrap_width)
+            shape = shape_for(props.get("shape", "box"), shape_map)
             dot.node(node_id, label=label, shape=shape, **node_style)
 
         for conn in connections:
             src, dst = conn[0], conn[1]
             label = conn[2] if len(conn) > 2 else ""
+            edge_args = {
+                "fontname": edge_style.get("fontname", "Arial"),
+                "fontcolor": edge_style.get("fontcolor", "black")
+            }
+
             if label:
-                dot.edge(src, dst, label=f'< <b>{label}</b> >', fontname="Arial", fontsize="50", fontcolor="black", penwidth="2.5")
+                penwidth = (
+                    edge_style.get("penwidth_yesno", edge_style.get("penwidth", "2.5"))
+                    if label.strip().lower() in ("yes", "no")
+                    else edge_style.get("penwidth", "2.5")
+                )
+                edge_args.update({
+                    "label": label,
+                    "fontsize": edge_style.get("fontsize", "40"),
+                    "penwidth": penwidth
+                })
             else:
-                dot.edge(src, dst, fontname="Arial", fontsize="13", fontcolor="black", penwidth="5")
+                edge_args.update({
+                    "fontsize": edge_style.get("fontsize_alt", "13"),
+                    "penwidth": edge_style.get("penwidth_alt", "5")
+                })
+
+            dot.edge(src, dst, **edge_args)
+
 
         apply_class_styles(dot, classes, class_map, node_style)
         dot.render(paths["png"], cleanup=True)

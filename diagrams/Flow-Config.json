@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "fontsize": "150",
+    "fontname": "Arial",
+    "style": "rounded,filled",
+    "fontcolor": "black",
+    "color": "black",
+    "penwidth": "2.5",
+    "fontweight": "bold",
+    "fillcolor": "#f9f9f9",
+    "width": "10",
+    "height": "7",
+    "rankdir": "LR",
+    "margin": "2.0,2.0",
+    "nodemargin": "1.0,1.0",
+    "labelwrap": 28,
+    "arrowsize": "1.5",
+    "nodesep": "1.5",
+    "ranksep": "1.5"
+  },
+  "shape_map": {
+    "terminator": "oval",
+    "decision": "diamond",
+    "box": "box"
+  },
+  "edge_defaults": {
+    "fontname": "Arial",
+    "fontsize": "150",
+    "fontcolor": "black",
+    "penwidth": "2.5",
+    "penwidth_alt": "5",
+    "fontsize_alt": "13",
+    "penwidth_yesno": "5",
+    "fontweight": "bold"
+  }
+}
