@@ -1,0 +1,46 @@
+{
+  "HTMLPages": {
+    "Home": "index.html",
+    "Resume": "resume.html"
+  },
+  "JavaScript": {
+    "MenuToggle": "menuToggle.js",
+    "MainText": "mainTextLoader.js",
+    "FooterIcons": "footerIconLoader.js",
+    "ResponsiveImages": "responsiveImageLoader.js",
+    "ResumeLoader": "resumeLoader.js",
+    "SkillsLoader": "skillsLoader.js"
+  },
+  "JSONData": {
+    "MainTextData": "mainTextData.js",
+    "IconRegistry": "iconRegistry.js",
+    "ResumeData": "resumeData.js",
+    "SkillsData": "skillsData.js"
+  },
+  "links": [
+    ["Home", "MenuToggle"],
+    ["Home", "MainText"],
+    ["Home", "FooterIcons"],
+    ["Home", "ResponsiveImages"],
+    ["Resume", "ResumeLoader"],
+    ["Resume", "SkillsLoader"],
+    ["MainText", "MainTextData"],
+    ["FooterIcons", "IconRegistry"],
+    ["ResumeLoader", "ResumeData"],
+    ["SkillsLoader", "SkillsData"]
+  ],
+  "styles": {
+    "Home": "fill:#cfe2f3,stroke:#036,stroke-width:1px",
+    "Resume": "fill:#fce5cd,stroke:#a61c00",
+    "MenuToggle": "fill:#e6f7ff,stroke:#005c99",
+    "MainText": "fill:#e6f7ff,stroke:#005c99",
+    "FooterIcons": "fill:#e6f7ff,stroke:#005c99",
+    "ResponsiveImages": "fill:#e6f7ff,stroke:#005c99",
+    "ResumeLoader": "fill:#fff2cc,stroke:#cc9900",
+    "SkillsLoader": "fill:#fff2cc,stroke:#cc9900",
+    "ResumeData": "fill:#f9cb9c,stroke:#783f04",
+    "SkillsData": "fill:#f9cb9c,stroke:#783f04",
+    "IconRegistry": "fill:#f9cb9c,stroke:#783f04",
+    "MainTextData": "fill:#f9cb9c,stroke:#783f04"
+  }
+}

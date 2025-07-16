@@ -1,0 +1,46 @@
+graph TD
+
+  subgraph SitePages [Main Pages]
+    Home[index.html]
+    About[about.html]
+    Resume[resume.html]
+    Projects[projects.html]
+    Contact[contact.html]
+  end
+
+  subgraph ProjectPages [Project Pages]
+    ThematicAnalysis[ThematicAnalysis.html]
+    QuizCreator[QuizCreator.html]
+    PortfolioWebsite[PortfolioWebsite.html]
+    ArcadeCabinet[arcade-cabinet.html]
+    GreenhouseBox[GreenhousePlanterBox.html]
+    KVMLab[kvm-lab.html]
+    SharepointGPS[sharepoint-gps.html]
+    TerraceGardens[TerraceGardens.html]
+  end
+
+  Home --> About
+  Home --> Resume
+  Home --> Projects
+  Home --> Contact
+  Projects --> ThematicAnalysis
+  Projects --> QuizCreator
+  Projects --> PortfolioWebsite
+  Projects --> ArcadeCabinet
+  Projects --> GreenhouseBox
+  Projects --> KVMLab
+  Projects --> SharepointGPS
+  Projects --> TerraceGardens
+  style Home fill:#cfe2f3,stroke:#036,stroke-width:1px
+  style About fill:#fce5cd,stroke:#a61c00
+  style Resume fill:#fce5cd,stroke:#a61c00
+  style Projects fill:#d9ead3,stroke:#38761d
+  style Contact fill:#fce5cd,stroke:#a61c00
+  style ThematicAnalysis fill:#d9d2e9,stroke:#351c75
+  style QuizCreator fill:#d9d2e9,stroke:#351c75
+  style PortfolioWebsite fill:#d9d2e9,stroke:#351c75
+  style ArcadeCabinet fill:#d9d2e9,stroke:#351c75
+  style GreenhouseBox fill:#d9d2e9,stroke:#351c75
+  style KVMLab fill:#d9d2e9,stroke:#351c75
+  style SharepointGPS fill:#d9d2e9,stroke:#351c75
+  style TerraceGardens fill:#d9d2e9,stroke:#351c75

@@ -1,0 +1,11 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "16px",
+    "fontFamily": "Arial, sans-serif",
+    "nodePadding": "30",
+    "primaryColor": "#6fa8dc",
+    "lineColor": "#333",
+    "fontWeight": "normal"
+  }
+}

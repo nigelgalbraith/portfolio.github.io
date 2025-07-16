@@ -142,10 +142,16 @@ thematic: [
     alt: "Diagram showing how the main HTML pages and project subpages are connected"
     },
     {
-    title: "JavaScript Architecture Plan",
-    text: "I also mapped out how all JavaScript files would be organised. Each page loads only the scripts and data it needs — such as Resume pulling in resumeLoader and resumeData, while Projects uses separate loaders for GitHub apps, Sketchfab embeds, and project step data. This modular approach kept the codebase easy to manage and update.",
-    img: "SiteJS-Structure.png",
-    alt: "Diagram showing which JS files and data sources are loaded by each page"
+      title: "JavaScript Architecture (Main Pages)",
+      text: "To keep things modular, I mapped out which JavaScript files are loaded by each HTML page. For example, the Resume page loads `resumeLoader.js` and `skillsLoader.js`, which in turn pull in data like `resumeData.js` and `skills.json`. Each file is focused on a single job, making the system easy to maintain.",
+      img: "SiteJS-MainPages.png",
+      alt: "Diagram showing JavaScript modules and data linked to the Home and Resume pages"
+    },
+    {
+      title: "JavaScript Architecture (Project Pages)",
+      text: "The Projects page has its own set of modular JavaScript files, such as `projectListLoader.js`, `carousel.js`, and `embedSketchfab.js`. Each of these loads specific data (like project steps or Sketchfab models) only when needed. This structure ensures better performance and easier updates as more features are added.",
+      img: "SiteJS-ProjectPages.png",
+      alt: "Diagram showing JavaScript loaders and JSON data modules for the Projects page"
     }
   ]
 };

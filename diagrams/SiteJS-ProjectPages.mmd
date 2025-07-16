@@ -1,0 +1,55 @@
+graph TD
+
+  subgraph HTMLPages [HTML Pages]
+    Projects[projects.html]
+  end
+
+  subgraph JavaScript [JavaScript]
+    ProjectList[projectListLoader.js]
+    GithubApp[githubAppLoader.js]
+    SketchfabEmbed[embedSketchfab.js]
+    ProjectSteps[projectStepsData.js]
+    ProjectLinks[projectLinksLoader.js]
+    Carousel[carousel.js]
+    ModalZoom[modalZoom.js]
+    Init[init.js]
+  end
+
+  subgraph JSONData [JSON Data]
+    ProjectListData[projectListData.js]
+    GithubApps[githubApps.js]
+    SketchfabModels[sketchfabModels.js]
+    ProjectStepsData[projectSteps.js]
+    ProjectLinksData[projectLinks.js]
+    CarouselData[carouselData.js]
+  end
+
+  Projects --> ProjectList
+  Projects --> GithubApp
+  Projects --> SketchfabEmbed
+  Projects --> ProjectSteps
+  Projects --> ProjectLinks
+  Projects --> Carousel
+  Projects --> ModalZoom
+  Projects --> Init
+  ProjectList --> ProjectListData
+  GithubApp --> GithubApps
+  SketchfabEmbed --> SketchfabModels
+  ProjectSteps --> ProjectStepsData
+  ProjectLinks --> ProjectLinksData
+  Carousel --> CarouselData
+  style Projects fill:#d9ead3,stroke:#38761d
+  style ProjectList fill:#e2efda,stroke:#274e13
+  style GithubApp fill:#e2efda,stroke:#274e13
+  style SketchfabEmbed fill:#e2efda,stroke:#274e13
+  style ProjectSteps fill:#e2efda,stroke:#274e13
+  style ProjectLinks fill:#e2efda,stroke:#274e13
+  style Carousel fill:#e2efda,stroke:#274e13
+  style ModalZoom fill:#e2efda,stroke:#274e13
+  style Init fill:#e2efda,stroke:#274e13
+  style ProjectListData fill:#f9cb9c,stroke:#783f04
+  style GithubApps fill:#f9cb9c,stroke:#783f04
+  style SketchfabModels fill:#f9cb9c,stroke:#783f04
+  style ProjectStepsData fill:#f9cb9c,stroke:#783f04
+  style ProjectLinksData fill:#f9cb9c,stroke:#783f04
+  style CarouselData fill:#f9cb9c,stroke:#783f04

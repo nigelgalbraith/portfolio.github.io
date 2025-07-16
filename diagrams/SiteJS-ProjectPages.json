@@ -1,0 +1,56 @@
+{
+  "HTMLPages": {
+    "Projects": "projects.html"
+  },
+  "JavaScript": {
+    "ProjectList": "projectListLoader.js",
+    "GithubApp": "githubAppLoader.js",
+    "SketchfabEmbed": "embedSketchfab.js",
+    "ProjectSteps": "projectStepsData.js",
+    "ProjectLinks": "projectLinksLoader.js",
+    "Carousel": "carousel.js",
+    "ModalZoom": "modalZoom.js",
+    "Init": "init.js"
+  },
+  "JSONData": {
+    "ProjectListData": "projectListData.js",
+    "GithubApps": "githubApps.js",
+    "SketchfabModels": "sketchfabModels.js",
+    "ProjectStepsData": "projectSteps.js",
+    "ProjectLinksData": "projectLinks.js",
+    "CarouselData": "carouselData.js"
+  },
+  "links": [
+    ["Projects", "ProjectList"],
+    ["Projects", "GithubApp"],
+    ["Projects", "SketchfabEmbed"],
+    ["Projects", "ProjectSteps"],
+    ["Projects", "ProjectLinks"],
+    ["Projects", "Carousel"],
+    ["Projects", "ModalZoom"],
+    ["Projects", "Init"],
+    ["ProjectList", "ProjectListData"],
+    ["GithubApp", "GithubApps"],
+    ["SketchfabEmbed", "SketchfabModels"],
+    ["ProjectSteps", "ProjectStepsData"],
+    ["ProjectLinks", "ProjectLinksData"],
+    ["Carousel", "CarouselData"]
+  ],
+  "styles": {
+    "Projects": "fill:#d9ead3,stroke:#38761d",
+    "ProjectList": "fill:#e2efda,stroke:#274e13",
+    "GithubApp": "fill:#e2efda,stroke:#274e13",
+    "SketchfabEmbed": "fill:#e2efda,stroke:#274e13",
+    "ProjectSteps": "fill:#e2efda,stroke:#274e13",
+    "ProjectLinks": "fill:#e2efda,stroke:#274e13",
+    "Carousel": "fill:#e2efda,stroke:#274e13",
+    "ModalZoom": "fill:#e2efda,stroke:#274e13",
+    "Init": "fill:#e2efda,stroke:#274e13",
+    "ProjectListData": "fill:#f9cb9c,stroke:#783f04",
+    "GithubApps": "fill:#f9cb9c,stroke:#783f04",
+    "SketchfabModels": "fill:#f9cb9c,stroke:#783f04",
+    "ProjectStepsData": "fill:#f9cb9c,stroke:#783f04",
+    "ProjectLinksData": "fill:#f9cb9c,stroke:#783f04",
+    "CarouselData": "fill:#f9cb9c,stroke:#783f04"
+  }
+}

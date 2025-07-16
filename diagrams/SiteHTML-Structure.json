@@ -1,0 +1,48 @@
+{
+  "main_pages": {
+    "Home": "index.html",
+    "About": "about.html",
+    "Resume": "resume.html",
+    "Projects": "projects.html",
+    "Contact": "contact.html"
+  },
+  "project_pages": {
+    "ThematicAnalysis": "ThematicAnalysis.html",
+    "QuizCreator": "QuizCreator.html",
+    "PortfolioWebsite": "PortfolioWebsite.html",
+    "ArcadeCabinet": "arcade-cabinet.html",
+    "GreenhouseBox": "GreenhousePlanterBox.html",
+    "KVMLab": "kvm-lab.html",
+    "SharepointGPS": "sharepoint-gps.html",
+    "TerraceGardens": "TerraceGardens.html"
+  },
+  "links": [
+    ["Home", "About"],
+    ["Home", "Resume"],
+    ["Home", "Projects"],
+    ["Home", "Contact"],
+    ["Projects", "ThematicAnalysis"],
+    ["Projects", "QuizCreator"],
+    ["Projects", "PortfolioWebsite"],
+    ["Projects", "ArcadeCabinet"],
+    ["Projects", "GreenhouseBox"],
+    ["Projects", "KVMLab"],
+    ["Projects", "SharepointGPS"],
+    ["Projects", "TerraceGardens"]
+  ],
+  "styles": {
+    "Home": "fill:#cfe2f3,stroke:#036,stroke-width:1px",
+    "About": "fill:#fce5cd,stroke:#a61c00",
+    "Resume": "fill:#fce5cd,stroke:#a61c00",
+    "Projects": "fill:#d9ead3,stroke:#38761d",
+    "Contact": "fill:#fce5cd,stroke:#a61c00",
+    "ThematicAnalysis": "fill:#d9d2e9,stroke:#351c75",
+    "QuizCreator": "fill:#d9d2e9,stroke:#351c75",
+    "PortfolioWebsite": "fill:#d9d2e9,stroke:#351c75",
+    "ArcadeCabinet": "fill:#d9d2e9,stroke:#351c75",
+    "GreenhouseBox": "fill:#d9d2e9,stroke:#351c75",
+    "KVMLab": "fill:#d9d2e9,stroke:#351c75",
+    "SharepointGPS": "fill:#d9d2e9,stroke:#351c75",
+    "TerraceGardens": "fill:#d9d2e9,stroke:#351c75"
+  }
+}

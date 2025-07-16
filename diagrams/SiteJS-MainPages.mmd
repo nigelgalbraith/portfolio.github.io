@@ -1,0 +1,45 @@
+graph TD
+
+  subgraph HTMLPages [HTML Pages]
+    Home[index.html]
+    Resume[resume.html]
+  end
+
+  subgraph JavaScript [JavaScript]
+    MenuToggle[menuToggle.js]
+    MainText[mainTextLoader.js]
+    FooterIcons[footerIconLoader.js]
+    ResponsiveImages[responsiveImageLoader.js]
+    ResumeLoader[resumeLoader.js]
+    SkillsLoader[skillsLoader.js]
+  end
+
+  subgraph JSONData [JSON Data]
+    MainTextData[mainTextData.js]
+    IconRegistry[iconRegistry.js]
+    ResumeData[resumeData.js]
+    SkillsData[skillsData.js]
+  end
+
+  Home --> MenuToggle
+  Home --> MainText
+  Home --> FooterIcons
+  Home --> ResponsiveImages
+  Resume --> ResumeLoader
+  Resume --> SkillsLoader
+  MainText --> MainTextData
+  FooterIcons --> IconRegistry
+  ResumeLoader --> ResumeData
+  SkillsLoader --> SkillsData
+  style Home fill:#cfe2f3,stroke:#036,stroke-width:1px
+  style Resume fill:#fce5cd,stroke:#a61c00
+  style MenuToggle fill:#e6f7ff,stroke:#005c99
+  style MainText fill:#e6f7ff,stroke:#005c99
+  style FooterIcons fill:#e6f7ff,stroke:#005c99
+  style ResponsiveImages fill:#e6f7ff,stroke:#005c99
+  style ResumeLoader fill:#fff2cc,stroke:#cc9900
+  style SkillsLoader fill:#fff2cc,stroke:#cc9900
+  style ResumeData fill:#f9cb9c,stroke:#783f04
+  style SkillsData fill:#f9cb9c,stroke:#783f04
+  style IconRegistry fill:#f9cb9c,stroke:#783f04
+  style MainTextData fill:#f9cb9c,stroke:#783f04

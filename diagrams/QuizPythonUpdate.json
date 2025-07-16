@@ -1,0 +1,88 @@
+{
+  "nodes": {
+    "Start": {
+      "label": "Start",
+      "shape": "terminator"
+    },
+    "CheckPandas": {
+      "label": "Check if 'pandas' package is installed"
+    },
+    "PandasInstalled": {
+      "label": "Is 'pandas' installed?",
+      "shape": "decision"
+    },
+    "MoveToNextStep": {
+        "label": "Skip Install",
+        "shape": "box"
+    },
+    "InstallPandas": {
+      "label": "Install 'pandas' package using pip"
+    },
+    "ImportModules": {
+      "label": "Import necessary modules"
+    },
+    "RunUpdateScript": {
+      "label": "Execute Python-Update-Webpage.py"
+    },
+    "ParseExcel": {
+      "label": "Run import-Tool-Data.py to parse excel"
+    },
+    "CleanJSON": {
+      "label": "Run clean-Tool-Data.py to clean and format JSON"
+    },
+    "UpdatePage": {
+      "label": "Update webpage content with cleaned data"
+    },
+    "End": {
+      "label": "End",
+      "shape": "terminator"
+    }
+  },
+    "connections": [
+    ["Start", "CheckPandas"],
+    ["CheckPandas", "PandasInstalled"],
+    ["PandasInstalled", "MoveToNextStep", "Yes"],
+    ["MoveToNextStep", "ImportModules"],
+    ["PandasInstalled", "InstallPandas", "No"],
+    ["InstallPandas", "ImportModules"],
+    ["ImportModules", "RunUpdateScript"],
+    ["RunUpdateScript", "ParseExcel"],
+    ["ParseExcel", "CleanJSON"],
+    ["CleanJSON", "UpdatePage"],
+    ["UpdatePage", "End"]
+    ],
+    "classes": {
+      "startend": "fillcolor:#a64d79,style:filled,shape:oval,fontcolor:black",
+      "decision": "fillcolor:#e69138,style:filled,shape:diamond,fontcolor:black",
+      "action": "fillcolor:#4a86e8,style:filled,shape:box,fontcolor:black"
+    },
+    "class_map": {
+    "Start": "startend",
+    "End": "startend",
+    "PandasInstalled": "decision",
+    "MoveToNextStep": "action",
+    "CheckPandas": "action",
+    "InstallPandas": "action",
+    "ImportModules": "action",
+    "RunUpdateScript": "action",
+    "ParseExcel": "action",
+    "CleanJSON": "action",
+    "UpdatePage": "action"
+    },
+    "defaults": {
+    "fontsize": "50",
+    "fontname": "Arial",
+    "style": "rounded,filled",
+    "fontcolor": "black",
+    "color": "black",
+    "penwidth": "2",
+    "fontweight": "bold",
+    "fillcolor": "#f9f9f9",
+    "width": "6",
+    "height": "5",
+    "rankdir": "LR",
+    "nodesep": "1.0",
+    "ranksep": "1.0",
+    "margin": "1.0,1.0"
+    }
+}
