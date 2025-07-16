@@ -56,6 +56,7 @@ def apply_class_styles(dot, class_definitions, class_map, node_style):
             style_dict = dict(pair.split(":") for pair in style.split(","))
             dot.node(node_id, _attributes={**node_style, **style_dict})
 
+
 # === MAIN ===
 
 def main():
@@ -124,7 +125,7 @@ def main():
                     else edge_style.get("penwidth", "2.5")
                 )
                 edge_args.update({
-                    "label": label,
+                    "xlabel": label,
                     "fontsize": edge_style.get("fontsize", "40"),
                     "penwidth": edge_style.get("penwidth_alt", "5")
                 })
@@ -139,10 +140,13 @@ def main():
 
         apply_class_styles(dot, classes, class_map, node_style)
         dot.graph_attr.update({
-            "pad": defaults.get("pad", "0.5")
+            "pad": defaults.get("pad", "0.5"),
+            "dpi": defaults.get("dpi", "96"),
+            "splines": defaults.get("splines", "ortho")
         })
         dot.render(paths["png"], cleanup=True)
-        print(f"PNG saved to: {paths['png']}")
+        png_output_path = paths["png"] + ".png"
+        print(f"PNG saved to: {png_output_path}")
 
 if __name__ == "__main__":
     main()

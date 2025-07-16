@@ -1,23 +1,25 @@
 {
   "defaults": {
-    "fontsize": "150",
+    "fontsize": "32",
     "fontname": "Arial",
     "style": "rounded,filled",
     "fontcolor": "black",
     "color": "black",
-    "penwidth": "5",
+    "penwidth": "2",
     "fontweight": "bold",
     "fillcolor": "#f9f9f9",
-    "width": "30",
-    "height": "15",
+    "width": "4",
+    "height": "1.5",
     "rankdir": "TB",
-    "margin": "10.0,10.0",
-    "nodemargin": "1.0,1.0",
-    "labelwrap": 28,
-    "arrowsize": "10",
-    "nodesep": "5",
-    "ranksep": "5",
-    "pad": "5.0"
+    "margin": "1.0,1.0",
+    "nodemargin": "0.2",
+    "labelwrap": 20,
+    "arrowsize": "1.2",
+    "nodesep": "0.6",
+    "ranksep": "0.6",
+    "pad": "1.0",
+    "dpi": "96",
+    "splines": "ortho"
   },
   "shape_map": {
     "terminator": "oval",
@@ -26,12 +28,12 @@
   },
   "edge_defaults": {
     "fontname": "Arial",
-    "fontsize": "150",
+    "fontsize": "32",
     "fontcolor": "black",
-    "penwidth": "10",
-    "penwidth_alt": "5",
-    "fontsize_alt": "13",
-    "penwidth_yesno": "5",
+    "penwidth": "2",
+    "penwidth_alt": "2",
+    "fontsize_alt": "20",
+    "penwidth_yesno": "2",
     "fontweight": "bold"
   }
 }

@@ -11,10 +11,6 @@
       "label": "Is 'pandas' installed?",
       "shape": "decision"
     },
-    "MoveToNextStep": {
-        "label": "Skip Install",
-        "shape": "box"
-    },
     "InstallPandas": {
       "label": "Install 'pandas' package using pip"
     },
@@ -38,11 +34,10 @@
       "shape": "terminator"
     }
   },
-    "connections": [
+  "connections": [
     ["Start", "CheckPandas"],
     ["CheckPandas", "PandasInstalled"],
-    ["PandasInstalled", "MoveToNextStep", "Yes"],
-    ["MoveToNextStep", "ImportModules"],
+    ["PandasInstalled", "ImportModules", "Yes"],
     ["PandasInstalled", "InstallPandas", "No"],
     ["InstallPandas", "ImportModules"],
     ["ImportModules", "RunUpdateScript"],
@@ -50,17 +45,16 @@
     ["ParseExcel", "CleanJSON"],
     ["CleanJSON", "UpdatePage"],
     ["UpdatePage", "End"]
-    ],
-    "classes": {
-      "startend": "fillcolor:#a64d79,style:filled,shape:oval,fontcolor:black",
-      "decision": "fillcolor:#e69138,style:filled,shape:diamond,fontcolor:black",
-      "action": "fillcolor:#4a86e8,style:filled,shape:box,fontcolor:black"
-    },
-    "class_map": {
+  ],
+  "classes": {
+    "startend": "fillcolor:#a64d79,style:filled,shape:oval,fontcolor:black",
+    "decision": "fillcolor:#e69138,style:filled,shape:diamond,fontcolor:black",
+    "action": "fillcolor:#4a86e8,style:filled,shape:box,fontcolor:black"
+  },
+  "class_map": {
     "Start": "startend",
     "End": "startend",
     "PandasInstalled": "decision",
-    "MoveToNextStep": "action",
     "CheckPandas": "action",
     "InstallPandas": "action",
     "ImportModules": "action",
@@ -68,5 +62,5 @@
     "ParseExcel": "action",
     "CleanJSON": "action",
     "UpdatePage": "action"
-    }
+  }
 }
