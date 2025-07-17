@@ -1,9 +1,3 @@
-# 21/08/2024
-# Nigel Galbraith
-# ncg33@arastudent.ac.nz
-
-# Python Excel Import
-
 import subprocess
 import sys
 import os
@@ -20,26 +14,17 @@ ORIENT = "records"
 OUTPUT_FOLDER = "json_files"
 OUTPUT_JSON_FILE = os.path.join(OUTPUT_FOLDER, "QuizData.json")
 
-def install_pip():
-    """Function to install pip."""
-    print("Pip is not installed. Installing...")
-    subprocess.run([sys.executable, "-m", "ensurepip"], check=True)
+def install_message():
+    """Function to display a message about missing dependencies."""
+    print("Required libraries 'pandas' and 'openpyxl' are not installed.")
+    print("To install them, use one of the following options:")
+    print("1. On a Debian-based system (e.g., Ubuntu, Debian):")
+    print("   sudo apt install python3-pandas python3-openpyxl")
+    print("2. If you wish to use pip in a virtual environment:")
+    print("   python3 -m venv myenv")
+    print("   source myenv/bin/activate")
+    print("   pip install pandas openpyxl")
 
-def install_module(module_name):
-    """Function to install a module with pip."""
-    print(f"{module_name} is not installed. Installing with pip...")
-    subprocess.run([sys.executable, "-m", "pip", "install", module_name], check=True)
-
-def apt_install(package_name):
-    """Function to install a package using apt."""
-    print(f"Trying to install {package_name} using apt...")
-    try:
-        subprocess.run(["sudo", "apt", "update"], check=True)
-        subprocess.run(["sudo", "apt", "install", "-y", package_name], check=True)
-    except Exception as e:
-        print(f"Failed to install {package_name} via apt: {e}")
-        print(f"Falling back to pip for {package_name}...")
-        install_module(package_name)
 
 def excel_to_json(excel_file, sheet_names, start_row, orient, output_json_file):
     """Convert multiple Excel sheets to a single JSON file."""
@@ -61,39 +46,11 @@ def excel_to_json(excel_file, sheet_names, start_row, orient, output_json_file):
         print(f"Error converting Excel to JSON: {e}")
 
 if __name__ == "__main__":
-    system_platform = platform.system().lower()
-
-    # Linux-specific distro detection
-    distro_id = ""
-    if system_platform == "linux":
-        try:
-            import distro
-            distro_id = distro.id()
-        except ImportError:
-            try:
-                # platform.freedesktop_os_release() is available in Python 3.10+
-                distro_id = platform.freedesktop_os_release().get("ID", "")
-            except Exception:
-                pass
-
-    # Try pandas
     try:
         import pandas as pd
-    except ImportError:
-        if system_platform == "linux" and distro_id in ["debian", "ubuntu"]:
-            apt_install("python3-pandas")
-        else:
-            install_module("pandas")
-        import pandas as pd
-
-    # Try openpyxl
-    try:
         import openpyxl
     except ImportError:
-        if system_platform == "linux" and distro_id in ["debian", "ubuntu"]:
-            apt_install("python3-openpyxl")
-        else:
-            install_module("openpyxl")
-        import openpyxl
+        install_message()
+        exit(1)  # Exit if dependencies are not installed
 
     excel_to_json(EXCEL_FILE, SHEET_NAMES, START_ROW, ORIENT, OUTPUT_JSON_FILE)
