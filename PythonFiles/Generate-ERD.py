@@ -1,114 +1,94 @@
-import json
-import subprocess
-import sys
-import os
+import json, sys, shutil, textwrap
+from graphviz import Digraph
 
-# === CONSTANTS ===
+# === ERD CONFIG ===
+ERD_CONFIG = "../diagrams/ERDConfig.json"  
+ERD_JSON = "../diagrams/TAERDDiagram.json"  
+OUTPUT_PNG = "../projects/images/main/original/ThematicAnalysisStructureEDR2"
 
-DIAGRAMS = {
-    "TAEDR_diagram": {
-        "json": "../Diagrams/TAERDiagram.json",
-        "mmd": "../Diagrams/TAERDiagram.mmd",
-        "svg": "../Diagrams/TAERDiagram.svg",
-        "png": "../projects/images/main/original/ThematicAnalysisStructureEDR2.png",
-        "main_label": "Entities",
-        "project_label": "Relationships",
-        "main_title": "Entities",
-        "project_title": "Relationships",
-        "key_main": "entities",
-        "key_project": "relationships",
-        "key_links": "links",
-        "key_styles": "styles",
-        "key_classes": "classes",
-        "key_class_map": "class_map"
-    }
-}
-
-MMDC_COMMAND = "mmdc"
-
-# === FILE HANDLING ===
-
-def load_json(filepath):
-    """Load a JSON file and return its contents."""
+# === HELPERS ===
+def ensure_graphviz_module():
+    """Ensure the 'graphviz' Python module is installed."""
     try:
-        with open(filepath, "r") as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"Error reading JSON file: {e}")
+        import graphviz
+        return graphviz
+    except ImportError:
+        print("[ERROR] 'graphviz' Python module is missing. Install with: pip install graphviz")
+    if shutil.which("dot") is None:
+        print("[ERROR] Graphviz system package is missing. Install it using your package manager.")
+    sys.exit(1)
+
+def ensure_graphviz_binary():
+    """Ensure Graphviz 'dot' binary is available."""
+    if shutil.which("dot") is None:
+        print("Missing 'dot' binary from Graphviz.")
         sys.exit(1)
 
-def write_mermaid_file(lines, filepath):
-    """Write Mermaid syntax lines to a file."""
-    try:
-        with open(filepath, "w") as f:
-            f.write("\n".join(lines))
-    except Exception as e:
-        print(f"Failed to write Mermaid file: {e}")
-        sys.exit(1)
+def load_json(path):
+    """Load and return a JSON file from path."""
+    with open(path, "r") as f:
+        return json.load(f)
 
-# === RENDERING ===
+def shape_for(type_, shape_map):
+    """Get Graphviz shape from type using shape_map."""
+    return shape_map.get(type_, "box")
 
-def render_mermaid_files(mermaid_file, svg_output, png_output, mmdc_cmd):
-    """Render Mermaid file into SVG and PNG formats (with plugins enabled)."""
-    base_cmd = [mmdc_cmd, "--enable-plugins", "-i", mermaid_file]
+def wrap_label(text, width):
+    """Wrap long text into multiple lines."""
+    return "\n".join(textwrap.wrap(text, width))
 
-    try:
-        print(f"Running: {' '.join(base_cmd + ['-o', svg_output])}")
-        result = subprocess.run(base_cmd + ["-o", svg_output], check=True, shell=True,
-                                 capture_output=True, text=True)
-        print(result.stdout)
-        print(f"Diagram saved as: {svg_output}")
+# === ERD SPECIFIC FUNCTION ===
 
-        result = subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True, shell=True,
-                                capture_output=True, text=True)
-        print(result.stdout)
-        print(f"High-quality PNG saved to: {png_output}")
-
-    except subprocess.CalledProcessError as e:
-        print(f"[ERROR] Rendering failed:")
-        print(f"Return Code: {e.returncode}")
-        print(f"Command: {' '.join(e.cmd)}")
-        print(f"Output:\n{e.stdout}")
-        print(f"Error:\n{e.stderr}")
-        sys.exit(1)
-
+def prepare_erd_data(data, config):
+    """Prepare the ERD data without generating the diagram."""
+    return data, config
 
 # === MAIN ===
 
 def main():
-    """Main routine to check dependencies and render all diagrams."""
-    if not sys.stdin.isatty():
-        print("[INFO] You're running this in IDLE or a non-terminal environment.")
-        print("If rendering fails, try running this script from a proper terminal.")
-        print()
+    """Generate ERD diagram from JSON definitions and config."""
+    ensure_graphviz_binary()
+    ensure_graphviz_module()
 
-    for diagram_name, config in DIAGRAMS.items():
-        print(f"\nProcessing: {diagram_name}")
+    print(f"\nGenerating ERD diagram...")
 
-        site_data = load_json(config["json"])
+    # Load data and config files
+    data = load_json(ERD_JSON)
+    config = load_json(ERD_CONFIG)
 
-        mermaid_lines = ["erDiagram", ""]
-        if "entities" in site_data:
-            for entity, attributes in site_data["entities"].items():
-                mermaid_lines.append(f"    {entity} {{")
-                for attribute in attributes:
-                    mermaid_lines.append(f"        {attribute}")
-                mermaid_lines.append("    }")
+    # Load settings from the config file
+    defaults = config.get("defaults", {})
+    edge_style = config.get("edge_defaults", {})
+    shape_map = config.get("shape_map", {})
+    rankdir = defaults.get("rankdir", "LR")
+    splines = defaults.get("splines", "false")
 
-        if "relationships" in site_data:
-            for relationship in site_data["relationships"]:
-                source = relationship.get("from")
-                target = relationship.get("to")
-                rel_type = relationship.get("type", "many-to-many")
-                mermaid_lines.append(f"  {source} ||--o{{ {target} : {rel_type} }}")
+    dot = Digraph(name="TAERDiagram", format="png", engine="dot")
+    dot.attr(rankdir=rankdir, splines=splines)
 
-        write_mermaid_file(mermaid_lines, config["mmd"])
+    nodes = data.get("entities", {})
+    relationships = data.get("relationships", [])
 
-        try:
-            render_mermaid_files(config["mmd"], config["svg"], config["png"], MMDC_COMMAND)
-        except RuntimeError:
-            print("\n[ERROR] Failed to generate Mermaid diagram.")
-            sys.exit(1)
+    # Loop to generate entity nodes for the ERD diagram
+    for entity, attributes in nodes.items():
+        label = f"{entity}\n" + "\n".join(attributes)
+        shape = shape_map.get("entity", "rect")
+        fillcolor = defaults.get("entity_fillcolor", "#d4e6f1")
+        dot.node(entity, label=label, shape=shape, style="filled", fillcolor=fillcolor)
+
+    # Loop to generate relationships for the ERD diagram
+    for relationship in relationships:
+        source = relationship.get("from")
+        target = relationship.get("to")
+        rel_type = relationship.get("type", "many-to-many")
+        edge_color = edge_style.get("color", "#000000")
+        fontname = edge_style.get("fontname", "Arial")
+        fontsize = edge_style.get("fontsize", "12")
+        dot.edge(source, target, label=rel_type, color=edge_color, fontname=fontname, fontsize=fontsize, style="solid")
+
+    # Render ERD diagram to PNG
+    dot.render(OUTPUT_PNG, cleanup=True)
+    print(f"ERD PNG saved to: {OUTPUT_PNG}.png")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,11 @@
+{
+  "entities": {
+    "Thematic Analysis": ["ID", "Extract", "Fact", "Factor", "Note"],
+    "Glossary": ["Factor", "Group", "Sub Group"],
+    "Search Tool": ["Factor", "Category", "Sub Category", "Extract"]
+  },
+  "relationships": [
+    { "from": "Thematic Analysis.Factor", "to": "Glossary.Factor", "type": "one-to-many" },
+    { "from": "Thematic Analysis.Extract", "to": "Search Tool.Extract", "type": "one-to-many" }
+  ]
+}

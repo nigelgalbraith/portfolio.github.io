@@ -19,12 +19,10 @@
     "ranksep": "1",
     "pad": "0.5",
     "dpi": "96",
-    "splines": "true"
+    "splines": "false"
   },
   "shape_map": {
-    "terminator": "ellipse",
-    "decision": "diamond",
-    "box": "rect"
+    "entity": "rect"
   },
   "edge_defaults": {
     "fontname": "Arial",
