@@ -9,10 +9,10 @@ from pathlib import Path
 
 DIAGRAMS = {
     "siteHTML_structure": {
-        "json": "diagrams/SiteHTML-Structure.json",
-        "mmd": "diagrams/SiteHTML-Structure.mmd",
-        "svg": "diagrams/SiteHTML-Structure.svg",
-        "png": "projects/images/main/original/SiteHTML-Structure.png",
+        "json": "../diagrams/SiteHTMLStructure.json",
+        "mmd": "../diagrams/SiteHTMLStructure.mmd",
+        "svg": "../diagrams/SiteHTMLStructure.svg",
+        "png": "../projects/images/main/original/SiteHTMLStructure.png",
         "main_label": "SitePages",
         "project_label": "ProjectPages",
         "main_title": "Main Pages",
@@ -25,10 +25,10 @@ DIAGRAMS = {
         "key_class_map": "class_map"
     },
     "SiteJS_main": {
-        "json": "diagrams/SiteJS-MainPages.json",
-        "mmd": "diagrams/SiteJS-MainPages.mmd",
-        "svg": "diagrams/SiteJS-MainPages.svg",
-        "png": "projects/images/main/original/SiteJS-MainPages.png",
+        "json": "../diagrams/SiteJSMainPages.json",
+        "mmd": "../diagrams/SiteJSMainPages.mmd",
+        "svg": "../diagrams/SiteJSMainPages.svg",
+        "png": "../projects/images/main/original/SiteJSMainPages.png",
         "main_label": "HTMLPages",
         "project_label": "JavaScript",
         "third_label": "JSONData",
@@ -44,10 +44,10 @@ DIAGRAMS = {
         "key_class_map": "class_map"
     },
     "SiteJS_projects": {
-        "json": "diagrams/SiteJS-ProjectPages.json",
-        "mmd": "diagrams/SiteJS-ProjectPages.mmd",
-        "svg": "diagrams/SiteJS-ProjectPages.svg",
-        "png": "projects/images/main/original/SiteJS-ProjectPages.png",
+        "json": "../diagrams/SiteJSProjectPages.json",
+        "mmd": "../diagrams/SiteJSProjectPages.mmd",
+        "svg": "../diagrams/SiteJSProjectPages.svg",
+        "png": "../projects/images/main/original/SiteJSProjectPages.png",
         "main_label": "HTMLPages",
         "project_label": "JavaScript",
         "main_title": "HTML Pages",
@@ -64,7 +64,7 @@ DIAGRAMS = {
     }
 }
 
-CONFIG_FILE = "diagrams/site-mermaid-config.json"
+CONFIG_FILE = "../diagrams/siteMermaidConfig.json"
 MMDC_COMMAND = "mmdc"
 
 # === FILE HANDLING ===
@@ -92,15 +92,25 @@ def write_mermaid_file(lines, filepath):
 def render_mermaid_files(mermaid_file, svg_output, png_output, mmdc_cmd, config_path=None):
     """Render Mermaid file into SVG and PNG formats."""
     base_cmd = [mmdc_cmd, "-i", mermaid_file]
+    
+    # Use shell=True on Windows to handle path execution
     if config_path:
         base_cmd.extend(["-c", config_path])
+
     try:
-        subprocess.run(base_cmd + ["-o", svg_output], check=True)
-        print(f"Diagram saved as: {svg_output}")
-        subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True)
-        print(f"High-quality PNG saved to: {png_output}")
-    except Exception:
-        raise RuntimeError("Rendering failed")
+        if sys.platform == "win32":  # Windows
+            subprocess.run(base_cmd + ["-o", svg_output], check=True, shell=True)
+            print(f"Diagram saved as: {svg_output}")
+            subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True, shell=True)
+            print(f"High-quality PNG saved to: {png_output}")
+        else:  # Linux or Mac
+            subprocess.run(base_cmd + ["-o", svg_output], check=True)
+            print(f"Diagram saved as: {svg_output}")
+            subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True)
+            print(f"High-quality PNG saved to: {png_output}")
+    except Exception as e:
+        print(f"[ERROR] Rendering failed: {e}")
+        sys.exit(1)
 
 # === MAIN ===
 
@@ -145,11 +155,22 @@ def main():
             render_mermaid_files(config["mmd"], config["svg"], config["png"], MMDC_COMMAND, config_path=CONFIG_FILE)
         except RuntimeError:
             print("\n[ERROR] Failed to generate Mermaid diagram.")
-            print("Make sure the following are installed and in your system PATH:\n")
+            print("Make sure the following are installed and available in your system PATH:\n")
             print("  - Node.js (https://nodejs.org/)")
             print("  - Mermaid CLI (mmdc)")
+
             print("\nTo install Mermaid CLI globally:")
-            print("  npm install -g @mermaid-js/mermaid-cli")
+            print("  npm install -g @mermaid-js/mermaid-cli --verbose")
+
+            print("\nIMPORTANT: You must run this script from a terminal or command line.")
+            print("Avoid running from IDLE, Jupyter, or GUI-based Python environments.")
+            print("Use Command Prompt or PowerShell instead on Windows.")
+
+            print("\nExample (Windows):")
+            print("  python generate_site_diagrams.py")
+
+            print("\nExample (Mac/Linux):")
+            print("  python3 generate_site_diagrams.py")
 
             print("\nOn Debian/Ubuntu:")
             print("  sudo apt update && sudo apt install nodejs npm")
@@ -157,6 +178,7 @@ def main():
             print("  npm install @mermaid-js/mermaid-cli --prefix ~/.local")
             print("  echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc")
             print("  source ~/.bashrc")
+
             print("\nThen re-run this script from a terminal.")
             sys.exit(1)
 

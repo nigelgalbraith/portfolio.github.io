@@ -1,0 +1,35 @@
+{
+  "nodes": {
+    "Start": { "label": "Start", "shape": "terminator" },
+    "ReadJSON": { "label": "Read exported JSON files" },
+    "CleanText": { "label": "Clean & split text fields" },
+    "GroupData": { "label": "Group & wrap structured fields" },
+    "TransformObjects": { "label": "Transform to numbered objects (if needed)" },
+    "WriteCleanJSON": { "label": "Write cleaned JSON files" },
+    "WrapJS": { "label": "Wrap JSON in JavaScript const variables" },
+    "End": { "label": "End", "shape": "terminator" }
+  },
+  "connections": [
+    ["Start", "ReadJSON"],
+    ["ReadJSON", "CleanText"],
+    ["CleanText", "GroupData"],
+    ["GroupData", "TransformObjects"],
+    ["TransformObjects", "WriteCleanJSON"],
+    ["WriteCleanJSON", "WrapJS"],
+    ["WrapJS", "End"]
+  ],
+  "classes": {
+    "startend": "fillcolor:#007bff,style:filled,shape:ellipse,fontcolor:white", 
+    "action": "fillcolor:#f0f8ff,style:filled,shape:rect,fontcolor:black"       
+  },
+  "class_map": {
+    "Start": "startend",
+    "End": "startend",
+    "ReadJSON": "action",
+    "CleanText": "action",
+    "GroupData": "action",
+    "TransformObjects": "action",
+    "WriteCleanJSON": "action",
+    "WrapJS": "action"
+  }
+}

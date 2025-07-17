@@ -1,0 +1,12 @@
+{
+  "entities": {
+    "User": ["user_id", "name", "email"],
+    "Post": ["post_id", "user_id", "content"],
+    "Comment": ["comment_id", "post_id", "user_id", "content"]
+  },
+  "relationships": [
+    { "from": "User", "to": "Post", "type": "one-to-many" },
+    { "from": "Post", "to": "Comment", "type": "one-to-many" },
+    { "from": "User", "to": "Comment", "type": "one-to-many" }
+  ]
+}

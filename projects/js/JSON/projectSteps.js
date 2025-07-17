@@ -47,11 +47,23 @@ thematic: [
   },
   {
     title: "Step 7. Export for Web Use",
-    img: "TAPythonWebUpdate.png",
+    img: "TAWebUpdateFlow.png",
     alt: "Exporting Thematic Analysis",
     text: "Once everything looks good, save the workbook as 'Thematic-Analysis-Complete.xlsm'. Then run the 'Python-Update-Webpage.py' script from the Python-Import folder. This script turns your structured Excel data into JSON and HTML, which power the interactive web pages for analysis and search."
   },
   {
+  title: "Excel to JSON Conversion",
+  img: "TAImportFlow.png",
+  alt: "Excel Data Import Output",
+  text: "This utility extracts data from structured Excel sheets and exports it to JSON format. Using a configurable dictionary, it maps sheet names and starting rows to output paths. This ensures consistent data formatting across the Tool Data, Thematic Analysis, and Risk Matrix sources."
+  },
+  {
+    title: "Automated Web Update Tool",
+    img: "TACleanFlow.png",
+    alt: "Python Web Sync",
+    text: "This script runs the entire import and cleaning workflow, then copies the final JSON files into the relevant web project folders. It ensures the visualisation apps always reflect the latest data, with minimal manual effort required."
+  },
+    {
     title: "Step 8. Use the Search Tool Webpage",
     img: "WebSearchTool.png",
     alt: "Search Tool Output",
@@ -104,10 +116,22 @@ thematic: [
     text: "Start by entering your quiz content into the Excel workbook. Each row includes a question, multiple choice answers, the correct answer, and a short explanation. This layout gives you flexibility to define your own topics and maintain consistent formatting across all quizzes."
   },
   {
-    title: "Step 2: Generate the Webpage Content",
-    img: "quiz-updateFlow.png",
+    title: "Step 2: Quiz: Update the Webpage Content",
+    img: "quizWebUpdateFlow.png",
     alt: "Quiz Python Program Flow Chart",
-    text: "Once your spreadsheet is ready, run the Python script named 'Python-Update-Webpage.py' from the Python-Import folder. This script processes the Excel file and generates HTML and JSON files that drive the interactive quiz in the browser."
+    text: "Once your spreadsheet is finalised, run the 'Python-Update-Webpage.py' script from the Python-Import folder. This script updates the quiz content by extracting data from the Excel workbook, formatting it, and saving new HTML and JSON files used by the quiz interface."
+  },
+  {
+    title: "Excel to Quiz JSON Import",
+    img: "QuizImportFlow.png",
+    alt: "Quiz Excel Import",
+    text: "This stage reads the structured Excel file and combines all the module sheets into a single JSON file. Each sheet's questions, answers, and metadata are converted to structured records. This ensures all quiz content is accurately captured before it's cleaned or displayed."
+  },
+  {
+    title: "Quiz Data Cleaning and Script Injection",
+    img: "QuizCleanFlow.png",
+    alt: "Quiz Cleaning and Injection",
+    text: "Once the raw JSON is created, this stage cleans and restructures the data. It splits fields like 'Multiple Answers', groups them by module, and wraps the result in a JavaScript variable. This output is injected into the quiz interface, ready for live use."
   },
   {
     title: "Step 3: Launch the Quiz Selector",
@@ -138,19 +162,19 @@ thematic: [
     {
     title: "HTML Architecture Plan",
     text: "I began by mapping out the HTML structure of the site — deciding on core pages (like About, Resume, Projects), and how they would be linked together. This gave me a clear navigation flow and helped identify which project pages would sit underneath the main Projects page. Planning this first made it easier to keep internal linking and layout consistent.",
-    img: "SiteHTML-Structure.png",
+    img: "SiteHTMLStructure.png",
     alt: "Diagram showing how the main HTML pages and project subpages are connected"
     },
     {
       title: "JavaScript Architecture (Main Pages)",
       text: "To keep things modular, I mapped out which JavaScript files are loaded by each HTML page. For example, the Resume page loads `resumeLoader.js` and `skillsLoader.js`, which in turn pull in data like `resumeData.js` and `skills.json`. Each file is focused on a single job, making the system easy to maintain.",
-      img: "SiteJS-MainPages.png",
+      img: "SiteJSMainPages.png",
       alt: "Diagram showing JavaScript modules and data linked to the Home and Resume pages"
     },
     {
       title: "JavaScript Architecture (Project Pages)",
       text: "The Projects page has its own set of modular JavaScript files, such as `projectListLoader.js`, `carousel.js`, and `embedSketchfab.js`. Each of these loads specific data (like project steps or Sketchfab models) only when needed. This structure ensures better performance and easier updates as more features are added.",
-      img: "SiteJS-ProjectPages.png",
+      img: "SiteJSProjectPages.png",
       alt: "Diagram showing JavaScript loaders and JSON data modules for the Projects page"
     }
   ]
