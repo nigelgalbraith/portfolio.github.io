@@ -87,13 +87,47 @@ def write_mermaid_file(lines, filepath):
         print(f"Failed to write Mermaid file: {e}")
         sys.exit(1)
 
+# === ERROR HANDLING ===
+
+def print_error_message(e):
+    """Print full error message with installation and troubleshooting instructions."""
+    print("\n[ERROR] Failed to generate Mermaid diagram.")
+    print("Make sure the following are installed and available in your system PATH:\n")
+    print("  - Node.js (https://nodejs.org/)")
+    print("  - Mermaid CLI (mmdc)")
+
+    print("\nTo install Mermaid CLI globally:")
+    print("  npm install -g @mermaid-js/mermaid-cli --verbose")
+
+    print("\nIMPORTANT: You can run this script from IDLE, Command Prompt, or PowerShell on Windows.")
+    print("If you face issues in IDLE, try running it from a **Command Prompt** or **PowerShell** terminal.")
+
+    print("\nExample (Windows):")
+    print("  python generate_site_diagrams.py")
+
+    print("\nExample (Mac/Linux):")
+    print("  python3 generate_site_diagrams.py")
+
+    print("\nOn Debian/Ubuntu:")
+    print("  sudo apt update && sudo apt install nodejs npm")
+    print("  mkdir -p ~/.local/bin")
+    print("  npm install @mermaid-js/mermaid-cli --prefix ~/.local")
+    print("  echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc")
+    print("  source ~/.bashrc")
+
+    print("\nThen re-run this script from a terminal or IDLE.")
+
+    # Print the specific error message
+    print(f"\nError details: {e}")
+
+    sys.exit(1)
+
 # === RENDERING ===
 
 def render_mermaid_files(mermaid_file, svg_output, png_output, mmdc_cmd, config_path=None):
     """Render Mermaid file into SVG and PNG formats."""
     base_cmd = [mmdc_cmd, "-i", mermaid_file]
     
-    # Use shell=True on Windows to handle path execution
     if config_path:
         base_cmd.extend(["-c", config_path])
 
@@ -109,8 +143,7 @@ def render_mermaid_files(mermaid_file, svg_output, png_output, mmdc_cmd, config_
             subprocess.run(base_cmd + ["-o", png_output, "--scale", "4"], check=True)
             print(f"High-quality PNG saved to: {png_output}")
     except Exception as e:
-        print(f"[ERROR] Rendering failed: {e}")
-        sys.exit(1)
+        print_error_message(e)
 
 # === MAIN ===
 
@@ -153,33 +186,8 @@ def main():
 
         try:
             render_mermaid_files(config["mmd"], config["svg"], config["png"], MMDC_COMMAND, config_path=CONFIG_FILE)
-        except RuntimeError:
-            print("\n[ERROR] Failed to generate Mermaid diagram.")
-            print("Make sure the following are installed and available in your system PATH:\n")
-            print("  - Node.js (https://nodejs.org/)")
-            print("  - Mermaid CLI (mmdc)")
-
-            print("\nTo install Mermaid CLI globally:")
-            print("  npm install -g @mermaid-js/mermaid-cli --verbose")
-
-            print("\nIMPORTANT: You can run this script from IDLE, Command Prompt, or PowerShell on Windows.")
-            print("If you face issues in IDLE, try running it from a **Command Prompt** or **PowerShell** terminal.")
-
-            print("\nExample (Windows):")
-            print("  python generate_site_diagrams.py")
-
-            print("\nExample (Mac/Linux):")
-            print("  python3 generate_site_diagrams.py")
-
-            print("\nOn Debian/Ubuntu:")
-            print("  sudo apt update && sudo apt install nodejs npm")
-            print("  mkdir -p ~/.local/bin")
-            print("  npm install @mermaid-js/mermaid-cli --prefix ~/.local")
-            print("  echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc")
-            print("  source ~/.bashrc")
-
-            print("\nThen re-run this script from a terminal or IDLE.")
-            sys.exit(1)
+        except Exception as e:
+            print_error_message(e)
 
 if __name__ == "__main__":
     main()

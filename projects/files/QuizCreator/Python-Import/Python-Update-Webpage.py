@@ -26,9 +26,15 @@ def run_script(script_name):
             print(f"{python_cmd} not found, trying next...")
         except subprocess.CalledProcessError as e:
             print(f"Script {script_name} failed with {python_cmd}: {e}")
+            print(f"Neither 'python' nor 'python3' could run {script_name}")
+            print("You may need run it in a terminal")
+            print("You may need to create environment to run this script.")
+            print("To create a virtual environment, run the following command:")
+            print("  python3 -m venv venv")
+            print("Then, activate it by running:")
+            print("  source venv/bin/activate  # For Linux/macOS")
+            print("  venv\\Scripts\\activate  # For Windows")
             exit(1)
-    print(f"Neither 'python' nor 'python3' could run {script_name}")
-    exit(1)
 
 
 def copy_file(source, destination_dir):
