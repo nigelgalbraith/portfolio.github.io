@@ -58,7 +58,7 @@ thematic: [
     text: "This utility extracts data from structured Excel sheets and exports it to JSON format. Using a configurable dictionary, it maps sheet names and starting rows to output paths. This ensures consistent data formatting across the Tool Data, Thematic Analysis, and Risk Matrix sources."
   },
   {
-    title: "Data Cleaning & Sync Script",
+    title: "Data Cleaning",
     img: "TACleanFlow.png",
     alt: "Python Clean Flow",
     text: "This Python script loads raw thematic data from multiple JSON files, cleans unwanted characters, restructures nested fields, and groups related records together. It then saves the cleaned output in both raw and JavaScript-ready formats."
