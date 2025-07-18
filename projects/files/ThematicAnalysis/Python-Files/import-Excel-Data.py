@@ -1,46 +1,45 @@
+# 01/09/2024
+# Nigel Galbraith
+# ncg33@arastudent.ac.nz
+
+# Convert Thematic Analysis Excel to separate JSON files
+
 import subprocess
-import pandas as pd
 import sys
 import os
+import json
 
 # Constants
 EXCEL_FILE = "../Thematic-Analysis-Complete.xlsm"
 ORIENT = "records"
 OUTPUT_FOLDER = "json_files"
 
-# Sheet config: sheet_name -> config dict
+REQUIRED_PACKAGES = ["pandas", "openpyxl"]
+
 SHEETS_TO_EXPORT = {
-    "Tool Data": {
-        "filename": "tool.json",
-        "start_row": 4
-    },
-    "Thematic Analysis": {
-        "filename": "thematic_analysis.json",
-        "start_row": 8
-    },
-    "Risk Matrix": {
-        "filename": "risk_matrix.json",
-        "start_row": 3
-    },
-}
+                    "Tool Data": {
+                        "filename": "tool.json",
+                        "start_row": 4
+                    },
+                    "Thematic Analysis": {
+                        "filename": "thematic_analysis.json",
+                        "start_row": 8
+                    },
+                    "Risk Matrix": {
+                        "filename": "risk_matrix.json",
+                        "start_row": 3
+                    },
+                }
 
-def install_message():
-    """Function to display a message about missing dependencies."""
-    print("Required libraries 'pandas' and 'openpyxl' are not installed.")
-    print("To install them, use one of the following options:")
-    print("1. On a Debian-based system (e.g., Ubuntu, Debian):")
-    print("   sudo apt install python3-pandas python3-openpyxl")
-    print("2. If you wish to use pip in a virtual environment:")
-    print("   python3 -m venv myenv")
-    print("   source myenv/bin/activate")
-    print("   pip install pandas openpyxl")
+def check_package(package_name):
+    """Check if a single package is installed, and print a simple error if not."""
+    try:
+        __import__(package_name)
+    except ImportError:
+        print(f"Package '{package_name}' not installed.")
+        exit(1)
 
-def install_module(module_name):
-    """Install a Python module using pip."""
-    print(f"Installing {module_name}...")
-    subprocess.run([sys.executable, "-m", "pip", "install", module_name], check=True)
-
-def excel_to_json(excel_file, sheet_name, start_row, orient, output_json_file):
+def excel_sheet_to_json(excel_file, sheet_name, start_row, orient, output_json_file):
     """Convert a sheet in an Excel file to a JSON file."""
     try:
         df = pd.read_excel(excel_file, sheet_name=sheet_name, skiprows=range(start_row - 1))
@@ -53,19 +52,18 @@ def excel_to_json(excel_file, sheet_name, start_row, orient, output_json_file):
         print(f"Error converting {sheet_name}: {e}")
 
 if __name__ == "__main__":
-    try:
-        import pandas as pd
-    except ImportError:
-        install_message()
-        exit(1)  # Exit if dependencies are not installed
+    print("=== Thematic Analysis Excel to JSON Tool ===\n")
+    # Check all required packages
+    for package in REQUIRED_PACKAGES:
+        check_package(package)
 
-    try:
-        import openpyxl
-    except ImportError:
-        install_message()
-        exit(1)  # Exit if dependencies are not installed
+    # Safe to import now
+    import pandas as pd
+    import openpyxl
 
-    # Process each sheet in the configuration
+    # Process each sheet
     for sheet_name, settings in SHEETS_TO_EXPORT.items():
         output_path = os.path.join(OUTPUT_FOLDER, settings["filename"])
-        excel_to_json(EXCEL_FILE, sheet_name, settings["start_row"], ORIENT, output_path)
+        excel_sheet_to_json(EXCEL_FILE, sheet_name, settings["start_row"], ORIENT, output_path)
+
+    print("\n=== Conversion Complete ===")

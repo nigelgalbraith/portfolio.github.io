@@ -52,17 +52,17 @@ thematic: [
     text: "Once everything looks good, save the workbook as 'Thematic-Analysis-Complete.xlsm'. Then run the 'Python-Update-Webpage.py' script from the Python-Import folder. This script turns your structured Excel data into JSON and HTML, which power the interactive web pages for analysis and search."
   },
   {
-  title: "Excel to JSON Conversion",
-  img: "TAImportFlow.png",
-  alt: "Excel Data Import Output",
-  text: "This utility extracts data from structured Excel sheets and exports it to JSON format. Using a configurable dictionary, it maps sheet names and starting rows to output paths. This ensures consistent data formatting across the Tool Data, Thematic Analysis, and Risk Matrix sources."
+    title: "Excel to JSON Conversion",
+    img: "TAImportFlow.png",
+    alt: "Excel Data Import Output",
+    text: "This utility extracts data from structured Excel sheets and exports it to JSON format. Using a configurable dictionary, it maps sheet names and starting rows to output paths. This ensures consistent data formatting across the Tool Data, Thematic Analysis, and Risk Matrix sources."
   },
   {
-    title: "Automated Web Update Tool",
+    title: "Data Cleaning & Sync Script",
     img: "TACleanFlow.png",
-    alt: "Python Web Sync",
-    text: "This script runs the entire import and cleaning workflow, then copies the final JSON files into the relevant web project folders. It ensures the visualisation apps always reflect the latest data, with minimal manual effort required."
-  },
+    alt: "Python Clean Flow",
+    text: "This Python script loads raw thematic data from multiple JSON files, cleans unwanted characters, restructures nested fields, and groups related records together. It then saves the cleaned output in both raw and JavaScript-ready formats."
+    },
     {
     title: "Step 8. Use the Search Tool Webpage",
     img: "WebSearchTool.png",

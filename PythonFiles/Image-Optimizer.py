@@ -1,19 +1,12 @@
-# ===========================
 # IMPORTS
-# ===========================
 
 import os
 import sys
 import subprocess
-import platform
-from PIL import Image
 from zipfile import ZipFile
 from datetime import datetime
-from bs4 import BeautifulSoup
 
-# ===========================
 # CONSTANTS
-# ===========================
 
 IMAGE_PROFILES = {
     "main": {
@@ -59,40 +52,28 @@ ASSET_SETS = {
             "output_dir": "../images/icons/optimized",
             "width": 100,
             "quality": 85
-        },
+        }
     }
 }
 
-REQUIRED_PACKAGES = [
-    ("Pillow", "PIL"),
-    ("beautifulsoup4", "bs4")
-]
+REQUIRED_PACKAGES = ["PIL", "bs4"]
 
-EXPECTED_PLATFORMS = ["debian", "ubuntu"]
 
-# ===========================
-# FUNCTIONS
-# ===========================
-
-def install_package(pip_name, import_name):
-    """Install a package if it's not already available."""
+def check_package(package_name):
+    """Check if a package is installed, else print error and exit."""
     try:
-        __import__(import_name)
+        __import__(package_name)
     except ImportError:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
+        print(f"Package '{package_name}' not installed.")
+        sys.exit(1)
 
-def check_platform(expected_platforms):
-    """Warn if platform is not in expected_platforms."""
-    if "linux" in platform.system().lower():
-        distro_info = subprocess.getoutput("cat /etc/os-release")
-        if not any(p in distro_info for p in expected_platforms):
-            print("Warning: Unexpected Linux distro")
-    else:
-        print("Warning: Non-Linux system")
-
+        
 def ensure_directory(path):
-    """Create a directory if it doesn't exist."""
-    os.makedirs(path, exist_ok=True)
+    """Create a directory if it doesn't exist, and print status."""
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print(f"Created directory: {path}")
+        
 
 def process_all_images(input_dir, output_base, sizes):
     """Build resize tasks for each image profile."""
@@ -109,6 +90,7 @@ def process_all_images(input_dir, output_base, sizes):
                 tasks.append((input_path, output_path, width))
     return tasks
 
+
 def process_assets(input_dir, output_dir, target_width, quality):
     """Build resize tasks for asset images (thumbs/icons)."""
     tasks = []
@@ -122,9 +104,11 @@ def process_assets(input_dir, output_dir, target_width, quality):
                       target_width, quality))
     return tasks
 
+
 def resize_image(input_path, output_path, target_width, quality):
     """Resize and save an image at target width and quality."""
     try:
+        from PIL import Image
         with Image.open(input_path) as img:
             orig_width, orig_height = img.size
             scale = target_width / orig_width
@@ -136,32 +120,38 @@ def resize_image(input_path, output_path, target_width, quality):
     except Exception as e:
         print(f"Error processing {input_path}: {e}")
 
-# ===========================
-# MAIN
-# ===========================
 
+# MAIN
 def main():
     """Run all setup, processing, and resizing tasks."""
-    for pip_name, import_name in REQUIRED_PACKAGES:
-        install_package(pip_name, import_name)
 
-    check_platform(EXPECTED_PLATFORMS)
+    # Ensure required packages are available
+    for package in REQUIRED_PACKAGES:
+        check_package(package)
 
+    # Import modules after confirming packages are installed
+    from PIL import Image
+    from bs4 import BeautifulSoup
+
+    # Create output directories for responsive image profiles
     for profile in IMAGE_PROFILES.values():
         for device, versions in profile["sizes"].items():
             for version_type in versions:
                 ensure_directory(os.path.join(profile["output_base"], device, version_type))
 
+    # Create input/output directories for thumbnails and icons
     for asset_type in ASSET_SETS.values():
         for config in asset_type.values():
             ensure_directory(config["input_dir"])
             ensure_directory(config["output_dir"])
 
+    # Resize and save responsive images for each profile
     for label, config in IMAGE_PROFILES.items():
         print(f"Processing profile: {label}")
         for task in process_all_images(config["input_dir"], config["output_base"], config["sizes"]):
             resize_image(*task, config["quality"])
 
+    # Resize and save assets (thumbs/icons) for each asset type
     for asset_type, sets in ASSET_SETS.items():
         for label, config in sets.items():
             print(f"Processing {asset_type} for: {label}")
@@ -169,6 +159,7 @@ def main():
                 resize_image(*task)
 
     print("Done. Responsive images and asset images generated.")
+
 
 if __name__ == "__main__":
     main()

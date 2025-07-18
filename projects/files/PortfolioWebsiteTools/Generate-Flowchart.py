@@ -1,7 +1,12 @@
-import json, sys, shutil, textwrap
+# IMPORTS
+
+import json
+import sys
+import shutil
+import textwrap
 from graphviz import Digraph
 
-# === FLOWCHART CONFIG ===
+# CONSTANTS
 
 FLOWCHARTS = {
     "TAWebUpdate": {
@@ -36,87 +41,77 @@ FLOWCHARTS = {
     }
 }
 
-# === HELPERS ===
+CHECK_CMD = "dot"
+CHECK_DES = "Graphviz binary"
 
-def ensure_graphviz_module():
-    """Ensure the 'graphviz' Python module is installed."""
+def check_command(cmd, description=None):
+    """Check if a command is available in the system PATH."""
+    if description:
+        print(f"[INFO] Checking for {description} ({cmd})...")
+
     try:
-        import graphviz
-        return graphviz
+        __import__("graphviz")
     except ImportError:
-        print("[ERROR] 'graphviz' Python module is missing. Install with: pip install graphviz")
-    if shutil.which("dot") is None:
-        print("[ERROR] Graphviz system package is missing. Install it using your package manager.")
-    sys.exit(1)
-
-def ensure_graphviz_binary():
-    """Ensure Graphviz 'dot' binary is available."""
-    if shutil.which("dot") is None:
-        print("Missing 'dot' binary from Graphviz.")
+        print("[ERROR] Missing Python module: graphviz. Install with 'pip install graphviz'")
         sys.exit(1)
 
+    if shutil.which(cmd) is None:
+        print(f"[ERROR] Required system command '{cmd}' not found.")
+        print("Please install it or ensure it is in your system PATH.")
+        sys.exit(1)
+    else:
+        print(f"[OK] Command '{cmd}' found.")
+
 def load_json(path):
-    """Load and return a JSON file from path."""
+    """Load and return JSON content from a file path."""
+    print(f"[INFO] Loading JSON: {path}")
     with open(path, "r") as f:
         return json.load(f)
 
 def shape_for(type_, shape_map):
-    """Get Graphviz shape from type using shape_map."""
+    """Return the shape for a given node type."""
     return shape_map.get(type_, "box")
 
 def wrap_label(text, width):
-    """Wrap long text into multiple lines."""
+    """Wrap a label text to the specified width."""
     return "\n".join(textwrap.wrap(text, width))
 
 def apply_class_styles(dot, class_definitions, class_map, node_style):
-    """Apply custom styles to nodes using class definitions."""
+    """Apply class-based styles to nodes using Graphviz attributes."""
     for node_id, class_name in class_map.items():
         if class_name in class_definitions:
             style = class_definitions[class_name]
             style_dict = dict(pair.split(":") for pair in style.split(","))
             dot.node(node_id, _attributes={**node_style, **style_dict})
 
-
-# === MAIN ===
+# MAIN
 
 def main():
-    """Generate flowcharts from JSON definitions and config."""
-    ensure_graphviz_binary()
-    ensure_graphviz_module()
+    """Generate flowcharts from JSON definitions and style config."""
+    check_command(CHECK_CMD, CHECK_DES)
 
     for name, paths in FLOWCHARTS.items():
-        print(f"\nGenerating flowchart: {name}")
+        print(f"\n[INFO] Generating flowchart: {name}")
         data = load_json(paths["json"])
         config = load_json(paths["config"])
 
         defaults = config.get("defaults", {})
+        node_style = config.get("node_defaults", {})
         edge_style = config.get("edge_defaults", {})
         shape_map = config.get("shape_map", {})
-        rankdir = defaults.get("rankdir", "LR")
+
         label_wrap_width = int(defaults.get("labelwrap", 28))
 
-        node_style = {
-            "fontname": defaults.get("fontname", "Arial"),
-            "fontsize": defaults.get("fontsize", "16"),
-            "penwidth": defaults.get("penwidth", "2"),
-            "style": defaults.get("style", "rounded,filled"),
-            "fontcolor": defaults.get("fontcolor", "black"),
-            "color": defaults.get("color", "black"),
-            "fillcolor": defaults.get("fillcolor", "#f9f9f9"),
-            "width": defaults.get("width", "6"),
-            "height": defaults.get("height", "5"),
-            "margin": defaults.get("nodemargin", "0.5")
-        }
-
         dot = Digraph(name=name, format="png", engine="dot")
-        dot.attr(rankdir=rankdir)
-        dot.attr(nodesep=defaults.get("nodesep", "1.0"))
-        dot.attr(ranksep=defaults.get("ranksep", "1.0"))
-        dot.attr(margin=defaults.get("margin", "0.5"))
-        dot.attr(arrowsize=defaults.get("arrowsize", "1.0"))
-        dot.attr(nodesep=defaults.get("nodesep", "1.0"),
-                 ranksep=defaults.get("ranksep", "1.0"),
-                 margin=defaults.get("margin", "1.0,1.0"))
+        dot.attr(rankdir=defaults["rankdir"])
+        dot.attr(nodesep=defaults["nodesep"])
+        dot.attr(ranksep=defaults["ranksep"])
+        dot.attr(margin=defaults["margin"])
+        dot.attr(arrowsize=defaults["arrowsize"])
+        dot.attr('graph',
+                 pad=defaults["pad"],
+                 dpi=defaults["dpi"],
+                 splines=defaults["splines"])
         dot.attr('node', shape='box', **node_style)
 
         nodes = data.get("nodes", {})
@@ -132,41 +127,31 @@ def main():
         for conn in connections:
             src, dst = conn[0], conn[1]
             label = conn[2] if len(conn) > 2 else ""
+
             edge_args = {
-                "fontname": edge_style.get("fontname", "Arial"),
-                "fontcolor": edge_style.get("fontcolor", "black"),
-                "arrowsize": defaults.get("arrowsize", "1.0")
+                k: str(v) for k, v in edge_style.items()
+                if not k.startswith("penwidth_") and not k.startswith("fontsize_")
             }
 
             if label:
-                penwidth = (
-                    edge_style.get("penwidth_yesno", edge_style.get("penwidth", "2.5"))
-                    if label.strip().lower() in ("yes", "no")
-                    else edge_style.get("penwidth", "2.5")
-                )
+                penwidth = edge_style["penwidth_yesno"] if label.strip().lower() in ("yes", "no") else edge_style["penwidth"]
                 edge_args.update({
                     "xlabel": label,
-                    "fontsize": edge_style.get("fontsize", "40"),
-                    "penwidth": edge_style.get("penwidth_alt", "5")
+                    "fontsize": edge_style["fontsize"],
+                    "penwidth": penwidth
                 })
             else:
                 edge_args.update({
-                    "fontsize": edge_style.get("fontsize_alt", "13"),
-                    "penwidth": edge_style.get("penwidth_alt", "5")
+                    "fontsize": edge_style["fontsize_alt"],
+                    "penwidth": edge_style["penwidth_alt"]
                 })
 
             dot.edge(src, dst, **edge_args)
 
-
         apply_class_styles(dot, classes, class_map, node_style)
-        dot.graph_attr.update({
-            "pad": defaults.get("pad", "0.5"),
-            "dpi": defaults.get("dpi", "96"),
-            "splines": defaults.get("splines", "ortho")
-        })
+
         dot.render(paths["png"], cleanup=True)
-        png_output_path = paths["png"] + ".png"
-        print(f"PNG saved to: {png_output_path}")
+        print(f"[SUCCESS] PNG saved to: {paths['png']}.png")
 
 if __name__ == "__main__":
     main()

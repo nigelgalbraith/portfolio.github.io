@@ -1,39 +1,39 @@
 {
   "defaults": {
-    "fontsize": "28",                     
-    "fontname": "Helvetica",               
-    "style": "rounded,filled",
-    "fontcolor": "black",
-    "color": "#007bff",                  
-    "penwidth": "2",
-    "fontweight": "bold",
-    "fillcolor": "#f0f8ff",               
-    "width": "4",
-    "height": "1.5",
     "rankdir": "LR",
-    "margin": "0.5,0.5",                 
-    "nodemargin": "0.2",
-    "labelwrap": 20,
-    "arrowsize": "1.2",
-    "nodesep": "1",                      
-    "ranksep": "1",                       
+    "nodesep": "1",
+    "ranksep": "1",
+    "margin": "0.5,0.5",
     "pad": "0.5",
     "dpi": "96",
-    "splines": "true"                     
+    "splines": "ortho",
+    "labelwrap": 20,
+    "arrowsize": "1.2"
   },
-  "shape_map": {
-    "terminator": "ellipse",              
-    "decision": "diamond",
-    "box": "rect"                         
+  "node_defaults": {
+    "fontname": "Helvetica",
+    "fontsize": "28",
+    "style": "rounded,filled",
+    "fontcolor": "black",
+    "color": "#007bff",
+    "penwidth": "2",
+    "fillcolor": "#f0f8ff",
+    "width": "4",
+    "height": "1.5",
+    "margin": "0.2"
   },
   "edge_defaults": {
-    "fontname": "Helvetica",              
-    "fontsize": "28",                     
+    "fontname": "Helvetica",
+    "fontsize": "28",
     "fontcolor": "black",
     "penwidth": "2",
-    "penwidth_alt": "2",
-    "fontsize_alt": "20",
     "penwidth_yesno": "2",
-    "fontweight": "bold"
+    "penwidth_alt": "2",
+    "fontsize_alt": "20"
+  },
+  "shape_map": {
+    "terminator": "ellipse",
+    "decision": "diamond",
+    "box": "rect"
   }
 }
