@@ -37,16 +37,16 @@ def excel_sheets_to_json(excel_file, sheet_names, start_row, orient, output_json
     try:
         combined_data = {}
 
+        # Read and convert each specified Excel sheet
         for sheet_name in sheet_names:
             print(f"Processing sheet: {sheet_name}")
             df = pd.read_excel(excel_file, sheet_name=sheet_name, skiprows=range(start_row - 1))
             combined_data[sheet_name] = df.to_dict(orient=orient)
 
+        # Write the combined data to a JSON file
         os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-
         with open(output_json_file, 'w', encoding='utf-8') as json_file:
             json.dump(combined_data, json_file, indent=4)
-
         print(f"\nCombined JSON file created at: {os.path.abspath(output_json_file)}")
         print("=== Conversion Complete ===\n")
     except FileNotFoundError:

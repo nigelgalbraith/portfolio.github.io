@@ -1,9 +1,3 @@
-# 01/09/2024
-# Nigel Galbraith
-# ncg33@arastudent.ac.nz
-
-# Convert Thematic Analysis Excel to separate JSON files
-
 import subprocess
 import sys
 import os
@@ -17,19 +11,19 @@ OUTPUT_FOLDER = "json_files"
 REQUIRED_PACKAGES = ["pandas", "openpyxl"]
 
 SHEETS_TO_EXPORT = {
-                    "Tool Data": {
-                        "filename": "tool.json",
-                        "start_row": 4
-                    },
-                    "Thematic Analysis": {
-                        "filename": "thematic_analysis.json",
-                        "start_row": 8
-                    },
-                    "Risk Matrix": {
-                        "filename": "risk_matrix.json",
-                        "start_row": 3
-                    },
-                }
+    "Tool Data": {
+        "filename": "tool.json",
+        "start_row": 4
+    },
+    "Thematic Analysis": {
+        "filename": "thematic_analysis.json",
+        "start_row": 8
+    },
+    "Risk Matrix": {
+        "filename": "risk_matrix.json",
+        "start_row": 3
+    },
+}
 
 def check_package(package_name):
     """Check if a single package is installed, and print a simple error if not."""
@@ -42,6 +36,7 @@ def check_package(package_name):
 def excel_sheet_to_json(excel_file, sheet_name, start_row, orient, output_json_file):
     """Convert a sheet in an Excel file to a JSON file."""
     try:
+        import pandas as pd
         df = pd.read_excel(excel_file, sheet_name=sheet_name, skiprows=range(start_row - 1))
         json_data = df.to_json(orient=orient)
         os.makedirs(OUTPUT_FOLDER, exist_ok=True)
@@ -51,13 +46,13 @@ def excel_sheet_to_json(excel_file, sheet_name, start_row, orient, output_json_f
     except Exception as e:
         print(f"Error converting {sheet_name}: {e}")
 
-if __name__ == "__main__":
+def main():
     print("=== Thematic Analysis Excel to JSON Tool ===\n")
     # Check all required packages
     for package in REQUIRED_PACKAGES:
         check_package(package)
 
-    # Safe to import now
+    # Safe to import after checks
     import pandas as pd
     import openpyxl
 
@@ -67,3 +62,6 @@ if __name__ == "__main__":
         excel_sheet_to_json(EXCEL_FILE, sheet_name, settings["start_row"], ORIENT, output_path)
 
     print("\n=== Conversion Complete ===")
+
+if __name__ == "__main__":
+    main()

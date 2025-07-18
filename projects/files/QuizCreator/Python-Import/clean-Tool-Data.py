@@ -50,12 +50,16 @@ def transform_field_to_list(data, fields_to_transform, separator):
     print(f"=== Transforming Fields: {fields_to_transform} ===")
     total_transformed = 0
 
+    # Loop through each specified field
     for field in fields_to_transform:
         transformed_count = 0
         for item in data:
+            # Only process strings in those fields
             if field in item and isinstance(item[field], str):
                 cleaned_field = item[field].replace('"', '').strip()
+                # Split into list and clean whitespace
                 item[field] = [x.strip() for x in cleaned_field.split(separator)]
+                # Convert numeric strings to integers
                 item[field] = [int(x) if x.isdigit() else x for x in item[field]]
                 transformed_count += 1
         print(f"Field '{field}': {transformed_count} items transformed")
@@ -69,11 +73,14 @@ def group_data_by_keys(data, group_by_keys, sub_group_by_key, sub_key_fields):
     """Group data by specified keys and include only the specified fields."""
     print(f"=== Grouping data by keys: {group_by_keys} ===")
     grouped_data = defaultdict(lambda: {sub_group_by_key: []})
+
+    # Iterate over all records and group by key tuple
     for item in data:
         group_key = tuple(item.get(key, '') for key in group_by_keys)
         entry = {field: item[field] for field in sub_key_fields}
         grouped_data[group_key][sub_group_by_key].append(entry)
 
+    # Reconstruct grouped structure for output
     result = []
     for key, value in grouped_data.items():
         entry = {k: v for k, v in zip(group_by_keys, key)}
@@ -104,14 +111,17 @@ def clean_data(input_data):
     processed_data = []
     item_count = 0
 
+    # Flatten and sanitize each item in the input data
     for items in input_data.values():
         for item in items:
             processed_item = dict(item)
             original_value = item.get(MAIN_KEY)
+            # Ensure MAIN_KEY is treated as a string (or integer if valid)
             processed_item[MAIN_KEY] = original_value if isinstance(original_value, int) else str(original_value)
             processed_data.append(processed_item)
             item_count += 1
 
+    # Convert selected fields to lists and group cleaned records
     processed_data = transform_field_to_list(processed_data, KEYS_TO_SPLIT, SEPARATOR)
     grouped_data = group_data_by_keys(processed_data, GROUP_BY_KEYS, SUB_GROUP_BY_KEY, SUB_KEY_FIELDS)
 
@@ -123,15 +133,21 @@ def clean_data(input_data):
 def main():
     print("=== JSON Cleaning Tool Started ===\n")
 
+    # Load input JSON
     data = read_json(INPUT_JSON_FILE)
     if not data:
         print("Aborting: no data loaded.")
         return
 
+    # Clean and group data
     grouped_data = clean_data(data)
+
+    # Output cleaned JSON and JS-formatted version
     write_json(grouped_data, OUTPUT_JSON_FILE)
     add_prefix_to_json(OUTPUT_JSON_FILE, OUTPUT_JS_FILE, JSON_PREFIX)
+
     print("=== JSON Cleaning Tool Finished ===")
+
 
 
 if __name__ == "__main__":
