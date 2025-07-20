@@ -1,0 +1,23 @@
+graph TD
+
+  subgraph HTMLPages [HTML Pages]
+    Index[Index.html]
+  end
+
+  subgraph JavaScript [JavaScript]
+    initSearchTool[initSearchTool.js]
+    SearchTool[SearchTool.js]
+  end
+
+  subgraph JSONData [JSON Data]
+    toolJSON[toolJSON.js]
+  end
+
+  Index --> initSearchTool
+  Index --> SearchTool
+  initSearchTool --> toolJSON
+  SearchTool --> toolJSON
+  style Index fill:#cfe2f3,stroke:#036
+  style initSearchTool fill:#fff2cc,stroke:#cc9900
+  style SearchTool fill:#e6f7ff,stroke:#005c99
+  style toolJSON fill:#f9cb9c,stroke:#783f04

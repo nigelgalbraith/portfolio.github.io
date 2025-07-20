@@ -1,4 +1,16 @@
 {
+  "meta": {
+    "main_label": "SitePages",
+    "second_label": "ProjectPages",
+    "main_title": "Main Pages",
+    "second_title": "Project Pages",
+    "key_main": "main_pages",
+    "key_second": "project_pages",
+    "key_links": "links",
+    "key_styles": "styles",
+    "key_classes": "classes",
+    "key_class_map": "class_map"
+  },
   "main_pages": {
     "Home": "index.html",
     "About": "about.html",

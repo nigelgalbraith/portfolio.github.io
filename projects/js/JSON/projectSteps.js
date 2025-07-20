@@ -52,6 +52,12 @@ thematic: [
     text: "Once everything looks good, save the workbook as 'Thematic-Analysis-Complete.xlsm'. Then run the 'Python-Update-Webpage.py' script from the Python-Import folder. This script turns your structured Excel data into JSON and HTML, which power the interactive web pages for analysis and search."
   },
   {
+    title: "Site HTML Structure Overview",
+    img: "ThematicAnalysisHTMLStructure.png",
+    alt: "Thematic Analysis HTML Page Structure",
+    text: "This diagram illustrates the overall structure of the HTML pages in the thematic analysis tool. Each page serves a specific purpose in presenting analysis results, grouped content, and detailed views. Understanding this structure helps clarify how your exported data connects to the interface."
+  },
+  {
     title: "Excel to JSON Conversion",
     img: "TAImportFlow.png",
     alt: "Excel Data Import Output",
@@ -62,8 +68,20 @@ thematic: [
     img: "TACleanFlow.png",
     alt: "Python Clean Flow",
     text: "This Python script loads raw thematic data from multiple JSON files, cleans unwanted characters, restructures nested fields, and groups related records together. It then saves the cleaned output in both raw and JavaScript-ready formats."
-    },
-    {
+  },
+  {
+    title: "JavaScript and Data Flow Structure",
+    img: "ThematicAnalysisJSPages.png",
+    alt: "Thematic Analysis JavaScript and JSON Relationships",
+    text: "Once data is exported to JSON, a set of JavaScript modules process and display it within each page. This diagram shows the relationships between the various scripts (`intGroupAnalysis.js`, `RiskMatrix.js`, etc.) and their associated data files. It helps make sense of how your thematic structure is rendered dynamically across the site."
+  },
+  {
+    title: "Search Tool JavaScript and Data Flow",
+    img: "SearchToolHTMLStructure.png",
+    alt: "Search Tool Site Map",
+    text: "This diagram illustrates the simplified structure of the Search Tool interface. It shows how the main HTML page (`Index.html`) connects to key JavaScript controllers (`initSearchTool.js`, `SearchTool.js`) and the underlying dataset (`toolJSON.js`). This clear separation makes it easier to understand the flow from page initialization to data filtering logic."
+  },
+  {
     title: "Step 8. Use the Search Tool Webpage",
     img: "WebSearchTool.png",
     alt: "Search Tool Output",
@@ -109,6 +127,12 @@ thematic: [
 
   // Step-by-step breakdown for the quiz creator project
   quiz: [
+  {
+    title: "Quiz Creator System Overview",
+    img: "QuizCreatorStructure.png",
+    alt: "Quiz Creator Site Map",
+    text: "This diagram shows the structure of the quiz system. The HTML pages load the core JavaScript modules, which in turn access a shared JSON file for all quiz data. This clear separation of structure, logic, and content allows for flexible updates and easy maintenance."
+  },
   {
     title: "Step 1: Add Custom Questions and Answers",
     img: "QuizCreatorScreenShot-Excel.png",

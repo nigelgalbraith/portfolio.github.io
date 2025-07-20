@@ -7,6 +7,7 @@
 # =======
 import json
 import sys
+import os
 import shutil
 import textwrap
 from graphviz import Digraph
@@ -15,45 +16,10 @@ from graphviz import Digraph
 # CONSTANTS
 # =========
 
-# Dictionary defining the diagrams to generate.
-# Each entry includes:
-# - The JSON definition of the diagram
-# - The PNG output path (now includes .png extension)
-# - The JSON config file for styles and layout
-FLOWCHARTS = {
-    "TAWebUpdate": {
-        "json": "../diagrams/TAWebUpdateFlow.json",
-        "png": "../projects/images/main/original/TAWebUpdateFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    },
-    "QuizUpdate": {
-        "json": "../diagrams/quizWebUpdateFlow.json",
-        "png": "../projects/images/main/original/quizWebUpdateFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    },
-    "TAImport": {
-        "json": "../diagrams/TAImportFlow.json",
-        "png": "../projects/images/main/original/TAImportFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    },
-    "TAClean": {
-        "json": "../diagrams/TACleanFlow.json",
-        "png": "../projects/images/main/original/TACleanFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    },
-    "QuizImport": {
-        "json": "../diagrams/QuizImportFlow.json",
-        "png": "../projects/images/main/original/QuizImportFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    },
-    "QuizClean": {
-        "json": "../diagrams/QuizCleanFlow.json",
-        "png": "../projects/images/main/original/QuizCleanFlow.png",
-        "config": "../diagrams/FlowConfig.json"
-    }
-}
-
-# Required external Graphviz command and description for checks
+# Folder paths and required command
+FLOWCHART_DIR = "../diagrams/flowCharts"
+CONFIG_PATH = "../diagrams/FlowConfig.json"
+OUTPUT_DIR = "../projects/images/main/original"
 CHECK_CMD = "dot"
 CHECK_DES = "Graphviz binary"
 
@@ -174,17 +140,30 @@ def add_edge_to_dot(dot, conn, edge_style):
 
 # =====
 # MAIN
-# ===== 
+# =====
+
 def main():
-    """Main routine: check requirements, load each diagram, and generate flowchart PNGs."""
+    """
+    Main routine: check requirements, load each diagram JSON from folder,
+    and generate flowchart PNGs using base filenames.
+    """
     check_command(CHECK_CMD, CHECK_DES)
 
-    for name, paths in FLOWCHARTS.items():
+    for filename in os.listdir(FLOWCHART_DIR):
+        if not filename.endswith("Flow.json"):
+            continue
+
+        # Derive paths and flow name
+        json_path = os.path.join(FLOWCHART_DIR, filename)
+        name = filename.removesuffix("Flow.json")
+        output_png = os.path.join(OUTPUT_DIR, f"{name}Flow.png")
+
+        # Load and prepare diagram
         dot, data, config, node_style, edge_style, label_wrap_width, shape_map = prepare_diagram(
-            name, paths["json"], paths["config"]
+            name, json_path, CONFIG_PATH
         )
 
-        # Load core data from JSON
+        # Load flowchart data
         nodes = data.get("nodes", {})
         connections = data.get("connections", [])
         classes = data.get("classes", {})
@@ -203,9 +182,9 @@ def main():
         # Apply class-based node styles
         apply_class_styles(dot, classes, class_map, node_style)
 
-        # Export PNG to file path (already includes .png)
-        dot.render(filename=paths["png"].removesuffix(".png"), cleanup=True)
-        print(f"[SUCCESS] PNG saved to: {paths['png']}")
+        # Export PNG to file path (strip .png from render path)
+        dot.render(filename=output_png.removesuffix(".png"), cleanup=True)
+        print(f"[SUCCESS] {filename} → {output_png}")
 
 if __name__ == "__main__":
     main()

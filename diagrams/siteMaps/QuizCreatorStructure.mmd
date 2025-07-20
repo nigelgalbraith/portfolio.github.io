@@ -1,0 +1,42 @@
+graph TD
+
+  subgraph HTMLPages [HTML Pages]
+    Index[Index.html]
+    Module[module.html]
+  end
+
+  subgraph JavaScript [JavaScript]
+    Controller[Controller.js]
+    Question[Question.js]
+    Quiz[Quiz.js]
+    InitModuleList[initModuleList.js]
+    InitQuizPage[initQuizPage.js]
+    InitResultsPage[initResultsPage.js]
+  end
+
+  subgraph JSONData [JSON Data]
+    QuizDataJSON[QuizData-JSON.js]
+  end
+
+  Index --> Module
+  Module --> Controller
+  Module --> Question
+  Module --> Quiz
+  Module --> InitModuleList
+  Module --> InitQuizPage
+  Module --> InitResultsPage
+  Controller --> QuizDataJSON
+  Question --> QuizDataJSON
+  Quiz --> QuizDataJSON
+  InitModuleList --> QuizDataJSON
+  InitQuizPage --> QuizDataJSON
+  InitResultsPage --> QuizDataJSON
+  style Index fill:#cfe2f3,stroke:#036,stroke-width:1px
+  style Module fill:#fce5cd,stroke:#a61c00
+  style Controller fill:#e6f7ff,stroke:#005c99
+  style Question fill:#e6f7ff,stroke:#005c99
+  style Quiz fill:#e6f7ff,stroke:#005c99
+  style InitModuleList fill:#e6f7ff,stroke:#005c99
+  style InitQuizPage fill:#e6f7ff,stroke:#005c99
+  style InitResultsPage fill:#e6f7ff,stroke:#005c99
+  style QuizDataJSON fill:#f9cb9c,stroke:#783f04
