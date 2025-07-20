@@ -1,32 +1,43 @@
 class Extract {
   constructor(entry) {
+    // Initialize extract-level properties from data entry
     this.id = entry.ID;
     this.reference = entry.References;
     this.extract = entry.Extracts;
     this.facts = entry.Facts;
     this.notes = entry["Notes/Additional"] || null;
-    this.factors = []; // Only factors at extract level
+    this.factors = []; // Holds Factor instances assigned to this extract
   }
 
-  // Factor methods
+  //========================
+  // Instance-level Methods
+  //========================
+
+  // Find a factor by name (if already added)
   findFactor(name) {
     return this.factors.find(f => f.name === name);
   }
 
+  // Add a factor if it doesn't already exist, return the factor
   addFactor(name) {
     let factor = this.findFactor(name);
     if (!factor) {
       factor = new Factor(name);
       this.factors.push(factor);
     }
-    return factor; // Return the factor for chaining
+    return factor;
   }
 
+  // Sort factors alphabetically by name
   sortFactors() {
     this.factors.sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  // Collection methods
+  //=====================
+  // Static Utility Methods
+  //=====================
+
+  // Collect all factors from a list of extracts
   static getAllFactors(extracts) {
     const allFactors = [];
     extracts.forEach(extract => {
@@ -35,6 +46,7 @@ class Extract {
     return allFactors;
   }
 
+  // Count how many extracts each group appears in
   static getGroupCounts(extracts) {
     const counts = {};
     extracts.forEach(extract => {
@@ -51,12 +63,11 @@ class Extract {
     return counts;
   }
 
+  // Count how many extracts each subgroup appears in
   static getSubGroupCounts(extracts) {
     const subGroupCounts = {};
-    
     extracts.forEach(extract => {
       const seenSubGroups = new Set();
-      
       extract.factors.forEach(factor => {
         factor.groups.forEach(group => {
           group.subGroups.forEach(subGroup => {
@@ -68,19 +79,18 @@ class Extract {
         });
       });
     });
-    
     return subGroupCounts;
   }
 
+  // Identify top N factors per group, based on mentions across extracts
   static getTopFactorsByGroup(extracts, limit) {
     const globalFactorCounts = {};
     const groupFactorMap = {};
     let totalFactorMentions = 0;
 
+    // Tally global mentions and group-factor co-occurrence
     extracts.forEach(extract => {
-      extract.factors.forEach(() => {
-        totalFactorMentions++;
-      });
+      extract.factors.forEach(() => totalFactorMentions++);
 
       const seenFactors = new Set();
       extract.factors.forEach(factor => {
@@ -95,9 +105,7 @@ class Extract {
         factor.groups.forEach(group => {
           const comboKey = `${group.name}::${factor.name}`;
           if (!seenCombos.has(comboKey)) {
-            if (!groupFactorMap[group.name]) {
-              groupFactorMap[group.name] = {};
-            }
+            groupFactorMap[group.name] = groupFactorMap[group.name] || {};
             groupFactorMap[group.name][factor.name] = (groupFactorMap[group.name][factor.name] || 0) + 1;
             seenCombos.add(comboKey);
           }
@@ -105,6 +113,7 @@ class Extract {
       });
     });
 
+    // Format and sort results per group
     const topFactorsByGroup = {};
     for (const group in groupFactorMap) {
       topFactorsByGroup[group] = Object.entries(groupFactorMap[group])
@@ -119,28 +128,35 @@ class Extract {
     return topFactorsByGroup;
   }
 
+  //=====================
+  // Getters for linked data
+  //=====================
+
+  // Get all groups (unique) from factors
   get groups() {
     return [...new Set(this.factors.flatMap(f => f.groups))];
   }
 
+  // Get all subgroups (unique) from all groups
   get subGroups() {
     return [...new Set(this.factors.flatMap(f => 
       f.groups.flatMap(g => g.subGroups)
     ))];
   }
 
+  //=====================
+  // Presentation Methods
+  //=====================
+
+  // Pretty-print representation of the extract
   toString() {
     this.sortFactors();
     
     const factorNames = this.factors.map(f => f.name).join(", ") || "None";
-    const groupNames = [...new Set(
-      this.factors.flatMap(f => f.groups.map(g => g.name))
-    )].join(", ") || "None";
-    const subGroupNames = [...new Set(
-      this.factors.flatMap(f => 
-        f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
-      )
-    )].join(", ") || "None";
+    const groupNames = [...new Set(this.factors.flatMap(f => f.groups.map(g => g.name)))].join(", ") || "None";
+    const subGroupNames = [...new Set(this.factors.flatMap(f => 
+      f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
+    ))].join(", ") || "None";
 
     return `
             ID: ${this.id}
@@ -154,19 +170,16 @@ class Extract {
             `;
   }
 
+  // Convert the extract to an HTML table row, with modal support
   toTableRow() {
     const modalId = `modal-extract-${this.id}`;
     const modalContentId = `modal-content-${this.id}`;
 
     const factorsDisplay = this.factors.map(f => f.name).join("<br><br>") || "None";
-    const groupsDisplay = [...new Set(
-      this.factors.flatMap(f => f.groups.map(g => g.name))
-    )].join("<br><br>") || "None";
-    const subGroupsDisplay = [...new Set(
-      this.factors.flatMap(f => 
-        f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
-      )
-    )].join("<br><br>") || "None";
+    const groupsDisplay = [...new Set(this.factors.flatMap(f => f.groups.map(g => g.name)))].join("<br><br>") || "None";
+    const subGroupsDisplay = [...new Set(this.factors.flatMap(f => 
+      f.groups.flatMap(g => g.subGroups.map(sg => sg.name))
+    ))].join("<br><br>") || "None";
 
     return `
       <tr>
@@ -189,6 +202,11 @@ class Extract {
     `;
   }
 
+  //=====================
+  // Risk Score Evaluation
+  //=====================
+
+  // Calculate total risk score based on selected mitigation options
   static calculateRiskScoreDOM() {
     const factorRows = document.querySelectorAll('.factor-row');
     let totalRiskScore = 0;

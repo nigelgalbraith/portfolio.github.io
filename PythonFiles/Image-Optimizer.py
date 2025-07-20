@@ -1,13 +1,20 @@
-# IMPORTS
+#===================================================
+# PYTHON PROGRAM TO CREATE RESPONSIVE WEBSITE IMAGES
+#===================================================
 
+#========
+# IMPORTS
+#========
 import os
 import sys
-import subprocess
 from zipfile import ZipFile
 from datetime import datetime
 
+#==========
 # CONSTANTS
+#==========
 
+# Image config
 IMAGE_PROFILES = {
     "main": {
         "input_dir": "../images/main/original",
@@ -58,7 +65,9 @@ ASSET_SETS = {
 
 REQUIRED_PACKAGES = ["PIL", "bs4"]
 
-
+#=================
+# HELPER FUNCTIONS
+#=================
 def check_package(package_name):
     """Check if a package is installed, else print error and exit."""
     try:
@@ -67,40 +76,39 @@ def check_package(package_name):
         print(f"Package '{package_name}' not installed.")
         sys.exit(1)
 
-        
 def ensure_directory(path):
     """Create a directory if it doesn't exist, and print status."""
     if not os.path.exists(path):
         os.makedirs(path)
         print(f"Created directory: {path}")
-        
 
-def process_all_images(input_dir, output_base, sizes):
-    """Build resize tasks for each image profile."""
-    tasks = []
-    # Skip if input directory doesn't exist
+#=================
+# IMAGE PROCESSING
+#=================
+def build_resize_tasks(input_dir, output_dir, target_width):
+    """Generate tasks for resizing images in one folder to a target width."""
     if not os.path.isdir(input_dir):
-        return tasks
-    # Iterate over valid image files
-    for filename in os.listdir(input_dir):
-        if not filename.lower().endswith(('.jpg', '.jpeg', '.png')):
-            continue
-        input_path = os.path.join(input_dir, filename)
-        # Create output path variations for each device and version
-        for device, versions in sizes.items():
-            for version_type, width in versions.items():
-                output_path = os.path.join(output_base, device, version_type, filename)
-                tasks.append((input_path, output_path, width))
-    return tasks
+        return []
 
+    tasks = []
+    valid_exts = ('.jpg', '.jpeg', '.png')
+
+    for filename in os.listdir(input_dir):
+        if not filename.lower().endswith(valid_exts):
+            continue
+
+        input_path = os.path.join(input_dir, filename)
+        output_path = os.path.join(output_dir, filename)
+        tasks.append((input_path, output_path, target_width))
+
+    return tasks
 
 def process_assets(input_dir, output_dir, target_width, quality):
     """Build resize tasks for asset images (thumbs/icons)."""
     tasks = []
-    # Skip if input directory doesn't exist
     if not os.path.isdir(input_dir):
         return tasks
-    # Collect tasks for valid images
+
     for filename in os.listdir(input_dir):
         if not filename.lower().endswith(('.jpg', '.jpeg', '.png')):
             continue
@@ -109,68 +117,73 @@ def process_assets(input_dir, output_dir, target_width, quality):
                       target_width, quality))
     return tasks
 
-
 def resize_image(input_path, output_path, target_width, quality):
     """Resize and save an image at target width and quality."""
     try:
         from PIL import Image
-        # Open image and calculate new size
         with Image.open(input_path) as img:
             orig_width, orig_height = img.size
             scale = target_width / orig_width
             target_height = int(orig_height * scale)
-            # Resize using high-quality filter
             img_resized = img.resize((target_width, target_height), Image.LANCZOS)
-            # Ensure output directory exists
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            # Save optimized image
             img_resized.save(output_path, optimize=True, quality=quality)
             print(f"Saved: {output_path}")
     except Exception as e:
-        # Log any errors encountered
         print(f"Error processing {input_path}: {e}")
 
-
-
+#=====
 # MAIN
+#=====
 def main():
     """Run all setup, processing, and resizing tasks."""
-
-    # Ensure required packages are available
     for package in REQUIRED_PACKAGES:
         check_package(package)
 
-    # Import modules after confirming packages are installed
     from PIL import Image
     from bs4 import BeautifulSoup
 
-    # Create output directories for responsive image profiles
+    # Ensure output folders exist for responsive images
     for profile in IMAGE_PROFILES.values():
         for device, versions in profile["sizes"].items():
             for version_type in versions:
                 ensure_directory(os.path.join(profile["output_base"], device, version_type))
 
-    # Create input/output directories for thumbnails and icons
+    # Ensure output folders exist for assets
     for asset_type in ASSET_SETS.values():
         for config in asset_type.values():
             ensure_directory(config["input_dir"])
             ensure_directory(config["output_dir"])
 
-    # Resize and save responsive images for each profile
+    # Resize images profile-by-profile, device-by-device
     for label, config in IMAGE_PROFILES.items():
-        print(f"Processing profile: {label}")
-        for task in process_all_images(config["input_dir"], config["output_base"], config["sizes"]):
-            resize_image(*task, config["quality"])
-
-    # Resize and save assets (thumbs/icons) for each asset type
+        print(f"========= Processing profile: {label} =========")
+        for device in ["desktop", "laptop", "mobile"]:
+            versions = config["sizes"].get(device, {})
+            for version_type, width in versions.items():
+                output_dir = os.path.join(config["output_base"], device, version_type)
+                print(f"Profile: {label} → {device} → {version_type} @ {width}px")
+                tasks = build_resize_tasks(config["input_dir"], output_dir, width)
+                if not tasks:
+                    print("No images found.")
+                else:
+                    for task in tasks:
+                        resize_image(*task, config["quality"])
+            print()
+        
+    # Resize asset images (thumbs/icons)
     for asset_type, sets in ASSET_SETS.items():
         for label, config in sets.items():
-            print(f"Processing {asset_type} for: {label}")
-            for task in process_assets(config["input_dir"], config["output_dir"], config["width"], config["quality"]):
-                resize_image(*task)
+            print(f"========= Processing {asset_type} for: {label} =========")
+            tasks = process_assets(config["input_dir"], config["output_dir"], config["width"], config["quality"])
+            if not tasks:
+                print("No images found.")
+            else:
+                for task in tasks:
+                    resize_image(*task)
+            print()
 
     print("Done. Responsive images and asset images generated.")
-
 
 if __name__ == "__main__":
     main()
