@@ -50,6 +50,91 @@ FLOWCHARTS = {
         "json": "../diagrams/QuizCleanFlow.json",
         "png": "../projects/images/main/original/QuizCleanFlow.png",
         "config": "../diagrams/FlowConfig.json"
+    },
+    "projectListLoader": {
+        "json": "../diagrams/projectListLoaderFlow.json",
+        "png": "../projects/images/main/original/projectListLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "githubAppLoader": {
+        "json": "../diagrams/githubAppLoaderFlow.json",
+        "png": "../projects/images/main/original/githubAppLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "embedSketchfab": {
+        "json": "../diagrams/embedSketchfabFlow.json",
+        "png": "../projects/images/main/original/embedSketchfabFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "projectStepsData": {
+        "json": "../diagrams/projectStepsDataFlow.json",
+        "png": "../projects/images/main/original/projectStepsDataFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "projectLinksLoader": {
+        "json": "../diagrams/projectLinksLoaderFlow.json",
+        "png": "../projects/images/main/original/projectLinksLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "carousel": {
+        "json": "../diagrams/carouselFlow.json",
+        "png": "../projects/images/main/original/carouselFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "modalZoom": {
+        "json": "../diagrams/modalZoomFlow.json",
+        "png": "../projects/images/main/original/modalZoomFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "init": {
+        "json": "../diagrams/initFlow.json",
+        "png": "../projects/images/main/original/initFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "menuToggle": {
+        "json": "../diagrams/menuToggleFlow.json",
+        "png": "../projects/images/main/original/menuToggleFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "mainTextLoader": {
+        "json": "../diagrams/mainTextLoaderFlow.json",
+        "png": "../projects/images/main/original/mainTextLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "footerIconLoader": {
+        "json": "../diagrams/footerIconLoaderFlow.json",
+        "png": "../projects/images/main/original/footerIconLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "responsiveImageLoader": {
+        "json": "../diagrams/responsiveImageLoaderFlow.json",
+        "png": "../projects/images/main/original/responsiveImageLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "resumeLoader": {
+        "json": "../diagrams/resumeLoaderFlow.json",
+        "png": "../projects/images/main/original/resumeLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "skillsLoader": {
+        "json": "../diagrams/skillsLoaderFlow.json",
+        "png": "../projects/images/main/original/skillsLoaderFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "GenerateSiteDiagrams": {
+        "json": "../diagrams/GenerateSiteDiagramsFlow.json",
+        "png": "../projects/images/main/original/GenerateSiteDiagramsFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "ImageOptimizer": {
+        "json": "../diagrams/ImageOptimizerFlow.json",
+        "png": "../projects/images/main/original/ImageOptimizerFlow.png",
+        "config": "../diagrams/FlowConfig.json"
+    },
+    "GenerateFlowchart": {
+        "json": "../diagrams/GenerateFlowchartFlow.json",
+        "png": "../projects/images/main/original/GenerateFlowchartFlow.png",
+        "config": "../diagrams/FlowConfig.json"
     }
 }
 

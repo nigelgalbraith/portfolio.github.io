@@ -27,14 +27,31 @@ function loadProjectSteps(containerSelector, steps) {
 
     wrapper.appendChild(imgDiv);
 
-    // Text explanation for the step
-    const p = document.createElement("p");
-    p.textContent = text;
+    // Text explanation for the step (supports string, HTML, or bullet arrays)
+    let contentElement;
+
+    if (Array.isArray(text)) {
+      // If 'text' is an array, convert to bullet list
+      contentElement = document.createElement("ul");
+      text.forEach(point => {
+        const li = document.createElement("li");
+        li.textContent = point;
+        contentElement.appendChild(li);
+      });
+    } else if (typeof text === "string" && text.includes("<li>")) {
+      // If 'text' is an HTML list, insert using innerHTML
+      contentElement = document.createElement("div");
+      contentElement.innerHTML = text;
+    } else {
+      // Default case: plain paragraph text
+      contentElement = document.createElement("p");
+      contentElement.textContent = text;
+    }
 
     // Assemble all parts and append to the main container
     box.appendChild(h2);
     box.appendChild(wrapper);
-    box.appendChild(p);
+    box.appendChild(contentElement);
     container.appendChild(box);
 
     // Optional line break between steps for spacing
@@ -54,4 +71,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (container && ProjectSteps[project]) {
     loadProjectSteps(".main-content-step-text section", ProjectSteps[project]);
   }
-});;
+});

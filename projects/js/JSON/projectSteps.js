@@ -166,16 +166,118 @@ thematic: [
     alt: "Diagram showing how the main HTML pages and project subpages are connected"
     },
     {
-      title: "JavaScript Architecture (Main Pages)",
-      text: "To keep things modular, I mapped out which JavaScript files are loaded by each HTML page. For example, the Resume page loads `resumeLoader.js` and `skillsLoader.js`, which in turn pull in data like `resumeData.js` and `skills.json`. Each file is focused on a single job, making the system easy to maintain.",
-      img: "SiteJSMainPages.png",
-      alt: "Diagram showing JavaScript modules and data linked to the Home and Resume pages"
+    title: "JavaScript Architecture (Main Pages)",
+    text: "To keep things modular, I mapped out which JavaScript files are loaded by each HTML page. For example, the Resume page loads `resumeLoader.js` and `skillsLoader.js`, which in turn pull in data like `resumeData.js` and `skills.json`. Each file is focused on a single job, making the system easy to maintain.",
+    img: "SiteJSMainPages.png",
+    alt: "Diagram showing JavaScript modules and data linked to the Home and Resume pages"
     },
     {
-      title: "JavaScript Architecture (Project Pages)",
-      text: "The Projects page has its own set of modular JavaScript files, such as `projectListLoader.js`, `carousel.js`, and `embedSketchfab.js`. Each of these loads specific data (like project steps or Sketchfab models) only when needed. This structure ensures better performance and easier updates as more features are added.",
-      img: "SiteJSProjectPages.png",
-      alt: "Diagram showing JavaScript loaders and JSON data modules for the Projects page"
+    title: "JavaScript Architecture (Project Pages)",
+    text: "The Projects page has its own set of modular JavaScript files, such as `projectListLoader.js`, `carousel.js`, and `embedSketchfab.js`. Each of these loads specific data (like project steps or Sketchfab models) only when needed. This structure ensures better performance and easier updates as more features are added.",
+    img: "SiteJSProjectPages.png",
+    alt: "Diagram showing JavaScript loaders and JSON data modules for the Projects page"
+    },
+    {
+      title: "projectListLoader.js",
+      text: "This script dynamically builds the list of projects shown on the Projects page. It loads an array of project entries from `projectListData.js`, then loops through them to create styled DOM cards for each project. These cards include images, titles, and tags, making the list easy to maintain and update with new work.",
+      img: "projectListLoaderFlow.png",
+      alt: "Flowchart showing how projectListLoader.js reads data and builds cards"
+    },
+    {
+      title: "githubAppLoader.js",
+      text: "This script loads playable GitHub-hosted apps into the Projects page. It reads a list of apps from `githubApps.js`, creates iframe elements for each one, and inserts them into the DOM. This modular approach makes it easy to add or remove playable demos without editing HTML directly.",
+      img: "githubAppLoaderFlow.png",
+      alt: "Flowchart showing how GitHub app iframes are built and injected"
+    },
+    {
+      title: "embedSketchfab.js",
+      text: "This module integrates 3D models into project pages using Sketchfab embeds. It loads model info from `sketchfabModels.js`, creates iframe elements with correct configuration, and injects them where needed. This allows interactive model previews without overloading the page.",
+      img: "embedSketchfabFlow.png",
+      alt: "Flowchart showing the loading and embedding process for Sketchfab models"
+    },
+    {
+      title: "projectStepsData.js",
+      text: "Used to walk through project processes, this script loads structured steps from `projectSteps.js` and renders them as expandable sections. It’s ideal for tutorials or detailed walkthroughs, keeping each step clearly separated and easy to follow.",
+      img: "projectStepsDataFlow.png",
+      alt: "Flowchart showing how step data is loaded and displayed"
+    },
+    {
+      title: "projectLinksLoader.js",
+      text: "This module reads link definitions from `projectLinks.js` and builds buttons like 'Live Demo' or 'View Code' dynamically. It keeps call-to-action buttons consistent and ensures they always match the associated project.",
+      img: "projectLinksLoaderFlow.png",
+      alt: "Flowchart showing how external project links are injected"
+    },
+    {
+      title: "carousel.js",
+      text: "This script builds a responsive image carousel from data in `carouselData.js`. It generates slide elements, sets up left/right navigation, and handles auto-advance. Great for previewing multiple screenshots in a compact space.",
+      img: "carouselFlow.png",
+      alt: "Flowchart showing how carousel images are loaded and rotated"
+    },
+    {
+      title: "modalZoom.js",
+      text: "When users click on a media item (image or model), this script opens a modal for an enlarged view. It improves accessibility and allows users to explore fine details without leaving the page.",
+      img: "modalZoomFlow.png",
+      alt: "Flowchart showing modal activation and image zoom"
+    },
+    {
+      title: "init.js",
+      text: "This file acts as a coordinator for the Projects page. Once the DOM is ready, it triggers all related loaders like `projectListLoader`, `embedSketchfab`, and others, ensuring that everything loads in the right order.",
+      img: "initFlow.png",
+      alt: "Flowchart showing how scripts are initialized in sequence"
+    },
+    {
+      title: "menuToggle.js",
+      text: "This script handles mobile navigation. It toggles a class on the site’s menu when the user taps the hamburger icon, allowing the menu to expand or collapse on small screens.",
+      img: "menuToggleFlow.png",
+      alt: "Flowchart showing how the menu is shown and hidden"
+    },
+    {
+      title: "mainTextLoader.js",
+      text: "This script loads homepage intro text from `mainTextData.js`, formats it, and inserts it into the DOM. It keeps the homepage content flexible and editable from a single data file.",
+      img: "mainTextLoaderFlow.png",
+      alt: "Flowchart showing how the homepage intro text is populated"
+    },
+    {
+      title: "footerIconLoader.js",
+      text: "This script reads icon entries from `iconRegistry.js` and generates the clickable icons in the site footer (e.g., GitHub, LinkedIn). It ensures consistent styling and makes it easy to update links globally.",
+      img: "footerIconLoaderFlow.png",
+      alt: "Flowchart showing how footer icons are built and inserted"
+    },
+    {
+      title: "responsiveImageLoader.js",
+      text: "To improve performance, this script checks screen width and selects the best image resolution for the device. It helps avoid loading large images on mobile and makes sure visuals stay sharp.",
+      img: "responsiveImageLoaderFlow.png",
+      alt: "Flowchart showing image resolution selection and loading"
+    },
+    {
+      title: "resumeLoader.js",
+      text: "This script builds the timeline on the Resume page using data from `resumeData.js`. It loops through jobs, roles, and dates, and formats them into vertical entries that are easy to read.",
+      img: "resumeLoaderFlow.png",
+      alt: "Flowchart showing how resume entries are rendered"
+    },
+    {
+      title: "skillsLoader.js",
+      text: "Loads the skill set from `skillsData.js`, and creates icons, labels, or badges for each one. Skills are sorted into categories and displayed responsively so they look good on any screen size.",
+      img: "skillsLoaderFlow.png",
+      alt: "Flowchart showing how skills data is visualized"
+    },
+    {
+      title: "Generate-SiteDiagrams.py",
+      text: "This Python script generates Mermaid diagrams for HTML and JavaScript structure. It loads site layout from JSON, writes `.mmd` syntax, and uses the Mermaid CLI to export `.svg` and `.png` diagrams used in the Portfolio.",
+      img: "GenerateSiteDiagramsFlow.png",
+      alt: "Flowchart showing how the Mermaid site diagrams are generated"
+    },
+    {
+      title: "Image-Optimizer.py",
+      text: "This tool resizes images into multiple screen-specific sizes (desktop, laptop, mobile) and compresses thumbnails and icons. It keeps the site fast while maintaining quality visuals.",
+      img: "ImageOptimizerFlow.png",
+      alt: "Flowchart showing how images are processed for different screen sizes"
+    },
+    {
+      title: "Generate-Flowchart.py",
+      text: "This program reads node and connection definitions from JSON files and creates styled flowcharts using Graphviz. It's used to explain the logic of each JavaScript or Python module visually.",
+      img: "GenerateFlowchartFlow.png",
+      alt: "Flowchart showing how flowchart PNGs are generated from JSON"
     }
-  ]
+]
 };

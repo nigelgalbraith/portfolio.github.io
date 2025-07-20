@@ -1,28 +1,31 @@
 {
   "nodes": {
-    "Start": { "label": "Start", "shape": "terminator" },
-    "ReadQuizData": { "label": "Read QuizData.json" },
-    "ConvertToLists": { "label": "Split 'Multiple Answers' & 'Correct Answer' into lists" },
-    "GroupByModule": { "label": "Group questions by Module & Module Name" },
-    "WriteCleanJSON": { "label": "Write cleaned QuizData-clean.json" },
-    "WrapWithJSConst": { "label": "Wrap JSON with JS const to QuizData-JSON.js" },
-    "End": { "label": "End", "shape": "terminator" }
+    "ReadQuizData": {
+      "label": "Read QuizData.json"
+    },
+    "ConvertToLists": {
+      "label": "Split 'Multiple Answers' & 'Correct Answer' into lists"
+    },
+    "GroupByModule": {
+      "label": "Group questions by Module & Module Name"
+    },
+    "WriteCleanJSON": {
+      "label": "Write cleaned QuizData-clean.json"
+    },
+    "WrapWithJSConst": {
+      "label": "Wrap JSON with JS const to QuizData-JSON.js"
+    }
   },
   "connections": [
-    ["Start", "ReadQuizData"],
     ["ReadQuizData", "ConvertToLists"],
     ["ConvertToLists", "GroupByModule"],
     ["GroupByModule", "WriteCleanJSON"],
-    ["WriteCleanJSON", "WrapWithJSConst"],
-    ["WrapWithJSConst", "End"]
+    ["WriteCleanJSON", "WrapWithJSConst"]
   ],
   "classes": {
-    "startend": "fillcolor:#007bff,style:filled,shape:ellipse,fontcolor:white", 
-    "action": "fillcolor:#f0f8ff,style:filled,shape:rect,fontcolor:black"       
+    "action": "fillcolor:#f0f8ff,style:filled,shape:rect,fontcolor:black"
   },
   "class_map": {
-    "Start": "startend",
-    "End": "startend",
     "ReadQuizData": "action",
     "ConvertToLists": "action",
     "GroupByModule": "action",
