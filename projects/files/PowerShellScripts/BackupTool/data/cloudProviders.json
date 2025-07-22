@@ -1,0 +1,41 @@
+{
+  "Google": {
+    "Prefix": "GD",
+    "Label": "Google Drive",
+    "Destinations": ["Google Drive", "DriveFS"],
+    "Default": {
+      "Source": "",
+      "Dest": "",
+      "Zip": false,
+      "Name": "GDBackup",
+      "Freq": "Daily",
+      "Keep": 3
+    }
+  },
+  "Dropbox": {
+    "Prefix": "DB",
+    "Label": "Dropbox",
+    "Destinations": ["Dropbox"],
+    "Default": {
+      "Source": "",
+      "Dest": "",
+      "Zip": false,
+      "Name": "DBBackup",
+      "Freq": "Daily",
+      "Keep": 3
+    }
+  },
+  "MegaNZ": {
+    "Prefix": "MG",
+    "Label": "MegaNZ",
+    "Destinations": ["MegaNZ"],
+    "Default": {
+      "Source": "",
+      "Dest": "",
+      "Zip": false,
+      "Name": "MegaNZ",
+      "Freq": "Daily",
+      "Keep": 3
+    }
+  }
+}

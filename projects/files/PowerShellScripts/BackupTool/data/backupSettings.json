@@ -1,0 +1,26 @@
+﻿{
+    "MegaNZ":  {
+                   "Name":  "",
+                   "Source":  "",
+                   "Dest":  "",
+                   "Freq":  null,
+                   "Keep":  0,
+                   "Zip":  false
+               },
+    "Dropbox":  {
+                    "Name":  "portfolio.github.io",
+                    "Source":  "D:\\Documents\\GitHub\\portfolio.github.io",
+                    "Dest":  "C:\\Users\\Lenovo\\Dropbox",
+                    "Freq":  "Daily",
+                    "Keep":  1,
+                    "Zip":  true
+                },
+    "Google":  {
+                   "Name":  "",
+                   "Source":  "D:\\Documents\\GoogleDriveSync",
+                   "Dest":  "D:\\Documents\\Google Drive",
+                   "Freq":  "Daily",
+                   "Keep":  3,
+                   "Zip":  false
+               }
+}
