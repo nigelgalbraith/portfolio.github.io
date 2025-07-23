@@ -1,0 +1,13 @@
+[2025-07-23 17:57:40] [INFO] Backing up from 'D:\Documents\GoogleDriveSync' to 'D:\Documents\Google Drive' for provider 'Google Drive'
+[2025-07-23 17:57:40] [INFO] Backup mode: Zip=False, Mirror=False
+[2025-07-23 17:57:40] [INFO] Robocopy (Append) finished with exit code 2
+
+[2025-07-23 17:57:40] [INFO] Backing up from 'D:\Documents\GitHub\portfolio.github.io' to 'C:\Users\Lenovo\Dropbox' for provider 'Dropbox'
+[2025-07-23 17:57:40] [INFO] Backup mode: Zip=False, Mirror=False
+[2025-07-23 17:57:40] [INFO] Robocopy (Append) finished with exit code 3
+
+[2025-07-23 17:57:42] [INFO] Waiting for sync to settle in: C:\Users\Lenovo\Dropbox
+
+[2025-07-23 17:57:48] [INFO] Waiting for sync to settle in: C:\Users\Lenovo\Dropbox
+
+[2025-07-23 17:57:54] [INFO] Checking sync status...

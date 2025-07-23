@@ -68,7 +68,9 @@ function Save-Settings($gui, $providers, $settingsPath) {
         $settings[$key] = @{
             Source = $gui."Txt${prefix}Source".Text
             Dest   = $gui."Txt${prefix}Dest".Text
-            Zip    = $gui."Chk${prefix}Zip".Checked
+            Zip    = $gui."Rdo${prefix}Zip".Checked
+            Mirror = $gui."Rdo${prefix}Mirror".Checked
+            Append = $gui."Rdo${prefix}Append".Checked
             Name   = $gui."Txt${prefix}ZipName".Text
             Freq   = $gui."Cmb${prefix}Freq".SelectedItem
             Keep   = $gui."Num${prefix}Keep".Value
@@ -168,33 +170,83 @@ function New-ZipSection {
     $controls = @{}      # Hashtable to store and return the created controls
     $y = $startY         # Initialize vertical position
 
-    # ========== Zip Backup Checkbox ==========
-    $chkZip = New-Object Windows.Forms.CheckBox
-    $chkZip.Text = "Zip Backup"
-    $chkZip.Checked = $settings.Zip                  # Set initial checked state
-    $chkZip.Location = "10,$y"
-    $tab.Controls.Add($chkZip)
-    $controls["Chk${prefix}Zip"] = $chkZip           # Store reference in controls hashtable
-    $y += 30
+    # === Backup Type Group ===
+    $grpType = New-Object Windows.Forms.GroupBox
+    $grpType.Text = "Backup Type"
+    $grpType.Location = "10,$y"
+    $grpType.Size = '320,45'
+    $tab.Controls.Add($grpType)
+
+    $rdoFile = New-Object Windows.Forms.RadioButton
+    $rdoFile.Text = "File Backup"
+    $rdoFile.Location = "10,15"
+    $grpType.Controls.Add($rdoFile)
+    $controls["Rdo${prefix}File"] = $rdoFile
+
+    $rdoZip = New-Object Windows.Forms.RadioButton
+    $rdoZip.Text = "Zip Backup"
+    $rdoZip.Location = "120,15"
+    $grpType.Controls.Add($rdoZip)
+    $controls["Rdo${prefix}Zip"] = $rdoZip
+
+    $y += 55  # Leave space for group box
+
+
+    # === File Mode Group ===
+    $grpMode = New-Object Windows.Forms.GroupBox
+    $grpMode.Text = "File Mode"
+    $grpMode.Location = "10,$y"
+    $grpMode.Size = '320,45'
+    $tab.Controls.Add($grpMode)
+
+    $rdoMirror = New-Object Windows.Forms.RadioButton
+    $rdoMirror.Text = "Mirror"
+    $rdoMirror.Location = "10,15"
+    $grpMode.Controls.Add($rdoMirror)
+    $controls["Rdo${prefix}Mirror"] = $rdoMirror
+
+    $rdoAppend = New-Object Windows.Forms.RadioButton
+    $rdoAppend.Text = "Append"
+    $rdoAppend.Location = "120,15"
+    $grpMode.Controls.Add($rdoAppend)
+    $controls["Rdo${prefix}Append"] = $rdoAppend
+
+    $y += 55 
+
+    # === Default selection based on saved settings ===
+    if ($settings.Zip) {
+        $rdoZip.Checked = $true
+    } else {
+        $rdoFile.Checked = $true
+        if ($settings.Mirror) {
+            $rdoMirror.Checked = $true
+        } else {
+            $rdoAppend.Checked = $true
+        }
+    }
 
     # ========== Frequency Dropdown ==========
-    $tab.Controls.Add((New-Object Windows.Forms.Label -Property @{
-        Text = "Frequency:"; Location = "10,$y"
-    }))
+    $lblFreq = New-Object Windows.Forms.Label
+    $lblFreq.Text = "Frequency:"
+    $lblFreq.Location = "10,$y"
+    $tab.Controls.Add($lblFreq)
+
     $cmbFreq = New-Object Windows.Forms.ComboBox
     $cmbFreq.Items.AddRange(@("Daily", "Weekly", "Monthly"))  # Add options
     $cmbFreq.Size = '100,20'
     $cmbFreq.Location = "160,$y"
     $cmbFreq.DropDownStyle = 'DropDownList'
-    $cmbFreq.SelectedItem = $settings.Freq           # Set current selection
+    $cmbFreq.SelectedItem = $settings.Freq
     $tab.Controls.Add($cmbFreq)
     $controls["Cmb${prefix}Freq"] = $cmbFreq
     $y += 30
 
     # ========== Zip Name ==========
-    $tab.Controls.Add((New-Object Windows.Forms.Label -Property @{
-        Text = "Zip Backup Name:"; Location = "10,$y"
-    }))
+    $lblName = New-Object Windows.Forms.Label
+    $lblName.Text = "Zip Backup Name:"
+    $lblName.Location = "10,$y"
+    $tab.Controls.Add($lblName)
+
     $txtName = New-Object Windows.Forms.TextBox
     $txtName.Text = $settings.Name
     $txtName.Location = "160,$y"
@@ -204,9 +256,11 @@ function New-ZipSection {
     $y += 30
 
     # ========== Keep Count ==========
-    $tab.Controls.Add((New-Object Windows.Forms.Label -Property @{
-        Text = "Zips to keep:"; Location = "10,$y"
-    }))
+    $lblKeep = New-Object Windows.Forms.Label
+    $lblKeep.Text = "Zips to keep:"
+    $lblKeep.Location = "10,$y"
+    $tab.Controls.Add($lblKeep)
+
     $numKeep = New-Object Windows.Forms.NumericUpDown
     $numKeep.Value = $settings.Keep
     $numKeep.Size = '100,20'
@@ -215,9 +269,9 @@ function New-ZipSection {
     $controls["Num${prefix}Keep"] = $numKeep
     $y += 30
 
-    # Return the controls and final Y position
     return @{ Controls = $controls; EndY = $y }
 }
+
 
 
 # Adds source/destination path controls and zip backup settings to a tab for a given provider.
@@ -264,7 +318,7 @@ function Add-PathSection {
 function New-MainForm {
     $form = New-Object Windows.Forms.Form
     $form.Text = "Cloud Backup App"          # Title shown in the window bar
-    $form.Size = "700,740"                   # Width x Height of the window
+    $form.Size = "700,850"                   # Width x Height of the window
     $form.StartPosition = "CenterScreen"     # Center the window on screen
     return $form
 }
@@ -275,7 +329,7 @@ function New-ProviderTabs {
     param ($providers, $settings, [ref]$controlMap)
 
     $tabControl = New-Object Windows.Forms.TabControl
-    $tabControl.Size = "690,300"        # Set size of the tab control
+    $tabControl.Size = "690,380"        # Set size of the tab control
     $tabControl.Location = "10,10"      # Position within the main form
 
     foreach ($entry in $providers.Providers.GetEnumerator()) {
@@ -304,7 +358,7 @@ function New-ProviderTabs {
 # Creates and returns a progress bar control for showing backup progress.
 function New-ProgressBar {
     $progressBar = New-Object Windows.Forms.ProgressBar
-    $progressBar.Location = "10,370"     # Position on the form
+    $progressBar.Location = "10,400"     # Position on the form
     $progressBar.Size = "680,20"         # Width and height
     $progressBar.Minimum = 0             # Minimum value
     $progressBar.Maximum = 100           # Maximum value
@@ -321,39 +375,47 @@ function New-LogBox {
     $logBox.BackColor = "Black"         # Background color
     $logBox.ForeColor = "Lime"          # Text color (green-on-black style)
     $logBox.Font = "Consolas, 9pt"      # Monospaced font for log alignment
-    $logBox.Location = "10,400"         # Position on form
+    $logBox.Location = "10,490"         # Position on form
     $logBox.Size = "680,280"            # Width and height
     return $logBox
 }
 
 
-# Creates and returns a hashtable containing the Quick Shutdown and Backup buttons.
+# Creates and returns a hashtable containing the Cancel, Backup, and Backup + Shutdown buttons.
 function New-Buttons {
-    $formWidth = 700                     # Total form width for centering
-    $buttonSpacing = 20                  # Space between buttons
-    $buttonWidth1 = 150                  # Width of the Quick Shutdown button
-    $buttonWidth2 = 180                  # Width of the Backup button
-    $totalWidth = $buttonWidth1 + $buttonSpacing + $buttonWidth2
-    $startX = [math]::Floor(($formWidth - $totalWidth) / 2)  # Center both buttons horizontally
+    $formWidth = 700                    # Total form width for centering
+    $buttonSpacing = 20                 # Space between buttons
+    $buttonWidth1 = 120                 # Cancel
+    $buttonWidth2 = 150                 # Backup
+    $buttonWidth3 = 200                 # Backup and Shutdown
+    $totalWidth = $buttonWidth1 + $buttonSpacing + $buttonWidth2 + $buttonSpacing + $buttonWidth3
+    $startX = [math]::Floor(($formWidth - $totalWidth) / 2)
 
-    # Create Quick Shutdown button
+    # Cancel button
     $btnCancel = New-Object Windows.Forms.Button
     $btnCancel.Text = "Cancel"
     $btnCancel.Size = "$buttonWidth1,30"
-    $btnCancel.Location = "$startX,330"
+    $btnCancel.Location = "$startX,440"
 
-    # Create Backup and Shutdown button
+    # Backup button
     $btnBackup = New-Object Windows.Forms.Button
     $btnBackup.Text = "Backup"
     $btnBackup.Size = "$buttonWidth2,30"
-    $btnBackup.Location = "$($startX + $buttonWidth1 + $buttonSpacing),330"
+    $btnBackup.Location = "$($startX + $buttonWidth1 + $buttonSpacing),440"
 
-    # Return both buttons in a hashtable
+    # Backup and Shutdown button
+    $btnShutdown = New-Object Windows.Forms.Button
+    $btnShutdown.Text = "Backup and Shutdown"
+    $btnShutdown.Size = "$buttonWidth3,30"
+    $btnShutdown.Location = "$($startX + $buttonWidth1 + $buttonSpacing + $buttonWidth2 + $buttonSpacing),440"
+
     return @{
-        Cancel  = $btnCancel
-        Backup = $btnBackup
+        Cancel      = $btnCancel
+        Backup      = $btnBackup
+        Shutdown    = $btnShutdown
     }
 }
+
 
 
 # Opens a folder browser dialog and returns the selected path, or $null if cancelled.
@@ -492,7 +554,7 @@ function Invoke-FileBackup {
     # Set up process start info for Robocopy with desired arguments
     $psi = New-Object System.Diagnostics.ProcessStartInfo
     $psi.FileName = "robocopy.exe"
-    $psi.Arguments = "`"$source`" `"$dest`" /E /XX /Z /R:3 /W:5 /MT:8 /TEE /NDL /NFL"
+    $psi.Arguments = "`"$source`" `"$dest`" /MIR /Z /R:3 /W:5 /MT:8 /TEE /NDL /NFL"
     $psi.RedirectStandardOutput = $true
     $psi.UseShellExecute = $false
     $psi.CreateNoWindow = $true
@@ -517,17 +579,58 @@ function Invoke-FileBackup {
     # Wait for Robocopy to complete and finalize GUI updates
     $process.WaitForExit()
     $progressBar.Value = 100
-    Write-Log -logBox $logBox -message "Robocopy finished with exit code $($process.ExitCode)`r`n"
+    Write-Log -logBox $logBox -message "Robocopy (Mirror) finished with exit code $($process.ExitCode)`r`n"
+    $process.Dispose()
+}
+
+function Invoke-AppendBackup {
+    param (
+        [string]$source,
+        [string]$dest,
+        $logBox,
+        $progressBar
+    )
+
+    $logBox.AppendText("Running Robocopy (Append mode)...`r`n")
+
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = "robocopy.exe"
+    $psi.Arguments = "`"$source`" `"$dest`" /E /Z /R:3 /W:5 /MT:8 /TEE /NDL /NFL /XX"
+    $psi.RedirectStandardOutput = $true
+    $psi.UseShellExecute = $false
+    $psi.CreateNoWindow = $true
+
+    $process = New-Object System.Diagnostics.Process
+    $process.StartInfo = $psi
+    $null = $process.Start()
+
+    $count = 0
+    while (-not $process.StandardOutput.EndOfStream) {
+        $line = $process.StandardOutput.ReadLine()
+        $logBox.AppendText("$line`r`n")
+        $count++
+        $progressBar.Value = [Math]::Min(100, ($count % 100))
+        $logBox.SelectionStart = $logBox.Text.Length
+        $logBox.ScrollToCaret()
+        [System.Windows.Forms.Application]::DoEvents()
+    }
+
+    $process.WaitForExit()
+    $progressBar.Value = 100
+    Write-Log -logBox $logBox -message "Robocopy (Append) finished with exit code $($process.ExitCode)`r`n"
     $process.Dispose()
 }
 
 
-# Performs a backup (zip or file copy) for the given provider after validating source and destination.
+
+# Performs a backup (zip or file copy) for the given provider. Assumes validation is already done.
 function Perform-Backup {
     param (
         [string]$source,          # Path to source folder
         [string]$dest,            # Path to destination folder
         [bool]$zip,               # Whether to zip or just copy files
+        [bool]$mirror,
+        [bool]$append,
         [string]$zipName,         # Base name for zip files
         [string]$frequency,       # Frequency for naming (Daily, Weekly, Monthly)
         [int]$keepCount,          # How many zip backups to retain
@@ -536,20 +639,6 @@ function Perform-Backup {
         $providers,               # All provider definitions (with keys and metadata)
         [string]$providerKey      # Which provider (e.g., "Google", "Dropbox")
     )
-
-    # Skip if source path is empty or whitespace
-    if ([string]::IsNullOrWhiteSpace($source)) {
-        $provider = $providers.Providers[$providerKey]
-        Write-Log -logBox $logBox -message "No source path provided. Skipping job for provider '$($provider.Label)'.`r`n"
-        return
-    }
-
-    # Check that source folder actually exists
-    if (-not (Test-Path $source)) {
-        Write-Log -logBox $logBox -message "ERROR: Source path '$source' does not exist.`r`n" -Error
-        [System.Windows.Forms.MessageBox]::Show("Source path '$source' does not exist.", "Backup Error", 'OK', 'Error')
-        return
-    }
 
     # Abort if unknown provider key
     if (-not $providers.Providers.ContainsKey($providerKey)) {
@@ -561,39 +650,15 @@ function Perform-Backup {
     $provider = $providers.Providers[$providerKey]
     Write-Log -logBox $logBox -message "Backing up from '$source' to '$dest' for provider '$($provider.Label)'"
 
-    # === Destination validation ===
-    Write-Log -logBox $logBox -message "[INFO] Validating destination for provider '$($provider.Label)'..."
-    Write-Log -logBox $logBox -message "[INFO] Input destination: '$dest'"
-
-    $isValid = $false
-    foreach ($allowed in $provider.Destinations) {
-        Write-Log -logBox $logBox -message "[INFO] Checking if '$dest' -like '*$allowed*'"
-        if ($dest -like "*$allowed*") {
-            Write-Log -logBox $logBox -message "[INFO] Destination matches allowed: $allowed"
-            $isValid = $true
-            break
-        }
-    }
-
-    # Abort if destination doesn't match any valid provider paths
-    if (-not $isValid) {
-        $allowedPaths = $provider.Destinations -join ", "
-        $msg = "Destination '$dest' is not allowed for provider '$($provider.Label)'.`nValid paths must include: $allowedPaths"
-        Write-Log -logBox $logBox -message $msg -Error
-        [System.Windows.Forms.MessageBox]::Show($msg, "Invalid Destination", 'OK', 'Warning')
-        Write-Log -logBox $logBox -message "[INFO] Destination check FAILED — backup aborted for '$($provider.Label)'" -Error
-        return
-    }
-
-    Write-Log -logBox $logBox -message "[INFO] Destination check passed — proceeding with backup for '$($provider.Label)'"
-
     # === Perform Backup ===
     if ($zip) {
-        # Run zip-based backup
         Invoke-ZipBackup -source $source -dest $dest -zipName $zipName -frequency $frequency -keepCount $keepCount -logBox $logBox
-    } else {
-        # Run file mirroring using Robocopy
+    }
+    elseif ($mirror) {
         Invoke-FileBackup -source $source -dest $dest -logBox $logBox -progressBar $progressBar
+    }
+    else {
+        Invoke-AppendBackup -source $source -dest $dest -logBox $logBox -progressBar $progressBar
     }
 }
 
@@ -612,27 +677,79 @@ function Run-AllBackups {
     # Build a list of backup jobs by reading values from the GUI
     $jobs = foreach ($key in $cloud_providers.Providers.Keys) {
         $prefix = $cloud_providers.Providers[$key].Prefix
+        $source = $gui."Txt${prefix}Source".Text
+
+        if ([string]::IsNullOrWhiteSpace($source)) { continue }
+
         [PSCustomObject]@{
             Key       = $key
-            Source    = $gui."Txt${prefix}Source".Text
+            Source    = $source
             Dest      = $gui."Txt${prefix}Dest".Text
-            Zip       = $gui."Chk${prefix}Zip".Checked
+            Zip       = $gui."Rdo${prefix}Zip".Checked
+            Mirror    = $gui."Rdo${prefix}Mirror".Checked
+            Append    = $gui."Rdo${prefix}Append".Checked
             ZipName   = $gui."Txt${prefix}ZipName".Text
             Frequency = $gui."Cmb${prefix}Freq".SelectedItem
             Keep      = $gui."Num${prefix}Keep".Value
-        }
+         }
     }
 
-    # Run each job by calling Perform-Backup
+    $validJobs = @()
+
+    # Validate all jobs — fail entirely if one is invalid (excluding blanks)
     foreach ($job in $jobs) {
-        Perform-Backup -source $job.Source -dest $job.Dest -zip:$job.Zip `
+        # Skip if source is empty — not considered invalid
+        if ([string]::IsNullOrWhiteSpace($job.Source)) {
+            continue
+        }
+
+        # Validate source path
+        if (-not (Test-Path $job.Source)) {
+            Write-Log -logBox $gui.LogBox -message "ERROR: Source path '$($job.Source)' does not exist for '${job.Key}'." -Error
+            [System.Windows.Forms.MessageBox]::Show("Source path '$($job.Source)' does not exist for '${job.Key}'.", "Invalid Source", 'OK', 'Error')
+            return
+        }
+
+        # Validate destination
+        $provider = $cloud_providers.Providers[$job.Key]
+        $isValid = $false
+        foreach ($allowed in $provider.Destinations) {
+            if ($job.Dest -like "*$allowed*") {
+                $isValid = $true
+                break
+            }
+        }
+
+        if (-not $isValid) {
+            $allowedPaths = $provider.Destinations -join ", "
+            $msg = "Destination '$($job.Dest)' is not allowed for provider '$($provider.Label)'.`nValid paths must include: $allowedPaths"
+            Write-Log -logBox $gui.LogBox -message $msg -Error
+            [System.Windows.Forms.MessageBox]::Show($msg, "Invalid Destination", 'OK', 'Warning')
+            return
+        }
+
+        # Valid job — add to list
+        $validJobs += $job
+    }
+
+    # If there are no valid jobs to run, show a message and return
+    if ($validJobs.Count -eq 0) {
+        Write-Log -logBox $gui.LogBox -message "No valid jobs with a source path to run. Backup cancelled."
+        [System.Windows.Forms.MessageBox]::Show("No valid jobs to run. All source paths were blank.", "Backup Aborted", 'OK', 'Warning')
+        return
+    }
+
+    # Run each valid job by calling Perform-Backup
+    foreach ($job in $validJobs) {
+        Perform-Backup -source $job.Source -dest $job.Dest `
+            -zip:$job.Zip -mirror:$job.Mirror -append:$job.Append `
             -zipName $job.ZipName -frequency $job.Frequency -keepCount $job.Keep `
             -logBox $gui.LogBox -progressBar $gui.ProgressBar `
             -providers $cloud_providers -providerKey $job.Key
     }
 
     # Build list of destination paths for sync status checking
-    $pathsToCheck = foreach ($job in $jobs) {
+    $pathsToCheck = foreach ($job in $validJobs) {
         if ($job.Dest) {
             $job.Dest
         } else {
@@ -665,7 +782,7 @@ function Main {
     $buttons     = New-Buttons
 
     # Assemble GUI
-    $form.Controls.AddRange(@($tabControl, $logBox, $progressBar, $buttons.Cancel, $buttons.Backup))
+    $form.Controls.AddRange(@($tabControl, $logBox, $progressBar, $buttons.Cancel, $buttons.Backup, $buttons.Shutdown))
 
     # Bundle all controls into a PSObject for easy referencing
     $gui = New-Object PSObject -Property ($controlMap + @{
@@ -674,6 +791,7 @@ function Main {
         ProgressBar = $progressBar
         BtnCancel   = $buttons.Cancel
         BtnBackup   = $buttons.Backup
+        BtnShutdown = $buttons.Shutdown
     })
 
     # Cancel handler
@@ -682,6 +800,13 @@ function Main {
     # Backup + Shutdown handler
     $gui.BtnBackup.Add_Click({
         Run-AllBackups -gui $gui -cloud_providers $cloud_providers -settingsPath $SETTINGSPATH
+    })
+
+    # Backup + Shutdown handler
+    $gui.BtnShutdown.Add_Click({
+        Run-AllBackups -gui $gui -cloud_providers $cloud_providers -settingsPath $SETTINGSPATH
+        Write-Log -logBox $gui.LogBox -message "Shutdown initiated after backup."
+        Stop-Computer -Force
     })
 
         # Display form

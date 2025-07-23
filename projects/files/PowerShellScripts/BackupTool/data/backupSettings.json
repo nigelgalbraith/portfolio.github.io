@@ -1,26 +1,32 @@
 ﻿{
     "MegaNZ":  {
-                   "Name":  "",
+                   "Append":  true,
+                   "Mirror":  false,
                    "Source":  "",
-                   "Dest":  "",
+                   "Name":  "",
                    "Freq":  null,
+                   "Zip":  false,
                    "Keep":  0,
-                   "Zip":  false
+                   "Dest":  ""
                },
     "Dropbox":  {
-                    "Name":  "portfolio.github.io",
+                    "Append":  false,
+                    "Mirror":  false,
                     "Source":  "D:\\Documents\\GitHub\\portfolio.github.io",
-                    "Dest":  "C:\\Users\\Lenovo\\Dropbox",
+                    "Name":  "portfolio.github.io",
                     "Freq":  "Daily",
+                    "Zip":  true,
                     "Keep":  1,
-                    "Zip":  true
+                    "Dest":  "C:\\Users\\Lenovo\\Dropbox"
                 },
     "Google":  {
-                   "Name":  "",
+                   "Append":  false,
+                   "Mirror":  true,
                    "Source":  "D:\\Documents\\GoogleDriveSync",
-                   "Dest":  "D:\\Documents\\Google Drive",
+                   "Name":  "",
                    "Freq":  "Daily",
+                   "Zip":  false,
                    "Keep":  3,
-                   "Zip":  false
+                   "Dest":  "D:\\Documents\\Google Drive"
                }
 }
