@@ -161,14 +161,14 @@ function New-LabelTextBrowseRow {
 # Creates a group of controls for configuring zip backup options on a tab.
 function New-ZipSection {
     param (
-        [System.Windows.Forms.TabPage]$tab,  # The tab page where controls will be added
-        [string]$prefix,                     # Unique prefix for control names
-        $settings,                           # Settings object containing saved values
-        [int]$startY                         # Vertical starting position on the tab
+        [System.Windows.Forms.TabPage]$tab,
+        [string]$prefix,
+        $settings,
+        [int]$startY
     )
 
-    $controls = @{}      # Hashtable to store and return the created controls
-    $y = $startY         # Initialize vertical position
+    $controls = @{ }
+    $y = $startY
 
     # === Backup Type Group ===
     $grpType = New-Object Windows.Forms.GroupBox
@@ -189,8 +189,19 @@ function New-ZipSection {
     $grpType.Controls.Add($rdoZip)
     $controls["Rdo${prefix}Zip"] = $rdoZip
 
-    $y += 55  # Leave space for group box
+    $y += 55
 
+    # === Explanation Label (shown dynamically below backup type) ===
+    $lblExplain = New-Object Windows.Forms.Label
+    $lblExplain.Text = ""
+    $lblExplain.Location = "10,$y"
+    $lblExplain.Size = '650,40' 
+    $lblExplain.TextAlign = 'TopLeft'
+    $lblExplain.ForeColor = "DarkBlue"
+    $tab.Controls.Add($lblExplain)
+    $controls["Lbl${prefix}Explain"] = $lblExplain
+
+    $y += 25
 
     # === File Mode Group ===
     $grpMode = New-Object Windows.Forms.GroupBox
@@ -198,6 +209,7 @@ function New-ZipSection {
     $grpMode.Location = "10,$y"
     $grpMode.Size = '320,45'
     $tab.Controls.Add($grpMode)
+    $controls["Grp${prefix}Mode"] = $grpMode
 
     $rdoMirror = New-Object Windows.Forms.RadioButton
     $rdoMirror.Text = "Mirror"
@@ -211,28 +223,28 @@ function New-ZipSection {
     $grpMode.Controls.Add($rdoAppend)
     $controls["Rdo${prefix}Append"] = $rdoAppend
 
-    $y += 55 
+    $y += 55
 
-    # === Default selection based on saved settings ===
-    if ($settings.Zip) {
-        $rdoZip.Checked = $true
-    } else {
-        $rdoFile.Checked = $true
-        if ($settings.Mirror) {
-            $rdoMirror.Checked = $true
-        } else {
-            $rdoAppend.Checked = $true
-        }
-    }
+    # === File Mode Explanation Label (shown only when File Mode is visible) ===
+    $lblModeExplain = New-Object Windows.Forms.Label
+    $lblModeExplain.Text = ""
+    $lblModeExplain.Location = "10,$y"
+    $lblModeExplain.Size = '650,40'
+    $lblModeExplain.TextAlign = 'TopLeft'
+    $lblModeExplain.ForeColor = "DarkGreen"
+    $tab.Controls.Add($lblModeExplain)
+    $controls["Lbl${prefix}ModeExplain"] = $lblModeExplain
 
-    # ========== Frequency Dropdown ==========
+    $y += 25
+
+    # === Frequency ===
     $lblFreq = New-Object Windows.Forms.Label
     $lblFreq.Text = "Frequency:"
     $lblFreq.Location = "10,$y"
     $tab.Controls.Add($lblFreq)
 
     $cmbFreq = New-Object Windows.Forms.ComboBox
-    $cmbFreq.Items.AddRange(@("Daily", "Weekly", "Monthly"))  # Add options
+    $cmbFreq.Items.AddRange(@("Daily", "Weekly", "Monthly"))
     $cmbFreq.Size = '100,20'
     $cmbFreq.Location = "160,$y"
     $cmbFreq.DropDownStyle = 'DropDownList'
@@ -241,7 +253,7 @@ function New-ZipSection {
     $controls["Cmb${prefix}Freq"] = $cmbFreq
     $y += 30
 
-    # ========== Zip Name ==========
+    # === Zip Name ===
     $lblName = New-Object Windows.Forms.Label
     $lblName.Text = "Zip Backup Name:"
     $lblName.Location = "10,$y"
@@ -255,7 +267,7 @@ function New-ZipSection {
     $controls["Txt${prefix}ZipName"] = $txtName
     $y += 30
 
-    # ========== Keep Count ==========
+    # === Keep Count ===
     $lblKeep = New-Object Windows.Forms.Label
     $lblKeep.Text = "Zips to keep:"
     $lblKeep.Location = "10,$y"
@@ -269,9 +281,97 @@ function New-ZipSection {
     $controls["Num${prefix}Keep"] = $numKeep
     $y += 30
 
-    return @{ Controls = $controls; EndY = $y }
-}
+    # === Group Zip-related controls for toggling ===
+    $zipControls = @($lblFreq, $cmbFreq, $lblName, $txtName, $lblKeep, $numKeep)
 
+    # === Attach zip controls and mode references via Tag for event safety ===
+    $rdoFile.Tag = @{ Label = $lblExplain; ZipControls = $zipControls; ModeGroup = $grpMode; ModeLabel = $lblModeExplain }
+    $rdoZip.Tag  = @{ Label = $lblExplain; ZipControls = $zipControls; ModeGroup = $grpMode; ModeLabel = $lblModeExplain }
+
+    $rdoMirror.Tag = $lblModeExplain
+    $rdoAppend.Tag = $lblModeExplain
+
+    # === Set default selections and mode explanation ===
+    if ($settings.Zip) {
+        $rdoZip.Checked = $true
+        $grpMode.Visible = $false
+        $lblExplain.Text = "Zip Backup:`nCompresses the source folder into a zip archive and stores it."
+        $zipControls | ForEach-Object { $_.Visible = $true }
+    } else {
+        $rdoFile.Checked = $true
+        $grpMode.Visible = $true
+        $lblExplain.Text = "File Backup:`nUses Robocopy to mirror or append files to the destination folder."
+        $zipControls | ForEach-Object { $_.Visible = $false }
+        if ($settings.Mirror) {
+            $rdoMirror.Checked = $true
+            $lblModeExplain.Text = "Mirror:`nDestination will exactly match the source (files deleted if missing in source)."
+        } else {
+            $rdoAppend.Checked = $true
+            $lblModeExplain.Text = "Append:`nAdds new files and overwrites changed ones without deleting anything in the destination."
+        }
+    }
+
+    # === Toggle file mode visibility and update info label ===
+    $rdoFile.Add_CheckedChanged({
+        if ($this.Checked -and $this.Tag.Label -is [System.Windows.Forms.Label]) {
+            $this.Tag.Label.Text = "File Backup:`nUses Robocopy to mirror or append files to the destination folder."
+        }
+
+        $this.Tag.ModeGroup.Visible = $true
+        $this.Tag.ModeLabel.Visible = $true
+        $this.Tag.ZipControls | ForEach-Object { $_.Visible = $false }
+    })
+
+    $rdoZip.Add_CheckedChanged({
+        if ($this.Checked -and $this.Tag.Label -is [System.Windows.Forms.Label]) {
+            # Get the zip name, frequency, and keep count from controls
+            $zipName = $this.Tag.ZipControls | Where-Object { $_ -is [System.Windows.Forms.TextBox] } | Select-Object -First 1
+            $freqBox = $this.Tag.ZipControls | Where-Object { $_ -is [System.Windows.Forms.ComboBox] } | Select-Object -First 1
+            $keepBox = $this.Tag.ZipControls | Where-Object { $_ -is [System.Windows.Forms.NumericUpDown] } | Select-Object -First 1
+
+            $name = if ($zipName) { $zipName.Text } else { "<name>" }
+            $freq = if ($freqBox) { $freqBox.SelectedItem } else { "Daily" }
+            $keep = if ($keepBox) { $keepBox.Value } else { 2 }
+
+            # Generate suffix preview
+            $suffix = switch ($freq) {
+                "Daily"   { (Get-Date).DayOfWeek.ToString().Substring(0,3) }
+                "Weekly"  { (Get-Date).AddDays(-([int](Get-Date).DayOfWeek)).ToString("yyyy-MM-dd") }
+                "Monthly" { (Get-Date).ToString("MMM") }
+                default   { "Backup" }
+            }
+            $exampleFile = "$name-$suffix.zip"
+            $plural = if ($keep -eq 1) { "" } else { "s" }
+            $this.Tag.Label.Text = "Zip Backup:`nThis will overwrite the file '$exampleFile' in the destination folder.`nLatest $keep backup$plural will be kept, others will be deleted."
+        }
+
+        $this.Tag.ModeGroup.Visible = $false
+        $this.Tag.ModeLabel.Visible = $false
+        $this.Tag.ZipControls | ForEach-Object { $_.Visible = $true }
+    })
+
+
+
+    # === Mode explanation label updates on Mirror/Append selection ===
+    $rdoMirror.Add_CheckedChanged({
+        if ($this.Checked -and $this.Tag -is [System.Windows.Forms.Label]) {
+            $this.Tag.Text = "Mirror:`nDestination will exactly match the source (files deleted if missing in source)."
+        }
+
+    })
+
+    $rdoAppend.Add_CheckedChanged({
+        if ($this.Checked -and $this.Tag -is [System.Windows.Forms.Label]) {
+            $this.Tag.Text = "Append:`nAdds new files and overwrites changed ones without deleting anything in the destination."
+        }
+    })
+
+    # Return both controls and the final y-position
+    return @{
+        Controls = $controls
+        EndY     = $y
+    }
+}
 
 
 # Adds source/destination path controls and zip backup settings to a tab for a given provider.
@@ -583,41 +683,52 @@ function Invoke-FileBackup {
     $process.Dispose()
 }
 
+
+# Performs an append-style file backup using Robocopy and logs progress in the GUI.
 function Invoke-AppendBackup {
     param (
-        [string]$source,
-        [string]$dest,
-        $logBox,
-        $progressBar
+        [string]$source,         # Source directory to back up
+        [string]$dest,           # Destination directory for files
+        $logBox,                 # TextBox control to show log output in the GUI
+        $progressBar             # ProgressBar control to reflect copy progress
     )
 
+    # Notify user in the log window
     $logBox.AppendText("Running Robocopy (Append mode)...`r`n")
 
+    # Prepare Robocopy process configuration
     $psi = New-Object System.Diagnostics.ProcessStartInfo
     $psi.FileName = "robocopy.exe"
-    $psi.Arguments = "`"$source`" `"$dest`" /E /Z /R:3 /W:5 /MT:8 /TEE /NDL /NFL /XX"
+    $psi.Arguments = "`"$source`" `"$dest`" /E /Z /R:3 /W:5 /MT:8 /TEE /NDL /NFL /XX"  # /XX prevents deletion
     $psi.RedirectStandardOutput = $true
     $psi.UseShellExecute = $false
     $psi.CreateNoWindow = $true
 
+    # Start the Robocopy process
     $process = New-Object System.Diagnostics.Process
     $process.StartInfo = $psi
     $null = $process.Start()
 
+    # Read Robocopy output and update GUI log and progress
     $count = 0
     while (-not $process.StandardOutput.EndOfStream) {
         $line = $process.StandardOutput.ReadLine()
         $logBox.AppendText("$line`r`n")
         $count++
-        $progressBar.Value = [Math]::Min(100, ($count % 100))
+        $progressBar.Value = [Math]::Min(100, ($count % 100))  # Cycle progress bar to show activity
         $logBox.SelectionStart = $logBox.Text.Length
         $logBox.ScrollToCaret()
         [System.Windows.Forms.Application]::DoEvents()
     }
 
+    # Wait for process to fully finish
     $process.WaitForExit()
     $progressBar.Value = 100
+
+    # Log completion status
     Write-Log -logBox $logBox -message "Robocopy (Append) finished with exit code $($process.ExitCode)`r`n"
+
+    # Clean up
     $process.Dispose()
 }
 
@@ -797,7 +908,7 @@ function Main {
     # Cancel handler
     $gui.BtnCancel.Add_Click({ $gui.Form.Close() })
 
-    # Backup + Shutdown handler
+    # Backup handler
     $gui.BtnBackup.Add_Click({
         Run-AllBackups -gui $gui -cloud_providers $cloud_providers -settingsPath $SETTINGSPATH
     })
