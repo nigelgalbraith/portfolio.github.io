@@ -186,7 +186,7 @@ function Get-ValidBackupJobs {
         }
 
         $provider = $cloud_providers.Providers[$job.Key]
-        $matches = $provider.Destinations | Where-Object { $job.Dest -like "*$_*" }
+        $matches = $provider.Destinations | Where-Object { $_ -eq $job.Dest }
 
         if (-not $matches) {
             $expected = $provider.Destinations -join ", "

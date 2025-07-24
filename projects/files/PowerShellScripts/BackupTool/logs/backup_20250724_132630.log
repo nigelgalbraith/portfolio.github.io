@@ -1,0 +1,4 @@
+[2025-07-24 13:28:11] [ERROR] Job 'MegaNZ': Destination must include one of: Mega
+[2025-07-24 13:28:11] [ERROR] Job 'Google': Destination must include one of: Google Drive, DriveFS
+[2025-07-24 13:28:11] [ERROR] Job 'Dropbox': Destination must include one of: Dropbox
+[2025-07-24 13:28:11] [ERROR] One or more jobs are invalid. Backup cancelled.

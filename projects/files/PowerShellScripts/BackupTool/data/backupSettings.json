@@ -1,13 +1,13 @@
 {
     "MegaNZ":  {
-                   "Append":  true,
-                   "Mirror":  false,
-                   "Source":  "",
+                   "Append":  false,
+                   "Mirror":  true,
+                   "Source":  "D:\\Documents\\MegaSync",
                    "Name":  "",
                    "Freq":  null,
                    "Zip":  false,
                    "Keep":  2,
-                   "Dest":  ""
+                   "Dest":  "D:\\Documents\\Mega"
                },
     "Dropbox":  {
                     "Append":  false,

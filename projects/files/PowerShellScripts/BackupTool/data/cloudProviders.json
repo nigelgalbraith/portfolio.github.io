@@ -2,7 +2,7 @@
   "Google": {
     "Prefix": "GD",
     "Label": "Google Drive",
-    "Destinations": ["Google Drive", "DriveFS"],
+    "Destinations": ["D:\\Documents\\Google Drive"],
     "Default": {
       "Source": "",
       "Dest": "",
@@ -15,7 +15,7 @@
   "Dropbox": {
     "Prefix": "DB",
     "Label": "Dropbox",
-    "Destinations": ["Dropbox"],
+    "Destinations": ["C:\\Users\\Lenovo\\Dropbox"],
     "Default": {
       "Source": "",
       "Dest": "",
@@ -27,13 +27,13 @@
   },
   "MegaNZ": {
     "Prefix": "MG",
-    "Label": "MegaNZ",
-    "Destinations": ["MegaNZ"],
+    "Label": "Mega",
+    "Destinations": ["D:\\Documents\\Mega"],
     "Default": {
       "Source": "",
       "Dest": "",
       "Zip": false,
-      "Name": "MegaNZ",
+      "Name": "Mega",
       "Freq": "Daily",
       "Keep": 3
     }
