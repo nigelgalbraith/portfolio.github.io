@@ -4,63 +4,84 @@
 # Paths
 $SETTINGSPATH = "$PSScriptRoot\data\backupSettings.json"
 $PROVIDERSPATH = "$PSScriptRoot\data\cloudProviders.json"
+
+# Log File
 $LOGFOLDER = "$PSScriptRoot\logs"
 $LOGFILENAME = "backup_{0}.log" -f (Get-Date -Format "yyyyMMdd_HHmmss")
 $LOGFILEPATH = Join-Path $LOGFOLDER $LOGFILENAME
+$LOGS_TO_KEEP = 10
 
-# Form Dimensions
-$FORM_WIDTH = 700
-$FORM_HEIGHT = 850
-$TAB_CONTROL_WIDTH = 690
-$TAB_CONTROL_HEIGHT = 380
-$LOG_BOX_HEIGHT = 280
+# Layout
+$LAYOUT = @{
+    # Form
+    FormWidth         = 710
+    FormHeight        = 850
+    StartPosition     = 'CenterScreen'
 
-# Control Positions
-$TAB_CONTROL_X = 10
-$TAB_CONTROL_Y = 10
-$PROGRESS_BAR_Y = 400
-$LOG_BOX_Y = 490
-$BUTTONS_START_Y = 440
+    # Fonts
+    DefaultFont       = 'Microsoft Sans Serif, 8pt'
+    HeaderFont        = 'Microsoft Sans Serif, 10pt, style=Bold'
+    LogFont           = 'Consolas, 9pt'
 
-# Backup Settings
-$DEFAULT_FREQUENCIES = @("Daily", "Weekly", "Monthly")
-$DEFAULT_KEEP_COUNT = 2
-$SYNC_WAIT_SECONDS = 10
-$SYNC_CHECK_INTERVAL = 5
-$POST_BACKUP_DELAY = 3
+    # Tab Control
+    TabControlX       = 10
+    TabControlY       = 10
+    TabControlWidth   = 690
+    TabControlHeight  = 390
 
-# UI Colors
-$LOG_BOX_BACK_COLOR = "Black"
-$LOG_BOX_FORE_COLOR = "Lime"
-$EXPLAIN_TEXT_COLOR = "DarkBlue"
-$MODE_EXPLAIN_TEXT_COLOR = "DarkGreen"
+    # Label/TextBox/Browse
+    LabelWidth        = 150
+    TextBoxWidth      = 390
+    BrowseButtonWidth = 80
+    ControlHeight     = 20
 
-# Fonts
-$HEADER_FONT = 'Microsoft Sans Serif, 10pt, style=Bold'
-$LOG_FONT = 'Consolas, 9pt'
-$DEFAULT_FONT = 'Microsoft Sans Serif, 8pt'
+    # Explain Labels
+    ExplainLabelWidth     = 650
+    ExplainLabelHeight    = 40
+    ExplainTextColor      = 'DarkBlue'
+    ModeExplainTextColor  = 'DarkGreen'
 
-# Button Dimensions
-$BTN_CANCEL_WIDTH = 120
-$BTN_BACKUP_WIDTH = 150
-$BTN_SHUTDOWN_WIDTH = 200
-$BTN_HEIGHT = 30
-$BTN_SPACING = 20
+    # GroupBoxes
+    GroupBoxWidth     = 320
+    GroupBoxHeight    = 45
 
-# Control Default Sizes
-$LABEL_WIDTH = 150
-$TEXTBOX_WIDTH = 390
-$BROWSE_BTN_WIDTH = 80
-$CONTROL_HEIGHT = 20
-$GROUPBOX_WIDTH = 320
-$GROUPBOX_HEIGHT = 45
-$EXPLAIN_LABEL_WIDTH = 650
-$EXPLAIN_LABEL_HEIGHT = 40
+    # Log Box
+    LogBoxY           = 490
+    LogBoxHeight      = 280
+    LogBoxBackColor   = 'Black'
+    LogBoxForeColor   = 'Lime'
+
+    # Progress Bar
+    ProgressBarY      = 400
+    ProgressBarHeight = 20
+
+    # Buttons
+    BtnHeight         = 30
+    BtnSpacing        = 20
+    BtnCancelWidth    = 120
+    BtnBackupWidth    = 150
+    BtnShutdownWidth  = 200
+    ButtonsStartY     = 440
+
+    # Defaults
+    DefaultFrequencies = @('Daily', 'Weekly', 'Monthly')
+    DefaultKeepCount   = 2
+
+    # Combo box
+    ComboBoxWidth = 100
+
+    # Numeric box
+    NumericWidth = 100
+}
+
 
 # Robocopy Parameters
-$ROBOCOPY_RETRIES = 3
-$ROBOCOPY_WAIT = 5
-$ROBOCOPY_THREADS = 8
+$COPYSETTINGS = @{
+    RobocopyRetries    = 3
+    RobocopyWait       = 5
+    RobocopyThreads    = 8
+    PostBackupDelay    = 3
+}
 # ===================================
 
 # ============ DEPENDENCIES ============
@@ -97,7 +118,7 @@ function Write-Log {
     # Log rotation
     $allLogs = Get-ChildItem -Path $LOGFOLDER -Filter "backup_*.log" | Sort-Object LastWriteTime -Descending
     if ($allLogs.Count -gt 10) {
-        $allLogs | Select-Object -Skip 10 | Remove-Item -Force
+        $allLogs | Select-Object -Skip $LOGS_TO_KEEP | Remove-Item -Force
     }
 }
 
@@ -292,18 +313,19 @@ function Invoke-FileCopyOperation {
         [string]$dest,
         [string]$mode,
         $logBox,
-        $progressBar
+        $progressBar,
+        $copySettings
     )
 
     # Common Robocopy arguments
     $baseArgs = @(
-        "/Z",                    # Use restartable mode
-        "/R:$ROBOCOPY_RETRIES",  # Number of retry attempts on failure
-        "/W:$ROBOCOPY_WAIT",     # Wait time between retries
-        "/MT:$ROBOCOPY_THREADS", # Multithreaded copy
-        "/TEE",                  # Output to both console and log
-        "/NDL",                  # No directory listing
-        "/NFL"                   # No file listing
+        "/Z",                                   # Use restartable mode
+        "/R:$($copySettings.RobocopyRetries)",  # Number of retry attempts on failure
+        "/W:$($copySettings.RobocopyWait)",     # Wait time between retries
+        "/MT:$($copySettings.RobocopyThreads)", # Multithreaded copy
+        "/TEE",                                 # Output to both console and log
+        "/NDL",                                 # No directory listing
+        "/NFL"                                  # No file listing
     )
 
     # Mode-specific arguments
@@ -485,7 +507,8 @@ function Manage-BackupRetention {
 function Wait-ForSyncCompletion {
     param (
         $paths,
-        $logBox
+        $logBox,
+        $copySettings
     )
 
     # Log initial status
@@ -514,7 +537,7 @@ function Wait-ForSyncCompletion {
         if ($allClear) { break }
 
         # Wait before rechecking
-        Start-Sleep -Seconds $SYNC_CHECK_INTERVAL
+        Start-Sleep -Seconds $copySettings.SyncCheckInterval
     }
 
     # Log completion
@@ -526,6 +549,8 @@ function Wait-ForSyncCompletion {
 
 # Creates and returns the main form for the Cloud Backup Tool GUI.
 function New-MainForm {
+    param ($layout)
+
     # Create a new Windows Form
     $form = New-Object Windows.Forms.Form
 
@@ -533,13 +558,13 @@ function New-MainForm {
     $form.Text = "Cloud Backup Tool"
 
     # Set form dimensions
-    $form.Size = New-Object Drawing.Size($FORM_WIDTH, $FORM_HEIGHT)
+    $form.Size = New-Object Drawing.Size($layout.FormWidth, $layout.FormHeight)
 
     # Center the form on the screen
-    $form.StartPosition = "CenterScreen"
+    $form.StartPosition = $layout.StartPosition
 
     # Apply default font
-    $form.Font = $DEFAULT_FONT
+    $form.Font = $layout.DefaultFont
 
     return $form
 }
@@ -547,14 +572,19 @@ function New-MainForm {
 
 # Creates a tab control containing one tab per provider, each populated with its configured input controls.
 function New-ProviderTabs {
-    param ($providers, $settings, [ref]$controlMap)
+    param (
+        $providers,
+        $settings,
+        [ref]$controlMap,
+        $layout 
+    )
 
     # Create the main tab control
     $tabControl = New-Object Windows.Forms.TabControl
 
-    # Set size and position of the tab control
-    $tabControl.Size = New-Object Drawing.Size($TAB_CONTROL_WIDTH, $TAB_CONTROL_HEIGHT)
-    $tabControl.Location = New-Object Drawing.Point($TAB_CONTROL_X, $TAB_CONTROL_Y)
+    # Set size and position of the tab control using layout values
+    $tabControl.Size = New-Object Drawing.Size($layout.TabControlWidth, $layout.TabControlHeight)
+    $tabControl.Location = New-Object Drawing.Point($layout.TabControlX, $layout.TabControlY)
 
     foreach ($entry in $providers.Providers.GetEnumerator()) {
         # Create a tab page for the provider
@@ -562,7 +592,7 @@ function New-ProviderTabs {
         $tab.Text = $entry.Value.Label
 
         # Add provider-specific controls to the tab
-        $controls = Add-ProviderControls -tab $tab -prefix $entry.Value.Prefix -settings $settings.$($entry.Key)
+        $controls = Add-ProviderControls -tab $tab -prefix $entry.Value.Prefix -settings $settings.$($entry.Key) -layout $layout
         $tabControl.TabPages.Add($tab)
 
         # Store references to created controls in the shared map
@@ -580,7 +610,8 @@ function Add-ProviderControls {
     param (
         $tab,
         [string]$prefix,
-        $settings
+        $settings,
+        $layout
     )
 
     $controls = @{}
@@ -589,7 +620,7 @@ function Add-ProviderControls {
     # Header label
     $lblHeader = New-Object Windows.Forms.Label
     $lblHeader.Text = $tab.Text
-    $lblHeader.Font = $HEADER_FONT
+    $lblHeader.Font = $layout.HeaderFont
     $lblHeader.Location = New-Object Drawing.Point(10, $y)
     $lblHeader.Size = New-Object Drawing.Size(300, 25)
     $tab.Controls.Add($lblHeader)
@@ -597,7 +628,7 @@ function Add-ProviderControls {
 
     # Source and Destination path rows
     foreach ($type in @("Source", "Dest")) {
-        $row = New-LabelTextBrowseRow -label "$($tab.Text) $type" -value $settings.$type -y $y
+        $row = New-LabelTextBrowseRow -label "$($tab.Text) $type" -value $settings.$type -y $y -layout $layout
         $tab.Controls.AddRange(@($row.Label, $row.TextBox, $row.Button))
         $controls["Txt${prefix}${type}"] = $row.TextBox
         $y += 30
@@ -607,7 +638,7 @@ function Add-ProviderControls {
     $grpType = New-Object Windows.Forms.GroupBox
     $grpType.Text = "Backup Type"
     $grpType.Location = New-Object Drawing.Point(10, $y)
-    $grpType.Size = New-Object Drawing.Size($GROUPBOX_WIDTH, $GROUPBOX_HEIGHT)
+    $grpType.Size = New-Object Drawing.Size($layout.GroupBoxWidth, $layout.GroupBoxHeight)
     $tab.Controls.Add($grpType)
 
     # Radio buttons: File vs Zip
@@ -628,9 +659,9 @@ function Add-ProviderControls {
     $lblExplain = New-Object Windows.Forms.Label
     $lblExplain.Text = ""
     $lblExplain.Location = New-Object Drawing.Point(10, $y)
-    $lblExplain.Size = New-Object Drawing.Size($EXPLAIN_LABEL_WIDTH, $EXPLAIN_LABEL_HEIGHT)
+    $lblExplain.Size = New-Object Drawing.Size($layout.ExplainLabelWidth, $layout.ExplainLabelHeight)
     $lblExplain.TextAlign = 'TopLeft'
-    $lblExplain.ForeColor = $EXPLAIN_TEXT_COLOR
+    $lblExplain.ForeColor = $layout.ExplainTextColor
     $tab.Controls.Add($lblExplain)
     $controls["Lbl${prefix}Explain"] = $lblExplain
     $y += 25
@@ -639,7 +670,7 @@ function Add-ProviderControls {
     $grpMode = New-Object Windows.Forms.GroupBox
     $grpMode.Text = "File Mode"
     $grpMode.Location = New-Object Drawing.Point(10, $y)
-    $grpMode.Size = New-Object Drawing.Size($GROUPBOX_WIDTH, $GROUPBOX_HEIGHT)
+    $grpMode.Size = New-Object Drawing.Size($layout.GroupBoxWidth, $layout.GroupBoxHeight)
     $tab.Controls.Add($grpMode)
     $controls["Grp${prefix}Mode"] = $grpMode
 
@@ -660,9 +691,9 @@ function Add-ProviderControls {
     $lblModeExplain = New-Object Windows.Forms.Label
     $lblModeExplain.Text = ""
     $lblModeExplain.Location = New-Object Drawing.Point(10, $y)
-    $lblModeExplain.Size = New-Object Drawing.Size($EXPLAIN_LABEL_WIDTH, $EXPLAIN_LABEL_HEIGHT)
+    $lblModeExplain.Size = New-Object Drawing.Size($layout.ExplainLabelWidth, $layout.ExplainLabelHeight)
     $lblModeExplain.TextAlign = 'TopLeft'
-    $lblModeExplain.ForeColor = $MODE_EXPLAIN_TEXT_COLOR
+    $lblModeExplain.ForeColor = $layout.ModeExplainTextColor
     $tab.Controls.Add($lblModeExplain)
     $controls["Lbl${prefix}ModeExplain"] = $lblModeExplain
     $y += 25
@@ -674,11 +705,11 @@ function Add-ProviderControls {
     $tab.Controls.Add($lblFreq)
 
     $cmbFreq = New-Object Windows.Forms.ComboBox
-    $cmbFreq.Items.AddRange($DEFAULT_FREQUENCIES)
+    $cmbFreq.Items.AddRange($layout.DefaultFrequencies)
     $cmbFreq.DropDownStyle = 'DropDownList'
     $cmbFreq.SelectedItem = $settings.Freq
     $cmbFreq.Location = New-Object Drawing.Point(160, $y)
-    $cmbFreq.Size = New-Object Drawing.Size(100, $CONTROL_HEIGHT)
+    $cmbFreq.Size = New-Object Drawing.Size($layout.ComboBoxWidth, $layout.ControlHeight)
     $tab.Controls.Add($cmbFreq)
     $controls["Cmb${prefix}Freq"] = $cmbFreq
     $y += 30
@@ -692,7 +723,8 @@ function Add-ProviderControls {
     $txtName = New-Object Windows.Forms.TextBox
     $txtName.Text = $settings.Name
     $txtName.Location = New-Object Drawing.Point(160, $y)
-    $txtName.Size = New-Object Drawing.Size($TEXTBOX_WIDTH, $CONTROL_HEIGHT)
+    $txtName.Size = New-Object Drawing.Size($layout.TextBoxWidth, $layout.ControlHeight)
+
     $tab.Controls.Add($txtName)
     $controls["Txt${prefix}ZipName"] = $txtName
     $y += 30
@@ -704,9 +736,9 @@ function Add-ProviderControls {
     $tab.Controls.Add($lblKeep)
 
     $numKeep = New-Object Windows.Forms.NumericUpDown
-    $numKeep.Value = if ($settings.Keep) { $settings.Keep } else { $DEFAULT_KEEP_COUNT }
+    $numKeep.Value = if ($settings.Keep) { $settings.Keep } else { $layout.default_keep_count }
     $numKeep.Location = New-Object Drawing.Point(160, $y)
-    $numKeep.Size = New-Object Drawing.Size(100, $CONTROL_HEIGHT)
+    $numKeep.Size = New-Object Drawing.Size($layout.NumericWidth, $layout.ControlHeight)
     $tab.Controls.Add($numKeep)
     $controls["Num${prefix}Keep"] = $numKeep
 
@@ -754,7 +786,7 @@ function Add-ProviderControls {
 
             $name = if ($zipName) { $zipName.Text } else { "<name>" }
             $freq = if ($freqBox) { $freqBox.SelectedItem } else { "Daily" }
-            $keep = if ($keepBox) { $keepBox.Value } else { $DEFAULT_KEEP_COUNT }
+            $keep = if ($keepBox) { $keepBox.Value } else { $layout.default_keep_count }
 
             $suffix = switch ($freq) {
                 "Daily"   { (Get-Date).DayOfWeek.ToString().Substring(0,3) }
@@ -793,26 +825,27 @@ function New-LabelTextBrowseRow {
     param (
         [string]$label,
         [string]$value,
-        [int]$y
+        [int]$y,
+        $layout
     )
 
     # Create label
     $lbl = New-Object Windows.Forms.Label
     $lbl.Text = "${label}:"
     $lbl.Location = New-Object Drawing.Point(10, $y)
-    $lbl.Size = New-Object Drawing.Size($LABEL_WIDTH, $CONTROL_HEIGHT)
+    $lbl.Size = New-Object Drawing.Size($layout.LabelWidth, $layout.ControlHeight)
 
     # Create textbox with default value
     $txtBox = New-Object Windows.Forms.TextBox
     $txtBox.Text = $value
     $txtBox.Location = New-Object Drawing.Point(160, $y)
-    $txtBox.Size = New-Object Drawing.Size($TEXTBOX_WIDTH, $CONTROL_HEIGHT)
+    $txtBox.Size = New-Object Drawing.Size($layout.TextBoxWidth, $layout.ControlHeight)
 
     # Create browse button linked to the textbox
     $btn = New-Object Windows.Forms.Button
     $btn.Text = "Browse"
     $btn.Location = New-Object Drawing.Point(560, $y)
-    $btn.Size = New-Object Drawing.Size($BROWSE_BTN_WIDTH, $CONTROL_HEIGHT)
+    $btn.Size = New-Object Drawing.Size($layout.BrowseButtonWidth, $layout.ControlHeight)
     $btn.Tag = $txtBox
 
     # Open folder browser dialog on click
@@ -850,14 +883,17 @@ function Browse-Folder {
 
 # Creates and returns a progress bar positioned below the tab control.
 function New-ProgressBar {
+    param ($layout)
+
     # Create progress bar control
     $progressBar = New-Object Windows.Forms.ProgressBar
 
     # Set location relative to tab control
-    $progressBar.Location = New-Object Drawing.Point($TAB_CONTROL_X, $PROGRESS_BAR_Y)
+    $progressBar.Location = New-Object Drawing.Point($layout.TabControlX, $layout.ProgressBarY)
 
     # Set size slightly narrower than the tab control
-    $progressBar.Size = New-Object Drawing.Size($($TAB_CONTROL_WIDTH - 10), 20)
+    $progressBar.Size = New-Object Drawing.Size($($layout.TabControlWidth - 20), $layout.ProgressBarHeight)
+
 
     # Define min and max range
     $progressBar.Minimum = 0
@@ -869,6 +905,8 @@ function New-ProgressBar {
 
 # Creates and returns a read-only multi-line text box for displaying log output.
 function New-LogBox {
+    param ($layout)
+
     # Create the log text box
     $logBox = New-Object Windows.Forms.TextBox
 
@@ -878,13 +916,13 @@ function New-LogBox {
     $logBox.ReadOnly = $true
 
     # Apply visual styling
-    $logBox.BackColor = $LOG_BOX_BACK_COLOR
-    $logBox.ForeColor = $LOG_BOX_FORE_COLOR
-    $logBox.Font = $LOG_FONT
+    $logBox.BackColor = $layout.LogBoxBackColor
+    $logBox.ForeColor = $layout.LogBoxForeColor
+    $logBox.Font      = $layout.LogFont
 
     # Set position and size
-    $logBox.Location = New-Object Drawing.Point($TAB_CONTROL_X, $LOG_BOX_Y)
-    $logBox.Size = New-Object Drawing.Size($($TAB_CONTROL_WIDTH - 10), $LOG_BOX_HEIGHT)
+    $logBox.Location = New-Object Drawing.Point($layout.TabControlX, $layout.LogBoxY)
+    $logBox.Size     = New-Object Drawing.Size(($layout.TabControlWidth - 10), $layout.LogBoxHeight)
 
     return $logBox
 }
@@ -892,27 +930,32 @@ function New-LogBox {
 
 # Creates and returns Cancel, Backup, and Backup & Shutdown buttons centered at the bottom of the form.
 function New-Buttons {
+    param ($layout)
+
     # Calculate total button width and center position
-    $totalWidth = $BTN_CANCEL_WIDTH + $BTN_SPACING + $BTN_BACKUP_WIDTH + $BTN_SPACING + $BTN_SHUTDOWN_WIDTH
-    $startX = [math]::Floor(($FORM_WIDTH - $totalWidth) / 2)
+    $totalWidth = $layout.BtnCancelWidth + $layout.BtnSpacing + $layout.BtnBackupWidth + $layout.BtnSpacing + $layout.BtnShutdownWidth
+    $startX = [math]::Floor(($layout.FormWidth - $totalWidth) / 2)
 
     # Create Cancel button
     $btnCancel = New-Object Windows.Forms.Button
     $btnCancel.Text = "Cancel"
-    $btnCancel.Size = New-Object Drawing.Size($BTN_CANCEL_WIDTH, $BTN_HEIGHT)
-    $btnCancel.Location = New-Object Drawing.Point($startX, $BUTTONS_START_Y)
+    $btnCancel.Size = New-Object Drawing.Size($layout.BtnCancelWidth, $layout.BtnHeight)
+    $btnCancel.Location = New-Object Drawing.Point($startX, $layout.ButtonsStartY)
 
     # Create Backup button
     $btnBackup = New-Object Windows.Forms.Button
     $btnBackup.Text = "Backup"
-    $btnBackup.Size = New-Object Drawing.Size($BTN_BACKUP_WIDTH, $BTN_HEIGHT)
-    $btnBackup.Location = New-Object Drawing.Point($($startX + $BTN_CANCEL_WIDTH + $BTN_SPACING), $BUTTONS_START_Y)
+    $btnBackup.Size = New-Object Drawing.Size($layout.BtnBackupWidth, $layout.BtnHeight)
+    $btnBackup.Location = New-Object Drawing.Point(($startX + $layout.BtnCancelWidth + $layout.BtnSpacing), $layout.ButtonsStartY)
 
     # Create Backup & Shutdown button
     $btnShutdown = New-Object Windows.Forms.Button
     $btnShutdown.Text = "Backup && Shutdown"
-    $btnShutdown.Size = New-Object Drawing.Size($BTN_SHUTDOWN_WIDTH, $BTN_HEIGHT)
-    $btnShutdown.Location = New-Object Drawing.Point($($startX + $BTN_CANCEL_WIDTH + $BTN_SPACING + $BTN_BACKUP_WIDTH + $BTN_SPACING), $BUTTONS_START_Y)
+    $btnShutdown.Size = New-Object Drawing.Size($layout.BtnShutdownWidth, $layout.BtnHeight)
+    $btnShutdown.Location = New-Object Drawing.Point(
+        ($startX + $layout.BtnCancelWidth + $layout.BtnSpacing + $layout.BtnBackupWidth + $layout.BtnSpacing),
+        $layout.ButtonsStartY
+    )
 
     # Return button references in a hashtable
     return @{
@@ -929,7 +972,8 @@ function New-Buttons {
 function Start-BackupProcess {
     param (
         $jobs,
-        $gui
+        $gui,
+        $copySettings
     )
 
     foreach ($job in $jobs) {
@@ -942,19 +986,20 @@ function Start-BackupProcess {
             # Determine file copy mode and run file-based backup
             $mode = if ($job.Mirror) { "Mirror" } else { "Append" }
             Invoke-FileCopyOperation -source $job.Source -dest $job.Dest `
-                -mode $mode -logBox $gui.LogBox -progressBar $gui.ProgressBar
+                -mode $mode -logBox $gui.LogBox -progressBar $gui.ProgressBar `
+                -copySettings $CopySettings
         }
     }
 
     # Gather destination paths and monitor sync status
     $destPaths = $jobs.Dest | Where-Object { -not [string]::IsNullOrEmpty($_) }
     if ($destPaths) {
-        Wait-ForSyncCompletion -paths $destPaths -logBox $gui.LogBox
+        Wait-ForSyncCompletion -paths $destPaths -logBox $gui.LogBox -interval $CopySettings.SyncCheckInterval
     }
 
     # Log completion and wait before closing
     Write-Log -logBox $gui.LogBox -message "Backup process completed"
-    Start-Sleep -Seconds $POST_BACKUP_DELAY
+    Start-Sleep -Seconds $CopySettings.PostBackupDelay
 }
 
 
@@ -968,12 +1013,12 @@ function Main {
         $settings = Initialize-BackupSettings -settingsPath $SETTINGSPATH -providers $cloud_providers
 
         # Create main form and UI components
-        $form = New-MainForm
-        $controlMap = @{}
-        $tabControl = New-ProviderTabs -providers $cloud_providers -settings $settings -controlMap ([ref]$controlMap)
-        $progressBar = New-ProgressBar
-        $logBox = New-LogBox
-        $buttons = New-Buttons
+        $form        = New-MainForm -layout $LAYOUT
+        $controlMap  = @{}
+        $tabControl  = New-ProviderTabs -providers $cloud_providers -settings $settings -controlMap ([ref]$controlMap) -layout $LAYOUT
+        $progressBar = New-ProgressBar -layout $LAYOUT
+        $logBox      = New-LogBox -layout $LAYOUT
+        $buttons     = New-Buttons -layout $LAYOUT
 
         # Add components to form
         $form.Controls.Add($tabControl)
@@ -1022,7 +1067,7 @@ function Main {
             }
 
             # Run backup and close the form
-            Start-BackupProcess -jobs $validJobs -gui $gui
+            Start-BackupProcess -jobs $validJobs -gui $gui -copySettings $CopySettings
             $gui.Form.Close()
         })
 
@@ -1045,7 +1090,7 @@ function Main {
             }
 
             # Run backup, then shut down the system
-            Start-BackupProcess -jobs $validJobs -gui $gui
+            Start-BackupProcess -jobs $validJobs -gui $gui -copySettings $CopySettings
             Write-Log -logBox $gui.LogBox -message "Initiating system shutdown..."
             Stop-Computer -Force
         })
