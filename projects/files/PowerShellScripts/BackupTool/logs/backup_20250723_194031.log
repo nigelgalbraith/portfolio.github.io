@@ -1,8 +1,0 @@
-[2025-07-23 19:40:33] [ERROR] Destination 'D:\Documents\New folder' is not allowed for provider 'Google Drive'.
-Valid paths must include: Google Drive, DriveFS
-[2025-07-23 19:40:34] [ERROR] Validation failed: one or more backup jobs have invalid configurations. Aborting all backups.
-[2025-07-23 19:40:34] [ERROR] ERROR: Unknown provider key ''. Backup skipped.
-[2025-07-23 19:40:34] [ERROR] ERROR: Unknown provider key ''. Backup skipped.
-[2025-07-23 19:40:34] [ERROR] Skipping sync check for '' — no destination.
-[2025-07-23 19:40:34] [ERROR] Skipping sync check for '' — no destination.
-[2025-07-23 19:40:34] [INFO] Checking sync status...

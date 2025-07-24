@@ -1,0 +1,67 @@
+[2025-07-24 12:45:26] [ERROR] Destination for '' must include: Google Drive, DriveFS
+[2025-07-24 12:45:28] [ERROR] Destination for '' must include: Dropbox
+[2025-07-24 12:45:29] [INFO] Starting Append operation from  to 
+[2025-07-24 12:45:29] [INFO] 
+[2025-07-24 12:45:29] [INFO] 2025/07/24 12:45:29 ERROR 123 (0x0000007B) Expanding Source Pathname 
+[2025-07-24 12:45:29] [INFO] The filename, directory name, or volume label syntax is incorrect.
+[2025-07-24 12:45:29] [INFO] 
+[2025-07-24 12:45:29] [INFO] 
+[2025-07-24 12:45:29] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:45:29] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 12:45:29] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:45:29] [INFO] 
+[2025-07-24 12:45:29] [INFO]   Started : Thursday, 24 July 2025 12:45:29 pm
+[2025-07-24 12:45:29] [INFO]    Source - 
+[2025-07-24 12:45:29] [INFO]      Dest - 
+[2025-07-24 12:45:29] [INFO] 
+[2025-07-24 12:45:29] [INFO]     Files : 
+[2025-07-24 12:45:30] [INFO]   Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] ERROR : Invalid Parameter #1 : ""
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]        Simple Usage :: ROBOCOPY source destination /MIR
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]              source :: Source Directory (drive:\path or \\server\share\path).
+[2025-07-24 12:45:30] [INFO]         destination :: Destination Dir  (drive:\path or \\server\share\path).
+[2025-07-24 12:45:30] [INFO]                /MIR :: Mirror a complete directory tree.
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]     For more usage information run ROBOCOPY /?
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]                                                           
+[2025-07-24 12:45:30] [INFO] ****  /MIR can DELETE files as well as copy them !
+[2025-07-24 12:45:30] [INFO] Append operation completed (Exit code: 16)
+[2025-07-24 12:45:30] [INFO] Starting Append operation from  to 
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] 2025/07/24 12:45:30 ERROR 123 (0x0000007B) Expanding Source Pathname 
+[2025-07-24 12:45:30] [INFO] The filename, directory name, or volume label syntax is incorrect.
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:45:30] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 12:45:30] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]   Started : Thursday, 24 July 2025 12:45:30 pm
+[2025-07-24 12:45:30] [INFO]    Source - 
+[2025-07-24 12:45:30] [INFO]      Dest - 
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]     Files : 
+[2025-07-24 12:45:30] [INFO]   Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO] ERROR : Invalid Parameter #1 : ""
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]        Simple Usage :: ROBOCOPY source destination /MIR
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]              source :: Source Directory (drive:\path or \\server\share\path).
+[2025-07-24 12:45:30] [INFO]         destination :: Destination Dir  (drive:\path or \\server\share\path).
+[2025-07-24 12:45:30] [INFO]                /MIR :: Mirror a complete directory tree.
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]     For more usage information run ROBOCOPY /?
+[2025-07-24 12:45:30] [INFO] 
+[2025-07-24 12:45:30] [INFO]                                                           
+[2025-07-24 12:45:30] [INFO] ****  /MIR can DELETE files as well as copy them !
+[2025-07-24 12:45:30] [INFO] Append operation completed (Exit code: 16)
+[2025-07-24 12:45:30] [INFO] Backup process completed

@@ -1,4 +1,4 @@
-﻿{
+{
     "MegaNZ":  {
                    "Append":  true,
                    "Mirror":  false,
@@ -6,7 +6,7 @@
                    "Name":  "",
                    "Freq":  null,
                    "Zip":  false,
-                   "Keep":  0,
+                   "Keep":  2,
                    "Dest":  ""
                },
     "Dropbox":  {

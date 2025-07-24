@@ -1,0 +1,63 @@
+[2025-07-24 12:34:09] [ERROR] Destination for '' must include: Dropbox
+[2025-07-24 12:34:11] [INFO] Starting Append operation from  to 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] 2025/07/24 12:34:11 ERROR 123 (0x0000007B) Expanding Source Pathname 
+[2025-07-24 12:34:11] [INFO] The filename, directory name, or volume label syntax is incorrect.
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 12:34:11] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]   Started : Thursday, 24 July 2025 12:34:11 pm
+[2025-07-24 12:34:11] [INFO]    Source - 
+[2025-07-24 12:34:11] [INFO]      Dest - 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]     Files : 
+[2025-07-24 12:34:11] [INFO]   Options : /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] ERROR : Invalid Parameter #1 : ""
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]        Simple Usage :: ROBOCOPY source destination /MIR
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]              source :: Source Directory (drive:\path or \\server\share\path).
+[2025-07-24 12:34:11] [INFO]         destination :: Destination Dir  (drive:\path or \\server\share\path).
+[2025-07-24 12:34:11] [INFO]                /MIR :: Mirror a complete directory tree.
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]     For more usage information run ROBOCOPY /?
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]                                                           
+[2025-07-24 12:34:11] [INFO] ****  /MIR can DELETE files as well as copy them !
+[2025-07-24 12:34:11] [INFO] Append operation completed (Exit code: 16)
+[2025-07-24 12:34:11] [INFO] Starting Mirror operation from D:\Documents\GoogleDriveSync to D:\Documents\Google Drive
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 12:34:11] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]   Started : Thursday, 24 July 2025 12:34:11 pm
+[2025-07-24 12:34:11] [INFO]    Source : D:\Documents\GoogleDriveSync\
+[2025-07-24 12:34:11] [INFO]      Dest : D:\Documents\Google Drive\
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]     Files : *.*
+[2025-07-24 12:34:11] [INFO] 	    
+[2025-07-24 12:34:11] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:8 /R:3 /W:5 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-24 12:34:11] [INFO]     Dirs :       838       838       838         0         0         0
+[2025-07-24 12:34:11] [INFO]    Files :      4085         0      4086         0         0         0
+[2025-07-24 12:34:11] [INFO]    Bytes :   4.016 g         0   4.019 g         0         0         0
+[2025-07-24 12:34:11] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-24 12:34:11] [INFO]    Ended : Thursday, 24 July 2025 12:34:11 pm
+[2025-07-24 12:34:11] [INFO] 
+[2025-07-24 12:34:11] [INFO] Mirror operation completed (Exit code: 0)
+[2025-07-24 12:34:11] [INFO] Monitoring sync status...
+[2025-07-24 12:34:12] [INFO] All sync operations completed
+[2025-07-24 12:34:12] [INFO] Backup process completed
