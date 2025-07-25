@@ -1,0 +1,61 @@
+[2025-07-24 21:00:52] [INFO] Starting Mirror operation from D:\Documents\MegaSync to D:\Documents\Mega
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 21:00:52] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]   Started : Thursday, 24 July 2025 9:00:52 pm
+[2025-07-24 21:00:52] [INFO]    Source : D:\Documents\MegaSync\
+[2025-07-24 21:00:52] [INFO]      Dest : D:\Documents\Mega\
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]     Files : *.*
+[2025-07-24 21:00:52] [INFO] 	    
+[2025-07-24 21:00:52] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:8 /R:3 /W:5 
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-24 21:00:52] [INFO]     Dirs :       707       707       707         0         0         0
+[2025-07-24 21:00:52] [INFO]    Files :      3874         0      3877         0         0         0
+[2025-07-24 21:00:52] [INFO]    Bytes :   1.670 g         0   1.670 g         0         0         0
+[2025-07-24 21:00:52] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-24 21:00:52] [INFO]    Ended : Thursday, 24 July 2025 9:00:52 pm
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] Mirror operation completed (Exit code: 0)
+[2025-07-24 21:00:52] [INFO] Starting Mirror operation from D:\Documents\GoogleDriveSync to D:\Documents\Google Drive
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-24 21:00:52] [INFO] -------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]   Started : Thursday, 24 July 2025 9:00:52 pm
+[2025-07-24 21:00:52] [INFO]    Source : D:\Documents\GoogleDriveSync\
+[2025-07-24 21:00:52] [INFO]      Dest : D:\Documents\Google Drive\
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]     Files : *.*
+[2025-07-24 21:00:52] [INFO] 	    
+[2025-07-24 21:00:52] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:8 /R:3 /W:5 
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] ------------------------------------------------------------------------------
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-24 21:00:52] [INFO]     Dirs :       132       132       132         0         0         0
+[2025-07-24 21:00:52] [INFO]    Files :       206         0       206         0         0         0
+[2025-07-24 21:00:52] [INFO]    Bytes :   2.349 g         0   2.349 g         0         0         0
+[2025-07-24 21:00:52] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-24 21:00:52] [INFO]    Ended : Thursday, 24 July 2025 9:00:52 pm
+[2025-07-24 21:00:52] [INFO] 
+[2025-07-24 21:00:52] [INFO] Mirror operation completed (Exit code: 0)
+[2025-07-24 21:00:52] [INFO] Starting zip operation for D:\Documents\GitHub\portfolio.github.io
+[2025-07-24 21:00:52] [INFO] Removing existing zip: C:\Users\Lenovo\Dropbox\portfolio.github.io-Thu.zip
+[2025-07-24 21:01:40] [INFO] Successfully created zip: C:\Users\Lenovo\Dropbox\portfolio.github.io-Thu.zip
+[2025-07-24 21:01:40] [INFO] Monitoring sync status...
+[2025-07-24 21:01:41] [INFO] All sync operations completed
+[2025-07-24 21:01:41] [INFO] Backup process completed
+[2025-07-24 21:01:44] [INFO] Initiating system shutdown...

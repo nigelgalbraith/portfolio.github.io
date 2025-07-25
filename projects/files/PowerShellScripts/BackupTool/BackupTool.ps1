@@ -14,64 +14,67 @@ $LOGS_TO_KEEP = 10
 # Layout
 $LAYOUT = @{
     # Form
-    FormWidth         = 710
-    FormHeight        = 850
-    StartPosition     = 'CenterScreen'
+    FormWidth               = 710
+    FormHeight              = 850
+    StartPosition           = 'CenterScreen'
 
     # Fonts
-    DefaultFont       = 'Microsoft Sans Serif, 8pt'
-    HeaderFont        = 'Microsoft Sans Serif, 10pt, style=Bold'
-    LogFont           = 'Consolas, 9pt'
+    DefaultFont             = 'Microsoft Sans Serif, 8pt'
+    HeaderFont              = 'Microsoft Sans Serif, 10pt, style=Bold'
+    LogFont                 = 'Consolas, 9pt'
 
-    # Tab Control
-    TabControlX       = 10
-    TabControlY       = 10
-    TabControlWidth   = 690
-    TabControlHeight  = 390
+    # Widths
+    BrowseButtonWidth       = 80
+    BtnCancelWidth          = 120
+    BtnBackupWidth          = 150
+    BtnShutdownWidth        = 200
+    LabelWidth              = 150
+    TextBoxWidth            = 390
+    TabControlWidth         = 690
+    ExplainLabelWidth       = 650
+    NumericWidth            = 100
+    ComboBoxWidth           = 100
+    GroupBoxWidth           = 320
+    HeaderWidth             = 300
 
-    # Label/TextBox/Browse
-    LabelWidth        = 150
-    TextBoxWidth      = 390
-    BrowseButtonWidth = 80
-    ControlHeight     = 20
+    # Heights
+    TabControlHeight        = 390
+    ExplainLabelHeight      = 40
+    GroupBoxHeight          = 45
+    LogBoxHeight            = 280
+    ProgressBarHeight       = 20
+    BtnHeight               = 30
+    ControlHeight           = 20
+    HeaderHeight            = 25
 
-    # Explain Labels
-    ExplainLabelWidth     = 650
-    ExplainLabelHeight    = 40
-    ExplainTextColor      = 'DarkBlue'
-    ModeExplainTextColor  = 'DarkGreen'
-
-    # GroupBoxes
-    GroupBoxWidth     = 320
-    GroupBoxHeight    = 45
-
-    # Log Box
-    LogBoxY           = 490
-    LogBoxHeight      = 280
-    LogBoxBackColor   = 'Black'
-    LogBoxForeColor   = 'Lime'
-
-    # Progress Bar
-    ProgressBarY      = 400
-    ProgressBarHeight = 20
-
-    # Buttons
-    BtnHeight         = 30
-    BtnSpacing        = 20
-    BtnCancelWidth    = 120
-    BtnBackupWidth    = 150
-    BtnShutdownWidth  = 200
-    ButtonsStartY     = 440
+    # Postions
+    TabControlX             = 10
+    TabControlY             = 10
+    ProgressBarY            = 400
+    LogBoxY                 = 490
+    ButtonsStartY           = 440
+    
+    # Colors
+    ExplainTextColor        = 'DarkBlue'
+    ModeExplainTextColor    = 'DarkGreen'
+    LogBoxBackColor         = 'Black'
+    LogBoxForeColor         = 'Lime'
 
     # Defaults
-    DefaultFrequencies = @('Daily', 'Weekly', 'Monthly')
-    DefaultKeepCount   = 2
+    DefaultFrequencies      = @('Daily', 'Weekly', 'Monthly')
+    DefaultKeepCount        = 2
 
-    # Combo box
-    ComboBoxWidth = 100
+    # Spacing
+    BtnSpacing              = 20
+    YGroupSpacing           = 55
+    YLineSpacing            = 30
+    YSmallSpacing           = 20
 
-    # Numeric box
-    NumericWidth = 100
+    # Margin
+    XLeftMargin             = 10
+
+    # Offset
+    XLabelOffset            = 160 
 }
 
 
@@ -615,129 +618,128 @@ function Add-ProviderControls {
     )
 
     $controls = @{}
-    $y = 10
+    $y = $layout.XLeftMargin
 
     # Header label
     $lblHeader = New-Object Windows.Forms.Label
     $lblHeader.Text = $tab.Text
     $lblHeader.Font = $layout.HeaderFont
-    $lblHeader.Location = New-Object Drawing.Point(10, $y)
-    $lblHeader.Size = New-Object Drawing.Size(300, 25)
+    $lblHeader.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
+    $lblHeader.Size = New-Object Drawing.Size($layout.HeaderWidth, $layout.HeaderHeight)
     $tab.Controls.Add($lblHeader)
-    $y += 30
+    $y += $layout.YLineSpacing
 
     # Source and Destination path rows
     foreach ($type in @("Source", "Dest")) {
         $row = New-LabelTextBrowseRow -label "$($tab.Text) $type" -value $settings.$type -y $y -layout $layout
         $tab.Controls.AddRange(@($row.Label, $row.TextBox, $row.Button))
         $controls["Txt${prefix}${type}"] = $row.TextBox
-        $y += 30
+        $y += $layout.YLineSpacing
     }
 
     # Backup Type group
     $grpType = New-Object Windows.Forms.GroupBox
     $grpType.Text = "Backup Type"
-    $grpType.Location = New-Object Drawing.Point(10, $y)
+    $grpType.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $grpType.Size = New-Object Drawing.Size($layout.GroupBoxWidth, $layout.GroupBoxHeight)
     $tab.Controls.Add($grpType)
 
     # Radio buttons: File vs Zip
     $rdoFile = New-Object Windows.Forms.RadioButton
     $rdoFile.Text = "File Backup"
-    $rdoFile.Location = New-Object Drawing.Point(10, 15)
+    $rdoFile.Location = New-Object Drawing.Point($layout.XLeftMargin, 15)
     $grpType.Controls.Add($rdoFile)
     $controls["Rdo${prefix}File"] = $rdoFile
 
     $rdoZip = New-Object Windows.Forms.RadioButton
     $rdoZip.Text = "Zip Backup"
-    $rdoZip.Location = New-Object Drawing.Point(120, 15)
+    $rdoZip.Location = New-Object Drawing.Point($layout.XLabelOffset, 15)
     $grpType.Controls.Add($rdoZip)
     $controls["Rdo${prefix}Zip"] = $rdoZip
-    $y += 55
+    $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
 
     # Explanation label (below backup type)
     $lblExplain = New-Object Windows.Forms.Label
     $lblExplain.Text = ""
-    $lblExplain.Location = New-Object Drawing.Point(10, $y)
+    $lblExplain.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $lblExplain.Size = New-Object Drawing.Size($layout.ExplainLabelWidth, $layout.ExplainLabelHeight)
     $lblExplain.TextAlign = 'TopLeft'
     $lblExplain.ForeColor = $layout.ExplainTextColor
     $tab.Controls.Add($lblExplain)
     $controls["Lbl${prefix}Explain"] = $lblExplain
-    $y += 25
+    $y += $layout.YSmallSpacing
 
     # File Mode group (Mirror / Append)
     $grpMode = New-Object Windows.Forms.GroupBox
     $grpMode.Text = "File Mode"
-    $grpMode.Location = New-Object Drawing.Point(10, $y)
+    $grpMode.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $grpMode.Size = New-Object Drawing.Size($layout.GroupBoxWidth, $layout.GroupBoxHeight)
     $tab.Controls.Add($grpMode)
     $controls["Grp${prefix}Mode"] = $grpMode
 
     $rdoMirror = New-Object Windows.Forms.RadioButton
     $rdoMirror.Text = "Mirror"
-    $rdoMirror.Location = New-Object Drawing.Point(10, 15)
+    $rdoMirror.Location = New-Object Drawing.Point($layout.XLeftMargin, 15)
     $grpMode.Controls.Add($rdoMirror)
     $controls["Rdo${prefix}Mirror"] = $rdoMirror
 
     $rdoAppend = New-Object Windows.Forms.RadioButton
     $rdoAppend.Text = "Append"
-    $rdoAppend.Location = New-Object Drawing.Point(120, 15)
+    $rdoAppend.Location = New-Object Drawing.Point($layout.XLabelOffset, 15)
     $grpMode.Controls.Add($rdoAppend)
     $controls["Rdo${prefix}Append"] = $rdoAppend
-    $y += 55
+    $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
 
     # File Mode explanation
     $lblModeExplain = New-Object Windows.Forms.Label
     $lblModeExplain.Text = ""
-    $lblModeExplain.Location = New-Object Drawing.Point(10, $y)
+    $lblModeExplain.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $lblModeExplain.Size = New-Object Drawing.Size($layout.ExplainLabelWidth, $layout.ExplainLabelHeight)
     $lblModeExplain.TextAlign = 'TopLeft'
     $lblModeExplain.ForeColor = $layout.ModeExplainTextColor
     $tab.Controls.Add($lblModeExplain)
     $controls["Lbl${prefix}ModeExplain"] = $lblModeExplain
-    $y += 25
+    $y += $layout.YSmallSpacing
 
     # Zip frequency label and dropdown
     $lblFreq = New-Object Windows.Forms.Label
     $lblFreq.Text = "Frequency:"
-    $lblFreq.Location = New-Object Drawing.Point(10, $y)
+    $lblFreq.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $tab.Controls.Add($lblFreq)
 
     $cmbFreq = New-Object Windows.Forms.ComboBox
     $cmbFreq.Items.AddRange($layout.DefaultFrequencies)
     $cmbFreq.DropDownStyle = 'DropDownList'
     $cmbFreq.SelectedItem = $settings.Freq
-    $cmbFreq.Location = New-Object Drawing.Point(160, $y)
+    $cmbFreq.Location = New-Object Drawing.Point($layout.XLabelOffset, $y)
     $cmbFreq.Size = New-Object Drawing.Size($layout.ComboBoxWidth, $layout.ControlHeight)
     $tab.Controls.Add($cmbFreq)
     $controls["Cmb${prefix}Freq"] = $cmbFreq
-    $y += 30
+    $y += $layout.YLineSpacing
 
     # Zip name label and textbox
     $lblName = New-Object Windows.Forms.Label
     $lblName.Text = "Zip Backup Name:"
-    $lblName.Location = New-Object Drawing.Point(10, $y)
+    $lblName.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $tab.Controls.Add($lblName)
 
     $txtName = New-Object Windows.Forms.TextBox
     $txtName.Text = $settings.Name
-    $txtName.Location = New-Object Drawing.Point(160, $y)
+    $txtName.Location = New-Object Drawing.Point($layout.XLabelOffset, $y)
     $txtName.Size = New-Object Drawing.Size($layout.TextBoxWidth, $layout.ControlHeight)
-
     $tab.Controls.Add($txtName)
     $controls["Txt${prefix}ZipName"] = $txtName
-    $y += 30
+    $y += $layout.YLineSpacing
 
     # Zip retention count
     $lblKeep = New-Object Windows.Forms.Label
     $lblKeep.Text = "Zips to keep:"
-    $lblKeep.Location = New-Object Drawing.Point(10, $y)
+    $lblKeep.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $tab.Controls.Add($lblKeep)
 
     $numKeep = New-Object Windows.Forms.NumericUpDown
-    $numKeep.Value = if ($settings.Keep) { $settings.Keep } else { $layout.default_keep_count }
-    $numKeep.Location = New-Object Drawing.Point(160, $y)
+    $numKeep.Value = if ($settings.Keep) { $settings.Keep } else { $layout.DefaultKeepCount }
+    $numKeep.Location = New-Object Drawing.Point($layout.XLabelOffset, $y)
     $numKeep.Size = New-Object Drawing.Size($layout.NumericWidth, $layout.ControlHeight)
     $tab.Controls.Add($numKeep)
     $controls["Num${prefix}Keep"] = $numKeep
