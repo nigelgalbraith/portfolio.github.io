@@ -51,7 +51,14 @@
     "TabY": 10,
     "ProgressY": 400,
     "LogBoxY": 490,
-    "ButtonsY": 440
+    "ButtonsY": 440,
+    "LabelX": 10,
+    "TextBoxX": 160,
+    "BrowseButtonX": 560
+  },
+  "Offsets": {
+  "RadioButtonY": 15,
+  "InnerRadioY": 15
   },
   "Colors": {
     "ExplainText": "DarkBlue",

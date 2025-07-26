@@ -225,10 +225,30 @@ function Get-ValidBackupJobs {
             continue
         }
 
-        # Ensure source path exists
-        if (-not (Test-Path $job.Source)) {
-            $errors += "Job '$($job.Key)': Source path does not exist: $($job.Source)"
+        # Split multiple paths
+        $sourcePaths = $job.Source -split ';' | Where-Object { $_ -ne '' }
+
+        # Track valid/invalid sources
+        $validPaths = @()
+        $invalidPaths = @()
+
+        foreach ($path in $sourcePaths) {
+            if (Test-Path $path) {
+                $validPaths += $path
+            } else {
+                $invalidPaths += $path
+            }
+        }
+
+        # If none of the paths exist, flag as an error
+        if ($validPaths.Count -eq 0) {
+            $errors += "Job '$($job.Key)': None of the source paths exist: $($job.Source)"
             continue
+        }
+
+        # (Optional) Warn if only some paths are bad
+        if ($invalidPaths.Count -gt 0) {
+            Write-Warning "Job '$($job.Key)': Some source paths do not exist: $($invalidPaths -join '; ')"
         }
 
         # Ensure destination path exists
@@ -281,7 +301,7 @@ function Build-BackupJobs {
     foreach ($key in $cloud_providers.Providers.Keys) {
         $prefix = $cloud_providers.Providers[$key].Prefix
         $source = $gui."Txt${prefix}Source".Text
-
+        
         # Only include jobs where a source path is provided
         if (-not [string]::IsNullOrWhiteSpace($source)) {
             $jobs += [PSCustomObject]@{
@@ -305,63 +325,82 @@ function Build-BackupJobs {
 function Invoke-FileCopyOperation {
     <#
     .SYNOPSIS
-    Executes a Robocopy file copy operation in either Mirror or Append mode.
+    Executes a Robocopy file copy operation in either Mirror or Append mode, for multiple paths.
 
     .DESCRIPTION
-    This function prepares and launches a Robocopy process to copy files from a source 
-    to a destination directory. It supports two modes: 
-    - "Mirror" (exact replica with deletions), or 
-    - "Append" (add/update files only).
-    The function provides GUI progress updates and logs all output to both the GUI and log file.
+    This function prepares and launches Robocopy processes to copy files/folders from source(s) 
+    to the destination directory. It supports:
+    - "Mirror" mode (exact replica with deletions)
+    - "Append" mode (add/update only)
+
+    Accepts semicolon-separated paths and handles each one independently.
     #>
 
     param (
-        [string]$source,            # Source directory to back up
+        [string]$source,            # Semicolon-separated source paths
         [string]$dest,              # Destination directory for backup
-        [string]$mode,              # File mode: "Mirror" or "Append"
+        [string]$mode,              # "Mirror" or "Append"
         $logBox,                    # TextBox for GUI logging
-        $progressBar,               # Progress bar for UI feedback
-        [int]$retries,              # Number of retry attempts on failure
-        [int]$wait,                 # Wait time (in seconds) between retries
-        [int]$threads               # Number of threads to use for parallel copy
+        $progressBar,               # Progress bar for GUI feedback
+        [int]$retries,              # Retry attempts
+        [int]$wait,                 # Wait between retries
+        [int]$threads               # Robocopy multithread count
     )
 
-    # Robocopy common arguments
+    # --- Base robocopy arguments ---
     $baseArgs = @(
-        "/Z",                         # Use restartable mode
-        "/R:$retries",               # Retry count on failed copies
-        "/W:$wait",                  # Wait time between retries
-        "/MT:$threads",              # Use multithreading
-        "/TEE",                      # Output to both console and log
-        "/NDL",                      # Suppress directory listing
-        "/NFL"                       # Suppress file listing
+        "/Z",                         # Restartable mode
+        "/R:$retries",               # Retry count
+        "/W:$wait",                  # Wait time
+        "/MT:$threads",              # Multithreading
+        "/TEE",                      # Output to console and log
+        "/NDL",                      # Suppress directory list
+        "/NFL"                       # Suppress file list
     )
 
-    # Mode-specific arguments
+    # --- Mode-specific arguments ---
     $modeArgs = if ($mode -eq "Mirror") { "/MIR" } else { "/E /XX" }
-    # /E: Copy all subdirectories (including empty)
-    # /XX: Exclude extra files and directories from destination (only copy new)
 
-    # Build full Robocopy argument string
-    $allArgs = @("`"$source`"", "`"$dest`"") + $baseArgs + $modeArgs
+    # --- Split input source into array ---
+    $sourcePaths = $source -split ';'
 
-    # Configure process startup info
-    $psi = New-Object System.Diagnostics.ProcessStartInfo
-    $psi.FileName = "robocopy.exe"
-    $psi.Arguments = $allArgs -join " "
-    $psi.RedirectStandardOutput = $true
-    $psi.UseShellExecute = $false
-    $psi.CreateNoWindow = $true
+    foreach ($src in $sourcePaths) {
+        if (-not (Test-Path $src)) { continue }
 
-    # Log start of operation
-    Write-Log -logBox $logBox -message "Starting $mode operation from $source to $dest"
+        $isDir = (Get-Item $src).PSIsContainer
 
-    # Start Robocopy and monitor output
-    $process = Start-ProcessWithOutput -processStartInfo $psi -logBox $logBox -progressBar $progressBar
+        if ($isDir) {
+            $destPath = Join-Path $dest (Split-Path $src -Leaf)
+            $robocopySource = $src
+            $robocopyDest   = $destPath
+            $extraArgs = @()
+        } else {
+            # Mirror parent folder and exclude the file (if Mirror mode)
+            $parentDir = Split-Path $src -Parent
+            $folderName = Split-Path $parentDir -Leaf
+            $destPath = Join-Path $dest $folderName
+            $robocopySource = $parentDir
+            $robocopyDest   = $destPath
+            $extraArgs = if ($mode -eq "Mirror") { @("/IF", "/XF", "`"$src`"") } else { @() }
+        }
 
-    # Log completion and exit code
-    Write-Log -logBox $logBox -message "$mode operation completed (Exit code: $($process.ExitCode))"
+        $allArgs = @("`"$robocopySource`"", "`"$robocopyDest`"") + $baseArgs + $modeArgs + $extraArgs
+
+        $psi = New-Object System.Diagnostics.ProcessStartInfo
+        $psi.FileName = "robocopy.exe"
+        $psi.Arguments = $allArgs -join " "
+        $psi.RedirectStandardOutput = $true
+        $psi.UseShellExecute = $false
+        $psi.CreateNoWindow = $true
+
+        Write-Log -logBox $logBox -message "Starting $mode operation from $robocopySource to $robocopyDest"
+
+        $process = Start-ProcessWithOutput -processStartInfo $psi -logBox $logBox -progressBar $progressBar
+
+        Write-Log -logBox $logBox -message "$mode operation completed (Exit code: $($process.ExitCode))"
+    }
 }
+
 
 
 function Start-ProcessWithOutput {
@@ -786,6 +825,7 @@ function Add-ProviderControls {
 
     # ---- Source and Destination Paths ----
     foreach ($type in @("Source", "Dest")) {
+        $isSource = ($type -eq "Source")
         $row = New-LabelTextBrowseRow `
             -label "$($tab.Text) $type" `
             -value $settings.$type `
@@ -793,7 +833,11 @@ function Add-ProviderControls {
             -labelWidth $layout.LabelWidth `
             -textBoxWidth $layout.TextBoxWidth `
             -browseButtonWidth $layout.BrowseButtonWidth `
-            -controlHeight $layout.ControlHeight
+            -controlHeight $layout.ControlHeight `
+            -labelX $layout.LabelX `
+            -textBoxX $layout.TextBoxX `
+            -buttonX $layout.BrowseButtonX `
+            -multiSelect:$isSource
 
         $tab.Controls.AddRange(@($row.Label, $row.TextBox, $row.Button))
         $controls["Txt${prefix}${type}"] = $row.TextBox
@@ -809,13 +853,13 @@ function Add-ProviderControls {
 
     $rdoFile = New-Object Windows.Forms.RadioButton
     $rdoFile.Text = "File Backup"
-    $rdoFile.Location = New-Object Drawing.Point($layout.XLeftMargin, 15)
+    $rdoFile.Location   = New-Object Drawing.Point($layout.XLeftMargin, $layout.InnerRadioY)
     $grpType.Controls.Add($rdoFile)
     $controls["Rdo${prefix}File"] = $rdoFile
 
     $rdoZip = New-Object Windows.Forms.RadioButton
     $rdoZip.Text = "Zip Backup"
-    $rdoZip.Location = New-Object Drawing.Point($layout.XLabelOffset, 15)
+    $rdoZip.Location    = New-Object Drawing.Point($layout.XLabelOffset, $layout.InnerRadioY)
     $grpType.Controls.Add($rdoZip)
     $controls["Rdo${prefix}Zip"] = $rdoZip
     $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
@@ -841,13 +885,13 @@ function Add-ProviderControls {
 
     $rdoMirror = New-Object Windows.Forms.RadioButton
     $rdoMirror.Text = "Mirror"
-    $rdoMirror.Location = New-Object Drawing.Point($layout.XLeftMargin, 15)
+    $rdoMirror.Location = New-Object Drawing.Point($layout.XLeftMargin, $layout.InnerRadioY)
     $grpMode.Controls.Add($rdoMirror)
     $controls["Rdo${prefix}Mirror"] = $rdoMirror
 
     $rdoAppend = New-Object Windows.Forms.RadioButton
     $rdoAppend.Text = "Append"
-    $rdoAppend.Location = New-Object Drawing.Point($layout.XLabelOffset, 15)
+    $rdoAppend.Location = New-Object Drawing.Point($layout.XLabelOffset, $layout.InnerRadioY)
     $grpMode.Controls.Add($rdoAppend)
     $controls["Rdo${prefix}Append"] = $rdoAppend
     $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
@@ -983,6 +1027,108 @@ function Add-ProviderControls {
 }
 
 
+function Show-MultiFolderFilePicker {
+    Add-Type -AssemblyName System.Windows.Forms
+    Add-Type -AssemblyName System.Drawing
+
+    $form = New-Object Windows.Forms.Form
+    $form.Text = "Select Files and Folders"
+    $form.Size = New-Object Drawing.Size(600, 500)
+    $form.StartPosition = "CenterScreen"
+
+    $treeView = New-Object Windows.Forms.TreeView
+    $treeView.CheckBoxes = $true
+    $treeView.Location = New-Object Drawing.Point(10, 10)
+    $treeView.Size = New-Object Drawing.Size(560, 410)
+    $form.Controls.Add($treeView)
+
+    # OK Button
+    $btnOK = New-Object Windows.Forms.Button
+    $btnOK.Text = "OK"
+    $btnOK.Location = New-Object Drawing.Point(390, 430)
+    $btnOK.Anchor = 'Bottom,Right'
+    $btnOK.Add_Click({
+        $form.DialogResult = 'OK'
+        $form.Close()
+    })
+    $form.Controls.Add($btnOK)
+
+    # Cancel Button
+    $btnCancel = New-Object Windows.Forms.Button
+    $btnCancel.Text = "Cancel"
+    $btnCancel.Location = New-Object Drawing.Point(480, 430)
+    $btnCancel.Anchor = 'Bottom,Right'
+    $btnCancel.Add_Click({
+        $form.DialogResult = 'Cancel'
+        $form.Close()
+    })
+    $form.Controls.Add($btnCancel)
+
+    # Lazy-load child folders
+    function Load-TreeChildren {
+        param($node)
+        $path = $node.Tag
+        try {
+            $node.Nodes.Clear()  # clear dummy
+
+            Get-ChildItem -Path $path -Directory -Force -ErrorAction SilentlyContinue | ForEach-Object {
+                $child = New-Object Windows.Forms.TreeNode
+                $child.Text = $_.Name
+                $child.Tag = $_.FullName
+                $child.Nodes.Add('Loading...') | Out-Null
+                $node.Nodes.Add($child)
+            }
+
+            Get-ChildItem -Path $path -File -Force -ErrorAction SilentlyContinue | ForEach-Object {
+                $file = New-Object Windows.Forms.TreeNode
+                $file.Text = $_.Name
+                $file.Tag = $_.FullName
+                $node.Nodes.Add($file)
+            }
+        } catch {}
+    }
+
+    $treeView.add_BeforeExpand({
+        param($s, $e)
+        $node = $e.Node
+        if ($node.Nodes.Count -eq 1 -and $node.Nodes[0].Text -eq 'Loading...') {
+            Load-TreeChildren $node
+        }
+    })
+
+    # Root drives - Fixed this part to properly set the Tag property
+    [System.IO.DriveInfo]::GetDrives() | Where-Object { $_.IsReady } | ForEach-Object {
+        $root = New-Object Windows.Forms.TreeNode
+        $root.Text = $_.Name
+        $root.Tag = $_.RootDirectory.FullName  # This is the critical fix
+        $root.Nodes.Add('Loading...') | Out-Null
+        $treeView.Nodes.Add($root)
+    }
+
+    # Get checked items
+    function Get-CheckedPaths {
+        param($nodes)
+        $all = @()
+        foreach ($node in $nodes) {
+            if ($node.Checked -and $node.Tag -and ($node.Tag -is [string])) {
+                $all += $node.Tag
+            }
+            if ($node.Nodes.Count -gt 0) {
+                $all += Get-CheckedPaths $node.Nodes
+            }
+        }
+        return $all
+    }
+
+    # Show form and return checked paths
+    $result = $form.ShowDialog()
+    if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
+        return Get-CheckedPaths $treeView.Nodes
+    } else {
+        return @()
+    }
+}
+
 
 function New-LabelTextBrowseRow {
     <#
@@ -1005,35 +1151,51 @@ function New-LabelTextBrowseRow {
         [int]$labelWidth,           # Width of the label control
         [int]$textBoxWidth,         # Width of the textbox control
         [int]$browseButtonWidth,    # Width of the browse button control
-        [int]$controlHeight         # Height for all controls in this row
+        [int]$controlHeight,        # Height for all controls in this row
+        [int]$labelX,               # X position of the label
+        [int]$textBoxX,             # X position of the textbox
+        [int]$buttonX,               # X position of the browse button
+        [bool]$multiSelect = $true
     )
 
     # ---- Create the Label ----
     $lbl = New-Object Windows.Forms.Label
     $lbl.Text = "${label}:"
-    $lbl.Location = New-Object Drawing.Point(10, $y)
+    $lbl.Location = New-Object Drawing.Point($labelX, $y)
     $lbl.Size = New-Object Drawing.Size($labelWidth, $controlHeight)
 
     # ---- Create the TextBox ----
     $txtBox = New-Object Windows.Forms.TextBox
     $txtBox.Text = $value
-    $txtBox.Location = New-Object Drawing.Point(160, $y)
+    $txtBox.Location = New-Object Drawing.Point($textBoxX, $y)
     $txtBox.Size = New-Object Drawing.Size($textBoxWidth, $controlHeight)
 
     # ---- Create the Browse Button ----
     $btn = New-Object Windows.Forms.Button
     $btn.Text = "Browse"
-    $btn.Location = New-Object Drawing.Point(560, $y)
+    $btn.Location = New-Object Drawing.Point($buttonX, $y)
     $btn.Size = New-Object Drawing.Size($browseButtonWidth, $controlHeight)
-    $btn.Tag = $txtBox  # Store a reference to the associated textbox
+    $btn.Tag = @{ TextBox = $txtBox; Multi = $multiSelect }
 
-    # ---- On Click: Open Folder Dialog and Update TextBox ----
+    # ---- On Click: Open Folder Dialog and Update TextBox ---     
     $btn.Add_Click({
-        $folder = Browse-Folder -initialPath $this.Tag.Text
-        if ($folder) { $this.Tag.Text = $folder }
-    })
+        $txtBox = $this.Tag["TextBox"]
+        $useMulti = $this.Tag["Multi"]
 
-    # ---- Return all controls as a row ----
+        if ($useMulti) {
+            $paths = Show-MultiFolderFilePicker
+            if ($paths.Count -gt 0) {
+                # Filter out any non-string or empty paths
+                $validPaths = $paths | Where-Object { $_ -and ($_ -is [string]) -and $_.Trim() }
+                if ($validPaths.Count -gt 0) {
+                    $txtBox.Text = ($validPaths -join ';')
+                }
+            }
+        } else {
+            $folder = Browse-Folder -initialPath $txtBox.Text
+            if ($folder) { $txtBox.Text = $folder }
+        }
+    })
     return @{ Label = $lbl; TextBox = $txtBox; Button = $btn }
 }
 
@@ -1322,13 +1484,17 @@ function Main {
             HeaderHeight          = $config.Heights.Header
             ExplainLabelWidth     = $config.Widths.ExplainLabel
             ExplainLabelHeight    = $config.Heights.ExplainLabel
-            ModeExplainTextColor  = $config.Colors.ModeExplainText
-            ExplainTextColor      = $config.Colors.ExplainText
             ComboBoxWidth         = $config.Widths.ComboBox
             NumericWidth          = $config.Widths.Numeric
+            ModeExplainTextColor  = $config.Colors.ModeExplainText
+            ExplainTextColor      = $config.Colors.ExplainText
             DefaultFrequencies    = $config.Defaults.Frequencies
             DefaultKeepCount      = $config.Defaults.KeepCount
             HeaderFont            = $config.Fonts.Header
+            InnerRadioY           = $config.Offsets.InnerRadioY
+            LabelX                = $config.Positions.LabelX
+            TextBoxX              = $config.Positions.TextBoxX
+            BrowseButtonX         = $config.Positions.BrowseButtonX
         }
 
         $progress_layout = @{
