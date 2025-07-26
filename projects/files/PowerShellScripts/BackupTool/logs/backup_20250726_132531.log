@@ -1,0 +1,84 @@
+[2025-07-26 13:25:43] [ERROR] Job 'Google': dest path does not exist: D:\Documents\Google Drive1
+[2025-07-26 13:25:43] [ERROR] One or more jobs are invalid. Backup cancelled.
+[2025-07-26 13:25:57] [ERROR] Job 'Google': Destination must include one of: D:\Documents\Google Drive
+[2025-07-26 13:25:57] [ERROR] One or more jobs are invalid. Backup cancelled.
+[2025-07-26 13:26:15] [INFO] Starting Mirror operation from D:\Documents\MegaSync to D:\Documents\Mega
+[2025-07-26 13:26:15] [INFO] 
+[2025-07-26 13:26:15] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 13:26:15] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-26 13:26:15] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 13:26:15] [INFO] 
+[2025-07-26 13:26:15] [INFO]   Started : Saturday, 26 July 2025 1:26:15 pm
+[2025-07-26 13:26:15] [INFO]    Source : D:\Documents\MegaSync\
+[2025-07-26 13:26:15] [INFO]      Dest : D:\Documents\Mega\
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]     Files : *.*
+[2025-07-26 13:26:16] [INFO] 	    
+[2025-07-26 13:26:16] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:8 /R:3 /W:5 
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] 	  *EXTRA File 		     100	D:\Documents\Mega\.megaignore
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-26 13:26:16] [INFO]     Dirs :       707       707       707         0         0         0
+[2025-07-26 13:26:16] [INFO]    Files :      3881         0      3881         0         0         1
+[2025-07-26 13:26:16] [INFO]    Bytes :   1.670 g         0   1.670 g         0         0       100
+[2025-07-26 13:26:16] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-26 13:26:16] [INFO]    Ended : Saturday, 26 July 2025 1:26:16 pm
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] Mirror operation completed (Exit code: 2)
+[2025-07-26 13:26:16] [INFO] Starting Mirror operation from D:\Documents\GoogleDriveSync to D:\Documents\Google Drive
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-26 13:26:16] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]   Started : Saturday, 26 July 2025 1:26:16 pm
+[2025-07-26 13:26:16] [INFO]    Source : D:\Documents\GoogleDriveSync\
+[2025-07-26 13:26:16] [INFO]      Dest : D:\Documents\Google Drive\
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]     Files : *.*
+[2025-07-26 13:26:16] [INFO] 	    
+[2025-07-26 13:26:16] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:8 /R:3 /W:5 
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] 	*EXTRA Dir        -1	D:\Documents\Google Drive\.tmp.drivedownload\
+[2025-07-26 13:26:16] [INFO] 	*EXTRA Dir        -1	D:\Documents\Google Drive\Tasks Backups\
+[2025-07-26 13:26:16] [INFO] 	  *EXTRA File 		   14905	D:\Documents\Google Drive\Tasks Backups\auto.20250726T0008.json
+[2025-07-26 13:26:16] [INFO] 	  *EXTRA File 		     106	D:\Documents\Google Drive\desktop.ini
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-26 13:26:16] [INFO]     Dirs :       132       132       132         0         0         2
+[2025-07-26 13:26:16] [INFO]    Files :       206         1       205         0         0         2
+[2025-07-26 13:26:16] [INFO]    Bytes :   2.349 g       106   2.349 g         0         0    14.6 k
+[2025-07-26 13:26:16] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO]    Speed :               15142 Bytes/sec.
+[2025-07-26 13:26:16] [INFO]    Speed :               0.866 MegaBytes/min.
+[2025-07-26 13:26:16] [INFO]    Ended : Saturday, 26 July 2025 1:26:16 pm
+[2025-07-26 13:26:16] [INFO] 
+[2025-07-26 13:26:16] [INFO] Mirror operation completed (Exit code: 3)
+[2025-07-26 13:26:16] [INFO] Starting zip operation for D:\Documents\GitHub\portfolio.github.io
+[2025-07-26 13:27:05] [INFO] Successfully created zip: C:\Users\Lenovo\Dropbox\portfolio.github.io-Sat.zip
+[2025-07-26 13:27:05] [INFO] Enforced retention policy (kept 1 backups)
+[2025-07-26 13:27:05] [INFO] Monitoring sync status...
+[2025-07-26 13:27:06] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:07] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:08] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:09] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:10] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:10] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:11] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:12] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:13] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:14] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:14] [INFO] Active sync detected in C:\Users\Lenovo\Dropbox
+[2025-07-26 13:27:15] [INFO] All sync operations completed
+[2025-07-26 13:27:15] [INFO] Backup process completed
