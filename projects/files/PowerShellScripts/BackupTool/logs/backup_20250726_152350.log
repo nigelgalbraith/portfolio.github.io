@@ -1,0 +1,56 @@
+[2025-07-26 15:23:50] [INFO] Starting Mirror operation from D:\Documents\GoogleDriveSync to D:\Documents\Google Drive
+[2025-07-26 15:23:50] [INFO] 
+[2025-07-26 15:23:50] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 15:23:50] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-26 15:23:50] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]   Started : Saturday, 26 July 2025 3:23:50 pm
+[2025-07-26 15:23:51] [INFO]    Source : D:\Documents\GoogleDriveSync\
+[2025-07-26 15:23:51] [INFO]      Dest : D:\Documents\Google Drive\
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]     Files : *.*
+[2025-07-26 15:23:51] [INFO] 	    
+[2025-07-26 15:23:51] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:1 /R:0 /W:0 
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-26 15:23:51] [INFO]     Dirs :       132       132       132         0         0         0
+[2025-07-26 15:23:51] [INFO]    Files :       206         0       206         0         0         0
+[2025-07-26 15:23:51] [INFO]    Bytes :   2.349 g         0   2.349 g         0         0         0
+[2025-07-26 15:23:51] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-26 15:23:51] [INFO]    Ended : Saturday, 26 July 2025 3:23:51 pm
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] Mirror operation completed (Exit code: 0)
+[2025-07-26 15:23:51] [INFO] Starting Mirror operation from D:\Documents\MegaSync to D:\Documents\Mega
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO]    ROBOCOPY     ::     Robust File Copy for Windows                              
+[2025-07-26 15:23:51] [INFO] -------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]   Started : Saturday, 26 July 2025 3:23:51 pm
+[2025-07-26 15:23:51] [INFO]    Source : D:\Documents\MegaSync\
+[2025-07-26 15:23:51] [INFO]      Dest : D:\Documents\Mega\
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]     Files : *.*
+[2025-07-26 15:23:51] [INFO] 	    
+[2025-07-26 15:23:51] [INFO]   Options : *.* /NDL /NFL /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /Z /MT:1 /R:0 /W:0 
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] ------------------------------------------------------------------------------
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO]                Total    Copied   Skipped  Mismatch    FAILED    Extras
+[2025-07-26 15:23:51] [INFO]     Dirs :       707       707       707         0         0         0
+[2025-07-26 15:23:51] [INFO]    Files :      3883         0      3883         0         0         0
+[2025-07-26 15:23:51] [INFO]    Bytes :   1.670 g         0   1.670 g         0         0         0
+[2025-07-26 15:23:51] [INFO]    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+[2025-07-26 15:23:51] [INFO]    Ended : Saturday, 26 July 2025 3:23:51 pm
+[2025-07-26 15:23:51] [INFO] 
+[2025-07-26 15:23:51] [INFO] Mirror operation completed (Exit code: 0)
+[2025-07-26 15:23:51] [INFO] Starting zip operation for D:\Documents\GitHub\portfolio.github.io
+[2025-07-26 15:23:51] [INFO] Removing existing zip: C:\Users\Lenovo\Dropbox\portfolio.github.io-Sat.zip

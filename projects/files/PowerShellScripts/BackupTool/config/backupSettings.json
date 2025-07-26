@@ -1,14 +1,4 @@
 {
-    "MegaNZ":  {
-                   "Append":  false,
-                   "Mirror":  true,
-                   "Source":  "D:\\Documents\\MegaSync",
-                   "Name":  "",
-                   "Freq":  null,
-                   "Zip":  false,
-                   "Keep":  2,
-                   "Dest":  "D:\\Documents\\Mega"
-               },
     "Dropbox":  {
                     "Append":  false,
                     "Mirror":  false,
@@ -19,6 +9,16 @@
                     "Keep":  1,
                     "Dest":  "C:\\Users\\Lenovo\\Dropbox"
                 },
+    "Mega":  {
+                 "Append":  false,
+                 "Mirror":  true,
+                 "Source":  "D:\\Documents\\Mega",
+                 "Name":  "",
+                 "Freq":  null,
+                 "Zip":  false,
+                 "Keep":  2,
+                 "Dest":  "D:\\Documents\\Mega"
+             },
     "Google":  {
                    "Append":  false,
                    "Mirror":  true,
