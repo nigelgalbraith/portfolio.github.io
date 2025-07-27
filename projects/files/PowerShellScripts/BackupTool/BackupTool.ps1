@@ -1084,7 +1084,8 @@ function Show-MultiFolderFilePicker {
         [int]$TreeCancelX,
         [int]$TreeCancelY,
         [int]$TreeButtonWidth,
-        [int]$TreeButtonHeight
+        [int]$TreeButtonHeight,
+        [string[]]$PreSelected = @()
     )
 
     Add-Type -AssemblyName System.Windows.Forms
@@ -1139,12 +1140,22 @@ function Show-MultiFolderFilePicker {
                 $child.Tag = $_.FullName
                 $child.Nodes.Add('Loading...') | Out-Null
                 $node.Nodes.Add($child)
+                
+                # If parent is checked, check the child immediately
+                if ($node.Checked) {
+                    $child.Checked = $true
+                }
             }
             Get-ChildItem -Path $path -File -Force -ErrorAction SilentlyContinue | ForEach-Object {
                 $file = New-Object Windows.Forms.TreeNode
                 $file.Text = $_.Name
                 $file.Tag = $_.FullName
                 $node.Nodes.Add($file)
+                
+                # If parent is checked, check the file immediately
+                if ($node.Checked) {
+                    $file.Checked = $true
+                }
             }
         } catch {}
     }
@@ -1158,6 +1169,107 @@ function Show-MultiFolderFilePicker {
         }
     })
 
+    # Check/uncheck all children when a parent node is checked
+    $treeView.add_AfterCheck({
+        param($sender, $e)
+        $node = $e.Node
+        # Only process if the check state was changed by the user
+        if ($e.Action -ne [System.Windows.Forms.TreeViewAction]::Unknown) {
+            # Skip if this is a file node (leaf node)
+            if ($node.Nodes.Count -gt 0) {
+                # Recursively check/uncheck all children
+                $stack = New-Object System.Collections.Stack
+                $stack.Push($node)
+                
+                while ($stack.Count -gt 0) {
+                    $current = $stack.Pop()
+                    
+                    # Only change nodes that aren't already in the correct state
+                    if ($current.Checked -ne $node.Checked) {
+                        $current.Checked = $node.Checked
+                    }
+                    
+                    # Push all children onto the stack
+                    foreach ($child in $current.Nodes) {
+                        $stack.Push($child)
+                    }
+                }
+            }
+        }
+    })
+
+    # Recursively collect checked paths
+    function Get-CheckedPaths {
+        param($nodes)
+        $all = @()
+        foreach ($node in $nodes) {
+            # Only include paths that are explicitly checked (not just inherited from parent)
+            if ($node.Checked -and $node.Tag -is [string]) {
+                # For directories, only include if parent isn't checked (to avoid duplicates)
+                $parentChecked = $false
+                $parent = $node.Parent
+                while ($parent -ne $null) {
+                    if ($parent.Checked) {
+                        $parentChecked = $true
+                        break
+                    }
+                    $parent = $parent.Parent
+                }
+                
+                if (-not $parentChecked) {
+                    $all += $node.Tag
+                }
+            }
+            
+            # Always recurse to check children
+            if ($node.Nodes.Count -gt 0) {
+                $all += Get-CheckedPaths $node.Nodes
+            }
+        }
+        return $all
+    }
+
+    # Recursively pre-check nodes and expand to show them
+    function Set-CheckedPaths {
+        param (
+            [System.Windows.Forms.TreeNodeCollection]$nodes,
+            [string[]]$targets
+        )
+
+        foreach ($node in $nodes) {
+            # Skip empty or irrelevant nodes
+            if (-not $node.Tag) { continue }
+
+            # Check if any target path starts with this node
+            $matches = $targets | Where-Object { $_ -like "$($node.Tag)*" }
+
+            if ($matches.Count -eq 0) {
+                continue  # No need to go deeper
+            }
+
+            # If this exact node matches a selected path, check it
+            if ($targets -contains $node.Tag) {
+                $node.Checked = $true
+                # Expand parent nodes to make this visible
+                $parent = $node.Parent
+                while ($parent -ne $null) {
+                    $parent.Expand()
+                    $parent = $parent.Parent
+                }
+            }
+
+            # Load children if this might contain a match
+            if ($node.Nodes.Count -eq 1 -and $node.Nodes[0].Text -eq 'Loading...') {
+                Load-TreeChildren $node
+            }
+
+            # Recurse into children
+            if ($node.Nodes.Count -gt 0) {
+                Set-CheckedPaths -nodes $node.Nodes -targets $targets
+            }
+        }
+    }
+
     # Populate root drives
     [System.IO.DriveInfo]::GetDrives() | Where-Object { $_.IsReady } | ForEach-Object {
         $root = New-Object Windows.Forms.TreeNode
@@ -1167,22 +1279,12 @@ function Show-MultiFolderFilePicker {
         $treeView.Nodes.Add($root)
     }
 
-    # Recursively collect checked paths
-    function Get-CheckedPaths {
-        param($nodes)
-        $all = @()
-        foreach ($node in $nodes) {
-            if ($node.Checked -and $node.Tag -is [string]) {
-                $all += $node.Tag
-            }
-            if ($node.Nodes.Count -gt 0) {
-                $all += Get-CheckedPaths $node.Nodes
-            }
-        }
-        return $all
+    # Apply preselected paths
+    if ($PreSelected.Count -gt 0) {
+        Set-CheckedPaths -nodes $treeView.Nodes -targets $PreSelected
     }
 
-    # Show dialog and return result
+    # Show dialog and return checked paths
     $result = $form.ShowDialog()
     if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
         return Get-CheckedPaths $treeView.Nodes
@@ -1282,7 +1384,8 @@ function New-LabelTextBrowseRow {
                 -TreeCancelX    $this.Tag["TreeCancelX"] `
                 -TreeCancelY    $this.Tag["TreeCancelY"] `
                 -TreeButtonWidth $this.Tag["TreeButtonWidth"] `
-                -TreeButtonHeight $this.Tag["TreeButtonHeight"]
+                -TreeButtonHeight $this.Tag["TreeButtonHeight"] `
+                -PreSelected ($txtBox.Text -split ';' | Where-Object { $_.Trim() -ne '' })
 
 
 
@@ -1556,7 +1659,6 @@ function Main {
         # ------------------------------
         # EXTRACT UI LAYOUT DEFINITIONS
         # ------------------------------
-
         $form_layout = @{
             formWidth     = $config.Form.Width
             formHeight    = $config.Form.Height
@@ -1565,10 +1667,10 @@ function Main {
         }
 
         $tab_layout = @{
-            tabWidth  = $config.Widths.TabControl
-            tabHeight = $config.Heights.TabControl
-            tabX      = $config.Positions.TabX
-            tabY      = $config.Positions.TabY
+            tabWidth  = $config.Layout.TabControl.Width
+            tabHeight = $config.Layout.TabControl.Height
+            tabX      = $config.Layout.TabControl.X
+            tabY      = $config.Layout.TabControl.Y
         }
 
         $provider_layout = @{
@@ -1576,53 +1678,53 @@ function Main {
             XLabelOffset          = $config.Offset.LabelX
             YLineSpacing          = $config.Spacing.YLine
             YSmallSpacing         = $config.Spacing.YSmall
-            LabelWidth            = $config.Widths.Label
-            TextBoxWidth          = $config.Widths.TextBox
-            BrowseButtonWidth     = $config.Widths.BrowseButton
-            ControlHeight         = $config.Heights.Control
-            GroupBoxWidth         = $config.Widths.GroupBox
-            GroupBoxHeight        = $config.Heights.GroupBox
-            HeaderWidth           = $config.Widths.Header
-            HeaderHeight          = $config.Heights.Header
-            ExplainLabelWidth     = $config.Widths.ExplainLabel
-            ExplainLabelHeight    = $config.Heights.ExplainLabel
-            ComboBoxWidth         = $config.Widths.ComboBox
-            NumericWidth          = $config.Widths.Numeric
+            LabelWidth            = $config.Layout.Labels.Width
+            TextBoxWidth          = $config.Layout.TextBoxes.Width
+            BrowseButtonWidth     = $config.Layout.BrowseButtons.Width
+            ControlHeight         = $config.Layout.Labels.Height
+            GroupBoxWidth         = $config.Layout.GroupBoxes.Width
+            GroupBoxHeight        = $config.Layout.GroupBoxes.Height
+            HeaderWidth           = $config.Layout.Headers.Width
+            HeaderHeight          = $config.Layout.Headers.Height
+            ExplainLabelWidth     = $config.Layout.ExplainLabels.Width
+            ExplainLabelHeight    = $config.Layout.ExplainLabels.Height
+            ComboBoxWidth         = $config.Layout.ComboBoxes.Width
+            NumericWidth          = $config.Layout.NumericInputs.Width
             ModeExplainTextColor  = $config.Colors.ModeExplainText
             ExplainTextColor      = $config.Colors.ExplainText
             DefaultFrequencies    = $config.Defaults.Frequencies
             DefaultKeepCount      = $config.Defaults.KeepCount
             HeaderFont            = $config.Fonts.Header
             InnerRadioY           = $config.Offsets.InnerRadioY
-            LabelX                = $config.Positions.LabelX
-            TextBoxX              = $config.Positions.TextBoxX
-            BrowseButtonX         = $config.Positions.BrowseButtonX
-            TreeFormWidth         = $config.Tree.FormWidth
-            TreeFormHeight        = $config.Tree.FormHeight
-            TreeX                 = $config.Tree.X
-            TreeY                 = $config.Tree.Y
-            TreeWidth             = $config.Tree.Width
-            TreeHeight            = $config.Tree.Height
-            TreeOKX               = $config.Tree.OKX
-            TreeOKY               = $config.Tree.OKY
-            TreeCancelX           = $config.Tree.CancelX
-            TreeCancelY           = $config.Tree.CancelY
-            TreeButtonWidth       = $config.Tree.TreeButtonWidth 
-            TreeButtonHeight      = $config.Tree.TreeButtonHeight
+            LabelX                = $config.Layout.Labels.X
+            TextBoxX              = $config.Layout.TextBoxes.X
+            BrowseButtonX         = $config.Layout.BrowseButtons.X
+            TreeFormWidth         = $config.Tree.Form.Width
+            TreeFormHeight        = $config.Tree.Form.Height
+            TreeX                 = $config.Tree.TreeView.X
+            TreeY                 = $config.Tree.TreeView.Y
+            TreeWidth             = $config.Tree.TreeView.Width
+            TreeHeight            = $config.Tree.TreeView.Height
+            TreeOKX               = $config.Tree.Buttons.OK.X
+            TreeOKY               = $config.Tree.Buttons.OK.Y
+            TreeCancelX           = $config.Tree.Buttons.Cancel.X
+            TreeCancelY           = $config.Tree.Buttons.Cancel.Y
+            TreeButtonWidth       = $config.Tree.Buttons.Width
+            TreeButtonHeight      = $config.Tree.Buttons.Height
         }
 
         $progress_layout = @{
-            X      = $config.Positions.TabX
-            Y      = $config.Positions.ProgressY
-            Width  = $config.Widths.TabControl - 20
-            Height = $config.Heights.ProgressBar
+            X      = $config.Layout.TabControl.X
+            Y      = $config.Layout.ProgressBar.Y
+            Width  = $config.Layout.TabControl.Width - 20
+            Height = $config.Layout.ProgressBar.Height
         }
 
         $logbox_layout = @{
-            X         = $config.Positions.TabX
-            Y         = $config.Positions.LogBoxY
-            Width     = $config.Widths.TabControl - 10
-            Height    = $config.Heights.LogBox
+            X         = $config.Layout.TabControl.X
+            Y         = $config.Layout.LogBox.Y
+            Width     = $config.Layout.TabControl.Width - 10
+            Height    = $config.Layout.LogBox.Height
             BackColor = $config.Colors.LogBoxBack
             ForeColor = $config.Colors.LogBoxFore
             Font      = $config.Fonts.Log
@@ -1630,11 +1732,11 @@ function Main {
 
         $button_layout = @{
             formWidth     = $config.Form.Width
-            buttonHeight  = $config.Heights.Button
-            startY        = $config.Positions.ButtonsY
-            cancelWidth   = $config.Widths.BtnCancel
-            backupWidth   = $config.Widths.BtnBackup
-            shutdownWidth = $config.Widths.BtnShutdown
+            buttonHeight  = $config.Layout.Buttons.Height
+            startY        = $config.Layout.Buttons.Y
+            cancelWidth   = $config.Layout.Buttons.Cancel.Width
+            backupWidth   = $config.Layout.Buttons.Backup.Width
+            shutdownWidth = $config.Layout.Buttons.Shutdown.Width
             spacing       = $config.Spacing.Btn
         }
 
@@ -1645,7 +1747,7 @@ function Main {
             PostBackupDelay   = $config.Robocopy.PostBackupDelay
             SyncCheckInterval = $config.Robocopy.SyncCheckInterval
         }
-
+        
         # ------------------------------
         # CREATE UI COMPONENTS
         # ------------------------------
