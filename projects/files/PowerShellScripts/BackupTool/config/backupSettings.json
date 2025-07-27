@@ -12,7 +12,7 @@
     "Mega":  {
                  "Append":  false,
                  "Mirror":  true,
-                 "Source":  "D:\\Documents\\MegaSync\\NZMA;D:\\Documents\\MegaSync\\Personal",
+                 "Source":  "D:\\Documents\\MegaSync\\NZMA\r\nD:\\Documents\\MegaSync\\Personal",
                  "Name":  "",
                  "Freq":  null,
                  "Zip":  false,
@@ -22,7 +22,7 @@
     "Google":  {
                    "Append":  false,
                    "Mirror":  true,
-                   "Source":  "D:\\Documents\\GoogleDriveSync\\Books;D:\\Documents\\GoogleDriveSync\\Piano;D:\\Documents\\GoogleDriveSync\\SketchUp;D:\\Documents\\GoogleDriveSync\\Software;D:\\Documents\\GoogleDriveSync\\Woodwork;D:\\Documents\\GoogleDriveSync\\Zoom",
+                   "Source":  "D:\\Documents\\GoogleDriveSync\\Books\r\nD:\\Documents\\GoogleDriveSync\\Piano\r\nD:\\Documents\\GoogleDriveSync\\SketchUp\r\nD:\\Documents\\GoogleDriveSync\\Software\r\nD:\\Documents\\GoogleDriveSync\\Woodwork\r\nD:\\Documents\\GoogleDriveSync\\Zoom",
                    "Name":  "",
                    "Freq":  "Daily",
                    "Zip":  false,

@@ -226,7 +226,7 @@ function Get-ValidBackupJobs {
         }
 
         # Split multiple paths
-        $sourcePaths = $job.Source -split ';' | Where-Object { $_ -ne '' }
+        $sourcePaths = $job.Source -split "`r`n" | Where-Object { $_ -ne '' -and $_.Trim() -ne '' }
 
         # Track valid/invalid sources
         $validPaths = @()
@@ -362,7 +362,7 @@ function Invoke-FileCopyOperation {
     $modeArgs = if ($mode -eq "Mirror") { "/MIR" } else { "/E /XX" }
 
     # --- Split input source into array ---
-    $sourcePaths = $source -split ';'
+    $sourcePaths = $source -split "`r`n" | Where-Object { $_ -ne '' -and $_.Trim() -ne '' }
 
     foreach ($src in $sourcePaths) {
         if (-not (Test-Path $src)) { continue }
@@ -821,10 +821,11 @@ function Add-ProviderControls {
     $lblHeader.Location = New-Object Drawing.Point($layout.XLeftMargin, $y)
     $lblHeader.Size = New-Object Drawing.Size($layout.HeaderWidth, $layout.HeaderHeight)
     $tab.Controls.Add($lblHeader)
-    $y += $layout.YLineSpacing
+    $y += $layout.HeaderHeight + $layout.YSmallSpacing
 
     # ---- Source and Destination Paths ----
     foreach ($type in @("Source", "Dest")) {
+        $height = if ($type -eq "Source") { $layout.TextBoxHeightSrc } else { $layout.TextBoxHeightDest }
         $isSource = ($type -eq "Source")
         $row = New-LabelTextBrowseRow `
             -label "$($tab.Text) $type" `
@@ -832,8 +833,9 @@ function Add-ProviderControls {
             -y $y `
             -labelWidth $layout.LabelWidth `
             -textBoxWidth $layout.TextBoxWidth `
-            -browseButtonWidth $layout.BrowseButtonWidth `
-            -controlHeight $layout.ControlHeight `
+            -BrowseButtonHeight $layout.BrowseButtonHeight `
+            -BrowseButtonWidth $layout.BrowseButtonWidth `
+            -TextBoxHeight $height `
             -labelX $layout.LabelX `
             -textBoxX $layout.TextBoxX `
             -buttonX $layout.BrowseButtonX `
@@ -848,12 +850,12 @@ function Add-ProviderControls {
             -TreeOKY $layout.TreeOKY `
             -TreeCancelX $layout.TreeCancelX `
             -TreeCancelY $layout.TreeCancelY `
-            -TreeButtonWidth  $layout.TreeButtonWidth  `
-            -TreeButtonHeight  $layout.TreeButtonHeight 
+            -TreeButtonWidth $layout.TreeButtonWidth `
+            -TreeButtonHeight $layout.TreeButtonHeight 
 
         $tab.Controls.AddRange(@($row.Label, $row.TextBox, $row.Button))
         $controls["Txt${prefix}${type}"] = $row.TextBox
-        $y += $layout.YLineSpacing
+        $y += $height + $layout.YSmallSpacing 
     }
 
     # ---- Backup Type Group (Zip/File) ----
@@ -865,15 +867,16 @@ function Add-ProviderControls {
 
     $rdoFile = New-Object Windows.Forms.RadioButton
     $rdoFile.Text = "File Backup"
-    $rdoFile.Location   = New-Object Drawing.Point($layout.XLeftMargin, $layout.InnerRadioY)
+    $rdoFile.Location = New-Object Drawing.Point($layout.XLeftMargin, $layout.InnerRadioY)
     $grpType.Controls.Add($rdoFile)
     $controls["Rdo${prefix}File"] = $rdoFile
 
     $rdoZip = New-Object Windows.Forms.RadioButton
     $rdoZip.Text = "Zip Backup"
-    $rdoZip.Location    = New-Object Drawing.Point($layout.XLabelOffset, $layout.InnerRadioY)
+    $rdoZip.Location = New-Object Drawing.Point($layout.XLabelOffset, $layout.InnerRadioY)
     $grpType.Controls.Add($rdoZip)
     $controls["Rdo${prefix}Zip"] = $rdoZip
+
     $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
 
     # ---- Zip/File Explanation Label ----
@@ -885,7 +888,7 @@ function Add-ProviderControls {
     $lblExplain.ForeColor = $layout.ExplainTextColor
     $tab.Controls.Add($lblExplain)
     $controls["Lbl${prefix}Explain"] = $lblExplain
-    $y += $layout.YSmallSpacing
+    $y += $layout.ExplainLabelHeight + $layout.YSmallSpacing
 
     # ---- File Mode Group (Mirror/Append) ----
     $grpMode = New-Object Windows.Forms.GroupBox
@@ -906,6 +909,7 @@ function Add-ProviderControls {
     $rdoAppend.Location = New-Object Drawing.Point($layout.XLabelOffset, $layout.InnerRadioY)
     $grpMode.Controls.Add($rdoAppend)
     $controls["Rdo${prefix}Append"] = $rdoAppend
+
     $y += $layout.GroupBoxHeight + $layout.YSmallSpacing
 
     # ---- Mirror/Append Explanation Label ----
@@ -917,7 +921,7 @@ function Add-ProviderControls {
     $lblModeExplain.ForeColor = $layout.ModeExplainTextColor
     $tab.Controls.Add($lblModeExplain)
     $controls["Lbl${prefix}ModeExplain"] = $lblModeExplain
-    $y += $layout.YSmallSpacing
+    $y += $layout.ExplainLabelHeight + $layout.YSmallSpacing
 
     # ---- Frequency Dropdown ----
     $lblFreq = New-Object Windows.Forms.Label
@@ -933,7 +937,7 @@ function Add-ProviderControls {
     $cmbFreq.Size = New-Object Drawing.Size($layout.ComboBoxWidth, $layout.ControlHeight)
     $tab.Controls.Add($cmbFreq)
     $controls["Cmb${prefix}Freq"] = $cmbFreq
-    $y += $layout.YLineSpacing
+    $y += $layout.ControlHeight + $layout.YSmallSpacing
 
     # ---- Zip Name ----
     $lblName = New-Object Windows.Forms.Label
@@ -947,7 +951,7 @@ function Add-ProviderControls {
     $txtName.Size = New-Object Drawing.Size($layout.TextBoxWidth, $layout.ControlHeight)
     $tab.Controls.Add($txtName)
     $controls["Txt${prefix}ZipName"] = $txtName
-    $y += $layout.YLineSpacing
+    $y += $layout.ControlHeight + $layout.YSmallSpacing
 
     # ---- Zip Retention Count ----
     $lblKeep = New-Object Windows.Forms.Label
@@ -1315,7 +1319,8 @@ function New-LabelTextBrowseRow {
         [int]$labelWidth,           # Width of the label control
         [int]$textBoxWidth,         # Width of the textbox control
         [int]$browseButtonWidth,    # Width of the browse button control
-        [int]$controlHeight,        # Height for all controls in this row
+        [int]$browseButtonHeight,    # Width of the browse button control
+        [int]$textBoxHeight,        # Height for all controls in this row
         [int]$labelX,               # X position of the label
         [int]$textBoxX,             # X position of the textbox
         [int]$buttonX,              # X position of the browse button
@@ -1338,35 +1343,38 @@ function New-LabelTextBrowseRow {
     $lbl = New-Object Windows.Forms.Label
     $lbl.Text = "${label}:"
     $lbl.Location = New-Object Drawing.Point($labelX, $y)
-    $lbl.Size = New-Object Drawing.Size($labelWidth, $controlHeight)
+    $lbl.Size = New-Object Drawing.Size($labelWidth, $textBoxHeight)
 
     # ---- Create the TextBox ----
     $txtBox = New-Object Windows.Forms.TextBox
     $txtBox.Text = $value
     $txtBox.Location = New-Object Drawing.Point($textBoxX, $y)
-    $txtBox.Size = New-Object Drawing.Size($textBoxWidth, $controlHeight)
+    $txtBox.Size = New-Object Drawing.Size($textBoxWidth, $textBoxHeight)
+    $txtBox.Multiline = $true
+    $txtBox.ScrollBars = 'Vertical'
 
     # ---- Create the Browse Button ----
     $btn = New-Object Windows.Forms.Button
     $btn.Text = "Browse"
     $btn.Location = New-Object Drawing.Point($buttonX, $y)
-    $btn.Size = New-Object Drawing.Size($browseButtonWidth, $controlHeight)
+    $btn.Size = New-Object Drawing.Size($browseButtonWidth, $browseButtonHeight)
     $btn.Tag = @{
-            TextBox        = $txtBox
-            Multi          = $multiSelect
-            TreeFormWidth  = $TreeFormWidth
-            TreeFormHeight = $TreeFormHeight
-            TreeX          = $TreeX
-            TreeY          = $TreeY
-            TreeWidth      = $TreeWidth
-            TreeHeight     = $TreeHeight
-            TreeOKX        = $TreeOKX
-            TreeOKY        = $TreeOKY
-            TreeCancelX    = $TreeCancelX
-            TreeCancelY    = $TreeCancelY
-            TreeButtonWidth = $TreeButtonWidth
-            TreeButtonHeight = $TreeButtonHeight
-        }
+        TextBox        = $txtBox
+        Multi          = $multiSelect
+        TreeFormWidth  = $TreeFormWidth
+        TreeFormHeight = $TreeFormHeight
+        TreeX          = $TreeX
+        TreeY          = $TreeY
+        TreeWidth      = $TreeWidth
+        TreeHeight     = $TreeHeight
+        TreeOKX        = $TreeOKX
+        TreeOKY        = $TreeOKY
+        TreeCancelX    = $TreeCancelX
+        TreeCancelY    = $TreeCancelY
+        TreeButtonWidth = $TreeButtonWidth
+        TreeButtonHeight = $TreeButtonHeight
+    }
+
     # ---- On Click: Open Folder Dialog and Update TextBox ---     
     $btn.Add_Click({
         $txtBox = $this.Tag["TextBox"]
@@ -1385,15 +1393,12 @@ function New-LabelTextBrowseRow {
                 -TreeCancelY    $this.Tag["TreeCancelY"] `
                 -TreeButtonWidth $this.Tag["TreeButtonWidth"] `
                 -TreeButtonHeight $this.Tag["TreeButtonHeight"] `
-                -PreSelected ($txtBox.Text -split ';' | Where-Object { $_.Trim() -ne '' })
-
-
+                -PreSelected ($txtBox.Text -split "`r`n" | Where-Object { $_.Trim() -ne '' })
 
             if ($paths.Count -gt 0) {
-                # Filter out any non-string or empty paths
                 $validPaths = $paths | Where-Object { $_ -and ($_ -is [string]) -and $_.Trim() }
                 if ($validPaths.Count -gt 0) {
-                    $txtBox.Text = ($validPaths -join ';')
+                    $txtBox.Text = ($validPaths -join "`r`n")
                 }
             }
         } else {
@@ -1401,6 +1406,7 @@ function New-LabelTextBrowseRow {
             if ($folder) { $txtBox.Text = $folder }
         }
     })
+
     return @{ Label = $lbl; TextBox = $txtBox; Button = $btn }
 }
 
@@ -1680,8 +1686,10 @@ function Main {
             YSmallSpacing         = $config.Spacing.YSmall
             LabelWidth            = $config.Layout.Labels.Width
             TextBoxWidth          = $config.Layout.TextBoxes.Width
+            BrowseButtonHeight    = $config.Layout.BrowseButtons.Height
             BrowseButtonWidth     = $config.Layout.BrowseButtons.Width
-            ControlHeight         = $config.Layout.Labels.Height
+            TextBoxHeightSrc      = $config.Layout.TextBoxes.HeightSrc
+            TextBoxHeightDest     = $config.Layout.TextBoxes.HeightDest
             GroupBoxWidth         = $config.Layout.GroupBoxes.Width
             GroupBoxHeight        = $config.Layout.GroupBoxes.Height
             HeaderWidth           = $config.Layout.Headers.Width
