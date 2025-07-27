@@ -837,7 +837,19 @@ function Add-ProviderControls {
             -labelX $layout.LabelX `
             -textBoxX $layout.TextBoxX `
             -buttonX $layout.BrowseButtonX `
-            -multiSelect:$isSource
+            -multiSelect:$isSource `
+            -TreeFormWidth $layout.TreeFormWidth `
+            -TreeFormHeight $layout.TreeFormHeight `
+            -TreeX $layout.TreeX `
+            -TreeY $layout.TreeY `
+            -TreeWidth $layout.TreeWidth `
+            -TreeHeight $layout.TreeHeight `
+            -TreeOKX $layout.TreeOKX `
+            -TreeOKY $layout.TreeOKY `
+            -TreeCancelX $layout.TreeCancelX `
+            -TreeCancelY $layout.TreeCancelY `
+            -TreeButtonWidth  $layout.TreeButtonWidth  `
+            -TreeButtonHeight  $layout.TreeButtonHeight 
 
         $tab.Controls.AddRange(@($row.Label, $row.TextBox, $row.Button))
         $controls["Txt${prefix}${type}"] = $row.TextBox
@@ -1027,25 +1039,75 @@ function Add-ProviderControls {
 }
 
 
+<#
+.SYNOPSIS
+Displays a graphical folder and file picker using a TreeView with checkboxes.
+
+.DESCRIPTION
+This function launches a Windows Forms dialog that allows the user to browse and select 
+multiple files and folders from all available drives. Users can check folders and files 
+to include them in their selection. When the user clicks OK, the function returns a list 
+of full paths for all selected (checked) items. If the user cancels, it returns an empty array.
+
+The tree supports lazy-loading to efficiently load directory contents only when expanded.
+
+.RETURNS
+[string[]] List of full paths of selected files and folders.
+
+.EXAMPLE
+$selections = Show-MultiFolderFilePicker
+if ($selections.Count -gt 0) {
+    $selections | ForEach-Object { Write-Host "Selected: $_" }
+}
+#>
+
+<#
+.SYNOPSIS
+Displays a multi-select folder and file picker TreeView with fully customizable layout.
+
+.DESCRIPTION
+This Windows Forms dialog shows a TreeView of drives, folders, and files with checkboxes.
+All layout values (form size, padding, control dimensions) are passed in as parameters.
+Returns a list of full paths of checked items.
+#>
+
 function Show-MultiFolderFilePicker {
+    param (
+        [int]$TreeFormWidth,
+        [int]$TreeFormHeight,
+        [int]$TreeX,
+        [int]$TreeY,
+        [int]$TreeWidth,
+        [int]$TreeHeight,
+        [int]$TreeOKX,
+        [int]$TreeOKY,
+        [int]$TreeCancelX,
+        [int]$TreeCancelY,
+        [int]$TreeButtonWidth,
+        [int]$TreeButtonHeight
+    )
+
     Add-Type -AssemblyName System.Windows.Forms
     Add-Type -AssemblyName System.Drawing
 
+    # Create form
     $form = New-Object Windows.Forms.Form
     $form.Text = "Select Files and Folders"
-    $form.Size = New-Object Drawing.Size(600, 500)
-    $form.StartPosition = "CenterScreen"
+    $form.Size = New-Object Drawing.Size($TreeFormWidth, $TreeFormHeight)
+    $form.StartPosition = 'CenterScreen'
 
+    # TreeView control
     $treeView = New-Object Windows.Forms.TreeView
     $treeView.CheckBoxes = $true
-    $treeView.Location = New-Object Drawing.Point(10, 10)
-    $treeView.Size = New-Object Drawing.Size(560, 410)
+    $treeView.Location = New-Object Drawing.Point($TreeX, $TreeY)
+    $treeView.Size = New-Object Drawing.Size($TreeWidth, $TreeHeight)
     $form.Controls.Add($treeView)
 
-    # OK Button
+    # OK button
     $btnOK = New-Object Windows.Forms.Button
     $btnOK.Text = "OK"
-    $btnOK.Location = New-Object Drawing.Point(390, 430)
+    $btnOK.Location = New-Object Drawing.Point($TreeOKX, $TreeOKY)
+    $btnOK.Size     = New-Object Drawing.Size($TreeButtonWidth, $TreeButtonHeight)
     $btnOK.Anchor = 'Bottom,Right'
     $btnOK.Add_Click({
         $form.DialogResult = 'OK'
@@ -1053,10 +1115,11 @@ function Show-MultiFolderFilePicker {
     })
     $form.Controls.Add($btnOK)
 
-    # Cancel Button
+    # Cancel button
     $btnCancel = New-Object Windows.Forms.Button
     $btnCancel.Text = "Cancel"
-    $btnCancel.Location = New-Object Drawing.Point(480, 430)
+    $btnCancel.Location = New-Object Drawing.Point($TreeCancelX, $TreeCancelY)
+    $btnCancel.Size = New-Object Drawing.Size($TreeButtonWidth, $TreeButtonHeight)
     $btnCancel.Anchor = 'Bottom,Right'
     $btnCancel.Add_Click({
         $form.DialogResult = 'Cancel'
@@ -1064,13 +1127,12 @@ function Show-MultiFolderFilePicker {
     })
     $form.Controls.Add($btnCancel)
 
-    # Lazy-load child folders
+    # Lazy-load subfolders/files
     function Load-TreeChildren {
         param($node)
         $path = $node.Tag
         try {
-            $node.Nodes.Clear()  # clear dummy
-
+            $node.Nodes.Clear()
             Get-ChildItem -Path $path -Directory -Force -ErrorAction SilentlyContinue | ForEach-Object {
                 $child = New-Object Windows.Forms.TreeNode
                 $child.Text = $_.Name
@@ -1078,7 +1140,6 @@ function Show-MultiFolderFilePicker {
                 $child.Nodes.Add('Loading...') | Out-Null
                 $node.Nodes.Add($child)
             }
-
             Get-ChildItem -Path $path -File -Force -ErrorAction SilentlyContinue | ForEach-Object {
                 $file = New-Object Windows.Forms.TreeNode
                 $file.Text = $_.Name
@@ -1088,6 +1149,7 @@ function Show-MultiFolderFilePicker {
         } catch {}
     }
 
+    # Expand event to load children
     $treeView.add_BeforeExpand({
         param($s, $e)
         $node = $e.Node
@@ -1096,21 +1158,21 @@ function Show-MultiFolderFilePicker {
         }
     })
 
-    # Root drives - Fixed this part to properly set the Tag property
+    # Populate root drives
     [System.IO.DriveInfo]::GetDrives() | Where-Object { $_.IsReady } | ForEach-Object {
         $root = New-Object Windows.Forms.TreeNode
         $root.Text = $_.Name
-        $root.Tag = $_.RootDirectory.FullName  # This is the critical fix
+        $root.Tag = $_.RootDirectory.FullName
         $root.Nodes.Add('Loading...') | Out-Null
         $treeView.Nodes.Add($root)
     }
 
-    # Get checked items
+    # Recursively collect checked paths
     function Get-CheckedPaths {
         param($nodes)
         $all = @()
         foreach ($node in $nodes) {
-            if ($node.Checked -and $node.Tag -and ($node.Tag -is [string])) {
+            if ($node.Checked -and $node.Tag -is [string]) {
                 $all += $node.Tag
             }
             if ($node.Nodes.Count -gt 0) {
@@ -1120,7 +1182,7 @@ function Show-MultiFolderFilePicker {
         return $all
     }
 
-    # Show form and return checked paths
+    # Show dialog and return result
     $result = $form.ShowDialog()
     if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
         return Get-CheckedPaths $treeView.Nodes
@@ -1154,8 +1216,20 @@ function New-LabelTextBrowseRow {
         [int]$controlHeight,        # Height for all controls in this row
         [int]$labelX,               # X position of the label
         [int]$textBoxX,             # X position of the textbox
-        [int]$buttonX,               # X position of the browse button
-        [bool]$multiSelect = $true
+        [int]$buttonX,              # X position of the browse button
+        [bool]$multiSelect = $true, # Whether to use multi-folder picker
+        [int]$TreeFormWidth,
+        [int]$TreeFormHeight,
+        [int]$TreeX,
+        [int]$TreeY,
+        [int]$TreeWidth,
+        [int]$TreeHeight,
+        [int]$TreeOKX,
+        [int]$TreeOKY,
+        [int]$TreeCancelX,
+        [int]$TreeCancelY,
+        [int]$TreeButtonWidth,
+        [int]$TreeButtonHeight
     )
 
     # ---- Create the Label ----
@@ -1175,15 +1249,43 @@ function New-LabelTextBrowseRow {
     $btn.Text = "Browse"
     $btn.Location = New-Object Drawing.Point($buttonX, $y)
     $btn.Size = New-Object Drawing.Size($browseButtonWidth, $controlHeight)
-    $btn.Tag = @{ TextBox = $txtBox; Multi = $multiSelect }
-
+    $btn.Tag = @{
+            TextBox        = $txtBox
+            Multi          = $multiSelect
+            TreeFormWidth  = $TreeFormWidth
+            TreeFormHeight = $TreeFormHeight
+            TreeX          = $TreeX
+            TreeY          = $TreeY
+            TreeWidth      = $TreeWidth
+            TreeHeight     = $TreeHeight
+            TreeOKX        = $TreeOKX
+            TreeOKY        = $TreeOKY
+            TreeCancelX    = $TreeCancelX
+            TreeCancelY    = $TreeCancelY
+            TreeButtonWidth = $TreeButtonWidth
+            TreeButtonHeight = $TreeButtonHeight
+        }
     # ---- On Click: Open Folder Dialog and Update TextBox ---     
     $btn.Add_Click({
         $txtBox = $this.Tag["TextBox"]
         $useMulti = $this.Tag["Multi"]
-
         if ($useMulti) {
-            $paths = Show-MultiFolderFilePicker
+            $paths = Show-MultiFolderFilePicker `
+                -TreeFormWidth  $this.Tag["TreeFormWidth"] `
+                -TreeFormHeight $this.Tag["TreeFormHeight"] `
+                -TreeX          $this.Tag["TreeX"] `
+                -TreeY          $this.Tag["TreeY"] `
+                -TreeWidth      $this.Tag["TreeWidth"] `
+                -TreeHeight     $this.Tag["TreeHeight"] `
+                -TreeOKX        $this.Tag["TreeOKX"] `
+                -TreeOKY        $this.Tag["TreeOKY"] `
+                -TreeCancelX    $this.Tag["TreeCancelX"] `
+                -TreeCancelY    $this.Tag["TreeCancelY"] `
+                -TreeButtonWidth $this.Tag["TreeButtonWidth"] `
+                -TreeButtonHeight $this.Tag["TreeButtonHeight"]
+
+
+
             if ($paths.Count -gt 0) {
                 # Filter out any non-string or empty paths
                 $validPaths = $paths | Where-Object { $_ -and ($_ -is [string]) -and $_.Trim() }
@@ -1495,6 +1597,18 @@ function Main {
             LabelX                = $config.Positions.LabelX
             TextBoxX              = $config.Positions.TextBoxX
             BrowseButtonX         = $config.Positions.BrowseButtonX
+            TreeFormWidth         = $config.Tree.FormWidth
+            TreeFormHeight        = $config.Tree.FormHeight
+            TreeX                 = $config.Tree.X
+            TreeY                 = $config.Tree.Y
+            TreeWidth             = $config.Tree.Width
+            TreeHeight            = $config.Tree.Height
+            TreeOKX               = $config.Tree.OKX
+            TreeOKY               = $config.Tree.OKY
+            TreeCancelX           = $config.Tree.CancelX
+            TreeCancelY           = $config.Tree.CancelY
+            TreeButtonWidth       = $config.Tree.TreeButtonWidth 
+            TreeButtonHeight      = $config.Tree.TreeButtonHeight
         }
 
         $progress_layout = @{

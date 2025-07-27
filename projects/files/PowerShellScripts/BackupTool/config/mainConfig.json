@@ -57,8 +57,8 @@
     "BrowseButtonX": 560
   },
   "Offsets": {
-  "RadioButtonY": 15,
-  "InnerRadioY": 15
+    "RadioButtonY": 15,
+    "InnerRadioY": 15
   },
   "Colors": {
     "ExplainText": "DarkBlue",
@@ -84,5 +84,19 @@
     "Threads": 8,
     "PostBackupDelay": 3,
     "SyncCheckInterval": 10
+  },
+  "Tree": {
+    "FormWidth": 600,
+    "FormHeight": 500,
+    "X": 10,
+    "Y": 10,
+    "Width": 560,
+    "Height": 410,
+    "OKX": 390,
+    "OKY": 430,
+    "CancelX": 480,
+    "CancelY": 430,
+    "ButtonWidth": 75,
+    "ButtonHeight": 30
   }
 }
