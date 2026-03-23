@@ -19,7 +19,6 @@
   },
   "JavaScript": {
     "ProjectList": "projectListLoader.js",
-    "GithubApp": "githubAppLoader.js",
     "SketchfabEmbed": "embedSketchfab.js",
     "ProjectSteps": "projectStepsData.js",
     "ProjectLinks": "projectLinksLoader.js",
@@ -29,7 +28,6 @@
   },
   "JSONData": {
     "ProjectListData": "projectListData.js",
-    "GithubApps": "githubApps.js",
     "SketchfabModels": "sketchfabModels.js",
     "ProjectStepsData": "projectSteps.js",
     "ProjectLinksData": "projectLinks.js",
@@ -45,7 +43,6 @@
     ["Projects", "ModalZoom"],
     ["Projects", "Init"],
     ["ProjectList", "ProjectListData"],
-    ["GithubApp", "GithubApps"],
     ["SketchfabEmbed", "SketchfabModels"],
     ["ProjectSteps", "ProjectStepsData"],
     ["ProjectLinks", "ProjectLinksData"],
@@ -55,7 +52,6 @@
     "Projects": "primary",
 
     "ProjectList": "secondary",
-    "GithubApp": "secondary",
     "SketchfabEmbed": "secondary",
     "ProjectSteps": "secondary",
     "ProjectLinks": "secondary",
@@ -64,7 +60,6 @@
     "Init": "secondary",
 
     "ProjectListData": "tertiary",
-    "GithubApps": "tertiary",
     "SketchfabModels": "tertiary",
     "ProjectStepsData": "tertiary",
     "ProjectLinksData": "tertiary",

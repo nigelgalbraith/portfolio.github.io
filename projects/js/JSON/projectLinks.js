@@ -1,5 +1,29 @@
 // js/JSON/projectLinks.js
 const ProjectLinks = {
+    arcade: [
+    {
+      label: "Pacman Web App",
+      href: "https://attogram.github.io/pacman-lite/",
+      icon: "../images/icons/optimized/Pacman.png",
+      alt: "Pacman Webpage Icon",
+      target: "_blank"
+    },
+    {
+      label: "Pacman Source Code",
+      href: "https://github.com/attogram/pacman-lite",
+      icon: "../images/icons/optimized/githubBlack.png",
+      alt: "GitHub Icon",
+      target: "_blank"
+    },
+    {
+      label: "Pacman Download",
+      href: "https://codeload.github.com/attogram/pacman-lite/zip/refs/heads/master",
+      icon: "../images/icons/optimized/zip.png",
+      alt: "Download Icon",
+      download: true
+    }
+  ],
+
   thematic: [
     {
       label: "Main Thematic Webpage",

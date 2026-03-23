@@ -93,12 +93,7 @@ const ProjectSteps = {
       img: "embedSketchfabFlow.png",
       alt: "Flowchart showing how Sketchfab models are embedded into project pages"
     },
-    {
-      title: "githubAppLoader.js",
-      text: "This script loads GitHub app metadata from `githubApps.js` and builds links for each app, such as Play, Download, and Source. It inserts these links into containers marked with a `data-github-app` attribute, allowing apps to be added or updated without editing the HTML directly.",
-      img: "githubAppLoaderFlow.png",
-      alt: "Flowchart showing how githubAppLoader.js reads app data and generates links"
-    },
+
     // Site UI Systems
     {
       title: "menuToggle.js",
