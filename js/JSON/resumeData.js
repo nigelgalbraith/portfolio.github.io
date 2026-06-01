@@ -3,8 +3,37 @@
 
 const resumeData = {
   professionalOutline: `My career has taken me through a variety of roles, giving me both hands-on operational experience and exposure to management responsibilities. This mix has shown me that effective solutions need to balance practical realities with broader objectives. It’s also reinforced the importance of clear communication and a willingness to adapt, as the best outcomes often come from considering ideas and perspectives beyond your own.`,
-  
   experience: [
+    {
+      company: "Computer Help NZ",
+      location: "Christchurch",
+      role: "Onsite Technician",
+      date: "Jun 2026 – Present",
+      outline: [
+      "Provide onsite technical support and troubleshooting for client systems, hardware, software, and network devices.",
+      "Install, configure, maintain, and repair IT equipment while delivering professional customer service."
+      ],
+      achievements: [
+      "Became familiar with company procedures, tools, and client support processes.",
+      "Assisted with onsite support activities and technical troubleshooting.",
+      "Adapted quickly to a customer-focused field service environment."
+      ]
+    },
+    {
+      company: "Self-Employed",
+      location: "Christchurch",
+      role: "IT Support Technician",
+      date: "Mar 2025 – May 2026",
+      outline: [
+      "Provided computer repair and technical support services for local clients across a range of hardware and software platforms.",
+      "Assisted with device setup, upgrades, networking, and troubleshooting for home users and small businesses."
+      ],
+      achievements: [
+      "Diagnosed and resolved hardware, software, and networking issues independently for local clients.",
+      "Built a reputation for reliable and practical technical support through word-of-mouth referrals.",
+      "Managed customer interactions, problem resolution, and service delivery without direct supervision."
+      ]
+    },
     {
       company: "Tait Communications",
       location: "Christchurch",
