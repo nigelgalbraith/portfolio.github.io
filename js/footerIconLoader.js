@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add copyright notice
   const copyright = document.createElement("span");
-  copyright.textContent = "© 2025 Nigel Galbraith";
+  copyright.textContent = "© 2026 Nigel Galbraith";
   footer.appendChild(copyright);
 
   // Add separator between text and icons
